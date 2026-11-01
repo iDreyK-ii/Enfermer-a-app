@@ -1,0 +1,15 @@
+test_changed_headers_rejected (test_converter.ConverterTests.test_changed_headers_rejected) ... ok
+test_decimal_version_rejected (test_converter.ConverterTests.test_decimal_version_rejected) ... ok
+test_duplicate_drug_id_rejected (test_converter.ConverterTests.test_duplicate_drug_id_rejected) ... ok
+test_excel_date_preserved_as_iso (test_converter.ConverterTests.test_excel_date_preserved_as_iso) ... ok
+test_formulas_are_rejected (test_converter.ConverterTests.test_formulas_are_rejected) ... ok
+test_literal_text_not_interpreted (test_converter.ConverterTests.test_literal_text_not_interpreted) ... ok
+test_review_without_sources_rejected (test_converter.ConverterTests.test_review_without_sources_rejected) ... ok
+test_template_round_trip (test_converter.ConverterTests.test_template_round_trip) ... ok
+test_twenty_items_is_a_configurable_example_not_a_standard (test_converter.ConverterTests.test_twenty_items_is_a_configurable_example_not_a_standard) ... ok
+test_unlinked_reference_rejected (test_converter.ConverterTests.test_unlinked_reference_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.787s
+
+OK

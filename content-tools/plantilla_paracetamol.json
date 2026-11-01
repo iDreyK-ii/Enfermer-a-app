@@ -1,0 +1,45 @@
+{
+  "version_esquema": 1,
+  "id_paquete": "mi-biblioteca",
+  "version_contenido": 1,
+  "titulo": "Mi biblioteca de enfermería",
+  "autor": "COMPLETAR AUTOR",
+  "fecha_actualizacion": "2026-11-01",
+  "licencia": "COMPLETAR permisos y condiciones de uso",
+  "medicamentos": [
+    {
+      "id": "paracetamol",
+      "nombre": "Paracetamol",
+      "grupo": "Ficha en preparación",
+      "sinonimos": [],
+      "revision": "borrador",
+      "revisor": "",
+      "fecha_revision": "",
+      "secciones": {
+        "descripcion": "",
+        "mecanismo_accion": "",
+        "presentaciones": "",
+        "vias": "",
+        "indicaciones": "",
+        "contraindicaciones": "",
+        "precauciones": "",
+        "dosificacion": "",
+        "reconstitucion": "",
+        "dilucion": "",
+        "compatibilidad": "",
+        "administracion": "",
+        "estabilidad": "",
+        "reacciones_adversas": "",
+        "interacciones": "",
+        "monitorizacion": "",
+        "cuidados_enfermeria": "",
+        "poblaciones_especiales": "",
+        "educacion": "",
+        "alertas": ""
+      },
+      "fuentes": []
+    }
+  ],
+  "casos": [],
+  "listas_seguridad": []
+}

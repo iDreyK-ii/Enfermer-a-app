@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.CoreTests" tests="27" skipped="0" failures="0" errors="0" timestamp="2026-11-01T22:02:46" hostname="e2b.local" time="0.249">
+  <properties/>
+  <testcase name="sourceUrlsMustBeCompleteAndDatesValid" classname="com.idreyk.enfermeria360.CoreTests" time="0.076"/>
+  <testcase name="parserRejectsWrongOptionalTypes" classname="com.idreyk.enfermeria360.CoreTests" time="0.024"/>
+  <testcase name="bundledContentPasses" classname="com.idreyk.enfermeria360.CoreTests" time="0.003"/>
+  <testcase name="searchHandlesSpanishAccents" classname="com.idreyk.enfermeria360.CoreTests" time="0.005"/>
+  <testcase name="dripReferenceArithmetic" classname="com.idreyk.enfermeria360.CoreTests" time="0.004"/>
+  <testcase name="parserRejectsBadIdentityAndVersion" classname="com.idreyk.enfermeria360.CoreTests" time="0.035"/>
+  <testcase name="parserRejectsInvalidJsonAndSchema" classname="com.idreyk.enfermeria360.CoreTests" time="0.006"/>
+  <testcase name="parserRejectsUnknownSections" classname="com.idreyk.enfermeria360.CoreTests" time="0.003"/>
+  <testcase name="textIsRequiredInSafetyItems" classname="com.idreyk.enfermeria360.CoreTests" time="0.003"/>
+  <testcase name="listsAreNotHardCodedToTwenty" classname="com.idreyk.enfermeria360.CoreTests" time="0.005"/>
+  <testcase name="declaredReviewRequiresMetadata" classname="com.idreyk.enfermeria360.CoreTests" time="0.014"/>
+  <testcase name="parserRejectsOversizedPayload" classname="com.idreyk.enfermeria360.CoreTests" time="0.012"/>
+  <testcase name="dripRejectsInvalidInputs" classname="com.idreyk.enfermeria360.CoreTests" time="0.003"/>
+  <testcase name="evaIsOnlyNormalizedPosition" classname="com.idreyk.enfermeria360.CoreTests" time="0.002"/>
+  <testcase name="invalidUtf8IsNotSilentlyReplaced" classname="com.idreyk.enfermeria360.CoreTests" time="0.001"/>
+  <testcase name="parserRejectsBadDate" classname="com.idreyk.enfermeria360.CoreTests" time="0.003"/>
+  <testcase name="glasgowDoesNotInventMissingValues" classname="com.idreyk.enfermeria360.CoreTests" time="0.001"/>
+  <testcase name="bmiReferenceArithmetic" classname="com.idreyk.enfermeria360.CoreTests" time="0.0"/>
+  <testcase name="numericUnderflowDoesNotProduceInfiniteBmi" classname="com.idreyk.enfermeria360.CoreTests" time="0.001"/>
+  <testcase name="backupsMustRetainOriginalAuthorship" classname="com.idreyk.enfermeria360.CoreTests" time="0.008"/>
+  <testcase name="parserRejectsDuplicateIds" classname="com.idreyk.enfermeria360.CoreTests" time="0.006"/>
+  <testcase name="glasgowEveryCombination" classname="com.idreyk.enfermeria360.CoreTests" time="0.001"/>
+  <testcase name="conversionArithmetic" classname="com.idreyk.enfermeria360.CoreTests" time="0.001"/>
+  <testcase name="bmiRejectsInvalidNumbers" classname="com.idreyk.enfermeria360.CoreTests" time="0.001"/>
+  <testcase name="parserRejectsUnsupportedSourceSchemes" classname="com.idreyk.enfermeria360.CoreTests" time="0.003"/>
+  <testcase name="noSilentTextTruncation" classname="com.idreyk.enfermeria360.CoreTests" time="0.003"/>
+  <testcase name="importNeverInterpretsMarkup" classname="com.idreyk.enfermeria360.CoreTests" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

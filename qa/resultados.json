@@ -1,0 +1,96 @@
+{
+  "date": "2026-11-01",
+  "app_version": "0.2.0-dev-debug",
+  "apk": "Enfermeria_iDreyK_360_v0.2_debug.apk",
+  "apk_bytes": 9664206,
+  "sha256": "bb624e2059ed20874440ceefc97cb042adfa15fb840557976728a9c87f255076",
+  "native_tests": [
+    {
+      "suite": "com.idreyk.enfermeria360.CoreTests",
+      "tests": 27,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 0.249,
+      "cases": [
+        "sourceUrlsMustBeCompleteAndDatesValid",
+        "parserRejectsWrongOptionalTypes",
+        "bundledContentPasses",
+        "searchHandlesSpanishAccents",
+        "dripReferenceArithmetic",
+        "parserRejectsBadIdentityAndVersion",
+        "parserRejectsInvalidJsonAndSchema",
+        "parserRejectsUnknownSections",
+        "textIsRequiredInSafetyItems",
+        "listsAreNotHardCodedToTwenty",
+        "declaredReviewRequiresMetadata",
+        "parserRejectsOversizedPayload",
+        "dripRejectsInvalidInputs",
+        "evaIsOnlyNormalizedPosition",
+        "invalidUtf8IsNotSilentlyReplaced",
+        "parserRejectsBadDate",
+        "glasgowDoesNotInventMissingValues",
+        "bmiReferenceArithmetic",
+        "numericUnderflowDoesNotProduceInfiniteBmi",
+        "backupsMustRetainOriginalAuthorship",
+        "parserRejectsDuplicateIds",
+        "glasgowEveryCombination",
+        "conversionArithmetic",
+        "bmiRejectsInvalidNumbers",
+        "parserRejectsUnsupportedSourceSchemes",
+        "noSilentTextTruncation",
+        "importNeverInterpretsMarkup"
+      ]
+    },
+    {
+      "suite": "com.idreyk.enfermeria360.InterfaceTests",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 9.198,
+      "cases": [
+        "homeOpensNativePharmacologyAndPreparedFields",
+        "nativeProfileWritesLocalThemePreference"
+      ]
+    },
+    {
+      "suite": "com.idreyk.enfermeria360.RepositoryTests",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 0.992,
+      "cases": [
+        "initialLibraryIsLocalAndRepeatable",
+        "notesFavoritesAndExercisesSurviveReopening",
+        "rejectedAggregatePreservesPreviousUndoPoint",
+        "aggregateByteLimitKeepsExportsReadable",
+        "previewDoesNotWriteAndCountsReplacements",
+        "undoRestoresCatalogAndVersionButNotPracticeData",
+        "exportedCatalogKeepsOriginalAttributionWithoutNotes",
+        "versionsCannotGoBackwards",
+        "resetClearsOnlyLocalPracticeAndCatalog"
+      ]
+    }
+  ],
+  "converter_tests": {
+    "passed": 10,
+    "failed": 0
+  },
+  "lint": {
+    "Warning": 27
+  },
+  "apk_signature_verified": true,
+  "internet_permission": false,
+  "real_device_validation": "PENDIENTE",
+  "full_emulator_installation": "NO COMPLETADA: host con 2 GB y sin KVM",
+  "test_framework": "JUnit + Robolectric (Android 9/API 28); no certificación clínica",
+  "maintenance": {
+    "date": "2026-11-01",
+    "task": "Limpieza y traslado de las bibliotecas de pruebas a caché",
+    "runtime_code_changed": false,
+    "apk_changed": false,
+    "tests_passed_after_cache_relocation": 38
+  }
+}

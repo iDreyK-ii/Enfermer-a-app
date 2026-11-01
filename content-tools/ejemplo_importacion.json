@@ -1,0 +1,45 @@
+{
+  "version_esquema": 1,
+  "id_paquete": "ejemplo-importacion",
+  "version_contenido": 1,
+  "titulo": "Prueba de importación sin información clínica",
+  "autor": "Demostración técnica",
+  "fecha_actualizacion": "2026-11-01",
+  "licencia": "Texto original de prueba, sin instrucciones clínicas.",
+  "medicamentos": [
+    {
+      "id": "paracetamol",
+      "nombre": "Paracetamol",
+      "grupo": "Ficha en preparación",
+      "sinonimos": [],
+      "revision": "borrador",
+      "revisor": "",
+      "fecha_revision": "",
+      "secciones": {
+        "descripcion": "IMPORTACIÓN DE PRUEBA CORRECTA. Este texto solo demuestra que un archivo local puede actualizar una ficha. No es información clínica sobre paracetamol.",
+        "mecanismo_accion": "",
+        "presentaciones": "",
+        "vias": "",
+        "indicaciones": "",
+        "contraindicaciones": "",
+        "precauciones": "",
+        "dosificacion": "",
+        "reconstitucion": "",
+        "dilucion": "",
+        "compatibilidad": "",
+        "administracion": "",
+        "estabilidad": "",
+        "reacciones_adversas": "",
+        "interacciones": "",
+        "monitorizacion": "",
+        "cuidados_enfermeria": "",
+        "poblaciones_especiales": "",
+        "educacion": "",
+        "alertas": ""
+      },
+      "fuentes": []
+    }
+  ],
+  "casos": [],
+  "listas_seguridad": []
+}

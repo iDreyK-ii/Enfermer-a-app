@@ -1,0 +1,260 @@
+{
+  "version_esquema": 1,
+  "id_paquete": "idreyk-inicial",
+  "version_contenido": 1,
+  "titulo": "Biblioteca inicial de demostración",
+  "autor": "Proyecto iDreyK 360 · edición de desarrollo",
+  "fecha_actualizacion": "2026-11-01",
+  "licencia": "Textos originales de demostración. Las fuentes externas se citan, no se redistribuyen sus documentos. No constituye autorización para incorporar otros contenidos.",
+  "medicamentos": [
+    {
+      "id": "paracetamol",
+      "nombre": "Paracetamol",
+      "grupo": "Ficha en preparación",
+      "sinonimos": [],
+      "revision": "borrador",
+      "revisor": "",
+      "fecha_revision": "",
+      "secciones": {
+        "descripcion": "",
+        "mecanismo_accion": "",
+        "presentaciones": "",
+        "vias": "",
+        "indicaciones": "",
+        "contraindicaciones": "",
+        "precauciones": "",
+        "dosificacion": "",
+        "reconstitucion": "",
+        "dilucion": "",
+        "compatibilidad": "",
+        "administracion": "",
+        "estabilidad": "",
+        "reacciones_adversas": "",
+        "interacciones": "",
+        "monitorizacion": "",
+        "cuidados_enfermeria": "",
+        "poblaciones_especiales": "",
+        "educacion": "",
+        "alertas": ""
+      },
+      "fuentes": []
+    },
+    {
+      "id": "ceftriaxona",
+      "nombre": "Ceftriaxona",
+      "grupo": "Ficha en preparación",
+      "sinonimos": [],
+      "revision": "borrador",
+      "revisor": "",
+      "fecha_revision": "",
+      "secciones": {
+        "descripcion": "",
+        "mecanismo_accion": "",
+        "presentaciones": "",
+        "vias": "",
+        "indicaciones": "",
+        "contraindicaciones": "",
+        "precauciones": "",
+        "dosificacion": "",
+        "reconstitucion": "",
+        "dilucion": "",
+        "compatibilidad": "",
+        "administracion": "",
+        "estabilidad": "",
+        "reacciones_adversas": "",
+        "interacciones": "",
+        "monitorizacion": "",
+        "cuidados_enfermeria": "",
+        "poblaciones_especiales": "",
+        "educacion": "",
+        "alertas": ""
+      },
+      "fuentes": []
+    },
+    {
+      "id": "enoxaparina",
+      "nombre": "Enoxaparina",
+      "grupo": "Ficha en preparación",
+      "sinonimos": [],
+      "revision": "borrador",
+      "revisor": "",
+      "fecha_revision": "",
+      "secciones": {
+        "descripcion": "",
+        "mecanismo_accion": "",
+        "presentaciones": "",
+        "vias": "",
+        "indicaciones": "",
+        "contraindicaciones": "",
+        "precauciones": "",
+        "dosificacion": "",
+        "reconstitucion": "",
+        "dilucion": "",
+        "compatibilidad": "",
+        "administracion": "",
+        "estabilidad": "",
+        "reacciones_adversas": "",
+        "interacciones": "",
+        "monitorizacion": "",
+        "cuidados_enfermeria": "",
+        "poblaciones_especiales": "",
+        "educacion": "",
+        "alertas": ""
+      },
+      "fuentes": []
+    },
+    {
+      "id": "omeprazol",
+      "nombre": "Omeprazol",
+      "grupo": "Ficha en preparación",
+      "sinonimos": [],
+      "revision": "borrador",
+      "revisor": "",
+      "fecha_revision": "",
+      "secciones": {
+        "descripcion": "",
+        "mecanismo_accion": "",
+        "presentaciones": "",
+        "vias": "",
+        "indicaciones": "",
+        "contraindicaciones": "",
+        "precauciones": "",
+        "dosificacion": "",
+        "reconstitucion": "",
+        "dilucion": "",
+        "compatibilidad": "",
+        "administracion": "",
+        "estabilidad": "",
+        "reacciones_adversas": "",
+        "interacciones": "",
+        "monitorizacion": "",
+        "cuidados_enfermeria": "",
+        "poblaciones_especiales": "",
+        "educacion": "",
+        "alertas": ""
+      },
+      "fuentes": []
+    },
+    {
+      "id": "furosemida",
+      "nombre": "Furosemida",
+      "grupo": "Ficha en preparación",
+      "sinonimos": [],
+      "revision": "borrador",
+      "revisor": "",
+      "fecha_revision": "",
+      "secciones": {
+        "descripcion": "",
+        "mecanismo_accion": "",
+        "presentaciones": "",
+        "vias": "",
+        "indicaciones": "",
+        "contraindicaciones": "",
+        "precauciones": "",
+        "dosificacion": "",
+        "reconstitucion": "",
+        "dilucion": "",
+        "compatibilidad": "",
+        "administracion": "",
+        "estabilidad": "",
+        "reacciones_adversas": "",
+        "interacciones": "",
+        "monitorizacion": "",
+        "cuidados_enfermeria": "",
+        "poblaciones_especiales": "",
+        "educacion": "",
+        "alertas": ""
+      },
+      "fuentes": []
+    },
+    {
+      "id": "insulina-regular",
+      "nombre": "Insulina humana regular",
+      "grupo": "Ficha en preparación",
+      "sinonimos": [],
+      "revision": "borrador",
+      "revisor": "",
+      "fecha_revision": "",
+      "secciones": {
+        "descripcion": "",
+        "mecanismo_accion": "",
+        "presentaciones": "",
+        "vias": "",
+        "indicaciones": "",
+        "contraindicaciones": "",
+        "precauciones": "",
+        "dosificacion": "",
+        "reconstitucion": "",
+        "dilucion": "",
+        "compatibilidad": "",
+        "administracion": "",
+        "estabilidad": "",
+        "reacciones_adversas": "",
+        "interacciones": "",
+        "monitorizacion": "",
+        "cuidados_enfermeria": "",
+        "poblaciones_especiales": "",
+        "educacion": "",
+        "alertas": ""
+      },
+      "fuentes": []
+    }
+  ],
+  "casos": [
+    {
+      "id": "recorrido-mario",
+      "titulo": "Una ficha por organizar",
+      "area": "Fundamentos · caso ficticio",
+      "revision": "borrador",
+      "objetivo": "Explorar la valoración, reconocer las etapas del PAE y organizar una nota ficticia.",
+      "contenido": "Mario es un personaje ficticio de 72 años. Este caso no plantea una enfermedad ni indica un tratamiento.\n\n1. Explora la ficha de demostración.\n2. Recorre las etapas del PAE.\n3. Escribe una nota con datos inventados.\n4. Comprueba que la nota se conserva al volver.\n\nNo introduzcas identificadores ni registros de pacientes reales.",
+      "fuentes": []
+    }
+  ],
+  "listas_seguridad": [
+    {
+      "id": "base-5",
+      "titulo": "Verificaciones básicas de práctica",
+      "area": "Seguridad de la medicación",
+      "revision": "borrador",
+      "institucion": "Lista educativa, no protocolo institucional",
+      "edicion": "Referencia histórica de cinco básicos · revisión documental 2026-11-01",
+      "items": [
+        {
+          "titulo": "Persona correcta",
+          "detalle": "Verificación de identidad según el procedimiento institucional."
+        },
+        {
+          "titulo": "Medicamento correcto",
+          "detalle": "Verificación frente a la prescripción y al producto disponible."
+        },
+        {
+          "titulo": "Dosis correcta",
+          "detalle": "Comprobación conforme a la prescripción y al procedimiento autorizado."
+        },
+        {
+          "titulo": "Vía correcta",
+          "detalle": "Verificación de la vía prescrita."
+        },
+        {
+          "titulo": "Momento correcto",
+          "detalle": "Verificación del momento y horario prescritos."
+        }
+      ],
+      "fuentes": [
+        {
+          "titulo": "ISMP-España · Boletín 53, diciembre de 2023",
+          "url": "https://seguridaddelpaciente.sanidad.gob.es/informacion/publicaciones/2023/docs/Boletin_53_Diciembre_2023.pdf",
+          "editor": "ISMP-España / Ministerio de Sanidad",
+          "fecha_consulta": "2026-11-01"
+        },
+        {
+          "titulo": "E.S.E. BelloSalud · Seguridad en utilización de medicamentos, versión 03, julio 2026",
+          "url": "https://www.esebellosalud.gov.co/storage/docs/V9R0xKf98Irm7BP6XdTz.pdf",
+          "editor": "E.S.E. BelloSalud, Colombia",
+          "fecha_consulta": "2026-11-01"
+        }
+      ]
+    }
+  ]
+}
