@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.ModuleInterfaceTests" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-11-01T23:18:58" hostname="e2b.local" time="6.813">
+  <properties/>
+  <testcase name="capurroZeroSelectionsAreCompleteAndCanBeSaved" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="1.816"/>
+  <testcase name="apgarChangingMinuteClearsPriorComponents" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="1.047"/>
+  <testcase name="nativeStudyNoteAndProtocolEditorsAreReachableAndSave" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="1.527"/>
+  <testcase name="nativePaeEditorStoresStructuredFieldsInsteadOfFourCheckboxes" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="0.584"/>
+  <testcase name="nativeMedicationEditorActuallySavesLocalContent" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="0.612"/>
+  <testcase name="doseRouteCalculatesAndInvalidatesStaleResultWhenEdited" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="0.948"/>
+  <testcase name="multimediaRouteHasRealImportEntryPointAndExplicitExternalViewer" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="0.277"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

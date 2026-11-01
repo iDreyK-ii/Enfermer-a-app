@@ -1,84 +1,94 @@
 # Desarrollo continuo del aplicativo iDreyK 360
 
-## Objetivo y fuente principal
+## Proyecto y objetivo
 
-El objetivo es desarrollar una aplicación Android mantenible, estable y completa para el alcance que se acuerde. **No se está preparando un producto de venta ni se considera terminada la aplicación actual.**
+La fuente principal sigue siendo `idreyk-android/`: Android nativo, Kotlin/Compose y estética del Prototipo B. Las ampliaciones se incorporan aquí, no en una aplicación paralela. **Se está desarrollando el aplicativo; no preparando una venta ni declarando terminada su validación clínica.**
 
-El proyecto principal es esta carpeta, `idreyk-android/`. Las siguientes mejoras deben incorporarse aquí, no quedar en prototipos separados. La referencia visual continúa siendo el Prototipo B.
+La limpieza anterior conservó los archivos de programación, los recursos, la biblioteca y el APK v0.2. Las pantallas que seguían indicando «preparado» eran funciones todavía no implementadas, no código perdido por caché. En v0.3 se reemplazaron esos estados por funcionalidades concretas, con límites explícitos.
 
-**Los datos de demostración pueden sustituirse; el código que los muestra y gestiona forma parte del aplicativo.** Que una ficha esté vacía o un paciente sea ficticio no significa que sus pantallas y funciones sean archivos de caché.
+## Punto de desarrollo actual: v0.3
 
-## Qué se conserva y qué se puede regenerar
+- Escalas: Capurro B con selección somática y cálculo; A con transcripción de seis componentes y constante independiente; Apgar y Silverman con suma y guardado. Se conservan Glasgow adulto/EVA; se añade Glasgow pediátrica como registro externo. Braden/Morse son registros de puntajes externos, no cuestionarios completos.
+- Dosis a volumen y dilución: aritmética con unidades, incompatibilidades dimensionales, validación de números y protección contra resultados antiguos tras editar entradas; sin prescripción o validación farmacológica.
+- Editor local de medicamentos (20 secciones), casos, correctos y protocolos. Crear, editar y eliminar; se vuelve a borrador y se conserva procedencia. Deshacer del catálogo.
+- PAE/ADPIE: documentos estructurados editables en las fichas ficticias, no el antiguo checklist de cuatro tareas. El checklist viejo permanece conservado y señalado como recorrido.
+- Apuntes propios con búsqueda, etiquetas, edición y eliminación; lecturas originales conservadas.
+- Protocolos locales con fuentes, estados y catálogo de esquema 2. Lectura de los paquetes de esquema 1 conservada.
+- Biblioteca multimedia: copias privadas, renombrado, búsqueda, borrado y apertura con visor externo; límites de tamaño y proveedor de lectura restringido.
+- Cuaderno con respaldo/importación confirmada y deshacer independientes del catálogo.
+- Gráfico de FC construido desde lecturas ficticias guardadas; ya no es una curva decorativa.
+- SQLite v1 → v2 mediante creación de dos tablas nuevas; ninguna tabla antigua se borra al actualizar.
+- Mismo paquete y clave de firma de desarrollo, versión de APK incrementada. No desinstalar la versión anterior para actualizar.
+
+El detalle de lo disponible y lo pendiente está en `README.md`. Los resultados exactos están en `qa/RESULTADOS.md` y `qa/resultados.json`.
+
+## Qué conservar
 
 | Elemento | Ubicación | Tratamiento |
 |---|---|---|
-| Pantallas, navegación, diseño, lógica y persistencia | `app/src/main/` | Código principal; conservar y versionar. |
-| Recursos, fuentes, licencias y biblioteca inicial | `app/src/main/res/` y `app/src/main/assets/` | Parte de la aplicación; conservar. |
-| Plantillas, esquema e importación de contenidos | `content-tools/` | Parte del proyecto; conservar y versionar. |
-| Pruebas, evidencias y referencias documentales | `app/src/test/`, `qa/`, `research/` | Conservar para controlar cambios y límites. |
-| Ilustración original editable | `design/` | Recurso de diseño; conservar. |
-| Historial local del código | `.git/` | Puntos de recuperación del desarrollo. |
-| Copia transportable del historial | `historial/desarrollo.bundle` | Respaldo del historial; no es una dependencia del APK. |
-| Bibliotecas descargadas para las pruebas | `.cache/robolectric-maven/` | Caché regenerable; no contiene el código propio del aplicativo. |
-| Compilaciones y cachés de herramientas | `app/build/`, `.gradle/`, `.kotlin/` y cachés del entorno | Regenerables; no son la fuente principal. |
+| Pantallas, lógica, navegación y persistencia | `app/src/main/` | Código principal; conservar y versionar. |
+| Fuentes, licencias, ilustración optimizada y biblioteca inicial | `app/src/main/res/`, `app/src/main/assets/` | Parte de la app, no caché. |
+| Ilustración original editable | `design/` | Conservar. |
+| Pruebas y evidencias | `app/src/test/`, `qa/` | Conservar para regresiones. |
+| Referencias documentales | `research/` | Conservar; no equivalen a validación clínica. |
+| Conversor, plantillas y esquemas | `content-tools/` | Parte de la aplicación y su flujo editorial. |
+| Historial local | `.git/` | Recuperación del código. No es una copia remota. |
+| Historial portátil | `historial/desarrollo.bundle` | Se incluye explícitamente en el ZIP de código. |
+| APK entregado | Fuera de `app/build/`, en la carpeta compartida | Conserva el instalable, no sustituye al código. |
+| Clave de firma | Almacenamiento privado del entorno | Conservar por separado; nunca añadir a Git o al ZIP. |
 
-Limpiar las carpetas regenerables **no elimina las funciones guardadas en el código**. Las herramientas o dependencias pueden necesitar descargarse otra vez al compilar.
+Cachés y compilaciones (`app/build/`, `.gradle/`, `.kotlin/`, `.cache/`, dependencias descargadas) son regenerables. Robolectric usa `.cache/robolectric-maven/` dentro del proyecto, no `.m2` persistente de gran tamaño. Las herramientas se guardan en `/home/user/.cache/`. No borrar la carpeta del proyecto, sus fuentes o la clave confundiendo recursos con caché.
 
-La APK actual se conserva fuera de las carpetas de compilación. Es una versión instalable de trabajo, no un sustituto del código editable. La clave de firma se mantiene aparte y **no se incluye en el ZIP público del código ni en el historial**.
+## Historial y recuperación
 
-## Estado de lo solicitado
+La rama es `desarrollo`. El punto inicial real del historial es:
 
-“Implementado” describe software existente; no significa que toda la función esté certificada clínicamente o probada en todos los teléfonos.
+- Commit `038c9e19b84fe198a0fa6d4eceed92b5e37dfd2d`.
+- Etiqueta `base-android-v0.2`.
+- Se comprobó su recuperación clonando el bundle y comparando las 131 rutas versionadas.
 
-| Solicitud | Estado actual | Pendiente |
-|---|---|---|
-| Android nativo y diseño B | Implementados con Kotlin y Compose. | Revisión visual, accesibilidad y compatibilidad en teléfonos reales. |
-| Trabajo local, sin cuentas y biblioteca incluida | Implementados; la app no solicita permiso de internet. | Ampliar pruebas de reinicio, muerte de proceso y errores de almacenamiento. |
-| Farmacología detallada | Estructura de 20 campos, búsqueda, filtros, pestañas, favoritos e importación implementadas. | Completar contenido autorizado y revisado; las seis fichas incluidas son borradores. |
-| Glasgow | Componentes adultos y cálculo de práctica implementados; NV impide el total. | Validación del uso previsto y revisión profesional de la implementación. |
-| EVA | Interfaz digital simulada implementada. | Definir y validar su uso; no es una regla física calibrada de 100 mm. |
-| Capurro A/B | Pantallas y referencia documental preparadas. | Criterios, fórmula, límites, revisión clínica y pruebas antes de habilitar puntuación. |
-| Otras escalas | Entradas de catálogo preparadas. | Implementación y revisión individual; no se consideran terminadas. |
-| Correctos de enfermería | Listas configurables de 1–100 ítems implementadas. | Incorporar el protocolo aplicable y autorizado; no se impone 20 como estándar universal. |
-| Archivos de medicamentos y casos | XLSX → JSON, validación, previsualización, confirmación e incorporación local implementadas. | Extracción de Word/PDF y flujo editorial remoto, si se acuerdan después. |
-| Casos clínicos | Formato importable y un caso ficticio de organización incluidos. | Contenido clínico autorizado y revisado. |
-| PAE/Gordon y pacientes | Funciones de práctica con datos ficticios y guardado local. | No equivalen a una historia clínica real; ese uso requeriría otro trabajo de privacidad y seguridad. |
-| Herramientas y aprendizaje | Aritmética de ejemplo, tarjetas, cuestionario y ECG ilustrativo incluidos. | Dosis y dilución siguen deshabilitadas; no hay adquisición ni diagnóstico de ECG. |
-| Exportación y recuperación | Catálogo exportable y deshacer una importación implementados. | El respaldo actual no incluye notas, favoritos, ajustes ni historial de ejercicios. |
-
-No se quitarán avisos ni se marcarán funciones como completas solo para que parezcan profesionales. La calidad se conseguirá completando, revisando y probando cada función.
-
-## Historial y respaldo recuperable
-
-Se creó un primer punto de recuperación con el estado Android actual. El historial comienza en esta base; no inventa versiones anteriores que no estaban registradas.
-
-- Rama de desarrollo: `desarrollo`.
-- Etiqueta inicial: `base-android-v0.2`.
-- El ZIP `Android_iDreyK_360_codigo.zip` contiene el código y una copia del historial en `historial/desarrollo.bundle`.
-- No se ha conectado ni publicado el repositorio en un servicio remoto.
-
-Para recuperar el historial desde el ZIP, descomprímelo y ejecuta, indicando una carpeta de destino nueva:
+La ampliación v0.3 tiene un nuevo punto de control y etiqueta `desarrollo-v0.3`. **No se inventa historial anterior al punto inicial.** Para revisar:
 
 ```sh
-git clone historial/desarrollo.bundle ../idreyk-recuperado
+git status
+git log --oneline --decorate --all
+git diff base-android-v0.2..desarrollo-v0.3 --stat
 ```
 
-También puedes abrir directamente el código descomprimido en Android Studio sin utilizar Git. El archivo de historial no es necesario para instalar la APK ni para que la aplicación funcione.
+Para recuperar el proyecto en otra carpeta:
 
-**Descarga el ZIP como copia fuera de este espacio de trabajo.** El guardado del entorno tiene límites y no es una garantía de conservación indefinida. El historial local tampoco sustituye una copia externa.
+```sh
+git clone historial/desarrollo.bundle idreyk-recuperado
+cd idreyk-recuperado
+git checkout desarrollo
+```
 
-## Cómo continuar sin perder avances
+El bundle está ignorado por Git para no incluirse recursivamente dentro de sí mismo. Al actualizar la entrega:
 
-1. Trabajar sobre el proyecto principal y comprobar el estado del historial antes de editar.
-2. Integrar cada mejora en la aplicación real, manteniendo separados desarrollo técnico, datos de ejemplo y contenido clínico revisado.
-3. Añadir o actualizar las pruebas de la función modificada; registrar resultados reales y comprobaciones pendientes.
-4. Guardar un punto de recuperación con una descripción del cambio.
-5. Actualizar el archivo transportable del historial y el ZIP del proyecto; nunca incluir cachés, claves privadas ni datos reales de pacientes.
-6. Generar una nueva APK cuando cambie la aplicación, conservando la firma adecuada y evitando perder los datos locales existentes.
-7. Mantener un único paquete actual de entrega y vigilar el límite del espacio conservado. Si el historial creciera demasiado, respaldarlo fuera antes de reducirlo.
+```sh
+git bundle create historial/desarrollo.bundle --all
+git bundle verify historial/desarrollo.bundle
+```
 
-Orden de trabajo acordado: farmacología y flujo de contenidos; Glasgow, EVA y Capurro; listas de seguridad; consolidación y pruebas del resto de módulos. El contenido clínico, sus permisos y los servicios externos siguen siendo una fase posterior, no algo que se complete automáticamente.
+El ZIP se genera desde archivos versionados **más** ese bundle; no desde todas las carpetas de trabajo. Verificar que no contiene cachés, APK/AAB, claves ni `local.properties`. Probar un clon del bundle, no solo su verificación formal. Un historial dentro del mismo entorno no protege frente a pérdida total del entorno: descargar una copia externa del ZIP.
 
-## Importante sobre los datos del teléfono
+## Datos de la aplicación ≠ código del proyecto
 
-Cerrar la aplicación no borra los registros guardados localmente. **Desinstalarla o borrar su almacenamiento sí puede eliminarlos.** La exportación actual solo respalda el catálogo, no todos los datos del teléfono. Esto es distinto de conservar el código fuente del aplicativo.
+El ZIP y el bundle recuperan programación, recursos y pruebas. **No son copias de los datos de tu teléfono.** Los mecanismos actuales de exportación se separan:
+
+1. Catálogo: medicamentos, casos, listas y protocolos, en esquema 2.
+2. Cuaderno: planes PAE y apuntes, en su formato propio.
+3. Multimedia: conservar los originales; los JSON no incluyen las copias.
+
+Las notas de fichas ficticias/Gordon/signos de v0.2, favoritos, historial y preferencias no tienen exportación completa en esta edición. Sí se conservan durante la migración local 1 → 2. Desinstalar o borrar datos puede eliminarlos.
+
+## Próximas comprobaciones necesarias
+
+1. Instalar/actualizar el APK en teléfono sin desinstalar v0.2; verificar datos existentes.
+2. Comprobar SAF, permisos temporales, apertura de medios con distintas apps, cancelaciones y poco almacenamiento.
+3. Revisar accesibilidad, rotación, guardado de estado, textos grandes y cargas extensas en dispositivos reales.
+4. Obtener revisión clínica y permisos aplicables a cada escala/contenido; no declarar «completa» una ficha farmacológica vacía.
+5. Si se plantea uso con pacientes reales: rediseñar privacidad, cifrado, accesos, auditoría y cumplimiento normativo. Actualmente solo datos ficticios.
+6. Integración editorial externa, extracción documental e IA siguen fuera de esta edición offline. No simular una conexión no implementada.
+
+Todo cambio posterior debe traer pruebas, actualización de alcance, nuevo APK compatible cuando corresponda y respaldo reproducible del código.

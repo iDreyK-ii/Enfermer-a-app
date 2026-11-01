@@ -1,105 +1,96 @@
-# Enfermería iDreyK 360 · Android nativo
+# Enfermería iDreyK 360 — Android nativo v0.3
 
-**Prototipo B · edición de desarrollo 0.2.0-dev-debug · 1 de noviembre de 2026**
+Aplicación Android en Kotlin y Jetpack Compose, integrada en el mismo proyecto del Prototipo B. **Desarrollo continuo, no producto de venta ni aplicación clínicamente certificada.** Funciona localmente, sin cuentas ni permiso de Internet. Android 8.0+ (API 26), compilación/objetivo API 35.
 
-**Desarrollo en curso:** seguimos construyendo y mejorando el aplicativo, sin enfocarlo como un producto de venta. La APK actual es una versión de trabajo, no una aplicación terminada.
+La ampliación v0.3 sustituye las pantallas preparatorias por herramientas de cálculo, edición y persistencia. No se ha confundido completar software con validar contenidos clínicos o conseguir permisos de instrumentos.
 
-Consulta **[DESARROLLO.md](DESARROLLO.md)** para distinguir código permanente y cachés, ver el estado de cada módulo y recuperar el historial incluido en el ZIP. Este es el proyecto principal sobre el que continuarán las mejoras.
+## Funciones y alcance real
 
-Aplicación Kotlin + Jetpack Compose. No es un WebView ni un acceso directo al prototipo HTML. Conserva la identidad pastel, las tarjetas redondeadas, la ilustración, la navegación inferior y las tipografías Outfit / Nunito Sans.
+| Área | Implementación actual | Límite importante |
+|---|---|---|
+| Diseño y navegación | Compose nativo; paleta, ilustración y tipografías del Prototipo B; transiciones, tema oscuro, texto ampliado y reducción de movimiento. | Sin WebView. Falta revisión visual y accesible en dispositivos reales. |
+| Farmacología | Buscar, favoritos, crear, editar y eliminar fichas con 20 secciones; sinónimos, fuentes, licencia y procedencia. | Las seis fichas iniciales siguen vacías/en borrador. No se inventaron mecanismos, dosis, diluciones ni compatibilidades. |
+| Revisión editorial | Una edición local vuelve a borrador, elimina la declaración de revisor anterior y conserva procedencia y referencias. | Las revisiones importadas son declaraciones del autor, no certificaciones de la app. |
+| Glasgow adulto | Componentes ocular, verbal y motor; NV/pending impiden total; guardar práctica. | Sin diagnóstico, categoría de gravedad ni indicaciones. |
+| Glasgow pediátrica | Registrar componentes y NV de una ficha externa identificada; sumar si procede. | No adapta automáticamente descriptores adultos ni reproduce una versión pediátrica completa. |
+| EVA | Simulación digital de posición y registro de práctica. | No calibración física de 10 cm ni validación de un instrumento digital. |
+| Capurro B | Cinco componentes, puntajes y fórmula 204 + suma; semanas y días. | Descriptores resumidos, referencia NTS 214-2024 anexo 4; no decide aplicabilidad ni exactitud obstétrica. |
+| Capurro A | Registro de seis puntuaciones externas: cuatro somáticas sin pezón y dos neurológicas; constante 200. | No enseña maniobras. No mezclar variantes o nombres de materiales secundarios. |
+| Apgar | Cinco componentes, momento de registro, suma 0–10 y guardado; cambiar momento limpia respuestas. | Sin pronóstico ni guía de reanimación. |
+| Silverman-Andersen | Cinco componentes y suma 0–10, identificando la referencia NOM-007-SSA2-2016. | Sin clasificación automática ni indicación de soporte respiratorio. |
+| Braden y Morse | Registro de total externo, fuente y contexto; validación de entero/rango. | **No se reproduce ni administra el cuestionario.** No se interpreta riesgo; permisos pendientes. |
+| Medicación segura | Crear/editar listas de 1–100 ítems, reordenar, marcar, reiniciar y guardar el recorrido; institución, edición y fuentes. | No impone un número universal de correctos. La lista inicial de cinco básicos no es un protocolo completo. |
+| Dosis a volumen | Aritmética con mg/g/mcg y UI; conversiones explícitas, comprobaciones numéricas y de dimensiones. | No selecciona dosis, medicamento o vía; no convierte UI a masa. Solo ejercicios ficticios. |
+| Dilución | C1V1 = C2V2; volumen de solución inicial, volumen adicional teórico y volumen final; masa o UI en concentraciones compatibles. | Mezcla ideal/volumen aditivo; no reconstitución de polvos, compatibilidad, estabilidad ni pauta de administración. |
+| IMC, goteo y conversor | Operaciones de práctica conservadas; resultados y guardado en historial. | Límites de entrada numéricos, no rangos de normalidad. |
+| PAE / ADPIE | Planes editables por ficha ficticia: valoración, problema libre, resultados, planificación, ejecución, evaluación y referencias; estado del documento. | No genera diagnósticos ni reproduce NANDA-I, NIC o NOC. |
+| Fichas ficticias | Mario, Rosa y Luis; notas, signos y balance; Gordon con once espacios. | No historias clínicas reales ni creación de identificadores reales. |
+| Tendencias de signos | Gráfico de FC a partir de las últimas 20 lecturas ficticias guardadas; sin curva decorativa predeterminada. | Eje horizontal por orden de registro, no intervalos temporales proporcionales; sin alertas. |
+| Apuntes | Crear, editar, buscar, etiquetar, eliminar y respaldar apuntes; se conservan las lecturas originales. | Solo texto propio o autorizado y datos inventados. |
+| Casos y protocolos | Catálogos editables e importables, búsqueda de protocolos, fuentes y revisión visible. | No biblioteca clínica completa ni extracción automática de documentos. |
+| Multimedia | Copiar PDF, imágenes, audio y video a almacenamiento privado; buscar, renombrar y quitar copias. | Abrir con visor compatible externo; no reproductor integrado ni contenido multimedia descargado/bundled. |
+| Aprendizaje | Flashcards, quiz y casos; progreso e historial de práctica. | No certificación profesional. ECG sigue siendo animación ilustrativa sin sensores. |
+| Persistencia | SQLite v2, migración aditiva desde v1; preferencias locales. | No cifrado clínico, roles, autenticación ni auditoría para registros asistenciales. |
 
-> Esta entrega desarrolla el software y el flujo de contenidos. No constituye una versión clínica validada, una historia clínica electrónica ni una garantía de funcionamiento en todos los teléfonos. Utilizar únicamente datos ficticios.
+## Datos, compatibilidad y respaldos
 
-## Instalación
+**La actualización mantiene el identificador `com.idreyk.enfermeria360.dev` y la clave de firma del APK v0.2.** La migración SQLite 1 → 2 crea `notebooks` y `media`; no recrea ni borra tablas de v0.2. Los antiguos checklists de cuatro tareas se conservan como registros de recorrido y no se hacen pasar por planes clínicos. La prueba de migración está automatizada, pero falta instalación/actualización en teléfono.
 
-- Requiere **Android 8.0 o superior**; SDK mínimo 26 y SDK objetivo 35.
-- El APK de desarrollo se entrega por separado como `Enfermeria_iDreyK_360_v0.2_debug.apk`.
-- Copia o descarga el APK en tu teléfono, ábrelo y confirma la instalación. Si Android lo solicita, autoriza temporalmente a ese navegador o gestor de archivos a instalar aplicaciones. Mantén Play Protect activo y revoca después el permiso de instalar desde esa fuente.
-- No necesitas Android Studio para instalar el APK. La app no pide una cuenta ni tiene permiso de internet. Su catálogo inicial está incluido.
-- No es una publicación de Google Play. Su firma es de desarrollo. No se entrega una clave de producción.
-- Si recompilas con otra clave, Android podría exigir desinstalar la versión anterior. **Desinstalar elimina los datos internos.** Exporta antes el catálogo; esa exportación no incluye notas, favoritos ni preferencias.
-
-## Implementado en esta edición
-
-| Área | Alcance actual |
-|---|---|
-| Experiencia B | Pantallas nativas, navegación atrás, tarjetas, transiciones, modo oscuro, texto ampliado y reducción de animaciones. |
-| Farmacología | Búsqueda, filtros, favoritos, detalle por pestañas y 20 campos preparados. Seis fichas iniciales en borrador, sin pautas clínicas rellenadas. |
-| Glasgow | Selección de componentes adultos; suma de 3 a 15 cuando todos son valorables. Un componente NV o no seleccionado impide mostrar un total. Sin clasificación de gravedad ni decisiones terapéuticas. |
-| EVA | Simulación digital de una posición continua 0–100. No se presenta como una regla física calibrada de 100 mm ni como un instrumento validado en el dispositivo. |
-| Capurro | Pantalla A/B y espacio documental. Puntuación y estimación de edad gestacional deshabilitadas. |
-| Seguridad | Listas importables de 1 a 100 ítems. No se fija 20 como estándar universal ni se autoriza administrar un medicamento al completar una lista. |
-| PAE / Gordon | Plantillas y registros de práctica. Sin reproducción de taxonomías clínicas propietarias. |
-| Pacientes | Tres personas ficticias; notas, registros de signos, balance y planes locales separados por identificador. No permite crear una historia clínica real. |
-| Herramientas | Aritmética de IMC, conversión de unidades y goteo de ejemplo. Dosis y dilución deshabilitadas. ECG puramente ilustrativo, sin sensores. |
-| Aprendizaje | Tarjetas con posición guardada, cuestionario breve, material original de práctica y casos importables. |
-| Biblioteca | Selector Android de archivos, validación, previsualización, confirmación, importación transaccional, exportación del catálogo y deshacer la última importación. |
-| Persistencia | SQLite y preferencias privadas de la app. Notas, favoritos, prácticas y ajustes sobreviven al cierre normal. |
-
-Los apartados pendientes tienen mensajes explícitos; no se presentan como protocolos o funciones médicas terminadas. La gráfica de signos es decorativa: no se calcula a partir de los registros.
+- **Catálogo:** JSON de esquema 2 con medicamentos, casos, listas y protocolos. La app lee esquema 1 y 2. v0.2 rechazará esquema 2; no se intenta que ignore protocolos silenciosamente. Máximo 2.000.000 bytes, 500 registros agregados y 300 por tipo. Un respaldo vacío es válido.
+- **Cuaderno:** formato separado `tipo_respaldo: cuaderno_practica`, versión 1, con planes y apuntes. Hasta 200 documentos y 2.000.000 bytes agregados. Importación con vista previa/confirmación, reemplazo solo de IDs coincidentes y deshacer último cambio.
+- **Multimedia:** hasta 20 MiB por archivo, 100 MiB en total y 200 archivos; copia por streaming y nombres internos aleatorios. No forma parte de los JSON. Conserva los archivos originales.
+- **No existe una copia completa del dispositivo:** las notas de las fichas ficticias/Gordon/signos/balance de v0.2, favoritos, historial de prácticas y preferencias no se exportan con esos JSON.
+- Exportaciones legibles, no cifradas. Exportar no concede derechos adicionales. El respaldo externo del catálogo conserva atribuciones, pero no restaura el control de versiones de paquetes originales; el deshacer interno sí lo conserva.
+- Restablecer borra catálogo editado/importado, protocolos, cuaderno, copias multimedia, notas, favoritos e historial, previa confirmación. Desinstalar o borrar datos también elimina almacenamiento local. **No desinstalar v0.2 para actualizar.** No hay migración inversa para volver a v0.2.
 
 ## Compilar y probar
 
-Requisitos: JDK 17 o 21, Android SDK Platform 35 y herramientas de compilación. La compilación inicial descarga dependencias; eso **no** significa que la app necesite conexión al funcionar.
-
-1. Abre esta carpeta en Android Studio o configura `ANDROID_HOME`.
-2. Si lo necesitas, crea tu propio `local.properties` con `sdk.dir=...`.
-3. Ejecuta:
+Requisitos: JDK 17/21, SDK Platform 35. Gradle 8.9, AGP 8.7.3, Kotlin 2.0.21, Compose BOM 2024.12.01. Las descargas de compilación no implican conexión de la app instalada.
 
 ```sh
-./gradlew assembleDebug
-./gradlew testDebugUnitTest
-./gradlew lintDebug
-```
-
-En Windows utiliza `gradlew.bat`. El APK se genera en `app/build/outputs/apk/debug/app-debug.apk`. El wrapper está incluido y verifica la distribución de Gradle con SHA-256.
-
-Las bibliotecas de Robolectric se descargan en `.cache/robolectric-maven/`, dentro del proyecto. Son caché regenerable y se excluyen del guardado y del ZIP de código. En este entorno, conserva también las herramientas bajo `/home/user/.cache/`: al compilar, usa `GRADLE_USER_HOME=/home/user/.cache/idreyk-gradle` y `ANDROID_HOME=/home/user/.cache/android-sdk`.
-
-En una máquina con memoria limitada, separa compilación y ejecución de pruebas:
-
-```sh
-./gradlew assembleDebug compileDebugUnitTestKotlin lintDebug \
+./gradlew --no-daemon --max-workers=1 compileDebugUnitTestKotlin \
   '-Dorg.gradle.jvmargs=-Xmx640m -XX:MaxMetaspaceSize=384m -XX:+UseSerialGC -Dfile.encoding=UTF-8'
-./gradlew testDebugUnitTest \
+./gradlew --no-daemon --max-workers=1 testDebugUnitTest \
   '-Dorg.gradle.jvmargs=-Xmx384m -XX:MaxMetaspaceSize=256m -XX:+UseSerialGC -Dfile.encoding=UTF-8'
+./gradlew --no-daemon --max-workers=1 assembleDebug lintDebug \
+  '-Dorg.gradle.jvmargs=-Xmx640m -XX:MaxMetaspaceSize=384m -XX:+UseSerialGC -Dfile.encoding=UTF-8'
 ```
 
-Las pruebas de repositorio e interfaz usan **Robolectric / Android 9 simulado en JVM**. No sustituyen las pruebas con APK instalado, diferentes fabricantes, versiones Android y tamaños de pantalla. Consulta `qa/RESULTADOS.md` para conocer exactamente lo ejecutado, sus resultados y las limitaciones.
+APK generado en `app/build/outputs/apk/debug/app-debug.apk`. En Windows: `gradlew.bat`. Configura tu SDK en `ANDROID_HOME` o `local.properties` (este último no se distribuye). El wrapper verifica la descarga de Gradle por SHA-256.
 
-Versiones fijadas: Gradle 8.9, AGP 8.7.3, Kotlin 2.0.21 y Compose BOM 2024.12.01. Antes de producción deben revisarse actualizaciones de dependencias, SDK objetivo y políticas vigentes de distribución.
+En el entorno de desarrollo actual se conservan las herramientas en `/home/user/.cache/`; se usa `GRADLE_USER_HOME=/home/user/.cache/idreyk-gradle`. Robolectric descarga dependencias a `.cache/robolectric-maven/` del proyecto. No llevar esos cachés al ZIP. No compilar y ejecutar un emulador pesado simultáneamente en este entorno limitado.
 
-## Organización del proyecto
+```sh
+cd content-tools
+python -m pip install -r requirements.txt
+python -m unittest -v test_converter
+python convertir_plantilla.py Plantilla_contenidos_iDreyK_360.xlsx salida.json
+```
 
-- `Models.kt`: modelos, validación de paquetes y aritmética de práctica.
-- `Repository.kt`: SQLite, metadatos, transacciones, punto de deshacer y ViewModel.
-- `MainActivity.kt`: entrada, navegación, selector/creador de documentos y confirmaciones.
-- `Design.kt`: paleta, tipografías y componentes reutilizables.
-- `ScreensLibrary.kt`: inicio, farmacología, escalas, seguridad y biblioteca.
-- `ScreensPractice.kt`: PAE, datos ficticios, herramientas y aprendizaje.
-- `app/src/main/assets/contenido_inicial.json`: biblioteca incluida al instalar.
-- `app/src/test/`: pruebas de lógica, persistencia e interfaz simulada.
-- `content-tools/`: plantillas, conversor XLSX → JSON, esquema y documentación.
-- `design/`: original editable de la ilustración; el APK usa la versión optimizada de los recursos.
-- `research/`: referencias preparatorias y límites de la revisión documental.
-- `qa/`: evidencias de pruebas y lista de verificación en teléfono.
+`qa/RESULTADOS.md` y `qa/resultados.json` contienen los resultados exactos ejecutados. Pruebas de interfaz y persistencia en Robolectric/API 28: **no equivalen a APK probado en teléfono ni a validación clínica**. No se declara éxito de emulador completo o instalación física.
 
-## Seguridad y alcance de los respaldos
+## Organización
 
-No se solicitan permisos de internet, cámara, micrófono, ubicación o acceso general a archivos. La biblioteca usa el selector de documentos de Android y únicamente accede al archivo que el usuario elige. AndroidX puede añadir un permiso interno de firma para receptores no exportados; no es un permiso de acceso a tus datos.
+- `MainActivity.kt`, `Design.kt`: navegación, SAF, tema y componentes.
+- `Models.kt`, `Repository.kt`: catálogo, validación, SQLite/transacciones, migraciones y ViewModel con E/S serializada.
+- `ScaleModels.kt`, `ScreensScales.kt`: escalas, registro externo, fuentes y resultados.
+- `DoseMath.kt`, `ScreensDose.kt`: aritmética dimensional y formularios.
+- `NotebookModels.kt`, `ScreensNotebook.kt`: planes PAE, apuntes y respaldos.
+- `ScreensAuthoring.kt`: editores de fichas, listas, casos y protocolos; procedencia.
+- `MediaFiles.kt`, `ScreensMedia.kt`: copia local y apertura externa con FileProvider restringido.
+- `PracticeTrends.kt`: series de FC de registros guardados, sin datos predeterminados.
+- `ScreensLibrary.kt`, `ScreensPractice.kt`: módulos principales y funciones conservadas.
+- `app/src/test/`: pruebas matemáticas, estructurales, SQLite/migración y navegación real Compose simulada.
+- `content-tools/`: plantilla XLSX, esquemas 1/2, conversor y ejemplos no clínicos.
+- `research/`, `qa/`, `design/`: fuentes, evidencias y recurso original de diseño.
+- `DESARROLLO.md`: continuidad, historial y recuperación del proyecto.
 
-Se deshabilitan las copias automáticas y se excluyen los dominios de almacenamiento de las reglas de extracción y transferencia Android 12+. No hay telemetría ni servicios remotos implementados. El aislamiento normal de Android no equivale a cifrado clínico propio, autenticación biométrica, controles de roles o cumplimiento normativo para historias clínicas.
+## Seguridad y tareas pendientes
 
-**Exportar catálogo** incluye fichas, casos, listas y metadatos de procedencia. Es JSON legible, no cifrado. No exporta notas de práctica, favoritos, historial de ejercicios ni ajustes. Una importación de respaldo conserva la autoría original, pero se registra como un paquete nuevo: no restaura el control de versiones de los paquetes de origen. **Deshacer**, en cambio, restaura el catálogo y su control de versiones previos dentro de una transacción local.
+Sin permisos de Internet, ubicación, cámara, micrófono ni acceso general a almacenamiento. SAF accede a lo elegido por el usuario. FileProvider no exportado, limitado a `files/biblioteca/`; apertura externa con permiso temporal de lectura, no escritura. Los visores externos tienen sus propias condiciones y pueden usar red; la app no controla esas aplicaciones.
 
-En esta edición, el paquete **y el catálogo agregado** deben caber en 2.000.000 bytes, 500 registros totales y 300 por tipo. Se rechaza una operación que supere los límites, para conservar la posibilidad de exportar y deshacer sin archivos ilegibles.
+Copias automáticas deshabilitadas y reglas de extracción restringidas. No telemetría ni cuentas. El aislamiento Android no convierte esta edición en una historia clínica segura o conforme a normativa.
 
-## Antes de un uso clínico o de producción
+Pendientes: revisión clínica independiente de cada instrumento y cálculo; fuentes y permisos de contenido clínico; autorización de instrumentos restringidos; pruebas físicas de instalación, actualización, SAF y visores; accesibilidad/rotación/cargas grandes/fallo de disco; auditoría de privacidad y seguridad; firma de publicación y política de actualización. No se han implementado IA, extracción Word/PDF, sincronización remota ni integración editorial externa.
 
-Faltan revisión profesional de criterios, fórmulas y contenido; autorización de fuentes; protocolo institucional aplicable; pruebas instrumentadas y en teléfonos; auditoría de seguridad y accesibilidad; migraciones de base de datos; gestión de errores de almacenamiento; firma de publicación y estrategia de actualización. Si se plantea registrar pacientes reales, hace falta otro diseño de privacidad, cifrado, acceso y cumplimiento normativo.
-
-La futura integración editorial puede ser **carpeta → conversión estructurada → revisión humana → paquete aprobado → app**. No se han implementado lectura automática de Word/PDF, IA dentro de la aplicación, sincronización con Google Drive ni publicación automática.
-
-## Recursos
-
-Ilustración de enfermero generada con IA para el prototipo. Licencias de Outfit y Nunito Sans incluidas en los assets. Las fuentes documentales se citan como referencias; no se empaquetan manuales clínicos completos ni se presume autorización de redistribución por estar disponibles públicamente.
+Ilustración original generada con IA. Outfit y Nunito Sans bajo OFL, licencias incluidas. Se enlazan fuentes documentales; no se empaquetan manuales clínicos completos ni se presume autorización por disponibilidad pública.

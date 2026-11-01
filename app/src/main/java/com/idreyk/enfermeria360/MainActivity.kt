@@ -76,15 +76,23 @@ fun NursingApp(vm: AppViewModel) {
     var infoTitle by rememberSaveable { mutableStateOf("") }
     var infoText by rememberSaveable { mutableStateOf("") }
     val nav: (String) -> Unit = { next ->
-        if (next != route) {
+        if (next != route && !vm.busy) {
+            snackbar.currentSnackbarData?.dismiss()
             stack += "|$next"
         }
     }
     val rootNav: (String) -> Unit = { next ->
-        stack = if (next == "inicio") "inicio" else "inicio|$next"
+        if (!vm.busy) {
+            snackbar.currentSnackbarData?.dismiss()
+            stack = if (next == "inicio") "inicio" else "inicio|$next"
+        }
     }
     val back: () -> Unit = {
-        stack = if ('|' in stack) stack.substringBeforeLast('|') else "inicio"
+        if (!vm.busy) {
+            snackbar.currentSnackbarData?.dismiss()
+            if (route.startsWith("editar")) holder.removeState(route)
+            stack = if ('|' in stack) stack.substringBeforeLast('|') else "inicio"
+        }
     }
     val info: (String, String) -> Unit = { title, body ->
         infoTitle = title
@@ -100,6 +108,20 @@ fun NursingApp(vm: AppViewModel) {
         ) { uri ->
             if (uri != null) vm.export(uri)
         }
+    val mediaImporter =
+        rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+            if (uri != null) vm.importMedia(uri)
+        }
+    val notebookImporter =
+        rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+            if (uri != null) vm.previewNotebook(uri)
+        }
+    val notebookExporter =
+        rememberLauncherForActivityResult(
+            ActivityResultContracts.CreateDocument("application/json")
+        ) { uri ->
+            if (uri != null) vm.exportNotebook(uri)
+        }
     val openImport: () -> Unit = { importer.launch(arrayOf("*/*")) }
     val exportCatalog: () -> Unit = { exporter.launch("idreyk_catalogo_${LocalDate.now()}.json") }
     BackHandler('|' in stack) { back() }
@@ -113,7 +135,9 @@ fun NursingApp(vm: AppViewModel) {
     Scaffold(
         containerColor = palette.background,
         contentWindowInsets = WindowInsets.safeDrawing,
-        bottomBar = { if (!vm.data.loading) AppBottomBar(route, rootNav) },
+        bottomBar = {
+            if (!vm.data.loading && !route.startsWith("editar")) AppBottomBar(route, rootNav)
+        },
         snackbarHost = { SnackbarHost(snackbar) },
     ) { padding ->
         Box(
@@ -155,13 +179,49 @@ fun NursingApp(vm: AppViewModel) {
                             "modulos" -> ModulesScreen(nav, back)
                             "farmacologia" -> PharmacyScreen(vm, nav, back)
                             "med" -> DrugScreen(id, vm, nav, back)
-                            "escalas" -> ScalesScreen(nav, back, info)
+                            "escalas" -> ScaleLibraryScreen(nav, back)
                             "glasgow" -> GlasgowScreen(vm, back)
                             "eva" -> EvaScreen(vm, back)
-                            "capurro" -> CapurroScreen(back)
+                            "capurro" -> CapurroCalculatorScreen(vm, back)
+                            "escala" -> NeonatalScoreScreen(id, vm, back)
+                            "glasgow-pediatrico" -> PediatricGlasgowRecord(vm, back)
+                            "registro-escala" -> ExternalScaleScreen(id, vm, back)
+                            "editar" ->
+                                EntryEditorScreen(
+                                    id.substringBefore('/'),
+                                    id.substringAfter('/'),
+                                    vm,
+                                    back,
+                                )
+                            "protocolos" -> ProtocolsScreen(vm, nav, back)
+                            "protocol" -> ProtocolDetail(id, vm, nav, back)
+                            "cuaderno" ->
+                                NotebookHub(
+                                    vm,
+                                    nav,
+                                    back,
+                                    { notebookImporter.launch(arrayOf("*/*")) },
+                                    {
+                                        notebookExporter.launch(
+                                            "idreyk_cuaderno_${LocalDate.now()}.json"
+                                        )
+                                    },
+                                )
+                            "editar-plan" ->
+                                PlanEditorScreen(
+                                    id.substringBefore('/'),
+                                    id.substringAfter('/'),
+                                    vm,
+                                    back,
+                                )
+                            "editar-apunte" -> StudyNoteEditor(id, vm, back)
+                            "multimedia" ->
+                                MediaLibraryScreen(vm, back) {
+                                    mediaImporter.launch(MediaFiles.extensions.keys.toTypedArray())
+                                }
                             "seguridad" -> SafetyScreen(vm, nav, back)
-                            "safety" -> SafetyDetail(id, vm, back)
-                            "contenido" -> ContentScreen(vm, back, openImport, exportCatalog)
+                            "safety" -> SafetyDetail(id, vm, nav, back)
+                            "contenido" -> ContentScreen(vm, nav, back, openImport, exportCatalog)
                             "pae" -> PaeScreen(nav, back, info)
                             "valoracion" -> AssessmentScreen(vm, back)
                             "pacientes" -> PatientsScreen(nav, back)
@@ -169,14 +229,17 @@ fun NursingApp(vm: AppViewModel) {
                             "evolucion" -> EvolutionScreen(id, vm, back)
                             "signos" -> VitalsScreen(id, vm, back)
                             "balance" -> BalanceScreen(id, vm, back)
-                            "plan" -> CareScreen(id, vm, back)
+                            "plan" -> CarePlansScreen(id, vm, nav, back)
                             "herramientas" -> ToolsScreen(nav, back)
-                            "calc" -> CalculatorScreen(id, vm, back)
+                            "calc" ->
+                                if (id in listOf("dosis", "dilucion"))
+                                    DoseExerciseScreen(id, vm, back)
+                                else CalculatorScreen(id, vm, back)
                             "ecg" -> EcgScreen(back)
                             "aprendizaje" -> LearningScreen(nav, back, info)
                             "tarjetas" -> FlashScreen(vm, back)
                             "quiz" -> QuizScreen(vm, back)
-                            "apuntes" -> NotesScreen(back, info)
+                            "apuntes" -> StudyNotesScreen(vm, nav, back)
                             "casos" -> CasesScreen(vm, nav, back)
                             "case" -> CaseScreen(id, vm, nav, back)
                             "favoritos" -> FavoritesScreen(vm, nav, back)
@@ -218,9 +281,34 @@ fun NursingApp(vm: AppViewModel) {
             Text(infoText, style = MaterialTheme.typography.bodyMedium, color = palette.muted)
             Secondary("Volver al recorrido", { infoTitle = "" })
         }
+    vm.notebookPreview?.let { records ->
+        AppSheet("Revisar importación de cuaderno", { vm.cancelNotebookImport() }) {
+            Text(
+                "${records.size} documentos. ${records.count {incoming -> vm.data.notebooks.any {it.id==incoming.id}}} reemplazan IDs existentes.",
+                style = MaterialTheme.typography.titleMedium,
+            )
+            Notice(
+                "Solo planes y apuntes de práctica. Se conservarán los demás documentos y un estado anterior para deshacer. No incluyas datos reales de pacientes.",
+                true,
+            )
+            records.take(10).forEach {
+                Text("• ${it.title}", style = MaterialTheme.typography.bodySmall)
+            }
+            Primary(
+                "Confirmar importación del cuaderno",
+                { vm.importNotebookConfirmed() },
+                !vm.busy,
+            )
+            Secondary("Cancelar", { vm.cancelNotebookImport() }, !vm.busy)
+        }
+    }
+    BackHandler(vm.busy) { /* Do not leave a pending transactional operation. */ }
     vm.preview?.let { preview ->
         AppSheet("Revisa antes de importar", { vm.cancelImport() }) {
-            Badge("PAQUETE LOCAL · ESQUEMA 1", Teal)
+            Badge(
+                "PAQUETE LOCAL · ESQUEMA ${org.json.JSONObject(preview.content.raw).getInt("version_esquema")}",
+                Teal,
+            )
             Text(preview.content.title, style = MaterialTheme.typography.titleLarge)
             Text(
                 "Autor: ${preview.content.author}\nVersión: ${preview.content.version}\nActualización declarada: ${preview.content.updated}",

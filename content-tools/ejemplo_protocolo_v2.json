@@ -1,0 +1,20 @@
+{
+  "version_esquema": 2,
+  "id_paquete": "ejemplo-protocolo-v2",
+  "version_contenido": 1,
+  "titulo": "Prueba técnica de protocolo local",
+  "autor": "Proyecto iDreyK 360 · QA",
+  "fecha_actualizacion": "2026-11-01",
+  "licencia": "Texto original de demostración sin instrucciones clínicas.",
+  "protocolos": [
+    {
+      "id": "recorrido-editorial",
+      "titulo": "Recorrido editorial de práctica",
+      "area": "Uso de la aplicación",
+      "revision": "borrador",
+      "objetivo": "Probar lectura, edición, exportación e importación.",
+      "contenido": "1. Crea un documento local propio.\n2. Añade sus fuentes y permisos cuando correspondan.\n3. Comprueba el estado de borrador.\n4. Exporta el catálogo y revisa la copia.\n\nEste ejemplo describe el uso del software, no un procedimiento clínico.",
+      "fuentes": []
+    }
+  ]
+}

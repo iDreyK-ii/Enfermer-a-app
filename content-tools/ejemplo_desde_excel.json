@@ -1,5 +1,5 @@
 {
-  "version_esquema": 1,
+  "version_esquema": 2,
   "id_paquete": "mi-biblioteca",
   "version_contenido": 1,
   "titulo": "Mi biblioteca de enfermería",
@@ -41,5 +41,6 @@
     }
   ],
   "casos": [],
-  "listas_seguridad": []
+  "listas_seguridad": [],
+  "protocolos": []
 }

@@ -22,7 +22,7 @@ class ConverterTests(unittest.TestCase):
     def run_conversion(self):
         self.wb.save(self.source)
         with contextlib.redirect_stdout(io.StringIO()):result=convert(self.source,self.output)
-        schema=json.loads((ROOT/'esquema_contenido_v1.schema.json').read_text())
+        schema=json.loads((ROOT/f"esquema_contenido_v{result['version_esquema']}.schema.json").read_text())
         jsonschema.validate(result,schema,format_checker=jsonschema.FormatChecker())
         return result
     def test_template_round_trip(self):
@@ -63,5 +63,28 @@ class ConverterTests(unittest.TestCase):
         self.wb['Medicamentos']['F2']='Revisor ficticio'
         self.wb['Medicamentos']['G2']='2026-11-01'
         with self.assertRaisesRegex(ValueError,'fuentes'):self.run_conversion()
+
+    def test_protocol_round_trip_in_v2(self):
+        values=['qa-protocol','Documento de formato QA','Prueba','borrador','','','Objetivo ficticio','Texto ficticio, no protocolo clínico']
+        for i,v in enumerate(values,1):self.wb['Protocolos'].cell(2,i,v)
+        p=self.run_conversion();self.assertEqual(p['version_esquema'],2);self.assertEqual(p['protocolos'][0]['id'],'qa-protocol')
+    def test_v1_workbook_still_converts(self):
+        self.wb['Metadatos']['B2']=1
+        del self.wb['Protocolos']
+        p=self.run_conversion();self.assertEqual(p['version_esquema'],1);self.assertNotIn('protocolos',p)
+    def test_v1_does_not_silently_drop_protocols(self):
+        self.wb['Metadatos']['B2']=1
+        self.wb['Protocolos']['A2']='qa-protocol'
+        with self.assertRaisesRegex(ValueError,'esquema 2'):self.run_conversion()
+    def test_reference_credentials_rejected(self):
+        values=['medicamento','paracetamol','QA','https://user:password@example.org/qa','QA','2026-11-01']
+        for i,v in enumerate(values,1):self.wb['Fuentes'].cell(2,i,v)
+        with self.assertRaisesRegex(ValueError,'credenciales'):self.run_conversion()
+    def test_protocol_source_linked(self):
+        values=['qa-p','Prueba','QA','borrador','','','','Texto ficticio']
+        for i,v in enumerate(values,1):self.wb['Protocolos'].cell(2,i,v)
+        values=['protocolo','qa-p','Referencia ficticia','https://example.org/qa','QA','2026-11-01']
+        for i,v in enumerate(values,1):self.wb['Fuentes'].cell(2,i,v)
+        p=self.run_conversion();self.assertEqual(len(p['protocolos'][0]['fuentes']),1)
 
 if __name__=='__main__':unittest.main(verbosity=2)

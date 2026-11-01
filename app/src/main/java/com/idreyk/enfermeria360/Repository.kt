@@ -21,7 +21,7 @@ import org.json.JSONArray
 import org.json.JSONObject
 
 private class LocalDatabase(context: Context) :
-    SQLiteOpenHelper(context, "idreyk_local.db", null, 1) {
+    SQLiteOpenHelper(context, "idreyk_local.db", null, 2) {
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(
             "CREATE TABLE content(kind TEXT NOT NULL,id TEXT NOT NULL,name TEXT NOT NULL,payload TEXT NOT NULL,PRIMARY KEY(kind,id))"
@@ -37,10 +37,24 @@ private class LocalDatabase(context: Context) :
             "CREATE TABLE practice(id INTEGER PRIMARY KEY AUTOINCREMENT,type TEXT NOT NULL,summary TEXT NOT NULL,created INTEGER NOT NULL)"
         )
         db.execSQL("CREATE TABLE meta(key TEXT PRIMARY KEY,value TEXT)")
+        createVersion2(db)
+    }
+
+    private fun createVersion2(db: SQLiteDatabase) {
+        db.execSQL(
+            "CREATE TABLE notebooks(id TEXT PRIMARY KEY,kind TEXT NOT NULL,owner TEXT NOT NULL,title TEXT NOT NULL,payload TEXT NOT NULL,modified INTEGER NOT NULL)"
+        )
+        db.execSQL(
+            "CREATE TABLE media(id TEXT PRIMARY KEY,title TEXT NOT NULL,mime TEXT NOT NULL,filename TEXT NOT NULL,bytes INTEGER NOT NULL,created INTEGER NOT NULL)"
+        )
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-        error("Se requiere una migración explícita para esta versión de base de datos.")
+        check(oldVersion == 1 && newVersion == 2) {
+            "Ruta de migración no soportada; no se borraron datos."
+        }
+        // SQLiteOpenHelper encloses this migration in its own transaction. v1 tables are untouched.
+        createVersion2(db)
     }
 }
 
@@ -64,6 +78,15 @@ class ContentRepository(private val context: Context) {
                 "INSERT OR REPLACE INTO meta(key,value) VALUES('seed','1')"
             )
         }
+        val known = media().map { it.filename }.toSet()
+        MediaFiles.directory(context)
+            .listFiles()
+            ?.filter { file ->
+                file.name.startsWith("temp_") ||
+                    (Regex("[a-f0-9-]{36}\\.[a-z0-9]{2,5}").matches(file.name) &&
+                        file.name !in known)
+            }
+            ?.forEach { it.delete() }
     }
 
     fun entries(): List<Entry> =
@@ -160,6 +183,246 @@ class ContentRepository(private val context: Context) {
             it.moveToFirst()
         }
 
+    fun saveLocalEntry(kind: String, edited: JSONObject, author: String, license: String) {
+        require(kind in CONTENT_ARRAYS) { "Tipo de ficha no reconocido." }
+        val id = edited.optString("id")
+        require(NotebookCodec.slug(id)) { "ID de ficha inválido." }
+        val original = entries().find { it.kind == kind && it.id == id }
+        val draft = CatalogAuthoring.draft(original?.json, edited)
+        val hash =
+            java.security.MessageDigest.getInstance("SHA-256")
+                .digest("$kind/$id".toByteArray())
+                .take(16)
+                .joinToString("") { "%02x".format(it) }
+        val packageId = "edicion-local-$hash"
+        val previous =
+            helper.readableDatabase
+                .rawQuery("SELECT version FROM packages WHERE id=?", arrayOf(packageId))
+                .use { if (it.moveToFirst()) it.getLong(0) else 0L }
+        val root =
+            JSONObject()
+                .put("version_esquema", 2)
+                .put("id_paquete", packageId)
+                .put("version_contenido", previous + 1)
+                .put(
+                    "titulo",
+                    "Edición local · " +
+                        draft.optString(if (kind == "med") "nombre" else "titulo").take(120),
+                )
+                .put("autor", author)
+                .put("fecha_actualizacion", LocalDate.now().toString())
+                .put("licencia", license)
+                .put(CONTENT_ARRAYS.getValue(kind), JSONArray().put(draft))
+        writePackage(ContentParser.parse(root.toString()))
+    }
+
+    fun deleteEntry(key: String) {
+        val entry =
+            entries().find { it.key == key }
+                ?: throw IllegalArgumentException("La ficha ya no existe.")
+        val db = helper.writableDatabase
+        db.beginTransaction()
+        try {
+            db.insertWithOnConflict(
+                    "meta",
+                    null,
+                    ContentValues().apply {
+                        put("key", "undo")
+                        put("value", exportText())
+                    },
+                    SQLiteDatabase.CONFLICT_REPLACE,
+                )
+                .also { check(it != -1L) }
+            db.delete("content", "kind=? AND id=?", arrayOf(entry.kind, entry.id))
+            ContentParser.parse(snapshot().toString())
+            db.setTransactionSuccessful()
+        } finally {
+            db.endTransaction()
+        }
+    }
+
+    fun notebooks(): List<NotebookRecord> =
+        helper.readableDatabase
+            .rawQuery("SELECT payload FROM notebooks ORDER BY modified DESC,id", null)
+            .use { c ->
+                buildList {
+                    while (c.moveToNext()) add(NotebookCodec.record(JSONObject(c.getString(0))))
+                }
+            }
+
+    fun notebookText(): String = NotebookCodec.encode(notebooks())
+
+    fun hasNotebookUndo(): Boolean =
+        helper.readableDatabase.rawQuery("SELECT 1 FROM meta WHERE key='notebook_undo'", null).use {
+            it.moveToFirst()
+        }
+
+    private fun backupNotebook(db: SQLiteDatabase) {
+        db.insertWithOnConflict(
+                "meta",
+                null,
+                ContentValues().apply {
+                    put("key", "notebook_undo")
+                    put("value", notebookText())
+                },
+                SQLiteDatabase.CONFLICT_REPLACE,
+            )
+            .also { check(it != -1L) }
+    }
+
+    private fun putNotebook(db: SQLiteDatabase, r: NotebookRecord) {
+        db.insertWithOnConflict(
+                "notebooks",
+                null,
+                ContentValues().apply {
+                    put("id", r.id)
+                    put("kind", r.kind)
+                    put("owner", r.owner)
+                    put("title", r.title)
+                    put("payload", r.json().toString())
+                    put("modified", r.modified)
+                },
+                SQLiteDatabase.CONFLICT_REPLACE,
+            )
+            .also { check(it != -1L) }
+    }
+
+    fun validateNotebooks(incoming: List<NotebookRecord>) {
+        NotebookCodec.encode(incoming)
+        val merged = notebooks().associateBy { it.id }.toMutableMap()
+        incoming.forEach { r ->
+            require(merged[r.id]?.kind.let { it == null || it == r.kind }) {
+                "Un ID existente no puede cambiar de tipo de documento."
+            }
+            merged[r.id] = r
+        }
+        NotebookCodec.encode(merged.values.toList())
+    }
+
+    fun mergeNotebooks(incoming: List<NotebookRecord>) {
+        val db = helper.writableDatabase
+        db.beginTransaction()
+        try {
+            validateNotebooks(incoming)
+            backupNotebook(db)
+            incoming.forEach { putNotebook(db, NotebookCodec.record(it.json())) }
+            db.setTransactionSuccessful()
+        } finally {
+            db.endTransaction()
+        }
+    }
+
+    fun saveNotebook(record: NotebookRecord) =
+        mergeNotebooks(listOf(record.copy(modified = System.currentTimeMillis())))
+
+    fun deleteNotebook(id: String) {
+        require(notebooks().any { it.id == id }) { "El documento ya no existe." }
+        val db = helper.writableDatabase
+        db.beginTransaction()
+        try {
+            backupNotebook(db)
+            db.delete("notebooks", "id=?", arrayOf(id))
+            db.setTransactionSuccessful()
+        } finally {
+            db.endTransaction()
+        }
+    }
+
+    fun undoNotebook() {
+        val raw =
+            helper.readableDatabase
+                .rawQuery("SELECT value FROM meta WHERE key='notebook_undo'", null)
+                .use {
+                    require(it.moveToFirst()) { "No hay cambios de cuaderno para deshacer." }
+                    it.getString(0)
+                }
+        val records = NotebookCodec.decode(raw)
+        val db = helper.writableDatabase
+        db.beginTransaction()
+        try {
+            db.delete("notebooks", null, null)
+            records.forEach { putNotebook(db, it) }
+            db.delete("meta", "key=?", arrayOf("notebook_undo"))
+            db.setTransactionSuccessful()
+        } finally {
+            db.endTransaction()
+        }
+    }
+
+    fun exportNotebooks(uri: Uri) {
+        context.contentResolver.openOutputStream(uri, "wt")?.use {
+            it.write(notebookText().toByteArray(Charsets.UTF_8))
+        } ?: error("No se pudo exportar el cuaderno.")
+    }
+
+    fun media(): List<MediaRecord> =
+        helper.readableDatabase
+            .rawQuery(
+                "SELECT id,title,mime,filename,bytes,created FROM media ORDER BY created DESC",
+                null,
+            )
+            .use { c ->
+                buildList {
+                    while (c.moveToNext()) add(
+                        MediaRecord(
+                            c.getString(0),
+                            c.getString(1),
+                            c.getString(2),
+                            c.getString(3),
+                            c.getLong(4),
+                            c.getLong(5),
+                        )
+                    )
+                }
+            }
+
+    fun importMedia(uri: Uri) {
+        require(media().size < 200) { "Máximo 200 archivos en la biblioteca." }
+        val record =
+            MediaFiles.copy(context, uri, MediaFiles.MAX_LIBRARY - media().sumOf { it.bytes })
+        try {
+            helper.writableDatabase.insertOrThrow(
+                "media",
+                null,
+                ContentValues().apply {
+                    put("id", record.id)
+                    put("title", record.title)
+                    put("mime", record.mime)
+                    put("filename", record.filename)
+                    put("bytes", record.bytes)
+                    put("created", record.created)
+                },
+            )
+        } catch (e: Exception) {
+            MediaFiles.delete(context, record)
+            throw e
+        }
+    }
+
+    fun renameMedia(id: String, title: String) {
+        require(title.isNotBlank() && title.length <= 140) {
+            "Escribe un título de 1 a 140 caracteres."
+        }
+        require(
+            helper.writableDatabase.update(
+                "media",
+                ContentValues().apply { put("title", title.trim()) },
+                "id=?",
+                arrayOf(id),
+            ) == 1
+        ) {
+            "El archivo ya no existe."
+        }
+    }
+
+    fun deleteMedia(id: String) {
+        val record =
+            media().find { it.id == id }
+                ?: throw IllegalArgumentException("El archivo ya no existe.")
+        MediaFiles.delete(context, record)
+        helper.writableDatabase.delete("media", "id=?", arrayOf(id))
+    }
+
     fun close() = helper.close()
 
     fun readDocument(uri: Uri): String {
@@ -198,7 +461,7 @@ class ContentRepository(private val context: Context) {
         val now = System.currentTimeMillis()
         val root =
             JSONObject()
-                .put("version_esquema", 1)
+                .put("version_esquema", 2)
                 .put("tipo_paquete", "respaldo_catalogo")
                 .put("id_paquete", "respaldo-$now")
                 .put("version_contenido", 1)
@@ -209,8 +472,7 @@ class ContentRepository(private val context: Context) {
                     "licencia",
                     "Consultar las fuentes y permisos de cada ficha. Exportar no concede derechos adicionales.",
                 )
-        for ((kind, key) in
-            listOf("med" to "medicamentos", "case" to "casos", "safety" to "listas_seguridad")) {
+        for ((kind, key) in CONTENT_ARRAYS) {
             val a = JSONArray()
             entries().filter { it.kind == kind }.forEach { a.put(it.json) }
             root.put(key, a)
@@ -260,8 +522,7 @@ class ContentRepository(private val context: Context) {
         val merged = entries().associateBy { it.key }.toMutableMap()
         for (e in pack.entries) merged[e.key] = e.copy(json = payload(pack, e))
         val root = snapshot()
-        for ((kind, key) in
-            listOf("med" to "medicamentos", "case" to "casos", "safety" to "listas_seguridad")) {
+        for ((kind, key) in CONTENT_ARRAYS) {
             val array = JSONArray()
             merged.values.filter { it.kind == kind }.forEach { array.put(it.json) }
             root.put(key, array)
@@ -392,16 +653,22 @@ class ContentRepository(private val context: Context) {
             beginTransaction()
             try {
                 for (t in
-                    listOf("content", "packages", "favorites", "notes", "practice", "meta")) delete(
-                    t,
-                    null,
-                    null,
-                )
+                    listOf(
+                        "content",
+                        "packages",
+                        "favorites",
+                        "notes",
+                        "practice",
+                        "meta",
+                        "notebooks",
+                        "media",
+                    )) delete(t, null, null)
                 setTransactionSuccessful()
             } finally {
                 endTransaction()
             }
         }
+        MediaFiles.directory(context).listFiles()?.forEach { it.delete() }
         initialize()
     }
 }
@@ -413,9 +680,15 @@ data class LocalState(
     val notes: List<StudyNote> = emptyList(),
     val practices: List<PracticeRecord> = emptyList(),
     val hasBackup: Boolean = false,
+    val notebooks: List<NotebookRecord> = emptyList(),
+    val media: List<MediaRecord> = emptyList(),
+    val hasNotebookUndo: Boolean = false,
 )
 
+@OptIn(kotlinx.coroutines.ExperimentalCoroutinesApi::class)
 class AppViewModel(application: Application) : AndroidViewModel(application) {
+    // A serial I/O lane also lets lifecycle cleanup wait behind any active transaction.
+    private val io = Dispatchers.IO.limitedParallelism(1)
     private val prefs = application.getSharedPreferences("preferences", Context.MODE_PRIVATE)
     private val repository = ContentRepository(application)
     var data by mutableStateOf(LocalState())
@@ -451,7 +724,7 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
     init {
         viewModelScope.launch {
             try {
-                withContext(Dispatchers.IO) { repository.initialize() }
+                withContext(io) { repository.initialize() }
                 reload()
             } catch (e: Exception) {
                 data = data.copy(loading = false)
@@ -462,7 +735,7 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
 
     private suspend fun reload() {
         val state =
-            withContext(Dispatchers.IO) {
+            withContext(io) {
                 LocalState(
                     false,
                     repository.entries(),
@@ -470,19 +743,24 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
                     repository.notes(),
                     repository.practices(),
                     repository.hasBackup(),
+                    repository.notebooks(),
+                    repository.media(),
+                    repository.hasNotebookUndo(),
                 )
             }
         data = state
     }
 
-    private fun work(success: String, block: () -> Unit) {
+    private fun work(success: String, onSuccess: () -> Unit = {}, block: () -> Unit) {
         if (busy) return
         busy = true
         viewModelScope.launch {
             try {
-                withContext(Dispatchers.IO) { block() }
+                withContext(io) { block() }
                 reload()
                 message = success
+                busy = false
+                onSuccess()
             } catch (e: Exception) {
                 message = e.message ?: "No se completó la operación. No se enviaron datos."
             } finally {
@@ -508,8 +786,7 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
         busy = true
         viewModelScope.launch {
             try {
-                preview =
-                    withContext(Dispatchers.IO) { repository.preview(repository.readDocument(uri)) }
+                preview = withContext(io) { repository.preview(repository.readDocument(uri)) }
             } catch (e: Exception) {
                 message = e.message ?: "No se pudo revisar el archivo."
             } finally {
@@ -571,6 +848,79 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
 
     fun notify(text: String) {
         message = text
+    }
+
+    fun saveLocalEntry(kind: String, json: JSONObject, license: String, onSaved: () -> Unit) =
+        work("Ficha local guardada como borrador", onSaved) {
+            repository.saveLocalEntry(kind, json, name, license)
+        }
+
+    fun deleteEntry(key: String, onDeleted: () -> Unit) =
+        work("Ficha eliminada; puedes deshacer desde Biblioteca local", onDeleted) {
+            repository.deleteEntry(key)
+        }
+
+    fun saveNotebook(record: NotebookRecord, onSaved: () -> Unit) =
+        work("Documento de práctica guardado", onSaved) { repository.saveNotebook(record) }
+
+    fun deleteNotebook(id: String, onDeleted: () -> Unit = {}) =
+        work("Documento eliminado del cuaderno", onDeleted) { repository.deleteNotebook(id) }
+
+    fun undoNotebook() = work("Último cambio de cuaderno deshecho") { repository.undoNotebook() }
+
+    fun exportNotebook(uri: Uri) =
+        work("Cuaderno exportado: planes y apuntes; no incluye archivos multimedia") {
+            repository.exportNotebooks(uri)
+        }
+
+    var notebookPreview by mutableStateOf<List<NotebookRecord>?>(null)
+        private set
+
+    fun previewNotebook(uri: Uri) {
+        if (busy) return
+        busy = true
+        viewModelScope.launch {
+            try {
+                notebookPreview =
+                    withContext(io) {
+                        NotebookCodec.decode(repository.readDocument(uri)).also {
+                            repository.validateNotebooks(it)
+                        }
+                    }
+            } catch (e: Exception) {
+                message = e.message ?: "No se pudo revisar el cuaderno."
+            } finally {
+                busy = false
+            }
+        }
+    }
+
+    fun cancelNotebookImport() {
+        notebookPreview = null
+    }
+
+    fun importNotebookConfirmed() {
+        val records = notebookPreview ?: return
+        notebookPreview = null
+        work("Cuaderno importado; puedes deshacer el último cambio") {
+            repository.mergeNotebooks(records)
+        }
+    }
+
+    fun importMedia(uri: Uri) =
+        work("Copia local añadida a la biblioteca") { repository.importMedia(uri) }
+
+    fun renameMedia(id: String, title: String, onSaved: () -> Unit) =
+        work("Título actualizado", onSaved) { repository.renameMedia(id, title) }
+
+    fun deleteMedia(id: String) =
+        work("Copia local eliminada; el archivo original no se modificó") {
+            repository.deleteMedia(id)
+        }
+
+    override fun onCleared() {
+        kotlinx.coroutines.CoroutineScope(io).launch { repository.close() }
+        super.onCleared()
     }
 
     fun clearMessage() {

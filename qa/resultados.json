@@ -1,96 +1,102 @@
 {
   "date": "2026-11-01",
-  "app_version": "0.2.0-dev-debug",
-  "apk": "Enfermeria_iDreyK_360_v0.2_debug.apk",
-  "apk_bytes": 9664206,
-  "sha256": "bb624e2059ed20874440ceefc97cb042adfa15fb840557976728a9c87f255076",
-  "native_tests": [
-    {
-      "suite": "com.idreyk.enfermeria360.CoreTests",
-      "tests": 27,
-      "failures": 0,
-      "errors": 0,
-      "skipped": 0,
-      "seconds": 0.249,
-      "cases": [
-        "sourceUrlsMustBeCompleteAndDatesValid",
-        "parserRejectsWrongOptionalTypes",
-        "bundledContentPasses",
-        "searchHandlesSpanishAccents",
-        "dripReferenceArithmetic",
-        "parserRejectsBadIdentityAndVersion",
-        "parserRejectsInvalidJsonAndSchema",
-        "parserRejectsUnknownSections",
-        "textIsRequiredInSafetyItems",
-        "listsAreNotHardCodedToTwenty",
-        "declaredReviewRequiresMetadata",
-        "parserRejectsOversizedPayload",
-        "dripRejectsInvalidInputs",
-        "evaIsOnlyNormalizedPosition",
-        "invalidUtf8IsNotSilentlyReplaced",
-        "parserRejectsBadDate",
-        "glasgowDoesNotInventMissingValues",
-        "bmiReferenceArithmetic",
-        "numericUnderflowDoesNotProduceInfiniteBmi",
-        "backupsMustRetainOriginalAuthorship",
-        "parserRejectsDuplicateIds",
-        "glasgowEveryCombination",
-        "conversionArithmetic",
-        "bmiRejectsInvalidNumbers",
-        "parserRejectsUnsupportedSourceSchemes",
-        "noSilentTextTruncation",
-        "importNeverInterpretsMarkup"
-      ]
-    },
-    {
-      "suite": "com.idreyk.enfermeria360.InterfaceTests",
-      "tests": 2,
-      "failures": 0,
-      "errors": 0,
-      "skipped": 0,
-      "seconds": 9.198,
-      "cases": [
-        "homeOpensNativePharmacologyAndPreparedFields",
-        "nativeProfileWritesLocalThemePreference"
-      ]
-    },
-    {
-      "suite": "com.idreyk.enfermeria360.RepositoryTests",
-      "tests": 9,
-      "failures": 0,
-      "errors": 0,
-      "skipped": 0,
-      "seconds": 0.992,
-      "cases": [
-        "initialLibraryIsLocalAndRepeatable",
-        "notesFavoritesAndExercisesSurviveReopening",
-        "rejectedAggregatePreservesPreviousUndoPoint",
-        "aggregateByteLimitKeepsExportsReadable",
-        "previewDoesNotWriteAndCountsReplacements",
-        "undoRestoresCatalogAndVersionButNotPracticeData",
-        "exportedCatalogKeepsOriginalAttributionWithoutNotes",
-        "versionsCannotGoBackwards",
-        "resetClearsOnlyLocalPracticeAndCatalog"
-      ]
-    }
-  ],
+  "version": "0.3.0-dev-debug",
+  "android_tests": {
+    "runner": "JUnit + Robolectric / Android API 28",
+    "passed": 77,
+    "failed": 0,
+    "skipped": 0,
+    "classes": [
+      {
+        "class": "com.idreyk.enfermeria360.CoreTests",
+        "tests": 27,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 0.296
+      },
+      {
+        "class": "com.idreyk.enfermeria360.InterfaceTests",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 10.587
+      },
+      {
+        "class": "com.idreyk.enfermeria360.ModuleInterfaceTests",
+        "tests": 7,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 6.813
+      },
+      {
+        "class": "com.idreyk.enfermeria360.ModuleRepositoryTests",
+        "tests": 11,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 1.054
+      },
+      {
+        "class": "com.idreyk.enfermeria360.NursingModuleTests",
+        "tests": 21,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 0.316
+      },
+      {
+        "class": "com.idreyk.enfermeria360.RepositoryTests",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 1.025
+      }
+    ]
+  },
   "converter_tests": {
-    "passed": 10,
-    "failed": 0
+    "passed": 15,
+    "failed": 0,
+    "log": "conversor-pruebas.txt"
   },
   "lint": {
-    "Warning": 27
+    "errors": 0,
+    "warnings": 25,
+    "by_id": {
+      "GradleDependency": 5,
+      "UnusedResources": 20
+    }
   },
-  "apk_signature_verified": true,
-  "internet_permission": false,
-  "real_device_validation": "PENDIENTE",
-  "full_emulator_installation": "NO COMPLETADA: host con 2 GB y sin KVM",
-  "test_framework": "JUnit + Robolectric (Android 9/API 28); no certificación clínica",
-  "maintenance": {
-    "date": "2026-11-01",
-    "task": "Limpieza y traslado de las bibliotecas de pruebas a caché",
-    "runtime_code_changed": false,
-    "apk_changed": false,
-    "tests_passed_after_cache_relocation": 38
-  }
+  "apk": {
+    "artifact": "Enfermeria_iDreyK_360_v0.3_debug.apk",
+    "bytes": 9389862,
+    "sha256": "7eb4854d1d6c927423a8ddaca0f1331522927d5b431187b45ca75703dd62bd99",
+    "certificate_sha256": "d6874c68417eefb1b1b902bf82ba4ce7d8734e47877e12bd1733eb498f0e522b",
+    "package": "com.idreyk.enfermeria360.dev",
+    "version_code": 3,
+    "version_name": "0.3.0-dev-debug",
+    "lint": {
+      "Warning": 25
+    }
+  },
+  "migration": {
+    "from_sqlite": 1,
+    "to_sqlite": 2,
+    "method": "Add notebooks and media; preserve all v1 tables",
+    "simulated_test": "passed",
+    "physical_update_test": "not performed"
+  },
+  "device_testing": {
+    "physical_installation": "not performed",
+    "full_emulator_installation": "not completed; no success claimed"
+  },
+  "clinical_validation": "pending; software tests are not clinical validation",
+  "existing_assets": {
+    "baseline_files_checked": 84,
+    "changed": 0
+  },
+  "v02_apk_unchanged": true
 }

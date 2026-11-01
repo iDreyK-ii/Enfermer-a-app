@@ -1,84 +1,66 @@
-# Tu contenido, de la plantilla a la app
+# Contenidos locales — app v0.3
 
-## Qué funciona ahora
+## Dos vías para trabajar
 
-Puedes preparar un paquete JSON en tu computadora, guardarlo en **Descargas** del teléfono e importarlo desde **Módulos → Biblioteca local**. La app muestra el autor declarado, versión, fecha y cuántos registros se añadirán o reemplazarán. Nada se incorpora hasta que confirmes.
+1. **En Android:** Biblioteca local → Crear medicamento/caso/lista/protocolo. También puedes abrir una ficha y editarla. Las ediciones locales siempre quedan como borrador; la procedencia y las fuentes previas se conservan. El último cambio del catálogo puede deshacerse.
+2. **En computadora:** completar el XLSX y convertirlo a JSON, o preparar JSON directamente. La app no interpreta Word/PDF ni inventa contenido a partir de un nombre de archivo.
 
-No interpreta el nombre de un archivo. Un documento llamado «Paracetamol» no se transforma por sí solo en una ficha. No consulta internet ni completa dosificaciones, diluciones o cuidados mediante IA.
+Usa material propio o autorizado, sin datos identificables de pacientes. La validación estructural no comprueba exactitud clínica, licencia o vigencia.
 
-## Ruta rápida para comprobar la importación
+## Esquemas 1 y 2
 
-1. Copia `ejemplo_importacion.json` al teléfono.
-2. Abre Biblioteca local → Importar paquete JSON.
-3. Selecciona el archivo y revisa el resumen.
-4. Confirma y busca Paracetamol en Farmacología.
-5. Abre Descripción general: verás un texto de prueba, **no instrucciones clínicas**.
-6. Vuelve a Biblioteca local → Deshacer última importación. Se recuperará la descripción anterior.
+- **Esquema 1:** medicamentos, casos y listas; se conserva para leer paquetes de v0.2.
+- **Esquema 2:** incorpora `protocolos`. v0.3 lee ambos, pero sus exportaciones del catálogo usan esquema 2. **v0.2 no admite esquema 2.**
+- Un paquete con protocolos debe declarar `version_esquema: 2`. La app nueva y el conversor rechazan protocolos dentro de esquema 1 para evitar omisiones silenciosas.
+- JSON Schema: `esquema_contenido_v1.schema.json` y `esquema_contenido_v2.schema.json`.
 
-Para importar de nuevo exactamente el mismo paquete después de una importación ya confirmada, aumenta `version_contenido`. Deshacer también revierte ese registro de versión.
-
-## Excel
-
-Abre `Plantilla_contenidos_iDreyK_360.xlsx`. Sus hojas son:
-
-- **Instrucciones**: uso y limitaciones.
-- **Metadatos**: identificador y versión del paquete, título, autor, fecha y licencia.
-- **Medicamentos**: una fila por ficha, con 20 secciones de texto.
-- **Casos**: objetivo y contenido original o autorizado de cada caso ficticio.
-- **Listas**: institución, edición y datos de cada lista de seguridad.
-- **Items**: filas enlazadas mediante `lista_id`, orden, título y detalle.
-- **Fuentes**: referencias enlazadas al tipo y al ID del registro.
-
-No modifiques los encabezados. Usa texto literal, no fórmulas de Excel. Las fechas pueden escribirse como `AAAA-MM-DD`. Separa los sinónimos con punto y coma. No incluyas datos identificables de pacientes.
-
-Instala Python y ejecuta en la carpeta de estas herramientas:
+La plantilla XLSX actual tiene ocho hojas: Instrucciones, Metadatos, Medicamentos, Casos, Listas, Items, Fuentes y Protocolos. No renombrar encabezados. La hoja Protocolos usa el mismo esquema de campos editoriales que Casos: `id`, `titulo`, `area`, `revision`, `revisor`, `fecha_revision`, `objetivo`, `contenido`.
 
 ```sh
 python -m pip install -r requirements.txt
-python convertir_plantilla.py Plantilla_contenidos_iDreyK_360.xlsx mi_biblioteca.json
+python convertir_plantilla.py Plantilla_contenidos_iDreyK_360.xlsx salida.json
+python -m unittest -v test_converter
 ```
 
-El conversor conserva el contenido de las celdas como texto, sin interpretar información clínica. Verifica relaciones, campos básicos, fórmulas no admitidas y límites de entrada. La validación nativa al importar es la comprobación estructural definitiva. Ni una conversión exitosa ni una importación aceptada certifican exactitud clínica, vigencia, autoría o permisos.
+Las plantillas antiguas de esquema 1 sin hoja Protocolos siguen funcionando. Para añadir protocolos, cambiar el metadato a 2 y usar la hoja y encabezados de la plantilla actual.
 
-## JSON directo
+## Metadatos obligatorios y actualización
 
-Puedes editar `plantilla_paracetamol.json` sin usar Excel. El esquema documental está en `esquema_contenido_v1.schema.json`. Reglas principales:
+`version_esquema`, `id_paquete`, `version_contenido`, `titulo`, `autor`, `fecha_actualizacion` (AAAA-MM-DD). La plantilla también pide `licencia` para documentarla; puede estar vacía en un borrador, pero no en una revisión declarada.
 
-- `version_esquema`: entero literal `1`.
-- `id_paquete`: minúsculas, números, guion o guion bajo; máximo 100 caracteres.
-- `version_contenido`: entero literal positivo de hasta siete dígitos. Sin comillas ni decimales.
-- `titulo`, `autor` y `fecha_actualizacion`: obligatorios; fecha real ISO.
-- `licencia`: describe la autorización o las condiciones de uso. No inventes permisos.
-- Arrays `medicamentos`, `casos`, `listas_seguridad`: al menos uno debe contener registros.
-- Cada registro lleva un ID estable. La clave de reemplazo es **tipo + ID**, no nombre de archivo.
-- Los campos clínicos son cadenas de texto. El HTML o JavaScript se muestra como texto y no se ejecuta.
-- Fuentes: título y URL HTTPS completa, sin credenciales; hasta 30 por registro.
-- Una sección farmacológica admite hasta 16.000 caracteres; un caso, 60.000; un objetivo, 4.000; cada lista, 1–100 ítems.
-- El archivo debe ser UTF-8 válido y tener como máximo 2.000.000 bytes.
-- Tanto cada paquete como el **catálogo resultante** tienen un máximo de 500 registros totales y 300 por tipo. El catálogo exportado también debe caber en 2 MB.
+IDs de 1–100 caracteres: minúsculas, números, guion y guion bajo; primer carácter alfanumérico. No cambiar un ID para actualizar el mismo registro. Incrementar `version_contenido` (entero 1–9.999.999) si el paquete ya fue importado. El tipo + ID identifica una ficha; los demás registros se conservan. La importación presenta cantidades nuevas/reemplazadas y requiere confirmación.
 
-Los campos de farmacología son: descripción, mecanismo de acción, presentaciones, vías, indicaciones, contraindicaciones, precauciones, dosificación, reconstitución, dilución, compatibilidad, administración, estabilidad, reacciones adversas, interacciones, monitorización, cuidados de enfermería, poblaciones especiales, educación y alertas.
+## Contenido
 
-### Estado de revisión
+- **Medicamentos:** nombre, grupo, sinónimos separados por `;`, veinte secciones literales: descripción, mecanismo, presentaciones, vías, indicaciones, contraindicaciones, precauciones, dosificación, reconstitución, dilución, compatibilidad, administración, estabilidad, efectos adversos, interacciones, monitorización, cuidados, poblaciones especiales, educación y alertas. Máximo 16.000 caracteres por sección.
+- **Casos / protocolos:** título/área, objetivo (4.000 caracteres), contenido (60.000), fuentes y revisión.
+- **Listas:** institución y edición; 1–100 ítems de título/detalle, vinculados en XLSX por `lista_id` y orden. No hay un número universal de correctos impuesto por el software. Título de ítem hasta 180 caracteres, detalle hasta 3.000.
+- **Fuentes:** tipo `medicamento`, `caso`, `lista` o `protocolo`; `id_registro` existente; título y URL HTTPS completa sin credenciales. Editor y fecha de consulta opcionales. Hasta 30 fuentes por registro. Documentar también edición/permisos y contexto en los campos apropiados.
 
-- `borrador`: estado inicial; contenido no validado.
-- `declarada_por_autor`: requiere revisor, fecha válida, fuentes y licencia del paquete. La app lo identifica como una **declaración**, no como una aprobación independiente.
+No usar fórmulas de Excel. El conversor rechaza fórmulas, IDs duplicados, encabezados cambiados, referencias huérfanas, revisiones incompletas y estructuras fuera de límites. Los textos como marcado se conservan literalmente; la app no ejecuta HTML o JavaScript.
 
-La actualización se controla por paquete. Una versión mayor actualiza las claves que incluya, sin borrar otras fichas. Dos paquetes diferentes pueden reemplazar una misma clave; revisa siempre el resumen antes de confirmar.
+## Revisión y procedencia
 
-## Respaldo y deshacer
+`borrador` es el estado inicial. `declarada_por_autor` exige revisor, fecha, fuentes y licencia, pero no significa certificación. Al editar en Android se vuelve a borrador y se retiran revisor/fecha anteriores como declaración activa. La procedencia inicial se conserva en `derivado_de`, además de referencias y los metadatos de la edición local.
 
-- **Exportar** crea un catálogo JSON compacto, legible y sin cifrar. Usa `tipo_paquete: respaldo_catalogo` y conserva la procedencia de cada ficha.
-- Reimportar un respaldo mezcla sus fichas con la biblioteca, reemplazando claves coincidentes. Se registra como un paquete nuevo, sin reinstalar el historial de versiones de los paquetes originales.
-- **Deshacer** revierte una sola importación confirmada y su control de versiones. No borra notas, favoritos ni ejercicios.
-- El punto de deshacer se guarda en la misma transacción SQLite que la importación. Un rechazo no sustituye el punto anterior.
-- La exportación no es una copia completa de la aplicación. No incluye notas, preferencias, favoritos ni historial de ejercicios.
-- **Restablecer** sí elimina biblioteca importada, notas, favoritos y ejercicios, tras pedir confirmación.
+No cambiar una etiqueta de estado para hacer pasar una ficha incompleta por verificada. No se incluye NANDA-I/NIC/NOC ni instrumentos restringidos sin aclarar autorización.
 
-## Flujo futuro, todavía no conectado
+## Límites y respaldos
 
-Una carpeta de documentos podría ser la entrada de un proceso editorial. La extracción de contenido de Word/PDF, el control de derechos, la revisión clínica, la aprobación y la distribución requieren un servicio y un flujo adicionales. No conviene publicar automáticamente instrucciones médicas extraídas o generadas sin revisión. El contrato JSON de esta edición permite preparar esa integración sin conectar cuentas ahora.
+Paquete **y catálogo resultante**: 2.000.000 bytes UTF-8, 500 registros totales y 300 por tipo. Si la combinación de lo guardado y lo importado excede límites, no se modifica el catálogo. Exportar produce JSON legible, no cifrado. Un catálogo vacío puede exportarse como respaldo; un paquete editorial normal debe contener al menos un registro.
 
-## Para mantener las herramientas
+El catálogo incluye medicamentos, casos, listas y protocolos. **No incluye** planes, apuntes, multimedia, notas de las fichas ficticias/Gordon/signos, favoritos, historial ni preferencias.
 
-`create_schema.py` regenera el esquema documental. `create_templates.py` es un generador de mantenimiento: reemplaza las plantillas y la biblioteca inicial; no lo ejecutes sobre contenido editorial que quieras conservar. No es necesario para compilar la aplicación ni para convertir un XLSX existente. Los textos «COMPLETAR» son marcadores de la plantilla, no permisos ni revisiones válidas.
+El **Cuaderno de práctica** tiene otro respaldo: `tipo_respaldo: cuaderno_practica`, esquema 1, hasta 200 planes/apuntes y 2 MB. Se importa desde Cuaderno, no desde Catálogo. Los JSON no contienen archivos multimedia: conservar originales.
+
+Los respaldos del catálogo mantienen autoría por ficha, pero importarlos no recupera el control de versiones de los paquetes originales. El deshacer interno sí restaura el estado anterior y su control de versiones. Los dos espacios (catálogo y cuaderno) tienen puntos de deshacer separados; no son una copia completa de la app.
+
+## Ejemplos y mantenimiento
+
+- `ejemplo_importacion.json`: ejemplo de esquema 1, sin información clínica; mantiene compatibilidad.
+- `ejemplo_protocolo_v2.json`: ejemplo de esquema 2 sobre el flujo editorial del software, no un procedimiento asistencial.
+- `plantilla_paracetamol.json`: estructura en borrador; no una monografía farmacológica.
+- `create_schema.py`: regenera documentación de los esquemas 1/2.
+- `create_templates.py`: **mantenimiento destructivo de ejemplos/plantillas/seed**; no ejecutar sobre contenido editorial que debas conservar. No se necesita para compilar ni para convertir un XLSX existente. Mantiene el seed básico en esquema 1 y genera plantillas nuevas de esquema 2.
+
+La app funciona offline. Integraciones externas, extracción documental, publicación automática e IA siguen fuera de esta edición.

@@ -9,6 +9,14 @@ import kotlin.math.roundToInt
 import org.json.JSONArray
 import org.json.JSONObject
 
+val CONTENT_ARRAYS =
+    linkedMapOf(
+        "med" to "medicamentos",
+        "case" to "casos",
+        "safety" to "listas_seguridad",
+        "protocol" to "protocolos",
+    )
+
 val DRUG_FIELDS =
     linkedMapOf(
         "descripcion" to "Descripción general",
@@ -163,8 +171,11 @@ object ContentParser {
                     "No es un JSON válido. Usa la plantilla del proyecto."
                 )
             }
-        require(root.opt("version_esquema") == 1) {
-            "Versión de esquema incompatible. Se requiere version_esquema: 1."
+        require(root.opt("version_esquema") == 1 || root.opt("version_esquema") == 2) {
+            "Versión de esquema incompatible. Se admite version_esquema 1 o 2."
+        }
+        require(root.opt("version_esquema") == 2 || !root.has("protocolos")) {
+            "Los protocolos requieren version_esquema 2; no se ignorarán silenciosamente."
         }
         val id = slug(root, "id_paquete")
         val rawVersion = root.opt("version_contenido")
@@ -189,8 +200,7 @@ object ContentParser {
         val isBackup = packageType == "respaldo_catalogo"
         val entries = mutableListOf<Entry>()
         val seen = mutableSetOf<String>()
-        for ((arrayName, kind) in
-            listOf("medicamentos" to "med", "casos" to "case", "listas_seguridad" to "safety")) {
+        for ((arrayName, kind) in CONTENT_ARRAYS.map { (kind, array) -> array to kind }) {
             if (root.has(arrayName))
                 require(root.optJSONArray(arrayName) != null) {
                     "$arrayName debe ser una lista JSON."
@@ -236,7 +246,7 @@ object ContentParser {
                     require(
                         o.optString("revisor").isNotBlank() &&
                             refs.isNotEmpty() &&
-                            license.isNotBlank()
+                            (if (isBackup) o.optString("_licencia") else license).isNotBlank()
                     ) {
                         "La revisión declarada requiere revisor, fuentes y licencia. Si falta algo, usa borrador."
                     }
@@ -273,7 +283,7 @@ object ContentParser {
                             "Sinónimo inválido."
                         }
                     }
-                } else if (kind == "case") {
+                } else if (kind == "case" || kind == "protocol") {
                     require(optionalText(o, "contenido", 60000).length <= 60000) {
                         "El caso $name es demasiado largo."
                     }
@@ -297,12 +307,23 @@ object ContentParser {
                         }
                     }
                 }
+                if (o.has("derivado_de")) {
+                    val origin =
+                        o.optJSONObject("derivado_de")
+                            ?: throw IllegalArgumentException("Procedencia original inválida.")
+                    optionalText(origin, "paquete", 100)
+                    optionalText(origin, "autor", 140)
+                    optionalText(origin, "licencia", 2000)
+                    optionalText(origin, "actualizacion", 10)
+                        .takeIf { it.isNotBlank() }
+                        ?.let { validDate(it, "actualizacion original") }
+                }
                 o.put("revision", revision)
                 entries += Entry(kind, entryId, name, group, o)
             }
         }
-        require(entries.isNotEmpty()) {
-            "El paquete no contiene medicamentos, casos ni listas de seguridad."
+        require(entries.isNotEmpty() || isBackup) {
+            "El paquete no contiene medicamentos, casos, listas de seguridad ni protocolos."
         }
         require(entries.size <= 500) { "Máximo 500 registros por paquete." }
         return ContentPackage(

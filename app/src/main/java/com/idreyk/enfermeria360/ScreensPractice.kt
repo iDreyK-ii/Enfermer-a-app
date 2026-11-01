@@ -153,11 +153,7 @@ fun PaeScreen(nav: (String) -> Unit, back: () -> Unit, info: (String, String) ->
                 {
                     when (selected) {
                         0 -> nav("valoracion")
-                        1 ->
-                            info(
-                                "Diagnósticos de enfermería",
-                                "La ficha está prevista, pero no se reproduce el catálogo NANDA-I ni se generan diagnósticos. Debemos revisar edición, permisos y validación profesional antes de incorporarlo.",
-                            )
+                        1 -> nav("plan/mario")
                         2,
                         4 -> nav("plan/mario")
                         else -> nav("evolucion/mario")
@@ -325,7 +321,7 @@ fun PatientScreen(id: String, vm: AppViewModel, nav: (String) -> Unit, back: () 
                 ),
                 Module(
                     "Plan de cuidados",
-                    "Tareas del recorrido",
+                    "Documento PAE estructurado",
                     "plan/${p.id}",
                     R.drawable.ic_clipboard_check,
                     Gold,
@@ -480,46 +476,57 @@ fun VitalsScreen(id: String, vm: AppViewModel, back: () -> Unit) {
             )
             ValueTile("Saturación O₂", saved[4], "%", R.drawable.ic_wind, Teal, Modifier.weight(1f))
         }
+        val history = PracticeTrends.pulse(vm.data.notes, p.id)
         AppCard(Modifier.fillMaxWidth()) {
-            Text("Tendencia ilustrativa", style = MaterialTheme.typography.titleMedium)
-            Canvas(Modifier.fillMaxWidth().height(100.dp)) {
-                for (i in 1..3) drawLine(
-                    Purple.copy(alpha = .12f),
-                    Offset(0f, size.height * i / 4),
-                    Offset(size.width, size.height * i / 4),
+            Text("Tendencia de FC guardada", style = MaterialTheme.typography.titleMedium)
+            if (history.isEmpty())
+                Text(
+                    "Guarda lecturas ficticias para construir el gráfico. No se dibujan valores inventados como si fueran mediciones guardadas.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = LocalPalette.current.muted,
                 )
-                val path =
-                    Path().apply {
-                        moveTo(0f, size.height * .62f)
-                        cubicTo(
-                            size.width * .16f,
-                            size.height * .62f,
-                            size.width * .13f,
-                            size.height * .25f,
-                            size.width * .3f,
-                            size.height * .3f,
-                        )
-                        cubicTo(
-                            size.width * .48f,
-                            size.height * .35f,
-                            size.width * .48f,
-                            size.height * .7f,
-                            size.width * .6f,
-                            size.height * .6f,
-                        )
-                        cubicTo(
-                            size.width * .77f,
-                            size.height * .42f,
-                            size.width * .84f,
-                            size.height * .64f,
-                            size.width,
-                            size.height * .28f,
-                        )
-                    }
-                drawPath(path, Purple, style = Stroke(3.dp.toPx()))
+            else {
+                val low = (history.minOf { it.beats } - 5.0).coerceAtLeast(0.0)
+                val high = history.maxOf { it.beats } + 5.0
+                Text(
+                    "Escala vertical: ${DoseMath.display(low)}–${DoseMath.display(high)} lpm",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = LocalPalette.current.muted,
+                )
+                Canvas(Modifier.fillMaxWidth().height(120.dp)) {
+                    val inset = 8.dp.toPx()
+                    for (i in 0..4) drawLine(
+                        Purple.copy(alpha = .12f),
+                        Offset(inset, inset + (size.height - 2 * inset) * i / 4),
+                        Offset(size.width - inset, inset + (size.height - 2 * inset) * i / 4),
+                    )
+                    val points =
+                        history.mapIndexed { i, record ->
+                            Offset(
+                                if (history.size == 1) size.width / 2
+                                else inset + (size.width - 2 * inset) * i / (history.size - 1),
+                                inset +
+                                    (size.height - 2 * inset) *
+                                        (1 - (record.beats - low) / (high - low)).toFloat(),
+                            )
+                        }
+                    points.zipWithNext().forEach { (a, b) -> drawLine(Teal, a, b, 3.dp.toPx()) }
+                    points.forEach { drawCircle(Purple, 4.dp.toPx(), it) }
+                }
+                Text(
+                    "${history.size} registros ficticios · eje horizontal por orden de guardado, no por intervalos proporcionales de tiempo.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = LocalPalette.current.muted,
+                )
+                history.takeLast(5).reversed().forEach { record ->
+                    Text(
+                        "${readableTime(record.timestamp)} · ${DoseMath.display(record.beats)} lpm",
+                        style = MaterialTheme.typography.bodySmall,
+                    )
+                }
             }
             Text(
-                "El gráfico es decorativo y no se calcula con los registros. No hay alertas ni interpretación clínica.",
+                "Sin alertas, rangos de normalidad ni interpretación clínica.",
                 style = MaterialTheme.typography.bodySmall,
                 color = LocalPalette.current.muted,
             )
@@ -628,53 +635,12 @@ fun BalanceScreen(id: String, vm: AppViewModel, back: () -> Unit) {
 }
 
 @Composable
-fun CareScreen(id: String, vm: AppViewModel, back: () -> Unit) {
-    val p = demo(id)
-    val stored = vm.data.notes.firstOrNull { it.patientId == "plan:${p.id}" }?.text ?: "0000"
-    var checks by rememberSaveable {
-        mutableStateOf(stored.padEnd(4, '0').take(4).map { it == '1' }.toBooleanArray())
-    }
-    Page("Plan de cuidados", "Tareas del recorrido · no intervenciones clínicas", back) {
-        Notice(
-            "Esta lista organiza tu recorrido de aprendizaje, no un plan asistencial para una persona real.",
-            true,
-        )
-        Text("Un cuidado organizado", style = MaterialTheme.typography.titleLarge)
-        Badge("${checks.count{it}} / 4 TAREAS EXPLORADAS", Purple)
-        ProgressLine(checks.count { it } / 4f)
-        listOf(
-                "Explorar la ficha ficticia",
-                "Revisar las etapas del PAE",
-                "Abrir un registro de ejemplo",
-                "Visitar el centro de aprendizaje",
-            )
-            .forEachIndexed { i, s ->
-                AppCard(Modifier.fillMaxWidth()) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Checkbox(checks[i], { v -> checks = checks.copyOf().apply { this[i] = v } })
-                        Text(s, style = MaterialTheme.typography.bodyMedium)
-                    }
-                }
-            }
-        Primary(
-            "Guardar recorrido",
-            { vm.note("plan:${p.id}", checks.joinToString("") { if (it) "1" else "0" }) },
-            !vm.busy,
-        )
-        Expandable(
-            "Futura planificación clínica",
-            "Los diagnósticos, objetivos e intervenciones deberán incorporarse con fuentes, permisos y revisión profesional. No se incluyen taxonomías NANDA-I, NOC o NIC sin la autorización correspondiente.",
-        )
-    }
-}
-
-@Composable
 fun ToolsScreen(nav: (String) -> Unit, back: () -> Unit) {
     val tools =
         listOf(
             Module(
                 "Dosis",
-                "Interfaz, sin cálculo",
+                "Ejercicio con unidades",
                 "calc/dosis",
                 R.drawable.ic_calculator,
                 Purple,
@@ -682,7 +648,7 @@ fun ToolsScreen(nav: (String) -> Unit, back: () -> Unit) {
             Module("Goteo", "Ejemplo aritmético", "calc/goteo", R.drawable.ic_iv, Teal),
             Module(
                 "Dilución",
-                "Interfaz, sin cálculo",
+                "Ejercicio con unidades",
                 "calc/dilucion",
                 R.drawable.ic_flask,
                 Purple,
@@ -726,153 +692,141 @@ fun ToolsScreen(nav: (String) -> Unit, back: () -> Unit) {
 
 @Composable
 fun CalculatorScreen(type: String, vm: AppViewModel, back: () -> Unit) {
+    if (type in listOf("dosis", "dilucion")) {
+        DoseExerciseScreen(type, vm, back)
+        return
+    }
+    if (type !in listOf("imc", "goteo", "conversor")) {
+        Page("Herramienta no disponible", back = back) {
+            EmptyState("Revisa la herramienta", "Vuelve al catálogo de cálculos de práctica.")
+        }
+        return
+    }
     var first by rememberSaveable(type) { mutableStateOf(if (type == "imc") "70" else "500") }
     var second by rememberSaveable(type) { mutableStateOf(if (type == "imc") "170" else "4") }
     var factor by rememberSaveable { mutableIntStateOf(20) }
     var conversion by rememberSaveable { mutableStateOf("mg-g") }
     var result by rememberSaveable(type) { mutableStateOf("") }
     var error by remember { mutableStateOf("") }
-    val locked = type in listOf("dosis", "dilucion")
     val name =
         when (type) {
             "imc" -> "Índice de masa corporal"
             "goteo" -> "Goteo"
-            "conversor" -> "Conversor de unidades"
-            "dosis" -> "Calculadora de dosis"
-            else -> "Dilución"
+            else -> "Conversor de unidades"
         }
     Page(name, "Herramienta de demostración", back) {
         Notice(
-            if (locked)
-                "Cálculo no habilitado. Se revisarán fórmulas, unidades, límites y fuentes con profesionales."
-            else
-                "Solo práctica matemática. No es una recomendación clínica ni una pauta de administración.",
+            "Solo práctica matemática. No es una recomendación clínica ni una pauta de administración.",
             true,
         )
-        if (locked) {
+        Input(
+            when (type) {
+                "imc" -> "Peso de ejemplo"
+                "goteo" -> "Volumen de ejemplo"
+                else -> "Cantidad"
+            },
+            first,
+            {
+                first = it
+                result = ""
+                error = ""
+            },
+            true,
+            when (type) {
+                "imc" -> "kg"
+                "goteo" -> "mL"
+                else -> null
+            },
+        )
+        if (type != "conversor")
             Input(
-                if (type == "dosis") "Dosis prescrita" else "Cantidad de medicamento",
-                "",
-                {},
-                enabled = false,
-            )
-            Input(
-                if (type == "dosis") "Presentación disponible" else "Volumen de diluyente",
-                "",
-                {},
-                enabled = false,
-            )
-            Primary("Pendiente de validación clínica", {}, false, R.drawable.ic_lock)
-        } else {
-            Input(
-                when (type) {
-                    "imc" -> "Peso de ejemplo"
-                    "goteo" -> "Volumen de ejemplo"
-                    else -> "Cantidad"
-                },
-                first,
+                if (type == "imc") "Talla de ejemplo" else "Tiempo de ejemplo",
+                second,
                 {
-                    first = it
+                    second = it
                     result = ""
                     error = ""
                 },
                 true,
-                when (type) {
-                    "imc" -> "kg"
-                    "goteo" -> "mL"
-                    else -> null
-                },
+                if (type == "imc") "cm" else "h",
             )
-            if (type != "conversor")
-                Input(
-                    if (type == "imc") "Talla de ejemplo" else "Tiempo de ejemplo",
-                    second,
-                    {
-                        second = it
-                        result = ""
-                        error = ""
-                    },
-                    true,
-                    if (type == "imc") "cm" else "h",
-                )
-            if (type == "goteo") {
-                Text(
-                    "Factor del equipo de ejemplo (gotas/mL)",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = LocalPalette.current.muted,
-                )
-                Row(horizontalArrangement = Arrangement.spacedBy(7.dp)) {
-                    listOf(10, 15, 20, 60).forEach { n ->
+        if (type == "goteo") {
+            Text(
+                "Factor del equipo de ejemplo (gotas/mL)",
+                style = MaterialTheme.typography.bodySmall,
+                color = LocalPalette.current.muted,
+            )
+            Row(horizontalArrangement = Arrangement.spacedBy(7.dp)) {
+                listOf(10, 15, 20, 60).forEach { n ->
+                    FilterChip(
+                        factor == n,
+                        {
+                            factor = n
+                            result = ""
+                        },
+                        label = { Text(n.toString()) },
+                    )
+                }
+            }
+        }
+        if (type == "conversor") {
+            listOf(listOf("mg-g", "g-mg"), listOf("mL-L", "L-mL")).forEach { row ->
+                Row(horizontalArrangement = Arrangement.spacedBy(9.dp)) {
+                    row.forEach { t ->
                         FilterChip(
-                            factor == n,
+                            conversion == t,
                             {
-                                factor = n
+                                conversion = t
                                 result = ""
                             },
-                            label = { Text(n.toString()) },
+                            label = { Text(t.replace("-", " → ")) },
                         )
                     }
                 }
             }
-            if (type == "conversor") {
-                listOf(listOf("mg-g", "g-mg"), listOf("mL-L", "L-mL")).forEach { row ->
-                    Row(horizontalArrangement = Arrangement.spacedBy(9.dp)) {
-                        row.forEach { t ->
-                            FilterChip(
-                                conversion == t,
-                                {
-                                    conversion = t
-                                    result = ""
-                                },
-                                label = { Text(t.replace("-", " → ")) },
-                            )
-                        }
-                    }
-                }
-            }
-            Text(
-                when (type) {
-                    "imc" -> "IMC = peso (kg) / talla² (m)"
-                    "goteo" -> "gotas/min = mL × factor / minutos"
-                    else -> "Conversión aritmética de masa o volumen"
-                },
-                style = MaterialTheme.typography.bodySmall,
-                color = Purple,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth().padding(vertical = 7.dp),
-            )
-            if (error.isNotBlank()) Notice(error, true)
-            Primary(
-                "Calcular ejemplo",
-                {
-                    try {
-                        result =
-                            when (type) {
-                                "imc" ->
-                                    "${decimal(PracticeMath.bmi(number(first),number(second)))} kg/m²\nSin clasificación ni evaluación individual."
-                                "goteo" -> {
-                                    val (v, d) =
-                                        PracticeMath.drip(number(first), number(second), factor)
-                                    "$d gotas/min (redondeo)\n${decimal(v)} mL/h\nNo es una pauta de administración."
-                                }
-                                else ->
-                                    "${decimal(PracticeMath.convert(number(first),conversion),3)} ${conversion.substringAfter('-')}\nConversión de unidades, no cálculo de dosis."
+        }
+        Text(
+            when (type) {
+                "imc" -> "IMC = peso (kg) / talla² (m)"
+                "goteo" -> "gotas/min = mL × factor / minutos"
+                else -> "Conversión aritmética de masa o volumen"
+            },
+            style = MaterialTheme.typography.bodySmall,
+            color = Purple,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth().padding(vertical = 7.dp),
+        )
+        if (error.isNotBlank()) Notice(error, true)
+        Primary(
+            "Calcular ejemplo",
+            {
+                try {
+                    result =
+                        when (type) {
+                            "imc" ->
+                                "${decimal(PracticeMath.bmi(number(first),number(second)))} kg/m²\nSin clasificación ni evaluación individual."
+                            "goteo" -> {
+                                val (v, d) =
+                                    PracticeMath.drip(number(first), number(second), factor)
+                                "$d gotas/min (redondeo)\n${DoseMath.display(v)} mL/h\nNo es una pauta de administración."
                             }
-                        error = ""
-                    } catch (e: Exception) {
-                        error = e.message ?: "Revisa los valores."
-                        result = ""
-                    }
-                },
-                icon = R.drawable.ic_calculator,
-            )
-            if (result.isNotBlank()) {
-                AppCard(Modifier.fillMaxWidth()) {
-                    Badge("RESULTADO DE PRÁCTICA", Teal)
-                    Text(result, style = MaterialTheme.typography.titleLarge, color = Teal)
+                            else ->
+                                "${DoseMath.display(PracticeMath.convert(number(first),conversion))} ${conversion.substringAfter('-')}\nConversión de unidades, no cálculo de dosis."
+                        }
+                    error = ""
+                } catch (e: Exception) {
+                    error = e.message ?: "Revisa los valores."
+                    result = ""
                 }
-                Secondary("Guardar práctica", { vm.practice(name, result) }, !vm.busy)
+            },
+            icon = R.drawable.ic_calculator,
+        )
+        if (result.isNotBlank()) {
+            AppCard(Modifier.fillMaxWidth()) {
+                Badge("RESULTADO DE PRÁCTICA", Teal)
+                Text(result, style = MaterialTheme.typography.titleLarge, color = Teal)
             }
+            Secondary("Guardar práctica", { vm.practice(name, result) }, !vm.busy)
         }
     }
 }
@@ -1036,25 +990,19 @@ fun LearningScreen(nav: (String) -> Unit, back: () -> Unit, info: (String, Strin
         }
         ActionRow(
             "Protocolos y guías",
-            "Catálogo previsto · fuentes pendientes",
+            "Crear, editar e importar documentos",
             R.drawable.ic_clipboard,
             Purple,
         ) {
-            info(
-                "Protocolos y guías",
-                "Se incorporarán documentos autorizados con su fuente, edición, vigencia y alcance. En esta edición no se distribuyen guías oficiales ni se afirma que el catálogo esté actualizado para uso asistencial.",
-            )
+            nav("protocolos")
         }
         ActionRow(
             "Biblioteca multimedia",
-            "Espacio previsto para recursos offline",
+            "Copias locales · PDF, imágenes, audio y video",
             R.drawable.ic_play,
             Blue,
         ) {
-            info(
-                "Biblioteca multimedia",
-                "El diseño reserva este espacio para videos, láminas y documentos. Aún no se distribuyen archivos multimedia ni se conectan servicios externos. Debemos resolver fuentes, permisos y tamaño antes de incluirlos en el APK.",
-            )
+            nav("multimedia")
         }
     }
 }
@@ -1253,28 +1201,9 @@ val NoteTexts =
     )
 
 @Composable
-fun NotesScreen(back: () -> Unit, info: (String, String) -> Unit) {
-    Page("Apuntes interactivos", "Contenido original de demostración", back) {
-        NoteTitles.forEachIndexed { i, title ->
-            ActionRow(
-                title,
-                "Lectura breve · fundamentos",
-                listOf(
-                    R.drawable.ic_clipboard_check,
-                    R.drawable.ic_file,
-                    R.drawable.ic_shield_check,
-                )[i],
-                listOf(Teal, Purple, Pink)[i],
-            ) {
-                info(title, NoteTexts[i])
-            }
-        }
-    }
-}
-
-@Composable
 fun CasesScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit) {
     Page("Casos de aprendizaje", "Catálogo local · ejemplos o contenido importado", back) {
+        Primary("Crear caso ficticio", { nav(newEntryRoute("case")) }, !vm.busy, R.drawable.ic_plus)
         vm.data.entries
             .filter { it.kind == "case" }
             .forEach { e ->
@@ -1311,6 +1240,8 @@ fun CaseScreen(id: String, vm: AppViewModel, nav: (String) -> Unit, back: () -> 
                 style = MaterialTheme.typography.bodyMedium,
             )
         }
+        Secondary("Editar caso local", { nav("editar/case/$id") }, !vm.busy)
+        Provenance(e)
         if (id == "recorrido-mario")
             Primary("Explorar la ficha ficticia", { nav("paciente/mario") })
         if (e.references.isNotEmpty()) {
@@ -1392,11 +1323,61 @@ fun GlobalSearchScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit
                 ),
                 Module(
                     "Capurro",
-                    "Neonatología · ficha prevista",
+                    "Estimación A/B de práctica",
                     "capurro",
                     R.drawable.ic_stethoscope,
                     Teal,
                 ),
+                Module(
+                    "Apgar",
+                    "Cinco componentes neonatales",
+                    "escala/apgar",
+                    R.drawable.ic_heart,
+                    Pink,
+                ),
+                Module(
+                    "Silverman-Andersen",
+                    "Valoración neonatal de práctica",
+                    "escala/silverman",
+                    R.drawable.ic_wind,
+                    Teal,
+                ),
+                Module(
+                    "Glasgow pediátrica",
+                    "Registro externo de componentes",
+                    "glasgow-pediatrico",
+                    R.drawable.ic_clipboard,
+                    Blue,
+                ),
+                Module(
+                    "Braden",
+                    "Registrar puntuación externa",
+                    "registro-escala/braden",
+                    R.drawable.ic_bed,
+                    Purple,
+                ),
+                Module(
+                    "Morse",
+                    "Registrar puntuación externa",
+                    "registro-escala/morse",
+                    R.drawable.ic_shield_check,
+                    Gold,
+                ),
+                Module(
+                    "Dosis a volumen",
+                    "Aritmética con unidades",
+                    "calc/dosis",
+                    R.drawable.ic_calculator,
+                    Gold,
+                ),
+                Module(
+                    "Dilución",
+                    "Ejercicio C1V1 = C2V2",
+                    "calc/dilucion",
+                    R.drawable.ic_flask,
+                    Teal,
+                ),
+                Module("Apuntes", "Cuaderno editable", "apuntes", R.drawable.ic_edit, Purple),
                 Module("IMC", "Índice de masa corporal", "calc/imc", R.drawable.ic_stopwatch, Teal),
                 Module("Flashcards", "Cinco tarjetas PAE", "tarjetas", R.drawable.ic_cards, Pink),
             )

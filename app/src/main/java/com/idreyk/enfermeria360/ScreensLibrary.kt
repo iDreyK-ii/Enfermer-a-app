@@ -61,6 +61,9 @@ internal val ExtraModules =
             R.drawable.ic_folder,
             Purple,
         ),
+        Module("Cuaderno PAE", "Planes y apuntes", "cuaderno", R.drawable.ic_edit, Teal),
+        Module("Protocolos", "Documentos locales", "protocolos", R.drawable.ic_file, Purple),
+        Module("Multimedia", "Archivos del dispositivo", "multimedia", R.drawable.ic_play, Blue),
     )
 
 @Composable
@@ -272,6 +275,9 @@ fun PharmacyScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit) {
             .sortedBy { normalized(it.name) }
     Column(Modifier.fillMaxSize().padding(horizontal = 20.dp)) {
         PageHeader("Farmacología", "Tu biblioteca local de consulta", back) {
+            IconButton(onClick = { nav(newEntryRoute("med")) }) {
+                Symbol(R.drawable.ic_plus, "Crear medicamento")
+            }
             IconButton(onClick = { nav("contenido") }) {
                 Symbol(R.drawable.ic_folder, "Gestionar biblioteca")
             }
@@ -431,6 +437,7 @@ fun DrugScreen(id: String, vm: AppViewModel, nav: (String) -> Unit, back: () -> 
                 )
             }
         }
+        Secondary("Editar ficha local", { nav("editar/med/$id") }, !vm.busy)
         if (tab < 3) {
             groups[tab].forEachIndexed { i, key ->
                 Expandable(DRUG_FIELDS.getValue(key), e.sections[key].orEmpty(), initial = i == 0)
@@ -455,6 +462,7 @@ fun DrugScreen(id: String, vm: AppViewModel, nav: (String) -> Unit, back: () -> 
                     "Añade las referencias, edición y permisos junto al contenido. El nombre del archivo no basta para validar una ficha.",
                 )
             else e.references.forEach { SourceCard(it) }
+            Provenance(e)
             Secondary("Gestionar contenido local", { nav("contenido") })
         }
     }
@@ -483,59 +491,11 @@ val NeonatalReference =
     )
 
 @Composable
-fun ScalesScreen(nav: (String) -> Unit, back: () -> Unit, info: (String, String) -> Unit) {
-    Page("Escalas y valoración", "Neurología · dolor · neonatología", back) {
-        Notice(
-            "Las funciones disponibles son de aprendizaje. Cada escala muestra su alcance y sus pendientes."
-        )
-        Section("Listas para explorar")
-        ActionRow(
-            "Glasgow",
-            "Suma educativa · incluye no valorable",
-            R.drawable.ic_activity,
-            Blue,
-        ) {
-            nav("glasgow")
-        }
-        ActionRow(
-            "EVA digital",
-            "Simulación de línea · no calibrada",
-            R.drawable.ic_heart_pulse,
-            Pink,
-        ) {
-            nav("eva")
-        }
-        ActionRow(
-            "Test de Capurro",
-            "Neonatología · variantes A y B",
-            R.drawable.ic_stethoscope,
-            Teal,
-        ) {
-            nav("capurro")
-        }
-        Section("Siguientes incorporaciones")
-        listOf("Glasgow pediátrica", "APGAR", "Silverman-Andersen", "Braden", "Morse").forEach {
-            title ->
-            ActionRow(
-                title,
-                "Catálogo preparado · puntuación no habilitada",
-                R.drawable.ic_clipboard,
-                Purple,
-            ) {
-                info(
-                    title,
-                    "La ficha está prevista en el diseño. Antes de incorporar criterios o puntuación debemos revisar la versión, las fuentes, los permisos y el uso previsto. No hay un resultado clínico habilitado.",
-                )
-            }
-        }
-    }
-}
-
-@Composable
 fun ChoiceField(
     title: String,
     options: List<Pair<String, Int>>,
     value: Int,
+    showPoints: Boolean = true,
     onChange: (Int) -> Unit,
 ) {
     var expanded by remember { mutableStateOf(false) }
@@ -556,7 +516,7 @@ fun ChoiceField(
                     DropdownMenuItem(
                         text = {
                             Text(
-                                if (n < 0) label else "$label · $n",
+                                if (n < 0 || !showPoints) label else "$label · $n",
                                 style = MaterialTheme.typography.bodyMedium,
                             )
                         },
@@ -594,7 +554,7 @@ fun GlasgowScreen(vm: AppViewModel, back: () -> Unit) {
                 "No valorable (NV)" to -1,
             ),
             eye,
-            { eye = it },
+            onChange = { eye = it },
         )
         ChoiceField(
             "Respuesta verbal",
@@ -607,7 +567,7 @@ fun GlasgowScreen(vm: AppViewModel, back: () -> Unit) {
                 "No valorable (NV)" to -1,
             ),
             verbal,
-            { verbal = it },
+            onChange = { verbal = it },
         )
         ChoiceField(
             "Mejor respuesta motora",
@@ -621,7 +581,7 @@ fun GlasgowScreen(vm: AppViewModel, back: () -> Unit) {
                 "No valorable (NV)" to -1,
             ),
             motor,
-            { motor = it },
+            onChange = { motor = it },
         )
         AppCard(Modifier.fillMaxWidth()) {
             Badge("RESULTADO DE PRÁCTICA", Teal)
@@ -744,51 +704,6 @@ fun EvaScreen(vm: AppViewModel, back: () -> Unit) {
 }
 
 @Composable
-fun CapurroScreen(back: () -> Unit) {
-    var variant by rememberSaveable { mutableIntStateOf(0) }
-    Page("Test de Capurro", "Neonatología · edad gestacional", back) {
-        Notice(
-            "Diseño preparado. No se calcula una edad gestacional hasta revisar los criterios, las condiciones de aplicación y la fórmula de cada variante.",
-            true,
-        )
-        Row(horizontalArrangement = Arrangement.spacedBy(9.dp)) {
-            listOf("Capurro A", "Capurro B").forEachIndexed { i, t ->
-                FilterChip(variant == i, { variant = i }, label = { Text(t) })
-            }
-        }
-        AppCard(Modifier.fillMaxWidth()) {
-            ColorIcon(R.drawable.ic_stethoscope, Teal, 48)
-            Text(
-                if (variant == 0) "Ficha de Capurro A" else "Ficha de Capurro B",
-                style = MaterialTheme.typography.titleLarge,
-            )
-            Text(
-                "Las variantes se mantendrán separadas. No se compartirán automáticamente sus criterios o fórmulas.",
-                style = MaterialTheme.typography.bodyMedium,
-                color = LocalPalette.current.muted,
-            )
-            Badge("SIN PUNTUACIÓN HABILITADA", Gold)
-        }
-        Expandable(
-            "Criterios y opciones",
-            "Espacio reservado para los parámetros de la variante seleccionada. Deben revisarse con una fuente autorizada antes de incorporarlos.",
-            true,
-        )
-        Expandable(
-            "Aplicación y limitaciones",
-            "Aquí se documentarán la población, limitaciones y condiciones en las que el método no debe aplicarse o necesita una alternativa.",
-        )
-        Primary("Estimación pendiente de validar", {}, enabled = false, icon = R.drawable.ic_lock)
-        SourceCard(NeonatalReference)
-        Text(
-            "Referencia documental localizada para la futura revisión; no implica validación del módulo ni que se haya incorporado íntegramente la norma.",
-            style = MaterialTheme.typography.bodySmall,
-            color = LocalPalette.current.muted,
-        )
-    }
-}
-
-@Composable
 fun SafetyScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit) {
     Page("Medicación segura", "Verificaciones con fuente y versión", back) {
         AppCard(Modifier.fillMaxWidth()) {
@@ -800,6 +715,7 @@ fun SafetyScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit) {
                 color = LocalPalette.current.muted,
             )
         }
+        Primary("Crear lista local", { nav(newEntryRoute("safety")) }, !vm.busy, R.drawable.ic_plus)
         vm.data.entries
             .filter { it.kind == "safety" }
             .forEach { e ->
@@ -821,9 +737,10 @@ fun SafetyScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit) {
 }
 
 @Composable
-fun SafetyDetail(id: String, vm: AppViewModel, back: () -> Unit) {
+fun SafetyDetail(id: String, vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit) {
     val e = vm.data.entries.find { it.kind == "safety" && it.id == id } ?: return
-    var checks by rememberSaveable(id) { mutableStateOf(BooleanArray(e.checklist.size)) }
+    var checks by
+        rememberSaveable(id, e.json.toString()) { mutableStateOf(BooleanArray(e.checklist.size)) }
     if (checks.size != e.checklist.size) checks = BooleanArray(e.checklist.size)
     Page("Lista de práctica", e.name, back) {
         Text(
@@ -861,6 +778,18 @@ fun SafetyDetail(id: String, vm: AppViewModel, back: () -> Unit) {
                 true,
             )
         Secondary("Limpiar verificaciones", { checks = BooleanArray(e.checklist.size) })
+        Primary(
+            "Guardar recorrido de la lista",
+            {
+                vm.practice(
+                    "Lista de seguridad",
+                    "${e.name}: ${checks.count {it}}/${checks.size} verificaciones marcadas. Ítems marcados: ${checks.indices.filter {checks[it]}.joinToString(",") {"${it+1}"}.ifBlank {"ninguno"}}. Lista ${e.id}; edición ${e.json.optString("edicion")}. Solo práctica, sin autorización de administración.",
+                )
+            },
+            !vm.busy,
+        )
+        Secondary("Editar lista local", { nav("editar/safety/$id") }, !vm.busy)
+        Provenance(e)
         Section("Fuentes de la lista")
         if (e.references.isEmpty())
             Notice("La lista no declara fuentes; permanece como borrador.", true)
@@ -871,6 +800,7 @@ fun SafetyDetail(id: String, vm: AppViewModel, back: () -> Unit) {
 @Composable
 fun ContentScreen(
     vm: AppViewModel,
+    nav: (String) -> Unit,
     back: () -> Unit,
     importFile: () -> Unit,
     exportFile: () -> Unit,
@@ -897,23 +827,52 @@ fun ContentScreen(
                 }
             }
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                listOf("med" to "Fármacos", "case" to "Casos", "safety" to "Listas").forEach {
-                    (kind, label) ->
-                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        Text(
-                            vm.data.entries.count { it.kind == kind }.toString(),
-                            fontFamily = HeadingFont,
-                            fontSize = 28.sp,
-                            color = Purple,
-                        )
-                        Text(label, style = MaterialTheme.typography.labelSmall)
+                listOf(
+                        "med" to "Fármacos",
+                        "case" to "Casos",
+                        "safety" to "Listas",
+                        "protocol" to "Protocolos",
+                    )
+                    .forEach { (kind, label) ->
+                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                            Text(
+                                vm.data.entries.count { it.kind == kind }.toString(),
+                                fontFamily = HeadingFont,
+                                fontSize = 28.sp,
+                                color = Purple,
+                            )
+                            Text(label, style = MaterialTheme.typography.labelSmall)
+                        }
                     }
-                }
             }
         }
         Notice(
             "La primera biblioteca ya viene en el APK. Los contenidos de farmacología están preparados como borradores, no como fichas clínicas completas."
         )
+        Section("Editar en el dispositivo")
+        listOf("med", "case", "safety", "protocol").forEach { kind ->
+            Secondary(
+                "Crear ${kindTitle(kind).lowercase()}",
+                { nav(newEntryRoute(kind)) },
+                !vm.busy,
+            )
+        }
+        ActionRow(
+            "Cuaderno PAE y apuntes",
+            "Respaldo independiente de documentos de práctica",
+            R.drawable.ic_edit,
+            Teal,
+        ) {
+            nav("cuaderno")
+        }
+        ActionRow(
+            "Multimedia y documentos",
+            "Copias de archivos locales",
+            R.drawable.ic_play,
+            Blue,
+        ) {
+            nav("multimedia")
+        }
         Section("Añade tu contenido")
         Primary(
             if (vm.busy) "Procesando…" else "Importar paquete JSON",
@@ -928,13 +887,17 @@ fun ContentScreen(
         )
         Expandable(
             "Formato y límites",
-            "Esquema 1. En esta edición, tanto el paquete como el catálogo completo admiten hasta 2 MB, 500 registros en total y 300 de cada tipo. Si una importación excede el límite conjunto, se rechaza sin modificar el catálogo. Cada registro tiene un ID estable. Para actualizar un paquete existente, incrementa version_contenido. La operación usa una transacción local; no borra otras fichas. Un respaldo importado conserva la autoría original de las fichas; se incorpora como un paquete nuevo, sin restaurar el control de versiones de los paquetes de origen. Una revisión declarada no es una certificación clínica.",
+            "Importación de esquema 1 o 2; exportación en esquema 2, necesaria para protocolos y no compatible con v0.2. En esta edición, tanto el paquete como el catálogo completo admiten hasta 2 MB, 500 registros en total y 300 de cada tipo. Si una importación excede el límite conjunto, se rechaza sin modificar el catálogo. Cada registro tiene un ID estable. Para actualizar un paquete existente, incrementa version_contenido. La operación usa una transacción local; no borra otras fichas. Un respaldo importado conserva la autoría original de las fichas; se incorpora como un paquete nuevo, sin restaurar el control de versiones de los paquetes de origen. Una revisión declarada no es una certificación clínica.",
         )
         Section("Respaldo del catálogo")
         Secondary("Exportar catálogo a un archivo", exportFile, !vm.busy)
-        Secondary("Deshacer última importación", { undo = true }, vm.data.hasBackup && !vm.busy)
+        Secondary(
+            "Deshacer último cambio del catálogo",
+            { undo = true },
+            vm.data.hasBackup && !vm.busy,
+        )
         Text(
-            "El archivo exportado contiene fichas, casos y listas. No incluye notas de pacientes, favoritos ni el historial de prácticas. Es un JSON legible, no un archivo cifrado.",
+            "El archivo exportado contiene fichas, casos, listas y protocolos. No incluye el cuaderno, multimedia, notas de pacientes ficticios, favoritos ni el historial de prácticas. Es un JSON legible, no un archivo cifrado.",
             style = MaterialTheme.typography.bodySmall,
             color = LocalPalette.current.muted,
         )
@@ -962,7 +925,7 @@ fun ContentScreen(
             title = { Text("¿Restaurar el catálogo anterior?") },
             text = {
                 Text(
-                    "Se reemplazará el catálogo actual por el estado previo a la última importación. No se borrarán tus notas ni el historial de prácticas."
+                    "Se reemplazará el catálogo actual por el estado previo a la última importación, edición o eliminación de una ficha. No se borrarán tus notas ni el historial de prácticas."
                 )
             },
             confirmButton = {
@@ -983,7 +946,7 @@ fun ContentScreen(
             title = { Text("¿Restablecer los ejemplos?") },
             text = {
                 Text(
-                    "Se borrarán fichas importadas, notas de práctica, favoritos e historial. Exporta el catálogo antes si necesitas conservarlo. El respaldo del catálogo no incluye notas."
+                    "Se borrarán fichas importadas o editadas, protocolos, planes PAE, apuntes, copias multimedia, notas de práctica, favoritos e historial. Exporta por separado el catálogo y el cuaderno, y conserva los originales multimedia. Estos respaldos no incluyen las notas de las fichas ficticias ni el historial."
                 )
             },
             confirmButton = {
