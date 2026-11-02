@@ -22,8 +22,9 @@ internal data class ClinicalLoad(val catalog: ClinicalCatalog? = null, val faile
 @Composable
 internal fun rememberClinicalCatalog(): ClinicalLoad {
     val context = LocalContext.current.applicationContext
-    val load by produceState(ClinicalLoad(), context) {
-        value = try {
+    val load = remember(context) { mutableStateOf(ClinicalLoad()) }
+    LaunchedEffect(context) {
+        load.value = try {
             withContext(Dispatchers.IO) {
                 val text = context.assets.open(ClinicalCatalog.ASSET).bufferedReader(Charsets.UTF_8).use { it.readText() }
                 ClinicalLoad(ClinicalCatalog.parse(text))
@@ -34,7 +35,7 @@ internal fun rememberClinicalCatalog(): ClinicalLoad {
             ClinicalLoad(failed = true)
         }
     }
-    return load
+    return load.value
 }
 
 internal fun clinicalColor(area: String): Color = when (area) {

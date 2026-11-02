@@ -41,5 +41,6 @@ if [[ "$mode" == --todo ]]; then
   run_check android "$gradle" "${common[@]}" :app:testDebugUnitTest "$test_memory"
   run_check ensamblado-lint "$gradle" "${common[@]}" :app:assembleDebug :app:lintDebug "$memory"
   run_check apk "$python" scripts/verificar_apk.py
+  run_check resumen "$python" scripts/resumir_qa_ci.py --apk-log "$logs/apk.txt" --salida "$logs/resumen-ci.json"
 fi
 printf '\nComprobaciones locales completadas. Este script no despliega servicios ni realiza pruebas físicas.\n'

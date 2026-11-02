@@ -182,3 +182,7 @@ Se conservan Prototipo B, recursos, esquema/seed, repositorio, nube, módulos fa
 El primer CI de escalas falló y no se entregó como aprobado. Se añadieron anotaciones acotadas/redactadas para identificar fallos sin permisos administrativos ni secretos adicionales (7 pruebas Python). El segundo run identificó dos pruebas nuevas fallidas: expectativa incompleta de búsqueda por versión y reinicio 4AT tras un aviso de guardado transitorio. Se ajusta la expectativa conservando la búsqueda completa, se sincroniza el test con el cierre del aviso y se incorpora una prueba independiente de reinicio antes de guardar. No se eliminan pruebas ni se modifican funciones clínicas para eludirlas.
 
 Suite rápida repetida: 95 Python, 5 SQLite y 17 PGLite superados. Suite nativa tras la regresión: 163 tests declarados; resultado de CI final y límites en `qa/RESULTADOS_v0.5.0.md` y en la anotación de la etiqueta de entrega, que solo se publicará tras comprobar CI verde.
+
+### v0.5.0 · carga de catálogo y evidencia de CI
+
+Tras corregir los tests, la ejecución `41542944011` pasó Android y llegó a lint. Se reorganiza la carga asíncrona del catálogo en un estado observable explícito, sin supresiones de lint, sin modificar interfaz o criterios clínicos y conservando cancelación/IO. El pipeline ahora resume también XML/lint/APK verificados para que el estado técnico sea auditable mediante las anotaciones públicas, con cinco tests del resumidor. La etiqueta de entrega sigue condicionada al éxito del SHA final.

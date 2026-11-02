@@ -41,3 +41,11 @@ Se añadió un diagnóstico acotado de la ejecución actual como anotaciones de 
 - No se borran/deshabilitan tests, no se cambian pesos clínicos para aprobarlos y no se modifica el workflow ni sus permisos. La suite nativa contiene **163 tests declarados** tras añadir esta regresión; el resultado efectivo corresponde al run del SHA que se entregue.
 
 **Puerta de entrega:** no pedir a Google que actualice hasta verificar que la CI del SHA final está en verde. `escalas-clinicas-v1` solo se publicará tras esa verificación; su anotación guardará el SHA y URL de la ejecución aprobada. La existencia de este documento no acredita por sí sola ese resultado.
+
+## Tercer control: tests Android correctos y bloqueo de lint
+
+El run [41542944011](https://github.com/iDreyK-ii/Enfermer-a-app/actions/runs/41542944011), SHA `2931439`, superó la fase de tests Android y llegó a ensamblado/lint. Lint bloqueó la entrega con `ProduceStateDoesNotAssignValue` en la carga asíncrona del catálogo (1 error y 25 advertencias en ese run). Se hizo explícito el estado observable con `remember(context)` y `LaunchedEffect(context)`, conservando IO fuera del hilo principal, cancelación y aviso de error. No se desactiva lint ni se crea un baseline para ocultarlo.
+
+Se añade un resumen técnico de CI con recuento de casos XML, fallos, omisiones, lint e identidad del APK inspeccionado. Sale como anotación pública acotada y JSON dentro de las evidencias existentes; no requiere más permisos ni acceso a secretos. Cinco pruebas adicionales comprueban ausencia/incoherencia de evidencia, fallos y exclusión de campos ajenos. El resumen no afirma validación clínica, importación de Google o prueba física.
+
+Repetición local tras este cambio: **100 Python** (64 guardas/diagnóstico, 15 conversor, 21 backend), **5 SQLite y 17 PGLite**, todos superados. Evidencia local: `qa-rapida-final.txt` de la entrega. Android/lint/APK se verifican en el nuevo run.
