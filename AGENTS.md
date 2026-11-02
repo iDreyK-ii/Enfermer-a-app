@@ -29,7 +29,7 @@
 - Mantener JSON acotado en profundidad, límites previos, datos parciales y deshacer. No interpretar una comparación estructural como evaluación clínica.
 - No retirar accesibilidad/reducción de movimiento para añadir efectos. Las tarjetas se adaptan al ancho/fuente; conservar la altura dinámica de bienvenida.
 - `scripts/comprobar.sh --todo` exige Git del proyecto y fuerza nube vacía. Un cliente conectado necesita compilación y pruebas de integración separadas.
-- CI preparada, no ejecutada remotamente. No cambiar un remoto ni hacer push sin destino y autorización. No dar por compatible la firma temporal de CI con los APK entregados.
+- Destino autorizado: `https://github.com/iDreyK-ii/Enfermer-a-app`, público, rama `desarrollo`; ver `docs/GITHUB_DESTINO.md`. Verificar el run de CI del commit correspondiente: no inferirlo de resultados históricos. No cambiar de destino ni forzar un push. No dar por compatible la firma temporal de CI con los APK entregados.
 
 ## Comprobación y entrega
 

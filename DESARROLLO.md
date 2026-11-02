@@ -1,6 +1,14 @@
 # Desarrollo continuo del aplicativo iDreyK 360
 
-## Punto actual: infraestructura Supabase inicial
+## Punto de sincronización GitHub
+
+Destino público autorizado expresamente: `iDreyK-ii/Enfermer-a-app`; rama `desarrollo`. Se comprobó que estaba vacío y que la clave de despliegue identificaba ese repositorio y permitía escritura (`--dry-run`, sin enviar contenido). El envío real se verifica contrastando referencias remotas y la ejecución de Actions del commit correspondiente. Ver `docs/GITHUB_DESTINO.md`.
+
+Este punto no modifica `app/`, el APK entregado, el esquema ya aplicado de Supabase ni la firma privada de Android. No adelanta pruebas físicas ni declara completado el correo OTP. Tag de continuidad: `github-inicial-v1`.
+
+## Historial de infraestructura
+
+## Punto previo: infraestructura Supabase inicial
 
 Proyecto real `idreyk-360-dev` / `dmxfdvvcvfecqhbbmrlu`, región `us-east-1` autorizada tras descartar Brasil. Creación solicitada con plan Free. Migración `20261102110405_inicial_catalogo_seguro_v1` aplicada y contrastada con el SQL local. No volver a aplicar el esquema inicial.
 

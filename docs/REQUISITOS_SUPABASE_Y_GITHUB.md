@@ -1,3 +1,5 @@
+> **Actualización GitHub:** URL y escritura ya confirmadas para `https://github.com/iDreyK-ii/Enfermer-a-app`; destino público autorizado. Ver `GITHUB_DESTINO.md`. Los apartados de solicitud de URL y preparación de autorización de este documento conservan la guía de la fase anterior. El permiso no completa las pruebas OTP o Android pendientes.
+
 # iDreyK 360 — conexión real y sincronización
 
 Fecha de revisión: 2 de noviembre de 2026.

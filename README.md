@@ -4,7 +4,7 @@ Evolución del mismo aplicativo del **Prototipo B**, en Kotlin/Jetpack Compose. 
 
 **Estado actual de infraestructura (2 de noviembre de 2026):** se creó `idreyk-360-dev` en Supabase, región Virginia autorizada, y se aplicó su migración. Pasaron **7 controles HTTPS y 12 comprobaciones SQL reales**. Correo OTP y sesión real siguen pendientes de configuración/prueba con el propietario. Ver [docs/SUPABASE_REAL_Y_GITHUB.md](docs/SUPABASE_REAL_Y_GITHUB.md).
 
-**El APK entregado v0.4.1 no cambió:** todavía tiene nube vacía. Se dejaron parámetros públicos y un comando para la próxima compilación conectada; no se ejecutó esa compilación en esta fase. GitHub no tiene destino confirmado ni push. Solo contenido de práctica, sin validación para pacientes reales.
+**El APK entregado v0.4.1 no cambió:** todavía tiene nube vacía. Se dejaron parámetros públicos y un comando para la próxima compilación conectada; no se ejecutó esa compilación en esta fase. El repositorio de trabajo autorizado es [iDreyK-ii/Enfermer-a-app](https://github.com/iDreyK-ii/Enfermer-a-app), rama `desarrollo`, público por decisión del propietario. Ver [destino y comprobación de sincronización](docs/GITHUB_DESTINO.md). Solo contenido de práctica, sin validación para pacientes reales.
 
 ## Pulido v0.4.1 antes de sincronizar
 
@@ -12,7 +12,7 @@ Además de la base v0.4: comparación y aceptación de sustituciones; bloqueo de
 
 **133 pruebas Android superadas.** Resultados actuales: [qa/RESULTADOS_v0.4.1.md](qa/RESULTADOS_v0.4.1.md). Detalle: [docs/MEJORAS_v0.4.1.md](docs/MEJORAS_v0.4.1.md). La plantilla y los esquemas de contenido/SQLite no cambiaron.
 
-Preparación de Git/CI: [docs/GITHUB_Y_CI.md](docs/GITHUB_Y_CI.md). Workflow creado y validado localmente, pero **no hay push ni ejecución remota comprobada**. No necesita secretos de nube. El APK de un runner usa firma temporal: no confundirlo con una actualización del APK entregado.
+Preparación de Git/CI: [docs/GITHUB_Y_CI.md](docs/GITHUB_Y_CI.md). Consultar la ejecución del commit concreto en [GitHub Actions](https://github.com/iDreyK-ii/Enfermer-a-app/actions/workflows/calidad.yml); la evidencia local histórica no sustituye esa comprobación. No necesita secretos de nube. El APK de un runner usa firma temporal: no confundirlo con una actualización del APK entregado.
 
 ## 1. Qué cambia
 
@@ -112,4 +112,4 @@ Leer [AGENTS.md](AGENTS.md), después solo los archivos del módulo afectado. No
 - [docs/EVOLUCION_CATALOGO_CUENTAS.md](docs/EVOLUCION_CATALOGO_CUENTAS.md): solicitud y decisiones de esta fase.
 - [docs/ESTADO_FUNCIONAL_v0.3.md](docs/ESTADO_FUNCIONAL_v0.3.md): funciones previas conservadas.
 
-El ZIP/bundle recupera código, recursos y diseño; **no los datos de tu teléfono**. Catálogo, cuaderno y medios tienen respaldos distintos. Descarga una copia externa del proyecto; no se ha subido a ningún repositorio remoto.
+El ZIP/bundle recupera código, recursos y diseño; **no los datos de tu teléfono**. Catálogo, cuaderno y medios tienen respaldos distintos. Conserva también una copia externa. El destino y el procedimiento para contrastar el historial remoto están en `docs/GITHUB_DESTINO.md`.

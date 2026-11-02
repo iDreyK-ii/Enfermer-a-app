@@ -16,7 +16,7 @@
 | Contenido/cuentas | Cero publicaciones y cero cuentas creadas por esta operación |
 | Correo y sesión real | **Pendientes**: plantillas, remitente autorizado y prueba con el propietario |
 | APK entregado v0.4.1 | **No cambió**: sigue con configuración de nube vacía |
-| GitHub | Sin URL de destino ni push; el conector de este entorno no está soportado |
+| GitHub | Destino y escritura autorizados: `iDreyK-ii/Enfermer-a-app`; ver `GITHUB_DESTINO.md` y el run del commit concreto |
 
 Panel del proyecto: https://supabase.com/dashboard/project/dmxfdvvcvfecqhbbmrlu
 
@@ -88,11 +88,11 @@ El script de calidad deja un APK con nube vacía, deliberadamente. El comando si
 
 ## GitHub: lo que falta y cómo autorizar
 
-El propietario indicó que ya existe un repositorio, pero aún no facilitó su URL. Primero copiar el enlace desde **repositorio → Code → HTTPS** y compartir solo esa URL.
+El propietario facilitó `https://github.com/iDreyK-ii/Enfermer-a-app` y autorizó el destino público. Se confirmó identidad SSH y escritura limitada a ese repositorio. Ver `GITHUB_DESTINO.md`; los pasos siguientes son orientación para otras máquinas o autorizaciones futuras.
 
 - Revisar si es privado y si ya contiene archivos. Si tiene trabajo, no borrarlo ni forzar su historial.
 - El conector GitHub no está soportado aquí. El push requiere Git autenticado en una máquina o entorno autorizado del propietario; la URL por sí sola no da escritura.
-- Alternativa de alcance limitado: tras recibir la URL se puede preparar una clave SSH de despliegue. El propietario añade solo la clave pública en Settings → Deploy keys del repositorio, con escritura. La clave privada queda en el entorno autorizado, nunca en chat ni Git. No se ha generado/registrado ninguna todavía.
+- Alternativa de alcance limitado: tras recibir la URL se puede preparar una clave SSH de despliegue. El propietario añade solo la clave pública en Settings → Deploy keys del repositorio, con escritura. La clave privada queda en el entorno autorizado, nunca en chat ni Git. La autorización temporal de esta sesión ya fue registrada y comprobada; la clave privada no se distribuye.
 - Usar SSH o un gestor de credenciales/cliente oficial. No pegar tokens, contraseñas ni claves privadas en el chat. Si hay una autorización OAuth, otorgarla en el propio proveedor, con alcance limitado al destino necesario.
 - Se necesita acceso para escribir código y el workflow. Revisar permisos de Contents/Workflows si se elige un token de granularidad fina.
 - Subir la rama `desarrollo` y tags autorizados, sin `--force` ni `--mirror`. Verificar commit remoto y primera ejecución de Actions.
