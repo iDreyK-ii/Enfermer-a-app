@@ -39,7 +39,19 @@ val DRUG_FIELDS =
         "poblaciones_especiales" to "Poblaciones especiales",
         "educacion" to "Educación a la persona",
         "alertas" to "Alertas y observaciones",
+        "nombres_comerciales" to "Nombre comercial / laboratorio",
+        "almacenamiento" to "Almacenamiento",
+        "formas_presentacion" to "Formas de presentación / registro documentado",
+        "velocidad_administracion" to "Velocidad de administración",
+        "sueros_compatibles" to "Sueros compatibles",
+        "incompatibilidades" to "Incompatibilidades",
+        "objetivo_terapeutico" to "Objetivo del tratamiento",
+        "antes_administrar" to "Antes de administrar",
+        "durante_administracion" to "Durante la administración",
+        "despues_administracion" to "Después de administrar",
     )
+
+val LEGACY_DRUG_KEYS = DRUG_FIELDS.keys.take(20).toSet()
 
 data class Reference(
     val title: String,
@@ -73,9 +85,13 @@ data class Entry(
 
     val aliases: String
         get() =
-            json.optJSONArray("sinonimos")?.let { a ->
-                (0 until a.length()).joinToString(" ") { a.optString(it) }
-            } ?: ""
+            buildList {
+                    json.optJSONArray("sinonimos")?.let { a ->
+                        for (i in 0 until a.length()) add(a.optString(i))
+                    }
+                    add(json.optJSONObject("secciones")?.optString("nombres_comerciales").orEmpty())
+                }
+                .joinToString(" ")
 
     val revision: String
         get() = json.optString("revision", "borrador")
@@ -171,11 +187,12 @@ object ContentParser {
                     "No es un JSON válido. Usa la plantilla del proyecto."
                 )
             }
-        require(root.opt("version_esquema") == 1 || root.opt("version_esquema") == 2) {
-            "Versión de esquema incompatible. Se admite version_esquema 1 o 2."
+        val schema = root.opt("version_esquema")
+        require(schema == 1 || schema == 2 || schema == 3) {
+            "Versión de esquema incompatible. Se admiten esquemas 1, 2 y 3."
         }
-        require(root.opt("version_esquema") == 2 || !root.has("protocolos")) {
-            "Los protocolos requieren version_esquema 2; no se ignorarán silenciosamente."
+        require(schema != 1 || !root.has("protocolos")) {
+            "Los protocolos requieren version_esquema 2 o 3; no se ignorarán silenciosamente."
         }
         val id = slug(root, "id_paquete")
         val rawVersion = root.opt("version_contenido")
@@ -265,6 +282,9 @@ object ContentParser {
                     val sections = o.getJSONObject("secciones")
                     for (key in sections.keys()) {
                         require(key in DRUG_FIELDS) { "Sección desconocida en $name: $key." }
+                        require(schema == 3 || key in LEGACY_DRUG_KEYS) {
+                            "La sección $key requiere version_esquema 3 y app v0.4."
+                        }
                         require(sections.get(key) is String) {
                             "La sección $key debe contener texto."
                         }

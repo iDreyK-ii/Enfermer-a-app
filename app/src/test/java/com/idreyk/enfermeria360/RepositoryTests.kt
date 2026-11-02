@@ -150,7 +150,7 @@ class RepositoryTests {
         val records = JSONArray()
         for (i in 1..6) {
             val fields = JSONObject()
-            for (key in DRUG_FIELDS.keys) fields.put(key, "x".repeat(15000))
+            for (key in LEGACY_DRUG_KEYS) fields.put(key, "x".repeat(15000))
             records.put(drug("extenso-$i").put("secciones", fields))
         }
         repo.writePackage(

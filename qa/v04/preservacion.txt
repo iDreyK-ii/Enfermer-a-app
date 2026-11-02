@@ -1,0 +1,4 @@
+84 archivos de recursos/assets originales comparados byte a byte con arquitectura-v0.3: sin cambios.
+APK v0.2/v0.3 comparados con sus SHA-256 previos: sin cambios.
+Firma de v0.4 idéntica a ambas versiones anteriores.
+Temas, navegación inferior, ruta nube y permiso INTERNET contrastados en la fuente y APK.

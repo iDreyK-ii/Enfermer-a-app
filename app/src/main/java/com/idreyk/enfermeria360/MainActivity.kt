@@ -1,7 +1,6 @@
 package com.idreyk.enfermeria360
 
 import android.os.Bundle
-import android.provider.Settings
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -44,13 +43,8 @@ class MainActivity : ComponentActivity() {
             val vm: AppViewModel = viewModel()
             val density = LocalDensity.current
             val view = LocalView.current
-            val systemReduced = remember {
-                Settings.Global.getFloat(
-                    contentResolver,
-                    Settings.Global.ANIMATOR_DURATION_SCALE,
-                    1f,
-                ) == 0f
-            }
+            val signals = rememberDeviceSignals(lifecycle)
+            val performance = PerformancePolicy.decide(vm.performanceMode, vm.reduced, signals)
             SideEffect {
                 WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars =
                     !vm.dark
@@ -59,9 +53,10 @@ class MainActivity : ComponentActivity() {
             }
             CompositionLocalProvider(
                 LocalDensity provides
-                    Density(density.density, density.fontScale * (if (vm.largeText) 1.12f else 1f))
+                    Density(density.density, density.fontScale * (if (vm.largeText) 1.12f else 1f)),
+                LocalPerformance provides performance,
             ) {
-                NursingTheme(vm.dark, vm.reduced || systemReduced) { NursingApp(vm) }
+                NursingTheme(vm.dark, performance.reduced) { NursingApp(vm) }
             }
         }
     }
@@ -244,6 +239,7 @@ fun NursingApp(vm: AppViewModel) {
                             "case" -> CaseScreen(id, vm, nav, back)
                             "favoritos" -> FavoritesScreen(vm, nav, back)
                             "perfil" -> ProfileScreen(vm, nav, back, info)
+                            "nube" -> CloudScreen(vm, nav, back)
                             "historial" -> HistoryScreen(vm, back)
                             "buscar" -> GlobalSearchScreen(vm, nav, back)
                             else ->
@@ -269,7 +265,7 @@ fun NursingApp(vm: AppViewModel) {
             title = { Text("Bienvenido a tu espacio") },
             text = {
                 Text(
-                    "iDreyK 360 · edición Android de desarrollo.\n\nFunciona sin cuentas y sin conexión. El catálogo inicial ya está incluido.\n\nUsa únicamente datos ficticios. Las funciones clínicas y contenidos pendientes están señalados. No es un producto certificado para atención de pacientes."
+                    "iDreyK 360 · edición Android de desarrollo.\n\nLa consulta local funciona sin conexión y sin cuenta obligatoria. Las cuentas y novedades online son opcionales y requieren configurar Supabase. El catálogo inicial está incluido como borradores.\n\nUsa únicamente datos ficticios. Las funciones clínicas y contenidos pendientes están señalados. No es un producto certificado para atención de pacientes."
                 )
             },
             confirmButton = {
@@ -356,9 +352,12 @@ fun AppBottomBar(route: String, nav: (String) -> Unit) {
         when (section) {
             "inicio" -> "inicio"
             "perfil",
+            "nube",
             "historial",
             "contenido" -> "perfil"
             "favoritos" -> "favoritos"
+            "farmacologia",
+            "med" -> "farmacologia"
             "paciente",
             "pacientes",
             "evolucion",
@@ -367,7 +366,10 @@ fun AppBottomBar(route: String, nav: (String) -> Unit) {
             "plan" -> "pacientes"
             else -> "modulos"
         }
-    Surface(color = LocalPalette.current.surface, shadowElevation = 7.dp) {
+    Surface(
+        color = LocalPalette.current.surface,
+        shadowElevation = if (LocalReduced.current) 0.dp else 7.dp,
+    ) {
         Row(
             Modifier.fillMaxWidth()
                 .navigationBarsPadding()
@@ -377,7 +379,7 @@ fun AppBottomBar(route: String, nav: (String) -> Unit) {
         ) {
             listOf(
                     Triple("modulos", "Módulos", R.drawable.ic_grid),
-                    Triple("pacientes", "Pacientes", R.drawable.ic_users),
+                    Triple("farmacologia", "Fármacos", R.drawable.ic_pill),
                     Triple("inicio", "Inicio", R.drawable.ic_home),
                     Triple("favoritos", "Favoritos", R.drawable.ic_heart),
                     Triple("perfil", "Perfil", R.drawable.ic_user),

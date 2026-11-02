@@ -1,11 +1,15 @@
 package com.idreyk.enfermeria360
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.unit.dp
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -90,8 +94,27 @@ fun EntryEditorScreen(kind: String, id: String, vm: AppViewModel, back: () -> Un
         )
         if (kind == "med") {
             Input("Sinónimos · separados por punto y coma", aliases, { aliases = it.take(4000) })
-            Section("Las 20 secciones de la ficha")
-            DRUG_FIELDS.forEach { (key, label) ->
+            var fieldGroup by rememberSaveable(kind, id) { mutableIntStateOf(0) }
+            val groups = PharmacologyLayout.editorGroups()
+            Section("Ficha flexible · 17 conceptos del PDF y cuidados")
+            Text(
+                "Puedes guardar una ficha parcial. Vacío significa pendiente; si no aplica, escribe la justificación. El nombre genérico se edita arriba.",
+                style = MaterialTheme.typography.bodySmall,
+            )
+            Row(
+                Modifier.testTag("medication-fields-tabs").horizontalScroll(rememberScrollState()),
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+            ) {
+                groups.forEachIndexed { index, group ->
+                    FilterChip(
+                        fieldGroup == index,
+                        { fieldGroup = index },
+                        label = { Text(group.first) },
+                    )
+                }
+            }
+            groups[fieldGroup].second.forEach { key ->
+                val label = DRUG_FIELDS.getValue(key)
                 EditableSection(label, o.optJSONObject("secciones")?.optString(key).orEmpty()) {
                     value ->
                     val copy = JSONObject(raw)
@@ -325,11 +348,11 @@ fun ProtocolsScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit) {
         if (protocols.isEmpty())
             EmptyState(
                 "Biblioteca de protocolos",
-                "Añade un documento propio o importa un paquete JSON de esquema 2 desde Biblioteca local.",
+                "Añade un documento propio o importa un paquete JSON de esquema 2 o 3 desde Biblioteca local.",
             )
         ActionRow(
             "Importar / exportar catálogo",
-            "El esquema 2 incorpora protocolos y conserva los otros tipos",
+            "Los protocolos se admiten en esquemas 2 y 3",
             R.drawable.ic_folder,
             Purple,
         ) {

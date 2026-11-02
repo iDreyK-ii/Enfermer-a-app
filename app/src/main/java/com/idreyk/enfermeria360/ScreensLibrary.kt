@@ -16,6 +16,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -138,7 +139,7 @@ fun HomeScreen(vm: AppViewModel, nav: (String) -> Unit, info: (String, String) -
                 onClick = {
                     info(
                         "Tu espacio está listo",
-                        "Esta versión es local y no recibe notificaciones de un servidor. Explora los módulos y practica con información ficticia.",
+                        "La biblioteca descargada funciona sin conexión. Las cuentas y novedades requieren un proyecto Supabase configurado; no hay notificaciones push. Usa solo información ficticia.",
                     )
                 }
             ) {
@@ -213,11 +214,44 @@ fun HomeScreen(vm: AppViewModel, nav: (String) -> Unit, info: (String, String) -
                 color = p.muted,
             )
         }
+        AppCard(Modifier.fillMaxWidth(), onClick = { nav("farmacologia") }) {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                ColorIcon(R.drawable.ic_pill, Pink, 46)
+                Column(Modifier.weight(1f)) {
+                    Text("Farmacología", style = MaterialTheme.typography.titleLarge)
+                    Text(
+                        "Fichas, preparación y cuidados",
+                        style = MaterialTheme.typography.bodySmall,
+                    )
+                }
+                Symbol(R.drawable.ic_chevron_right, "Explorar farmacología", Purple)
+            }
+        }
         Section("Tu universo 360°", "Ver todo") { nav("modulos") }
-        Modules.chunked(3).forEach { row ->
+        val shortcuts =
+            listOf(
+                Module("PAE", "Proceso enfermero", "pae", R.drawable.ic_clipboard_check, Teal),
+                Module("Escalas", "Práctica educativa", "escalas", R.drawable.ic_clipboard, Purple),
+                Module("Cálculos", "Herramientas", "herramientas", R.drawable.ic_calculator, Pink),
+                Module("Apuntes", "Tu cuaderno", "apuntes", R.drawable.ic_book, Teal),
+                Module("Protocolos", "Biblioteca", "protocolos", R.drawable.ic_folder, Purple),
+                Module("Multimedia", "Archivos locales", "multimedia", R.drawable.ic_play, Pink),
+            )
+        shortcuts.chunked(3).forEach { row ->
             Row(horizontalArrangement = Arrangement.spacedBy(9.dp)) {
                 row.forEach { ModuleTile(it, nav, Modifier.weight(1f)) }
             }
+        }
+        ActionRow(
+            "Actualizar biblioteca",
+            "Consulta local · novedades opcionales",
+            R.drawable.ic_download,
+            Purple,
+        ) {
+            nav("nube")
         }
         Section("Tus aliados de cada día")
         ActionRow(
@@ -237,7 +271,7 @@ fun HomeScreen(vm: AppViewModel, nav: (String) -> Unit, info: (String, String) -
             nav("tarjetas")
         }
         Text(
-            "EDICIÓN DE DESARROLLO · SIN CUENTAS · LOCAL",
+            "EDICIÓN DE DESARROLLO · LECTURA LOCAL",
             Modifier.fillMaxWidth(),
             style = MaterialTheme.typography.labelSmall,
             color = p.muted,
@@ -362,35 +396,6 @@ fun DrugScreen(id: String, vm: AppViewModel, nav: (String) -> Unit, back: () -> 
         return
     }
     var tab by rememberSaveable(id) { mutableIntStateOf(0) }
-    val groups =
-        listOf(
-            listOf(
-                "descripcion",
-                "mecanismo_accion",
-                "presentaciones",
-                "vias",
-                "indicaciones",
-                "contraindicaciones",
-            ),
-            listOf(
-                "dosificacion",
-                "reconstitucion",
-                "dilucion",
-                "compatibilidad",
-                "administracion",
-                "estabilidad",
-            ),
-            listOf(
-                "precauciones",
-                "reacciones_adversas",
-                "interacciones",
-                "monitorizacion",
-                "cuidados_enfermeria",
-                "poblaciones_especiales",
-                "educacion",
-                "alertas",
-            ),
-        )
     Page(
         "Ficha farmacológica",
         "Contenido local · estado de revisión visible",
@@ -429,7 +434,7 @@ fun DrugScreen(id: String, vm: AppViewModel, nav: (String) -> Unit, back: () -> 
             Modifier.horizontalScroll(rememberScrollState()),
             horizontalArrangement = Arrangement.spacedBy(7.dp),
         ) {
-            listOf("Resumen", "Preparación", "Cuidados", "Fuentes").forEachIndexed { i, t ->
+            listOf("Lo esencial", "Ficha técnica", "Otros", "Fuentes").forEachIndexed { i, t ->
                 FilterChip(
                     tab == i,
                     { tab = i },
@@ -438,10 +443,25 @@ fun DrugScreen(id: String, vm: AppViewModel, nav: (String) -> Unit, back: () -> 
             }
         }
         Secondary("Editar ficha local", { nav("editar/med/$id") }, !vm.busy)
-        if (tab < 3) {
-            groups[tab].forEachIndexed { i, key ->
-                Expandable(DRUG_FIELDS.getValue(key), e.sections[key].orEmpty(), initial = i == 0)
+        if (tab == 0) {
+            Section("Lo esencial para enfermería")
+            PharmacologyLayout.essentials.entries.forEachIndexed { index, block ->
+                Expandable(
+                    block.key,
+                    PharmacologyLayout.summary(e, block.value),
+                    initial = index == 0,
+                )
             }
+            Secondary("Ver ficha técnica · 17 apartados", { tab = 1 })
+        } else if (tab == 1) {
+            PharmacologyLayout.technical.entries.forEachIndexed { index, field ->
+                Expandable("${index + 1}. ${field.value}", PharmacologyLayout.text(e, field.key))
+            }
+        } else if (tab == 2) {
+            Section("Información complementaria conservada")
+            DRUG_FIELDS.keys
+                .filter { it !in PharmacologyLayout.technical.keys }
+                .forEach { key -> Expandable(DRUG_FIELDS.getValue(key), e.sections[key].orEmpty()) }
         } else {
             AppCard(Modifier.fillMaxWidth()) {
                 Text("Trazabilidad de la ficha", style = MaterialTheme.typography.titleMedium)
@@ -820,7 +840,7 @@ fun ContentScreen(
                         style = MaterialTheme.typography.titleMedium,
                     )
                     Text(
-                        "Sin cuentas · sin sincronización",
+                        "Datos en este dispositivo",
                         style = MaterialTheme.typography.bodySmall,
                         color = LocalPalette.current.muted,
                     )
@@ -887,7 +907,7 @@ fun ContentScreen(
         )
         Expandable(
             "Formato y límites",
-            "Importación de esquema 1 o 2; exportación en esquema 2, necesaria para protocolos y no compatible con v0.2. En esta edición, tanto el paquete como el catálogo completo admiten hasta 2 MB, 500 registros en total y 300 de cada tipo. Si una importación excede el límite conjunto, se rechaza sin modificar el catálogo. Cada registro tiene un ID estable. Para actualizar un paquete existente, incrementa version_contenido. La operación usa una transacción local; no borra otras fichas. Un respaldo importado conserva la autoría original de las fichas; se incorpora como un paquete nuevo, sin restaurar el control de versiones de los paquetes de origen. Una revisión declarada no es una certificación clínica.",
+            "Importa esquemas 1, 2 o 3 y exporta esquema 3. El esquema 3 incorpora la ficha ampliada y requiere app v0.4: no lo importes en v0.2/v0.3. En esta edición, tanto el paquete como el catálogo completo admiten hasta 2 MB, 500 registros en total y 300 de cada tipo. Si una importación excede el límite conjunto, se rechaza sin modificar el catálogo. Cada registro tiene un ID estable. Para actualizar un paquete existente, incrementa version_contenido. La operación usa una transacción local; no borra otras fichas. Un respaldo importado conserva la autoría original de las fichas; se incorpora como un paquete nuevo, sin restaurar el control de versiones de los paquetes de origen. Una revisión declarada no es una certificación clínica.",
         )
         Section("Respaldo del catálogo")
         Secondary("Exportar catálogo a un archivo", exportFile, !vm.busy)
@@ -1037,6 +1057,36 @@ fun ProfileScreen(
                 Text("Editar nombre de ejemplo")
             }
         }
+        ActionRow(
+            "Cuenta y actualizaciones",
+            "Supabase opcional · biblioteca offline",
+            R.drawable.ic_wifi,
+            Teal,
+        ) {
+            nav("nube")
+        }
+        Section("Rendimiento adaptable")
+        Row(
+            Modifier.testTag("performance-options").horizontalScroll(rememberScrollState()),
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
+        ) {
+            PerformancePolicy.modes.forEach { (mode, label) ->
+                FilterChip(
+                    vm.performanceMode == mode,
+                    { vm.setPerformance(mode) },
+                    label = { Text(label) },
+                )
+            }
+        }
+        Text(
+            LocalPerformance.current.reason,
+            style = MaterialTheme.typography.bodySmall,
+            color = LocalPalette.current.muted,
+        )
+        Text(
+            "Las funciones no cambian. Ahorro de batería, memoria crítica y accesibilidad pueden reducir movimiento incluso en modo completo.",
+            style = MaterialTheme.typography.bodySmall,
+        )
         Section("Hazla tuya")
         SettingSwitch(
             "Modo oscuro",
@@ -1077,13 +1127,13 @@ fun ProfileScreen(
         }
         ActionRow(
             "Privacidad",
-            "Sin cuentas ni permiso de internet",
+            "Datos locales · conexión opcional",
             R.drawable.ic_shield_check,
             Teal,
         ) {
             info(
                 "Tu información, local",
-                "Esta edición no tiene permiso de internet, no crea cuentas y no se conecta con Google Drive. El catálogo, favoritos y ejercicios se guardan dentro del almacenamiento privado de la app.\n\nNo implementa un sistema de historias clínicas, cifrado clínico propio, biometría o control de roles. No introduzcas datos reales de pacientes.\n\nAl desinstalar la app, Android elimina sus datos internos. Puedes exportar únicamente el catálogo. Un respaldo JSON es texto legible, no un archivo cifrado.",
+                "El catálogo, favoritos, cuaderno y ejercicios permanecen en el teléfono. Si configuras Supabase y solicitas un código, tu correo se envía a ese proyecto. No se suben notas, planes, medios ni datos de pacientes. Los tokens de la sesión se protegen con Android Keystore.\n\nInternet se usa solo para las operaciones de cuenta y consulta de novedades solicitadas. Sin configuración no hay conexión. La app no es una historia clínica certificada: usa datos ficticios.\n\nLos respaldos de catálogo y cuaderno son separados y legibles, no cifrados; los medios requieren conservar originales. Desinstalar puede borrar los datos locales.",
             )
         }
         ActionRow(

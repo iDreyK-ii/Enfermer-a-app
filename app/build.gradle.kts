@@ -6,6 +6,16 @@ plugins {
     id("org.jetbrains.kotlin.plugin.compose")
 }
 
+val cloudUrl = providers.gradleProperty("IDREYK_SUPABASE_URL")
+    .orElse(providers.environmentVariable("IDREYK_SUPABASE_URL")).getOrElse("").trim().trimEnd('/')
+val cloudKey = providers.gradleProperty("IDREYK_SUPABASE_PUBLISHABLE_KEY")
+    .orElse(providers.environmentVariable("IDREYK_SUPABASE_PUBLISHABLE_KEY")).getOrElse("").trim()
+require((cloudUrl.isEmpty() && cloudKey.isEmpty()) ||
+    (Regex("https://[a-z0-9-]+\\.supabase\\.co").matches(cloudUrl) &&
+        Regex("sb_publishable_[A-Za-z0-9_-]{8,500}").matches(cloudKey))) {
+    "Configura URL HTTPS de Supabase y clave publicable juntas. Nunca uses claves secretas/service_role en Android."
+}
+
 android {
     namespace = "com.idreyk.enfermeria360"
     compileSdk = 35
@@ -13,8 +23,10 @@ android {
         applicationId = "com.idreyk.enfermeria360"
         minSdk = 26
         targetSdk = 35
-        versionCode = 3
-        versionName = "0.3.0-dev"
+        versionCode = 4
+        versionName = "0.4.0-dev"
+        buildConfigField("String", "CLOUD_URL", "\"$cloudUrl\"")
+        buildConfigField("String", "CLOUD_PUBLISHABLE_KEY", "\"$cloudKey\"")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

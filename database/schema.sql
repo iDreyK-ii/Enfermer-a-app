@@ -1,4 +1,4 @@
--- iDreyK 360 — esquema SQLite v2 (app Android v0.3).
+-- iDreyK 360 — esquema SQLite v2 (app Android v0.3/v0.4).
 -- Espejo documental de LocalDatabase, en:
 -- app/src/main/java/com/idreyk/enfermeria360/Repository.kt
 --

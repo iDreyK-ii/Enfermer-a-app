@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.RepositoryTests" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-11-02T02:02:50" hostname="e2b.local" time="0.479">
+  <properties/>
+  <testcase name="initialLibraryIsLocalAndRepeatable" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.035"/>
+  <testcase name="notesFavoritesAndExercisesSurviveReopening" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.023"/>
+  <testcase name="rejectedAggregatePreservesPreviousUndoPoint" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.041"/>
+  <testcase name="aggregateByteLimitKeepsExportsReadable" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.258"/>
+  <testcase name="previewDoesNotWriteAndCountsReplacements" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.022"/>
+  <testcase name="undoRestoresCatalogAndVersionButNotPracticeData" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.023"/>
+  <testcase name="exportedCatalogKeepsOriginalAttributionWithoutNotes" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.025"/>
+  <testcase name="versionsCannotGoBackwards" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.028"/>
+  <testcase name="resetClearsOnlyLocalPracticeAndCatalog" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.023"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

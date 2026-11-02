@@ -52,8 +52,12 @@ python3 -m unittest discover -s content-tools -p 'test_converter.py' -v
 ```
 
 
-## Estado de esta entrega documental
+## Configuración opcional de nube en v0.4
 
-Los comandos se documentan a partir de la configuración y la compilación previa v0.3. En esta revisión de documentación no se ha recompilado el APK ni repetido Robolectric: los SDK/Gradle de la caché de aquella compilación no están disponibles en el entorno restaurado. Las pruebas nuevas son las del espejo SQLite; el código Android y los APK entregados permanecen sin cambios.
+El cliente lee `IDREYK_SUPABASE_URL` e `IDREYK_SUPABASE_PUBLISHABLE_KEY` de variables de entorno o propiedades Gradle. Ambas vacías = sin llamadas al servidor; ambas reales = conector habilitado. `.env` sigue sin cargarse automáticamente. Instrucciones de permisos, cuentas por correo y publicación: `backend/README.md`.
 
-La evidencia anterior se conserva en `qa/RESULTADOS.md`; la revisión documental se registra por separado en `qa/ARQUITECTURA.md`.
+El APK entregado se compiló sin endpoint ni clave publicable; no contiene un servidor ficticio. Desde v0.4 declara INTERNET para el conector opcional. No incorpora claves secretas. Cambiar el contenido del servidor no requiere recompilar si el formato es compatible; configurar el endpoint inicial o cambiar lógica sí.
+
+## Verificación de esta edición
+
+Se restauraron JDK21/SDK35/Gradle8.9 para compilar v0.4 y se ejecutaron pruebas Android/JVM y lint. Consultar `qa/RESULTADOS_v0.4.md` y `qa/v04/`. La prueba en teléfono real, SMTP, Auth real y rendimiento medido siguen pendientes; las maquetas no son capturas del APK.

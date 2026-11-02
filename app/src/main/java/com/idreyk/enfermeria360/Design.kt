@@ -181,7 +181,7 @@ fun Symbol(
 fun ColorIcon(id: Int, color: Color = Purple, size: Int = 43) {
     Box(
         Modifier.size(size.dp)
-            .shadow(3.dp, RoundedCornerShape(14.dp))
+            .shadow(if (LocalReduced.current) 0.dp else 3.dp, RoundedCornerShape(14.dp))
             .clip(RoundedCornerShape(14.dp))
             .background(Brush.linearGradient(listOf(color.copy(alpha = .6f), color)))
             .border(1.dp, Color.White.copy(alpha = .45f), RoundedCornerShape(14.dp)),
@@ -221,7 +221,7 @@ fun AppCard(
     val p = LocalPalette.current
     Column(
         modifier
-            .shadow(1.dp, RoundedCornerShape(21.dp))
+            .shadow(if (LocalReduced.current) 0.dp else 1.dp, RoundedCornerShape(21.dp))
             .clip(RoundedCornerShape(21.dp))
             .background(p.surface)
             .border(1.dp, p.border, RoundedCornerShape(21.dp))
@@ -328,7 +328,7 @@ fun Notice(text: String, warning: Boolean = false) {
 fun ActionRow(title: String, subtitle: String, icon: Int, color: Color, onClick: () -> Unit) {
     Row(
         Modifier.fillMaxWidth()
-            .shadow(1.dp, RoundedCornerShape(19.dp))
+            .shadow(if (LocalReduced.current) 0.dp else 1.dp, RoundedCornerShape(19.dp))
             .clip(RoundedCornerShape(19.dp))
             .background(LocalPalette.current.surface)
             .border(1.dp, LocalPalette.current.border, RoundedCornerShape(19.dp))
@@ -500,7 +500,7 @@ fun Expandable(title: String, body: String, initial: Boolean = false) {
         if (open)
             Text(
                 body.ifBlank {
-                    "Sección preparada. Incorpora contenido autorizado y revisado mediante un paquete local."
+                    "Pendiente de documentar y revisar. Un campo vacío no significa ausencia de riesgo. Si no aplica, debe justificarse."
                 },
                 style = MaterialTheme.typography.bodyMedium,
                 color = LocalPalette.current.muted,

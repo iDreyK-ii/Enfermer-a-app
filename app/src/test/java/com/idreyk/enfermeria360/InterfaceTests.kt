@@ -40,7 +40,8 @@ class InterfaceTests {
         ui.onNodeWithText("Farmacología").performScrollTo().performClick()
         ui.onNode(hasScrollToIndexAction()).performScrollToNode(hasText("Paracetamol"))
         ui.onNodeWithText("Paracetamol").performClick()
-        ui.onNodeWithText("Mecanismo de acción").assertExists()
+        ui.onNodeWithText("Ficha técnica").performScrollTo().performClick()
+        ui.onNodeWithText("4. Mecanismo de acción").performScrollTo().assertExists()
     }
 
     @Test

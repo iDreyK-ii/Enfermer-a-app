@@ -1,0 +1,75 @@
+{
+  "version": "0.4.0-dev-debug",
+  "date_local": "2026-11-01",
+  "android": {
+    "tests": 106,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "suites": {
+    "com.idreyk.enfermeria360.RepositoryTests": {
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "com.idreyk.enfermeria360.InterfaceTests": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "com.idreyk.enfermeria360.ModuleInterfaceTests": {
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "com.idreyk.enfermeria360.CoreTests": {
+      "tests": 27,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "com.idreyk.enfermeria360.NursingModuleTests": {
+      "tests": 21,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "com.idreyk.enfermeria360.ModuleRepositoryTests": {
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "com.idreyk.enfermeria360.EvolutionTests": {
+      "tests": 26,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "converter_tests": 15,
+  "publication_tests": 9,
+  "postgresql_rls_checks": 17,
+  "local_schema_checks": 5,
+  "lint": {
+    "Warning": 24
+  },
+  "apk_bytes": 9962173,
+  "apk_sha256": "8eff28bfabd81db4fbf64a02c623fa7a0f0dfca9226e9fd026baffafa15db5ce",
+  "certificate_sha256": "d6874c68417eefb1b1b902bf82ba4ce7d8734e47877e12bd1733eb498f0e522b",
+  "cloud_configured": false,
+  "physical_test": false,
+  "clinical_validation": false,
+  "legacy_apks_unchanged": true,
+  "original_asset_resource_files_unchanged": 84,
+  "manual_wiring_checked": [
+    "bottom_navigation",
+    "cloud_route",
+    "effective_motion_theme",
+    "internet_permission"
+  ]
+}

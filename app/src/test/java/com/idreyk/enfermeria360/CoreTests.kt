@@ -109,7 +109,7 @@ class CoreTests {
     fun parserRejectsInvalidJsonAndSchema() {
         assertThrows(IllegalArgumentException::class.java) { ContentParser.parse("not json") }
         assertThrows(IllegalArgumentException::class.java) {
-            ContentParser.parse(altered { it.put("version_esquema", 3) })
+            ContentParser.parse(altered { it.put("version_esquema", 4) })
         }
         assertThrows(IllegalArgumentException::class.java) {
             ContentParser.parse(altered { it.put("version_esquema", 1.5) })

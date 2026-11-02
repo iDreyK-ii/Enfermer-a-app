@@ -1,3 +1,5 @@
+> **Actualización v0.4:** ahora se admite formato 3 y la ficha ampliada. Consulta `GUIA_FARMACOLOGIA_v3.md`. Lo que sigue conserva las instrucciones históricas de los formatos 1/2; las plantillas anteriores siguen siendo legibles por v0.4.
+
 # Contenidos locales — app v0.3
 
 ## Dos vías para trabajar

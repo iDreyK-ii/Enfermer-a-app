@@ -1,12 +1,30 @@
 # Desarrollo continuo del aplicativo iDreyK 360
 
+## Punto actual: desarrollo-v0.4
+
+La petición más reciente amplió expresamente el alcance a cuentas y catálogo remoto. Se conserva Android/Compose y SQLite local v2; se añadió Supabase (PostgreSQL/Auth/Storage) como conector opcional, sin proyecto real configurado ni claves incluidas.
+
+- PDF del usuario: 17 conceptos técnicos, lectura de enfermería, 30 secciones opcionales sin descartar las anteriores. Formatos 1/2/3 de entrada y 3 de salida.
+- Selección visual conservada: inicio2 y ficha1, corregida tipográficamente. Dossier en `design/propuesta_v0.4/Diseno_y_arquitectura_v0.4.pdf`; no son capturas del APK.
+- Rendimiento automático/ligero/completo, respetando accesibilidad, batería, presión de memoria y ciclo de vida.
+- Conector de código por correo, sesión cifrada y consulta manual de publicaciones con vista previa/confirmación. No se suben datos privados.
+- SQL/RLS, publicador privado, plantilla v3 y guías: `backend/README.md`, `content-tools/GUIA_FARMACOLOGIA_v3.md`, `docs/ORDEN_DE_COMPILACION_v0.4.md`.
+- APK v0.4 compilado, misma firma. 106 pruebas Android; 24 de archivos; 17 checks PostgreSQL/RLS y 5 del espejo SQLite. Lint: 0 errores/24 advertencias. Evidencia: `qa/RESULTADOS_v0.4.md`.
+- Pendiente: servidor/correo real, privacidad/gestión de cuenta para publicación abierta, prueba física y rendimiento medido, revisión y autorización clínica. No afirmar producción.
+
+El ZIP se actualiza incluyendo el bundle del historial, sin claves ni cachés. Se preservan APK v0.2/v0.3 y recursos originales; el nuevo APK declara INTERNET pero viene sin configuración cloud.
+
+## Registro histórico de v0.3 y arquitectura-v0.3
+
+Las secciones siguientes describen esas etapas; no son el estado cloud/formato de v0.4. El detalle actual está arriba y en README/qa/RESULTADOS_v0.4.md.
+
 ## Proyecto y objetivo
 
 La fuente principal sigue siendo `idreyk-android/`: Android nativo, Kotlin/Compose y estética del Prototipo B. Las ampliaciones se incorporan aquí, no en una aplicación paralela. **Se está desarrollando el aplicativo; no preparando una venta ni declarando terminada su validación clínica.**
 
 La limpieza anterior conservó los archivos de programación, los recursos, la biblioteca y el APK v0.2. Las pantallas que seguían indicando «preparado» eran funciones todavía no implementadas, no código perdido por caché. En v0.3 se reemplazaron esos estados por funcionalidades concretas, con límites explícitos.
 
-## Punto de desarrollo actual: v0.3
+## Punto de desarrollo entonces: v0.3
 
 - Escalas: Capurro B con selección somática y cálculo; A con transcripción de seis componentes y constante independiente; Apgar y Silverman con suma y guardado. Se conservan Glasgow adulto/EVA; se añade Glasgow pediátrica como registro externo. Braden/Morse son registros de puntajes externos, no cuestionarios completos.
 - Dosis a volumen y dilución: aritmética con unidades, incompatibilidades dimensionales, validación de números y protección contra resultados antiguos tras editar entradas; sin prescripción o validación farmacológica.

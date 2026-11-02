@@ -33,3 +33,5 @@
 *.sqlite-journal
 *.sqlite-wal
 *.sqlite-shm
+
+**/node_modules/

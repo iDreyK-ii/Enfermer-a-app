@@ -1,0 +1,8 @@
+{
+  "name": "idreyk-supabase-schema-tests",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node tests/rls.mjs" },
+  "devDependencies": { "@electric-sql/pglite": "0.3.14" }
+}

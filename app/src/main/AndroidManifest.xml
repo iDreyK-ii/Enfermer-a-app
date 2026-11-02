@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Deliberately no INTERNET, accounts, camera, or storage permissions. -->
+    <!-- Optional HTTPS account/content connector. No contacts, camera or broad storage access. -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <application android:allowBackup="false" android:fullBackupContent="false" android:dataExtractionRules="@xml/data_extraction_rules"
         android:icon="@drawable/ic_launcher_legacy" android:roundIcon="@drawable/ic_launcher_legacy"
         android:label="@string/app_name" android:supportsRtl="true" android:usesCleartextTraffic="false"

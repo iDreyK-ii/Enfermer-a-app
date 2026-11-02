@@ -31,3 +31,12 @@ schema2['description'] += ' Esquema 2 añade protocolos. Una exportación puede 
 for definition in ['medicamento','caso','lista','protocolo']:
     schema2['$defs'][definition]['properties']['derivado_de']={'type':'object','properties':{'paquete':string(100),'autor':string(140),'actualizacion':optional_date(),'licencia':string(2000)}}
 Path(__file__).with_name('esquema_contenido_v2.schema.json').write_text(json.dumps(schema2,ensure_ascii=False,indent=2),encoding='utf-8')
+
+# v3 conserva el formato del catálogo y añade los conceptos del PDF y lectura de enfermería.
+from convertir_plantilla import FIELDS_V3
+schema3=copy.deepcopy(schema2)
+schema3['title']='Paquete iDreyK 360 — esquema 3 (app v0.4+)'
+schema3['properties']['version_esquema']['const']=3
+schema3['$defs']['medicamento']['properties']['secciones']['properties']={key:string(16000) for key in FIELDS_V3}
+schema3['description'] += ' Esquema 3 añade campos farmacológicos y de enfermería. Las secciones son opcionales; vacío significa pendiente. Requiere app v0.4 o posterior; no sustituye revisión clínica.'
+Path(__file__).with_name('esquema_contenido_v3.schema.json').write_text(json.dumps(schema3,ensure_ascii=False,indent=2),encoding='utf-8')

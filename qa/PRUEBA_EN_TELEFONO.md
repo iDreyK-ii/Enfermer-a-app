@@ -1,3 +1,19 @@
+# Ampliación v0.4 — pendiente de ejecutar en equipo físico
+
+- [ ] Actualizar v0.3→v0.4 sin desinstalar y comprobar catálogo, favoritos, cuaderno y medios conservados.
+- [ ] Probar modos automático/ligero/completo, ahorro de batería, accesibilidad y segundo plano en gamas diferentes; medir inicio/fluidez.
+- [ ] Revisar texto ampliado, modo oscuro y disposición real frente a las maquetas; no exigir igualdad de píxeles.
+- [ ] Importar ficha parcial v3, ampliar los 17 conceptos y enfermería, exportar y recuperar sin perder campos.
+- [ ] Con proyecto de prueba: alta, correo real, código inválido/vencido, sesión al reabrir, renovación y salida local.
+- [ ] Verificar cifrado Keystore y rechazo de sesión de otro proyecto; no exponer tokens en logs.
+- [ ] Comprobar RLS y Storage en el servicio real, no solo en PGlite.
+- [ ] Publicar contenido ficticio de QA, consultar versión, validar integridad, revisar cambios y confirmar/deshacer; probar desconexión y corrupción.
+- [ ] Confirmar que el login no sube ni separa por cuenta los datos del cuaderno local.
+
+Ninguna casilla se marca por haber compilado o por pasar pruebas JVM. Lo siguiente conserva el checklist previo de módulos.
+
+---
+
 # Lista de pruebas en teléfono — v0.3
 
 **Todas las casillas siguen pendientes de ejecución física.** Las pruebas automatizadas de Robolectric no completan esta lista. Usar solo datos inventados y guardar capturas/modelo/versión Android cuando se realicen.

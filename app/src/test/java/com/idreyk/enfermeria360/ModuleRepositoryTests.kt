@@ -139,7 +139,7 @@ class ModuleRepositoryTests {
                 )
         repo.saveLocalEntry("safety", checklist, "QA", "")
         val exported = repo.exportText()
-        assertEquals(2, JSONObject(exported).getInt("version_esquema"))
+        assertEquals(3, JSONObject(exported).getInt("version_esquema"))
         repo.reset()
         repo.writePackage(ContentParser.parse(exported))
         assertEquals(
@@ -289,5 +289,31 @@ class ModuleRepositoryTests {
         assertTrue(MediaFiles.directory(context).listFiles().orEmpty().isEmpty())
         assertTrue(original.exists())
         assertEquals(8, repo.entries().size)
+    }
+
+    @Test
+    fun pharmacologyV3FieldsPersistExportAndUndoWithoutDroppingLegacyFields() {
+        val entry = repo.entries().first { it.kind == "med" }
+        val edited = JSONObject(entry.json.toString())
+        edited
+            .getJSONObject("secciones")
+            .put("antes_administrar", "Texto ficticio de control QA")
+            .put("almacenamiento", "Solo prueba de persistencia")
+        repo.saveLocalEntry("med", edited, "QA", "Texto propio ficticio")
+        assertEquals(
+            "Texto ficticio de control QA",
+            repo.entries().first { it.key == entry.key }.sections["antes_administrar"],
+        )
+        val exported = repo.exportText()
+        assertEquals(3, JSONObject(exported).getInt("version_esquema"))
+        assertEquals(
+            "Solo prueba de persistencia",
+            ContentParser.parse(exported)
+                .entries
+                .first { it.key == entry.key }
+                .sections["almacenamiento"],
+        )
+        repo.undoImport()
+        assertEquals("", repo.entries().first { it.key == entry.key }.sections["antes_administrar"])
     }
 }

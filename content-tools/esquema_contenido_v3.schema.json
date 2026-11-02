@@ -1,0 +1,964 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Paquete iDreyK 360 — esquema 3 (app v0.4+)",
+  "description": "Contenido literal. La aplicación valida además UTF-8, 2 MB, 500 registros totales, IDs únicos por tipo, fechas reales, URL HTTPS sin credenciales, versiones enteras sin decimales y límites del catálogo agregado. Una revisión declarada requiere licencia del paquete; no equivale a certificación clínica. Los respaldos deben conservar los metadatos originales de cada ficha. Esquema 2 añade protocolos. Una exportación puede ser un respaldo vacío. v0.3 lee esquemas 1 y 2; v0.2 no admite esquema 2. Esquema 3 añade campos farmacológicos y de enfermería. Las secciones son opcionales; vacío significa pendiente. Requiere app v0.4 o posterior; no sustituye revisión clínica.",
+  "type": "object",
+  "required": [
+    "version_esquema",
+    "id_paquete",
+    "version_contenido",
+    "titulo",
+    "autor",
+    "fecha_actualizacion"
+  ],
+  "properties": {
+    "version_esquema": {
+      "const": 3,
+      "type": "integer"
+    },
+    "tipo_paquete": {
+      "enum": [
+        "contenido",
+        "respaldo_catalogo"
+      ],
+      "default": "contenido"
+    },
+    "id_paquete": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]{0,99}$"
+    },
+    "version_contenido": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9999999
+    },
+    "titulo": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 140
+    },
+    "autor": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 140
+    },
+    "fecha_actualizacion": {
+      "type": "string",
+      "format": "date",
+      "maxLength": 10
+    },
+    "licencia": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 2000
+    },
+    "medicamentos": {
+      "type": "array",
+      "maxItems": 300,
+      "items": {
+        "$ref": "#/$defs/medicamento"
+      }
+    },
+    "casos": {
+      "type": "array",
+      "maxItems": 300,
+      "items": {
+        "$ref": "#/$defs/caso"
+      }
+    },
+    "listas_seguridad": {
+      "type": "array",
+      "maxItems": 300,
+      "items": {
+        "$ref": "#/$defs/lista"
+      }
+    },
+    "protocolos": {
+      "type": "array",
+      "maxItems": 300,
+      "items": {
+        "$ref": "#/$defs/protocolo"
+      }
+    }
+  },
+  "anyOf": [
+    {
+      "required": [
+        "medicamentos"
+      ],
+      "properties": {
+        "medicamentos": {
+          "minItems": 1
+        }
+      }
+    },
+    {
+      "required": [
+        "casos"
+      ],
+      "properties": {
+        "casos": {
+          "minItems": 1
+        }
+      }
+    },
+    {
+      "required": [
+        "listas_seguridad"
+      ],
+      "properties": {
+        "listas_seguridad": {
+          "minItems": 1
+        }
+      }
+    },
+    {
+      "required": [
+        "protocolos"
+      ],
+      "properties": {
+        "protocolos": {
+          "minItems": 1
+        }
+      }
+    },
+    {
+      "required": [
+        "tipo_paquete"
+      ],
+      "properties": {
+        "tipo_paquete": {
+          "const": "respaldo_catalogo"
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "fuente": {
+      "type": "object",
+      "required": [
+        "titulo",
+        "url"
+      ],
+      "properties": {
+        "titulo": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000,
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "editor": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 500
+        },
+        "fecha_consulta": {
+          "anyOf": [
+            {
+              "const": ""
+            },
+            {
+              "type": "string",
+              "format": "date",
+              "maxLength": 10
+            }
+          ]
+        }
+      }
+    },
+    "medicamento": {
+      "type": "object",
+      "required": [
+        "id",
+        "nombre",
+        "secciones"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,99}$"
+        },
+        "revision": {
+          "enum": [
+            "borrador",
+            "declarada_por_autor"
+          ],
+          "default": "borrador"
+        },
+        "revisor": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 140
+        },
+        "fecha_revision": {
+          "anyOf": [
+            {
+              "const": ""
+            },
+            {
+              "type": "string",
+              "format": "date",
+              "maxLength": 10
+            }
+          ]
+        },
+        "fuentes": {
+          "type": "array",
+          "maxItems": 30,
+          "items": {
+            "$ref": "#/$defs/fuente"
+          }
+        },
+        "_paquete": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,99}$"
+        },
+        "_autor": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 140
+        },
+        "_actualizacion": {
+          "type": "string",
+          "format": "date",
+          "maxLength": 10
+        },
+        "_licencia": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 2000
+        },
+        "nombre": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 140
+        },
+        "grupo": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 140
+        },
+        "sinonimos": {
+          "type": "array",
+          "maxItems": 30,
+          "items": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 120
+          }
+        },
+        "secciones": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "descripcion": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "mecanismo_accion": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "presentaciones": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "vias": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "indicaciones": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "contraindicaciones": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "precauciones": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "dosificacion": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "reconstitucion": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "dilucion": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "compatibilidad": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "administracion": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "estabilidad": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "reacciones_adversas": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "interacciones": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "monitorizacion": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "cuidados_enfermeria": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "poblaciones_especiales": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "educacion": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "alertas": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "nombres_comerciales": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "almacenamiento": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "formas_presentacion": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "velocidad_administracion": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "sueros_compatibles": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "incompatibilidades": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "objetivo_terapeutico": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "antes_administrar": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "durante_administracion": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            },
+            "despues_administracion": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 16000
+            }
+          }
+        },
+        "derivado_de": {
+          "type": "object",
+          "properties": {
+            "paquete": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 100
+            },
+            "autor": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 140
+            },
+            "actualizacion": {
+              "anyOf": [
+                {
+                  "const": ""
+                },
+                {
+                  "type": "string",
+                  "format": "date",
+                  "maxLength": 10
+                }
+              ]
+            },
+            "licencia": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 2000
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "revision"
+            ],
+            "properties": {
+              "revision": {
+                "const": "declarada_por_autor"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "revisor",
+              "fecha_revision",
+              "fuentes"
+            ],
+            "properties": {
+              "revisor": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 140
+              },
+              "fecha_revision": {
+                "type": "string",
+                "format": "date",
+                "maxLength": 10
+              },
+              "fuentes": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "caso": {
+      "type": "object",
+      "required": [
+        "id",
+        "titulo"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,99}$"
+        },
+        "revision": {
+          "enum": [
+            "borrador",
+            "declarada_por_autor"
+          ],
+          "default": "borrador"
+        },
+        "revisor": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 140
+        },
+        "fecha_revision": {
+          "anyOf": [
+            {
+              "const": ""
+            },
+            {
+              "type": "string",
+              "format": "date",
+              "maxLength": 10
+            }
+          ]
+        },
+        "fuentes": {
+          "type": "array",
+          "maxItems": 30,
+          "items": {
+            "$ref": "#/$defs/fuente"
+          }
+        },
+        "_paquete": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,99}$"
+        },
+        "_autor": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 140
+        },
+        "_actualizacion": {
+          "type": "string",
+          "format": "date",
+          "maxLength": 10
+        },
+        "_licencia": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 2000
+        },
+        "titulo": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 140
+        },
+        "area": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 140
+        },
+        "objetivo": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 4000
+        },
+        "contenido": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 60000
+        },
+        "derivado_de": {
+          "type": "object",
+          "properties": {
+            "paquete": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 100
+            },
+            "autor": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 140
+            },
+            "actualizacion": {
+              "anyOf": [
+                {
+                  "const": ""
+                },
+                {
+                  "type": "string",
+                  "format": "date",
+                  "maxLength": 10
+                }
+              ]
+            },
+            "licencia": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 2000
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "revision"
+            ],
+            "properties": {
+              "revision": {
+                "const": "declarada_por_autor"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "revisor",
+              "fecha_revision",
+              "fuentes"
+            ],
+            "properties": {
+              "revisor": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 140
+              },
+              "fecha_revision": {
+                "type": "string",
+                "format": "date",
+                "maxLength": 10
+              },
+              "fuentes": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "lista": {
+      "type": "object",
+      "required": [
+        "id",
+        "titulo",
+        "items"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,99}$"
+        },
+        "revision": {
+          "enum": [
+            "borrador",
+            "declarada_por_autor"
+          ],
+          "default": "borrador"
+        },
+        "revisor": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 140
+        },
+        "fecha_revision": {
+          "anyOf": [
+            {
+              "const": ""
+            },
+            {
+              "type": "string",
+              "format": "date",
+              "maxLength": 10
+            }
+          ]
+        },
+        "fuentes": {
+          "type": "array",
+          "maxItems": 30,
+          "items": {
+            "$ref": "#/$defs/fuente"
+          }
+        },
+        "_paquete": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,99}$"
+        },
+        "_autor": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 140
+        },
+        "_actualizacion": {
+          "type": "string",
+          "format": "date",
+          "maxLength": 10
+        },
+        "_licencia": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 2000
+        },
+        "titulo": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 140
+        },
+        "area": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 140
+        },
+        "institucion": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 500
+        },
+        "edicion": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 140
+        },
+        "items": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 100,
+          "items": {
+            "type": "object",
+            "required": [
+              "titulo"
+            ],
+            "properties": {
+              "titulo": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 180
+              },
+              "detalle": {
+                "type": "string",
+                "minLength": 0,
+                "maxLength": 3000
+              }
+            }
+          }
+        },
+        "derivado_de": {
+          "type": "object",
+          "properties": {
+            "paquete": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 100
+            },
+            "autor": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 140
+            },
+            "actualizacion": {
+              "anyOf": [
+                {
+                  "const": ""
+                },
+                {
+                  "type": "string",
+                  "format": "date",
+                  "maxLength": 10
+                }
+              ]
+            },
+            "licencia": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 2000
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "revision"
+            ],
+            "properties": {
+              "revision": {
+                "const": "declarada_por_autor"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "revisor",
+              "fecha_revision",
+              "fuentes"
+            ],
+            "properties": {
+              "revisor": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 140
+              },
+              "fecha_revision": {
+                "type": "string",
+                "format": "date",
+                "maxLength": 10
+              },
+              "fuentes": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "protocolo": {
+      "type": "object",
+      "required": [
+        "id",
+        "titulo"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,99}$"
+        },
+        "revision": {
+          "enum": [
+            "borrador",
+            "declarada_por_autor"
+          ],
+          "default": "borrador"
+        },
+        "revisor": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 140
+        },
+        "fecha_revision": {
+          "anyOf": [
+            {
+              "const": ""
+            },
+            {
+              "type": "string",
+              "format": "date",
+              "maxLength": 10
+            }
+          ]
+        },
+        "fuentes": {
+          "type": "array",
+          "maxItems": 30,
+          "items": {
+            "$ref": "#/$defs/fuente"
+          }
+        },
+        "_paquete": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,99}$"
+        },
+        "_autor": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 140
+        },
+        "_actualizacion": {
+          "type": "string",
+          "format": "date",
+          "maxLength": 10
+        },
+        "_licencia": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 2000
+        },
+        "titulo": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 140
+        },
+        "area": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 140
+        },
+        "objetivo": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 4000
+        },
+        "contenido": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 60000
+        },
+        "derivado_de": {
+          "type": "object",
+          "properties": {
+            "paquete": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 100
+            },
+            "autor": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 140
+            },
+            "actualizacion": {
+              "anyOf": [
+                {
+                  "const": ""
+                },
+                {
+                  "type": "string",
+                  "format": "date",
+                  "maxLength": 10
+                }
+              ]
+            },
+            "licencia": {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 2000
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "revision"
+            ],
+            "properties": {
+              "revision": {
+                "const": "declarada_por_autor"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "revisor",
+              "fecha_revision",
+              "fuentes"
+            ],
+            "properties": {
+              "revisor": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 140
+              },
+              "fecha_revision": {
+                "type": "string",
+                "format": "date",
+                "maxLength": 10
+              },
+              "fuentes": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

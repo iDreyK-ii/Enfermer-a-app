@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper
 import android.net.Uri
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
@@ -201,7 +202,7 @@ class ContentRepository(private val context: Context) {
                 .use { if (it.moveToFirst()) it.getLong(0) else 0L }
         val root =
             JSONObject()
-                .put("version_esquema", 2)
+                .put("version_esquema", 3)
                 .put("id_paquete", packageId)
                 .put("version_contenido", previous + 1)
                 .put(
@@ -461,7 +462,7 @@ class ContentRepository(private val context: Context) {
         val now = System.currentTimeMillis()
         val root =
             JSONObject()
-                .put("version_esquema", 2)
+                .put("version_esquema", 3)
                 .put("tipo_paquete", "respaldo_catalogo")
                 .put("id_paquete", "respaldo-$now")
                 .put("version_contenido", 1)
@@ -700,6 +701,15 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
     var reduced by mutableStateOf(prefs.getBoolean("reduced", false))
         private set
 
+    var performanceMode by mutableStateOf(prefs.getString("performance", "auto") ?: "auto")
+        private set
+
+    fun setPerformance(mode: String) {
+        require(mode in PerformancePolicy.modes)
+        performanceMode = mode
+        prefs.edit().putString("performance", mode).apply()
+    }
+
     var largeText by mutableStateOf(prefs.getBoolean("large_text", false))
         private set
 
@@ -721,11 +731,130 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
     var preview by mutableStateOf<ImportPreview?>(null)
         private set
 
+    val cloudConfig = CloudConfig(BuildConfig.CLOUD_URL, BuildConfig.CLOUD_PUBLISHABLE_KEY)
+    private val cloud = CloudService(cloudConfig)
+    private val sessionVault = SessionVault(application)
+    private var cloudJob: kotlinx.coroutines.Job? = null
+    var cloudSession by mutableStateOf<CloudSession?>(null)
+        private set
+
+    var cloudStatus by
+        mutableStateOf(
+            if (cloudConfig.configured) "Proyecto configurado; solicita la operación que necesites."
+            else "Proyecto cloud sin configurar. Tu biblioteca local sigue disponible."
+        )
+        private set
+
+    var nextCodeAt by mutableLongStateOf(0L)
+        private set
+
+    var lastCloudCheck by mutableLongStateOf(prefs.getLong("cloud_last_check", 0))
+        private set
+
+    private fun cloudWork(block: suspend () -> Unit) {
+        if (busy) return
+        busy = true
+        cloudJob =
+            viewModelScope.launch {
+                try {
+                    block()
+                } catch (cancelled: kotlinx.coroutines.CancellationException) {
+                    throw cancelled
+                } catch (failure: CloudFailure) {
+                    cloudStatus = failure.message.orEmpty()
+                } catch (invalid: IllegalArgumentException) {
+                    cloudStatus = invalid.message ?: "Datos no admitidos."
+                } catch (invalid: org.json.JSONException) {
+                    cloudStatus =
+                        "El servicio devolvió una respuesta no válida. No cambió tu biblioteca."
+                } catch (failure: java.io.IOException) {
+                    cloudStatus =
+                        "No se pudo completar la conexión. La biblioteca guardada sigue disponible."
+                } catch (failure: Exception) {
+                    cloudStatus =
+                        "No se completó la operación de cuenta o conexión. Los datos locales permanecen disponibles."
+                } finally {
+                    busy = false
+                }
+            }
+    }
+
+    fun cancelCloud() {
+        cloud.cancel()
+        cloudJob?.cancel()
+        cloudStatus = "Operación cancelada. No se confirmó ninguna importación."
+    }
+
+    fun sendCloudCode(email: String) = cloudWork {
+        require(System.currentTimeMillis() >= nextCodeAt) {
+            "Espera al menos un minuto entre solicitudes de código."
+        }
+        withContext(io) { cloud.sendCode(email.trim()) }
+        nextCodeAt = System.currentTimeMillis() + 60_000
+        cloudStatus =
+            "Si la solicitud es admitida, recibirás un código. Revisa tu correo; solicitarlo todavía no inicia sesión."
+    }
+
+    fun verifyCloudCode(email: String, code: String) = cloudWork {
+        val session = withContext(io) { cloud.verify(email.trim(), code.trim()) }
+        try {
+            withContext(io) { sessionVault.save(cloudConfig.url, session) }
+            cloudSession = session
+            cloudStatus =
+                "Correo verificado y sesión protegida en este dispositivo. No se subieron notas ni datos de pacientes."
+        } catch (cancelled: kotlinx.coroutines.CancellationException) {
+            withContext(kotlinx.coroutines.NonCancellable + io) { sessionVault.clear() }
+            throw cancelled
+        }
+    }
+
+    fun refreshCloudSession() = cloudWork {
+        val previous = cloudSession ?: throw IllegalArgumentException("No hay una sesión guardada.")
+        val renewed = withContext(io) { cloud.refresh(previous) }
+        withContext(io) { sessionVault.save(cloudConfig.url, renewed) }
+        cloudSession = renewed
+        cloudStatus =
+            "Sesión validada con el servidor. La cuenta no tiene permisos editoriales por registrarse."
+    }
+
+    fun signOutCloud() = cloudWork {
+        val previous = cloudSession
+        withContext(io) { sessionVault.clear() }
+        cloudSession = null
+        val notified =
+            withContext(io) {
+                if (previous == null) true else runCatching { cloud.logout(previous) }.isSuccess
+            }
+        cloudStatus =
+            if (notified) "Sesión cerrada en este dispositivo."
+            else
+                "Sesión borrada de este dispositivo. No se pudo notificar al servidor; no se cerraron otras sesiones."
+    }
+
+    fun checkCloudCatalog() = cloudWork {
+        val raw = withContext(io) { cloud.latest() }
+        lastCloudCheck = System.currentTimeMillis()
+        prefs.edit().putLong("cloud_last_check", lastCloudCheck).apply()
+        if (raw == null) {
+            cloudStatus = "No hay publicaciones disponibles. La biblioteca local permanece intacta."
+        } else {
+            preview = withContext(io) { repository.preview(raw) }
+            cloudStatus =
+                "Publicación descargada e integridad comprobada. Revisa los cambios y confirma antes de guardarlos."
+        }
+    }
+
     init {
         viewModelScope.launch {
             try {
                 withContext(io) { repository.initialize() }
                 reload()
+                try {
+                    cloudSession = withContext(io) { sessionVault.load(cloudConfig.url) }
+                } catch (failure: Exception) {
+                    cloudStatus =
+                        "La sesión anterior no está disponible; inicia sesión de nuevo si lo necesitas."
+                }
             } catch (e: Exception) {
                 data = data.copy(loading = false)
                 message = "No se pudo abrir el catálogo local: ${e.message}"
@@ -919,6 +1048,7 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
         }
 
     override fun onCleared() {
+        cloud.cancel()
         kotlinx.coroutines.CoroutineScope(io).launch { repository.close() }
         super.onCleared()
     }

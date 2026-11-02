@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.EvolutionTests" tests="26" skipped="0" failures="0" errors="0" timestamp="2026-11-02T02:02:38" hostname="e2b.local" time="0.282">
+  <properties/>
+  <testcase name="wrongKeyOrTamperingCannotRevealStoredSession" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.072"/>
+  <testcase name="corruptionNeverPassesIntegrityCheck" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.009"/>
+  <testcase name="pdfHasSeventeenDistinctConceptsAndLegacyFieldsRemain" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.0"/>
+  <testcase name="authenticatedEncryptionIsRandomizedAndNotPlaintext" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.002"/>
+  <testcase name="explicitModeDoesNotRemoveAccessibilityPreference" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.005"/>
+  <testcase name="automaticProfileIsFullOnlyWithSufficientResources" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.001"/>
+  <testcase name="partialV3AcceptsOnlyTheProvidedFields" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.003"/>
+  <testcase name="editorGroupsExposeEveryFieldExactlyOnce" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.001"/>
+  <testcase name="multipleOrOversizedPublicationsAreRejected" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.137"/>
+  <testcase name="newFieldsRequireExplicitSchemaThree" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.008"/>
+  <testcase name="allOldSeedEntriesStillReadWithoutInventingNursingInstructions" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.004"/>
+  <testcase name="cloudNeedsHttpsProjectAndPublishableKey" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.003"/>
+  <testcase name="emptyPublicationIsNotFabricatedContent" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.001"/>
+  <testcase name="wrongPackageNamespaceIsRejected" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.004"/>
+  <testcase name="incompatibleAppAndMismatchedVersionAreRejected" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.002"/>
+  <testcase name="BatteryAndMemoryPressureOverrideFullMode" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.0"/>
+  <testcase name="lowRamAndUnknownMemoryChooseLightAutomatically" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.0"/>
+  <testcase name="correctIntegrityAndPublishedPackageRoundTrip" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.001"/>
+  <testcase name="draftsDoNotEnterPublishedChannelEvenWithMatchingHash" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.002"/>
+  <testcase name="unconfiguredClientDoesNotCallTransport" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.001"/>
+  <testcase name="backgroundPausesDecorativeMotion" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.0"/>
+  <testcase name="invalidEmailAndCodeNeverReachTransport" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.001"/>
+  <testcase name="commercialNamesAreSearchableWithoutLosingSynonyms" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.009"/>
+  <testcase name="requestingCodeUsesJsonAndDoesNotCreateAFakeSession" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.0"/>
+  <testcase name="verificationRequiresRealResponseStructureAndRedactsSessionPrinting" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.001"/>
+  <testcase name="missingSessionFieldsCannotBeReportedAsLoginSuccess" classname="com.idreyk.enfermeria360.EvolutionTests" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

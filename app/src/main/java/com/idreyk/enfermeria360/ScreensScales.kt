@@ -167,7 +167,7 @@ fun CapurroCalculatorScreen(vm: AppViewModel, back: () -> Unit) {
                 result?.let { r ->
                     vm.practice(
                         "Capurro $variant",
-                        "${definition.items.indices.joinToString("; ") { "${definition.items[it].label}: ${scores[it]}" }}. Suma ${r.points}; ${r.weeks} semanas + ${r.remainingDays} días. Referencia: ${if(variant=="B") "NTS 214-2024, anexo 4" else "composición 4+2, constante 200; NOM-007-2016"}. App v0.3. Estimación de práctica, no validación clínica.",
+                        "${definition.items.indices.joinToString("; ") { "${definition.items[it].label}: ${scores[it]}" }}. Suma ${r.points}; ${r.weeks} semanas + ${r.remainingDays} días. Referencia: ${if(variant=="B") "NTS 214-2024, anexo 4" else "composición 4+2, constante 200; NOM-007-2016"}. App ${BuildConfig.VERSION_NAME}. Estimación de práctica, no validación clínica.",
                     )
                 }
             },
@@ -244,7 +244,7 @@ fun NeonatalScoreScreen(id: String, vm: AppViewModel, back: () -> Unit) {
                             definition.items.indices.joinToString("; ") { i ->
                                 "${definition.items[i].label}: ${scores[i]}"
                             } +
-                            ". Total $it/10. Sin interpretación clínica. App v0.3; ${if(id=="apgar") "referencia MSD" else "referencia NOM-007-2016"}.",
+                            ". Total $it/10. Sin interpretación clínica. App ${BuildConfig.VERSION_NAME}; ${if(id=="apgar") "referencia MSD" else "referencia NOM-007-2016"}.",
                     )
                 }
             },

@@ -10,6 +10,7 @@ import jsonschema
 from openpyxl import load_workbook
 
 FIELDS=['descripcion','mecanismo_accion','presentaciones','vias','indicaciones','contraindicaciones','precauciones','dosificacion','reconstitucion','dilucion','compatibilidad','administracion','estabilidad','reacciones_adversas','interacciones','monitorizacion','cuidados_enfermeria','poblaciones_especiales','educacion','alertas']
+FIELDS_V3=FIELDS+['nombres_comerciales', 'almacenamiento', 'formas_presentacion', 'velocidad_administracion', 'sueros_compatibles', 'incompatibilidades', 'objetivo_terapeutico', 'antes_administrar', 'durante_administracion', 'despues_administracion']
 HEADERS={
 'Medicamentos':['id','nombre','grupo','sinonimos','revision','revisor','fecha_revision']+FIELDS,
 'Casos':['id','titulo','area','revision','revisor','fecha_revision','objetivo','contenido'],
@@ -24,11 +25,12 @@ def text(value):
     if isinstance(value,date):return value.isoformat()
     return str(value).strip()
 
-def rows(wb,sheet):
+def rows(wb,sheet,schema_version=2):
     if sheet not in wb.sheetnames:raise ValueError('Falta la hoja '+sheet)
     ws=wb[sheet]
     headers=[text(c.value) for c in ws[1]]
-    if headers!=HEADERS[sheet]:raise ValueError('No cambies los encabezados de la hoja '+sheet)
+    expected=HEADERS[sheet] if sheet!='Medicamentos' or schema_version<3 else HEADERS[sheet][:7]+FIELDS_V3
+    if headers!=expected:raise ValueError('No cambies los encabezados de la hoja '+sheet)
     result=[]
     for line in ws.iter_rows(min_row=2):
         if any(c.data_type=='f' for c in line):raise ValueError(f'No se admiten fórmulas de Excel en {sheet}, fila {line[0].row}. Usa texto literal.')
@@ -54,14 +56,14 @@ def convert(source,destination):
         if row[0].value is not None:meta[text(row[0].value)]=text(row[1].value)
     for k in ['version_esquema','id_paquete','version_contenido','titulo','autor','fecha_actualizacion','licencia']:
         if k not in meta:raise ValueError('Falta el metadato '+k)
-    if meta['version_esquema'] not in ('1','2'):raise ValueError('Solo se admite version_esquema 1 o 2.')
+    if meta['version_esquema'] not in ('1','2','3'):raise ValueError('Solo se admiten esquemas 1, 2 y 3.')
     schema_version=int(meta['version_esquema'])
     if schema_version==1 and 'Protocolos' in wb.sheetnames and rows(wb,'Protocolos'):raise ValueError('Los protocolos requieren esquema 2; no se omiten datos silenciosamente.')
     if not meta['version_contenido'].isdigit() or not 1<=int(meta['version_contenido'])<=9999999:raise ValueError('version_contenido debe ser un entero positivo de hasta siete dígitos.')
     require_slug(meta['id_paquete'],'id_paquete');require_date(meta['fecha_actualizacion'],'fecha_actualizacion')
     if not meta['titulo'] or not meta['autor']:raise ValueError('Completa el título y el autor del paquete.')
     root={**meta,'version_esquema':schema_version,'version_contenido':int(meta['version_contenido']),'medicamentos':[],'casos':[],'listas_seguridad':[]}
-    if schema_version==2:root['protocolos']=[]
+    if schema_version>=2:root['protocolos']=[]
     refs={}
     for row in rows(wb,'Fuentes'):
         if row['tipo'] not in ('medicamento','caso','lista','protocolo'):raise ValueError('Tipo de fuente no reconocido: '+row['tipo'])
@@ -77,9 +79,9 @@ def convert(source,destination):
         items.setdefault(row['lista_id'],[]).append((int(row['orden']),{'titulo':row['titulo'],'detalle':row['detalle']}))
     seen=set()
     sheets=[('Medicamentos','medicamento','medicamentos'),('Casos','caso','casos'),('Listas','lista','listas_seguridad')]
-    if schema_version==2 and 'Protocolos' in wb.sheetnames:sheets.append(('Protocolos','protocolo','protocolos'))
+    if schema_version>=2 and 'Protocolos' in wb.sheetnames:sheets.append(('Protocolos','protocolo','protocolos'))
     for sheet,kind,target in sheets:
-        for row in rows(wb,sheet):
+        for row in rows(wb,sheet,schema_version):
             require_slug(row['id'],sheet+' id')
             key=(kind,row['id'])
             if key in seen:raise ValueError('ID duplicado: '+str(key))
@@ -93,7 +95,7 @@ def convert(source,destination):
             if revision=='declarada_por_autor':
                 if not entry['revisor'] or not entry['fuentes'] or not meta['licencia']:raise ValueError('Una revisión declarada necesita revisor, fuentes y licencia.')
                 require_date(entry['fecha_revision'],'fecha_revision')
-            if kind=='medicamento':entry.update(sinonimos=[s.strip() for s in row['sinonimos'].split(';') if s.strip()],secciones={k:row[k] for k in FIELDS})
+            if kind=='medicamento':entry.update(sinonimos=[s.strip() for s in row['sinonimos'].split(';') if s.strip()],secciones={k:row[k] for k in (FIELDS_V3 if schema_version==3 else FIELDS)})
             elif kind in ('caso','protocolo'):entry.update(objetivo=row['objetivo'],contenido=row['contenido'])
             else:
                 values=items.get(row['id'],[])
@@ -103,7 +105,7 @@ def convert(source,destination):
             root[target].append(entry)
     if any(k not in seen for k in refs):raise ValueError('Hay fuentes asociadas a un ID que no existe en las hojas de contenido.')
     if any(('lista',key) not in seen for key in items):raise ValueError('Hay ítems que apuntan a una lista inexistente.')
-    targets=['medicamentos','casos','listas_seguridad']+(['protocolos'] if schema_version==2 else [])
+    targets=['medicamentos','casos','listas_seguridad']+(['protocolos'] if schema_version>=2 else [])
     count=sum(len(root[k]) for k in targets)
     if not 1<=count<=500:raise ValueError('Se requiere de 1 a 500 registros.')
     if any(len(root[k])>300 for k in targets):raise ValueError('Máximo 300 registros de cada tipo por paquete.')

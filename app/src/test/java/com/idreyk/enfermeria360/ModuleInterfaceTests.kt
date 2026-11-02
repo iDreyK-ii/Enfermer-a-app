@@ -109,6 +109,8 @@ class ModuleInterfaceTests {
         click("Farmacología")
         ui.onNodeWithContentDescription("Crear medicamento").performClick()
         input("Nombre del medicamento", "Ficha QA sin información clínica")
+        ui.onNodeWithTag("medication-fields-tabs").performScrollTo()
+        click("Otros datos")
         click("+ Descripción general · 0 caracteres")
         input("Descripción general", "Texto ficticio de prueba de edición")
         click("Guardar ficha como borrador")
@@ -182,5 +184,36 @@ class ModuleInterfaceTests {
         ui.onNodeWithText("Añadir archivo local").assertIsEnabled()
         ui.onNodeWithText("Los archivos se abren con una aplicación compatible", substring = true)
             .assertExists()
+    }
+
+    @Test
+    fun cloudScreenNeverPretendsToBeConnectedWithoutConfiguration() {
+        click("Actualizar biblioteca")
+        ui.onNodeWithText("NUBE SIN CONFIGURAR").assertExists()
+        ui.onNodeWithText("Buscar actualización de contenido").assertIsNotEnabled()
+        ui.onNodeWithText("Enviar código de acceso").performScrollTo().assertIsNotEnabled()
+        assertNull(vm.cloudSession)
+    }
+
+    @Test
+    fun performanceChoicePersistsWithoutOverridingReducedMotion() {
+        ui.onNodeWithText("Perfil").performClick()
+        ui.onNodeWithTag("performance-options").performScrollTo()
+        click("Ligero")
+        ui.runOnIdle {
+            assertEquals("light", vm.performanceMode)
+            assertEquals(
+                "light",
+                vm.getApplication<android.app.Application>()
+                    .getSharedPreferences("preferences", 0)
+                    .getString("performance", ""),
+            )
+        }
+        click("Completo")
+        ui.runOnIdle {
+            assertEquals("full", vm.performanceMode)
+            assertTrue(vm.reduced)
+        }
+        ui.onNodeWithText("Reducción de movimiento activada").assertExists()
     }
 }
