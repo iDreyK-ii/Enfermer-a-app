@@ -17,3 +17,19 @@
 *.p12
 *.pfx
 *.key
+
+# Configuración privada: conservar solo el ejemplo sin credenciales.
+.env
+.env.*
+!.env.example
+
+# No versionar bases privadas del teléfono o copias de desarrollo.
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm

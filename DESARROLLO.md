@@ -92,3 +92,21 @@ Las notas de fichas ficticias/Gordon/signos de v0.2, favoritos, historial y pref
 6. Integración editorial externa, extracción documental e IA siguen fuera de esta edición offline. No simular una conexión no implementada.
 
 Todo cambio posterior debe traer pruebas, actualización de alcance, nuevo APK compatible cuando corresponda y respaldo reproducible del código.
+
+## Revisión documental de arquitectura — 2026-11-01
+
+Se adaptó la plantilla README/.env/SQL al aplicativo real, sin reorganizar ni reemplazar el código Android. Nuevo punto documental: `arquitectura-v0.3`; las etiquetas funcionales `base-android-v0.2` y `desarrollo-v0.3` no se mueven.
+
+- `README.md`: arquitectura real, estructura, relaciones lógicas y entradas de lectura selectiva.
+- `AGENTS.md`: reglas para trabajo incremental con IA sin cargar todo el proyecto ni introducir un servidor por una plantilla genérica.
+- `.env.example`: solo rutas opcionales de JDK/SDK/caché. Android/Gradle no lee `.env` automáticamente; no contiene secretos de servidor.
+- `database/schema.sql`: espejo de las ocho tablas SQLite de `LocalDatabase`; no sustituye migraciones ni agrega usuarios o claves foráneas inexistentes.
+- `database/verificar_esquema.py`: cinco comprobaciones documentales y creación exclusiva de una fixture con el seed original. Sin dependencias Python adicionales.
+- `docs/ESTADO_FUNCIONAL_v0.3.md`: README previo conservado íntegro.
+- `docs/COMPILAR_Y_PROBAR.md`: comandos completos de herramientas, compilación, pruebas y ADB, con advertencia de firma.
+- `qa/ARQUITECTURA.md` y `qa/esquema-pruebas.txt`: resultados nuevos, separados de la evidencia histórica del APK.
+- `.gitignore`: exclusión de configuración privada y bases locales, permitiendo `.env.example`.
+
+Se mantuvieron idénticos 114 archivos de fuentes/recursos/pruebas/configuración y los dos APK entregados. No se recompiló Android ni se repitieron las pruebas Robolectric/conversor en esta revisión de documentación. No se implementó autenticación, no se cambió el alcance offline/sin cuentas y no se subió nada a un remoto.
+
+El ZIP de código se actualiza con este punto de control, conservando la historia anterior mediante el bundle. Los hashes, tamaño del ZIP y comprobación de clon de la entrega se registran en `LEEME_Android_iDreyK_360.md`, fuera del proyecto, para no crear referencias circulares al propio commit/archivo comprimido.
