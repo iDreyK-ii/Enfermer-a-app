@@ -23,8 +23,8 @@ android {
         applicationId = "com.idreyk.enfermeria360"
         minSdk = 26
         targetSdk = 35
-        versionCode = 5
-        versionName = "0.4.1-dev"
+        versionCode = 6
+        versionName = "0.5.0-dev"
         buildConfigField("String", "CLOUD_URL", "\"$cloudUrl\"")
         buildConfigField("String", "CLOUD_PUBLISHABLE_KEY", "\"$cloudKey\"")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

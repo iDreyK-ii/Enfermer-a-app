@@ -1,0 +1,1364 @@
+{
+  "formato": 1,
+  "fecha_revision": "2026-11-02",
+  "titulo": "Tests y escalas clínicas · primer bloque",
+  "alcance": "Inventario inicial no exhaustivo. Solo práctica y consulta documental; adaptación digital no validada clínicamente.",
+  "fuentes": [
+    {
+      "id": "gcs",
+      "titulo": "Glasgow: interferencias, componentes no valorables y variantes pediátricas",
+      "editor": "Glasgow Coma Scale / Universidad de Glasgow",
+      "url": "https://www.glasgowcomascale.org/faq/",
+      "consulta": "2026-11-02",
+      "lectura": "secciones 1–3 de la página; no todas las secciones",
+      "resultado_busqueda": null
+    },
+    {
+      "id": "gcs-perm",
+      "titulo": "Glasgow: condiciones publicadas de uso",
+      "editor": "Universidad de Glasgow / Sir Graham Teasdale",
+      "url": "https://www.glasgowcomascale.org/permissions/",
+      "consulta": "2026-11-02",
+      "lectura": "pagina",
+      "resultado_busqueda": null
+    },
+    {
+      "id": "iasp",
+      "titulo": "Evaluations and measurements: NRS y VAS",
+      "editor": "International Association for the Study of Pain",
+      "url": "https://www.iasp-pain.org/wp-content/uploads/2021/11/IASP-MPC_toolkit_chapt4.pdf",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda; descarga íntegra no obtenida",
+      "resultado_busqueda": 8
+    },
+    {
+      "id": "fps",
+      "titulo": "Faces Pain Scale – Revised: administración y reproducción",
+      "editor": "International Association for the Study of Pain",
+      "url": "https://www.iasp-pain.org/resources/faces-pain-scale-revised/",
+      "consulta": "2026-11-02",
+      "lectura": "página completa",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "wong",
+      "titulo": "FACES: condiciones de uso",
+      "editor": "Wong-Baker FACES Foundation",
+      "url": "https://www.wongbakerfaces.org/wp-content/uploads/2013/04/FACES-Terms-of-Use.pdf",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda; condiciones del uso concreto por confirmar",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "rch-pain",
+      "titulo": "Acute pain management: instrumentos por desarrollo",
+      "editor": "Royal Children’s Hospital Melbourne",
+      "url": "https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/",
+      "consulta": "2026-11-02",
+      "lectura": "sección de valoración y tabla de instrumentos leída; no revisión farmacológica",
+      "resultado_busqueda": 3
+    },
+    {
+      "id": "pippr",
+      "titulo": "Pain Assessment, versión 4",
+      "editor": "The Hospital for Sick Children",
+      "url": "https://webfiles.sickkids.ca/files/cpg/CLINH149/Main%20Document.pdf",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda; no tabla completa",
+      "resultado_busqueda": 2
+    },
+    {
+      "id": "painad",
+      "titulo": "Assessing Pain in Older Adults with Dementia",
+      "editor": "Hartford Institute for Geriatric Nursing, NYU",
+      "url": "https://hign.org/consultgeri/try-this-series/assessing-pain-older-adults-dementia",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "sccm",
+      "titulo": "ICU Liberation Bundle: valoración de dolor y sedación",
+      "editor": "Society of Critical Care Medicine",
+      "url": "https://sccm.org/tab-pages/icu-liberation-bundle-(a-f)?PWP57f5689392c54854bccac791a7d69f2f=true",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda; no revisión farmacológica",
+      "resultado_busqueda": 4
+    },
+    {
+      "id": "pandem",
+      "titulo": "PANDEM 2022: instrumentos en cuidados intensivos pediátricos",
+      "editor": "Society of Critical Care Medicine / Pediatric Critical Care Medicine",
+      "url": "https://journals.lww.com/pccmjournal/fulltext/10.1097/pcc.0000000000002873~2022-society-of-critical-care-medicine-clinical-practice",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda; no lectura íntegra de todos los anexos",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "4at-es",
+      "titulo": "4AT: traducción española 1.0 (2016), instrumento v1.2",
+      "editor": "Sander, Corretge y Dorrian; MacLullich, Ryan y Cash",
+      "url": "https://www.the4at.com/wp-content/uploads/2026/07/4AT-Spanish.doc",
+      "consulta": "2026-11-02",
+      "lectura": "texto completo de la ficha española",
+      "resultado_busqueda": null
+    },
+    {
+      "id": "4at-guide",
+      "titulo": "4AT: guía clínica de administración y puntuación",
+      "editor": "Equipo 4AT",
+      "url": "https://www.the4at.com/userguide",
+      "consulta": "2026-11-02",
+      "lectura": "página completa, dos segmentos",
+      "resultado_busqueda": null
+    },
+    {
+      "id": "4at-rights",
+      "titulo": "4AT: atribución, adaptación y CC BY 4.0",
+      "editor": "MacLullich, Ryan y Cash / the4at.com",
+      "url": "https://www.the4at.com/attribution",
+      "consulta": "2026-11-02",
+      "lectura": "página completa; revisión publicada 2026-07-26",
+      "resultado_busqueda": 2
+    },
+    {
+      "id": "icu",
+      "titulo": "Monitoring Delirium in the ICU: CAM-ICU e ICDSC",
+      "editor": "CIBS Center / ICU Delirium",
+      "url": "https://www.icudelirium.org/medical-professionals/delirium/monitoring-delirium-in-the-icu",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda; no todos los manuales",
+      "resultado_busqueda": 4
+    },
+    {
+      "id": "icu-peds",
+      "titulo": "Pediatric care: pCAM-ICU, psCAM-ICU y CAPD",
+      "editor": "CIBS Center / ICU Delirium",
+      "url": "https://www.icudelirium.org/medical-professionals/pediatric-care",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda",
+      "resultado_busqueda": 2
+    },
+    {
+      "id": "icu-res",
+      "titulo": "Recursos de sedación y delirium",
+      "editor": "CIBS Center / ICU Delirium",
+      "url": "https://www.icudelirium.org/medical-professionals/downloads/resources-by-category",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda; enlaces a originales",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "braden",
+      "titulo": "Braden Scale y Braden Scale II: licencia",
+      "editor": "Health Sense Ai / HD Nursing",
+      "url": "https://www.bradenscale.com/",
+      "consulta": "2026-11-02",
+      "lectura": "página completa: titular, licencia y recursos; no cuestionario",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "braden-ref",
+      "titulo": "Predicting Pressure Injury Risk",
+      "editor": "Hartford Institute for Geriatric Nursing, NYU",
+      "url": "https://hign.org/consultgeri/try-this-series/predicting-pressure-injury-risk",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda",
+      "resultado_busqueda": 5
+    },
+    {
+      "id": "bradenqd",
+      "titulo": "Testing of Braden QD Scale in the Pediatric Intensive Care Unit",
+      "editor": "PubMed, estudio 2020; referencia a Curley et al. 2018",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32904968/",
+      "consulta": "2026-11-02",
+      "lectura": "resumen indexado; no formulario completo",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "morse",
+      "titulo": "Fall TIPS: uso y permiso de Morse",
+      "editor": "Fall TIPS / Brigham and Women’s Hospital",
+      "url": "https://falltips.org/faqs/",
+      "consulta": "2026-11-02",
+      "lectura": "página completa: permisos, ámbitos y límites de adaptación",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "minsa",
+      "titulo": "RM 545-2024/MINSA: aprueba NTS 214 de atención neonatal",
+      "editor": "Ministerio de Salud del Perú",
+      "url": "https://www.gob.pe/institucion/minsa/normas-legales/5874349-545-2024-minsa",
+      "consulta": "2026-11-02",
+      "lectura": "ficha de resolución; anexo Capurro revisado en fase v0.3",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "minsa-pdf",
+      "titulo": "NTS 214: anexo 4, página impresa 40 (PDF 42)",
+      "editor": "Ministerio de Salud del Perú",
+      "url": "https://cdn.www.gob.pe/uploads/document/file/6780375/5874349-resolucion-ministerial-n-545-2024-minsa.pdf",
+      "consulta": "2026-11-02",
+      "lectura": "inspección histórica v0.3 del anexo; no nueva descarga",
+      "resultado_busqueda": null
+    },
+    {
+      "id": "nom",
+      "titulo": "NOM-007-SSA2-2016: apéndices neonatales",
+      "editor": "Secretaría de Salud de México; referencia de variante, no norma peruana",
+      "url": "https://www.gob.mx/cms/uploads/attachment/file/512098/NOM-007-SSA2-2016.pdf",
+      "consulta": "2026-11-02",
+      "lectura": "inspección histórica v0.3, páginas PDF 28–29; no nueva descarga",
+      "resultado_busqueda": null
+    },
+    {
+      "id": "apgar",
+      "titulo": "The Apgar Score: alcances y límites",
+      "editor": "American Academy of Pediatrics / ACOG, 2015",
+      "url": "https://publications.aap.org/pediatrics/article/136/4/819/73821/The-Apgar-Score",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "news",
+      "titulo": "NEWS2: informe y condiciones de reproducción",
+      "editor": "Royal College of Physicians, 2017",
+      "url": "https://www.rcp.ac.uk/resources/national-early-warning-score-news-2/",
+      "consulta": "2026-11-02",
+      "lectura": "página completa, tres segmentos",
+      "resultado_busqueda": null
+    },
+    {
+      "id": "news-report",
+      "titulo": "NEWS2: población y exclusiones del informe",
+      "editor": "Royal College of Physicians, 2017",
+      "url": "https://www.rcp.ac.uk/media/a4ibkkbf/news2-final-report_0_0.pdf",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "pews",
+      "titulo": "National PEWS: tablas de observación y escalamiento por edad",
+      "editor": "NHS England, 2023",
+      "url": "https://www.england.nhs.uk/publication/national-pews-observation-and-escalation-charts/",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "must",
+      "titulo": "MUST: herramientas y condiciones de reproducción",
+      "editor": "BAPEN / Malnutrition Action Group",
+      "url": "https://www.bapen.org.uk/must-and-self-screening/must-toolkit/",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "must-faq",
+      "titulo": "MUST: preguntas frecuentes, población adulta",
+      "editor": "BAPEN",
+      "url": "https://www.bapen.org.uk/pdfs/must/must_faq.pdf",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda",
+      "resultado_busqueda": 2
+    },
+    {
+      "id": "mna",
+      "titulo": "Mini Nutritional Assessment: versión corta e integración electrónica",
+      "editor": "MNA / Société des Produits Nestlé",
+      "url": "https://www.mna-elderly.com/",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "mna-rights",
+      "titulo": "MNA: información y permiso de uso",
+      "editor": "Mapi Research Trust / MNA",
+      "url": "https://www.mna-elderly.com/mna-feedback",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda",
+      "resultado_busqueda": 3
+    },
+    {
+      "id": "barthel",
+      "titulo": "Barthel Index: ficha de referencia",
+      "editor": "Shirley Ryan AbilityLab / Rehabilitation Measures",
+      "url": "https://www.sralab.org/sites/default/files/2017-07/barthel.pdf",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda; no autorización de adaptación inferida",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "katz",
+      "titulo": "Katz Index of Independence in Activities of Daily Living",
+      "editor": "Hartford Institute for Geriatric Nursing, NYU",
+      "url": "https://hign.org/consultgeri/try-this-series/katz-index-independence-activities-daily-living-adl",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "lawton",
+      "titulo": "Lawton Instrumental Activities of Daily Living",
+      "editor": "Hartford Institute for Geriatric Nursing, NYU",
+      "url": "https://hign.org/consultgeri/try-this-series/lawton-instrumental-activities-daily-living-iadl-scale",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda",
+      "resultado_busqueda": 4
+    },
+    {
+      "id": "tug",
+      "titulo": "STEADI: valoración multifactorial de caídas",
+      "editor": "Centers for Disease Control and Prevention",
+      "url": "https://www.cdc.gov/steadi/media/pdfs/STEADI-Algorithm-508.pdf",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda; no instrucciones completas de cada prueba",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "tinetti",
+      "titulo": "Tinetti Performance Oriented Mobility Assessment",
+      "editor": "Shirley Ryan AbilityLab / Rehabilitation Measures",
+      "url": "https://www.sralab.org/rehabilitation-measures/tinetti-performance-oriented-mobility-assessment",
+      "consulta": "2026-11-02",
+      "lectura": "secciones iniciales: propósito, composición y variantes; no toda la evidencia de la página",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "moca",
+      "titulo": "MoCA: reproducción, acceso y desarrollo electrónico",
+      "editor": "MoCA Cognition",
+      "url": "https://mocacognition.com/permission/",
+      "consulta": "2026-11-02",
+      "lectura": "página de permisos leída; formulario y materiales no descargados",
+      "resultado_busqueda": 1
+    },
+    {
+      "id": "phq",
+      "titulo": "PHQ y GAD-7: versiones y condiciones de reproducción",
+      "editor": "Spitzer, Williams, Kroenke / PHQ Screeners",
+      "url": "https://www.phqscreeners.com/select-screener",
+      "consulta": "2026-11-02",
+      "lectura": "página completa de selección y condiciones; formulario español aún no cotejado",
+      "resultado_busqueda": 2
+    },
+    {
+      "id": "nihss",
+      "titulo": "NIH Stroke Scale: actualización de estímulos visuales",
+      "editor": "National Institute of Neurological Disorders and Stroke, 2024",
+      "url": "https://www.ninds.nih.gov/news-events/news/highlights-announcements/nih-stroke-scale-updated-new-visual-stimuli",
+      "consulta": "2026-11-02",
+      "lectura": "extracto de búsqueda",
+      "resultado_busqueda": 2
+    },
+    {
+      "id": "four",
+      "titulo": "Validation of a new coma scale: The FOUR score",
+      "editor": "Wijdicks et al., Ann Neurol. 2005; PMID 16178024",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16178024/",
+      "consulta": "2026-11-02",
+      "lectura": "resumen indexado; no instrucciones completas ni licencia",
+      "resultado_busqueda": 1
+    }
+  ],
+  "instrumentos": [
+    {
+      "id": "glasgow",
+      "nombre": "Glasgow adulto",
+      "area": "Neurología",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Describir el nivel de conciencia mediante respuestas ocular, verbal y motora.",
+      "poblacion_detalle": "Versión estándar; no intercambiar con adaptaciones para lactantes o desarrollo infantil.",
+      "version": "GCS estándar / ayuda estructurada",
+      "metodo": "Registrar O, V y M por separado. Suma 3–15 solo si los tres componentes son valorables. NV no equivale a 1 ni a pendiente.",
+      "limites": "Intubación, sedación, déficits previos, idioma y lesiones pueden interferir. El total no decide diagnóstico, pronóstico ni tratamiento.",
+      "derechos": "La web oficial permite atención e investigación clínicas sin coste, con reconocimiento de autoría. No se redistribuye su lámina ni se presume permiso para cualquier uso comercial.",
+      "fuentes": [
+        "gcs",
+        "gcs-perm"
+      ],
+      "estado": "calculo",
+      "ruta": "glasgow",
+      "siguiente": "Cotejo clínico de descriptores, observación, accesibilidad y concordancia digital; mantener O/V/M y NV.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "glasgow-pediatrico",
+      "nombre": "Glasgow pediátrica",
+      "area": "Neurología",
+      "poblaciones": [
+        "pediatria"
+      ],
+      "objetivo": "Registrar componentes de una versión pediátrica identificada.",
+      "poblacion_detalle": "Niños y lactantes: depende de edad, desarrollo y versión elegida; no hay una adaptación única asumida aquí.",
+      "version": "Fuente y variante externa obligatorias",
+      "metodo": "Se conservan O/V/M y NV. La pantalla actual transcribe puntos de una ficha externa; no administra descriptores pediátricos.",
+      "limites": "No aplicar los descriptores adultos automáticamente ni deducir una respuesta normal por edad desde esta app.",
+      "derechos": "Conservar el aviso y la atribución de la ficha externa; aún no se seleccionó una versión digital pediátrica.",
+      "fuentes": [
+        "gcs"
+      ],
+      "estado": "registro",
+      "ruta": "glasgow-pediatrico",
+      "siguiente": "Seleccionar con neonatología/pediatría una versión española apropiada y su validación por edad.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "four",
+      "nombre": "FOUR",
+      "area": "Neurología",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Describir respuesta ocular, motora, reflejos de tronco y respiración.",
+      "poblacion_detalle": "Adultos en contextos neurológicos/intensivos; la ficha no transfiere evidencia a niños.",
+      "version": "Full Outline of UnResponsiveness, publicación 2005",
+      "metodo": "Cuatro dominios con máximo de cuatro puntos por dominio. No hay calculadora en este bloque.",
+      "limites": "No sustituir Glasgow por una conversión numérica; requiere exploración entrenada y manual completo.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "four"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "nihss",
+      "nombre": "NIHSS",
+      "area": "Neurología",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Estandarizar la valoración de déficits neurológicos en ictus.",
+      "poblacion_detalle": "Evaluación por personal entrenado; las adaptaciones pediátricas no se incluyen.",
+      "version": "NIH Stroke Scale; estímulos actualizados por NINDS en 2024",
+      "metodo": "Debe seleccionarse y conservarse la versión completa y sus estímulos originales. Solo ficha documental.",
+      "limites": "No redibujar ni generar con IA las láminas, ni usar una puntuación para descartar un ictus. No demorar atención por completar el test.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "nihss"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "eva",
+      "nombre": "EVA · línea analógica",
+      "area": "Dolor",
+      "poblaciones": [
+        "adultos",
+        "pediatria"
+      ],
+      "objetivo": "Explorar la posición elegida por la persona entre dos extremos de dolor.",
+      "poblacion_detalle": "Personas capaces de comprender y autoinformar; valorar desarrollo, visión y capacidad motora.",
+      "version": "Referencia VAS/EVA; simulación digital no calibrada",
+      "metodo": "La referencia física emplea una línea de 10 cm. Esta pantalla muestra una posición normalizada 0–100; NO mide milímetros.",
+      "limites": "No es escala numérica ni escala de caras. Tamaño de pantalla, gesto y formato pueden afectar la respuesta; no se ha validado equivalencia digital.",
+      "derechos": "Interfaz propia y referencia conceptual; no se copia una lámina comercial.",
+      "fuentes": [
+        "iasp",
+        "rch-pain"
+      ],
+      "estado": "simulacion",
+      "ruta": "eva",
+      "siguiente": "Validar el instrumento digital antes de uso asistencial; no afirmar calibración por convertir píxeles a mm.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "numerica",
+      "nombre": "Escala numérica del dolor",
+      "area": "Dolor",
+      "poblaciones": [
+        "adultos",
+        "pediatria"
+      ],
+      "objetivo": "Registrar un autoinforme numérico de intensidad de dolor.",
+      "poblacion_detalle": "Adultos y niños capaces de comprender números; las guías pediátricas difieren en edades orientativas, no basta una edad cronológica.",
+      "version": "NRS / escala numérica 0–10, adaptación de práctica",
+      "metodo": "Elegir un entero de 0 a 10; extremos sin dolor y máximo dolor imaginable. Se registra contexto de reposo/movimiento.",
+      "limites": "No puede deducirse del aspecto facial. Si no hay autoinforme no asignar cero; no equiparar automáticamente con EVA, FLACC u otra escala.",
+      "derechos": "Representación propia del formato numérico; fuentes citadas. No se afirma validación clínica digital.",
+      "fuentes": [
+        "iasp",
+        "rch-pain",
+        "fps"
+      ],
+      "estado": "registro",
+      "ruta": "dolor-numerico",
+      "siguiente": "Revisión profesional de instrucciones y prueba de usabilidad; sin umbrales universales ni recomendaciones farmacológicas.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "fps-r",
+      "nombre": "FPS-R · caras revisadas",
+      "area": "Dolor",
+      "poblaciones": [
+        "pediatria"
+      ],
+      "objetivo": "Autoinforme de dolor mediante las caras originales del instrumento.",
+      "poblacion_detalle": "Pediatría con comprensión suficiente. IASP describe evidencia 4–16 años; no utilizarla como observación de la cara del paciente.",
+      "version": "Faces Pain Scale – Revised, IASP ©2001",
+      "metodo": "La persona señala una cara. No se reproducen ni puntúan las imágenes en esta edición.",
+      "limites": "No sustituir por emojis, sonrisas, lágrimas, dibujos nuevos ni colores de gravedad. No intercambiar con Wong-Baker.",
+      "derechos": "IASP requiere conservar el instrumento sin cambios; e-versiones y reproducción se gestionan con Mapi. Autorización para esta app pendiente.",
+      "fuentes": [
+        "fps"
+      ],
+      "estado": "permiso",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "wong-baker",
+      "nombre": "Wong-Baker FACES",
+      "area": "Dolor",
+      "poblaciones": [
+        "pediatria"
+      ],
+      "objetivo": "Autoinforme de dolor mediante las caras de Wong-Baker.",
+      "poblacion_detalle": "Persona capaz de escoger la cara; no es puntuación por observación de un tercero.",
+      "version": "Wong-Baker FACES Pain Rating Scale",
+      "metodo": "Se conserva solo una ficha y enlace al titular. No se incluyen dibujos ni escala interactiva.",
+      "limites": "No redibujar, colorear ni tratar como FPS-R. Confirmar población e instrucciones de la edición autorizada.",
+      "derechos": "Material protegido; revisar acuerdo de uso para app con la Fundación. No se ha solicitado ni pagado licencia.",
+      "fuentes": [
+        "wong",
+        "rch-pain"
+      ],
+      "estado": "permiso",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "flacc",
+      "nombre": "FLACC",
+      "area": "Dolor",
+      "poblaciones": [
+        "pediatria"
+      ],
+      "objetivo": "Observar conductas relacionadas con dolor cuando el autoinforme no es posible.",
+      "poblacion_detalle": "Niños pequeños según versión y entorno; RCH sitúa su tabla de dolor agudo en 2 meses–7 años.",
+      "version": "Face, Legs, Activity, Cry, Consolability",
+      "metodo": "Cinco dominios observacionales, total de referencia 0–10. Formulario completo no incorporado.",
+      "limites": "No son caras para que el niño elija; no extrapolar como escala universal de dolor para toda edad.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "rch-pain"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "r-flacc",
+      "nombre": "r-FLACC",
+      "area": "Dolor",
+      "poblaciones": [
+        "pediatria"
+      ],
+      "objetivo": "Valorar conductas de dolor con adaptación para dificultades de comunicación/desarrollo.",
+      "poblacion_detalle": "Niños no verbales o con discapacidad cognitiva según la versión y el equipo tratante.",
+      "version": "Revised FLACC",
+      "metodo": "Identificar comportamientos individualizados con el cuidador; conservar la versión revisada, no fusionarla con FLACC.",
+      "limites": "La ausencia de lenguaje no significa ausencia de dolor. No reemplazar los descriptores por iconos decorativos.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "rch-pain",
+        "sccm"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "nips",
+      "nombre": "NIPS",
+      "area": "Dolor",
+      "poblaciones": [
+        "neonatos"
+      ],
+      "objetivo": "Observar signos de dolor en recién nacidos y lactantes pequeños.",
+      "poblacion_detalle": "RCH identifica su uso en menores de tres meses en la guía consultada; otros ámbitos requieren su protocolo.",
+      "version": "Neonatal Infant Pain Scale",
+      "metodo": "Seis observaciones; total de referencia 0–7. Aún sin algoritmo interactivo.",
+      "limites": "No convertir automáticamente a una escala 0–10; no aplicar límites de edad de otra ficha sin identificarla.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "rch-pain"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "pipp-r",
+      "nombre": "PIPP-R",
+      "area": "Dolor",
+      "poblaciones": [
+        "neonatos"
+      ],
+      "objetivo": "Valorar dolor neonatal considerando la madurez y las respuestas observadas.",
+      "poblacion_detalle": "Prematuros y neonatos a término según protocolo.",
+      "version": "Premature Infant Pain Profile – Revised",
+      "metodo": "Requiere protocolo completo y factores contextuales de la versión revisada. No se simplifica a una suma genérica.",
+      "limites": "No mezclar PIPP y PIPP-R. Los límites y máximos dependen de sus reglas; no se ofrece un cálculo parcial.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "pippr"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "painad",
+      "nombre": "PAINAD",
+      "area": "Dolor",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Observar comportamientos compatibles con dolor en demencia avanzada.",
+      "poblacion_detalle": "Adultos mayores con deterioro cognitivo y dificultad para autoinformar; intentar comunicación adaptada cuando proceda.",
+      "version": "Pain Assessment in Advanced Dementia",
+      "metodo": "Ficha sobre propósito y uso; cuestionario y puntos de corte no incorporados.",
+      "limites": "Un comportamiento puede tener causas diferentes del dolor. No convertir el resultado en intensidad NRS ni prescribir por puntaje.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "painad"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "cpot",
+      "nombre": "CPOT",
+      "area": "Dolor",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Observar indicadores conductuales de dolor en pacientes críticos que no pueden autoinformar.",
+      "poblacion_detalle": "Adultos críticos según manual y condiciones de evaluación.",
+      "version": "Critical-Care Pain Observation Tool",
+      "metodo": "Seleccionar la variante y sus condiciones, incluido soporte ventilatorio, antes de implementar.",
+      "limites": "No inferir dolor solo de signos vitales ni tratar el puntaje como autoinforme numérico.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "sccm",
+        "icu-res"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "bps",
+      "nombre": "BPS",
+      "area": "Dolor",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Valorar comportamientos de dolor en adultos críticos.",
+      "poblacion_detalle": "La versión intubada y las adaptaciones no intubadas necesitan identificación separada.",
+      "version": "Behavioral Pain Scale",
+      "metodo": "No hay calculadora: falta seleccionar y cotejar la versión completa.",
+      "limites": "No intercambiar BPS y CPOT ni usar una versión de ventilación para otra población sin revisión.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "sccm",
+        "icu-res"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "4at",
+      "nombre": "4AT",
+      "area": "Delirium y sedación",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Cribado breve de posible delirium y deterioro cognitivo.",
+      "poblacion_detalle": "Adultos, especialmente mayores; no adaptar automáticamente a pediatría, neonatos o coma.",
+      "version": "Instrumento 1.2; español Sander/Corretge/Dorrian 1.0 (2016); adaptación digital de práctica",
+      "metodo": "Cuatro dominios: alerta, AMT4, atención y cambio agudo/fluctuación. Total 0–12. AMT4 o atención no valorables tienen puntuación definida, no cero.",
+      "limites": "Cribado, no diagnóstico. Cero no excluye delirium; idioma, audición, cognición basal e información del cambio agudo afectan la interpretación.",
+      "derechos": "CC BY 4.0: MacLullich, Ryan y Cash ©2011–2014; se identifican traducción y cambios de interfaz. No hay aval de los autores ni equivalencia digital validada.",
+      "fuentes": [
+        "4at-es",
+        "4at-guide",
+        "4at-rights"
+      ],
+      "estado": "calculo",
+      "ruta": "test-4at",
+      "siguiente": "Revisión clínica independiente de la adaptación, cotejo de la traducción y accesibilidad. No activar uso asistencial por pasar pruebas aritméticas.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "rass",
+      "nombre": "RASS",
+      "area": "Delirium y sedación",
+      "poblaciones": [
+        "adultos",
+        "pediatria"
+      ],
+      "objetivo": "Describir agitación y nivel de sedación.",
+      "poblacion_detalle": "Adultos y determinados contextos pediátricos intensivos; identificar evidencia y protocolo de población.",
+      "version": "Richmond Agitation-Sedation Scale",
+      "metodo": "Solo ficha y fuentes. La escala requiere secuencia de observación e interacción, no una suma de síntomas.",
+      "limites": "No convierte el resultado en dosis, objetivo de sedación o diagnóstico de delirium.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "sccm",
+        "pandem",
+        "icu-res"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "cam-icu",
+      "nombre": "CAM-ICU",
+      "area": "Delirium y sedación",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Cribado de delirium en cuidados intensivos.",
+      "poblacion_detalle": "Adultos críticos con nivel de activación que permita aplicar el algoritmo según manual.",
+      "version": "Confusion Assessment Method for the ICU",
+      "metodo": "Algoritmo y materiales de atención específicos, no suma arbitraria. Fuente contiene manual y traducciones.",
+      "limites": "No hacer equivalente no evaluable a negativo; identificar sedación y barreras de comunicación.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "icu"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "icdsc",
+      "nombre": "ICDSC",
+      "area": "Delirium y sedación",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Cribado observacional de delirium en cuidados intensivos.",
+      "poblacion_detalle": "Adultos críticos; identificar ventana de observación y versión.",
+      "version": "Intensive Care Delirium Screening Checklist",
+      "metodo": "Ficha documental; no se copia la lista ni se implementa el algoritmo.",
+      "limites": "No mezclar una observación instantánea con una ventana temporal de otra versión.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "icu"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "comfort-b",
+      "nombre": "COMFORT-B",
+      "area": "Delirium y sedación",
+      "poblaciones": [
+        "pediatria"
+      ],
+      "objetivo": "Valorar confort/sedación mediante observación conductual.",
+      "poblacion_detalle": "Niños en cuidados intensivos, especialmente ventilados, según guía PANDEM.",
+      "version": "COMFORT Behavior",
+      "metodo": "Debe distinguirse de COMFORT original. Este bloque no administra ni puntúa la escala.",
+      "limites": "No convertir confort en dosis ni transferir automáticamente la herramienta a neonatología.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "pandem"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "sbs",
+      "nombre": "SBS",
+      "area": "Delirium y sedación",
+      "poblaciones": [
+        "pediatria"
+      ],
+      "objetivo": "Describir el estado conductual y sedación en cuidados intensivos pediátricos.",
+      "poblacion_detalle": "Población pediátrica ventilada conforme al manual.",
+      "version": "State Behavioral Scale",
+      "metodo": "Solo ficha documental y fuentes; no se mezcla con RASS.",
+      "limites": "Requiere observación y protocolo específico. El resultado no determina por sí solo tratamiento.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "pandem",
+        "icu-peds"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "capd",
+      "nombre": "CAPD",
+      "area": "Delirium y sedación",
+      "poblaciones": [
+        "pediatria"
+      ],
+      "objetivo": "Cribado observacional de delirium pediátrico.",
+      "poblacion_detalle": "Pediatría crítica; utilizar anclajes del desarrollo cuando corresponda.",
+      "version": "Cornell Assessment of Pediatric Delirium",
+      "metodo": "Se identifica la necesidad de observación y anclajes; no se reproduce la hoja.",
+      "limites": "Comparar con desarrollo y comportamiento basal; no atribuir toda conducta atípica a delirium.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "pandem",
+        "icu-peds"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "pcam-icu",
+      "nombre": "pCAM-ICU",
+      "area": "Delirium y sedación",
+      "poblaciones": [
+        "pediatria"
+      ],
+      "objetivo": "Cribado de delirium en niños con desarrollo adecuado para la versión.",
+      "poblacion_detalle": "Pediatría crítica; confirmar desarrollo y nivel de activación del manual.",
+      "version": "Pediatric CAM-ICU",
+      "metodo": "Requiere instrucciones y tarjetas originales. No hay calculadora ni estímulos redibujados.",
+      "limites": "No intercambiar pCAM-ICU con psCAM-ICU por comodidad de interfaz.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "icu-peds",
+        "pandem"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "pscam-icu",
+      "nombre": "psCAM-ICU",
+      "area": "Delirium y sedación",
+      "poblaciones": [
+        "pediatria"
+      ],
+      "objetivo": "Cribado adaptado de delirium para niños pequeños.",
+      "poblacion_detalle": "Pediatría crítica: selección según edad/desarrollo y protocolo, no regla automática de esta app.",
+      "version": "Preschool CAM-ICU",
+      "metodo": "Se conservan enlaces al manual y tarjetas; implementación pendiente.",
+      "limites": "No reutilizar preguntas o estímulos de la versión adulta; no evaluar si las condiciones del manual no se cumplen.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "icu-peds",
+        "pandem"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "braden",
+      "nombre": "Braden",
+      "area": "Piel y caídas",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Registrar una valoración externa del riesgo de lesión por presión.",
+      "poblacion_detalle": "Adultos; no sustituir la versión pediátrica por esta ficha.",
+      "version": "Braden original: identificar la ficha utilizada; no se presenta como Braden II",
+      "metodo": "La app acepta un total externo 6–23 con fuente y contexto; no administra los seis dominios.",
+      "limites": "Rango válido no demuestra puntuación correcta. No omitir valoración de piel, dispositivos y riesgos no incluidos.",
+      "derechos": "El titular gestiona licencias de Braden/Braden II. No se obtuvo permiso para incorporar el cuestionario.",
+      "fuentes": [
+        "braden",
+        "braden-ref"
+      ],
+      "estado": "registro",
+      "ruta": "registro-escala/braden",
+      "siguiente": "Confirmar versión, titular y autorización de reproducción digital antes de agregar descriptores.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "morse",
+      "nombre": "Morse",
+      "area": "Piel y caídas",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Registrar un puntaje externo de riesgo de caídas.",
+      "poblacion_detalle": "Adultos en un contexto institucional identificado; no extrapolar directamente a pediatría.",
+      "version": "Morse Fall Scale: fuente externa obligatoria",
+      "metodo": "Registro de total externo 0–125. No contiene el cuestionario ni categorías automáticas.",
+      "limites": "No sustituye evaluación multifactorial ni protocolo de prevención; un total en rango no valida la valoración.",
+      "derechos": "Fall TIPS informa uso sin coste pero con permiso de la autora. No se obtuvo ese permiso para esta app.",
+      "fuentes": [
+        "morse"
+      ],
+      "estado": "registro",
+      "ruta": "registro-escala/morse",
+      "siguiente": "Obtener permiso y fijar versión/protocolo institucional antes de añadir cálculo.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "braden-qd",
+      "nombre": "Braden QD",
+      "area": "Piel y caídas",
+      "poblaciones": [
+        "pediatria"
+      ],
+      "objetivo": "Valorar riesgo de lesiones por presión pediátricas, incluidas las asociadas a dispositivos.",
+      "poblacion_detalle": "Pediatría hospitalaria/intensiva; confirmar ámbito y edades del protocolo completo.",
+      "version": "Braden QD; no Braden adulta ni Braden Q",
+      "metodo": "Ficha de investigación. No se reproduce ni puntúa el instrumento.",
+      "limites": "No mezclar versiones Q, QD y Braden II; un estudio de validez no otorga permiso de reproducción.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "bradenqd"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "apgar",
+      "nombre": "Apgar",
+      "area": "Neonatología",
+      "poblaciones": [
+        "neonatos"
+      ],
+      "objetivo": "Describir el estado del recién nacido en momentos identificados después del nacimiento.",
+      "poblacion_detalle": "Recién nacidos; registrar circunstancias, incluido soporte recibido.",
+      "version": "Apgar: cinco componentes, momento del registro explícito",
+      "metodo": "Cinco componentes 0–2; total 0–10. Cambiar el minuto limpia respuestas en la app.",
+      "limites": "No esperar el resultado para reanimar; no diagnostica asfixia ni predice el desenlace neurológico individual.",
+      "derechos": "Síntesis nativa existente; no se incorpora el formulario editorial de AAP.",
+      "fuentes": [
+        "apgar",
+        "minsa"
+      ],
+      "estado": "calculo",
+      "ruta": "escala/apgar",
+      "siguiente": "Cotejo neonatal profesional; revisar coloración/fototipo y documentación de intervenciones concurrentes.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "silverman",
+      "nombre": "Silverman-Andersen",
+      "area": "Neonatología",
+      "poblaciones": [
+        "neonatos"
+      ],
+      "objetivo": "Describir signos de dificultad respiratoria neonatal.",
+      "poblacion_detalle": "Recién nacidos; no extrapolar a adultos.",
+      "version": "Variante identificada de NOM-007-SSA2-2016",
+      "metodo": "Cinco componentes 0–2, suma 0–10. Descriptores de la variante conservados.",
+      "limites": "No mezclar definiciones del quejido de fichas distintas ni indicar soporte respiratorio por esta suma.",
+      "derechos": "Fuente normativa identificada; revisar aplicabilidad y reproducción antes de distribución clínica.",
+      "fuentes": [
+        "nom",
+        "minsa"
+      ],
+      "estado": "calculo",
+      "ruta": "escala/silverman",
+      "siguiente": "Validar con equipo neonatal la variante elegida y su correspondencia con el protocolo local.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "capurro-b",
+      "nombre": "Capurro B",
+      "area": "Neonatología",
+      "poblaciones": [
+        "neonatos"
+      ],
+      "objetivo": "Estimar edad gestacional por características somáticas según la variante.",
+      "poblacion_detalle": "Recién nacidos elegibles para el método; no decide elegibilidad desde la app.",
+      "version": "Cinco somáticos; NTS 214, anexo 4; constante 204",
+      "metodo": "Días calculados = 204 + suma; semanas = días / 7. Se exige completar los cinco componentes.",
+      "limites": "Los días aritméticos no son precisión real de datación. No reemplaza la mejor estimación obstétrica.",
+      "derechos": "Referencia MINSA aprobada; no se distribuye aquí el PDF completo.",
+      "fuentes": [
+        "minsa",
+        "minsa-pdf"
+      ],
+      "estado": "calculo",
+      "ruta": "capurro/B",
+      "siguiente": "Revisar aplicabilidad, límites y descriptores completos con un profesional neonatal.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "capurro-a",
+      "nombre": "Capurro A",
+      "area": "Neonatología",
+      "poblaciones": [
+        "neonatos"
+      ],
+      "objetivo": "Registrar una estimación con la composición somática/neurológica identificada.",
+      "poblacion_detalle": "Recién nacidos a quienes corresponda la variante según protocolo externo.",
+      "version": "Cuatro somáticos sin pezón + dos neurológicos; constante 200",
+      "metodo": "Transcribir componentes externos; días = 200 + suma; semanas = días / 7. No enseña maniobras.",
+      "limites": "La denominación A/B varía en fuentes secundarias. No sumar siete componentes ni mezclar constantes.",
+      "derechos": "Se identifica NOM-007-2016 como referencia de la variante, no como norma peruana.",
+      "fuentes": [
+        "nom"
+      ],
+      "estado": "registro",
+      "ruta": "capurro/A",
+      "siguiente": "Confirmar ficha autorizada y criterios de aplicación; mantener componentes separados y fórmula identificada.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "ballard",
+      "nombre": "New Ballard",
+      "area": "Neonatología",
+      "poblaciones": [
+        "neonatos"
+      ],
+      "objetivo": "Estimar madurez gestacional con valoración física y neuromuscular.",
+      "poblacion_detalle": "Neonatos conforme a criterios de aplicación de la versión seleccionada.",
+      "version": "New Ballard: selección documental completa pendiente",
+      "metodo": "La NTS neonatal remite a valoración de edad gestacional por Capurro o Ballard; no se reproduce aquí el instrumento.",
+      "limites": "No es una variante de Capurro; no convertir puntuaciones entre métodos ni enseñar maniobras sin guía y entrenamiento.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "minsa"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "news2",
+      "nombre": "NEWS2",
+      "area": "Deterioro clínico",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Estructurar observación y comunicación de deterioro fisiológico.",
+      "poblacion_detalle": "Informe RCP: 16 años o más; no aplicar la tabla adulta a menores de 16 ni a embarazadas.",
+      "version": "National Early Warning Score 2, RCP 2017",
+      "metodo": "Seis parámetros y oxígeno suplementario; las reglas de saturación requieren revisión específica. Aún sin calculadora.",
+      "limites": "No descarta deterioro/sepsis por una cifra baja. La tabla y respuesta clínica necesitan protocolo de implementación, no traducción estética.",
+      "derechos": "RCP permite reproducción con atribución, sin cambios y en color. No se rediseñan las tablas para igualarlas al tema de la app.",
+      "fuentes": [
+        "news",
+        "news-report"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "pews",
+      "nombre": "PEWS",
+      "area": "Deterioro clínico",
+      "poblaciones": [
+        "pediatria"
+      ],
+      "objetivo": "Seguimiento estructurado del deterioro pediátrico.",
+      "poblacion_detalle": "La referencia NHS England es para salas pediátricas generales; no es un PEWS universal para cualquier servicio.",
+      "version": "NHS England 2023: 0–11 meses, 1–4, 5–12 y ≥13 años",
+      "metodo": "Cuatro tablas por edad. Se enlaza la edición; no se ensamblan umbrales de distintas variantes.",
+      "limites": "No confundir la banda de lactantes con una escala validada para toda UCI neonatal. La preocupación clínica/familiar importa aunque la cifra sea baja.",
+      "derechos": "Verificar condiciones de reproducción e implementación sin alterar componentes. No se incorpora la tabla.",
+      "fuentes": [
+        "pews"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "must",
+      "nombre": "MUST",
+      "area": "Nutrición",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Cribar riesgo nutricional, no realizar diagnóstico nutricional completo.",
+      "poblacion_detalle": "Adultos; BAPEN indica que no está validado para niños.",
+      "version": "Malnutrition Universal Screening Tool",
+      "metodo": "Conservar pasos, definiciones y puntos de corte de la versión aprobada; implementación pendiente.",
+      "limites": "No aplicar a pediatría ni tratar como prescripción de dieta. Identificar limitaciones de peso/talla y contexto.",
+      "derechos": "BAPEN permite ciertos usos no comerciales; adaptación y uso comercial requieren permiso. App y condiciones concretas pendientes.",
+      "fuentes": [
+        "must",
+        "must-faq"
+      ],
+      "estado": "permiso",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "mna-sf",
+      "nombre": "MNA-SF",
+      "area": "Nutrición",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Cribado de malnutrición/riesgo nutricional en personas mayores.",
+      "poblacion_detalle": "Adultos mayores; no extrapolar a población pediátrica.",
+      "version": "Mini Nutritional Assessment – Short Form",
+      "metodo": "Mantener la forma corta identificada; no mezclar puntuación con MNA completa o Self-MNA.",
+      "limites": "No sustituye valoración nutricional integral ni autoriza una pauta por sí sola.",
+      "derechos": "La web exige permiso y cumplimiento de copyright/marca para incorporación electrónica; trámite a través de Mapi. Pendiente.",
+      "fuentes": [
+        "mna",
+        "mna-rights"
+      ],
+      "estado": "permiso",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "barthel",
+      "nombre": "Índice de Barthel",
+      "area": "Funcionalidad",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Describir desempeño y ayuda en actividades básicas de la vida diaria.",
+      "poblacion_detalle": "Adultos en rehabilitación/valoración funcional; especificar situación basal y actual.",
+      "version": "Elegir versión: original, modificada y escalas numéricas no se mezclan",
+      "metodo": "Ficha de referencia enlazada; no se incorpora el formulario ni una calculadora de dependencia.",
+      "limites": "No convertir sin documentar versiones 0–20/0–100, ni confundir capacidad teórica con desempeño observado.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "barthel"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "katz",
+      "nombre": "Índice de Katz",
+      "area": "Funcionalidad",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Describir independencia en actividades básicas.",
+      "poblacion_detalle": "Adultos mayores según la ficha HIGN.",
+      "version": "Katz ADL, versión de seis funciones referenciada por HIGN",
+      "metodo": "Seis actividades; no se implementa todavía clasificación ni puntuación.",
+      "limites": "No intercambiar categorías de versiones diferentes ni reemplazar con una sola impresión global.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "katz"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "lawton",
+      "nombre": "Lawton-Brody",
+      "area": "Funcionalidad",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Describir actividades instrumentales para la vida en comunidad.",
+      "poblacion_detalle": "Adultos mayores; interpretar oportunidades, entorno y situación basal.",
+      "version": "Lawton IADL, ocho dominios en la referencia HIGN",
+      "metodo": "Documento sobre propósito y límites; no contiene el formulario.",
+      "limites": "No asumir incapacidad por una tarea que nunca se realizó ni excluir dominios por género sin justificar la versión.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "lawton"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "tug",
+      "nombre": "Timed Up and Go · TUG",
+      "area": "Funcionalidad",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Observar movilidad funcional en evaluación multifactorial de caídas.",
+      "poblacion_detalle": "Principalmente adultos mayores en el contexto STEADI.",
+      "version": "TUG: protocolo completo por incorporar",
+      "metodo": "Se necesita estandarizar recorrido, silla, instrucciones, ayuda habitual y seguridad. No hay cronómetro clínico implementado.",
+      "limites": "No pedir una marcha sin supervisión adecuada ni convertir un tiempo aislado en diagnóstico de caída futura.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "tug"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "tinetti",
+      "nombre": "Tinetti · POMA",
+      "area": "Funcionalidad",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Evaluar marcha y equilibrio en un protocolo funcional.",
+      "poblacion_detalle": "Adultos mayores y poblaciones estudiadas; no trasladar umbrales entre diagnósticos.",
+      "version": "Referencia POMA de 16 ítems/28 puntos; existen variantes",
+      "metodo": "Ficha documental; falta cotejo completo del formulario español y permiso digital.",
+      "limites": "No mezclar subescalas, número de ítems ni puntos de corte de distintas versiones.",
+      "derechos": "No se ha establecido autorización para reproducir o adaptar el formulario completo en esta app. Se ofrece una síntesis original y la fuente, no el cuestionario.",
+      "fuentes": [
+        "tinetti"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "moca",
+      "nombre": "MoCA",
+      "area": "Cognición y salud mental",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Cribado de rendimiento cognitivo por personal habilitado.",
+      "poblacion_detalle": "Adultos según versión, idioma, escolaridad y condiciones de administración.",
+      "version": "Montreal Cognitive Assessment: versión autorizada no seleccionada",
+      "metodo": "Únicamente ficha y enlace al titular. No se incluyen preguntas, láminas ni puntuación.",
+      "limites": "No sustituye diagnóstico de demencia ni se adapta libremente por ser visible en internet.",
+      "derechos": "La página del titular restringe publicación y desarrollo electrónico y establece requisitos de capacitación/acceso. No se incorpora el test.",
+      "fuentes": [
+        "moca"
+      ],
+      "estado": "permiso",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "phq-9",
+      "nombre": "PHQ-9",
+      "area": "Cognición y salud mental",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Cribado de síntomas depresivos.",
+      "poblacion_detalle": "Adultos según versión validada; no aplicar automáticamente a niños.",
+      "version": "PHQ-9: español y protocolo asistencial pendientes de selección",
+      "metodo": "No hay cuestionario interactivo en este bloque. Antes de implementarlo se necesita flujo de atención y seguridad, no solo suma.",
+      "limites": "El total no diagnostica por sí solo. Las respuestas sobre autolesión requieren atención contextual y no deben ocultarse tras una cifra baja.",
+      "derechos": "PHQ Screeners permite reproducir, traducir, mostrar y distribuir; conservar autoría y verificar la traducción, no inventar ítems.",
+      "fuentes": [
+        "phq"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    },
+    {
+      "id": "gad-7",
+      "nombre": "GAD-7",
+      "area": "Cognición y salud mental",
+      "poblaciones": [
+        "adultos"
+      ],
+      "objetivo": "Cribado de síntomas de ansiedad.",
+      "poblacion_detalle": "Adultos según validación de la versión seleccionada.",
+      "version": "GAD-7: versión española completa pendiente de cotejo",
+      "metodo": "Ficha documental y referencia. No se implementa un cuestionario resumido creado por IA.",
+      "limites": "No confundir cribado con diagnóstico ni atribuir síntomas físicos a ansiedad sin valoración.",
+      "derechos": "PHQ Screeners declara que no se requiere permiso de reproducción; conservar autoría y fidelidad de la versión.",
+      "fuentes": [
+        "phq"
+      ],
+      "estado": "ficha",
+      "ruta": "",
+      "siguiente": "Cotejar formulario completo, versión española, derechos digitales y revisión profesional antes de programar la puntuación.",
+      "revision_clinica": "pendiente",
+      "revision_documental": "2026-11-02"
+    }
+  ]
+}

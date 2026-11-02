@@ -1,0 +1,46 @@
+{
+  "fecha": "2026-11-02",
+  "fase": "precommit del bloque escalas; no evidencia de CI final",
+  "base_git": "793aa057efd14e852b0d0b76c47de74da8f1f9fe",
+  "python": {
+    "scripts": 52,
+    "conversor": 15,
+    "backend": 21,
+    "total": 88,
+    "estado": "superado"
+  },
+  "sqlite": {
+    "pruebas": 5,
+    "estado": "superado"
+  },
+  "pglite": {
+    "pruebas": 17,
+    "estado": "superado",
+    "servidor_real": false
+  },
+  "nuevas_pruebas_android_declaradas": {
+    "modelo": 23,
+    "interfaz": 6,
+    "ejecutadas_localmente": false
+  },
+  "sin_cambios_sha256": {
+    "app/src/main/java/com/idreyk/enfermeria360/Design.kt": "3b6cdf12167157ecdc1e05d4122cfd5e63690ee1d68532273122315fca3c6fd0",
+    "app/src/main/java/com/idreyk/enfermeria360/Pharmacology.kt": "9db2814f9fa1563c343d10f83f89c8d7d7d28e0b830b27f9d765f55ad199359a",
+    "app/src/main/java/com/idreyk/enfermeria360/Repository.kt": "bf33e082e00c82df94e95266917b2f2203601330425079591b62202e5db5e5a8",
+    "app/src/main/java/com/idreyk/enfermeria360/ScaleModels.kt": "ec9a9d67f60a20ace7735cdeb0178fab52d1bfd7ebaf1d197fbe0fb04cef8032",
+    "app/src/main/java/com/idreyk/enfermeria360/Models.kt": "cbdd6d981175a9f3ec7fcf5e05710dacb1f44e0924d10cdc3e6c22208d1d6624",
+    "app/src/main/java/com/idreyk/enfermeria360/Cloud.kt": "0fc019b80e22f51a69cffb1e165f72542c054b5156e7c9c1ec5dcb8e94eb640f",
+    "app/src/main/assets/contenido_inicial.json": "7156e3d4412dfb30febdde9b97f9b88cb7de2134b570d5fcdd9e87a7080d9e92",
+    "database/schema.sql": "a6e9ba7dc5f3f23fa4e4ac95acf5a71621e5c1ace471b491c7c515ab33dda427",
+    "backend/supabase/schema.sql": "b7a1c9b11f5a91bfbfe4261d238c0083f15259fc84f4ff53dfa8f11e4f327f18",
+    "design/propuesta_v0.4/01_inicio.png": "9396f18ca0064db6ff2f7a61f69107e73a6a87b47df9398c4103b7b4961d7449",
+    "design/propuesta_v0.4/02_ficha_legible.png": "54d0ff6d3c2fb701cd7dc47a01c7317422da934b9f7aeb50c722a0815f326397"
+  },
+  "qa_log_sha256": "3a62fb5e43c106a44049263ddf429f524c10848233fd65dd94f19f5d798eec6d",
+  "limites": [
+    "Sin JDK/SDK local adecuado: Android/JVM/lint/ensamblado pendientes de CI del nuevo commit",
+    "Sin captura real del APK de Google",
+    "Sin validación clínica, pruebas físicas o licencias pendientes obtenidas",
+    "Sin cambios farmacológicos, migración DB o despliegue Supabase"
+  ]
+}

@@ -3,17 +3,19 @@
   "proyecto": "Enfermería iDreyK 360",
   "repositorio_canonico": "https://github.com/iDreyK-ii/Enfermer-a-app",
   "rama": "desarrollo",
-  "hito": "traslado-ia-studio-v1",
+  "hito": "escalas-clinicas-v1",
   "politica": "Continuar el aplicativo existente; no regenerarlo desde una descripción ni sustituirlo por una web.",
   "android": {
     "tecnologia": "Kotlin / Jetpack Compose",
-    "modulos": [":app"],
+    "modulos": [
+      ":app"
+    ],
     "actividad": ".MainActivity",
     "namespace": "com.idreyk.enfermeria360",
     "application_id": "com.idreyk.enfermeria360",
     "debug_application_id": "com.idreyk.enfermeria360.dev",
-    "version_code": 5,
-    "version_name": "0.4.1-dev",
+    "version_code": 6,
+    "version_name": "0.5.0-dev",
     "min_sdk": 26,
     "target_sdk": 35,
     "compile_sdk": 35,
@@ -24,8 +26,21 @@
     "motor_local": "SQLite",
     "archivo": "idreyk_local.db",
     "version": 2,
-    "tablas": ["content", "packages", "favorites", "notes", "practice", "meta", "notebooks", "media"],
-    "catalogo_lee": [1, 2, 3],
+    "tablas": [
+      "content",
+      "packages",
+      "favorites",
+      "notes",
+      "practice",
+      "meta",
+      "notebooks",
+      "media"
+    ],
+    "catalogo_lee": [
+      1,
+      2,
+      3
+    ],
     "catalogo_exporta": 3,
     "respaldo_cuaderno": 1,
     "sincronizacion_personal_automatica": false,
@@ -64,6 +79,16 @@
     "importacion_real_ai_studio_verificada": false,
     "compilacion_real_ai_studio_verificada": false,
     "pruebas_fisicas_verificadas": false,
-    "validacion_clinica": false
+    "validacion_clinica": false,
+    "reporte_propietario_ai_studio": "2026-11-02: informa app construida con la revisión 793aa05, sin cambios adicionales. No se obtuvo exportación/capturas para verificación independiente."
+  },
+  "contenido_clinico": {
+    "biblioteca": "app/src/main/assets/escalas_clinicas_v1.json",
+    "fuente_editorial": "research/escalas/catalogo_fuente.json",
+    "fichas_documentales": 44,
+    "revision_clinica": "pendiente",
+    "inventario_exhaustivo": false,
+    "descargas_pdf_solicitadas": false,
+    "farmacologia": "se conserva sin completar; último bloque por petición del propietario"
   }
 }

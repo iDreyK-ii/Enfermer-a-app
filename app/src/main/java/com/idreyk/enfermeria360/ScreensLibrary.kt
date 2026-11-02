@@ -570,6 +570,8 @@ fun GlasgowScreen(vm: AppViewModel, back: () -> Unit) {
                 motor = 0
             },
         )
+        Expandable("Factores que pueden interferir", "Considerar intubación, sedación, lesiones, déficits previos, audición e idioma. No confundir un componente no valorable con ausencia de respuesta ni asignarle un punto. Esta pantalla no enseña maniobras ni autoriza decisiones de tratamiento.")
+        SourceCard(Reference("Glasgow: interferencias, NV y variantes por edad", "https://www.glasgowcomascale.org/faq/", "Glasgow Coma Scale · secciones 1–3 consultadas", "2026-11-02"))
         SourceCard(GlasgowReference)
         SourceCard(GlasgowPermissions)
         Text(
@@ -643,6 +645,9 @@ fun EvaScreen(vm: AppViewModel, back: () -> Unit) {
                 !vm.busy,
             )
         }
+        Secondary("Reiniciar línea", { position = .5f; touched = false; reveal = false })
+        Expandable("EVA no es escala numérica", "La EVA física usa una línea continua; la escala numérica pide escoger un número. No añadir caras, divisiones de gravedad o números visibles a la línea para convertirla en otro instrumento. Esta pantalla conserva solo una simulación digital, sin calibración clínica.")
+        SourceCard(PainMeasurementReference)
         Expandable(
             "Antes de habilitar uso clínico",
             "Seleccionar y documentar la versión del instrumento, condiciones de uso, calibración y validación digital con profesionales. La app no aplica umbrales ni interpreta la intensidad del dolor.",

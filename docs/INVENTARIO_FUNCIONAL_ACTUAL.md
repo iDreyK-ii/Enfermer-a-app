@@ -1,6 +1,6 @@
 # Inventario funcional que debe conservarse al trasladar
 
-Base del cliente: **Android v0.4.1-dev**, no una app nueva. Este inventario reúne la base v0.3 y las ampliaciones v0.4/v0.4.1. Las limitaciones históricas de v0.3 sobre ausencia de INTERNET/cuentas no describen el código actual. El contrato verificable de identidad está en `../CONTINUIDAD.json`.
+Cliente actual: **Android v0.5.0-dev**, evolución de v0.4.1, no una app nueva. Este inventario reúne la base v0.3 y las ampliaciones v0.4/v0.4.1. Las limitaciones históricas de v0.3 sobre ausencia de INTERNET/cuentas no describen el código actual. El contrato verificable de identidad está en `../CONTINUIDAD.json`.
 
 ## Funciones implementadas y límites
 
@@ -13,6 +13,8 @@ Base del cliente: **Android v0.4.1-dev**, no una app nueva. Este inventario reú
 | Catálogo y protocolos | Medicamentos, casos, listas de medicación segura y protocolos editables/importables. | No es una biblioteca clínica completa ni un extractor automático de PDF/Word. |
 | Importación protegida | Lee JSON 1/2/3 y exporta 3; límites; vista previa, diferencias por campo, aceptación de reemplazos, huella revisada dentro de transacción y deshacer. | Reemplaza registros, no fusiona campos. 2 MB/500 registros agregados/300 por tipo. Las omisiones no borran registros. |
 | Medicación segura | Listas de 1–100 ítems, orden, marcas, reinicio, fuentes y guardado del recorrido. | No impone un número universal de correctos ni constituye un protocolo asistencial completo. |
+| Biblioteca de tests clínicos | 44 fichas offline/40 fuentes; filtros combinados por población/área, búsqueda y procedencia; acceso a 11 funciones de práctica/registro/simulación. | Inventario inicial; 33 fichas no administran un instrumento. Permisos/versión y revisión clínica pendientes según ficha. |
+| Escala numérica y 4AT | NRS 0–10 sin respuesta predeterminada; 4AT con cuatro dominios, no valorable puntuable, estados pendientes, atribución y guardado de práctica. | Adaptaciones de práctica sin validación clínica digital; NRS no es EVA y 4AT no diagnostica. |
 | Glasgow adulto/pediátrico | Registro de componentes, estados no valorable/pendiente y suma cuando procede. | Pediátrico requiere ficha externa identificada; sin diagnóstico ni adaptación automática de descriptores adultos. |
 | EVA, Capurro A/B, Apgar, Silverman-Andersen | Simulación/registro, fórmulas o sumas y guardado según el instrumento. | Conservar límites, variantes y referencias; no añadir decisiones de gravedad, pronóstico o tratamiento. |
 | Braden y Morse | Registro de un total externo con fuente/contexto y comprobación de rango. | No reproduce ni administra cuestionarios completos; no interpreta riesgo. |
@@ -29,7 +31,7 @@ Base del cliente: **Android v0.4.1-dev**, no una app nueva. Este inventario reú
 
 ## Recursos y organización
 
-En este punto se conservan **84 archivos de recursos empaquetados**: 81 en `app/src/main/res/` y 3 en `app/src/main/assets/`. Incluyen vectores, imagen, seis archivos de fuentes, valores/reglas XML, licencias y el contenido inicial. No son 84 fotografías. Hay 25 archivos Kotlin de producción y 10 archivos de pruebas Android; los recuentos son una foto de esta base, no una prohibición de ampliar el código con cambios aprobados.
+En este punto se conservan **85 archivos de recursos empaquetados**: 81 en `app/src/main/res/` y 4 en `app/src/main/assets/`. Incluyen vectores, imagen, seis archivos de fuentes, valores/reglas XML, licencias y el contenido inicial. No son 85 fotografías. Hay 27 archivos Kotlin de producción y 11 archivos de pruebas Android; los recuentos son una foto de esta base, no una prohibición de ampliar el código con cambios aprobados.
 
 Los archivos `Screens*.kt` separan las áreas; `Repository.kt` contiene repositorio, SQLite y ViewModel; `Models.kt`, `Pharmacology.kt`, `ScaleModels.kt`, `DoseMath.kt`, `NotebookModels.kt`, `MediaFiles.kt`, `PracticeTrends.kt`, `Performance.kt`, `ImportReview.kt`, `JsonSafety.kt` y `SessionVault.kt` conservan lógica y validaciones. No sustituirlos por pantallas estáticas.
 
@@ -40,3 +42,6 @@ Se trasladan **todos los archivos versionados del commit aprobado**: cliente, re
 No se incorporan contraseñas, claves administrativas, firma privada, dependencias/cachés, APK anteriores ni bases/datos del teléfono al repositorio. El ZIP de código tampoco respalda automáticamente apuntes, favoritos o medios personales.
 
 Una copia idéntica conserva el software existente, **no convierte pendientes en funciones terminadas**: correo real, sesión/renovación autenticada, APK conectado con firma compatible, prueba física/actualización, accesibilidad/rendimiento en equipos reales, permisos editoriales y validación clínica siguen separados. No se autoriza distribuir esta base como producto clínicamente certificado.
+
+
+Ampliación de escalas: `ClinicalCatalog.kt`, `ScreensClinicalCatalog.kt`, `research/escalas/` y `docs/ESCALAS_CLINICAS_v0.5.0.md`. No modificar instrumentos para adaptarlos a la estética; conservar versiones, límites, autoría y derechos.

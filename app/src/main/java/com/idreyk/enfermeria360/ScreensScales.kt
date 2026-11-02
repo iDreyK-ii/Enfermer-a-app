@@ -36,6 +36,13 @@ fun ScaleLibraryScreen(nav: (String) -> Unit, back: () -> Unit) {
             "Edición de desarrollo y práctica. Los puntajes no generan diagnósticos ni tratamientos. Las variantes y límites se indican en cada pantalla.",
             true,
         )
+        AppCard(Modifier.fillMaxWidth()) {
+            ColorIcon(R.drawable.ic_book, Teal, 48)
+            Badge("BIBLIOTECA CLÍNICA · PRIMER BLOQUE", Teal)
+            Text("El instrumento correcto, con contexto.", style = MaterialTheme.typography.titleLarge)
+            Text("Explora por población y área. Cada ficha distingue práctica, registro, simulación o documentación pendiente.", style = MaterialTheme.typography.bodyMedium)
+            Primary("Explorar tests y escalas", { nav("biblioteca-escalas") })
+        }
         Section("Neurología y dolor")
         ActionRow(
             "Glasgow adulto",
@@ -60,6 +67,13 @@ fun ScaleLibraryScreen(nav: (String) -> Unit, back: () -> Unit) {
             Pink,
         ) {
             nav("eva")
+        }
+        ActionRow("Escala numérica del dolor", "Autoinforme 0–10 · no es EVA", R.drawable.ic_heart_pulse, Pink) {
+            nav("dolor-numerico")
+        }
+        Section("Delirium · adulto")
+        ActionRow("4AT", "Adaptación de práctica · cribado, no diagnóstico", R.drawable.ic_clipboard_check, Purple) {
+            nav("test-4at")
         }
         Section("Neonatología")
         ActionRow(
@@ -102,8 +116,9 @@ fun ScaleLibraryScreen(nav: (String) -> Unit, back: () -> Unit) {
 }
 
 @Composable
-fun CapurroCalculatorScreen(vm: AppViewModel, back: () -> Unit) {
-    var variant by rememberSaveable { mutableStateOf("B") }
+fun CapurroCalculatorScreen(vm: AppViewModel, back: () -> Unit, initialVariant: String = "B") {
+    require(initialVariant in listOf("A", "B"))
+    var variant by rememberSaveable(initialVariant) { mutableStateOf(initialVariant) }
     val definition = if (variant == "A") NursingScales.capurroA else NursingScales.capurroB
     var scores by
         rememberSaveable(variant) {

@@ -1380,7 +1380,12 @@ fun GlobalSearchScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit
                 Module("Apuntes", "Cuaderno editable", "apuntes", R.drawable.ic_edit, Purple),
                 Module("IMC", "Índice de masa corporal", "calc/imc", R.drawable.ic_stopwatch, Teal),
                 Module("Flashcards", "Cinco tarjetas PAE", "tarjetas", R.drawable.ic_cards, Pink),
+                Module("Biblioteca de tests clínicos", "Fichas por población y área", "biblioteca-escalas", R.drawable.ic_book, Teal),
+                Module("Escala numérica del dolor", "Autoinforme de práctica 0–10", "dolor-numerico", R.drawable.ic_heart_pulse, Pink),
+                Module("4AT", "Cribado adulto · adaptación de práctica", "test-4at", R.drawable.ic_clipboard_check, Purple),
             )
+    val clinicalLoad = rememberClinicalCatalog()
+    val clinicalMatches = if (query.isBlank()) emptyList() else clinicalLoad.catalog?.filter(query).orEmpty()
     val matching = fixed.filter { normalized(it.title + it.sub).contains(normalized(query)) }
     val entries =
         if (query.isBlank()) emptyList()
@@ -1388,7 +1393,7 @@ fun GlobalSearchScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit
     Page("¿Qué necesitas hoy?", "Busca en tu universo 360°", back) {
         SearchBox(query, { query = it }, "Módulos, fármacos, escalas o casos…")
         Text(
-            if (query.isBlank()) "Empieza por aquí" else "${matching.size+entries.size} resultados",
+            if (query.isBlank()) "Empieza por aquí" else "${matching.size+entries.size+clinicalMatches.size} resultados",
             style = MaterialTheme.typography.bodySmall,
             color = LocalPalette.current.muted,
         )
@@ -1403,7 +1408,14 @@ fun GlobalSearchScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit
                 nav(e.key)
             }
         }
-        if (matching.isEmpty() && entries.isEmpty())
+        if (clinicalMatches.isNotEmpty()) Section("Tests y escalas · fichas documentales")
+        clinicalMatches.forEach { instrument ->
+            ActionRow(instrument.name, instrument.availability.label, R.drawable.ic_book, clinicalColor(instrument.area)) {
+                nav("instrumento/${instrument.id}")
+            }
+        }
+        if (clinicalLoad.failed) Notice("La búsqueda de fichas clínicas no se pudo cargar. Los demás resultados siguen disponibles.")
+        if (matching.isEmpty() && entries.isEmpty() && clinicalMatches.isEmpty())
             EmptyState(
                 "No hay coincidencias",
                 "Prueba con Glasgow, EVA, Capurro, paracetamol o PAE.",

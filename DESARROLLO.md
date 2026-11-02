@@ -168,3 +168,11 @@ Se adaptó la plantilla README/.env/SQL al aplicativo real, sin reorganizar ni r
 Se mantuvieron idénticos 114 archivos de fuentes/recursos/pruebas/configuración y los dos APK entregados. No se recompiló Android ni se repitieron las pruebas Robolectric/conversor en esta revisión de documentación. No se implementó autenticación, no se cambió el alcance offline/sin cuentas y no se subió nada a un remoto.
 
 El ZIP de código se actualiza con este punto de control, conservando la historia anterior mediante el bundle. Los hashes, tamaño del ZIP y comprobación de clon de la entrega se registran en `LEEME_Android_iDreyK_360.md`, fuera del proyecto, para no crear referencias circulares al propio commit/archivo comprimido.
+
+## 2026-11-02 — v0.5.0, primer bloque de tests y escalas clínicas
+
+Solicitud confirmada: instrumentos clínicos para adultos, pediatría y neonatos, sin PDFs de descarga; farmacología al final. El propietario informa copia construida en Google a partir de 793aa05 sin modificaciones adicionales; no se recibió exportación para paridad independiente.
+
+Se añade catálogo documental offline de 44 fichas/40 fuentes/9 áreas, búsqueda/filtros, estados explícitos y referencias con profundidad de lectura. Once fichas enlazan práctica, registro externo o simulación; 33 no administran el instrumento. Nuevas funciones: NRS de práctica sin preselección y 4AT adulto con licencia/atribución y manejo propio de no valorables. Se mantienen escalas anteriores, se amplían ayudas Glasgow/EVA y se identifica la variante de Capurro en enlaces profundos. Sin formularios/caritas de terceros inventados ni nuevos activos clínicos generados por IA.
+
+Se conservan Prototipo B, recursos, esquema/seed, repositorio, nube, módulos farmacológicos y plantillas. versionCode 6 / 0.5.0-dev, mismo applicationId, SQLite v2 y lectura local sin cuenta. 88 Python + 5 SQLite + 17 PGLite ejecutados localmente; 29 nuevos tests Android declarados, pendientes de CI del SHA de entrega. Ver `qa/RESULTADOS_v0.5.0.md`, `docs/ESCALAS_CLINICAS_v0.5.0.md` y `research/escalas/REVISION_2026-11-02.md`.

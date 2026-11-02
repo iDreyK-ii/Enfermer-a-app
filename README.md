@@ -1,6 +1,6 @@
-# Enfermería iDreyK 360 — Android nativo v0.4.1
+# Enfermería iDreyK 360 — Android nativo v0.5.0
 
-> **Continuidad con Google AI Studio:** empezar por [INICIAR_EN_AI_STUDIO.md](INICIAR_EN_AI_STUDIO.md), [identidad técnica](CONTINUIDAD.json) e [inventario funcional actual](docs/INVENTARIO_FUNCIONAL_ACTUAL.md). Se traslada esta app nativa completa, no una recreación. Cada actualización parte de un commit exacto de `desarrollo`; la copia importada se verifica antes de compilar. La importación/compilación real en AI Studio todavía no está comprobada.
+> **Continuidad con Google AI Studio:** empezar por [INICIAR_EN_AI_STUDIO.md](INICIAR_EN_AI_STUDIO.md), [identidad técnica](CONTINUIDAD.json) e [inventario funcional actual](docs/INVENTARIO_FUNCIONAL_ACTUAL.md). Se traslada esta app nativa completa, no una recreación. Cada actualización parte de un commit exacto de `desarrollo`; la copia importada se verifica antes de compilar. El propietario informa que Google construyó la revisión anterior sin cambios; su paridad de fuentes/renderizado no se verificó independientemente.
 
 Evolución del mismo aplicativo del **Prototipo B**, en Kotlin/Jetpack Compose. La biblioteca descargada sigue disponible sin conexión. Se conservan la estructura farmacológica aportada por el usuario, rendimiento adaptable y un conector opcional de cuentas/actualización de contenido.
 
@@ -8,11 +8,17 @@ Evolución del mismo aplicativo del **Prototipo B**, en Kotlin/Jetpack Compose. 
 
 **El APK entregado v0.4.1 no cambió:** todavía tiene nube vacía. Se dejaron parámetros públicos y un comando para la próxima compilación conectada; no se ejecutó esa compilación en esta fase. El repositorio de trabajo autorizado es [iDreyK-ii/Enfermer-a-app](https://github.com/iDreyK-ii/Enfermer-a-app), rama `desarrollo`, público por decisión del propietario. Ver [destino y comprobación de sincronización](docs/GITHUB_DESTINO.md). Solo contenido de práctica, sin validación para pacientes reales.
 
-## Pulido v0.4.1 antes de sincronizar
+## Actualización v0.5.0 — tests y escalas clínicas
+
+**Primer bloque, no catálogo universal ni certificación clínica:** 44 fichas documentales/40 fuentes, filtros por adultos/pediatría/neonatos y área, búsqueda global, estado de permisos y profundidad de lectura. Once fichas enlazan práctica, simulación o registro; no son 44 calculadoras. Nuevas pantallas: escala numérica de dolor separada de EVA y 4AT adulto como adaptación educativa con atribución CC BY 4.0. Se conservan las herramientas previas, Prototipo B, SQLite v2 y nube opcional. Farmacología queda al final y no se completó aquí.
+
+Detalle: [funciones, diseño y límites](docs/ESCALAS_CLINICAS_v0.5.0.md); [investigación por instrumento](research/escalas/REVISION_2026-11-02.md). versionCode **6**; resultados técnicos: [QA v0.5.0](qa/RESULTADOS_v0.5.0.md). Comprobar el run CI del SHA final, no inferirlo de las pruebas históricas.
+
+## Historial: pulido v0.4.1 antes de sincronizar
 
 Además de la base v0.4: comparación y aceptación de sustituciones; bloqueo de vistas previas desactualizadas; detección de campos que se vaciarían; paginación de revisión; cuadrícula/hero adaptables a texto grande; respuesta táctil y selección animadas; bloqueo de campos durante escrituras; rechazo de JSON excesivamente anidado.
 
-**133 pruebas Android superadas.** Resultados actuales: [qa/RESULTADOS_v0.4.1.md](qa/RESULTADOS_v0.4.1.md). Detalle: [docs/MEJORAS_v0.4.1.md](docs/MEJORAS_v0.4.1.md). La plantilla y los esquemas de contenido/SQLite no cambiaron.
+**133 pruebas Android superadas en v0.4.1 (histórico).** Resultados de aquella versión: [qa/RESULTADOS_v0.4.1.md](qa/RESULTADOS_v0.4.1.md). Detalle: [docs/MEJORAS_v0.4.1.md](docs/MEJORAS_v0.4.1.md). La plantilla y los esquemas de contenido/SQLite no cambiaron.
 
 Preparación de Git/CI: [docs/GITHUB_Y_CI.md](docs/GITHUB_Y_CI.md). Consultar la ejecución del commit concreto en [GitHub Actions](https://github.com/iDreyK-ii/Enfermer-a-app/actions/workflows/calidad.yml); la evidencia local histórica no sustituye esa comprobación. No necesita secretos de nube. El APK de un runner usa firma temporal: no confundirlo con una actualización del APK entregado.
 
@@ -102,7 +108,7 @@ Desde v0.4 el APK declara INTERNET; sin configuración no realiza solicitudes. L
 
 ## 6. Comprobaciones y límites
 
-Ver [qa/RESULTADOS_v0.4.1.md](qa/RESULTADOS_v0.4.1.md): pruebas Android/JVM y Compose simulado, conversor/publicación, PostgreSQL/RLS y espejo SQLite. Los resultados de v0.3/v0.4 permanecen como evidencia histórica separada.
+Ver [qa/RESULTADOS_v0.4.1.md](qa/RESULTADOS_v0.4.1.md): pruebas Android/JVM y Compose simulado, conversor/publicación, PostgreSQL/RLS y espejo SQLite. Los resultados de v0.3/v0.4/v0.4.1 permanecen como evidencia histórica separada; para este bloque consultar qa/RESULTADOS_v0.5.0.md.
 
 El servidor real tiene la primera validación de esquema y API documentada en [qa/SUPABASE_REAL_2026-11-02.md](qa/SUPABASE_REAL_2026-11-02.md). No se verificaron correo/sesión reales, instalación física, hardware Keystore, rendimiento medido en gamas distintas ni validación clínica. El diseño exportado es una **maqueta**, no una captura del APK. Las pruebas de reglas y aritmética no certifican atención clínica.
 

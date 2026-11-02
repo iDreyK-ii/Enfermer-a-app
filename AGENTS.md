@@ -3,7 +3,7 @@
 ## Antes de editar
 
 1. Leer `README.md`, `CONTINUIDAD.json` e `INICIAR_EN_AI_STUDIO.md` antes de un traslado; luego el archivo del módulo afectado. No cargar todo el repositorio, todos los XML de QA o todos los recursos en una sola respuesta.
-2. Consultar `git status` y preservar cambios preexistentes. La aplicación funcional actual es Android v0.4.1; no empezar un proyecto web nuevo por una plantilla genérica.
+2. Consultar `git status` y preservar cambios preexistentes. La aplicación funcional actual es Android v0.5.0; no empezar un proyecto web nuevo por una plantilla genérica.
 3. Para datos, leer `database/schema.sql` y contrastarlo con `LocalDatabase` en `Repository.kt`. El Kotlin es la implementación ejecutada; el SQL es un espejo verificado.
 4. Para alcance clínico, consultar solo la sección pertinente de `docs/ESTADO_FUNCIONAL_v0.3.md` y `research/REVISION_DOCUMENTAL.md`.
 
@@ -56,3 +56,12 @@ Registrar el cambio, su alcance, resultados y pendientes. El historial técnico 
 - OTP y sesión real fueron aplazados por el propietario tras un problema de acceso al panel. Continuar perfil local sin cuenta obligatoria; no desactivar confirmación ni declarar cuentas listas. El cliente remoto y el servidor se conservan.
 - Cada cambio funcional requiere pruebas, actualización coherente de `CONTINUIDAD.json`, versión/migración si procede, commit y comprobación de remoto/CI. No actualizar un contrato o prueba solo para ocultar una regresión.
 - Una APK de Google/CI no hereda la firma privada. Verificar el certificado antes de actualizar; nunca desinstalar o borrar datos como solución. La clave privada permanece fuera del repositorio y del prompt.
+
+
+## Tests clínicos y escalas (v0.5.0)
+
+- Leer `docs/ESCALAS_CLINICAS_v0.5.0.md` y la ficha concreta en `research/escalas/REVISION_2026-11-02.md`. No confundir 44 fichas con 44 calculadoras o con todos los instrumentos existentes.
+- Fuente editorial: `research/escalas/catalogo_fuente.json`; regenerar el asset con `python3 research/escalas/compilar_catalogo.py`. Python y Kotlin comprueban coherencia; no equivalen a validación clínica.
+- Preservar la distinción entre cero, pendiente y no valorable de CADA instrumento. Glasgow NV no suma; AMT4/atención 4AT no valorables sí puntúan 2. No reutilizar indiscriminadamente una regla entre escalas.
+- Respetar licencia/atribución 4AT y señalar adaptación. No redibujar caras, estímulos ni tablas normalizadas para ajustarlos a la paleta. No reproducir Braden/Morse/FPS-R/Wong-Baker/MoCA sin resolver derechos de la versión/uso.
+- Solo datos ficticios, sin respuestas identificables ni subida automática de prácticas. No añadir recomendaciones farmacológicas por puntaje. El propietario dejó farmacología para el final y no solicitó PDFs en esta fase.

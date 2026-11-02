@@ -1,5 +1,7 @@
 # Continuar iDreyK 360 en Google AI Studio, sin rehacer la app
 
+> **Actualización v0.5.0:** leer `docs/ESCALAS_CLINICAS_v0.5.0.md` y cargar el SHA exacto de la entrega de escalas. `traslado-ia-studio-v1` es el checkpoint anterior, no esta actualización. El propietario informa que compiló la base anterior en Google; la copia no se inspeccionó aquí.
+
 ## Regla principal
 
 **Este repositorio es el aplicativo existente. No es una descripción para generar otro.** La fuente de verdad es https://github.com/iDreyK-ii/Enfermer-a-app, rama `desarrollo`.
@@ -33,7 +35,7 @@ Desde **la copia Git confiable**, no desde un script modificado por el importado
 ```sh
 # Usar el SHA exacto de la entrega, o el tag inmutable de este primer punto.
 python3 scripts/verificar_traslado.py verificar \
-  --ref traslado-ia-studio-v1 \
+  --ref escalas-clinicas-v1 \
   --zip /ruta/exportacion-de-ai-studio.zip \
   --salida .cache/traslado/resultado.json
 ```
@@ -69,7 +71,7 @@ No subir versiones de Kotlin, Gradle, AGP o dependencias automáticamente para e
 ## 4. Verificar firma antes de instalar
 
 - Identidad debug: `com.idreyk.enfermeria360.dev`.
-- Base de este punto: versionCode **5**, nombre **0.4.1-dev-debug**.
+- Base actual: versionCode **6**, nombre **0.5.0-dev-debug**.
 - Certificado conservado: `d6874c68417eefb1b1b902bf82ba4ce7d8734e47877e12bd1733eb498f0e522b`.
 
 Con SDK adecuado, comprobar el APK externo con:

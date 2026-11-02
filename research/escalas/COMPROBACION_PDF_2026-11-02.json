@@ -1,0 +1,25 @@
+[
+  {
+    "id": "minsa",
+    "url": "https://cdn.www.gob.pe/uploads/document/file/6780375/5874349-resolucion-ministerial-n-545-2024-minsa.pdf",
+    "estado": "no obtenido",
+    "error": "No es un PDF acotado"
+  },
+  {
+    "id": "iasp",
+    "url": "https://www.iasp-pain.org/wp-content/uploads/2021/11/IASP-MPC_toolkit_chapt4.pdf",
+    "estado": "no obtenido",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "id": "gcs",
+    "url": "https://www.glasgowcomascale.org/downloads/GCS-Assessment-Aid-Spanish.pdf",
+    "sha256": "4eb0b7eed70f75c1eadd3b82643e607ab38260b41ffba58057f16cbea1909eae",
+    "bytes": 7376000,
+    "paginas": 1,
+    "paginas_extraidas": [
+      1
+    ],
+    "estado": "PDF obtenido; extracción con codificación defectuosa inspeccionada, no utilizada para modificar descriptores. FAQ legible consultada por separado."
+  }
+]
