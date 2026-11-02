@@ -1,0 +1,4 @@
+actionlint 1.7.12: salida 0 al comprobar .github/workflows/calidad.yml.
+Se validaron sintaxis y expresiones. Shellcheck/pyflakes externos desactivados en esa llamada.
+bash -n y py_compile se ejecutaron separadamente sin errores.
+No se ejecutó GitHub Actions remoto. No se conectó ni se hizo push a un repositorio.

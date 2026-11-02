@@ -1,3 +1,12 @@
+# Adicional v0.4.1 — no ejecutado en equipo físico
+
+- [ ] Actualizar v0.4→v0.4.1 conservando catálogo, cuaderno, medios, preferencias y firma.
+- [ ] Comprobar letra grande (incluido factor2), anchos pequeños, bienvenida y cuadrículas sin recortes.
+- [ ] Verificar respuesta táctil/navegación en completo y ausencia de escalado en ligero/reducción de movimiento.
+- [ ] Revisar sustituciones de fichas parciales, datos vaciados, ediciones locales y estado que cambia antes de confirmar; comprobar deshacer.
+- [ ] Probar escrituras lentas: no editar mientras se confirma; ante error, conservar formulario y datos guardados.
+- [ ] Probar rotación, muerte de proceso y borradores muy extensos; no asumir autosave del texto sin guardar.
+
 # Ampliación v0.4 — pendiente de ejecutar en equipo físico
 
 - [ ] Actualizar v0.3→v0.4 sin desinstalar y comprobar catálogo, favoritos, cuaderno y medios conservados.

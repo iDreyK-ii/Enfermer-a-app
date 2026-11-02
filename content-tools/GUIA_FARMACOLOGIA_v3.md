@@ -53,7 +53,7 @@ python3 content-tools/convertir_plantilla.py content-tools/Plantilla_farmacos_v3
 
 Luego importar en Android → Biblioteca local. Usa IDs estables y aumenta `version_contenido` para actualizar un paquete existente. La importación muestra qué se añade/reemplaza y pide confirmación. Límites actuales: 2 MB, 500 registros agregados y 300 por tipo.
 
-**Al actualizar un ID existente se reemplaza la ficha confirmada; no es un parche que mezcle campos.** No omitas datos anteriores que todavía deban conservarse. Revisa el paquete y la vista previa; conserva un respaldo antes de cambios editoriales importantes.
+**Al actualizar un ID existente se reemplaza la ficha confirmada; no es un parche que mezcle campos.** Desde v0.4.1 la vista previa señala los campos que se vaciarían y las ediciones locales afectadas, y pide aceptar las sustituciones. Si el catálogo cambia después de revisarlo, debe revisarse de nuevo. No omitas datos anteriores que todavía deban conservarse. Revisa el paquete y la vista previa; conserva un respaldo antes de cambios editoriales importantes.
 
 Para publicar desde el servidor, seguir `backend/README.md`. Solo el canal `catalogo-oficial`, con versión creciente y revisión documentada, alimenta el conector de publicaciones. **No subir directamente los borradores de ejemplo.** La plantilla puede usarse localmente sin cuenta ni servidor.
 

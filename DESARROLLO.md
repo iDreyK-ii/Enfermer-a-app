@@ -1,6 +1,16 @@
 # Desarrollo continuo del aplicativo iDreyK 360
 
-## Punto actual: desarrollo-v0.4
+## Punto actual: desarrollo-v0.4.1
+
+Pulido previo a la futura sincronización: importación con diferencias/aceptación y huella anticolisión, campos congelados durante escrituras, adaptación a pantallas/letra grande, microinteracciones sin forzar movimiento y JSON acotado. SQLite2 y formatos1/2/3 se conservan.
+
+133 pruebas Android; 29 Python (incluidas 5 de guardas); 5 SQLite y 17 PostgreSQL/RLS locales. Lint: 0 errores/24 advertencias. APK versionCode5, misma firma. Evidencia en `qa/v041/` y `qa/RESULTADOS_v0.4.1.md`.
+
+Se prepararon workflow y scripts de CI; no se sincronizó ni ejecutó nada en GitHub. Sigue sin proyecto Supabase real ni validación física/clínica. Ver `docs/GITHUB_Y_CI.md` y `docs/MEJORAS_v0.4.1.md`. La clave privada no se exporta.
+
+## Historial de las etapas anteriores
+
+## Punto de control previo: desarrollo-v0.4
 
 La petición más reciente amplió expresamente el alcance a cuentas y catálogo remoto. Se conserva Android/Compose y SQLite local v2; se añadió Supabase (PostgreSQL/Auth/Storage) como conector opcional, sin proyecto real configurado ni claves incluidas.
 

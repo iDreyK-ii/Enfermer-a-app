@@ -216,4 +216,26 @@ class ModuleInterfaceTests {
         }
         ui.onNodeWithText("Reducción de movimiento activada").assertExists()
     }
+
+    @Test
+    fun backingOutOfAMedicationDraftKeepsTextUntilDiscardIsExplicit() {
+        click("Farmacología")
+        ui.onNodeWithContentDescription("Crear medicamento").performClick()
+        input("Nombre del medicamento", "Borrador parcial de QA")
+        ui.runOnIdle { ui.activity.onBackPressedDispatcher.onBackPressed() }
+        ui.onNodeWithText("¿Salir sin guardar?").assertExists()
+        ui.onNodeWithText("Seguir editando").performClick()
+        ui.onNodeWithText("Nombre del medicamento").assertTextContains("Borrador parcial de QA")
+        ui.onNodeWithContentDescription("Volver").performClick()
+        ui.onNodeWithText("Descartar cambios").performClick()
+        ui.onNodeWithText("Farmacología").assertExists()
+        assertFalse(vm.data.entries.any { it.name == "Borrador parcial de QA" })
+    }
+
+    @Test
+    fun patientRoutesKeepTheModulesTabSelected() {
+        modules()
+        click("Pacientes")
+        ui.onNode(hasText("Módulos") and isSelectable()).assertIsSelected()
+    }
 }

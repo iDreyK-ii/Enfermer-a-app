@@ -5,7 +5,6 @@ import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -13,9 +12,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -95,17 +92,6 @@ internal fun ModuleTile(module: Module, nav: (String) -> Unit, modifier: Modifie
 @Composable
 fun HomeScreen(vm: AppViewModel, nav: (String) -> Unit, info: (String, String) -> Unit) {
     val p = LocalPalette.current
-    val bob =
-        if (LocalReduced.current) 0f
-        else
-            rememberInfiniteTransition(label = "Bienvenida")
-                .animateFloat(
-                    0f,
-                    -4f,
-                    infiniteRepeatable(tween(3000), RepeatMode.Reverse),
-                    label = "Ilustración",
-                )
-                .value
     Column(
         Modifier.fillMaxSize()
             .verticalScroll(rememberScrollState())
@@ -121,16 +107,15 @@ fun HomeScreen(vm: AppViewModel, nav: (String) -> Unit, info: (String, String) -
                     color = Purple,
                     letterSpacing = 1.5.sp,
                 )
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text("iDreyK ", style = MaterialTheme.typography.titleLarge)
-                    Text(
-                        "360",
-                        fontFamily = HeadingFont,
-                        fontSize = 21.sp,
-                        color = Pink,
-                        fontWeight = FontWeight.SemiBold,
-                    )
-                }
+                Text(
+                    androidx.compose.ui.text.buildAnnotatedString {
+                        append("iDreyK ")
+                        pushStyle(androidx.compose.ui.text.SpanStyle(color = Pink))
+                        append("360")
+                        pop()
+                    },
+                    style = MaterialTheme.typography.titleLarge,
+                )
             }
             IconButton(onClick = { vm.updateDark(!vm.dark) }) {
                 Symbol(if (vm.dark) R.drawable.ic_sun else R.drawable.ic_moon, "Cambiar tema")
@@ -146,57 +131,7 @@ fun HomeScreen(vm: AppViewModel, nav: (String) -> Unit, info: (String, String) -
                 Symbol(R.drawable.ic_bell, "Mensajes de la aplicación")
             }
         }
-        Box(
-            Modifier.fillMaxWidth()
-                .height(202.dp)
-                .clip(RoundedCornerShape(25.dp))
-                .background(
-                    Brush.linearGradient(
-                        if (vm.dark) listOf(Color(0xFF4A335B), Color(0xFF6A436C))
-                        else listOf(Color(0xFFEEE6FF), Color(0xFFF1DDF4))
-                    )
-                )
-                .border(1.dp, Purple.copy(alpha = .15f), RoundedCornerShape(25.dp))
-        ) {
-            Box(
-                Modifier.size(190.dp)
-                    .offset(x = 190.dp, y = (-65).dp)
-                    .clip(CircleShape)
-                    .background(Color.White.copy(alpha = .08f))
-            )
-            Image(
-                painterResource(R.drawable.nurse),
-                "Ilustración de un enfermero",
-                Modifier.height(226.dp)
-                    .align(Alignment.BottomEnd)
-                    .offset(x = 6.dp, y = 35.dp)
-                    .graphicsLayer { translationY = bob },
-            )
-            Column(
-                Modifier.padding(19.dp).widthIn(max = 185.dp),
-                verticalArrangement = Arrangement.spacedBy(9.dp),
-            ) {
-                Text(
-                    "TU ESPACIO DE CUIDADO",
-                    style = MaterialTheme.typography.labelSmall,
-                    color = if (vm.dark) Color(0xFFD4B4E8) else Color(0xFF8F66A9),
-                )
-                Text(
-                    "Hola,\n${vm.name.substringBefore(' ').take(13)}",
-                    style = MaterialTheme.typography.headlineLarge,
-                )
-                Text(
-                    "Un nuevo día para\nhacer la diferencia.",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = if (vm.dark) Color(0xFFD9C4E2) else Color(0xFF866C99),
-                )
-                Symbol(
-                    R.drawable.ic_heart_pulse,
-                    tint = Purple.copy(alpha = .6f),
-                    modifier = Modifier.size(28.dp),
-                )
-            }
-        }
+        WelcomeHero(vm.name, vm.dark)
         Row(
             Modifier.fillMaxWidth()
                 .clip(RoundedCornerShape(15.dp))
@@ -240,11 +175,7 @@ fun HomeScreen(vm: AppViewModel, nav: (String) -> Unit, info: (String, String) -
                 Module("Protocolos", "Biblioteca", "protocolos", R.drawable.ic_folder, Purple),
                 Module("Multimedia", "Archivos locales", "multimedia", R.drawable.ic_play, Pink),
             )
-        shortcuts.chunked(3).forEach { row ->
-            Row(horizontalArrangement = Arrangement.spacedBy(9.dp)) {
-                row.forEach { ModuleTile(it, nav, Modifier.weight(1f)) }
-            }
-        }
+        ModuleGrid(shortcuts, nav, "home-module-grid")
         ActionRow(
             "Actualizar biblioteca",
             "Consulta local · novedades opcionales",
@@ -283,11 +214,7 @@ fun HomeScreen(vm: AppViewModel, nav: (String) -> Unit, info: (String, String) -
 @Composable
 fun ModulesScreen(nav: (String) -> Unit, back: () -> Unit) {
     Page("Tu universo 360°", "Un espacio para cada parte de tu vocación", back) {
-        (Modules + ExtraModules).chunked(2).forEach { row ->
-            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                row.forEach { ModuleTile(it, nav, Modifier.weight(1f)) }
-            }
-        }
+        ModuleGrid(Modules + ExtraModules, nav, "all-module-grid", preferred = 2)
         Notice(
             "Esta edición permite validar funciones y contenido de ejemplo. No está habilitada para decisiones clínicas."
         )

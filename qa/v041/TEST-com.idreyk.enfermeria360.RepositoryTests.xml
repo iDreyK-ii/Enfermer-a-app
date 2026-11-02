@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.RepositoryTests" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-11-02T02:58:02" hostname="e2b.local" time="0.749">
+  <properties/>
+  <testcase name="additionsDoNotRequireAcknowledgingNonexistentReplacements" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.05"/>
+  <testcase name="staleReviewCannotOverwriteAnEditMadeAfterThePreview" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.044"/>
+  <testcase name="initialLibraryIsLocalAndRepeatable" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.019"/>
+  <testcase name="notesFavoritesAndExercisesSurviveReopening" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.035"/>
+  <testcase name="reviewedReplacementNeedsAcknowledgementWithoutCreatingUndoOnFailure" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.042"/>
+  <testcase name="modifyingAParsedPreviewObjectDoesNotModifyTheConfirmedPayload" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.024"/>
+  <testcase name="reviewedReplacementIsTransactionalAndCanBeUndone" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.036"/>
+  <testcase name="rejectedAggregatePreservesPreviousUndoPoint" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.032"/>
+  <testcase name="aggregateByteLimitKeepsExportsReadable" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.327"/>
+  <testcase name="previewDoesNotWriteAndCountsReplacements" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.021"/>
+  <testcase name="undoRestoresCatalogAndVersionButNotPracticeData" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.026"/>
+  <testcase name="exportedCatalogKeepsOriginalAttributionWithoutNotes" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.029"/>
+  <testcase name="versionsCannotGoBackwards" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.036"/>
+  <testcase name="resetClearsOnlyLocalPracticeAndCatalog" classname="com.idreyk.enfermeria360.RepositoryTests" time="0.026"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -113,6 +113,7 @@ object NotebookCodec {
 
     fun decode(raw: String): List<NotebookRecord> {
         require(raw.toByteArray(Charsets.UTF_8).size <= MAX_BYTES) { "El cuaderno supera 2 MB." }
+        JsonSafety.requireBoundedDepth(raw)
         val root =
             try {
                 JSONObject(raw)

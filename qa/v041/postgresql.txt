@@ -1,0 +1,23 @@
+
+> idreyk-supabase-schema-tests@0.4.0 test
+> node tests/rls.mjs
+
+OK Esquema PostgreSQL completo aplicado sin errores
+OK No se puede crear un perfil ajeno
+OK No se puede transferir el perfil a otro usuario
+OK Editor puede trabajar con borradores privados
+OK Anónimo no puede leer una revisión aún no publicada
+OK Anónimo no tiene acceso a perfiles
+OK Anónimo no puede publicar
+OK Usuario no ve perfiles ajenos
+OK Lector no ve borradores editoriales
+OK Lector no ve los archivos fuente privados
+OK Usuario no puede asignarse permisos de editor
+OK Cuenta lectora no puede cargar borradores
+OK Revisión publicada no se reescribe
+OK No se publican registros todavía en borrador
+OK Checksum inválido se rechaza en servidor
+OK Publicación revisada queda legible sin exigir cuenta
+OK El bucket de fuentes permanece privado
+
+17/17 comprobaciones PostgreSQL/RLS superadas. Sin servicio Supabase real.

@@ -1,8 +1,16 @@
-# Enfermería iDreyK 360 — Android nativo v0.4
+# Enfermería iDreyK 360 — Android nativo v0.4.1
 
 Evolución del mismo aplicativo del **Prototipo B**, en Kotlin/Jetpack Compose. La biblioteca descargada sigue disponible sin conexión. Se incorporan la estructura farmacológica aportada por el usuario, rendimiento adaptable y un conector opcional de cuentas/actualización de contenido.
 
 **Estado real:** código compilado y pruebas locales ejecutadas; **ningún proyecto Supabase está conectado**. El APK entregado no contiene URL/clave de servidor y muestra «Nube sin configurar». No se simulan cuentas, envíos de correo ni descargas. Solo contenido de práctica: no certificada para pacientes reales.
+
+## Pulido v0.4.1 antes de sincronizar
+
+Además de la base v0.4: comparación y aceptación de sustituciones; bloqueo de vistas previas desactualizadas; detección de campos que se vaciarían; paginación de revisión; cuadrícula/hero adaptables a texto grande; respuesta táctil y selección animadas; bloqueo de campos durante escrituras; rechazo de JSON excesivamente anidado.
+
+**133 pruebas Android superadas.** Resultados actuales: [qa/RESULTADOS_v0.4.1.md](qa/RESULTADOS_v0.4.1.md). Detalle: [docs/MEJORAS_v0.4.1.md](docs/MEJORAS_v0.4.1.md). La plantilla y los esquemas de contenido/SQLite no cambiaron.
+
+Preparación de Git/CI: [docs/GITHUB_Y_CI.md](docs/GITHUB_Y_CI.md). Workflow creado y validado localmente, pero **no hay push ni ejecución remota comprobada**. No necesita secretos de nube. El APK de un runner usa firma temporal: no confundirlo con una actualización del APK entregado.
 
 ## 1. Qué cambia
 
@@ -51,7 +59,7 @@ backend/                                    SQL Supabase, publicación y pruebas
  database/schema.sql                        Espejo SQLite local
  design/propuesta_v0.4/                     Imágenes elegidas, corrección legible y guía
  docs/                                      Compilación, alcance y continuidad
- qa/v04/                                    Evidencia de esta ampliación
+ qa/v041/                                   Evidencia del pulido actual
  historial/desarrollo.bundle                Historial portátil incluido en el ZIP
 ```
 
@@ -90,7 +98,7 @@ El APK v0.4 declara INTERNET; sin configuración no realiza solicitudes. Las con
 
 ## 6. Comprobaciones y límites
 
-Ver [qa/RESULTADOS_v0.4.md](qa/RESULTADOS_v0.4.md): pruebas Android/JVM y Compose simulado, conversor/publicación, PostgreSQL/RLS y espejo SQLite. Los resultados de v0.3 permanecen como evidencia histórica separada.
+Ver [qa/RESULTADOS_v0.4.1.md](qa/RESULTADOS_v0.4.1.md): pruebas Android/JVM y Compose simulado, conversor/publicación, PostgreSQL/RLS y espejo SQLite. Los resultados de v0.3/v0.4 permanecen como evidencia histórica separada.
 
 No se verificaron servidor Supabase real, correo/SMTP, instalación física, hardware Keystore, rendimiento medido en gamas distintas ni validación clínica. El diseño exportado es una **maqueta**, no una captura del APK. Las pruebas de reglas y aritmética no certifican atención clínica.
 

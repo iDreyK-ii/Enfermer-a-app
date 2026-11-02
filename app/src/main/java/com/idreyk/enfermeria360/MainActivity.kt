@@ -22,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.semantics.Role
@@ -55,6 +56,7 @@ class MainActivity : ComponentActivity() {
                 LocalDensity provides
                     Density(density.density, density.fontScale * (if (vm.largeText) 1.12f else 1f)),
                 LocalPerformance provides performance,
+                LocalFormEnabled provides !vm.busy,
             ) {
                 NursingTheme(vm.dark, performance.reduced) { NursingApp(vm) }
             }
@@ -66,6 +68,10 @@ class MainActivity : ComponentActivity() {
 fun NursingApp(vm: AppViewModel) {
     var stack by rememberSaveable { mutableStateOf("inicio") }
     val route = stack.substringAfterLast('|')
+    val focusManager = androidx.compose.ui.platform.LocalFocusManager.current
+    LaunchedEffect(vm.busy, route) {
+        if (vm.busy && route.startsWith("editar")) focusManager.clearFocus(force = true)
+    }
     val holder = rememberSaveableStateHolder()
     val snackbar = remember { SnackbarHostState() }
     var infoTitle by rememberSaveable { mutableStateOf("") }
@@ -256,6 +262,18 @@ fun NursingApp(vm: AppViewModel) {
             }
         }
     }
+    if (vm.busy && route.startsWith("editar")) {
+        AlertDialog(
+            onDismissRequest = {},
+            title = { Text("Aplicando cambio local…") },
+            text = {
+                Text(
+                    "El formulario está temporalmente bloqueado para no perder cambios mientras se escribe en el dispositivo."
+                )
+            },
+            confirmButton = {},
+        )
+    }
     if (!vm.welcomed && !vm.data.loading)
         AlertDialog(
             onDismissRequest = {},
@@ -300,48 +318,7 @@ fun NursingApp(vm: AppViewModel) {
     }
     BackHandler(vm.busy) { /* Do not leave a pending transactional operation. */ }
     vm.preview?.let { preview ->
-        AppSheet("Revisa antes de importar", { vm.cancelImport() }) {
-            Badge(
-                "PAQUETE LOCAL · ESQUEMA ${org.json.JSONObject(preview.content.raw).getInt("version_esquema")}",
-                Teal,
-            )
-            Text(preview.content.title, style = MaterialTheme.typography.titleLarge)
-            Text(
-                "Autor: ${preview.content.author}\nVersión: ${preview.content.version}\nActualización declarada: ${preview.content.updated}",
-                style = MaterialTheme.typography.bodySmall,
-                color = palette.muted,
-            )
-            AppCard(Modifier.fillMaxWidth()) {
-                Text(
-                    "${preview.newCount} registros nuevos\n${preview.updateCount} registros que se actualizarán",
-                    style = MaterialTheme.typography.titleMedium,
-                )
-                preview.content.entries.take(12).forEach {
-                    Text("• ${it.name}", style = MaterialTheme.typography.bodySmall)
-                }
-                if (preview.content.entries.size > 12)
-                    Text(
-                        "Y ${preview.content.entries.size-12} más…",
-                        style = MaterialTheme.typography.bodySmall,
-                    )
-            }
-            Notice(
-                "Solo se revisó la estructura del archivo, no su validez clínica ni sus derechos. Confirma que puedes usar el contenido. No incluyas información de pacientes reales.",
-                true,
-            )
-            Text(
-                "La importación reemplaza fichas con el mismo tipo e ID y conserva las demás. Se guardará un respaldo del catálogo anterior.",
-                style = MaterialTheme.typography.bodySmall,
-                color = palette.muted,
-            )
-            Primary(
-                "Confirmar importación local",
-                { vm.importConfirmed() },
-                !vm.busy,
-                R.drawable.ic_check,
-            )
-            Secondary("Cancelar", { vm.cancelImport() }, !vm.busy)
-        }
+        CatalogImportSheet(preview, vm.busy, vm::importConfirmed, vm::cancelImport)
     }
 }
 
@@ -363,7 +340,7 @@ fun AppBottomBar(route: String, nav: (String) -> Unit) {
             "evolucion",
             "signos",
             "balance",
-            "plan" -> "pacientes"
+            "plan" -> "modulos"
             else -> "modulos"
         }
     Surface(
@@ -385,6 +362,27 @@ fun AppBottomBar(route: String, nav: (String) -> Unit) {
                     Triple("perfil", "Perfil", R.drawable.ic_user),
                 )
                 .forEach { (key, title, icon) ->
+                    val reduced = LocalReduced.current
+                    val targetTint = if (active == key) Pink else LocalPalette.current.muted
+                    val tint =
+                        if (reduced) targetTint
+                        else
+                            animateColorAsState(
+                                    targetTint,
+                                    tween(160),
+                                    label = "Pestaña seleccionada",
+                                )
+                                .value
+                    val iconScale =
+                        if (reduced) 1f
+                        else
+                            androidx.compose.animation.core
+                                .animateFloatAsState(
+                                    UiFeedbackPolicy.tabScale(false, active == key),
+                                    tween(180),
+                                    label = "Énfasis de navegación",
+                                )
+                                .value
                     Column(
                         Modifier.weight(1f)
                             .clip(RoundedCornerShapeCompat)
@@ -409,13 +407,17 @@ fun AppBottomBar(route: String, nav: (String) -> Unit) {
                             Symbol(
                                 icon,
                                 title,
-                                if (active == key) Pink else LocalPalette.current.muted,
-                                Modifier.size(22.dp),
+                                tint,
+                                Modifier.size(22.dp).graphicsLayer {
+                                    scaleX = iconScale
+                                    scaleY = iconScale
+                                },
                             )
                         Text(
                             title,
                             fontFamily = BodyFont,
                             fontSize = 10.sp,
+                            textAlign = androidx.compose.ui.text.style.TextAlign.Center,
                             fontWeight = FontWeight.SemiBold,
                             color =
                                 if (active == key) MaterialTheme.colorScheme.primary

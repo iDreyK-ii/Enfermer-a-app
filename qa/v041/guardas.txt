@@ -1,0 +1,10 @@
+test_examples_source_and_templates_remain_allowed (test_guardas.RepositoryGuards.test_examples_source_and_templates_remain_allowed) ... ok
+test_generated_files_do_not_belong_in_source (test_guardas.RepositoryGuards.test_generated_files_do_not_belong_in_source) ... ok
+test_nested_private_configuration_is_rejected (test_guardas.RepositoryGuards.test_nested_private_configuration_is_rejected) ... ok
+test_obvious_private_credentials_are_detected_without_showing_them (test_guardas.RepositoryGuards.test_obvious_private_credentials_are_detected_without_showing_them) ... ok
+test_public_configuration_and_short_named_fixtures_are_not_secrets (test_guardas.RepositoryGuards.test_public_configuration_and_short_named_fixtures_are_not_secrets) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK

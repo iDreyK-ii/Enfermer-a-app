@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.PolishTests" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-11-02T02:58:02" hostname="e2b.local" time="0.017">
+  <properties/>
+  <testcase name="partialReplacementReportsWhichExistingFieldsWillBeCleared" classname="com.idreyk.enfermeria360.PolishTests" time="0.002"/>
+  <testcase name="narrowScreensReduceColumnsWithoutHidingModules" classname="com.idreyk.enfermeria360.PolishTests" time="0.002"/>
+  <testcase name="reducedMotionNeverScalesPressedCardsOrSelectedTabs" classname="com.idreyk.enfermeria360.PolishTests" time="0.001"/>
+  <testcase name="depthGuardRejectsUnfinishedStringsAndDelimiters" classname="com.idreyk.enfermeria360.PolishTests" time="0.0"/>
+  <testcase name="absentAndEmptyOptionalSectionsAreEquivalent" classname="com.idreyk.enfermeria360.PolishTests" time="0.0"/>
+  <testcase name="removingReferencesIsAlsoReportedInsteadOfOnlyCheckingDrugSections" classname="com.idreyk.enfermeria360.PolishTests" time="0.001"/>
+  <testcase name="canonicalObjectsIgnoreKeyOrderButArraysKeepOrder" classname="com.idreyk.enfermeria360.PolishTests" time="0.0"/>
+  <testcase name="depthGuardAcceptsTheBoundaryAndRejectsExcessNesting" classname="com.idreyk.enfermeria360.PolishTests" time="0.001"/>
+  <testcase name="enlargedTextReducesColumnsAndKeepsAValidMinimum" classname="com.idreyk.enfermeria360.PolishTests" time="0.0"/>
+  <testcase name="depthGuardIgnoresBracketsAndEscapesInsideText" classname="com.idreyk.enfermeria360.PolishTests" time="0.001"/>
+  <testcase name="reviewFingerprintBindsBothContentAndPreviouslyInstalledVersion" classname="com.idreyk.enfermeria360.PolishTests" time="0.002"/>
+  <testcase name="welcomeArtYieldsSpaceToSmallScreensAndLargeText" classname="com.idreyk.enfermeria360.PolishTests" time="0.0"/>
+  <testcase name="newlyAddedPartialRecordsDoNotClaimExistingDataWillBeLost" classname="com.idreyk.enfermeria360.PolishTests" time="0.0"/>
+  <testcase name="allExternalJsonCodecsRejectDeepInputBeforeRecursiveParsing" classname="com.idreyk.enfermeria360.PolishTests" time="0.002"/>
+  <testcase name="existingLocalEditsAreExplicitlyIdentified" classname="com.idreyk.enfermeria360.PolishTests" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

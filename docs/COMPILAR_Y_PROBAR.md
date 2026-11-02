@@ -1,39 +1,65 @@
-# Compilar, probar e instalar iDreyK 360
+# Compilar, probar e instalar iDreyK 360 v0.4.1
 
-Todos los comandos se ejecutan desde la raíz `idreyk-android/`, no desde `docs/`. Esta guía no cambia las versiones fijadas ni presupone que las herramientas estén instaladas.
+Ejecutar desde la raíz `idreyk-android/`. Es Android nativo: **no hay servidor web ni puerto que levantar**. Gradle compila la app; Python y Node solo se usan para herramientas y pruebas locales.
 
+## Preparar herramientas
 
-No hay `npm install`, servidor que levantar ni puerto 3000. Gradle resuelve las dependencias Android. Instala previamente JDK 17/21 y Android SDK Command-line Tools (también puedes hacerlo con Android Studio).
-
-**Linux/macOS, desde la raíz del proyecto:**
+JDK17/21, Android SDK Command-line Tools, Python3.10+ y Node para el harness PostgreSQL. Android Studio es otra forma de gestionar JDK/SDK.
 
 ```sh
-cp .env.example .env
-# EDITA .env: JAVA_HOME y ANDROID_HOME deben ser rutas reales antes de continuar.
+cp -n .env.example .env
+# Editar rutas reales. No sobrescribir una configuración privada existente.
 set -a
 . ./.env
 set +a
 
 "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses
 "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" \
-  "platforms;android-35" "build-tools;35.0.0" "platform-tools"
-chmod +x gradlew
+  "platforms;android-35" "build-tools;34.0.0" "build-tools;35.0.0" "platform-tools"
+chmod +x gradlew scripts/comprobar.sh
+python3 -m pip install -r content-tools/requirements.txt
+npm ci --prefix backend --ignore-scripts
+```
 
+El desarrollador revisa/acepta las licencias; copiar los comandos no constituye aceptación. `local.properties`, si existe, debe usar el mismo SDK. En Windows preparar SDK/JDK con Android Studio y usar `gradlew.bat`; el script Bash requiere un entorno compatible.
+
+## Comprobación completa reproducible
+
+Si partiste del ZIP sin `.git`, recupera primero `historial/desarrollo.bundle` en otra carpeta (ver la sección de recuperación en `docs/GITHUB_Y_CI.md`). La guarda revisa archivos versionados y exige el Git del propio proyecto, no uno de una carpeta superior.
+
+```sh
+bash scripts/comprobar.sh --todo
+```
+
+Ejecuta guardas y pruebas de archivos, SQLite y PostgreSQL local, compilación Kotlin, pruebas Android, lint, APK y verificación de firma/metadatos/permisos. `--rapido` omite Android. Logs en `.cache/qa-actual/`.
+
+**Para aislar las pruebas, `--todo` fuerza URL/clave publicable vacías.** No envía correos ni usa cuentas reales. El APK que deja ese comando es de configuración local. La documentación de CI explica la diferencia entre un APK de runner y uno firmado para actualizar: `docs/GITHUB_Y_CI.md`.
+
+## Comandos Android por separado
+
+```sh
 ./gradlew --no-daemon --max-workers=1 :app:compileDebugUnitTestKotlin \
   '-Dorg.gradle.jvmargs=-Xmx640m -XX:MaxMetaspaceSize=384m -XX:+UseSerialGC -Dfile.encoding=UTF-8'
 ./gradlew --no-daemon --max-workers=1 :app:testDebugUnitTest \
   '-Dorg.gradle.jvmargs=-Xmx384m -XX:MaxMetaspaceSize=256m -XX:+UseSerialGC -Dfile.encoding=UTF-8'
 ./gradlew --no-daemon --max-workers=1 :app:assembleDebug :app:lintDebug \
   '-Dorg.gradle.jvmargs=-Xmx640m -XX:MaxMetaspaceSize=384m -XX:+UseSerialGC -Dfile.encoding=UTF-8'
+python3 scripts/verificar_apk.py
 ```
 
-Asegúrate de que `local.properties`, si existe, apunte al mismo SDK. Las licencias las acepta el desarrollador; no se presuponen aceptadas por copiar comandos. En Windows configura el SDK/JDK con Android Studio y usa `gradlew.bat`; el bloque de carga `.env` anterior es de shell POSIX.
+APK: `app/build/outputs/apk/debug/app-debug.apk`. La primera compilación descarga dependencias. Desde v0.4 el APK **sí declara INTERNET** para el conector opcional; sin configuración de nube no realiza sus solicitudes. No requiere contactos, cuentas del sistema, cámara ni almacenamiento general.
 
-APK generado: `app/build/outputs/apk/debug/app-debug.apk`. No es necesaria una copia de `.env` dentro de `app/`. La primera compilación necesita descargar herramientas/dependencias; la app instalada sigue sin permiso de Internet.
+## Activar nube, separado de la comprobación local
 
-### Instalar y abrir en un dispositivo de prueba
+Gradle lee `IDREYK_SUPABASE_URL` e `IDREYK_SUPABASE_PUBLISHABLE_KEY` de entorno o propiedades Gradle; `.env` no se carga automáticamente. Ambas vacías mantienen la app local. Ambas válidas habilitan el conector.
 
-Con un único emulador operativo o teléfono conectado, depuración USB autorizada y ADB disponible:
+Antes de compilar un cliente conectado, crear/configurar un proyecto propio con RLS y correo siguiendo `backend/README.md`. Después compilar con `:app:assembleDebug` y los valores públicos reales, **sin los argumentos que los vacían en el script de pruebas**. Nunca incorporar la clave secreta, `service_role`, contraseña PostgreSQL o clave privada de firma.
+
+El APK entregado aquí se compiló sin proyecto. No existe una conexión simulada presentada como real. La integración real necesita su propio plan de pruebas y consentimiento; no reutilizar cuentas reales desde pruebas unitarias.
+
+## Instalar sin perder datos
+
+Con un único dispositivo de prueba conectado, depuración USB autorizada y ADB:
 
 ```sh
 "$ANDROID_HOME/platform-tools/adb" devices
@@ -42,22 +68,10 @@ Con un único emulador operativo o teléfono conectado, depuración USB autoriza
   -n com.idreyk.enfermeria360.dev/com.idreyk.enfermeria360.MainActivity
 ```
 
-**Firma:** el repositorio no contiene la clave privada. Compilar en otra máquina suele generar una clave debug diferente. Los comandos anteriores sirven en un dispositivo nuevo de prueba o con la clave correcta; no garantizan actualizar una instalación existente. Si hay firma incompatible, **no desinstalar para forzarla**. Para actualizar la v0.2 entregada se conserva el APK v0.3 ya firmado con el mismo certificado. No hay prueba física completada ni migración inversa a v0.2.
+**Firma:** los APK entregados v0.2/v0.3/v0.4/v0.4.1 conservan el certificado. Una compilación de otra máquina/CI normalmente tiene otra clave debug y no puede actualizar la anterior. No desinstalar ni borrar datos para resolver un conflicto de firma. Exportar catálogo/cuaderno y conservar medios por separado antes de pruebas importantes.
 
-Para el conversor opcional, independientemente de Android:
+Para comparar un certificado conocido usar `IDREYK_EXPECTED_CERT_SHA256` con `scripts/verificar_apk.py`; el valor es la huella pública, no una clave. No se ha probado aún instalación física ni downgrade; no forzar vuelta a versiones anteriores.
 
-```sh
-python3 -m pip install -r content-tools/requirements.txt
-python3 -m unittest discover -s content-tools -p 'test_converter.py' -v
-```
+## Evidencia y alcance
 
-
-## Configuración opcional de nube en v0.4
-
-El cliente lee `IDREYK_SUPABASE_URL` e `IDREYK_SUPABASE_PUBLISHABLE_KEY` de variables de entorno o propiedades Gradle. Ambas vacías = sin llamadas al servidor; ambas reales = conector habilitado. `.env` sigue sin cargarse automáticamente. Instrucciones de permisos, cuentas por correo y publicación: `backend/README.md`.
-
-El APK entregado se compiló sin endpoint ni clave publicable; no contiene un servidor ficticio. Desde v0.4 declara INTERNET para el conector opcional. No incorpora claves secretas. Cambiar el contenido del servidor no requiere recompilar si el formato es compatible; configurar el endpoint inicial o cambiar lógica sí.
-
-## Verificación de esta edición
-
-Se restauraron JDK21/SDK35/Gradle8.9 para compilar v0.4 y se ejecutaron pruebas Android/JVM y lint. Consultar `qa/RESULTADOS_v0.4.md` y `qa/v04/`. La prueba en teléfono real, SMTP, Auth real y rendimiento medido siguen pendientes; las maquetas no son capturas del APK.
+Ver `qa/RESULTADOS_v0.4.1.md`. Pruebas JVM/Robolectric, no certificación física o clínica. SMTP/Auth/Storage reales, hardware Keystore, FPS y publicación de producción siguen pendientes. Las maquetas del dossier no son capturas del APK.

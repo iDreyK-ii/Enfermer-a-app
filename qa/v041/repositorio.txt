@@ -1,0 +1,2 @@
+Guardas de archivos versionados, credenciales evidentes, Gradle, permisos y CI: OK.
+No sustituye revisión humana, análisis del historial o pruebas reales del servicio.

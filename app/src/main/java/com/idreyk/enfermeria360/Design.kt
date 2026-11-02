@@ -1,11 +1,16 @@
 package com.idreyk.enfermeria360
 
 import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
@@ -20,7 +25,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -78,6 +86,7 @@ val DarkPalette =
     )
 val LocalPalette = staticCompositionLocalOf { LightPalette }
 val LocalReduced = staticCompositionLocalOf { false }
+val LocalFormEnabled = staticCompositionLocalOf { true }
 
 @Composable
 fun NursingTheme(dark: Boolean, reduced: Boolean, content: @Composable () -> Unit) {
@@ -219,13 +228,42 @@ fun AppCard(
     content: @Composable ColumnScope.() -> Unit,
 ) {
     val p = LocalPalette.current
+    val source = if (onClick != null) remember { MutableInteractionSource() } else null
+    val pressed = source?.collectIsPressedAsState()?.value ?: false
+    val reduced = LocalReduced.current
+    val scale =
+        if (reduced || onClick == null) 1f
+        else
+            animateFloatAsState(
+                    UiFeedbackPolicy.pressScale(false, pressed),
+                    spring(dampingRatio = 1f, stiffness = 650f),
+                    label = "Respuesta de tarjeta",
+                )
+                .value
     Column(
         modifier
-            .shadow(if (LocalReduced.current) 0.dp else 1.dp, RoundedCornerShape(21.dp))
+            .then(
+                if (!reduced && onClick != null)
+                    Modifier.graphicsLayer {
+                        scaleX = scale
+                        scaleY = scale
+                    }
+                else Modifier
+            )
+            .shadow(if (reduced) 0.dp else 1.dp, RoundedCornerShape(21.dp))
             .clip(RoundedCornerShape(21.dp))
-            .background(p.surface)
+            .background(if (pressed) lerp(p.surface, Purple, .07f) else p.surface)
             .border(1.dp, p.border, RoundedCornerShape(21.dp))
-            .then(if (onClick != null) Modifier.clickable(onClick = onClick) else Modifier)
+            .then(
+                if (onClick != null)
+                    Modifier.clickable(
+                        interactionSource = source!!,
+                        indication = LocalIndication.current,
+                        role = Role.Button,
+                        onClick = onClick,
+                    )
+                else Modifier
+            )
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(9.dp),
         content = content,
@@ -247,7 +285,7 @@ fun PageHeader(
         IconButton(
             onClick = back,
             modifier =
-                Modifier.size(40.dp)
+                Modifier.size(48.dp)
                     .clip(RoundedCornerShape(13.dp))
                     .background(LocalPalette.current.surface)
                     .border(1.dp, LocalPalette.current.border, RoundedCornerShape(13.dp)),
@@ -410,7 +448,7 @@ fun Input(
         shape = RoundedCornerShape(14.dp),
         singleLine = !multi,
         minLines = if (multi) 3 else 1,
-        enabled = enabled,
+        enabled = enabled && LocalFormEnabled.current,
         keyboardOptions =
             KeyboardOptions(
                 keyboardType = if (numeric) KeyboardType.Decimal else KeyboardType.Text
@@ -510,7 +548,12 @@ fun Expandable(title: String, body: String, initial: Boolean = false) {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AppSheet(title: String, onDismiss: () -> Unit, content: @Composable ColumnScope.() -> Unit) {
+fun AppSheet(
+    title: String,
+    onDismiss: () -> Unit,
+    scrollState: androidx.compose.foundation.ScrollState = rememberScrollState(),
+    content: @Composable ColumnScope.() -> Unit,
+) {
     ModalBottomSheet(
         onDismissRequest = onDismiss,
         sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
@@ -519,7 +562,7 @@ fun AppSheet(title: String, onDismiss: () -> Unit, content: @Composable ColumnSc
         Column(
             Modifier.fillMaxWidth()
                 .heightIn(max = 600.dp)
-                .verticalScroll(rememberScrollState())
+                .verticalScroll(scrollState)
                 .padding(horizontal = 23.dp)
                 .padding(bottom = 32.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp),

@@ -128,7 +128,13 @@ data class ContentPackage(
     val isBackup: Boolean = false,
 )
 
-data class ImportPreview(val content: ContentPackage, val newCount: Int, val updateCount: Int)
+data class ImportPreview(
+    val content: ContentPackage,
+    val newCount: Int,
+    val updateCount: Int,
+    val changes: List<CatalogChange>,
+    val fingerprint: String,
+)
 
 data class StudyNote(val id: Long, val patientId: String, val text: String, val timestamp: Long)
 
@@ -179,6 +185,7 @@ object ContentParser {
         require(raw.toByteArray(Charsets.UTF_8).size <= MAX_BYTES) {
             "El archivo supera 2 MB. Divide el contenido en varios paquetes."
         }
+        JsonSafety.requireBoundedDepth(raw)
         val root =
             try {
                 JSONObject(raw)

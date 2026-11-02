@@ -450,11 +450,23 @@ class ContentRepository(private val context: Context) {
             "Ya tienes esa versión o una más reciente. Incrementa version_contenido para actualizar este paquete."
         }
         validateCatalog(pack)
-        val keys = entries().map { it.key }.toSet()
+        val current = entries()
+        val keys = current.map { it.key }.toSet()
         return ImportPreview(
             pack,
             pack.entries.count { it.key !in keys },
             pack.entries.count { it.key in keys },
+            ImportReview.compare(pack.entries, current),
+            ImportReview.fingerprint(current, pack, existing),
+        )
+    }
+
+    fun applyReviewedImport(review: ImportPreview, replacementsAcknowledged: Boolean) {
+        // Parse the immutable text again: exposed JSONObject instances are not the source of truth.
+        writePackage(
+            ContentParser.parse(review.content.raw),
+            expectedFingerprint = review.fingerprint,
+            replacementsAcknowledged = replacementsAcknowledged,
         )
     }
 
@@ -551,11 +563,26 @@ class ContentRepository(private val context: Context) {
         }
     }
 
-    fun writePackage(pack: ContentPackage, makeBackup: Boolean = true) {
+    fun writePackage(
+        pack: ContentPackage,
+        makeBackup: Boolean = true,
+        expectedFingerprint: String? = null,
+        replacementsAcknowledged: Boolean = false,
+    ) {
         val db = helper.writableDatabase
         db.beginTransaction()
         try {
-            if (makeBackup) preview(pack.raw) else validateCatalog(pack)
+            if (makeBackup) {
+                val fresh = preview(pack.raw)
+                if (expectedFingerprint != null) {
+                    require(fresh.fingerprint == expectedFingerprint) {
+                        "El catálogo cambió desde la vista previa. Revisa de nuevo el paquete; no se modificaron tus datos."
+                    }
+                    require(fresh.updateCount == 0 || replacementsAcknowledged) {
+                        "Confirma que revisaste las fichas que serán sustituidas."
+                    }
+                }
+            } else validateCatalog(pack)
             if (makeBackup) {
                 // SQLite commits the previous catalog and the new records together.
                 // A failed import cannot destroy the previous successful undo point.
@@ -924,11 +951,16 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun importConfirmed() {
+    fun importConfirmed(replacementsAcknowledged: Boolean = false) {
+        if (busy) return
         val p = preview ?: return
+        if (p.updateCount > 0 && !replacementsAcknowledged) {
+            message = "Revisa y acepta expresamente las sustituciones antes de importar."
+            return
+        }
         preview = null
         work("Paquete importado. El contenido conserva su estado de revisión declarado.") {
-            repository.writePackage(p.content)
+            repository.applyReviewedImport(p, replacementsAcknowledged)
         }
     }
 

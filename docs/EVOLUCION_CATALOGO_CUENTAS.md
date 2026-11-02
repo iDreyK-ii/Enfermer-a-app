@@ -1,3 +1,5 @@
+> **Estado posterior v0.4.1:** pulido de accesibilidad, movimiento, importación protegida y preparación CI realizado. Ver `MEJORAS_v0.4.1.md` y `../qa/RESULTADOS_v0.4.1.md`. El alcance de arquitectura que sigue se mantiene; Supabase y GitHub remoto no están conectados.
+
 # Evolución solicitada: farmacología, cuentas y rendimiento
 
 Fecha de solicitud: 2026-11-01. Estado: selección visual recibida, mejoras integradas y APK v0.4 compilado con comprobaciones locales. La conexión Supabase y las cuentas reales siguen sin configurar. Ver qa/RESULTADOS_v0.4.md.

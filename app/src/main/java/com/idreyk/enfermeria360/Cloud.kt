@@ -155,6 +155,7 @@ data class CloudSession(
             )
 
         fun fromResponse(raw: String, now: Long = System.currentTimeMillis() / 1000): CloudSession {
+            JsonSafety.requireBoundedDepth(raw)
             val root = JSONObject(raw)
             val user = root.getJSONObject("user")
             val id = user.getString("id").also { UUID.fromString(it) }
@@ -186,6 +187,7 @@ object CloudProtocol {
         }
 
     fun release(raw: String, appVersion: Int): String? {
+        JsonSafety.requireBoundedDepth(raw)
         val array = JSONArray(raw)
         require(array.length() <= 1) { "Respuesta de catálogo inválida." }
         if (array.length() == 0) return null

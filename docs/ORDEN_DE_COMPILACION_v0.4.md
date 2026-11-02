@@ -1,3 +1,5 @@
+> **Actualización v0.4.1:** versionCode5 / 0.4.1-dev-debug. La arquitectura siguiente se conserva. Usa `docs/COMPILAR_Y_PROBAR.md`, `docs/GITHUB_Y_CI.md` y `scripts/comprobar.sh --todo` para la comprobación actual. Tag: `desarrollo-v0.4.1`. El resto del documento corresponde al punto de control v0.4.
+
 # Orden de continuidad y compilación — iDreyK 360 v0.4
 
 Texto de entrega para quien retome el proyecto. No es una orden enviada a un agente remoto ni un despliegue ya realizado.

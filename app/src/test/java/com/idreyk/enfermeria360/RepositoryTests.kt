@@ -201,4 +201,69 @@ class RepositoryTests {
         assertTrue(repo.favorites().isEmpty())
         assertFalse(repo.hasBackup())
     }
+
+    @Test
+    fun reviewedReplacementNeedsAcknowledgementWithoutCreatingUndoOnFailure() {
+        val review = repo.preview(pack().raw)
+        assertThrows(IllegalArgumentException::class.java) {
+            repo.applyReviewedImport(review, false)
+        }
+        assertEquals("", repo.entries().first { it.id == "paracetamol" }.sections["descripcion"])
+        assertFalse(repo.hasBackup())
+    }
+
+    @Test
+    fun reviewedReplacementIsTransactionalAndCanBeUndone() {
+        val review = repo.preview(pack().raw)
+        repo.applyReviewedImport(review, true)
+        assertEquals(
+            "ACTUALIZACIÓN FICTICIA",
+            repo.entries().first { it.id == "paracetamol" }.sections["descripcion"],
+        )
+        repo.undoImport()
+        assertEquals("", repo.entries().first { it.id == "paracetamol" }.sections["descripcion"])
+    }
+
+    @Test
+    fun additionsDoNotRequireAcknowledgingNonexistentReplacements() {
+        val incoming =
+            root().put("medicamentos", JSONArray().put(drug("nuevo-qa", "Texto ficticio")))
+        repo.applyReviewedImport(repo.preview(incoming.toString()), false)
+        assertTrue(repo.entries().any { it.id == "nuevo-qa" })
+    }
+
+    @Test
+    fun staleReviewCannotOverwriteAnEditMadeAfterThePreview() {
+        val review = repo.preview(pack().raw)
+        val original = repo.entries().first { it.id == "paracetamol" }
+        val edit = JSONObject(original.json.toString())
+        edit.getJSONObject("secciones").put("descripcion", "Edición local posterior, ficticia")
+        repo.saveLocalEntry("med", edit, "QA", "Datos ficticios")
+        val error =
+            assertThrows(IllegalArgumentException::class.java) {
+                repo.applyReviewedImport(review, true)
+            }
+        assertTrue(error.message.orEmpty().contains("cambió"))
+        assertEquals(
+            "Edición local posterior, ficticia",
+            repo.entries().first { it.id == "paracetamol" }.sections["descripcion"],
+        )
+        repo.undoImport()
+        assertEquals("", repo.entries().first { it.id == "paracetamol" }.sections["descripcion"])
+    }
+
+    @Test
+    fun modifyingAParsedPreviewObjectDoesNotModifyTheConfirmedPayload() {
+        val review = repo.preview(pack().raw)
+        review.content.entries
+            .single()
+            .json
+            .getJSONObject("secciones")
+            .put("descripcion", "Texto alterado fuera del paquete")
+        repo.applyReviewedImport(review, true)
+        assertEquals(
+            "ACTUALIZACIÓN FICTICIA",
+            repo.entries().first { it.id == "paracetamol" }.sections["descripcion"],
+        )
+    }
 }

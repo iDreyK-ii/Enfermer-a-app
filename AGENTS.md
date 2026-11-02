@@ -3,7 +3,7 @@
 ## Antes de editar
 
 1. Leer `README.md`; luego el archivo del módulo afectado. No cargar todo el repositorio, todos los XML de QA o todos los recursos en una sola respuesta.
-2. Consultar `git status` y preservar cambios preexistentes. La aplicación funcional actual es Android v0.4; no empezar un proyecto web nuevo por una plantilla genérica.
+2. Consultar `git status` y preservar cambios preexistentes. La aplicación funcional actual es Android v0.4.1; no empezar un proyecto web nuevo por una plantilla genérica.
 3. Para datos, leer `database/schema.sql` y contrastarlo con `LocalDatabase` en `Repository.kt`. El Kotlin es la implementación ejecutada; el SQL es un espejo verificado.
 4. Para alcance clínico, consultar solo la sección pertinente de `docs/ESTADO_FUNCIONAL_v0.3.md` y `research/REVISION_DOCUMENTAL.md`.
 
@@ -23,6 +23,14 @@
 - Conservar UTF-8, límites agregados, versiones, fuentes y el retorno a borrador al editar contenido.
 - No presentar pruebas matemáticas como validación clínica. No inventar monografías, dosis, permisos o revisiones profesionales.
 
+## Importación y cambios v0.4.1
+
+- Mantener la comparación de campos, aceptación de reemplazos y comprobación de la huella revisada dentro de la transacción. No aplicar objetos de presentación mutables en lugar del texto revisado.
+- Mantener JSON acotado en profundidad, límites previos, datos parciales y deshacer. No interpretar una comparación estructural como evaluación clínica.
+- No retirar accesibilidad/reducción de movimiento para añadir efectos. Las tarjetas se adaptan al ancho/fuente; conservar la altura dinámica de bienvenida.
+- `scripts/comprobar.sh --todo` exige Git del proyecto y fuerza nube vacía. Un cliente conectado necesita compilación y pruebas de integración separadas.
+- CI preparada, no ejecutada remotamente. No cambiar un remoto ni hacer push sin destino y autorización. No dar por compatible la firma temporal de CI con los APK entregados.
+
 ## Comprobación y entrega
 
 - SQLite local: `python3 database/verificar_esquema.py`. PostgreSQL/Supabase es otro esquema: `backend/supabase/schema.sql`; sus pruebas se ejecutan con `npm test --prefix backend`. No aplicar un SQL al motor equivocado.
@@ -36,4 +44,4 @@
 
 ## Continuidad
 
-Registrar el cambio, su alcance, resultados y pendientes. El historial técnico está en `DESARROLLO.md`; los resultados actuales están en `qa/RESULTADOS_v0.4.md`. `qa/RESULTADOS.md` conserva la evidencia histórica de v0.3. Las pruebas de una sesión anterior no deben describirse como ejecutadas de nuevo sin haberlo hecho.
+Registrar el cambio, su alcance, resultados y pendientes. El historial técnico está en `DESARROLLO.md`; los resultados actuales están en `qa/RESULTADOS_v0.4.1.md`. `qa/RESULTADOS.md` conserva la evidencia histórica de v0.3. Las pruebas de una sesión anterior no deben describirse como ejecutadas de nuevo sin haberlo hecho.

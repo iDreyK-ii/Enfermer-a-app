@@ -1,0 +1,16 @@
+test_draft_cannot_be_published (test_publication.PublicationTests.test_draft_cannot_be_published) ... ok
+test_hash_is_of_original_utf8_not_reserialized_json (test_publication.PublicationTests.test_hash_is_of_original_utf8_not_reserialized_json) ... ok
+test_ids_are_unique_within_each_collection (test_publication.PublicationTests.test_ids_are_unique_within_each_collection) ... ok
+test_network_is_not_part_of_validation (test_publication.PublicationTests.test_network_is_not_part_of_validation) ... ok
+test_partial_fields_remain_legal_without_claiming_clinical_readiness (test_publication.PublicationTests.test_partial_fields_remain_legal_without_claiming_clinical_readiness) ... ok
+test_private_backup_or_wrong_channel_cannot_be_published (test_publication.PublicationTests.test_private_backup_or_wrong_channel_cannot_be_published) ... ok
+test_references_cannot_include_credentials (test_publication.PublicationTests.test_references_cannot_include_credentials) ... ok
+test_unknown_fields_and_wrong_types_are_rejected (test_publication.PublicationTests.test_unknown_fields_and_wrong_types_are_rejected) ... ok
+test_workbook_v3_converts_without_dropping_any_new_field (test_publication.PublicationTests.test_workbook_v3_converts_without_dropping_any_new_field) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.468s
+
+OK
+Conversión estructural completada: 1 registros → /tmp/tmpyz9pwhgd/catalogo.json
+No se han verificado exactitud clínica, vigencia ni permisos. Revisa el archivo antes de importarlo.

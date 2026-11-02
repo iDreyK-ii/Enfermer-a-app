@@ -68,6 +68,11 @@ fun CloudScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit) {
             true,
         )
         Section("Tu cuenta opcional")
+        Text(
+            "El cuaderno y los archivos pertenecen a esta instalación. Iniciar o cerrar sesión no los sube, borra ni separa por cuenta.",
+            style = MaterialTheme.typography.bodySmall,
+            color = LocalPalette.current.muted,
+        )
         val session = vm.cloudSession
         if (session == null) {
             Text(
