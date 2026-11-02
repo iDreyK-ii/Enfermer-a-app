@@ -35,3 +35,7 @@
 *.sqlite-shm
 
 **/node_modules/
+
+# Estado regenerable de futuras herramientas Supabase CLI; no historial SQL.
+/supabase/.temp/
+/supabase/.branches/

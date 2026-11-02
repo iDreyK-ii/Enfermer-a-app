@@ -1,6 +1,18 @@
 # Desarrollo continuo del aplicativo iDreyK 360
 
-## Punto actual: desarrollo-v0.4.1
+## Punto actual: infraestructura Supabase inicial
+
+Proyecto real `idreyk-360-dev` / `dmxfdvvcvfecqhbbmrlu`, región `us-east-1` autorizada tras descartar Brasil. Creación solicitada con plan Free. Migración `20261102110405_inicial_catalogo_seguro_v1` aplicada y contrastada con el SQL local. No volver a aplicar el esquema inicial.
+
+7/7 controles HTTPS y 12/12 comprobaciones SQL; cuatro tablas con RLS y bucket privado. En esta fase local: 41 pruebas Python + 5 SQLite + 17 PGlite. **No se reejecutaron Android ni Gradle**: `app/` y el APK v0.4.1 siguen intactos. Se preparó configuración pública y compilador explícito, no un nuevo APK.
+
+Pendientes: propietario debe cambiar dos plantillas de correo a OTP; SMTP/remitente de prueba, acceso real y casos autenticados aún no validados. GitHub: el usuario indicó tener repositorio pero falta su URL y un medio de escritura autorizado. No se hizo push. Se posponen teléfonos hasta después de sincronizar, como solicitó.
+
+Documentos: `docs/SUPABASE_REAL_Y_GITHUB.md` y `qa/SUPABASE_REAL_2026-11-02.md`. Tag de este punto: `infra-supabase-v1`. Nunca incluir claves administrativas, contraseña de DB ni firma privada.
+
+## Historial del último APK
+
+## Punto del APK: desarrollo-v0.4.1
 
 Pulido previo a la futura sincronización: importación con diferencias/aceptación y huella anticolisión, campos congelados durante escrituras, adaptación a pantallas/letra grande, microinteracciones sin forzar movimiento y JSON acotado. SQLite2 y formatos1/2/3 se conservan.
 

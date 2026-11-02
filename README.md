@@ -1,8 +1,10 @@
 # Enfermería iDreyK 360 — Android nativo v0.4.1
 
-Evolución del mismo aplicativo del **Prototipo B**, en Kotlin/Jetpack Compose. La biblioteca descargada sigue disponible sin conexión. Se incorporan la estructura farmacológica aportada por el usuario, rendimiento adaptable y un conector opcional de cuentas/actualización de contenido.
+Evolución del mismo aplicativo del **Prototipo B**, en Kotlin/Jetpack Compose. La biblioteca descargada sigue disponible sin conexión. Se conservan la estructura farmacológica aportada por el usuario, rendimiento adaptable y un conector opcional de cuentas/actualización de contenido.
 
-**Estado real:** código compilado y pruebas locales ejecutadas; **ningún proyecto Supabase está conectado**. El APK entregado no contiene URL/clave de servidor y muestra «Nube sin configurar». No se simulan cuentas, envíos de correo ni descargas. Solo contenido de práctica: no certificada para pacientes reales.
+**Estado actual de infraestructura (2 de noviembre de 2026):** se creó `idreyk-360-dev` en Supabase, región Virginia autorizada, y se aplicó su migración. Pasaron **7 controles HTTPS y 12 comprobaciones SQL reales**. Correo OTP y sesión real siguen pendientes de configuración/prueba con el propietario. Ver [docs/SUPABASE_REAL_Y_GITHUB.md](docs/SUPABASE_REAL_Y_GITHUB.md).
+
+**El APK entregado v0.4.1 no cambió:** todavía tiene nube vacía. Se dejaron parámetros públicos y un comando para la próxima compilación conectada; no se ejecutó esa compilación en esta fase. GitHub no tiene destino confirmado ni push. Solo contenido de práctica, sin validación para pacientes reales.
 
 ## Pulido v0.4.1 antes de sincronizar
 
@@ -69,9 +71,9 @@ El PDF del usuario aporta **17 conceptos**, no monografías ni prueba de aval DI
 
 - Nueva plantilla: `content-tools/Plantilla_farmacos_v3.xlsx`.
 - Ejemplo editable: `content-tools/plantilla_farmaco_v3.json`.
-- v0.4 importa formatos **1, 2 y 3** y exporta **3**. v0.2/v0.3 no admiten el nuevo formato 3; no volver atrás instalando una versión antigua.
+- Desde v0.4 se importan formatos **1, 2 y 3** y se exporta **3**. v0.2/v0.3 no admiten el nuevo formato 3; no volver atrás instalando una versión antigua.
 - Los seis medicamentos iniciales siguen en borrador. Sin dosis, controles o fuentes inventadas.
-- Se conservan límites actuales: 2 MB, 500 registros agregados, 300 por tipo. La paginación para grandes catálogos queda pendiente.
+- Se conservan límites actuales: 2 MB, 500 registros agregados, 300 por tipo. La revisión de importación está paginada; los catálogos remotos mayores que estos límites siguen pendientes.
 
 ```sh
 python3 -m pip install -r content-tools/requirements.txt
@@ -90,9 +92,9 @@ chmod +x gradlew
   '-Dorg.gradle.jvmargs=-Xmx640m -XX:MaxMetaspaceSize=384m -XX:+UseSerialGC -Dfile.encoding=UTF-8'
 ```
 
-Salida: `app/build/outputs/apk/debug/app-debug.apk`. No hay servidor local/puerto que levantar. Para activar nube, seguir **[backend/README.md](backend/README.md)**: crear/configurar proyecto, aplicar RLS, preparar correo y compilar con URL/clave publicable. Las claves secretas nunca van en el APK.
+Salida: `app/build/outputs/apk/debug/app-debug.apk`. No hay servidor local/puerto que levantar. Para el proyecto ya creado, seguir **[docs/SUPABASE_REAL_Y_GITHUB.md](docs/SUPABASE_REAL_Y_GITHUB.md)**: terminar correo y preparar la compilación conectada. No volver a aplicar el esquema inicial sobre ese proyecto. Las claves secretas nunca van en el APK.
 
-El APK v0.4 declara INTERNET; sin configuración no realiza solicitudes. Las consultas de actualización son manuales y requieren confirmación para guardar. No hay push, reemplazo silencioso, retiros automáticos ni subida de notas/planes.
+Desde v0.4 el APK declara INTERNET; sin configuración no realiza solicitudes. Las consultas de actualización son manuales y requieren confirmación para guardar. No hay push, reemplazo silencioso, retiros automáticos ni subida de notas/planes.
 
 **Firma:** usar el APK entregado para actualizar la instalación anterior sin desinstalar. Una compilación en otra máquina puede tener otra clave debug y no actualizarla. La clave privada no se distribuye. No se ha probado todavía la actualización en un teléfono físico.
 
@@ -100,7 +102,7 @@ El APK v0.4 declara INTERNET; sin configuración no realiza solicitudes. Las con
 
 Ver [qa/RESULTADOS_v0.4.1.md](qa/RESULTADOS_v0.4.1.md): pruebas Android/JVM y Compose simulado, conversor/publicación, PostgreSQL/RLS y espejo SQLite. Los resultados de v0.3/v0.4 permanecen como evidencia histórica separada.
 
-No se verificaron servidor Supabase real, correo/SMTP, instalación física, hardware Keystore, rendimiento medido en gamas distintas ni validación clínica. El diseño exportado es una **maqueta**, no una captura del APK. Las pruebas de reglas y aritmética no certifican atención clínica.
+El servidor real tiene la primera validación de esquema y API documentada en [qa/SUPABASE_REAL_2026-11-02.md](qa/SUPABASE_REAL_2026-11-02.md). No se verificaron correo/sesión reales, instalación física, hardware Keystore, rendimiento medido en gamas distintas ni validación clínica. El diseño exportado es una **maqueta**, no una captura del APK. Las pruebas de reglas y aritmética no certifican atención clínica.
 
 ## 7. Continuidad con IA
 

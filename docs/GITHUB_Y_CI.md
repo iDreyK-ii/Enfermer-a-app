@@ -1,6 +1,12 @@
 # Preparación para GitHub — v0.4.1
 
-**Estado:** Git local y exportación preparados. No hay un repositorio remoto creado/vinculado, ningún push ejecutado ni una ejecución de GitHub Actions comprobada. El conector GitHub consultado en este entorno no está soportado; esto no impide entregar el Git bundle ni usar Git desde una máquina autorizada cuando se facilite el repositorio real.
+**Estado:** Git local y exportación preparados. Este proyecto no tiene un remoto configurado aquí. El propietario indicó que tiene repositorio, pero falta su URL; no se ha ejecutado ningún push ni comprobado una ejecución de GitHub Actions. El conector GitHub consultado en este entorno no está soportado; esto no impide entregar el Git bundle ni usar Git desde una máquina autorizada cuando se facilite el repositorio real.
+
+## Actualización del servidor
+
+Ya existe el proyecto real documentado en `SUPABASE_REAL_Y_GITHUB.md`, con configuración publicable versionada. La calidad/CI sigue **aislada de ese servicio**: fuerza nube vacía y solo ejecuta el comprobador de red con transportes ficticios. `backend/comprobar_supabase.py --remoto` requiere una acción explícita separada. No hay despliegue automático de SQL ni workflow de firma privada.
+
+El usuario indicó que tiene repositorio GitHub, pero aún falta la URL y autenticación de escritura. No inventar un remoto ni dar por realizado el push.
 
 ## Qué se añadió
 

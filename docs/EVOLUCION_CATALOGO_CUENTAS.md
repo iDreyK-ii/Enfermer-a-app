@@ -1,3 +1,5 @@
+> **Infraestructura actual, 2 de noviembre de 2026:** el proyecto Supabase real ya fue creado y su API/RLS comprobados. Correo/sesión real, APK conectado y GitHub siguen pendientes. Ver `SUPABASE_REAL_Y_GITHUB.md`. El resto de este documento conserva el historial de decisiones.
+
 > **Estado posterior v0.4.1:** pulido de accesibilidad, movimiento, importación protegida y preparación CI realizado. Ver `MEJORAS_v0.4.1.md` y `../qa/RESULTADOS_v0.4.1.md`. El alcance de arquitectura que sigue se mantiene; Supabase y GitHub remoto no están conectados.
 
 # Evolución solicitada: farmacología, cuentas y rendimiento

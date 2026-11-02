@@ -31,4 +31,4 @@ if [[ "$mode" == --todo ]]; then
   run_check ensamblado-lint "$gradle" "${common[@]}" :app:assembleDebug :app:lintDebug "$memory"
   run_check apk "$python" scripts/verificar_apk.py
 fi
-printf '\nComprobaciones locales completadas. No se desplegó Supabase ni se ejecutó una instalación física.\n'
+printf '\nComprobaciones locales completadas. Este script no despliega servicios ni realiza pruebas físicas.\n'

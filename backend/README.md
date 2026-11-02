@@ -1,6 +1,8 @@
 # Servidor administrado — Supabase / PostgreSQL
 
-La petición actual autoriza cuentas y actualización remota del catálogo. Se ha añadido el conector Android y este esquema/configuración; **no se ha creado ni conectado un proyecto real**. El APK entregado no contiene URL/clave de ningún servidor y muestra «Nube sin configurar». No crea cuentas ficticias ni finge una descarga.
+**Servidor real creado el 2 de noviembre de 2026:** `idreyk-360-dev`, referencia `dmxfdvvcvfecqhbbmrlu`, región autorizada Virginia (`us-east-1`), con plan Free solicitado. Migración y RLS verificados; 7/7 comprobaciones HTTPS. Ver `../docs/SUPABASE_REAL_Y_GITHUB.md` para el estado y las acciones pendientes de correo.
+
+**No repetir el esquema inicial sobre ese proyecto.** La sección de configuración que sigue sirve para entender la infraestructura o para un proyecto nuevo autorizado. El APK entregado v0.4.1 sigue sin endpoint: no se recompiló. Las cuentas, la recepción de OTP y el SMTP propio todavía no están probados ni completados.
 
 No es otro aplicativo web ni un servidor Node. Node se usa únicamente para probar SQL/RLS con PostgreSQL en WebAssembly.
 
@@ -93,7 +95,7 @@ En Android: **Inicio → Actualizar biblioteca → Buscar actualización de cont
 - SHA-256 comprueba integridad, no autoría profesional ni seguridad clínica. HTTPS, permisos y control editorial siguen siendo necesarios.
 - No hay respaldo cloud de notas/PAE/favoritos/archivos ni sincronización multicuenta. Los datos locales pertenecen a la instalación y no se aíslan automáticamente por cuenta; cerrar sesión no borra el cuaderno.
 - Cerrar sesión no elimina la cuenta; la baja del servidor se solicita al responsable. Un flujo de eliminación dentro de la app y otros requisitos de publicación pública están pendientes.
-- No hubo pruebas de SMTP, Auth o Storage reales ni pruebas físicas de Keystore/instalación. No hay promesa de producción, disponibilidad, residencia de datos o cumplimiento normativo por desplegar el SQL.
+- Ya se comprobó salud/API/esquema del servidor real. Siguen pendientes entrega SMTP, sesión Auth, transferencia de archivos Storage y pruebas físicas de Keystore/instalación. No hay promesa de producción, disponibilidad, residencia de datos o cumplimiento normativo por desplegar el SQL.
 
 ## Pruebas reproducibles
 
@@ -104,4 +106,10 @@ python3 -m unittest discover -s backend/tests -p 'test_*.py' -v
 python3 database/verificar_esquema.py
 ```
 
-`npm test` ejecuta PostgreSQL mediante PGlite, con Auth/Storage mínimos simulados para probar las políticas. No demuestra que un proyecto Supabase real esté configurado ni que el correo funcione. La evidencia Android está separada en `qa/v04/`.
+`npm test` ejecuta PostgreSQL mediante PGlite, con Auth/Storage mínimos simulados para probar las políticas. No demuestra que un proyecto Supabase real esté configurado ni que el correo funcione. La última evidencia del APK está separada en `qa/v041/`. La evidencia nueva del servicio está en `qa/supabase_real_20261102/`; las pruebas locales de PGlite no la sustituyen.
+
+## Comprobar el servidor existente y preparar cliente
+
+`python3 backend/comprobar_supabase.py --remoto` realiza siete GET de solo lectura; no envía correos. Sin `--remoto` solo valida la configuración.
+
+`python3 scripts/compilar_con_supabase.py` comprueba parámetros públicos; `--compilar` ejecuta Gradle con ellos cuando el entorno y la firma estén preparados. No se debe dar por conectado el APK antiguo por haber creado el proyecto.

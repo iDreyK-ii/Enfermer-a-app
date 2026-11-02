@@ -1,0 +1,108 @@
+{
+  "date": "2026-11-02",
+  "project_ref": "dmxfdvvcvfecqhbbmrlu",
+  "project_name": "idreyk-360-dev",
+  "region": "us-east-1",
+  "requested_plan": "free",
+  "billing_details_returned": false,
+  "services": {
+    "auth": "ACTIVE_HEALTHY",
+    "db": "ACTIVE_HEALTHY",
+    "rest": "ACTIVE_HEALTHY",
+    "storage": "ACTIVE_HEALTHY"
+  },
+  "sql_checks": {
+    "anon_no_profiles": true,
+    "anon_no_drafts": true,
+    "anon_can_read_release_rows_subject_to_rls": true,
+    "anon_cannot_insert_release": true,
+    "authenticated_cannot_read_editor_list": true,
+    "authenticated_cannot_change_editor_list": true,
+    "anon_cannot_execute_editor_function": true,
+    "private_editor_function_security_definer": true,
+    "release_guard_present": true,
+    "storage_bucket_private": true,
+    "no_clinical_releases_inserted": true,
+    "no_accounts_created_by_setup": true
+  },
+  "rls_enabled_tables": [
+    "idreyk_private.editors",
+    "public.catalog_drafts",
+    "public.catalog_releases",
+    "public.profiles"
+  ],
+  "policies_inspected": 10,
+  "editor_function_security_definer": true,
+  "editor_function_search_path": "pg_catalog",
+  "bucket": {
+    "name": "editorial-fuentes",
+    "public": false,
+    "file_size_limit": 10485760,
+    "allowed_mime_types": [
+      "application/pdf",
+      "application/json",
+      "image/png",
+      "image/jpeg"
+    ]
+  },
+  "counts_at_verification": {
+    "profiles": 0,
+    "editors": 0,
+    "drafts": 0,
+    "releases": 0
+  },
+  "migration": {
+    "version": "20261102110405",
+    "name": "inicial_catalogo_seguro_v1",
+    "server_sql_bytes": 7942,
+    "server_sql_sha256": "3c465d79883b47520ad0f05fa3f0aadfcf0a98be64e95d005bf82f0271e49581",
+    "source_file_bytes": 7943,
+    "source_file_sha256": "a99d4e12f9185fddb3f52689d54b0ab44c6f0fd193a3ed962a276d72ae8a5ebf",
+    "identical_excluding_final_line_feed": true
+  },
+  "auth_observed": {
+    "email_enabled": true,
+    "phone_enabled": false,
+    "anonymous_users_enabled": false,
+    "email_autoconfirm": false,
+    "refresh_rotation": true,
+    "otp_digits": 8,
+    "otp_expiry_seconds": 3600,
+    "email_rate_per_hour": 2,
+    "custom_smtp_configured": false,
+    "confirmation_template_has_token": false,
+    "magic_link_template_has_token": false,
+    "site_url": "http://localhost:3000"
+  },
+  "tool_request_ids": {
+    "creation": "1b97cadb-1858-4c78-93cd-7c1dccbfc63f",
+    "services": "5e06a3a7-3aa1-41d1-9570-5b2293b31e84",
+    "permissions": "fe24f424-7222-4c63-93ec-1e45e87f9991",
+    "metadata": "aeb33fc5-dfbb-4f5d-9305-f0bdb95ef9e3",
+    "migration_digest": "bf9bf84e-35d4-44c1-8c34-3c32abe6e108"
+  },
+  "live_https": {
+    "passed": 7,
+    "total": 7,
+    "details": "https.json"
+  },
+  "local_checks": {
+    "repository_guard_tests": 5,
+    "converter_tests": 15,
+    "backend_tests": 21,
+    "sqlite_tests": 5,
+    "pglite_checks": 17
+  },
+  "not_completed": [
+    "email_template_changes",
+    "real_email_delivery",
+    "verified_user_session",
+    "cross_user_real_session_tests",
+    "real_storage_upload_download",
+    "connected_apk_build",
+    "github_push",
+    "github_actions_execution",
+    "physical_android_tests",
+    "clinical_validation"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "project_ref": "dmxfdvvcvfecqhbbmrlu",
+  "checked_at_utc": "2026-11-02T11:11:38.920762+00:00",
+  "public_key_sha256": "af3d1f17feb4dc87c0ed27d7930b87f4a2e51375a3fb67c79aea76f11c4cac21",
+  "checks": [
+    {
+      "check": "auth_health",
+      "ok": true,
+      "http_status": 200
+    },
+    {
+      "check": "email_provider_enabled",
+      "ok": true,
+      "http_status": 200
+    },
+    {
+      "check": "catalog_read",
+      "ok": true,
+      "http_status": 200,
+      "row_count": 0
+    },
+    {
+      "check": "profiles_denied",
+      "ok": true,
+      "http_status": 401,
+      "error_code": "42501"
+    },
+    {
+      "check": "drafts_denied",
+      "ok": true,
+      "http_status": 401,
+      "error_code": "42501"
+    },
+    {
+      "check": "private_schema_not_exposed",
+      "ok": true,
+      "http_status": 406,
+      "error_code": "PGRST106"
+    },
+    {
+      "check": "missing_key_denied",
+      "ok": true,
+      "http_status": 401
+    }
+  ],
+  "passed": 7,
+  "total": 7,
+  "method": "GET only; public key; no redirect; bounded responses",
+  "email_delivery_tested": false,
+  "authenticated_session_tested": false,
+  "write_or_publication_performed": false,
+  "physical_android_tested": false
+}

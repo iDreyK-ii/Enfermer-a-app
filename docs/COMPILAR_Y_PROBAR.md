@@ -51,11 +51,14 @@ APK: `app/build/outputs/apk/debug/app-debug.apk`. La primera compilación descar
 
 ## Activar nube, separado de la comprobación local
 
+**Actualización de infraestructura:** el servidor `idreyk-360-dev` ya está creado. No repetir el SQL inicial ni crear otro proyecto para esta app. Ver `docs/SUPABASE_REAL_Y_GITHUB.md`. Se puede validar la configuración con `python3 scripts/compilar_con_supabase.py` y compilar explícitamente agregando `--compilar` una vez preparados herramientas y firma; esta compilación no se ejecutó en la fase de servidor.
+
+
 Gradle lee `IDREYK_SUPABASE_URL` e `IDREYK_SUPABASE_PUBLISHABLE_KEY` de entorno o propiedades Gradle; `.env` no se carga automáticamente. Ambas vacías mantienen la app local. Ambas válidas habilitan el conector.
 
-Antes de compilar un cliente conectado, crear/configurar un proyecto propio con RLS y correo siguiendo `backend/README.md`. Después compilar con `:app:assembleDebug` y los valores públicos reales, **sin los argumentos que los vacían en el script de pruebas**. Nunca incorporar la clave secreta, `service_role`, contraseña PostgreSQL o clave privada de firma.
+Para otro proyecto nuevo autorizado, crear/configurar RLS y correo siguiendo `backend/README.md`; para el ya creado, seguir el estado y los pendientes de la guía actual. Después compilar con `:app:assembleDebug` y los valores públicos reales, **sin los argumentos que los vacían en el script de pruebas**. Nunca incorporar la clave secreta, `service_role`, contraseña PostgreSQL o clave privada de firma.
 
-El APK entregado aquí se compiló sin proyecto. No existe una conexión simulada presentada como real. La integración real necesita su propio plan de pruebas y consentimiento; no reutilizar cuentas reales desde pruebas unitarias.
+El APK v0.4.1 entregado se compiló sin proyecto y no ha sido sustituido. No existe una conexión simulada presentada como real. La integración real necesita su propio plan de pruebas y consentimiento; no reutilizar cuentas reales desde pruebas unitarias.
 
 ## Instalar sin perder datos
 

@@ -1,0 +1,13 @@
+{
+  "project_name": "idreyk-360-dev",
+  "project_ref": "dmxfdvvcvfecqhbbmrlu",
+  "organization_name": "iDreyK",
+  "region": "us-east-1",
+  "url": "https://dmxfdvvcvfecqhbbmrlu.supabase.co",
+  "publishable_key": "sb_publishable_S_3WfW56Qeibu9Hn3JyiDQ_hKO2Rj2T",
+  "migration_version": "20261102110405",
+  "migration_name": "inicial_catalogo_seguro_v1",
+  "requested_plan": "free",
+  "created_at_utc": "2026-11-02T09:11:47.163348Z",
+  "notice": "Configuración PUBLICABLE del cliente, no identidad ni permiso editorial. La privacidad depende de RLS. Nunca añadir claves administrativas o contraseñas."
+}

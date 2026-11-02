@@ -11,7 +11,7 @@
 
 - Kotlin + Jetpack Compose. UI/navegación en `MainActivity.kt`, `Design.kt` y `Screens*.kt`.
 - Operaciones persistentes: `AppViewModel` -> `ContentRepository` -> SQLite/archivos privados. La lógica matemática y la validación permanecen separadas en sus modelos.
-- El usuario pidió expresamente cuentas y catálogo remoto en la fase v0.4. Hay conector opcional a Supabase (PostgreSQL/Auth/Storage), pero el APK entregado no tiene proyecto configurado. Mantener lectura local sin cuenta obligatoria. Nunca afirmar conexión real, correo enviado o despliegue sin verificarlos. No crear una app web que sustituya Android.
+- El usuario pidió expresamente cuentas y catálogo remoto en la fase v0.4. El proyecto Supabase real `idreyk-360-dev` ya existe en `us-east-1` y tiene migración/RLS verificados. El APK entregado v0.4.1 sigue sin proyecto incorporado. Leer `docs/SUPABASE_REAL_Y_GITHUB.md`: no repetir el SQL inicial; correo/sesión real y compilación conectada siguen pendientes. Mantener lectura local sin cuenta obligatoria. Nunca afirmar conexión real, correo enviado o despliegue sin verificarlos. No crear una app web que sustituya Android.
 - No renombrar tablas, paquete Android, versión de datos o clave de firma sin plan de compatibilidad/migración.
 - No copiar `AUTO_INCREMENT`, usuarios de administrador o contraseñas de un ejemplo de servidor dentro de esta base SQLite.
 
@@ -44,4 +44,4 @@
 
 ## Continuidad
 
-Registrar el cambio, su alcance, resultados y pendientes. El historial técnico está en `DESARROLLO.md`; los resultados actuales están en `qa/RESULTADOS_v0.4.1.md`. `qa/RESULTADOS.md` conserva la evidencia histórica de v0.3. Las pruebas de una sesión anterior no deben describirse como ejecutadas de nuevo sin haberlo hecho.
+Registrar el cambio, su alcance, resultados y pendientes. El historial técnico está en `DESARROLLO.md`; la fase de servidor está en `qa/SUPABASE_REAL_2026-11-02.md`; los últimos resultados del APK están en `qa/RESULTADOS_v0.4.1.md`. `qa/RESULTADOS.md` conserva la evidencia histórica de v0.3. Las pruebas de una sesión anterior no deben describirse como ejecutadas de nuevo sin haberlo hecho.
