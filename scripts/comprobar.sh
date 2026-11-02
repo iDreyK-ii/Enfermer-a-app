@@ -13,7 +13,17 @@ logs="${QA_LOG_DIR:-.cache/qa-actual}"
 mkdir -p "$logs"
 run_check() {
   local name="$1"; shift
-  "$@" 2>&1 | tee "$logs/$name.txt"
+  if "$@" 2>&1 | tee "$logs/$name.txt"; then
+    return 0
+  else
+    local statuses=("${PIPESTATUS[@]}")
+    local status="${statuses[0]}"
+    if [[ "$status" == 0 ]]; then status="${statuses[1]}"; fi
+    if [[ "${GITHUB_ACTIONS:-false}" == true ]]; then
+      "$python" scripts/resumir_fallo_ci.py --etapa "$name" --log "$logs/$name.txt" || true
+    fi
+    return "$status"
+  fi
 }
 run_check repositorio "$python" scripts/verificar_repositorio.py
 run_check guardas "$python" -m unittest discover -s scripts/tests -p 'test_*.py' -v

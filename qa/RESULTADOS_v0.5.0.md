@@ -25,3 +25,9 @@ No se ejecutaron localmente tests Android, lint o ensamblado: el entorno local t
 - No equivalencia de la firma de Google/CI con la firma privada del APK previo.
 
 El propietario informa que Google construyó la revisión previa sin cambios. Esa declaración se conserva como **reporte del propietario**, no como inspección independiente del APK o de su exportación.
+
+## Diagnóstico de CI (segunda revisión técnica)
+
+El primer run `41540992515` para `9445652` falló en la etapa de calidad. La API pública devolvió solo el código de salida; el acceso SSH al repositorio no concede acceso administrativo a descargar logs. No se afirma una causa sin evidencia.
+
+Se añadió un diagnóstico acotado de la ejecución actual como anotaciones de GitHub, con redacción de credenciales, escape de comandos, límite de longitud y resumen de XML de tests fallidos. **No aumenta permisos del workflow, no usa secretos y no oculta ni convierte el fallo en éxito.** Siete tests Python comprueban el diagnóstico, incluido conservar el código de salida original del comando.
