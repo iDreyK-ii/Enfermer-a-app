@@ -31,8 +31,14 @@ class ClinicalCatalogTests {
     }
 
     @Test fun searchIgnoresAccentsAndCase() {
-        assertEquals(listOf("numerica"), catalog().filter(query = "NUMERICA").map { it.id })
-        assertTrue(catalog().filter(query = "neonatologia").any { it.id == "apgar" })
+        val data = catalog()
+        // Search intentionally includes the version, not only the title. Barthel documents
+        // "escalas numéricas" in its version warning and is therefore a valid broad match.
+        val broadMatches = listOf("numerica", "barthel")
+        assertEquals(broadMatches, data.filter(query = "numérica").map { it.id })
+        assertEquals(broadMatches, data.filter(query = "NUMERICA").map { it.id })
+        assertEquals(listOf("numerica"), data.filter(query = "ESCALA NUMERICA").map { it.id })
+        assertTrue(data.filter(query = "neonatologia").any { it.id == "apgar" })
     }
 
     @Test fun filtersCombineInsteadOfReplacingEachOther() {

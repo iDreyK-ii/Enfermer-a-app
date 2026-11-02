@@ -4,6 +4,7 @@ import android.os.Looper
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.lifecycle.ViewModelProvider
+import java.time.Duration
 import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Rule
@@ -102,11 +103,39 @@ class ClinicalInterfaceTests {
         ui.onNodeWithText("4 / 12").assertExists()
         ui.onNodeWithText("Posible delirium,", substring = true).assertExists()
         click("Guardar práctica 4AT")
-        await { vm.data.practices.any { it.type == "4AT · práctica" } }
+        await { !vm.busy && vm.data.practices.any { it.type == "4AT · práctica" } }
         assertTrue(vm.data.practices.first { it.type == "4AT · práctica" }.summary.contains("0/2/2/0"))
+        // A real pointer click must not hit the transient save Snackbar over the lower button.
+        // Advance both virtual clocks (Compose and paused Android Looper), not wall-clock sleep.
+        ui.mainClock.advanceTimeBy(6_000)
+        shadowOf(Looper.getMainLooper()).idleFor(Duration.ofSeconds(6))
+        ui.mainClock.advanceTimeBy(1_000)
+        ui.waitForIdle()
+        ui.onNodeWithText("Resultado de práctica guardado, sin datos de pacientes").assertDoesNotExist()
+        ui.onNodeWithText("Reiniciar 4AT").assertIsEnabled()
         click("Reiniciar 4AT")
         ui.onNodeWithText("4 / 12").assertDoesNotExist()
+        ui.onNodeWithText("0 DE 4 COMPONENTES").assertExists()
+        ui.onAllNodesWithText("Selecciona una respuesta").assertCountEquals(4)
         ui.onNodeWithText("Guardar práctica 4AT").assertIsNotEnabled()
+    }
+
+    @Test fun fourAtResetBeforeSavingClearsEveryComponentWithoutCreatingARecord() {
+        scales()
+        click("4AT")
+        val previousRecords = vm.data.practices.size
+        ui.onNodeWithTag("4at-adulto").performScrollTo().performClick()
+        choice("1 · Estado de consciencia", "Claramente anormal · 4")
+        choice("2 · AMT4", "Sin errores · 0")
+        choice("3 · Atención", "Siete meses o más correctamente · 0")
+        choice("4 · Cambio agudo o curso fluctuante", "No · 0")
+        ui.onNodeWithText("4 / 12").assertExists()
+        click("Reiniciar 4AT")
+        ui.onNodeWithText("4 / 12").assertDoesNotExist()
+        ui.onNodeWithText("0 DE 4 COMPONENTES").assertExists()
+        ui.onAllNodesWithText("Selecciona una respuesta").assertCountEquals(4)
+        ui.onNodeWithText("Guardar práctica 4AT").assertIsNotEnabled()
+        assertEquals(previousRecords, vm.data.practices.size)
     }
 
     @Test fun fourAtPopulationAcknowledgementCanBeWithdrawnWithoutKeepingScores() {
