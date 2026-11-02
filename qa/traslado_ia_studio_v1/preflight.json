@@ -1,0 +1,28 @@
+{
+  "checked_at_utc": "2026-11-02T13:32:14.365554+00:00",
+  "phase": "precommit: nuevas guardas e instrucciones; el manifiesto local generado en esta pasada apunta al HEAD previo, no al futuro commit",
+  "parent_head": "62d06f42d12534632f50f82113c38fd48364bdb9",
+  "python_tests_excluding_sqlite": 78,
+  "python_groups": {
+    "scripts": 42,
+    "converter": 15,
+    "backend": 21
+  },
+  "new_transfer_tests": 28,
+  "new_identity_contract_tests": 9,
+  "sqlite_checks": 5,
+  "pglite_checks": 17,
+  "app_unchanged_from_tag": "desarrollo-v0.4.1",
+  "sqlite_and_applied_migration_unchanged": true,
+  "android_rerun_locally": false,
+  "ai_studio_import_verified": false,
+  "ai_studio_build_verified": false,
+  "physical_device_tested": false,
+  "email_otp_deferred": true,
+  "previous_real_zip_check": {
+    "commit": "62d06f42d12534632f50f82113c38fd48364bdb9",
+    "expected_files": 273,
+    "identical_files": 273,
+    "ok": true
+  }
+}

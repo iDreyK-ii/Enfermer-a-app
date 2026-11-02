@@ -1,8 +1,10 @@
 # Enfermería iDreyK 360 — Android nativo v0.4.1
 
+> **Continuidad con Google AI Studio:** empezar por [INICIAR_EN_AI_STUDIO.md](INICIAR_EN_AI_STUDIO.md), [identidad técnica](CONTINUIDAD.json) e [inventario funcional actual](docs/INVENTARIO_FUNCIONAL_ACTUAL.md). Se traslada esta app nativa completa, no una recreación. Cada actualización parte de un commit exacto de `desarrollo`; la copia importada se verifica antes de compilar. La importación/compilación real en AI Studio todavía no está comprobada.
+
 Evolución del mismo aplicativo del **Prototipo B**, en Kotlin/Jetpack Compose. La biblioteca descargada sigue disponible sin conexión. Se conservan la estructura farmacológica aportada por el usuario, rendimiento adaptable y un conector opcional de cuentas/actualización de contenido.
 
-**Estado actual de infraestructura (2 de noviembre de 2026):** se creó `idreyk-360-dev` en Supabase, región Virginia autorizada, y se aplicó su migración. Pasaron **7 controles HTTPS y 12 comprobaciones SQL reales**. Correo OTP y sesión real siguen pendientes de configuración/prueba con el propietario. Ver [docs/SUPABASE_REAL_Y_GITHUB.md](docs/SUPABASE_REAL_Y_GITHUB.md).
+**Estado actual de infraestructura (2 de noviembre de 2026):** se creó `idreyk-360-dev` en Supabase, región Virginia autorizada, y se aplicó su migración. Pasaron **7 controles HTTPS y 12 comprobaciones SQL reales**. Correo OTP y sesión real siguen pendientes; el propietario autorizó aplazar esa configuración y continuar en modo local, sin cuenta obligatoria. Ver [docs/SUPABASE_REAL_Y_GITHUB.md](docs/SUPABASE_REAL_Y_GITHUB.md).
 
 **El APK entregado v0.4.1 no cambió:** todavía tiene nube vacía. Se dejaron parámetros públicos y un comando para la próxima compilación conectada; no se ejecutó esa compilación en esta fase. El repositorio de trabajo autorizado es [iDreyK-ii/Enfermer-a-app](https://github.com/iDreyK-ii/Enfermer-a-app), rama `desarrollo`, público por decisión del propietario. Ver [destino y comprobación de sincronización](docs/GITHUB_DESTINO.md). Solo contenido de práctica, sin validación para pacientes reales.
 

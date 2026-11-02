@@ -1,0 +1,69 @@
+{
+  "formato": 1,
+  "proyecto": "Enfermería iDreyK 360",
+  "repositorio_canonico": "https://github.com/iDreyK-ii/Enfermer-a-app",
+  "rama": "desarrollo",
+  "hito": "traslado-ia-studio-v1",
+  "politica": "Continuar el aplicativo existente; no regenerarlo desde una descripción ni sustituirlo por una web.",
+  "android": {
+    "tecnologia": "Kotlin / Jetpack Compose",
+    "modulos": [":app"],
+    "actividad": ".MainActivity",
+    "namespace": "com.idreyk.enfermeria360",
+    "application_id": "com.idreyk.enfermeria360",
+    "debug_application_id": "com.idreyk.enfermeria360.dev",
+    "version_code": 5,
+    "version_name": "0.4.1-dev",
+    "min_sdk": 26,
+    "target_sdk": 35,
+    "compile_sdk": 35,
+    "permiso_directo": "android.permission.INTERNET",
+    "perfil_actual": "local_sin_cuenta_obligatoria"
+  },
+  "persistencia": {
+    "motor_local": "SQLite",
+    "archivo": "idreyk_local.db",
+    "version": 2,
+    "tablas": ["content", "packages", "favorites", "notes", "practice", "meta", "notebooks", "media"],
+    "catalogo_lee": [1, 2, 3],
+    "catalogo_exporta": 3,
+    "respaldo_cuaderno": 1,
+    "sincronizacion_personal_automatica": false,
+    "datos_telefonos_incluidos_en_git": false
+  },
+  "diseno": {
+    "base": "Prototipo B; selección inicio 2 / ficha 1",
+    "inicio": "design/propuesta_v0.4/01_inicio.png",
+    "ficha": "design/propuesta_v0.4/02_ficha_farmacologica.png",
+    "ficha_legible": "design/propuesta_v0.4/02_ficha_legible.png",
+    "guia": "design/propuesta_v0.4/GUIA_DISENO.md",
+    "conservar_accesibilidad_y_movimiento_adaptable": true
+  },
+  "servidor": {
+    "proveedor": "Supabase",
+    "proyecto": "idreyk-360-dev",
+    "referencia": "dmxfdvvcvfecqhbbmrlu",
+    "region": "us-east-1",
+    "migracion_aplicada": "20261102110405_inicial_catalogo_seguro_v1",
+    "no_reaplicar_migracion_inicial": true,
+    "parametros_publicables": "backend/supabase/deployment.public.json",
+    "otp_y_sesion": "pendientes; configuración de plantillas aplazada por el propietario",
+    "apk_conectado_entregado": false,
+    "sustitucion_por_firebase_autorizada": false
+  },
+  "firma": {
+    "certificado_debug_conservado_sha256": "d6874c68417eefb1b1b902bf82ba4ce7d8734e47877e12bd1733eb498f0e522b",
+    "apk_local_v041_sha256": "29799b5b623a2830fdd9ad08e811f7e254060d5729b9e71684d373d9b8bcb204",
+    "clave_privada_en_repositorio": false,
+    "compatibilidad_firma_externa": "comprobar antes de instalar; no asumir equivalencia con CI o AI Studio"
+  },
+  "traslado": {
+    "comparar_todos_los_archivos_versionados": true,
+    "revision_objetivo": "commit exacto indicado en cada entrega; no asumir que una copia de la rama está actualizada",
+    "comprobador": "scripts/verificar_traslado.py",
+    "importacion_real_ai_studio_verificada": false,
+    "compilacion_real_ai_studio_verificada": false,
+    "pruebas_fisicas_verificadas": false,
+    "validacion_clinica": false
+  }
+}

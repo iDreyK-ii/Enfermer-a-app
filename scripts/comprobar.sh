@@ -17,6 +17,7 @@ run_check() {
 }
 run_check repositorio "$python" scripts/verificar_repositorio.py
 run_check guardas "$python" -m unittest discover -s scripts/tests -p 'test_*.py' -v
+run_check manifiesto "$python" scripts/verificar_traslado.py manifiesto --ref HEAD --salida "$logs/manifiesto-fuentes.json"
 run_check conversor "$python" -m unittest discover -s content-tools -p test_converter.py -v
 run_check publicacion "$python" -m unittest discover -s backend/tests -p 'test_*.py' -v
 run_check sqlite "$python" database/verificar_esquema.py

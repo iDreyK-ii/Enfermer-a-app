@@ -8,7 +8,7 @@ Destino autorizado por el propietario el 2 de noviembre de 2026:
 - Comprobación inicial: repositorio vacío, sin ramas ni tags; clave SSH de despliegue identificada por GitHub como perteneciente únicamente a este repositorio; prueba de escritura `--dry-run` aceptada sin enviar archivos.
 - Mecanismo: Git/SSH autorizado. El conector GitHub de este entorno no está soportado; no se utiliza para autenticar ni subir archivos.
 
-No se debe confundir una prueba `--dry-run` con una subida. Después del envío se comparan los hashes de la rama y de cada tag con los que devuelve GitHub. El resultado y la ejecución concreta de Actions quedan en el informe de entrega y en el servicio remoto, no se deducen por existir este documento.
+La primera subida real ya se contrastó mediante referencias y una nueva clonación: commit `62d06f4`, siete tags y 273 archivos en ese punto. La [primera CI](https://github.com/iDreyK-ii/Enfermer-a-app/actions/runs/41441766838) fue correcta. Para las actualizaciones posteriores seguir `../INICIAR_EN_AI_STUDIO.md` y verificar cada nuevo commit. No se debe confundir una prueba `--dry-run` con una subida. Después del envío se comparan los hashes de la rama y de cada tag con los que devuelve GitHub. El resultado y la ejecución concreta de Actions quedan en el informe de entrega y en el servicio remoto, no se deducen por existir este documento.
 
 ## Trabajar desde el repositorio
 

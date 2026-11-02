@@ -1,5 +1,15 @@
 # Desarrollo continuo del aplicativo iDreyK 360
 
+## Punto actual: contrato de traslado a Google AI Studio
+
+Se mantiene el cliente Android v0.4.1 sin modificar sus archivos `app/`, firma ni datos. Nuevo hito de código/documentación: `traslado-ia-studio-v1`. El propietario exige transferir todas las funciones y utilizar GitHub como fuente de cada actualización, no generar una app parecida.
+
+Se añade `CONTINUIDAD.json`, inventario actual, instrucciones/prompt de carga y un comparador de carpeta/ZIP contra objetos de un commit Git confiable. Las pruebas detectan faltantes, cambios, archivos inesperados, pérdida de permiso ejecutable, enlaces, rutas peligrosas, ZIP duplicados/ambiguos y límites. El manifiesto de fuentes se genera también en CI. No se necesita cuenta/servicio para estas pruebas.
+
+La primera sincronización previa (`62d06f4`) tuvo CI real correcta: https://github.com/iDreyK-ii/Enfermer-a-app/actions/runs/41441766838. Para cada nueva entrega comprobar su run específico, no reutilizar ese resultado.
+
+La carga real en AI Studio, su compilación y su certificado aún requieren comprobación desde la cuenta del propietario. OTP/envío/sesión de Supabase se aplazan explícitamente; no se eliminan ni se marcan resueltos. No hay nueva APK conectada ni prueba física/clínica en este punto.
+
 ## Punto de sincronización GitHub
 
 Destino público autorizado expresamente: `iDreyK-ii/Enfermer-a-app`; rama `desarrollo`. Se comprobó que estaba vacío y que la clave de despliegue identificaba ese repositorio y permitía escritura (`--dry-run`, sin enviar contenido). El envío real se verifica contrastando referencias remotas y la ejecución de Actions del commit correspondiente. Ver `docs/GITHUB_DESTINO.md`.

@@ -65,6 +65,7 @@ jobs:
           if-no-files-found: warn
           path: |
             .cache/qa-actual/*.txt
+            .cache/qa-actual/*.json
             app/build/test-results/testDebugUnitTest/*.xml
             app/build/reports/lint-results-debug.xml
       - name: APK de CI con firma temporal, NO actualización del APK entregado

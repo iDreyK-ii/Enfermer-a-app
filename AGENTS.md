@@ -2,7 +2,7 @@
 
 ## Antes de editar
 
-1. Leer `README.md`; luego el archivo del módulo afectado. No cargar todo el repositorio, todos los XML de QA o todos los recursos en una sola respuesta.
+1. Leer `README.md`, `CONTINUIDAD.json` e `INICIAR_EN_AI_STUDIO.md` antes de un traslado; luego el archivo del módulo afectado. No cargar todo el repositorio, todos los XML de QA o todos los recursos en una sola respuesta.
 2. Consultar `git status` y preservar cambios preexistentes. La aplicación funcional actual es Android v0.4.1; no empezar un proyecto web nuevo por una plantilla genérica.
 3. Para datos, leer `database/schema.sql` y contrastarlo con `LocalDatabase` en `Repository.kt`. El Kotlin es la implementación ejecutada; el SQL es un espejo verificado.
 4. Para alcance clínico, consultar solo la sección pertinente de `docs/ESTADO_FUNCIONAL_v0.3.md` y `research/REVISION_DOCUMENTAL.md`.
@@ -45,3 +45,14 @@
 ## Continuidad
 
 Registrar el cambio, su alcance, resultados y pendientes. El historial técnico está en `DESARROLLO.md`; la fase de servidor está en `qa/SUPABASE_REAL_2026-11-02.md`; los últimos resultados del APK están en `qa/RESULTADOS_v0.4.1.md`. `qa/RESULTADOS.md` conserva la evidencia histórica de v0.3. Las pruebas de una sesión anterior no deben describirse como ejecutadas de nuevo sin haberlo hecho.
+
+
+## Traslado a Google AI Studio y actualizaciones
+
+- Fuente canónica: este repositorio, rama `desarrollo`. Cargar el commit exacto de cada entrega; no usar «último» sin identificarlo. Leer `docs/INVENTARIO_FUNCIONAL_ACTUAL.md` y `docs/PROMPT_IA_STUDIO.md`.
+- Importar el proyecto completo en modo Android. No regenerarlo desde capturas, convertirlo en web o reemplazar SQLite/Supabase por Firebase. No omitir recursos, fuentes/licencias, módulos funcionales, validaciones, backend, pruebas o documentación.
+- Antes de modificar una copia importada, contrastar sus archivos con `scripts/verificar_traslado.py` ejecutado desde el Git confiable. Si AI Studio no permite importar/verificar/exportar, informar la limitación; no afirmar paridad por una vista previa.
+- Flujo: cambios revisados aquí → GitHub/CI → recarga por el propietario en AI Studio. No hacer cambios divergentes o push automático desde allí; devolver una propuesta/diff para integrarla primero.
+- OTP y sesión real fueron aplazados por el propietario tras un problema de acceso al panel. Continuar perfil local sin cuenta obligatoria; no desactivar confirmación ni declarar cuentas listas. El cliente remoto y el servidor se conservan.
+- Cada cambio funcional requiere pruebas, actualización coherente de `CONTINUIDAD.json`, versión/migración si procede, commit y comprobación de remoto/CI. No actualizar un contrato o prueba solo para ocultar una regresión.
+- Una APK de Google/CI no hereda la firma privada. Verificar el certificado antes de actualizar; nunca desinstalar o borrar datos como solución. La clave privada permanece fuera del repositorio y del prompt.
