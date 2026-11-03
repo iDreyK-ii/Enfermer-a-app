@@ -1,0 +1,20 @@
+{
+  "versions": {
+    "Pillow": "12.3.0",
+    "opencv-python-headless": "5.0.0.93",
+    "numpy": "2.3.5",
+    "rembg": "2.0.86",
+    "onnxruntime": "1.31.1"
+  },
+  "required_for_export": [
+    "Pillow",
+    "opencv-python-headless",
+    "numpy"
+  ],
+  "optional_for_regenerating_mask": [
+    "rembg",
+    "onnxruntime"
+  ],
+  "mask_included": "mascara-tensiometro.png",
+  "note": "La exportación reproduce la máscara incluida sin descargar/inferir de nuevo u2netp. No son dependencias del APK."
+}

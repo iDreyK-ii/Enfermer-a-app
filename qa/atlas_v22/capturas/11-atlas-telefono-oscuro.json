@@ -1,0 +1,15 @@
+{
+  "file": "11-atlas-telefono-oscuro.png",
+  "sha256": "3e0960a77056776275f9cf77f14745fba409c330bddbf87baa4ea6a7045c9824",
+  "width": 390,
+  "height": 844,
+  "sample_colors": 439,
+  "render": "Robolectric 4.14.1 \/ NATIVE graphics \/ production Compose \/ Android framework API 35",
+  "capture_method": "Android content View.draw(Canvas(Bitmap)); native Skia software rasterization",
+  "physical_device": false,
+  "apk_emulator": false,
+  "motion_reduced": true,
+  "theme": "oscuro",
+  "app_version": "0.7.0-dev-debug",
+  "clinical_validation": false
+}

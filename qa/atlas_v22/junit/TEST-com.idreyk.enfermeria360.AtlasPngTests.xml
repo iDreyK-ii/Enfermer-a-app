@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.AtlasPngTests" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-11-03T14:04:23" hostname="e2b.local" time="7.877">
+  <properties/>
+  <testcase name="outOfBoundsAndIncompleteHotspotsAreRejected" classname="com.idreyk.enfermeria360.AtlasPngTests" time="6.738"/>
+  <testcase name="allFiveQuizzesScoreActualChoicesAndRejectInvalidOrExtraAnswers" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.113"/>
+  <testcase name="technicalNamesAndAliasesAreActuallySearchableOffline" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.158"/>
+  <testcase name="fiveDistinctDecodedPngsHaveRealAlphaAndHotspotsOnVisiblePixels" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.3"/>
+  <testcase name="unknownOrTraversalImagePathsAndOversizedImagesAreRejected" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.159"/>
+  <testcase name="routeVersionCompletionAndUnknownDeviceAreGuarded" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.101"/>
+  <testcase name="metadataNeverInventsExpertApprovalAndPreservesOriginalSourceResolution" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.068"/>
+  <testcase name="rejectedCandidatesHaveNoImageNoFakeHotspotsAndNoQuiz" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.079"/>
+  <testcase name="hiddenBellBladderAndFilterAreNeverQuizTargetsOrOptions" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.07"/>
+  <testcase name="completedQuizPersistsAndCreatesOneHistoryEntryWithoutDestroyingOldProgress" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.089"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

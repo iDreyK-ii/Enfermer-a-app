@@ -1,0 +1,25 @@
+{
+  "reference": "b463c580f6e965d971116ef593df0059cb105c86",
+  "content_sections": {
+    "topics": "ce68b989ec0ad2b5be7cfc4df1371a74a3510fafe0bc7e625e354e8a2d09209b",
+    "inventory": "130f7c6cca3871b5d650009166d7d791e53cf0ac1f8b3bd6bd9d4521c23bb292",
+    "cases": "f8dc8748826aa2bfad636bc8a8cfe320b6752e7a33965e58b6dd6793758fad11",
+    "checklists": "3ad7f32e7c0a0e6b6bd4d39ac46da73aeb0e775349e184eb05df7bdaaa934da3"
+  },
+  "unchanged_files": {
+    "app/src/main/java/com/idreyk/enfermeria360/Design.kt": "3b6cdf12167157ecdc1e05d4122cfd5e63690ee1d68532273122315fca3c6fd0",
+    "app/src/main/java/com/idreyk/enfermeria360/Performance.kt": "632e3f629d4c4d04d058cac3d69544d845543438e8bc23922c0dca81d5518644",
+    "app/src/main/java/com/idreyk/enfermeria360/MainActivity.kt": "7903ffd6e11936d3528cee7b518378c8e265c3a37a4be0072bb89df822acbbb3",
+    "app/src/main/java/com/idreyk/enfermeria360/EducationMath.kt": "873dad31ef532440ab1983245e7607237266287babae65b0488b667c3a0a379f",
+    "app/src/main/java/com/idreyk/enfermeria360/DoseMath.kt": "1daa80774fa350ba1f46c229b81ccdf3e442344f3621d7aceef9646b074b0c7b",
+    "app/src/main/java/com/idreyk/enfermeria360/ClinicalCatalog.kt": "558c6c8464fedebb4e0c107def0d27c2c3d23d8f040a29b6b750095ae1dd155a",
+    "app/src/main/java/com/idreyk/enfermeria360/ScaleModels.kt": "e9e1657faa2616df6288a63c978b55500ac629a4120eb1d9ad7bf0691a0281fc",
+    "app/src/main/java/com/idreyk/enfermeria360/ScreensScales.kt": "de99c528f38e2298938a158d62b9a26e6465a3480d8355cf01f4f8b650008bd1",
+    "app/src/main/java/com/idreyk/enfermeria360/ScreensDose.kt": "d4bffc85caab44bb159a34dba4a22e8f411065f87092ad14e3f24771a16d9541",
+    "app/src/main/java/com/idreyk/enfermeria360/NotebookModels.kt": "63d17fc19a4806b3826c5ebc33963a51f8182548aae7fd4df8a2d5eed824626f",
+    "app/src/main/java/com/idreyk/enfermeria360/NotebookEducation.kt": "938b7cf2da57309239a2a61c7c304355a0c7d0cb89629c56de9a957c63e5b3c2",
+    "app/src/main/java/com/idreyk/enfermeria360/ScreensNotebookEducation.kt": "f44e23e16fb14899676221717a941f476c51412efa129102f3915bd692c3b3bb",
+    "app/src/main/java/com/idreyk/enfermeria360/ScreensNotebook.kt": "fd604a9d03eb5a567512ec0d72796f9c435ef20782b83dad175b59edce39a6af",
+    "research/base_maestra_v21/BASE_EDITORIAL_NO_CLINICA.md": "f0b9107128659d9b225d44424b3d7ea4bdd366ab29ba2b81627d7c380a5908ee"
+  }
+}

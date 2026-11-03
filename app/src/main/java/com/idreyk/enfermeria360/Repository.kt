@@ -92,6 +92,11 @@ class ContentRepository(private val context: Context) {
                 val case = master.cases.firstOrNull { "simulacion/${it.id}" == progress.route }
                 if (case != null) savePractice("Caso sintético · ${case.title}",
                     "EJERCICIO EDUCATIVO. ${case.score(progress.answers)} de ${case.questions.size} respuestas correctas en el recorrido. No acredita competencia clínica. Versión ${progress.version}.")
+                else if (progress.route.startsWith("atlas/")) {
+                    val device = master.devices.single { "atlas/${it.id}" == progress.route }
+                    savePractice("Identificación · ${device.name}",
+                        "EJERCICIO EDUCATIVO. ${device.score(progress.answers)} de ${device.quizTargets.size}. Imagen generada; revisión profesional pendiente. No acredita competencia clínica. Versión ${progress.version}.")
+                }
                 else savePractice("Lectura educativa", "${master.topics.single { "tema/${it.id}" == progress.route }.title}. Marcada como leída por el usuario; no acredita comprensión ni competencia. Versión ${progress.version}.")
             }
             db.setTransactionSuccessful()
@@ -960,14 +965,14 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
         data = state
     }
 
-    private fun work(success: String, onSuccess: () -> Unit = {}, block: () -> Unit) {
+    private fun work(success: String, onSuccess: () -> Unit = {}, notifySuccess: Boolean = true, block: () -> Unit) {
         if (busy) return
         busy = true
         viewModelScope.launch {
             try {
                 withContext(io) { block() }
                 reload()
-                message = success
+                if (notifySuccess) message = success
                 busy = false
                 onSuccess()
             } catch (e: Exception) {
@@ -981,7 +986,11 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
     fun favorite(key: String) = work("Favoritos actualizados") { repository.toggleFavorite(key) }
 
     fun saveLearning(progress: LearningProgress, onSaved: () -> Unit = {}) =
-        work("Progreso guardado solo en el dispositivo", onSaved) { repository.saveLearning(progress) }
+        // Identification already has persisted inline feedback; a success Snackbar would cover Next.
+        // Errors still surface through work(), and other learning flows retain their notifications.
+        work("Progreso guardado solo en el dispositivo", onSaved, notifySuccess = !progress.route.startsWith("atlas/")) {
+            repository.saveLearning(progress)
+        }
 
     fun clearLearning() = work("Progreso eliminado; el historial y los documentos se conservan") { repository.clearLearning() }
 

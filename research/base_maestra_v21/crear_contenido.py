@@ -290,81 +290,10 @@ Lee los datos disponibles, responde una pregunta y revisa la justificación ante
 Las respuestas correctas se cuentan desde tus elecciones. No equivalen a un examen de habilitación ni a aprobación clínica del contenido.
 ''')
 
-# Generic vector geometry: 600 × 380 coordinate system, labels remain live Compose text.
-def shape(kind, *points):
-    return dict(kind=kind, points=list(points))
-def part(id, name, function, safety, x, y, *shapes):
-    return dict(id=id, name=name, function=function, safety=safety, x=x, y=y, shapes=list(shapes))
-def device(id, name, note, parts):
-    return dict(id=id, name=name, area='Dispositivos', model_note=note, parts=parts, sources=[BASE])
-L=lambda *p: shape('line',*p)
-R=lambda *p: shape('rect',*p)
-O=lambda *p: shape('oval',*p)
-P=lambda *p: shape('poly',*p)
-devices=[
- device('jeringa','Jeringa','Esquema de jeringa de tres piezas. Graduaciones simbólicas: no sirven para medir.',[
-  part('cilindro','Cilindro o cuerpo','Contiene el volumen y permite observarlo.','La escala y capacidad se comprueban en el producto.',365,150,R(200,150,450,245)),
-  part('embolo','Émbolo: vástago móvil','Transmite el movimiento al pistón.','No es sinónimo del sello o pistón de este modelo.',130,197,L(80,197,244,197),L(80,160,80,235)),
-  part('piston','Pistón o sello','Sella y se desplaza dentro del cilindro.','Distinguir el sello del vástago; diseño dependiente del modelo.',249,230,R(240,155,258,240)),
-  part('cono','Cono de conexión','Permite la conexión compatible prevista por el fabricante.','No inferir compatibilidad de conectores por este dibujo.',486,194,P(450,172,495,186,495,210,450,227)),
-  part('alas','Aletas de apoyo','Proporcionan apoyo para los dedos.','No representan una técnica de manipulación estéril.',199,260,L(200,125,200,270)),
-  part('escala','Graduaciones','Indican la escala propia del dispositivo.','Aquí son solo símbolos, sin capacidad o exactitud metrológica.',325,245,*[L(x,225,x,243) for x in (285,310,335,360,385,410)]),
- ]),
- device('aguja','Aguja','Componentes de una aguja genérica. No se representa calibre, longitud ni técnica de punción.',[
-  part('pabellon','Pabellón o conector','Conecta la cánula al sistema compatible.','Verificar el tipo de conexión real.',140,195,R(80,165,200,225)),
-  part('canula','Cánula metálica','Constituye el cuerpo de la aguja.','No confundir con el catéter flexible.',360,194,L(200,192,510,192),L(200,200,510,200)),
-  part('bisel','Bisel','Terminación oblicua de la cánula.','Geometría ilustrativa; no muestra orientación para punción.',510,192,L(510,200,535,182)),
-  part('punta','Punta','Extremo distal de la aguja.','Punzocortante: evitar exposición y seguir gestión institucional de residuos.',538,180,L(510,192,535,182)),
-  part('protector','Protector, separado en el esquema','Protege antes del uso según diseño.','El dibujo no recomienda reencapuchar ni reutilizar.',310,300,R(190,280,430,320)),
- ]),
- device('estetoscopio','Estetoscopio','Modelo acústico ilustrativo de doble cara; otras cabezas y tubos son diferentes.',[
-  part('olivas','Olivas','Contactan con los oídos del usuario.','Ajuste e higiene según fabricante.',130,65,O(110,50,150,80),O(440,50,480,80)),
-  part('binaurales','Tubos binaurales','Conducen el sonido hacia las olivas.','No asumir orientación a partir de esta vista plana.',196,148,P(130,80,180,135,210,205),P(460,80,410,135,380,205)),
-  part('tubo','Tubo flexible','Transmite el sonido desde la pieza torácica.','Revisar integridad y limpieza del material.',295,255,P(210,205,230,245,290,265,350,245,380,205),P(290,265,290,310,440,310,485,270)),
-  part('cabeza','Pieza torácica','Aloja las superficies de auscultación.','La elección de cara depende del modelo y la formación.',487,225,O(440,180,540,280)),
-  part('diafragma','Diafragma','Superficie de captación en este modelo.','No demuestra interpretación de ruidos.',488,205,O(450,190,530,270)),
-  part('campana','Campana, según modelo','Segunda superficie de la cabeza de doble cara, mostrada aparte.','No todos los modelos tienen campana independiente.',135,290,O(100,255,170,325)),
- ]),
- device('tensiometro','Tensiómetro aneroide','Esquema manual. Tamaño de manguito, verificación y técnica requieren formación; no es un monitor digital.',[
-  part('manguito','Manguito','Envuelve la zona de medición.','Elegir el tamaño por especificaciones, no por este dibujo.',176,76,R(60,70,295,195)),
-  part('vejiga','Vejiga inflable interior','Recibe aire dentro del manguito.','Capa didáctica visible; disposición real según modelo.',177,140,R(95,105,260,165)),
-  part('tubos','Tubos','Conectan manguito, pera y manómetro.','Buscar integridad según protocolo; no interpretar presión en el esquema.',370,210,P(295,155,360,155,360,285,445,285),P(295,112,395,112,395,70,460,70)),
-  part('pera','Pera de insuflación','Permite introducir aire en el circuito.','No se indican presión o velocidad de inflado.',485,288,O(445,250,535,325)),
-  part('valvula','Válvula de control','Controla la salida de aire en el modelo manual.','Mecanismo y mantenimiento dependen del fabricante.',430,285,R(410,272,445,298)),
-  part('manometro','Manómetro','Muestra presión en el dispositivo real.','Dial simbólico, sin calibración ni lectura.',503,70,O(460,25,550,115),L(505,70,525,48)),
- ]),
- device('cateter-periferico','Catéter venoso periférico','Modelo genérico con aguja introductora. Alas, puerto y protección varían; no representa inserción.',[
-  part('cateter','Catéter: cánula flexible','Es la cánula flexible del dispositivo.','Es distinta de la aguja metálica; no se indica uso, calibre ni tiempo de permanencia.',407,181,R(295,179,495,201)),
-  part('aguja-introductora','Aguja introductora metálica','Acompaña al catéter en este diseño.','No es el catéter; no se representa su manipulación o reinserción.',525,192,L(220,190,525,190),L(520,190,533,182)),
-  part('conexion','Conector o cubo','Conecta con el sistema previsto.','Verificar integridad y compatibilidad del modelo.',271,191,R(215,165,295,215)),
-  part('camara','Cámara de visualización, según modelo','Permite observar el retorno en determinados diseños.','No equivale a comprobar por sí sola la seguridad del acceso.',156,192,R(105,170,215,210)),
-  part('alas','Alas, según modelo','Superficies laterales del cuerpo.','No todos los modelos las incluyen.',255,251,P(220,215,215,270,290,270,285,215)),
-  part('puerto','Puerto adicional, según modelo','Acceso adicional presente en ciertos diseños.','No asumir su presencia, esterilidad o forma de uso.',256,133,R(240,115,275,165)),
- ]),
- device('equipo-iv','Equipo de venoclisis','Equipo genérico por gravedad. Factor de goteo, filtros y puertos deben comprobarse en su etiqueta.',[
-  part('punzon','Punzón de conexión','Conecta al recipiente compatible previsto.','No representa una aguja para punción del paciente.',110,50,P(98,80,105,25,115,25,122,80)),
-  part('camara','Cámara de goteo','Permite observar el goteo en este diseño.','No se deduce el factor de goteo por el tamaño dibujado.',110,135,R(80,80,140,180)),
-  part('tubo','Tubo de conducción','Conduce el fluido por el sistema.','No se representa purgado, compatibilidad ni conexión clínica.',174,270,P(110,180,110,270,260,270,330,215,465,240,495,300)),
-  part('regulador','Regulador de rodillo','Elemento mecánico de control del equipo.','Su posición dibujada no indica una velocidad real.',253,270,R(232,245,275,292),O(240,251,267,278)),
-  part('puerto','Puerto de acceso, según modelo','Acceso adicional del sistema.','El diseño y método de acceso dependen del fabricante.',347,211,R(330,192,365,230)),
-  part('conector','Conector distal','Conexión final prevista en el equipo.','Verificar compatibilidad; no se muestra una conexión al paciente.',495,322,R(480,300,512,343)),
- ]),
- device('bureta','Bureta / equipo tipo Volutrol','Bureta volumétrica genérica; Volutrol se conserva como término de estudio. No se representa un producto certificado.',[
-  part('entrada','Línea de entrada','Conduce hacia la cámara graduada.','Método de llenado y volumen permitido según fabricante.',240,30,L(240,15,240,70)),
-  part('pinza','Pinza de entrada','Control mecánico de la línea en este esquema.','Posición ilustrativa; no demuestra un circuito abierto o cerrado.',240,51,R(225,35,255,62)),
-  part('bureta','Cámara graduada o bureta','Recipiente graduado del sistema.','No confundir con la cámara de goteo. Escala simbólica sin volumen medible.',180,165,R(180,70,300,255),*[L(270,y,295,y) for y in (100,125,150,175,200,225)]),
-  part('ventilacion','Ventilación/filtro, según modelo','Componente de determinados diseños.','No abrir, cerrar ni sustituir basándose en este esquema.',324,108,P(300,98,345,98,345,115,300,115)),
-  part('camara-goteo','Cámara de goteo','Zona de observación inferior en el modelo ilustrado.','No identifica un factor de gotas/mL.',240,281,R(218,255,262,305)),
-  part('salida','Línea de salida y conexión','Conduce desde el conjunto hacia el sistema previsto.','No sustituye comprobación de conexiones y control de la infusión.',415,330,P(240,305,240,330,460,330),R(460,317,500,344)),
- ]),
- device('llave-tres-vias','Llave de tres vías','Vista esquemática: la posición dibujada NO indica qué trayectos están abiertos. Consultar marcas e instrucciones del producto.',[
-  part('cuerpo','Cuerpo central','Aloja el mecanismo del dispositivo.','Integridad y compatibilidad se verifican en el producto.',300,185,O(245,130,355,240)),
-  part('selector','Mando selector','Permite modificar las conexiones según el diseño real.','No deducir dirección de flujo de este dibujo.',274,125,P(300,185,255,110,275,100,320,175)),
-  part('puerto-1','Conexión lateral 1','Uno de los tres accesos.','Conexión y tapón dependen del modelo; no es una indicación de uso.',145,185,R(95,168,245,202)),
-  part('puerto-2','Conexión lateral 2','Segundo acceso del conjunto.','No asumir compatibilidad por la apariencia.',455,185,R(355,168,505,202)),
-  part('puerto-3','Conexión inferior 3','Tercer acceso del conjunto.','No representa una vía del paciente ni una conexión permitida.',300,304,R(282,240,318,330)),
- ])]
-
+# Atlas v2.2: metadatos por imagen; no regenerar geometría robótica.
+atlas_dir = HERE.parents[1] / 'app/src/main/assets/atlas'
+devices = [json.loads(p.read_text()) for p in sorted(atlas_dir.glob('*.json'))]
+assert len(devices) == 8
 
 def q(scene, prompt, options, correct, feedback, rubric):
     return dict(scene=scene, prompt=prompt, options=options, correct=correct, feedback=feedback, rubric=rubric)
@@ -433,7 +362,7 @@ checklists=[
 modules=[
  ('biblioteca','Biblioteca Markdown','HECHO','Lectura estructurada, filtros, búsqueda y progreso local; conjunto inicial, no toda una carrera.'),
  ('herramientas','Herramientas matemáticas','HECHO','Decimales y unidades para ejercicios. No validan dosis, tratamientos o rangos clínicos.'),
- ('atlas','Atlas vectorial','PARCIAL','Ocho dispositivos genéricos interactivos; cotejo de modelos de fabricante y revisión experta pendientes.'),
+ ('atlas','Atlas PNG','PARCIAL','Cinco PNG RGBA con hotspots y autoevaluación; tres imágenes rechazadas pendientes de reemplazo y otros dieciséis dispositivos de la solicitud por desarrollar. Revisión profesional pendiente.'),
  ('bioseguridad','Bioseguridad','PARCIAL','Cinco momentos, cronómetro y listas diferenciadas. Técnica supervisada y protocolo local siguen siendo necesarios.'),
  ('cuaderno','PAE / SOAPIE / SBAR','PARCIAL','Editor, persistencia y Markdown funcionales. Impresión/PDF implementados, pendientes de prueba en dispositivo. Sin taxonomías completas ni diagnósticos automáticos.'),
  ('casos','Casos progresivos','PARCIAL','Siete escenarios sintéticos funcionales; revisión docente y validación clínica pendientes.'),
@@ -448,4 +377,4 @@ modules=[
 ]
 data=dict(topics=topics,devices=devices,cases=cases,checklists=checklists,modules=[dict(route=a,name=b,status=c,note=d) for a,b,c,d in modules])
 (HERE/'contenido.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
-print('Contenido educativo:',len(topics),'temas;',len(devices),'vectores;',len(cases),'casos;',sum(len(c['questions']) for c in cases),'preguntas.')
+print('Contenido educativo:',len(topics),'temas;',len(devices),'fichas de atlas;',len(cases),'casos;',sum(len(c['questions']) for c in cases),'preguntas.')

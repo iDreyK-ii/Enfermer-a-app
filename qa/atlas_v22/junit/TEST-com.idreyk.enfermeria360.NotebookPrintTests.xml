@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.NotebookPrintTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-03T14:06:51" hostname="e2b.local" time="5.504">
+  <properties/>
+  <testcase name="cancelledLayoutDoesNotAnnounceAReadyDocument" classname="com.idreyk.enfermeria360.NotebookPrintTests" time="5.021"/>
+  <testcase name="cancelledWriteDoesNotTruncateOrWriteTheDestination" classname="com.idreyk.enfermeria360.NotebookPrintTests" time="0.124"/>
+  <testcase name="writingBeforeLayoutFailsWithoutTouchingDestination" classname="com.idreyk.enfermeria360.NotebookPrintTests" time="0.043"/>
+  <testcase name="excessivePageCountFailsBeforeNativeRenderingOrWriting" classname="com.idreyk.enfermeria360.NotebookPrintTests" time="0.266"/>
+  <testcase name="unusablePrintableAreaFailsInsteadOfAllocatingThousandsOfTinyPages" classname="com.idreyk.enfermeria360.NotebookPrintTests" time="0.049"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,204 @@
+{
+  "asset_id": "atlas_jeringa_luer_lock",
+  "id": "jeringa",
+  "name": "Jeringa",
+  "display_name_es": "Jeringa",
+  "technical_name": "Jeringa hipodérmica de tres piezas, conexión Luer Lock",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_jeringa_luer_lock.png",
+  "view": "Vista de producto en tres cuartos; conjunto completo",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1116,
+  "image_sha256": "c23644432920d0fa5f8438cc8c5317ef14d7ea38ee64643b95cbb61c1da8fc64",
+  "alt_text": "Jeringa hipodérmica de tres piezas, conexión Luer Lock. Imagen generada con IA y recortada, no fotografía de un fabricante. Etiquetas en interfaz; alternativa textual en la lista de partes.",
+  "model_note": "Omnifix de tres piezas como referencia anatómica. Ilustración genérica; no reproduce un tamaño comercial ni sirve para medir. No todos los modelos llevan sello separado.",
+  "parts": [
+    {
+      "id": "cilindro",
+      "name": "Cilindro o cuerpo",
+      "function": "Contiene el volumen y permite observarlo.",
+      "safety": "Comprobar capacidad y escala en el producto real.",
+      "hotspot_x": 0.46,
+      "hotspot_y": 0.585,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Cilindro o cuerpo",
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "embolo",
+      "name": "Émbolo: vástago móvil",
+      "function": "Transmite el movimiento al pistón.",
+      "safety": "El vástago no es el sello de elastómero.",
+      "hotspot_x": 0.16,
+      "hotspot_y": 0.44,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Émbolo: vástago móvil",
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "piston",
+      "name": "Pistón o sello",
+      "function": "Sella y se desplaza dentro del cilindro.",
+      "safety": "Separado del vástago en el modelo de tres piezas.",
+      "hotspot_x": 0.676,
+      "hotspot_y": 0.55,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Pistón o sello",
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "cono",
+      "name": "Cono Luer",
+      "function": "Constituye el extremo de conexión.",
+      "safety": "No deducir compatibilidad ni una vía de uso por esta imagen.",
+      "hotspot_x": 0.915,
+      "hotspot_y": 0.582,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Cono Luer",
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "alas",
+      "name": "Aletas de apoyo",
+      "function": "Ofrecen apoyo para los dedos.",
+      "safety": "No representan una técnica estéril.",
+      "hotspot_x": 0.224,
+      "hotspot_y": 0.356,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Aletas de apoyo",
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "escala",
+      "name": "Graduaciones",
+      "function": "Permiten leer el volumen en el dispositivo real.",
+      "safety": "Marcas ilustrativas sin números ni valor metrológico.",
+      "hotspot_x": 0.53,
+      "hotspot_y": 0.419,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Graduaciones",
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "boton",
+      "name": "Apoyo para el pulgar",
+      "function": "Es el extremo de apoyo del vástago.",
+      "safety": "No confundir con las aletas del cilindro.",
+      "hotspot_x": 0.108,
+      "hotspot_y": 0.44,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Apoyo para el pulgar",
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "collar",
+      "name": "Collar Luer Lock",
+      "function": "Rodea el cono y participa en la fijación compatible.",
+      "safety": "La rosca de fijación es interna; no todas las jeringas llevan collar.",
+      "hotspot_x": 0.835,
+      "hotspot_y": 0.56,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Collar Luer Lock",
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Omnifix Luer Lock Solo · tres piezas",
+      "url": "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+      "publisher": "B. Braun",
+      "date": "2026-11-03",
+      "review_scope": "Texto consultado completo; síntesis anatómica, no autorización clínica."
+    },
+    {
+      "title": "Jeringas y agujas: catálogo técnico (2010)",
+      "url": "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+      "publisher": "B. Braun · alojado por Medline",
+      "date": "2026-11-03",
+      "review_scope": "Folleto completo; segunda referencia técnica del mismo fabricante, no revisión independiente."
+    }
+  ],
+  "source_urls": [
+    "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+    "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "REVISIÓN-ASISTIDA; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "id": "jeringa",
+    "file": "atlas/atlas_jeringa_luer_lock.png",
+    "sha256": "c23644432920d0fa5f8438cc8c5317ef14d7ea38ee64643b95cbb61c1da8fc64",
+    "native_file": "jeringa-corregida.png",
+    "native_sha256": "0a5ae665f57901f0c51b35762e0a6dbae6ee7da5cf8dac50650d2591ea517344",
+    "native_dimensions": [
+      1376,
+      768
+    ],
+    "export_dimensions": [
+      2000,
+      1116
+    ],
+    "mode": "RGBA",
+    "transparent_fraction": 0.7828,
+    "bytes": 754724,
+    "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
+    "retouches": [],
+    "alpha_bbox": [
+      122,
+      308,
+      1872,
+      798
+    ]
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones.",
+    "Comprobar integridad, conexión y condiciones del producto real.",
+    "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

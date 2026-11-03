@@ -1,0 +1,15 @@
+{
+  "file": "14-telefono-horizontal-claro.png",
+  "sha256": "4ffb8e72481f5e8d62231ab72a5a6292d9dd9b6482220022bb7fd69996699248",
+  "width": 844,
+  "height": 390,
+  "sample_colors": 383,
+  "render": "Robolectric 4.14.1 \/ NATIVE graphics \/ production Compose \/ Android framework API 35",
+  "capture_method": "Android content View.draw(Canvas(Bitmap)); native Skia software rasterization",
+  "physical_device": false,
+  "apk_emulator": false,
+  "motion_reduced": true,
+  "theme": "claro",
+  "app_version": "0.7.0-dev-debug",
+  "clinical_validation": false
+}

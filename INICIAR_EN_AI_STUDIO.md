@@ -1,12 +1,16 @@
+> Cierre local Atlas v2.2: 252 JVM, 118 Python, 5 SQLite y 17 PGLite; lint 0 errores/26 advertencias. Ocho capturas del APK en emulador API28, 17 renders Robolectric separados y 2/2 pruebas PDF instrumentadas aprobadas. No hardware físico, no nuevo CI/publicación. Detalle: `qa/atlas_v22/RESULTADOS.md`.
+
+> **BORRADOR LOCAL 0.7.0 / Atlas v2.2:** no cargar `base-maestra-v21-mvp` esperando estos PNG o el quiz nuevo: ese tag es 0.6.0. Esperar revisión/autorización y usar el SHA exacto aprobado; la publicación y la paridad Google de esta revisión están pendientes. Leer `docs/AUDITORIA_ATLAS_v22.md` y `qa/atlas_v22/RESULTADOS.md`.
+
 # Continuar iDreyK 360 en Google AI Studio, sin rehacer la app
 
-> **Actualización v0.6.0 / Base Maestra 2.1:** leer `docs/MVP_BASE_MAESTRA_v21.md` y cargar el SHA exacto de esta entrega o la etiqueta `base-maestra-v21-mvp`. `escalas-clinicas-v1` y `traslado-ia-studio-v1` son checkpoints anteriores, no esta actualización. La importación/compilación de esta revisión en Google no se ha comprobado aquí.
+> **Checkpoint publicado anterior v0.6.0 / Base Maestra 2.1:** leer `docs/MVP_BASE_MAESTRA_v21.md` y cargar el SHA exacto de esta entrega o la etiqueta `base-maestra-v21-mvp`. `escalas-clinicas-v1` y `traslado-ia-studio-v1` son checkpoints anteriores, no esta actualización. La importación/compilación de esta revisión en Google no se ha comprobado aquí.
 
 ## Regla principal
 
 **Este repositorio es el aplicativo existente. No es una descripción para generar otro.** La fuente de verdad es https://github.com/iDreyK-ii/Enfermer-a-app, rama `desarrollo`.
 
-Flujo acordado: **cambios revisados aquí → commit/push a GitHub → importar o actualizar esa revisión exacta en Google AI Studio → comprobar paridad → compilar**. AI Studio se utilizará inicialmente como destino de carga/compilación, no como una segunda rama de cambios silenciosos.
+Flujo acordado: **revisión visual aquí → mejoras locales y pruebas → aprobación expresa del propietario para publicar → commit/push a GitHub → importar o actualizar esa revisión exacta en Google AI Studio → comprobar paridad → compilar**. AI Studio se utilizará inicialmente como destino de carga/compilación, no como una segunda rama de cambios silenciosos.
 
 Antes de empezar, leer `AGENTS.md`, `CONTINUIDAD.json` y `docs/INVENTARIO_FUNCIONAL_ACTUAL.md`. El texto listo para pedir el traslado está en `docs/PROMPT_IA_STUDIO.md`.
 
@@ -35,7 +39,7 @@ Desde **la copia Git confiable**, no desde un script modificado por el importado
 ```sh
 # Usar el SHA exacto de la entrega, o el tag inmutable de este primer punto.
 python3 scripts/verificar_traslado.py verificar \
-  --ref escalas-clinicas-v1 \
+  --ref base-maestra-v21-mvp \
   --zip /ruta/exportacion-de-ai-studio.zip \
   --salida .cache/traslado/resultado.json
 ```
@@ -71,7 +75,7 @@ No subir versiones de Kotlin, Gradle, AGP o dependencias automáticamente para e
 ## 4. Verificar firma antes de instalar
 
 - Identidad debug: `com.idreyk.enfermeria360.dev`.
-- Base actual: versionCode **6**, nombre **0.5.0-dev-debug**.
+- Borrador local actual: versionCode **8**, nombre **0.7.0-dev-debug**. Para entregas posteriores, contrastar con `CONTINUIDAD.json`, `app/build.gradle.kts` y el manifiesto del APK; no reutilizar esta versión como si fuera siempre la última.
 - Certificado conservado: `d6874c68417eefb1b1b902bf82ba4ce7d8734e47877e12bd1733eb498f0e522b`.
 
 Con SDK adecuado, comprobar el APK externo con:
@@ -88,7 +92,7 @@ No publicar en Play, crear servicios de pago ni activar facturación sin autoriz
 ## 5. Cada actualización posterior
 
 1. Revisar cambios y pruebas aquí; mantener versiones y migraciones compatibles. Para cambios del APK, incrementar versionCode de forma controlada.
-2. Commit y push no forzado a `desarrollo`; comprobar SHA remoto y CI de ese mismo commit.
+2. Mostrar el resultado, diferencias y límites; obtener aprobación expresa del propietario para publicar esa revisión. Solo entonces, commit y push no forzado a `desarrollo`; comprobar SHA remoto y CI de ese mismo commit. «Continuar» o pedir mejoras no sustituye esta aprobación.
 3. Comunicar al propietario el **SHA exacto**, alcance del cambio, perfil de nube y estado de firma/pruebas.
 4. Pedir a AI Studio cargar esa revisión sin conservar cambios divergentes no revisados.
 5. Verificar de nuevo fuentes y compilación. Si se usó una importación nueva por limitaciones de la herramienta, es otra copia del mismo proyecto, no permiso para regenerarlo.

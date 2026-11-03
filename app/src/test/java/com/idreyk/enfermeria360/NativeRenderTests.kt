@@ -47,7 +47,7 @@ abstract class NativeRenderHarness {
             }
         }
         assertEquals(expectedWidth, bitmap.width)
-        assertTrue("Capture height must be meaningful", bitmap.height >= 400)
+        assertTrue("Capture height must be meaningful", bitmap.height >= 240)
         val samples = mutableSetOf<Int>()
         for (x in 0 until bitmap.width step 7) for (y in 0 until bitmap.height step 7) samples.add(bitmap.getPixel(x, y))
         assertTrue("A blank/flat frame is not screen evidence: ${samples.size} sampled colors", samples.size > 40)
@@ -75,11 +75,20 @@ class NativePhoneRenderTests : NativeRenderHarness() {
         click("Biblioteca temática")
         capture("02-biblioteca-390", 390)
     }
-    @Test fun syringeIsActualInteractiveVectorNotAnIllustrationOfAnUnbuiltScreen() {
+    @Test fun syringeUsesActualPngAndNormalizedMetadata() {
         modules(); click("Atlas interactivo"); click("Jeringa")
         click("3. Pistón o sello")
-        ui.onNodeWithTag("atlas-part-detail").performScrollTo()
+        ui.onNodeWithTag("atlas-viewport").performScrollTo()
         capture("03-atlas-jeringa-390", 390)
+    }
+    @Test fun darkPhoneAlsoDisplaysTheTransparentPngAndNativeIdentification() {
+        ui.runOnIdle { vm.updateDark(true) }
+        modules(); click("Atlas interactivo"); click("Aguja")
+        ui.onNodeWithTag("atlas-viewport").performScrollTo()
+        capture("11-atlas-telefono-oscuro", 390)
+        click("Practicar identificación")
+        ui.onNodeWithTag("atlas-viewport").performScrollTo()
+        capture("12-identificacion-telefono", 390)
     }
     @Test fun decimalResultComesFromEnteredNumbers() {
         click("Cálculos"); click("Goteo")
@@ -112,9 +121,15 @@ class NativePhoneRenderTests : NativeRenderHarness() {
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 @LooperMode(LooperMode.Mode.PAUSED)
 class NativeTabletRenderTests : NativeRenderHarness() {
+    @Test fun darkTabletUsesRealPngWithSideDetail() {
+        ui.runOnIdle { vm.updateDark(true) }
+        modules(); click("Atlas interactivo"); click("Tensiómetro aneroide")
+        ui.onNodeWithTag("atlas-viewport").performScrollTo()
+        capture("13-atlas-tablet-oscuro", 800)
+    }
     @Test fun tabletHomeAndAtlasRemainFunctionalAtEightHundredDp() {
         capture("08-inicio-tablet-800", 800)
-        modules(); click("Atlas interactivo"); click("Catéter venoso periférico")
+        modules(); click("Atlas interactivo"); click("Estetoscopio")
         ui.onNodeWithTag("atlas-viewport").performScrollTo()
         val bounds = ui.onNodeWithTag("atlas-viewport").getUnclippedBoundsInRoot()
         val root = ui.onRoot().getUnclippedBoundsInRoot()
@@ -130,12 +145,46 @@ class NativeTabletRenderTests : NativeRenderHarness() {
 class NativeCompactRenderTests : NativeRenderHarness() {
     @Test fun narrowPhoneSupportsDarkThemeAndAtlasControlsWithoutLosingNavigation() {
         ui.runOnIdle { vm.updateDark(true) }
-        modules(); click("Atlas interactivo"); click("Llave de tres vías")
+        modules(); click("Atlas interactivo"); click("Jeringa")
         ui.onNodeWithTag("atlas-viewport").performScrollTo()
         capture("10-atlas-compacto-320-oscuro", 320)
-        click("3. Conexión lateral 1")
-        ui.onNodeWithText("Conexión lateral 1").assertExists()
+        click("3. Pistón o sello")
+        ui.onNodeWithText("Pistón o sello").assertExists()
         ui.onNodeWithContentDescription("Volver").performClick()
         ui.onNodeWithText("Atlas de dispositivos").assertExists()
+    }
+}
+
+
+@RunWith(RobolectricTestRunner::class)
+@Config(sdk = [35], qualifiers = "w844dp-h390dp-land-mdpi")
+@GraphicsMode(GraphicsMode.Mode.NATIVE)
+@LooperMode(LooperMode.Mode.PAUSED)
+class NativePhoneLandscapeRenderTests : NativeRenderHarness() {
+    @Test fun landscapePhoneCanScrollAndSelectInBothThemes() {
+        modules(); click("Atlas interactivo"); click("Jeringa")
+        ui.onNodeWithTag("atlas-viewport").performScrollTo()
+        capture("14-telefono-horizontal-claro", 844)
+        ui.runOnIdle { vm.updateDark(true) }
+        capture("15-telefono-horizontal-oscuro", 844)
+        click("3. Pistón o sello")
+        ui.onNodeWithText("Pistón o sello").assertExists()
+    }
+}
+
+@RunWith(RobolectricTestRunner::class)
+@Config(sdk = [35], qualifiers = "w1280dp-h800dp-land-mdpi")
+@GraphicsMode(GraphicsMode.Mode.NATIVE)
+@LooperMode(LooperMode.Mode.PAUSED)
+class NativeTabletLandscapeRenderTests : NativeRenderHarness() {
+    @Test fun landscapeTabletKeepsImageAndDescriptionInsideBothThemeViewports() {
+        modules(); click("Atlas interactivo"); click("Equipo de venoclisis")
+        ui.onNodeWithTag("atlas-viewport").performScrollTo()
+        val bounds = ui.onNodeWithTag("atlas-viewport").getUnclippedBoundsInRoot()
+        val root = ui.onRoot().getUnclippedBoundsInRoot()
+        assertTrue(bounds.left >= root.left && bounds.right <= root.right)
+        capture("16-tablet-horizontal-claro", 1280)
+        ui.runOnIdle { vm.updateDark(true) }
+        capture("17-tablet-horizontal-oscuro", 1280)
     }
 }

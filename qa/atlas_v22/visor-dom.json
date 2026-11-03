@@ -1,0 +1,14 @@
+{
+  "scope": "DOM and inline JavaScript only; no browser layout/accessibility/performance assertion",
+  "html_sha256": "ad49f05a0fe3a2b8d0605e6e71d1bdc3dcd37c25b84f02a561a5b370f80c5d03",
+  "assets": 5,
+  "inventory_rows": 24,
+  "apk_captures": 8,
+  "robolectric_renders": 17,
+  "part_choices": 37,
+  "visible_points": 33,
+  "hidden_parts": 4,
+  "background_switches": 4,
+  "filter_and_modals": "passed",
+  "script_errors": []
+}

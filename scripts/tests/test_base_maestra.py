@@ -98,7 +98,7 @@ class BaseMaestraTest(unittest.TestCase):
         for device in devices.values():
             self.assertTrue(device['model_note'])
             for part in device['parts']:
-                self.assertTrue(part['name'] and part['function'] and part['safety'] and part['shapes'])
+                self.assertTrue(part['name'] and part['function'] and part['safety'] and part['part_status'])
 
     def test_exactly_ten_institutional_corrects_are_separate_from_twenty_own_controls(self):
         official, own = self.data['checklists']

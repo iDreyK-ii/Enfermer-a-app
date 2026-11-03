@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-03",
+  "state": "QA local completa, entrega parcial de atlas, NO publicada",
+  "jvm": {
+    "tests": 252,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 252,
+    "suites": 21
+  },
+  "python": {
+    "total": 118,
+    "guards": 82,
+    "converter": 15,
+    "publishing": 21
+  },
+  "sqlite": 5,
+  "pglite": 17,
+  "lint": {
+    "errors": 0,
+    "warnings": 26
+  },
+  "apk": {
+    "apk": "app-debug.apk",
+    "bytes": 14546975,
+    "version": "0.7.0-dev-debug",
+    "version_code": 8,
+    "min_sdk": 26,
+    "target_sdk": 35,
+    "sha256": "f19d11b037e08fc3d6034ca7f8802afc545f8db9773f105af2e947a1838a1f0d",
+    "certificate_sha256": "d6874c68417eefb1b1b902bf82ba4ce7d8734e47877e12bd1733eb498f0e522b",
+    "certificate_matches_expected": true,
+    "permissions": [
+      "android.permission.INTERNET",
+      "com.idreyk.enfermeria360.dev.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "physical_installation_tested": false
+  },
+  "assets_equal_inside_apk": 18,
+  "instrumented_pdf": {
+    "compiled": 2,
+    "executed": 2,
+    "passed": 2,
+    "failed": 0,
+    "duration_seconds": 6.807,
+    "environment": "Android 9/API 28 x86_64, emulador software sin KVM",
+    "evidence": "pdf-instrumentado.txt"
+  },
+  "apk_execution_verified": true,
+  "physical_device": false,
+  "google_verified": false,
+  "clinical_approval": false,
+  "native_renders": 17,
+  "expert_approver": null,
+  "apk_update_without_uninstall": true,
+  "actual_apk_screenshots": 8,
+  "emulator": {
+    "api": 28,
+    "hardware_acceleration": false,
+    "guest_memtotal_kb": 758292,
+    "boot_seconds": 158.548,
+    "known_limits": [
+      "ANR transitorio de System UI durante primer arranque",
+      "am start -W agotó su espera aunque la interfaz se renderizó posteriormente",
+      "UIAutomator devolvió null root intermitente; no afirmar una respuesta fluida",
+      "La entrada automatizada de jeringa terminó mostrando el prefijo jeri: no se validó un flujo de teclado completo/fluido.",
+      "Tablet sólo como viewport lógico emulado, no equipo físico."
+    ]
+  },
+  "actual_ui_checks": [
+    "inicio",
+    "tema oscuro y bienvenida conservados después de actualizar",
+    "búsqueda por prefijo jeri",
+    "abrir jeringa PNG",
+    "seleccionar pistón tocando imagen",
+    "recomposición con viewport lógico de tablet",
+    "primera respuesta de identificación",
+    "persistencia en SQLite después de force-stop",
+    "Siguiente parte avanza a pregunta 2"
+  ]
+}

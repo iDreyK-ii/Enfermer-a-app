@@ -1,0 +1,5 @@
+Starting: Intent { cmp=com.idreyk.enfermeria360.dev/com.idreyk.enfermeria360.MainActivity }
+Status: timeout
+Activity: com.idreyk.enfermeria360.dev/com.idreyk.enfermeria360.MainActivity
+WaitTime: 12094
+Complete

@@ -513,1247 +513,1379 @@
   ],
   "devices": [
     {
+      "asset_id": "atlas_aguja_hipodermica",
+      "id": "aguja",
+      "name": "Aguja",
+      "display_name_es": "Aguja",
+      "technical_name": "Aguja hipodérmica estándar con protector",
+      "area": "Dispositivos",
+      "file": "atlas/atlas_aguja_hipodermica.png",
+      "view": "Vista de producto en tres cuartos; conjunto completo",
+      "image_available": true,
+      "image_width": 2000,
+      "image_height": 1116,
+      "image_sha256": "a74d036e8f3f9f385cd4be2e2159733df4563d1823931e6d8379d2a6d25b27b6",
+      "alt_text": "Aguja hipodérmica estándar con protector. Imagen generada con IA y recortada, no fotografía de un fabricante. Etiquetas en interfaz; alternativa textual en la lista de partes.",
+      "model_note": "Referencia Sterican estándar, no aguja de seguridad. No se declara calibre/longitud ni se infiere por el color del hub. La funda separada no recomienda reencapuchar.",
+      "parts": [
+        {
+          "id": "pabellon",
+          "name": "Pabellón o conector",
+          "function": "Une la cánula a una conexión compatible.",
+          "safety": "Color y conectores se verifican en el producto real.",
+          "hotspot_x": 0.249,
+          "hotspot_y": 0.251,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Pabellón o conector",
+          "source_urls": [
+            "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
+            "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "canula",
+          "name": "Cánula metálica",
+          "function": "Forma el cuerpo tubular de la aguja.",
+          "safety": "No es el catéter flexible.",
+          "hotspot_x": 0.566,
+          "hotspot_y": 0.482,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Cánula metálica",
+          "source_urls": [
+            "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
+            "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "bisel",
+          "name": "Bisel",
+          "function": "Es la terminación oblicua del extremo distal.",
+          "safety": "Geometría ilustrativa; no enseña técnica de punción.",
+          "hotspot_x": 0.837,
+          "hotspot_y": 0.637,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Bisel",
+          "source_urls": [
+            "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
+            "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "punta",
+          "name": "Punta",
+          "function": "Es el extremo distal punzante.",
+          "safety": "Riesgo punzocortante; seguir manejo y descarte institucional.",
+          "hotspot_x": 0.882,
+          "hotspot_y": 0.669,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Punta",
+          "source_urls": [
+            "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
+            "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "protector",
+          "name": "Protector separado",
+          "function": "Protege el dispositivo antes del uso según diseño.",
+          "safety": "No reencapuchar ni reutilizar por imitación de esta vista.",
+          "hotspot_x": 0.51,
+          "hotspot_y": 0.677,
+          "visible": true,
+          "part_status": "modelo",
+          "part_description": "Protector separado",
+          "source_urls": [
+            "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
+            "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "lumen",
+          "name": "Lumen interno",
+          "function": "Es el conducto interior de la cánula.",
+          "safety": "No visible en esta vista: sin hotspot ni pregunta visual.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "universal",
+          "part_description": "Lumen interno",
+          "source_urls": [
+            "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
+            "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Sterican · aguja hipodérmica estándar",
+          "url": "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
+          "publisher": "B. Braun",
+          "date": "2026-11-03",
+          "review_scope": "Texto consultado completo; síntesis anatómica, no autorización clínica."
+        },
+        {
+          "title": "Jeringas y agujas: catálogo técnico (2010)",
+          "url": "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+          "publisher": "B. Braun · alojado por Medline",
+          "date": "2026-11-03",
+          "review_scope": "Folleto completo; segunda referencia técnica del mismo fabricante, no revisión independiente."
+        }
+      ],
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+      ],
+      "review_date": "2026-11-03",
+      "review_status": "REVISIÓN-ASISTIDA; APROBACIÓN-PROFESIONAL-PENDIENTE",
+      "accuracy_approved_by": null,
+      "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+      "clinical_approved": false,
+      "pending_reason": "",
+      "processing": {
+        "id": "aguja",
+        "file": "atlas/atlas_aguja_hipodermica.png",
+        "sha256": "a74d036e8f3f9f385cd4be2e2159733df4563d1823931e6d8379d2a6d25b27b6",
+        "native_file": "aguja-final.png",
+        "native_sha256": "021f4ccca61abcc3217b49dd98c8850e1ea126694c1f79a03cb280b93896cf87",
+        "native_dimensions": [
+          1376,
+          768
+        ],
+        "export_dimensions": [
+          2000,
+          1116
+        ],
+        "mode": "RGBA",
+        "transparent_fraction": 0.8491,
+        "bytes": 623274,
+        "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
+        "retouches": [],
+        "alpha_bbox": [
+          222,
+          120,
+          1788,
+          1016
+        ]
+      },
+      "checks": [
+        "Identificar el modelo y consultar sus instrucciones.",
+        "Comprobar integridad, conexión y condiciones del producto real.",
+        "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+      ],
+      "revision": "atlas-v22.1"
+    },
+    {
+      "asset_id": "atlas_equipo_venoclisis",
+      "id": "equipo-iv",
+      "name": "Equipo de venoclisis",
+      "display_name_es": "Equipo de venoclisis",
+      "technical_name": "Equipo de administración intravenosa por gravedad",
+      "area": "Dispositivos",
+      "file": "atlas/atlas_equipo_venoclisis.png",
+      "view": "Vista de producto en tres cuartos; conjunto completo",
+      "image_available": true,
+      "image_width": 2000,
+      "image_height": 1091,
+      "image_sha256": "17e4decf6370cee102bd366c1f93b4378a604548a54bd7757a3e16ee4b4e587d",
+      "alt_text": "Equipo de administración intravenosa por gravedad. Imagen generada con IA y recortada, no fotografía de un fabricante. Etiquetas en interfaz; alternativa textual en la lista de partes.",
+      "model_note": "Referencia TCBINF001: un roller, un sitio Y y conector distal; sin regulador adicional. El filtro interno no se identifica visualmente. No precompleta el factor de goteo de ninguna calculadora.",
+      "parts": [
+        {
+          "id": "punzon",
+          "name": "Punzón protegido",
+          "function": "Es el extremo de acceso al recipiente compatible.",
+          "safety": "El protector sigue colocado; no enseñar inserción.",
+          "hotspot_x": 0.23,
+          "hotspot_y": 0.177,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Punzón protegido",
+          "source_urls": [
+            "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+            "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+            "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "venteo",
+          "name": "Venteo y tapa",
+          "function": "Permite la función de venteo prevista en el modelo.",
+          "safety": "No todos los equipos son ventilados.",
+          "hotspot_x": 0.308,
+          "hotspot_y": 0.075,
+          "visible": true,
+          "part_status": "modelo",
+          "part_description": "Venteo y tapa",
+          "source_urls": [
+            "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+            "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+            "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "camara",
+          "name": "Cámara de goteo",
+          "function": "Permite observar el goteo en un equipo real.",
+          "safety": "Factor y uso se leen en el envase y las instrucciones.",
+          "hotspot_x": 0.45,
+          "hotspot_y": 0.174,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Cámara de goteo",
+          "source_urls": [
+            "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+            "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+            "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "tubo",
+          "name": "Tubo flexible",
+          "function": "Constituye la línea de conducción.",
+          "safety": "Revisar integridad; la imagen no autoriza conexiones.",
+          "hotspot_x": 0.597,
+          "hotspot_y": 0.6233,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Tubo flexible",
+          "source_urls": [
+            "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+            "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+            "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "roller",
+          "name": "Regulador de rodillo",
+          "function": "Comprime el tubo para regularlo según diseño.",
+          "safety": "No es una bomba ni un regulador de precisión.",
+          "hotspot_x": 0.473,
+          "hotspot_y": 0.439,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Regulador de rodillo",
+          "source_urls": [
+            "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+            "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+            "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "sitio-y",
+          "name": "Sitio de acceso en Y",
+          "function": "Es un acceso adicional de este modelo.",
+          "safety": "Uso y compatibilidades requieren indicación y protocolo.",
+          "hotspot_x": 0.69,
+          "hotspot_y": 0.788,
+          "visible": true,
+          "part_status": "modelo",
+          "part_description": "Sitio de acceso en Y",
+          "source_urls": [
+            "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+            "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+            "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "luer",
+          "name": "Conector distal protegido",
+          "function": "Conecta al sistema compatible previsto.",
+          "safety": "No inferir esterilidad ni compatibilidad por la imagen.",
+          "hotspot_x": 0.94,
+          "hotspot_y": 0.53,
+          "visible": true,
+          "part_status": "modelo",
+          "part_description": "Conector distal protegido",
+          "source_urls": [
+            "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+            "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+            "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "filtro",
+          "name": "Filtro interno de la cámara",
+          "function": "Es un componente declarado por el fabricante.",
+          "safety": "No visible/resuelto en esta imagen; sin hotspot ni pregunta.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Filtro interno de la cámara",
+          "source_urls": [
+            "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+            "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+            "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        }
+      ],
+      "sources": [
+        {
+          "title": "TCBINF001 · equipos por gravedad",
+          "url": "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+          "publisher": "TrueCare Biomedix",
+          "date": "2026-11-03",
+          "review_scope": "Texto consultado completo; síntesis anatómica, no autorización clínica."
+        },
+        {
+          "title": "Componentes del equipo IV",
+          "url": "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+          "publisher": "JMI Hospital Requisite Manufacturing",
+          "date": "2026-11-03",
+          "review_scope": "Anatomía y variantes; no certifica la configuración TrueCare."
+        },
+        {
+          "title": "TCBINF001 · ficha técnica del distribuidor",
+          "url": "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590",
+          "publisher": "Henry Schein",
+          "date": "2026-11-03",
+          "review_scope": "Texto consultado completo; síntesis anatómica, no autorización clínica."
+        }
+      ],
+      "source_urls": [
+        "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+        "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+        "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+      ],
+      "review_date": "2026-11-03",
+      "review_status": "REVISIÓN-ASISTIDA; APROBACIÓN-PROFESIONAL-PENDIENTE",
+      "accuracy_approved_by": null,
+      "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+      "clinical_approved": false,
+      "pending_reason": "",
+      "processing": {
+        "id": "equipo-iv",
+        "file": "atlas/atlas_equipo_venoclisis.png",
+        "sha256": "17e4decf6370cee102bd366c1f93b4378a604548a54bd7757a3e16ee4b4e587d",
+        "native_file": "equipo-iv.png",
+        "native_sha256": "5eb56321280298efeae76f31cec47fc4b85b97c2116b227d35af6ff4e2711a20",
+        "native_dimensions": [
+          1408,
+          768
+        ],
+        "export_dimensions": [
+          2000,
+          1091
+        ],
+        "mode": "RGBA",
+        "transparent_fraction": 0.8274,
+        "bytes": 708761,
+        "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
+        "retouches": [],
+        "alpha_bbox": [
+          51,
+          51,
+          1948,
+          1037
+        ]
+      },
+      "checks": [
+        "Identificar el modelo y consultar sus instrucciones.",
+        "Comprobar integridad, conexión y condiciones del producto real.",
+        "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+      ],
+      "revision": "atlas-v22.1"
+    },
+    {
+      "asset_id": "atlas_estetoscopio_adulto",
+      "id": "estetoscopio",
+      "name": "Estetoscopio",
+      "display_name_es": "Estetoscopio",
+      "technical_name": "Estetoscopio acústico binaural de doble cabezal",
+      "area": "Dispositivos",
+      "file": "atlas/atlas_estetoscopio_adulto.png",
+      "view": "Vista de producto en tres cuartos; conjunto completo",
+      "image_available": true,
+      "image_width": 2000,
+      "image_height": 1091,
+      "image_sha256": "21fef2a1b76b8f75b053bad2cf7a5f3f18a128c9c9f20aba333475cf4ea9aeb7",
+      "alt_text": "Estetoscopio acústico binaural de doble cabezal. Imagen generada con IA y recortada, no fotografía de un fabricante. Etiquetas en interfaz; alternativa textual en la lista de partes.",
+      "model_note": "Anatomía acústica común contrastada con 3M. No se afirma réplica de un modelo ni un sistema de doble lumen. La cara posterior de la campana no se muestra.",
+      "parts": [
+        {
+          "id": "olivas",
+          "name": "Olivas",
+          "function": "Son los extremos que contactan con los oídos.",
+          "safety": "Ajuste e higiene según fabricante.",
+          "hotspot_x": 0.866,
+          "hotspot_y": 0.249,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Olivas",
+          "source_urls": [
+            "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+            "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "arcos",
+          "name": "Tubos binaurales",
+          "function": "Conectan el tubo flexible con las olivas.",
+          "safety": "Revisar integridad y orientación conforme al manual.",
+          "hotspot_x": 0.6815,
+          "hotspot_y": 0.3135,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Tubos binaurales",
+          "source_urls": [
+            "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+            "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "resorte",
+          "name": "Resorte del conjunto auricular",
+          "function": "Contribuye a mantener la tensión del conjunto.",
+          "safety": "Forma y mecanismo dependientes del modelo.",
+          "hotspot_x": 0.43,
+          "hotspot_y": 0.2612,
+          "visible": true,
+          "part_status": "modelo",
+          "part_description": "Resorte del conjunto auricular",
+          "source_urls": [
+            "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+            "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "tubo",
+          "name": "Tubo flexible",
+          "function": "Conduce el sonido entre cabezal y conjunto auricular.",
+          "safety": "No inferir el número de lúmenes internos.",
+          "hotspot_x": 0.423,
+          "hotspot_y": 0.857,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Tubo flexible",
+          "source_urls": [
+            "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+            "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "vastago",
+          "name": "Unión o vástago del cabezal",
+          "function": "Une el tubo al cabezal.",
+          "safety": "Selección de cara activa dependiente del modelo.",
+          "hotspot_x": 0.771,
+          "hotspot_y": 0.754,
+          "visible": true,
+          "part_status": "modelo",
+          "part_description": "Unión o vástago del cabezal",
+          "source_urls": [
+            "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+            "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "diafragma",
+          "name": "Diafragma",
+          "function": "Es la membrana de la cara visible del cabezal.",
+          "safety": "No es una campana abierta; revisar integridad e higiene.",
+          "hotspot_x": 0.844,
+          "hotspot_y": 0.669,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Diafragma",
+          "source_urls": [
+            "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+            "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "cabezal",
+          "name": "Cuerpo del cabezal",
+          "function": "Aloja las superficies acústicas.",
+          "safety": "No deducir ajustes de presión por esta imagen.",
+          "hotspot_x": 0.85,
+          "hotspot_y": 0.8,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Cuerpo del cabezal",
+          "source_urls": [
+            "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+            "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "campana",
+          "name": "Campana / cara posterior",
+          "function": "Es una cara acústica alternativa en determinados modelos.",
+          "safety": "No se ve su apertura: sin hotspot ni prueba de identificación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Campana / cara posterior",
+          "source_urls": [
+            "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+            "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Anatomy of a stethoscope",
+          "url": "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+          "publisher": "3M Littmann",
+          "date": "2026-11-03",
+          "review_scope": "Texto consultado completo; síntesis anatómica, no autorización clínica."
+        },
+        {
+          "title": "Manual Classic III · variantes de campana",
+          "url": "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/",
+          "publisher": "stethoscope.eu",
+          "date": "2026-11-03",
+          "review_scope": "Texto completo; fuente secundaria sobre un modelo concreto. La imagen no es una reproducción exacta del Classic III."
+        }
+      ],
+      "source_urls": [
+        "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+        "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+      ],
+      "review_date": "2026-11-03",
+      "review_status": "REVISIÓN-ASISTIDA; APROBACIÓN-PROFESIONAL-PENDIENTE",
+      "accuracy_approved_by": null,
+      "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+      "clinical_approved": false,
+      "pending_reason": "",
+      "processing": {
+        "id": "estetoscopio",
+        "file": "atlas/atlas_estetoscopio_adulto.png",
+        "sha256": "21fef2a1b76b8f75b053bad2cf7a5f3f18a128c9c9f20aba333475cf4ea9aeb7",
+        "native_file": "estetoscopio.png",
+        "native_sha256": "d392c82894d655e2e8882ea6ea6275be8bbe6c5bffd339873830b1537cf2d562",
+        "native_dimensions": [
+          1408,
+          768
+        ],
+        "export_dimensions": [
+          2000,
+          1091
+        ],
+        "mode": "RGBA",
+        "transparent_fraction": 0.8429,
+        "bytes": 609050,
+        "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
+        "retouches": [
+          "Eliminación local de mancha central del diafragma, sin añadir componentes."
+        ],
+        "alpha_bbox": [
+          176,
+          78,
+          1861,
+          983
+        ]
+      },
+      "checks": [
+        "Identificar el modelo y consultar sus instrucciones.",
+        "Comprobar integridad, conexión y condiciones del producto real.",
+        "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+      ],
+      "revision": "atlas-v22.1"
+    },
+    {
+      "asset_id": "atlas_jeringa_luer_lock",
       "id": "jeringa",
       "name": "Jeringa",
+      "display_name_es": "Jeringa",
+      "technical_name": "Jeringa hipodérmica de tres piezas, conexión Luer Lock",
       "area": "Dispositivos",
-      "model_note": "Esquema de jeringa de tres piezas. Graduaciones simbólicas: no sirven para medir.",
+      "file": "atlas/atlas_jeringa_luer_lock.png",
+      "view": "Vista de producto en tres cuartos; conjunto completo",
+      "image_available": true,
+      "image_width": 2000,
+      "image_height": 1116,
+      "image_sha256": "c23644432920d0fa5f8438cc8c5317ef14d7ea38ee64643b95cbb61c1da8fc64",
+      "alt_text": "Jeringa hipodérmica de tres piezas, conexión Luer Lock. Imagen generada con IA y recortada, no fotografía de un fabricante. Etiquetas en interfaz; alternativa textual en la lista de partes.",
+      "model_note": "Omnifix de tres piezas como referencia anatómica. Ilustración genérica; no reproduce un tamaño comercial ni sirve para medir. No todos los modelos llevan sello separado.",
       "parts": [
         {
           "id": "cilindro",
           "name": "Cilindro o cuerpo",
           "function": "Contiene el volumen y permite observarlo.",
-          "safety": "La escala y capacidad se comprueban en el producto.",
-          "x": 365,
-          "y": 150,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                200,
-                150,
-                450,
-                245
-              ]
-            }
-          ]
+          "safety": "Comprobar capacidad y escala en el producto real.",
+          "hotspot_x": 0.46,
+          "hotspot_y": 0.585,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Cilindro o cuerpo",
+          "source_urls": [
+            "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+            "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         },
         {
           "id": "embolo",
           "name": "Émbolo: vástago móvil",
           "function": "Transmite el movimiento al pistón.",
-          "safety": "No es sinónimo del sello o pistón de este modelo.",
-          "x": 130,
-          "y": 197,
-          "shapes": [
-            {
-              "kind": "line",
-              "points": [
-                80,
-                197,
-                244,
-                197
-              ]
-            },
-            {
-              "kind": "line",
-              "points": [
-                80,
-                160,
-                80,
-                235
-              ]
-            }
-          ]
+          "safety": "El vástago no es el sello de elastómero.",
+          "hotspot_x": 0.16,
+          "hotspot_y": 0.44,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Émbolo: vástago móvil",
+          "source_urls": [
+            "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+            "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         },
         {
           "id": "piston",
           "name": "Pistón o sello",
           "function": "Sella y se desplaza dentro del cilindro.",
-          "safety": "Distinguir el sello del vástago; diseño dependiente del modelo.",
-          "x": 249,
-          "y": 230,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                240,
-                155,
-                258,
-                240
-              ]
-            }
-          ]
+          "safety": "Separado del vástago en el modelo de tres piezas.",
+          "hotspot_x": 0.676,
+          "hotspot_y": 0.55,
+          "visible": true,
+          "part_status": "modelo",
+          "part_description": "Pistón o sello",
+          "source_urls": [
+            "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+            "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         },
         {
           "id": "cono",
-          "name": "Cono de conexión",
-          "function": "Permite la conexión compatible prevista por el fabricante.",
-          "safety": "No inferir compatibilidad de conectores por este dibujo.",
-          "x": 486,
-          "y": 194,
-          "shapes": [
-            {
-              "kind": "poly",
-              "points": [
-                450,
-                172,
-                495,
-                186,
-                495,
-                210,
-                450,
-                227
-              ]
-            }
-          ]
+          "name": "Cono Luer",
+          "function": "Constituye el extremo de conexión.",
+          "safety": "No deducir compatibilidad ni una vía de uso por esta imagen.",
+          "hotspot_x": 0.915,
+          "hotspot_y": 0.582,
+          "visible": true,
+          "part_status": "modelo",
+          "part_description": "Cono Luer",
+          "source_urls": [
+            "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+            "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         },
         {
           "id": "alas",
           "name": "Aletas de apoyo",
-          "function": "Proporcionan apoyo para los dedos.",
-          "safety": "No representan una técnica de manipulación estéril.",
-          "x": 199,
-          "y": 260,
-          "shapes": [
-            {
-              "kind": "line",
-              "points": [
-                200,
-                125,
-                200,
-                270
-              ]
-            }
-          ]
+          "function": "Ofrecen apoyo para los dedos.",
+          "safety": "No representan una técnica estéril.",
+          "hotspot_x": 0.224,
+          "hotspot_y": 0.356,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Aletas de apoyo",
+          "source_urls": [
+            "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+            "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         },
         {
           "id": "escala",
           "name": "Graduaciones",
-          "function": "Indican la escala propia del dispositivo.",
-          "safety": "Aquí son solo símbolos, sin capacidad o exactitud metrológica.",
-          "x": 325,
-          "y": 245,
-          "shapes": [
-            {
-              "kind": "line",
-              "points": [
-                285,
-                225,
-                285,
-                243
-              ]
-            },
-            {
-              "kind": "line",
-              "points": [
-                310,
-                225,
-                310,
-                243
-              ]
-            },
-            {
-              "kind": "line",
-              "points": [
-                335,
-                225,
-                335,
-                243
-              ]
-            },
-            {
-              "kind": "line",
-              "points": [
-                360,
-                225,
-                360,
-                243
-              ]
-            },
-            {
-              "kind": "line",
-              "points": [
-                385,
-                225,
-                385,
-                243
-              ]
-            },
-            {
-              "kind": "line",
-              "points": [
-                410,
-                225,
-                410,
-                243
-              ]
-            }
-          ]
+          "function": "Permiten leer el volumen en el dispositivo real.",
+          "safety": "Marcas ilustrativas sin números ni valor metrológico.",
+          "hotspot_x": 0.53,
+          "hotspot_y": 0.419,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Graduaciones",
+          "source_urls": [
+            "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+            "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "boton",
+          "name": "Apoyo para el pulgar",
+          "function": "Es el extremo de apoyo del vástago.",
+          "safety": "No confundir con las aletas del cilindro.",
+          "hotspot_x": 0.108,
+          "hotspot_y": 0.44,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Apoyo para el pulgar",
+          "source_urls": [
+            "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+            "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "collar",
+          "name": "Collar Luer Lock",
+          "function": "Rodea el cono y participa en la fijación compatible.",
+          "safety": "La rosca de fijación es interna; no todas las jeringas llevan collar.",
+          "hotspot_x": 0.835,
+          "hotspot_y": 0.56,
+          "visible": true,
+          "part_status": "modelo",
+          "part_description": "Collar Luer Lock",
+          "source_urls": [
+            "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+            "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         }
       ],
       "sources": [
         {
-          "title": "Base Maestra 2.1 · referencia editorial aportada",
-          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
-          "publisher": "Material editorial; revisión clínica pendiente",
-          "date": "2026-11-03"
-        }
-      ]
-    },
-    {
-      "id": "aguja",
-      "name": "Aguja",
-      "area": "Dispositivos",
-      "model_note": "Componentes de una aguja genérica. No se representa calibre, longitud ni técnica de punción.",
-      "parts": [
-        {
-          "id": "pabellon",
-          "name": "Pabellón o conector",
-          "function": "Conecta la cánula al sistema compatible.",
-          "safety": "Verificar el tipo de conexión real.",
-          "x": 140,
-          "y": 195,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                80,
-                165,
-                200,
-                225
-              ]
-            }
-          ]
+          "title": "Omnifix Luer Lock Solo · tres piezas",
+          "url": "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+          "publisher": "B. Braun",
+          "date": "2026-11-03",
+          "review_scope": "Texto consultado completo; síntesis anatómica, no autorización clínica."
         },
         {
-          "id": "canula",
-          "name": "Cánula metálica",
-          "function": "Constituye el cuerpo de la aguja.",
-          "safety": "No confundir con el catéter flexible.",
-          "x": 360,
-          "y": 194,
-          "shapes": [
-            {
-              "kind": "line",
-              "points": [
-                200,
-                192,
-                510,
-                192
-              ]
-            },
-            {
-              "kind": "line",
-              "points": [
-                200,
-                200,
-                510,
-                200
-              ]
-            }
-          ]
-        },
-        {
-          "id": "bisel",
-          "name": "Bisel",
-          "function": "Terminación oblicua de la cánula.",
-          "safety": "Geometría ilustrativa; no muestra orientación para punción.",
-          "x": 510,
-          "y": 192,
-          "shapes": [
-            {
-              "kind": "line",
-              "points": [
-                510,
-                200,
-                535,
-                182
-              ]
-            }
-          ]
-        },
-        {
-          "id": "punta",
-          "name": "Punta",
-          "function": "Extremo distal de la aguja.",
-          "safety": "Punzocortante: evitar exposición y seguir gestión institucional de residuos.",
-          "x": 538,
-          "y": 180,
-          "shapes": [
-            {
-              "kind": "line",
-              "points": [
-                510,
-                192,
-                535,
-                182
-              ]
-            }
-          ]
-        },
-        {
-          "id": "protector",
-          "name": "Protector, separado en el esquema",
-          "function": "Protege antes del uso según diseño.",
-          "safety": "El dibujo no recomienda reencapuchar ni reutilizar.",
-          "x": 310,
-          "y": 300,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                190,
-                280,
-                430,
-                320
-              ]
-            }
-          ]
+          "title": "Jeringas y agujas: catálogo técnico (2010)",
+          "url": "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+          "publisher": "B. Braun · alojado por Medline",
+          "date": "2026-11-03",
+          "review_scope": "Folleto completo; segunda referencia técnica del mismo fabricante, no revisión independiente."
         }
       ],
-      "sources": [
-        {
-          "title": "Base Maestra 2.1 · referencia editorial aportada",
-          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
-          "publisher": "Material editorial; revisión clínica pendiente",
-          "date": "2026-11-03"
-        }
-      ]
-    },
-    {
-      "id": "estetoscopio",
-      "name": "Estetoscopio",
-      "area": "Dispositivos",
-      "model_note": "Modelo acústico ilustrativo de doble cara; otras cabezas y tubos son diferentes.",
-      "parts": [
-        {
-          "id": "olivas",
-          "name": "Olivas",
-          "function": "Contactan con los oídos del usuario.",
-          "safety": "Ajuste e higiene según fabricante.",
-          "x": 130,
-          "y": 65,
-          "shapes": [
-            {
-              "kind": "oval",
-              "points": [
-                110,
-                50,
-                150,
-                80
-              ]
-            },
-            {
-              "kind": "oval",
-              "points": [
-                440,
-                50,
-                480,
-                80
-              ]
-            }
-          ]
-        },
-        {
-          "id": "binaurales",
-          "name": "Tubos binaurales",
-          "function": "Conducen el sonido hacia las olivas.",
-          "safety": "No asumir orientación a partir de esta vista plana.",
-          "x": 196,
-          "y": 148,
-          "shapes": [
-            {
-              "kind": "poly",
-              "points": [
-                130,
-                80,
-                180,
-                135,
-                210,
-                205
-              ]
-            },
-            {
-              "kind": "poly",
-              "points": [
-                460,
-                80,
-                410,
-                135,
-                380,
-                205
-              ]
-            }
-          ]
-        },
-        {
-          "id": "tubo",
-          "name": "Tubo flexible",
-          "function": "Transmite el sonido desde la pieza torácica.",
-          "safety": "Revisar integridad y limpieza del material.",
-          "x": 295,
-          "y": 255,
-          "shapes": [
-            {
-              "kind": "poly",
-              "points": [
-                210,
-                205,
-                230,
-                245,
-                290,
-                265,
-                350,
-                245,
-                380,
-                205
-              ]
-            },
-            {
-              "kind": "poly",
-              "points": [
-                290,
-                265,
-                290,
-                310,
-                440,
-                310,
-                485,
-                270
-              ]
-            }
-          ]
-        },
-        {
-          "id": "cabeza",
-          "name": "Pieza torácica",
-          "function": "Aloja las superficies de auscultación.",
-          "safety": "La elección de cara depende del modelo y la formación.",
-          "x": 487,
-          "y": 225,
-          "shapes": [
-            {
-              "kind": "oval",
-              "points": [
-                440,
-                180,
-                540,
-                280
-              ]
-            }
-          ]
-        },
-        {
-          "id": "diafragma",
-          "name": "Diafragma",
-          "function": "Superficie de captación en este modelo.",
-          "safety": "No demuestra interpretación de ruidos.",
-          "x": 488,
-          "y": 205,
-          "shapes": [
-            {
-              "kind": "oval",
-              "points": [
-                450,
-                190,
-                530,
-                270
-              ]
-            }
-          ]
-        },
-        {
-          "id": "campana",
-          "name": "Campana, según modelo",
-          "function": "Segunda superficie de la cabeza de doble cara, mostrada aparte.",
-          "safety": "No todos los modelos tienen campana independiente.",
-          "x": 135,
-          "y": 290,
-          "shapes": [
-            {
-              "kind": "oval",
-              "points": [
-                100,
-                255,
-                170,
-                325
-              ]
-            }
-          ]
-        }
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
       ],
-      "sources": [
-        {
-          "title": "Base Maestra 2.1 · referencia editorial aportada",
-          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
-          "publisher": "Material editorial; revisión clínica pendiente",
-          "date": "2026-11-03"
-        }
-      ]
+      "review_date": "2026-11-03",
+      "review_status": "REVISIÓN-ASISTIDA; APROBACIÓN-PROFESIONAL-PENDIENTE",
+      "accuracy_approved_by": null,
+      "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+      "clinical_approved": false,
+      "pending_reason": "",
+      "processing": {
+        "id": "jeringa",
+        "file": "atlas/atlas_jeringa_luer_lock.png",
+        "sha256": "c23644432920d0fa5f8438cc8c5317ef14d7ea38ee64643b95cbb61c1da8fc64",
+        "native_file": "jeringa-corregida.png",
+        "native_sha256": "0a5ae665f57901f0c51b35762e0a6dbae6ee7da5cf8dac50650d2591ea517344",
+        "native_dimensions": [
+          1376,
+          768
+        ],
+        "export_dimensions": [
+          2000,
+          1116
+        ],
+        "mode": "RGBA",
+        "transparent_fraction": 0.7828,
+        "bytes": 754724,
+        "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
+        "retouches": [],
+        "alpha_bbox": [
+          122,
+          308,
+          1872,
+          798
+        ]
+      },
+      "checks": [
+        "Identificar el modelo y consultar sus instrucciones.",
+        "Comprobar integridad, conexión y condiciones del producto real.",
+        "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+      ],
+      "revision": "atlas-v22.1"
     },
     {
+      "asset_id": "atlas_tensiometro_aneroide",
       "id": "tensiometro",
       "name": "Tensiómetro aneroide",
+      "display_name_es": "Tensiómetro aneroide",
+      "technical_name": "Esfigmomanómetro aneroide de bolsillo con manguito",
       "area": "Dispositivos",
-      "model_note": "Esquema manual. Tamaño de manguito, verificación y técnica requieren formación; no es un monitor digital.",
+      "file": "atlas/atlas_tensiometro_aneroide.png",
+      "view": "Vista de producto en tres cuartos; conjunto completo",
+      "image_available": true,
+      "image_width": 2000,
+      "image_height": 1091,
+      "image_sha256": "cdebe5691f7a35ade6ab6be150a2482d23fcac0870f65f2bab564593365e6a73",
+      "alt_text": "Esfigmomanómetro aneroide de bolsillo con manguito. Imagen generada con IA y recortada, no fotografía de un fabricante. Etiquetas en interfaz; alternativa textual en la lista de partes.",
+      "model_note": "Referencia anatómica ADC Prosphyg 760 con dos tubos y vejiga interna. No es una representación calibrada ni una reproducción exacta. El manual de referencia excluye uso neonatal; no extrapolar tallas.",
       "parts": [
         {
           "id": "manguito",
           "name": "Manguito",
-          "function": "Envuelve la zona de medición.",
-          "safety": "Elegir el tamaño por especificaciones, no por este dibujo.",
-          "x": 176,
-          "y": 76,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                60,
-                70,
-                295,
-                195
-              ]
-            }
-          ]
-        },
-        {
-          "id": "vejiga",
-          "name": "Vejiga inflable interior",
-          "function": "Recibe aire dentro del manguito.",
-          "safety": "Capa didáctica visible; disposición real según modelo.",
-          "x": 177,
-          "y": 140,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                95,
-                105,
-                260,
-                165
-              ]
-            }
-          ]
-        },
-        {
-          "id": "tubos",
-          "name": "Tubos",
-          "function": "Conectan manguito, pera y manómetro.",
-          "safety": "Buscar integridad según protocolo; no interpretar presión en el esquema.",
-          "x": 370,
-          "y": 210,
-          "shapes": [
-            {
-              "kind": "poly",
-              "points": [
-                295,
-                155,
-                360,
-                155,
-                360,
-                285,
-                445,
-                285
-              ]
-            },
-            {
-              "kind": "poly",
-              "points": [
-                295,
-                112,
-                395,
-                112,
-                395,
-                70,
-                460,
-                70
-              ]
-            }
-          ]
-        },
-        {
-          "id": "pera",
-          "name": "Pera de insuflación",
-          "function": "Permite introducir aire en el circuito.",
-          "safety": "No se indican presión o velocidad de inflado.",
-          "x": 485,
-          "y": 288,
-          "shapes": [
-            {
-              "kind": "oval",
-              "points": [
-                445,
-                250,
-                535,
-                325
-              ]
-            }
-          ]
-        },
-        {
-          "id": "valvula",
-          "name": "Válvula de control",
-          "function": "Controla la salida de aire en el modelo manual.",
-          "safety": "Mecanismo y mantenimiento dependen del fabricante.",
-          "x": 430,
-          "y": 285,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                410,
-                272,
-                445,
-                298
-              ]
-            }
-          ]
+          "function": "Es la envoltura del conjunto inflable.",
+          "safety": "Seleccionar talla y revisar estado según fabricante.",
+          "hotspot_x": 0.312,
+          "hotspot_y": 0.369,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Manguito",
+          "source_urls": [
+            "https://www.adctoday.com/products/760",
+            "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         },
         {
           "id": "manometro",
           "name": "Manómetro",
-          "function": "Muestra presión en el dispositivo real.",
-          "safety": "Dial simbólico, sin calibración ni lectura.",
-          "x": 503,
-          "y": 70,
-          "shapes": [
-            {
-              "kind": "oval",
-              "points": [
-                460,
-                25,
-                550,
-                115
-              ]
-            },
-            {
-              "kind": "line",
-              "points": [
-                505,
-                70,
-                525,
-                48
-              ]
-            }
-          ]
+          "function": "Muestra la presión del sistema en el equipo real.",
+          "safety": "La esfera ilustrada no permite una lectura de presión.",
+          "hotspot_x": 0.639,
+          "hotspot_y": 0.467,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Manómetro",
+          "source_urls": [
+            "https://www.adctoday.com/products/760",
+            "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "pera",
+          "name": "Pera de inflado",
+          "function": "Genera la presión de aire en el sistema.",
+          "safety": "No es un dispositivo para vía intravenosa.",
+          "hotspot_x": 0.858,
+          "hotspot_y": 0.6,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Pera de inflado",
+          "source_urls": [
+            "https://www.adctoday.com/products/760",
+            "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "valvula",
+          "name": "Válvula de liberación",
+          "function": "Permite liberar aire según diseño.",
+          "safety": "No inferir una técnica de medición de esta imagen.",
+          "hotspot_x": 0.742,
+          "hotspot_y": 0.65,
+          "visible": true,
+          "part_status": "universal",
+          "part_description": "Válvula de liberación",
+          "source_urls": [
+            "https://www.adctoday.com/products/760",
+            "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "tubos",
+          "name": "Tubos de aire",
+          "function": "Conectan los elementos del sistema neumático.",
+          "safety": "No conectar con líneas intravasculares; revisar fugas.",
+          "hotspot_x": 0.629,
+          "hotspot_y": 0.754,
+          "visible": true,
+          "part_status": "modelo",
+          "part_description": "Tubos de aire",
+          "source_urls": [
+            "https://www.adctoday.com/products/760",
+            "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "cierre",
+          "name": "Sistema de cierre",
+          "function": "Sujeta la envoltura.",
+          "safety": "Diseño dependiente del manguito.",
+          "hotspot_x": 0.401,
+          "hotspot_y": 0.552,
+          "visible": true,
+          "part_status": "modelo",
+          "part_description": "Sistema de cierre",
+          "source_urls": [
+            "https://www.adctoday.com/products/760",
+            "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "vejiga",
+          "name": "Vejiga inflable interna",
+          "function": "Es la bolsa de aire dentro del manguito de referencia.",
+          "safety": "Oculta: no se rotula como si fuera la tela ni se pregunta su ubicación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Vejiga inflable interna",
+          "source_urls": [
+            "https://www.adctoday.com/products/760",
+            "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         }
       ],
       "sources": [
         {
-          "title": "Base Maestra 2.1 · referencia editorial aportada",
-          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
-          "publisher": "Material editorial; revisión clínica pendiente",
-          "date": "2026-11-03"
-        }
-      ]
-    },
-    {
-      "id": "cateter-periferico",
-      "name": "Catéter venoso periférico",
-      "area": "Dispositivos",
-      "model_note": "Modelo genérico con aguja introductora. Alas, puerto y protección varían; no representa inserción.",
-      "parts": [
-        {
-          "id": "cateter",
-          "name": "Catéter: cánula flexible",
-          "function": "Es la cánula flexible del dispositivo.",
-          "safety": "Es distinta de la aguja metálica; no se indica uso, calibre ni tiempo de permanencia.",
-          "x": 407,
-          "y": 181,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                295,
-                179,
-                495,
-                201
-              ]
-            }
-          ]
+          "title": "Prosphyg 760 · dos tubos y repuestos",
+          "url": "https://www.adctoday.com/products/760",
+          "publisher": "ADC",
+          "date": "2026-11-03",
+          "review_scope": "Texto consultado completo; síntesis anatómica, no autorización clínica."
         },
         {
-          "id": "aguja-introductora",
-          "name": "Aguja introductora metálica",
-          "function": "Acompaña al catéter en este diseño.",
-          "safety": "No es el catéter; no se representa su manipulación o reinserción.",
-          "x": 525,
-          "y": 192,
-          "shapes": [
-            {
-              "kind": "line",
-              "points": [
-                220,
-                190,
-                525,
-                190
-              ]
-            },
-            {
-              "kind": "line",
-              "points": [
-                520,
-                190,
-                533,
-                182
-              ]
-            }
-          ]
-        },
-        {
-          "id": "conexion",
-          "name": "Conector o cubo",
-          "function": "Conecta con el sistema previsto.",
-          "safety": "Verificar integridad y compatibilidad del modelo.",
-          "x": 271,
-          "y": 191,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                215,
-                165,
-                295,
-                215
-              ]
-            }
-          ]
-        },
-        {
-          "id": "camara",
-          "name": "Cámara de visualización, según modelo",
-          "function": "Permite observar el retorno en determinados diseños.",
-          "safety": "No equivale a comprobar por sí sola la seguridad del acceso.",
-          "x": 156,
-          "y": 192,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                105,
-                170,
-                215,
-                210
-              ]
-            }
-          ]
-        },
-        {
-          "id": "alas",
-          "name": "Alas, según modelo",
-          "function": "Superficies laterales del cuerpo.",
-          "safety": "No todos los modelos las incluyen.",
-          "x": 255,
-          "y": 251,
-          "shapes": [
-            {
-              "kind": "poly",
-              "points": [
-                220,
-                215,
-                215,
-                270,
-                290,
-                270,
-                285,
-                215
-              ]
-            }
-          ]
-        },
-        {
-          "id": "puerto",
-          "name": "Puerto adicional, según modelo",
-          "function": "Acceso adicional presente en ciertos diseños.",
-          "safety": "No asumir su presencia, esterilidad o forma de uso.",
-          "x": 256,
-          "y": 133,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                240,
-                115,
-                275,
-                165
-              ]
-            }
-          ]
+          "title": "Prosphyg · IFU español, revisión 21",
+          "url": "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf",
+          "publisher": "ADC",
+          "date": "2026-11-03",
+          "review_scope": "Manual completo; segunda referencia del mismo fabricante, no contraste independiente."
         }
       ],
-      "sources": [
-        {
-          "title": "Base Maestra 2.1 · referencia editorial aportada",
-          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
-          "publisher": "Material editorial; revisión clínica pendiente",
-          "date": "2026-11-03"
-        }
-      ]
-    },
-    {
-      "id": "equipo-iv",
-      "name": "Equipo de venoclisis",
-      "area": "Dispositivos",
-      "model_note": "Equipo genérico por gravedad. Factor de goteo, filtros y puertos deben comprobarse en su etiqueta.",
-      "parts": [
-        {
-          "id": "punzon",
-          "name": "Punzón de conexión",
-          "function": "Conecta al recipiente compatible previsto.",
-          "safety": "No representa una aguja para punción del paciente.",
-          "x": 110,
-          "y": 50,
-          "shapes": [
-            {
-              "kind": "poly",
-              "points": [
-                98,
-                80,
-                105,
-                25,
-                115,
-                25,
-                122,
-                80
-              ]
-            }
-          ]
-        },
-        {
-          "id": "camara",
-          "name": "Cámara de goteo",
-          "function": "Permite observar el goteo en este diseño.",
-          "safety": "No se deduce el factor de goteo por el tamaño dibujado.",
-          "x": 110,
-          "y": 135,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                80,
-                80,
-                140,
-                180
-              ]
-            }
-          ]
-        },
-        {
-          "id": "tubo",
-          "name": "Tubo de conducción",
-          "function": "Conduce el fluido por el sistema.",
-          "safety": "No se representa purgado, compatibilidad ni conexión clínica.",
-          "x": 174,
-          "y": 270,
-          "shapes": [
-            {
-              "kind": "poly",
-              "points": [
-                110,
-                180,
-                110,
-                270,
-                260,
-                270,
-                330,
-                215,
-                465,
-                240,
-                495,
-                300
-              ]
-            }
-          ]
-        },
-        {
-          "id": "regulador",
-          "name": "Regulador de rodillo",
-          "function": "Elemento mecánico de control del equipo.",
-          "safety": "Su posición dibujada no indica una velocidad real.",
-          "x": 253,
-          "y": 270,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                232,
-                245,
-                275,
-                292
-              ]
-            },
-            {
-              "kind": "oval",
-              "points": [
-                240,
-                251,
-                267,
-                278
-              ]
-            }
-          ]
-        },
-        {
-          "id": "puerto",
-          "name": "Puerto de acceso, según modelo",
-          "function": "Acceso adicional del sistema.",
-          "safety": "El diseño y método de acceso dependen del fabricante.",
-          "x": 347,
-          "y": 211,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                330,
-                192,
-                365,
-                230
-              ]
-            }
-          ]
-        },
-        {
-          "id": "conector",
-          "name": "Conector distal",
-          "function": "Conexión final prevista en el equipo.",
-          "safety": "Verificar compatibilidad; no se muestra una conexión al paciente.",
-          "x": 495,
-          "y": 322,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                480,
-                300,
-                512,
-                343
-              ]
-            }
-          ]
-        }
+      "source_urls": [
+        "https://www.adctoday.com/products/760",
+        "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf"
       ],
-      "sources": [
-        {
-          "title": "Base Maestra 2.1 · referencia editorial aportada",
-          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
-          "publisher": "Material editorial; revisión clínica pendiente",
-          "date": "2026-11-03"
-        }
-      ]
+      "review_date": "2026-11-03",
+      "review_status": "REVISIÓN-ASISTIDA; APROBACIÓN-PROFESIONAL-PENDIENTE",
+      "accuracy_approved_by": null,
+      "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+      "clinical_approved": false,
+      "pending_reason": "",
+      "processing": {
+        "id": "tensiometro",
+        "file": "atlas/atlas_tensiometro_aneroide.png",
+        "sha256": "cdebe5691f7a35ade6ab6be150a2482d23fcac0870f65f2bab564593365e6a73",
+        "native_file": "tensiometro.png",
+        "native_sha256": "7a44706dc781da1ebf1558e82ebf8e4c00167e79bbcacf514d0371fe97533d1b",
+        "native_dimensions": [
+          1408,
+          768
+        ],
+        "export_dimensions": [
+          2000,
+          1091
+        ],
+        "mode": "RGBA",
+        "transparent_fraction": 0.7206,
+        "bytes": 1299234,
+        "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
+        "retouches": [
+          "Máscara u2netp + matting para retirar la sombra opaca; píxeles de producto originales conservados."
+        ],
+        "alpha_bbox": [
+          102,
+          198,
+          1907,
+          909
+        ]
+      },
+      "checks": [
+        "Identificar el modelo y consultar sus instrucciones.",
+        "Comprobar integridad, conexión y condiciones del producto real.",
+        "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+      ],
+      "revision": "atlas-v22.1"
     },
     {
+      "asset_id": "pendiente_bureta",
       "id": "bureta",
-      "name": "Bureta / equipo tipo Volutrol",
+      "name": "Bureta",
+      "display_name_es": "Bureta",
+      "technical_name": "Equipo de infusión con bureta graduada",
       "area": "Dispositivos",
-      "model_note": "Bureta volumétrica genérica; Volutrol se conserva como término de estudio. No se representa un producto certificado.",
+      "file": null,
+      "view": "PENDIENTE",
+      "image_available": false,
+      "image_width": 0,
+      "image_height": 0,
+      "image_sha256": "",
+      "alt_text": "Equipo de infusión con bureta graduada. Recurso visual pendiente. No se muestra un sustituto esquemático.",
+      "model_note": "Referencia SMD 129, no mezcla con Dosifix; dos pinzas y cámara de goteo inferior.",
       "parts": [
         {
           "id": "entrada",
           "name": "Línea de entrada",
           "function": "Conduce hacia la cámara graduada.",
-          "safety": "Método de llenado y volumen permitido según fabricante.",
-          "x": 240,
-          "y": 30,
-          "shapes": [
-            {
-              "kind": "line",
-              "points": [
-                240,
-                15,
-                240,
-                70
-              ]
-            }
-          ]
+          "safety": "Método de llenado y volumen permitido según fabricante. Recurso visual pendiente: no hay punto de identificación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Línea de entrada",
+          "source_urls": [
+            "https://www.smd-medical.com/catalogue/iv-therapy-vascular-access/12-infusion-set-burette-type-catalogue.pdf",
+            "https://jhrml-bd.com/product/components-of-iv-infusion-set"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         },
         {
           "id": "pinza",
           "name": "Pinza de entrada",
           "function": "Control mecánico de la línea en este esquema.",
-          "safety": "Posición ilustrativa; no demuestra un circuito abierto o cerrado.",
-          "x": 240,
-          "y": 51,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                225,
-                35,
-                255,
-                62
-              ]
-            }
-          ]
+          "safety": "Posición ilustrativa; no demuestra un circuito abierto o cerrado. Recurso visual pendiente: no hay punto de identificación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Pinza de entrada",
+          "source_urls": [
+            "https://www.smd-medical.com/catalogue/iv-therapy-vascular-access/12-infusion-set-burette-type-catalogue.pdf",
+            "https://jhrml-bd.com/product/components-of-iv-infusion-set"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         },
         {
           "id": "bureta",
           "name": "Cámara graduada o bureta",
           "function": "Recipiente graduado del sistema.",
-          "safety": "No confundir con la cámara de goteo. Escala simbólica sin volumen medible.",
-          "x": 180,
-          "y": 165,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                180,
-                70,
-                300,
-                255
-              ]
-            },
-            {
-              "kind": "line",
-              "points": [
-                270,
-                100,
-                295,
-                100
-              ]
-            },
-            {
-              "kind": "line",
-              "points": [
-                270,
-                125,
-                295,
-                125
-              ]
-            },
-            {
-              "kind": "line",
-              "points": [
-                270,
-                150,
-                295,
-                150
-              ]
-            },
-            {
-              "kind": "line",
-              "points": [
-                270,
-                175,
-                295,
-                175
-              ]
-            },
-            {
-              "kind": "line",
-              "points": [
-                270,
-                200,
-                295,
-                200
-              ]
-            },
-            {
-              "kind": "line",
-              "points": [
-                270,
-                225,
-                295,
-                225
-              ]
-            }
-          ]
+          "safety": "No confundir con la cámara de goteo. Escala simbólica sin volumen medible. Recurso visual pendiente: no hay punto de identificación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Cámara graduada o bureta",
+          "source_urls": [
+            "https://www.smd-medical.com/catalogue/iv-therapy-vascular-access/12-infusion-set-burette-type-catalogue.pdf",
+            "https://jhrml-bd.com/product/components-of-iv-infusion-set"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         },
         {
           "id": "ventilacion",
           "name": "Ventilación/filtro, según modelo",
           "function": "Componente de determinados diseños.",
-          "safety": "No abrir, cerrar ni sustituir basándose en este esquema.",
-          "x": 324,
-          "y": 108,
-          "shapes": [
-            {
-              "kind": "poly",
-              "points": [
-                300,
-                98,
-                345,
-                98,
-                345,
-                115,
-                300,
-                115
-              ]
-            }
-          ]
+          "safety": "No abrir, cerrar ni sustituir basándose en este esquema. Recurso visual pendiente: no hay punto de identificación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Ventilación/filtro, según modelo",
+          "source_urls": [
+            "https://www.smd-medical.com/catalogue/iv-therapy-vascular-access/12-infusion-set-burette-type-catalogue.pdf",
+            "https://jhrml-bd.com/product/components-of-iv-infusion-set"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         },
         {
           "id": "camara-goteo",
           "name": "Cámara de goteo",
           "function": "Zona de observación inferior en el modelo ilustrado.",
-          "safety": "No identifica un factor de gotas/mL.",
-          "x": 240,
-          "y": 281,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                218,
-                255,
-                262,
-                305
-              ]
-            }
-          ]
+          "safety": "No identifica un factor de gotas/mL. Recurso visual pendiente: no hay punto de identificación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Cámara de goteo",
+          "source_urls": [
+            "https://www.smd-medical.com/catalogue/iv-therapy-vascular-access/12-infusion-set-burette-type-catalogue.pdf",
+            "https://jhrml-bd.com/product/components-of-iv-infusion-set"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         },
         {
           "id": "salida",
           "name": "Línea de salida y conexión",
           "function": "Conduce desde el conjunto hacia el sistema previsto.",
-          "safety": "No sustituye comprobación de conexiones y control de la infusión.",
-          "x": 415,
-          "y": 330,
-          "shapes": [
-            {
-              "kind": "poly",
-              "points": [
-                240,
-                305,
-                240,
-                330,
-                460,
-                330
-              ]
-            },
-            {
-              "kind": "rect",
-              "points": [
-                460,
-                317,
-                500,
-                344
-              ]
-            }
-          ]
+          "safety": "No sustituye comprobación de conexiones y control de la infusión. Recurso visual pendiente: no hay punto de identificación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Línea de salida y conexión",
+          "source_urls": [
+            "https://www.smd-medical.com/catalogue/iv-therapy-vascular-access/12-infusion-set-burette-type-catalogue.pdf",
+            "https://jhrml-bd.com/product/components-of-iv-infusion-set"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         }
       ],
       "sources": [
         {
-          "title": "Base Maestra 2.1 · referencia editorial aportada",
-          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
-          "publisher": "Material editorial; revisión clínica pendiente",
-          "date": "2026-11-03"
+          "title": "Burette IV set · serie SMD 129",
+          "url": "https://www.smd-medical.com/catalogue/iv-therapy-vascular-access/12-infusion-set-burette-type-catalogue.pdf",
+          "publisher": "SMD Medical",
+          "date": "2026-11-03",
+          "review_scope": "Texto consultado completo; síntesis anatómica, no autorización clínica."
+        },
+        {
+          "title": "Componentes del equipo IV",
+          "url": "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+          "publisher": "JMI Hospital Requisite Manufacturing",
+          "date": "2026-11-03",
+          "review_scope": "Anatomía y variantes; no certifica la configuración TrueCare."
         }
-      ]
+      ],
+      "source_urls": [
+        "https://www.smd-medical.com/catalogue/iv-therapy-vascular-access/12-infusion-set-burette-type-catalogue.pdf",
+        "https://jhrml-bd.com/product/components-of-iv-infusion-set"
+      ],
+      "review_date": "2026-11-03",
+      "review_status": "RECHAZADO; REGENERACIÓN-PENDIENTE",
+      "accuracy_approved_by": null,
+      "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+      "clinical_approved": false,
+      "pending_reason": "Candidato rechazado: cámara/tramo desconectado y continuidad del circuito no coherente.",
+      "processing": null,
+      "checks": [
+        "Identificar el modelo y consultar sus instrucciones.",
+        "Comprobar integridad, conexión y condiciones del producto real.",
+        "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+      ],
+      "revision": "atlas-v22.1"
     },
     {
+      "asset_id": "pendiente_cateter_periferico",
+      "id": "cateter-periferico",
+      "name": "Catéter venoso periférico",
+      "display_name_es": "Catéter venoso periférico",
+      "technical_name": "Catéter IV periférico corto / bránula",
+      "area": "Dispositivos",
+      "file": null,
+      "view": "PENDIENTE",
+      "image_available": false,
+      "image_width": 0,
+      "image_height": 0,
+      "image_sha256": "",
+      "alt_text": "Catéter IV periférico corto / bránula. Recurso visual pendiente. No se muestra un sustituto esquemático.",
+      "model_note": "Introcan Safety 3 alado sin puerto lateral. No mezclar con bránulas con torre de inyección.",
+      "parts": [
+        {
+          "id": "cateter",
+          "name": "Catéter: cánula flexible",
+          "function": "Es la cánula flexible del dispositivo.",
+          "safety": "Es distinta de la aguja metálica; no se indica uso, calibre ni tiempo de permanencia. Recurso visual pendiente: no hay punto de identificación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Catéter: cánula flexible",
+          "source_urls": [
+            "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "aguja-introductora",
+          "name": "Aguja introductora metálica",
+          "function": "Acompaña al catéter en este diseño.",
+          "safety": "No es el catéter; no se representa su manipulación o reinserción. Recurso visual pendiente: no hay punto de identificación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Aguja introductora metálica",
+          "source_urls": [
+            "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "conexion",
+          "name": "Conector o cubo",
+          "function": "Conecta con el sistema previsto.",
+          "safety": "Verificar integridad y compatibilidad del modelo. Recurso visual pendiente: no hay punto de identificación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Conector o cubo",
+          "source_urls": [
+            "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "camara",
+          "name": "Cámara de visualización, según modelo",
+          "function": "Permite observar el retorno en determinados diseños.",
+          "safety": "No equivale a comprobar por sí sola la seguridad del acceso. Recurso visual pendiente: no hay punto de identificación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Cámara de visualización, según modelo",
+          "source_urls": [
+            "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        },
+        {
+          "id": "alas",
+          "name": "Alas, según modelo",
+          "function": "Superficies laterales del cuerpo.",
+          "safety": "No todos los modelos las incluyen. Recurso visual pendiente: no hay punto de identificación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Alas, según modelo",
+          "source_urls": [
+            "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Introcan Safety 3 · instrucciones",
+          "url": "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf",
+          "publisher": "B. Braun",
+          "date": "2026-11-03",
+          "review_scope": "Extracto completo recuperado; segunda fuente y aprobación visual pendientes."
+        }
+      ],
+      "source_urls": [
+        "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf"
+      ],
+      "review_date": "2026-11-03",
+      "review_status": "RECHAZADO; REGENERACIÓN-PENDIENTE",
+      "accuracy_approved_by": null,
+      "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+      "clinical_approved": false,
+      "pending_reason": "Candidato rechazado: falso fondo de transparencia y componente metálico interno no sustentado.",
+      "processing": null,
+      "checks": [
+        "Identificar el modelo y consultar sus instrucciones.",
+        "Comprobar integridad, conexión y condiciones del producto real.",
+        "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+      ],
+      "revision": "atlas-v22.1"
+    },
+    {
+      "asset_id": "pendiente_llave_tres_vias",
       "id": "llave-tres-vias",
       "name": "Llave de tres vías",
+      "display_name_es": "Llave de tres vías",
+      "technical_name": "Llave de paso de tres vías",
       "area": "Dispositivos",
-      "model_note": "Vista esquemática: la posición dibujada NO indica qué trayectos están abiertos. Consultar marcas e instrucciones del producto.",
+      "file": null,
+      "view": "PENDIENTE",
+      "image_available": false,
+      "image_width": 0,
+      "image_height": 0,
+      "image_sha256": "",
+      "alt_text": "Llave de paso de tres vías. Recurso visual pendiente. No se muestra un sustituto esquemático.",
+      "model_note": "Referencia de configuración Discofix C: dos conexiones hembra y una macho. No inferir flujo por la posición de la manija.",
       "parts": [
         {
           "id": "cuerpo",
           "name": "Cuerpo central",
           "function": "Aloja el mecanismo del dispositivo.",
-          "safety": "Integridad y compatibilidad se verifican en el producto.",
-          "x": 300,
-          "y": 185,
-          "shapes": [
-            {
-              "kind": "oval",
-              "points": [
-                245,
-                130,
-                355,
-                240
-              ]
-            }
-          ]
+          "safety": "Integridad y compatibilidad se verifican en el producto. Recurso visual pendiente: no hay punto de identificación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Cuerpo central",
+          "source_urls": [
+            "https://www.bbraun-vetcare.com/content/dam/catalog/bbraun/bbraunProductCatalog/BVC_WEB_01/en-ag/b129/discofix-c-stopcocksmanifolds-youraccesstoincreasedsafety.pdf"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         },
         {
           "id": "selector",
           "name": "Mando selector",
           "function": "Permite modificar las conexiones según el diseño real.",
-          "safety": "No deducir dirección de flujo de este dibujo.",
-          "x": 274,
-          "y": 125,
-          "shapes": [
-            {
-              "kind": "poly",
-              "points": [
-                300,
-                185,
-                255,
-                110,
-                275,
-                100,
-                320,
-                175
-              ]
-            }
-          ]
+          "safety": "No deducir dirección de flujo de este dibujo. Recurso visual pendiente: no hay punto de identificación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Mando selector",
+          "source_urls": [
+            "https://www.bbraun-vetcare.com/content/dam/catalog/bbraun/bbraunProductCatalog/BVC_WEB_01/en-ag/b129/discofix-c-stopcocksmanifolds-youraccesstoincreasedsafety.pdf"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         },
         {
           "id": "puerto-1",
           "name": "Conexión lateral 1",
           "function": "Uno de los tres accesos.",
-          "safety": "Conexión y tapón dependen del modelo; no es una indicación de uso.",
-          "x": 145,
-          "y": 185,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                95,
-                168,
-                245,
-                202
-              ]
-            }
-          ]
+          "safety": "Conexión y tapón dependen del modelo; no es una indicación de uso. Recurso visual pendiente: no hay punto de identificación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Conexión lateral 1",
+          "source_urls": [
+            "https://www.bbraun-vetcare.com/content/dam/catalog/bbraun/bbraunProductCatalog/BVC_WEB_01/en-ag/b129/discofix-c-stopcocksmanifolds-youraccesstoincreasedsafety.pdf"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         },
         {
           "id": "puerto-2",
           "name": "Conexión lateral 2",
           "function": "Segundo acceso del conjunto.",
-          "safety": "No asumir compatibilidad por la apariencia.",
-          "x": 455,
-          "y": 185,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                355,
-                168,
-                505,
-                202
-              ]
-            }
-          ]
+          "safety": "No asumir compatibilidad por la apariencia. Recurso visual pendiente: no hay punto de identificación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Conexión lateral 2",
+          "source_urls": [
+            "https://www.bbraun-vetcare.com/content/dam/catalog/bbraun/bbraunProductCatalog/BVC_WEB_01/en-ag/b129/discofix-c-stopcocksmanifolds-youraccesstoincreasedsafety.pdf"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         },
         {
           "id": "puerto-3",
           "name": "Conexión inferior 3",
           "function": "Tercer acceso del conjunto.",
-          "safety": "No representa una vía del paciente ni una conexión permitida.",
-          "x": 300,
-          "y": 304,
-          "shapes": [
-            {
-              "kind": "rect",
-              "points": [
-                282,
-                240,
-                318,
-                330
-              ]
-            }
-          ]
+          "safety": "No representa una vía del paciente ni una conexión permitida. Recurso visual pendiente: no hay punto de identificación.",
+          "hotspot_x": null,
+          "hotspot_y": null,
+          "visible": false,
+          "part_status": "modelo",
+          "part_description": "Conexión inferior 3",
+          "source_urls": [
+            "https://www.bbraun-vetcare.com/content/dam/catalog/bbraun/bbraunProductCatalog/BVC_WEB_01/en-ag/b129/discofix-c-stopcocksmanifolds-youraccesstoincreasedsafety.pdf"
+          ],
+          "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
         }
       ],
       "sources": [
         {
-          "title": "Base Maestra 2.1 · referencia editorial aportada",
-          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
-          "publisher": "Material editorial; revisión clínica pendiente",
-          "date": "2026-11-03"
+          "title": "Discofix C · catálogo",
+          "url": "https://www.bbraun-vetcare.com/content/dam/catalog/bbraun/bbraunProductCatalog/BVC_WEB_01/en-ag/b129/discofix-c-stopcocksmanifolds-youraccesstoincreasedsafety.pdf",
+          "publisher": "B. Braun",
+          "date": "2026-11-03",
+          "review_scope": "Solo fragmento indexado; cotejo íntegro y segunda fuente pendientes."
         }
-      ]
+      ],
+      "source_urls": [
+        "https://www.bbraun-vetcare.com/content/dam/catalog/bbraun/bbraunProductCatalog/BVC_WEB_01/en-ag/b129/discofix-c-stopcocksmanifolds-youraccesstoincreasedsafety.pdf"
+      ],
+      "review_date": "2026-11-03",
+      "review_status": "RECHAZADO; REGENERACIÓN-PENDIENTE",
+      "accuracy_approved_by": null,
+      "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+      "clinical_approved": false,
+      "pending_reason": "Candidato rechazado: cuatro ramas visibles; no corresponde a una llave de tres vías.",
+      "processing": null,
+      "checks": [
+        "Identificar el modelo y consultar sus instrucciones.",
+        "Comprobar integridad, conexión y condiciones del producto real.",
+        "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+      ],
+      "revision": "atlas-v22.1"
     }
   ],
   "cases": [
@@ -2208,9 +2340,9 @@
     },
     {
       "route": "atlas",
-      "name": "Atlas vectorial",
+      "name": "Atlas PNG",
       "status": "PARCIAL",
-      "note": "Ocho dispositivos genéricos interactivos; cotejo de modelos de fabricante y revisión experta pendientes."
+      "note": "Cinco PNG RGBA con hotspots y autoevaluación; tres imágenes rechazadas pendientes de reemplazo y otros dieciséis dispositivos de la solicitud por desarrollar. Revisión profesional pendiente."
     },
     {
       "route": "bioseguridad",

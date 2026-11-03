@@ -1,0 +1,7 @@
+Intento 2: API 28 x86_64, sin KVM; -qemu -m 768; 480x800 mdpi; Vulkan deshabilitado.
+El log del emulador informó Boot completed in 158548 ms.
+1
+28
+MemTotal:         758292 kB
+MemFree:          245548 kB
+MemAvailable:     440400 kB

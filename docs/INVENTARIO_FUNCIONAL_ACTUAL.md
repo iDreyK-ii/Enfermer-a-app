@@ -1,10 +1,14 @@
-# Inventario funcional actual — Android 0.6.0 / Base Maestra 2.1
+> Cierre local Atlas v2.2: 252 JVM, 118 Python, 5 SQLite y 17 PGLite; lint 0 errores/26 advertencias. Ocho capturas del APK en emulador API28, 17 renders Robolectric separados y 2/2 pruebas PDF instrumentadas aprobadas. No hardware físico, no nuevo CI/publicación. Detalle: `qa/atlas_v22/RESULTADOS.md`.
+
+> Revisión local no publicada. Matriz completa actual: [AUDITORIA_ATLAS_v22.md](AUDITORIA_ATLAS_v22.md). No usar el CI del último publicado b463c580 como verificación del borrador.
+
+# Inventario funcional actual — Android 0.7.0 local / Base Maestra 2.1 + Atlas v2.2
 
 Este inventario describe la app existente que debe conservarse al importar/compilar. No es una propuesta para generar otra. La matriz de estados, evidencia y bloqueos completos está en [MVP_BASE_MAESTRA_v21.md](MVP_BASE_MAESTRA_v21.md).
 
 ## Identidad
 
-Kotlin/Jetpack Compose, módulo `:app`, una Activity, Prototipo B, diseño inicio 2/ficha 1. Namespace `com.idreyk.enfermeria360`, paquete debug `com.idreyk.enfermeria360.dev`, code **7**, nombre `0.6.0-dev` (debug añade `-debug`), minSdk 26, compile/target 35. Especificación editorial **2.1**, no versión Android 2.1.
+Kotlin/Jetpack Compose, módulo `:app`, una Activity, Prototipo B, diseño inicio 2/ficha 1. Namespace `com.idreyk.enfermeria360`, paquete debug `com.idreyk.enfermeria360.dev`, code **8**, nombre `0.7.0-dev` (debug añade `-debug`), minSdk 26, compile/target 35. Especificación editorial **2.1**, no versión Android 2.1.
 
 ## Funciones conservadas y ampliadas
 
@@ -24,8 +28,8 @@ Kotlin/Jetpack Compose, módulo `:app`, una Activity, Prototipo B, diseño inici
 | Instrumentos existentes | GCS adulto con componentes/NV, EVA y NRS separadas, 4AT adulto, Apgar educativo, Capurro, Silverman y registros anteriores de alcance explícito. | Mantener población, pendientes, ausencia de autoinforme, variante y reglas de puntuación. No inventar caras o estímulos. |
 | Registros externos | Braden original, Morse, Norton original y RASS: total ficticio entero, confirmación adulta, fuente/versión/contexto y rango. | No cuestionarios administrados ni interpretación/riesgo; permisos/validación siguen bloqueados. |
 | Cálculos | BigDecimal: dosis-volumen, cantidad/kg, conversión dimensional, mL/h, goteo, duración, dilución aplicable, balance e IMC; historial de ejercicios. | Factor del equipo obligatorio; edad/base explícitas; unidades, límites, fórmula/redondeo; no selecciona tratamientos. |
-| Atlas | Ocho esquemas vectoriales, toque/lista de partes, función/precaución, zoom/capa/números. | Genéricos, sin calibración ni tutorial invasivo; fabricante/experto pendiente. |
-| Bioseguridad/higiene | Cinco momentos, EPP/precauciones, cronómetro lavado/fricción con pausa/reinicio/pasos y modo estático. | Tiempos de procedimiento completo; reparto/dibujo didácticos; quirúrgico depende de producto/protocolo. |
+| Atlas | Cinco PNG RGBA/JSON, hotspots/lista, zoom/reinicio, panel adaptable y autoevaluación persistida; tres fichas sin imagen con aviso explícito. | Diecinueve de 24 PNG pendientes en total; revisión profesional y aceptación visual pendientes. No hay fallback robótico. |
+| Bioseguridad/higiene | Cinco momentos, EPP/precauciones, cronómetro lavado/fricción con pausa/reinicio/pasos y modo reducido; manos esquemáticas retiradas y recurso visual pendiente. | Tiempos de procedimiento completo; reparto/dibujo didácticos; quirúrgico depende de producto/protocolo. |
 | Listas seguras | Diez ítems institucionales INSN-SB con ámbito y veinte controles propios separados; listas configurables anteriores. | No una norma universal de veinte correctos ni autorización de administración. |
 | PAE | Siete campos anteriores y 32 complementarios: datos/fuente, Gordon, ABCDE, razonamiento/NOC/NIC propios, SOAPIE/SBAR. | Sin diagnósticos automáticos ni catálogos/códigos licenciados. Solo fichas ficticias. |
 | Apuntes/cuaderno | Crear/editar/buscar/etiquetar/borrar, revisión/deshacer, respaldo lee v1/v2 y exporta v2; Markdown importable/exportable. | Guardado manual; 200 documentos/2 MB; medios no incluidos en respaldo; SAF real pendiente. |
@@ -39,11 +43,11 @@ Kotlin/Jetpack Compose, módulo `:app`, una Activity, Prototipo B, diseño inici
 
 ## Recursos y estructura
 
-Conservar todas las carpetas versionadas, no solo `app/src/main`. Se añaden `EducationMath`, `MasterCatalog`, `NotebookEducation`, `ScreensMaster`, `ScreensAtlasHygiene` y `ScreensNotebookEducation`, además de rutas/integraciones en archivos existentes. El atlas usa geometría y etiquetas editables del asset; no son imágenes incrustadas con rótulos clínicos inferidos.
+Conservar todas las carpetas versionadas, no solo `app/src/main`. Se añaden `EducationMath`, `MasterCatalog`, `NotebookEducation`, `ScreensMaster`, `ScreensAtlasHygiene` y `ScreensNotebookEducation`, además de rutas/integraciones en archivos existentes. El atlas usa PNG locales y puntos normalizados/etiquetas editables del JSON. No hay rótulos generados dentro de las imágenes ni puntos de componentes ocultos.
 
 `research/base_maestra_v21/` conserva la entrada editorial y generadores; `app/src/main/assets/base_maestra_mvp.json` contiene la selección educativa/nominal empaquetada. No empaquetar el Markdown bruto de la Base como guía clínica. Los 44 instrumentos anteriores y sus fuentes permanecen separados.
 
-Los recuentos exactos de archivos de la entrega se obtienen del manifiesto del **commit publicado**. Hay 18 suites JVM ejecutadas y dos pruebas de instrumentación compiladas; no confundir número de archivos/clases con número de pruebas.
+Los recuentos exactos de archivos de la entrega se obtienen del manifiesto del **commit publicado**. El resultado actual está en `qa/atlas_v22/RESULTADOS.md`; dos pruebas de instrumentación no se consideran ejecutadas por estar compiladas; no confundir número de archivos/clases con número de pruebas.
 
 ## Qué significa trasladar todo
 

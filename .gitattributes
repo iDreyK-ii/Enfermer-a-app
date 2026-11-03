@@ -1,0 +1,5 @@
+
+# Preserve original instructions and raw tool logs byte-for-byte.
+research/atlas_v22/Enfermeria_iDreyK360_AUDITORIA_ATLAS_VISUAL_PNG_v2_2.md whitespace=-blank-at-eol
+qa/atlas_v22/logs/*.txt whitespace=-blank-at-eol
+qa/atlas_v22/logcat-cierre.txt whitespace=-blank-at-eol

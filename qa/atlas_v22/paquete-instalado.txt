@@ -1,0 +1,109 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        248251f com.idreyk.enfermeria360.dev/com.idreyk.enfermeria360.MainActivity filter a5a82bd
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      androidx.profileinstaller.action.SAVE_PROFILE:
+        901706c com.idreyk.enfermeria360.dev/androidx.profileinstaller.ProfileInstallReceiver filter 4be6c67
+          Action: "androidx.profileinstaller.action.SAVE_PROFILE"
+      androidx.profileinstaller.action.INSTALL_PROFILE:
+        901706c com.idreyk.enfermeria360.dev/androidx.profileinstaller.ProfileInstallReceiver filter 6276f81
+          Action: "androidx.profileinstaller.action.INSTALL_PROFILE"
+      androidx.profileinstaller.action.SKIP_FILE:
+        901706c com.idreyk.enfermeria360.dev/androidx.profileinstaller.ProfileInstallReceiver filter 189f826
+          Action: "androidx.profileinstaller.action.SKIP_FILE"
+      androidx.profileinstaller.action.BENCHMARK_OPERATION:
+        901706c com.idreyk.enfermeria360.dev/androidx.profileinstaller.ProfileInstallReceiver filter 8c5ba14
+          Action: "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+
+Permissions:
+  Permission [com.idreyk.enfermeria360.dev.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (565f635):
+    sourcePackage=com.idreyk.enfermeria360.dev
+    uid=10067 gids=null type=0 prot=signature
+    perm=Permission{f6c2aca com.idreyk.enfermeria360.dev.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+    packageSetting=PackageSetting{853f43b com.idreyk.enfermeria360.dev/10067}
+
+Registered ContentProviders:
+  com.idreyk.enfermeria360.dev/androidx.startup.InitializationProvider:
+    Provider{cb2758 com.idreyk.enfermeria360.dev/androidx.startup.InitializationProvider}
+  com.idreyk.enfermeria360.dev/androidx.core.content.FileProvider:
+    Provider{28cc0b1 com.idreyk.enfermeria360.dev/androidx.core.content.FileProvider}
+
+ContentProvider Authorities:
+  [com.idreyk.enfermeria360.dev.files]:
+    Provider{28cc0b1 com.idreyk.enfermeria360.dev/androidx.core.content.FileProvider}
+      applicationInfo=ApplicationInfo{28a2996 com.idreyk.enfermeria360.dev}
+  [com.idreyk.enfermeria360.dev.androidx-startup]:
+    Provider{cb2758 com.idreyk.enfermeria360.dev/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{28a2996 com.idreyk.enfermeria360.dev}
+
+Key Set Manager:
+  [com.idreyk.enfermeria360.dev]
+      Signing KeySets: 5
+
+Packages:
+  Package [com.idreyk.enfermeria360.dev] (853f43b):
+    userId=10067
+    pkg=Package{d839917 com.idreyk.enfermeria360.dev}
+    codePath=/data/app/com.idreyk.enfermeria360.dev-jrxtfSJyKa_2kyGoFV8Twg==
+    resourcePath=/data/app/com.idreyk.enfermeria360.dev-jrxtfSJyKa_2kyGoFV8Twg==
+    legacyNativeLibraryDir=/data/app/com.idreyk.enfermeria360.dev-jrxtfSJyKa_2kyGoFV8Twg==/lib
+    primaryCpuAbi=x86_64
+    secondaryCpuAbi=null
+    versionCode=8 minSdk=26 targetSdk=35
+    versionName=0.7.0-dev-debug
+    splits=[base]
+    apkSigningVersion=2
+    applicationInfo=ApplicationInfo{28a2996 com.idreyk.enfermeria360.dev}
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ]
+    dataDir=/data/user/0/com.idreyk.enfermeria360.dev
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2026-11-03 14:20:12
+    firstInstallTime=2026-11-03 14:14:23
+    lastUpdateTime=2026-11-03 14:20:14
+    signatures=PackageSignatures{8776104 version:2, signatures:[9da19ced], past signatures:[]}
+    installPermissionsFixed=true
+    pkgFlags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    declared permissions:
+      com.idreyk.enfermeria360.dev.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature, INSTALLED
+    requested permissions:
+      android.permission.INTERNET
+      com.idreyk.enfermeria360.dev.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+    install permissions:
+      android.permission.INTERNET: granted=true
+      com.idreyk.enfermeria360.dev.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+    User 0: ceDataInode=115127 installed=true hidden=false suspended=false stopped=false notLaunched=false enabled=0 instant=false virtual=false
+      gids=[3003]
+      runtime permissions:
+
+Package Changes:
+  Sequence number=27
+  User 0:
+    seq=1, package=com.android.systemui
+    seq=2, package=com.android.sdksetup
+    seq=3, package=com.android.provision
+    seq=8, package=com.android.messaging
+    seq=10, package=com.android.settings
+    seq=11, package=com.android.calendar
+    seq=13, package=com.android.camera2
+    seq=21, package=com.android.email
+    seq=23, package=com.android.gallery3d
+    seq=24, package=com.android.inputmethod.latin
+    seq=25, package=com.android.nfc
+    seq=26, package=com.idreyk.enfermeria360.dev
+
+
+Dexopt state:
+  [com.idreyk.enfermeria360.dev]
+    path: /data/app/com.idreyk.enfermeria360.dev-jrxtfSJyKa_2kyGoFV8Twg==/base.apk
+      x86_64: [status=run-from-apk] [reason=unknown]
+
+
+Compiler stats:
+  [com.idreyk.enfermeria360.dev]
+    (No recorded stats)

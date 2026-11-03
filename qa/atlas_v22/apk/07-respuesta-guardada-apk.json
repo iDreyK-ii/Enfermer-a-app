@@ -1,0 +1,20 @@
+{
+  "file": "07-respuesta-guardada-apk.png",
+  "label": "Respuesta correcta con retroalimentación; persistencia verificada después en SQLite",
+  "width": 480,
+  "height": 800,
+  "logical_width": 800,
+  "logical_height": 1280,
+  "density_dpi": 160,
+  "capture_method": "adb exec-out screencap -p, sin recortar ni editar",
+  "environment": "Android 9 / API28 x86_64 / emulación software sin KVM",
+  "physical_device": false,
+  "apk_emulator": true,
+  "app_version": "0.7.0-dev-debug",
+  "version_code": 8,
+  "apk_sha256": "f19d11b037e08fc3d6034ca7f8802afc545f8db9773f105af2e947a1838a1f0d",
+  "sha256": "7f1291a5502f7ed9befb0d10b312416f6b22c9c8a4d552253a352ea1b17e9b78",
+  "theme": "oscuro",
+  "motion": "escalas del sistema desactivadas; no prueba de FPS",
+  "display_note": "Las capturas 05–08 conservan 480x800 píxeles físicos. wm size 800x1280 cambia el espacio lógico; el emulador reescala y añade bandas, no es una tablet física."
+}

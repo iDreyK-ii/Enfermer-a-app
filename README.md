@@ -1,4 +1,9 @@
-# Enfermería iDreyK 360 — Android nativo v0.6.0
+# Enfermería iDreyK 360 — Android nativo v0.7.0 (borrador local)
+
+> **Actualización local Atlas v2.2:** cinco PNG RGBA, metadatos, hotspots nativos y autoevaluación persistida; tres imágenes rechazadas y dieciséis adicionales pendientes. No hay publicación autorizada de esta revisión. Ver [auditoría actual](docs/AUDITORIA_ATLAS_v22.md), [QA actual](qa/atlas_v22/RESULTADOS.md) y la entrega visual. La última revisión pública sigue siendo `b463c580` / 0.6.0; no usar su CI como evidencia de 0.7.0.
+
+**Cierre local v2.2:** 252 JVM, 118 Python, 5 SQLite, 17 PGLite; lint 0 errores/26 advertencias. 2/2 PDF instrumentados en emulador API28, ocho capturas de APK y 17 renders de producción separados. [Resultados completos](qa/atlas_v22/RESULTADOS.md). 5/24 PNG integrados sin aprobación profesional; 19 pendientes. No publicado.
+
 
 > **Continuidad con Google AI Studio:** empezar por [INICIAR_EN_AI_STUDIO.md](INICIAR_EN_AI_STUDIO.md), [identidad técnica](CONTINUIDAD.json) e [inventario funcional actual](docs/INVENTARIO_FUNCIONAL_ACTUAL.md). Se traslada esta app nativa completa, no una recreación. Cada actualización parte de un commit exacto de `desarrollo`; la copia importada se verifica antes de compilar. El propietario informa que Google construyó la revisión anterior sin cambios; su paridad de fuentes/renderizado no se verificó independientemente.
 
@@ -6,13 +11,13 @@ Evolución del mismo aplicativo del **Prototipo B**, en Kotlin/Jetpack Compose. 
 
 **Estado actual de infraestructura (2 de noviembre de 2026):** se creó `idreyk-360-dev` en Supabase, región Virginia autorizada, y se aplicó su migración. Pasaron **7 controles HTTPS y 12 comprobaciones SQL reales**. Correo OTP y sesión real siguen pendientes; el propietario autorizó aplazar esa configuración y continuar en modo local, sin cuenta obligatoria. Ver [docs/SUPABASE_REAL_Y_GITHUB.md](docs/SUPABASE_REAL_Y_GITHUB.md).
 
-**Entrega actual: Android 0.6.0-dev, code 7; Base Maestra 2.1.** APK local sin nube, con firma conservada y evidencia técnica. Las cuentas/plantillas OTP reales siguen aplazadas. El repositorio autorizado es [iDreyK-ii/Enfermer-a-app](https://github.com/iDreyK-ii/Enfermer-a-app), rama `desarrollo`, público por decisión del propietario. Solo práctica educativa, sin aprobación para pacientes reales.
+**Base publicada anterior: Android 0.6.0-dev, code 7; Base Maestra 2.1.** APK local sin nube, con firma conservada y evidencia técnica. Las cuentas/plantillas OTP reales siguen aplazadas. El repositorio autorizado es [iDreyK-ii/Enfermer-a-app](https://github.com/iDreyK-ii/Enfermer-a-app), rama `desarrollo`, público por decisión del propietario. Solo práctica educativa, sin aprobación para pacientes reales.
 
-## MVP Base Maestra 2.1 — Android v0.6.0
+## Antecedente conservado: MVP Base Maestra 2.1 — Android v0.6.0
 
-Se leyeron los 13 apartados y anexos completos, se publicó una rama de respaldo y se ejecutó QA antes de modificar. Sobre la misma app: 20 temas Markdown, búsqueda/filtros/progreso, calculadoras decimales con factor de goteo obligatorio, ocho atlas vectoriales, higiene y listas diferenciadas, PAE/Gordon/ABCDE/SOAPIE/SBAR, siete casos sintéticos/21 preguntas y **554 entradas nominales trazadas en 737 apariciones**. Las entradas siguen en IDENTIFICADO: no son monografías ni stock verificados. Se conservan escalas anteriores y solo se habilitan registros externos donde faltan permisos/validación.
+Se leyeron los 13 apartados y anexos completos, se publicó una rama de respaldo y se ejecutó QA antes de modificar. Sobre la misma app: 20 temas Markdown, búsqueda/filtros/progreso, calculadoras decimales con factor de goteo obligatorio, ocho atlas vectoriales en aquella versión (retirados en v2.2), higiene y listas diferenciadas, PAE/Gordon/ABCDE/SOAPIE/SBAR, siete casos sintéticos/21 preguntas y **554 entradas nominales trazadas en 737 apariciones**. Las entradas siguen en IDENTIFICADO: no son monografías ni stock verificados. Se conservan escalas anteriores y solo se habilitan registros externos donde faltan permisos/validación.
 
-**235 pruebas Android/JVM, 111 Python, 5 SQLite y 17 PGLite; lint 0 errores/26 advertencias.** Diez renders nativos en teléfono/tablet/compacto, no capturas de APK instalado. Dos pruebas instrumentadas PDF compiladas, **no ejecutadas**; salida PDF/servicio real pendientes.
+**Resultado histórico 0.6.0: 235 pruebas Android/JVM, 111 Python, 5 SQLite y 17 PGLite; lint 0 errores/26 advertencias.** Diez renders nativos en teléfono/tablet/compacto, no capturas de APK instalado. Dos pruebas instrumentadas PDF compiladas, **no ejecutadas**; salida PDF/servicio real pendientes.
 
 - [Funciones y matriz HECHO/PARCIAL/FALTA/BLOQUEADO](docs/MVP_BASE_MAESTRA_v21.md)
 - [QA y límites](qa/RESULTADOS_v0.6.0.md) · [Desglose visual autocontenido](qa/base_maestra_v21/desglose_visual.html)
@@ -121,7 +126,7 @@ Desde v0.4 el APK declara INTERNET; sin configuración no realiza solicitudes. L
 
 ## 6. Comprobaciones y límites
 
-Ver [qa/RESULTADOS_v0.4.1.md](qa/RESULTADOS_v0.4.1.md): pruebas Android/JVM y Compose simulado, conversor/publicación, PostgreSQL/RLS y espejo SQLite. Los resultados de v0.3/v0.4/v0.4.1 permanecen como evidencia histórica separada; para este bloque consultar qa/RESULTADOS_v0.5.0.md.
+Ver [qa/RESULTADOS_v0.4.1.md](qa/RESULTADOS_v0.4.1.md): pruebas Android/JVM y Compose simulado, conversor/publicación, PostgreSQL/RLS y espejo SQLite. Los resultados de v0.3/v0.4/v0.4.1 permanecen como evidencia histórica separada; para la revisión local Android 0.7.0 / atlas v2.2 consultar qa/atlas_v22/RESULTADOS.md. qa/RESULTADOS_v0.6.0.md es histórico.
 
 El servidor real tiene la primera validación de esquema y API documentada en [qa/SUPABASE_REAL_2026-11-02.md](qa/SUPABASE_REAL_2026-11-02.md). No se verificaron correo/sesión reales, instalación física, hardware Keystore, rendimiento medido en gamas distintas ni validación clínica. El diseño exportado es una **maqueta**, no una captura del APK. Las pruebas de reglas y aritmética no certifican atención clínica.
 

@@ -1,0 +1,83 @@
+{
+  "before": {
+    "version": 2,
+    "tables": {
+      "content": {
+        "rows": 8,
+        "sha256": "7a7685c92a75b35ff979ae89a10dc1bd1a6c083f4436cc0de1873ed9e21bff5b"
+      },
+      "favorites": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "media": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "meta": {
+        "rows": 1,
+        "sha256": "19335313342d9e7c8a85b37369f66836fbba445abe63bf13e4e44fbc671544a9"
+      },
+      "notebooks": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "notes": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "packages": {
+        "rows": 1,
+        "sha256": "d225f0d7154b0fb8091a7034a5829c428dc737522c080925d9a487c8ab21cfe2"
+      },
+      "practice": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    }
+  },
+  "after": {
+    "version": 2,
+    "tables": {
+      "content": {
+        "rows": 8,
+        "sha256": "7a7685c92a75b35ff979ae89a10dc1bd1a6c083f4436cc0de1873ed9e21bff5b"
+      },
+      "favorites": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "media": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "meta": {
+        "rows": 2,
+        "sha256": "89a03d87282fd1f1a10de8e4be013a5ef1135134024b71a09144345a32726fa8"
+      },
+      "notebooks": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "notes": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "packages": {
+        "rows": 1,
+        "sha256": "d225f0d7154b0fb8091a7034a5829c428dc737522c080925d9a487c8ab21cfe2"
+      },
+      "practice": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    }
+  },
+  "note": "Actualización install -r de code7 a code8 sin uninstall. Apertura de jeringa y primera respuesta realizadas después de actualizar; meta puede incorporar progreso/historial. Datos exclusivamente del emulador de QA.",
+  "same_schema_and_table_names": true,
+  "existing_non_meta_tables_unchanged": true,
+  "existing_meta_preserved": true,
+  "added_meta_keys": [
+    "learning:atlas/jeringa"
+  ]
+}

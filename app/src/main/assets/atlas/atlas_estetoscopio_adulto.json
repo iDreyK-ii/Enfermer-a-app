@@ -1,0 +1,206 @@
+{
+  "asset_id": "atlas_estetoscopio_adulto",
+  "id": "estetoscopio",
+  "name": "Estetoscopio",
+  "display_name_es": "Estetoscopio",
+  "technical_name": "Estetoscopio acústico binaural de doble cabezal",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_estetoscopio_adulto.png",
+  "view": "Vista de producto en tres cuartos; conjunto completo",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1091,
+  "image_sha256": "21fef2a1b76b8f75b053bad2cf7a5f3f18a128c9c9f20aba333475cf4ea9aeb7",
+  "alt_text": "Estetoscopio acústico binaural de doble cabezal. Imagen generada con IA y recortada, no fotografía de un fabricante. Etiquetas en interfaz; alternativa textual en la lista de partes.",
+  "model_note": "Anatomía acústica común contrastada con 3M. No se afirma réplica de un modelo ni un sistema de doble lumen. La cara posterior de la campana no se muestra.",
+  "parts": [
+    {
+      "id": "olivas",
+      "name": "Olivas",
+      "function": "Son los extremos que contactan con los oídos.",
+      "safety": "Ajuste e higiene según fabricante.",
+      "hotspot_x": 0.866,
+      "hotspot_y": 0.249,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Olivas",
+      "source_urls": [
+        "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+        "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "arcos",
+      "name": "Tubos binaurales",
+      "function": "Conectan el tubo flexible con las olivas.",
+      "safety": "Revisar integridad y orientación conforme al manual.",
+      "hotspot_x": 0.6815,
+      "hotspot_y": 0.3135,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Tubos binaurales",
+      "source_urls": [
+        "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+        "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "resorte",
+      "name": "Resorte del conjunto auricular",
+      "function": "Contribuye a mantener la tensión del conjunto.",
+      "safety": "Forma y mecanismo dependientes del modelo.",
+      "hotspot_x": 0.43,
+      "hotspot_y": 0.2612,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Resorte del conjunto auricular",
+      "source_urls": [
+        "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+        "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "tubo",
+      "name": "Tubo flexible",
+      "function": "Conduce el sonido entre cabezal y conjunto auricular.",
+      "safety": "No inferir el número de lúmenes internos.",
+      "hotspot_x": 0.423,
+      "hotspot_y": 0.857,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Tubo flexible",
+      "source_urls": [
+        "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+        "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "vastago",
+      "name": "Unión o vástago del cabezal",
+      "function": "Une el tubo al cabezal.",
+      "safety": "Selección de cara activa dependiente del modelo.",
+      "hotspot_x": 0.771,
+      "hotspot_y": 0.754,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Unión o vástago del cabezal",
+      "source_urls": [
+        "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+        "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "diafragma",
+      "name": "Diafragma",
+      "function": "Es la membrana de la cara visible del cabezal.",
+      "safety": "No es una campana abierta; revisar integridad e higiene.",
+      "hotspot_x": 0.844,
+      "hotspot_y": 0.669,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Diafragma",
+      "source_urls": [
+        "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+        "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "cabezal",
+      "name": "Cuerpo del cabezal",
+      "function": "Aloja las superficies acústicas.",
+      "safety": "No deducir ajustes de presión por esta imagen.",
+      "hotspot_x": 0.85,
+      "hotspot_y": 0.8,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Cuerpo del cabezal",
+      "source_urls": [
+        "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+        "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "campana",
+      "name": "Campana / cara posterior",
+      "function": "Es una cara acústica alternativa en determinados modelos.",
+      "safety": "No se ve su apertura: sin hotspot ni prueba de identificación.",
+      "hotspot_x": null,
+      "hotspot_y": null,
+      "visible": false,
+      "part_status": "modelo",
+      "part_description": "Campana / cara posterior",
+      "source_urls": [
+        "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+        "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Anatomy of a stethoscope",
+      "url": "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+      "publisher": "3M Littmann",
+      "date": "2026-11-03",
+      "review_scope": "Texto consultado completo; síntesis anatómica, no autorización clínica."
+    },
+    {
+      "title": "Manual Classic III · variantes de campana",
+      "url": "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/",
+      "publisher": "stethoscope.eu",
+      "date": "2026-11-03",
+      "review_scope": "Texto completo; fuente secundaria sobre un modelo concreto. La imagen no es una reproducción exacta del Classic III."
+    }
+  ],
+  "source_urls": [
+    "https://multimedia.3m.com/mws/media/1346109O/littmann-anatomy-of-a-stethoscope-poster-pdf.pdf",
+    "https://stethoscope.eu/blog/en/how-to-hygiene/user-manual-3m-littmann-classic-iii-stethoscope/"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "REVISIÓN-ASISTIDA; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "id": "estetoscopio",
+    "file": "atlas/atlas_estetoscopio_adulto.png",
+    "sha256": "21fef2a1b76b8f75b053bad2cf7a5f3f18a128c9c9f20aba333475cf4ea9aeb7",
+    "native_file": "estetoscopio.png",
+    "native_sha256": "d392c82894d655e2e8882ea6ea6275be8bbe6c5bffd339873830b1537cf2d562",
+    "native_dimensions": [
+      1408,
+      768
+    ],
+    "export_dimensions": [
+      2000,
+      1091
+    ],
+    "mode": "RGBA",
+    "transparent_fraction": 0.8429,
+    "bytes": 609050,
+    "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
+    "retouches": [
+      "Eliminación local de mancha central del diafragma, sin añadir componentes."
+    ],
+    "alpha_bbox": [
+      176,
+      78,
+      1861,
+      983
+    ]
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones.",
+    "Comprobar integridad, conexión y condiciones del producto real.",
+    "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

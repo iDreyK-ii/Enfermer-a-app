@@ -1,0 +1,190 @@
+{
+  "asset_id": "atlas_tensiometro_aneroide",
+  "id": "tensiometro",
+  "name": "Tensiómetro aneroide",
+  "display_name_es": "Tensiómetro aneroide",
+  "technical_name": "Esfigmomanómetro aneroide de bolsillo con manguito",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_tensiometro_aneroide.png",
+  "view": "Vista de producto en tres cuartos; conjunto completo",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1091,
+  "image_sha256": "cdebe5691f7a35ade6ab6be150a2482d23fcac0870f65f2bab564593365e6a73",
+  "alt_text": "Esfigmomanómetro aneroide de bolsillo con manguito. Imagen generada con IA y recortada, no fotografía de un fabricante. Etiquetas en interfaz; alternativa textual en la lista de partes.",
+  "model_note": "Referencia anatómica ADC Prosphyg 760 con dos tubos y vejiga interna. No es una representación calibrada ni una reproducción exacta. El manual de referencia excluye uso neonatal; no extrapolar tallas.",
+  "parts": [
+    {
+      "id": "manguito",
+      "name": "Manguito",
+      "function": "Es la envoltura del conjunto inflable.",
+      "safety": "Seleccionar talla y revisar estado según fabricante.",
+      "hotspot_x": 0.312,
+      "hotspot_y": 0.369,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Manguito",
+      "source_urls": [
+        "https://www.adctoday.com/products/760",
+        "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "manometro",
+      "name": "Manómetro",
+      "function": "Muestra la presión del sistema en el equipo real.",
+      "safety": "La esfera ilustrada no permite una lectura de presión.",
+      "hotspot_x": 0.639,
+      "hotspot_y": 0.467,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Manómetro",
+      "source_urls": [
+        "https://www.adctoday.com/products/760",
+        "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "pera",
+      "name": "Pera de inflado",
+      "function": "Genera la presión de aire en el sistema.",
+      "safety": "No es un dispositivo para vía intravenosa.",
+      "hotspot_x": 0.858,
+      "hotspot_y": 0.6,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Pera de inflado",
+      "source_urls": [
+        "https://www.adctoday.com/products/760",
+        "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "valvula",
+      "name": "Válvula de liberación",
+      "function": "Permite liberar aire según diseño.",
+      "safety": "No inferir una técnica de medición de esta imagen.",
+      "hotspot_x": 0.742,
+      "hotspot_y": 0.65,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Válvula de liberación",
+      "source_urls": [
+        "https://www.adctoday.com/products/760",
+        "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "tubos",
+      "name": "Tubos de aire",
+      "function": "Conectan los elementos del sistema neumático.",
+      "safety": "No conectar con líneas intravasculares; revisar fugas.",
+      "hotspot_x": 0.629,
+      "hotspot_y": 0.754,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Tubos de aire",
+      "source_urls": [
+        "https://www.adctoday.com/products/760",
+        "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "cierre",
+      "name": "Sistema de cierre",
+      "function": "Sujeta la envoltura.",
+      "safety": "Diseño dependiente del manguito.",
+      "hotspot_x": 0.401,
+      "hotspot_y": 0.552,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Sistema de cierre",
+      "source_urls": [
+        "https://www.adctoday.com/products/760",
+        "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "vejiga",
+      "name": "Vejiga inflable interna",
+      "function": "Es la bolsa de aire dentro del manguito de referencia.",
+      "safety": "Oculta: no se rotula como si fuera la tela ni se pregunta su ubicación.",
+      "hotspot_x": null,
+      "hotspot_y": null,
+      "visible": false,
+      "part_status": "modelo",
+      "part_description": "Vejiga inflable interna",
+      "source_urls": [
+        "https://www.adctoday.com/products/760",
+        "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Prosphyg 760 · dos tubos y repuestos",
+      "url": "https://www.adctoday.com/products/760",
+      "publisher": "ADC",
+      "date": "2026-11-03",
+      "review_scope": "Texto consultado completo; síntesis anatómica, no autorización clínica."
+    },
+    {
+      "title": "Prosphyg · IFU español, revisión 21",
+      "url": "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf",
+      "publisher": "ADC",
+      "date": "2026-11-03",
+      "review_scope": "Manual completo; segunda referencia del mismo fabricante, no contraste independiente."
+    }
+  ],
+  "source_urls": [
+    "https://www.adctoday.com/products/760",
+    "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "REVISIÓN-ASISTIDA; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "id": "tensiometro",
+    "file": "atlas/atlas_tensiometro_aneroide.png",
+    "sha256": "cdebe5691f7a35ade6ab6be150a2482d23fcac0870f65f2bab564593365e6a73",
+    "native_file": "tensiometro.png",
+    "native_sha256": "7a44706dc781da1ebf1558e82ebf8e4c00167e79bbcacf514d0371fe97533d1b",
+    "native_dimensions": [
+      1408,
+      768
+    ],
+    "export_dimensions": [
+      2000,
+      1091
+    ],
+    "mode": "RGBA",
+    "transparent_fraction": 0.7206,
+    "bytes": 1299234,
+    "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
+    "retouches": [
+      "Máscara u2netp + matting para retirar la sombra opaca; píxeles de producto originales conservados."
+    ],
+    "alpha_bbox": [
+      102,
+      198,
+      1907,
+      909
+    ]
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones.",
+    "Comprobar integridad, conexión y condiciones del producto real.",
+    "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

@@ -1,0 +1,172 @@
+{
+  "asset_id": "atlas_aguja_hipodermica",
+  "id": "aguja",
+  "name": "Aguja",
+  "display_name_es": "Aguja",
+  "technical_name": "Aguja hipodérmica estándar con protector",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_aguja_hipodermica.png",
+  "view": "Vista de producto en tres cuartos; conjunto completo",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1116,
+  "image_sha256": "a74d036e8f3f9f385cd4be2e2159733df4563d1823931e6d8379d2a6d25b27b6",
+  "alt_text": "Aguja hipodérmica estándar con protector. Imagen generada con IA y recortada, no fotografía de un fabricante. Etiquetas en interfaz; alternativa textual en la lista de partes.",
+  "model_note": "Referencia Sterican estándar, no aguja de seguridad. No se declara calibre/longitud ni se infiere por el color del hub. La funda separada no recomienda reencapuchar.",
+  "parts": [
+    {
+      "id": "pabellon",
+      "name": "Pabellón o conector",
+      "function": "Une la cánula a una conexión compatible.",
+      "safety": "Color y conectores se verifican en el producto real.",
+      "hotspot_x": 0.249,
+      "hotspot_y": 0.251,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Pabellón o conector",
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "canula",
+      "name": "Cánula metálica",
+      "function": "Forma el cuerpo tubular de la aguja.",
+      "safety": "No es el catéter flexible.",
+      "hotspot_x": 0.566,
+      "hotspot_y": 0.482,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Cánula metálica",
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "bisel",
+      "name": "Bisel",
+      "function": "Es la terminación oblicua del extremo distal.",
+      "safety": "Geometría ilustrativa; no enseña técnica de punción.",
+      "hotspot_x": 0.837,
+      "hotspot_y": 0.637,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Bisel",
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "punta",
+      "name": "Punta",
+      "function": "Es el extremo distal punzante.",
+      "safety": "Riesgo punzocortante; seguir manejo y descarte institucional.",
+      "hotspot_x": 0.882,
+      "hotspot_y": 0.669,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Punta",
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "protector",
+      "name": "Protector separado",
+      "function": "Protege el dispositivo antes del uso según diseño.",
+      "safety": "No reencapuchar ni reutilizar por imitación de esta vista.",
+      "hotspot_x": 0.51,
+      "hotspot_y": 0.677,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Protector separado",
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "lumen",
+      "name": "Lumen interno",
+      "function": "Es el conducto interior de la cánula.",
+      "safety": "No visible en esta vista: sin hotspot ni pregunta visual.",
+      "hotspot_x": null,
+      "hotspot_y": null,
+      "visible": false,
+      "part_status": "universal",
+      "part_description": "Lumen interno",
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sterican · aguja hipodérmica estándar",
+      "url": "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
+      "publisher": "B. Braun",
+      "date": "2026-11-03",
+      "review_scope": "Texto consultado completo; síntesis anatómica, no autorización clínica."
+    },
+    {
+      "title": "Jeringas y agujas: catálogo técnico (2010)",
+      "url": "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+      "publisher": "B. Braun · alojado por Medline",
+      "date": "2026-11-03",
+      "review_scope": "Folleto completo; segunda referencia técnica del mismo fabricante, no revisión independiente."
+    }
+  ],
+  "source_urls": [
+    "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
+    "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "REVISIÓN-ASISTIDA; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "id": "aguja",
+    "file": "atlas/atlas_aguja_hipodermica.png",
+    "sha256": "a74d036e8f3f9f385cd4be2e2159733df4563d1823931e6d8379d2a6d25b27b6",
+    "native_file": "aguja-final.png",
+    "native_sha256": "021f4ccca61abcc3217b49dd98c8850e1ea126694c1f79a03cb280b93896cf87",
+    "native_dimensions": [
+      1376,
+      768
+    ],
+    "export_dimensions": [
+      2000,
+      1116
+    ],
+    "mode": "RGBA",
+    "transparent_fraction": 0.8491,
+    "bytes": 623274,
+    "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
+    "retouches": [],
+    "alpha_bbox": [
+      222,
+      120,
+      1788,
+      1016
+    ]
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones.",
+    "Comprobar integridad, conexión y condiciones del producto real.",
+    "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

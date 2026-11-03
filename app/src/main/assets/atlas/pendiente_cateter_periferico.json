@@ -1,0 +1,118 @@
+{
+  "asset_id": "pendiente_cateter_periferico",
+  "id": "cateter-periferico",
+  "name": "Catéter venoso periférico",
+  "display_name_es": "Catéter venoso periférico",
+  "technical_name": "Catéter IV periférico corto / bránula",
+  "area": "Dispositivos",
+  "file": null,
+  "view": "PENDIENTE",
+  "image_available": false,
+  "image_width": 0,
+  "image_height": 0,
+  "image_sha256": "",
+  "alt_text": "Catéter IV periférico corto / bránula. Recurso visual pendiente. No se muestra un sustituto esquemático.",
+  "model_note": "Introcan Safety 3 alado sin puerto lateral. No mezclar con bránulas con torre de inyección.",
+  "parts": [
+    {
+      "id": "cateter",
+      "name": "Catéter: cánula flexible",
+      "function": "Es la cánula flexible del dispositivo.",
+      "safety": "Es distinta de la aguja metálica; no se indica uso, calibre ni tiempo de permanencia. Recurso visual pendiente: no hay punto de identificación.",
+      "hotspot_x": null,
+      "hotspot_y": null,
+      "visible": false,
+      "part_status": "modelo",
+      "part_description": "Catéter: cánula flexible",
+      "source_urls": [
+        "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "aguja-introductora",
+      "name": "Aguja introductora metálica",
+      "function": "Acompaña al catéter en este diseño.",
+      "safety": "No es el catéter; no se representa su manipulación o reinserción. Recurso visual pendiente: no hay punto de identificación.",
+      "hotspot_x": null,
+      "hotspot_y": null,
+      "visible": false,
+      "part_status": "modelo",
+      "part_description": "Aguja introductora metálica",
+      "source_urls": [
+        "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "conexion",
+      "name": "Conector o cubo",
+      "function": "Conecta con el sistema previsto.",
+      "safety": "Verificar integridad y compatibilidad del modelo. Recurso visual pendiente: no hay punto de identificación.",
+      "hotspot_x": null,
+      "hotspot_y": null,
+      "visible": false,
+      "part_status": "modelo",
+      "part_description": "Conector o cubo",
+      "source_urls": [
+        "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "camara",
+      "name": "Cámara de visualización, según modelo",
+      "function": "Permite observar el retorno en determinados diseños.",
+      "safety": "No equivale a comprobar por sí sola la seguridad del acceso. Recurso visual pendiente: no hay punto de identificación.",
+      "hotspot_x": null,
+      "hotspot_y": null,
+      "visible": false,
+      "part_status": "modelo",
+      "part_description": "Cámara de visualización, según modelo",
+      "source_urls": [
+        "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "alas",
+      "name": "Alas, según modelo",
+      "function": "Superficies laterales del cuerpo.",
+      "safety": "No todos los modelos las incluyen. Recurso visual pendiente: no hay punto de identificación.",
+      "hotspot_x": null,
+      "hotspot_y": null,
+      "visible": false,
+      "part_status": "modelo",
+      "part_description": "Alas, según modelo",
+      "source_urls": [
+        "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Introcan Safety 3 · instrucciones",
+      "url": "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf",
+      "publisher": "B. Braun",
+      "date": "2026-11-03",
+      "review_scope": "Extracto completo recuperado; segunda fuente y aprobación visual pendientes."
+    }
+  ],
+  "source_urls": [
+    "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "RECHAZADO; REGENERACIÓN-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "Candidato rechazado: falso fondo de transparencia y componente metálico interno no sustentado.",
+  "processing": null,
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones.",
+    "Comprobar integridad, conexión y condiciones del producto real.",
+    "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

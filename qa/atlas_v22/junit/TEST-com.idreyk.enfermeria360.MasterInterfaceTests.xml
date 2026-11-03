@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.MasterInterfaceTests" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-11-03T14:05:06" hostname="e2b.local" time="16.068">
+  <properties/>
+  <testcase name="hygienePausesResetsAndKeepsControlsWithReducedMotion" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="7.989"/>
+  <testcase name="nominalInventoryShowsAmbiguityWithoutAClinicalDose" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.922"/>
+  <testcase name="atlasIdentificationScoresPersistsAndResumesWithoutMarkingClinicalCompetence" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="2.023"/>
+  <testcase name="atlasZoomCanResetAndLabelsCanBeHiddenWhileDescriptionsRemainAccessible" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.514"/>
+  <testcase name="globalOfflineSearchFindsDevicePartsAndNativeRecorderRoutes" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.559"/>
+  <testcase name="syringePngSelectsPistonIndependentlyFromPlungerAndZooms" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.582"/>
+  <testcase name="syntheticCaseUnlocksNextStageOnlyAfterPersistedAnswerAndResumes" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.521"/>
+  <testcase name="weightExerciseNeedsExplicitAgeAndPerDayOrPerDoseBasis" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.469"/>
+  <testcase name="paeSavesSubjectiveObjectiveSoapieAndSbarWithoutReplacingOldFields" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.768"/>
+  <testcase name="dripHasNoAssumedFactorAndEditingInvalidatesPriorResult" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.394"/>
+  <testcase name="officialAndOwnChecklistsHaveDistinctAuthorityAndCounts" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.276"/>
+  <testcase name="externalRassDistinguishesBlankFromZeroAndRequiresAdultAndSource" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.36"/>
+  <testcase name="rejectedAtlasImageHasAnExplicitPendingStateAndNoQuizOrVectorFallback" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.226"/>
+  <testcase name="markdownLibraryFiltersAndPersistsExplicitReadMark" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.462"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

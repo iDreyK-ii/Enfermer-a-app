@@ -1,0 +1,220 @@
+{
+  "asset_id": "atlas_equipo_venoclisis",
+  "id": "equipo-iv",
+  "name": "Equipo de venoclisis",
+  "display_name_es": "Equipo de venoclisis",
+  "technical_name": "Equipo de administración intravenosa por gravedad",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_equipo_venoclisis.png",
+  "view": "Vista de producto en tres cuartos; conjunto completo",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1091,
+  "image_sha256": "17e4decf6370cee102bd366c1f93b4378a604548a54bd7757a3e16ee4b4e587d",
+  "alt_text": "Equipo de administración intravenosa por gravedad. Imagen generada con IA y recortada, no fotografía de un fabricante. Etiquetas en interfaz; alternativa textual en la lista de partes.",
+  "model_note": "Referencia TCBINF001: un roller, un sitio Y y conector distal; sin regulador adicional. El filtro interno no se identifica visualmente. No precompleta el factor de goteo de ninguna calculadora.",
+  "parts": [
+    {
+      "id": "punzon",
+      "name": "Punzón protegido",
+      "function": "Es el extremo de acceso al recipiente compatible.",
+      "safety": "El protector sigue colocado; no enseñar inserción.",
+      "hotspot_x": 0.23,
+      "hotspot_y": 0.177,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Punzón protegido",
+      "source_urls": [
+        "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+        "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+        "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "venteo",
+      "name": "Venteo y tapa",
+      "function": "Permite la función de venteo prevista en el modelo.",
+      "safety": "No todos los equipos son ventilados.",
+      "hotspot_x": 0.308,
+      "hotspot_y": 0.075,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Venteo y tapa",
+      "source_urls": [
+        "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+        "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+        "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "camara",
+      "name": "Cámara de goteo",
+      "function": "Permite observar el goteo en un equipo real.",
+      "safety": "Factor y uso se leen en el envase y las instrucciones.",
+      "hotspot_x": 0.45,
+      "hotspot_y": 0.174,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Cámara de goteo",
+      "source_urls": [
+        "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+        "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+        "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "tubo",
+      "name": "Tubo flexible",
+      "function": "Constituye la línea de conducción.",
+      "safety": "Revisar integridad; la imagen no autoriza conexiones.",
+      "hotspot_x": 0.597,
+      "hotspot_y": 0.6233,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Tubo flexible",
+      "source_urls": [
+        "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+        "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+        "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "roller",
+      "name": "Regulador de rodillo",
+      "function": "Comprime el tubo para regularlo según diseño.",
+      "safety": "No es una bomba ni un regulador de precisión.",
+      "hotspot_x": 0.473,
+      "hotspot_y": 0.439,
+      "visible": true,
+      "part_status": "universal",
+      "part_description": "Regulador de rodillo",
+      "source_urls": [
+        "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+        "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+        "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "sitio-y",
+      "name": "Sitio de acceso en Y",
+      "function": "Es un acceso adicional de este modelo.",
+      "safety": "Uso y compatibilidades requieren indicación y protocolo.",
+      "hotspot_x": 0.69,
+      "hotspot_y": 0.788,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Sitio de acceso en Y",
+      "source_urls": [
+        "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+        "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+        "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "luer",
+      "name": "Conector distal protegido",
+      "function": "Conecta al sistema compatible previsto.",
+      "safety": "No inferir esterilidad ni compatibilidad por la imagen.",
+      "hotspot_x": 0.94,
+      "hotspot_y": 0.53,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Conector distal protegido",
+      "source_urls": [
+        "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+        "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+        "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "filtro",
+      "name": "Filtro interno de la cámara",
+      "function": "Es un componente declarado por el fabricante.",
+      "safety": "No visible/resuelto en esta imagen; sin hotspot ni pregunta.",
+      "hotspot_x": null,
+      "hotspot_y": null,
+      "visible": false,
+      "part_status": "modelo",
+      "part_description": "Filtro interno de la cámara",
+      "source_urls": [
+        "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+        "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+        "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "TCBINF001 · equipos por gravedad",
+      "url": "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+      "publisher": "TrueCare Biomedix",
+      "date": "2026-11-03",
+      "review_scope": "Texto consultado completo; síntesis anatómica, no autorización clínica."
+    },
+    {
+      "title": "Componentes del equipo IV",
+      "url": "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+      "publisher": "JMI Hospital Requisite Manufacturing",
+      "date": "2026-11-03",
+      "review_scope": "Anatomía y variantes; no certifica la configuración TrueCare."
+    },
+    {
+      "title": "TCBINF001 · ficha técnica del distribuidor",
+      "url": "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590",
+      "publisher": "Henry Schein",
+      "date": "2026-11-03",
+      "review_scope": "Texto consultado completo; síntesis anatómica, no autorización clínica."
+    }
+  ],
+  "source_urls": [
+    "https://www.tcbiomedix.com/our-products/iv-administration-sets/gravity-iv-administration-sets",
+    "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+    "https://www.henryscheinmedical.com/us-en/medical/p/medical-surgical-supplies/iv-irrigation-products/administration-set-iv-male-ll/1373590"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "REVISIÓN-ASISTIDA; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "id": "equipo-iv",
+    "file": "atlas/atlas_equipo_venoclisis.png",
+    "sha256": "17e4decf6370cee102bd366c1f93b4378a604548a54bd7757a3e16ee4b4e587d",
+    "native_file": "equipo-iv.png",
+    "native_sha256": "5eb56321280298efeae76f31cec47fc4b85b97c2116b227d35af6ff4e2711a20",
+    "native_dimensions": [
+      1408,
+      768
+    ],
+    "export_dimensions": [
+      2000,
+      1091
+    ],
+    "mode": "RGBA",
+    "transparent_fraction": 0.8274,
+    "bytes": 708761,
+    "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
+    "retouches": [],
+    "alpha_bbox": [
+      51,
+      51,
+      1948,
+      1037
+    ]
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones.",
+    "Comprobar integridad, conexión y condiciones del producto real.",
+    "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

@@ -79,13 +79,13 @@ class MasterCatalogTests {
         assertEquals(64, master.sourceHash.length)
         master.topics.forEach { assertTrue(it.author.isNotBlank()); assertTrue(it.sources.isNotEmpty()); assertTrue(it.status.contains("PENDIENTE")) }
     }
-    @Test fun vectorPartsAreSeparateEntitiesWithAccessibleTextAndBoundedCoordinates() {
+    @Test fun pngPartsAreSeparateEntitiesWithAccessibleTextAndNormalizedCoordinates() {
         val syringe = master.devices.single { it.id == "jeringa" }
         assertNotEquals(syringe.parts.single { it.id == "embolo" }, syringe.parts.single { it.id == "piston" })
         val catheter = master.devices.single { it.id == "cateter-periferico" }
         assertTrue(catheter.parts.any { it.id == "cateter" }); assertTrue(catheter.parts.any { it.id == "aguja-introductora" })
         master.devices.forEach { d -> d.parts.forEach { assertTrue(it.name.isNotBlank()); assertTrue(it.function.isNotBlank()); assertTrue(it.safety.isNotBlank()) } }
-        val bad = source(); bad.getJSONArray("devices").getJSONObject(0).getJSONArray("parts").getJSONObject(0).put("x", 900)
+        val bad = source(); bad.getJSONArray("devices").getJSONObject(0).getJSONArray("parts").getJSONObject(0).put("hotspot_x", 1.01)
         reject { MasterCatalog.decode(bad.toString()) }
     }
     @Test fun exactlyTenInstitutionalItemsStaySeparateFromTwentyOwnControls() {

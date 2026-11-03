@@ -1,0 +1,10 @@
+test_actual_schema_has_eight_tables_and_no_accounts_or_foreign_keys (__main__.ArchitectureTests.test_actual_schema_has_eight_tables_and_no_accounts_or_foreign_keys) ... ok
+test_example_creation_refuses_to_overwrite_any_existing_file (__main__.ArchitectureTests.test_example_creation_refuses_to_overwrite_any_existing_file) ... ok
+test_original_seed_round_trips_with_attribution (__main__.ArchitectureTests.test_original_seed_round_trips_with_attribution) ... ok
+test_parameterized_example_keeps_sql_like_text_literal (__main__.ArchitectureTests.test_parameterized_example_keeps_sql_like_text_literal) ... ok
+test_tables_columns_indexes_and_autoincrement_match_kotlin (__main__.ArchitectureTests.test_tables_columns_indexes_and_autoincrement_match_kotlin) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.009s
+
+OK

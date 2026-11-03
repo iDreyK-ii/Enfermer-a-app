@@ -1,0 +1,136 @@
+[
+  {
+    "id": "jeringa",
+    "file": "atlas/atlas_jeringa_luer_lock.png",
+    "sha256": "c23644432920d0fa5f8438cc8c5317ef14d7ea38ee64643b95cbb61c1da8fc64",
+    "native_file": "jeringa-corregida.png",
+    "native_sha256": "0a5ae665f57901f0c51b35762e0a6dbae6ee7da5cf8dac50650d2591ea517344",
+    "native_dimensions": [
+      1376,
+      768
+    ],
+    "export_dimensions": [
+      2000,
+      1116
+    ],
+    "mode": "RGBA",
+    "transparent_fraction": 0.7828,
+    "bytes": 754724,
+    "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
+    "retouches": [],
+    "alpha_bbox": [
+      122,
+      308,
+      1872,
+      798
+    ]
+  },
+  {
+    "id": "aguja",
+    "file": "atlas/atlas_aguja_hipodermica.png",
+    "sha256": "a74d036e8f3f9f385cd4be2e2159733df4563d1823931e6d8379d2a6d25b27b6",
+    "native_file": "aguja-final.png",
+    "native_sha256": "021f4ccca61abcc3217b49dd98c8850e1ea126694c1f79a03cb280b93896cf87",
+    "native_dimensions": [
+      1376,
+      768
+    ],
+    "export_dimensions": [
+      2000,
+      1116
+    ],
+    "mode": "RGBA",
+    "transparent_fraction": 0.8491,
+    "bytes": 623274,
+    "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
+    "retouches": [],
+    "alpha_bbox": [
+      222,
+      120,
+      1788,
+      1016
+    ]
+  },
+  {
+    "id": "estetoscopio",
+    "file": "atlas/atlas_estetoscopio_adulto.png",
+    "sha256": "21fef2a1b76b8f75b053bad2cf7a5f3f18a128c9c9f20aba333475cf4ea9aeb7",
+    "native_file": "estetoscopio.png",
+    "native_sha256": "d392c82894d655e2e8882ea6ea6275be8bbe6c5bffd339873830b1537cf2d562",
+    "native_dimensions": [
+      1408,
+      768
+    ],
+    "export_dimensions": [
+      2000,
+      1091
+    ],
+    "mode": "RGBA",
+    "transparent_fraction": 0.8429,
+    "bytes": 609050,
+    "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
+    "retouches": [
+      "Eliminación local de mancha central del diafragma, sin añadir componentes."
+    ],
+    "alpha_bbox": [
+      176,
+      78,
+      1861,
+      983
+    ]
+  },
+  {
+    "id": "equipo-iv",
+    "file": "atlas/atlas_equipo_venoclisis.png",
+    "sha256": "17e4decf6370cee102bd366c1f93b4378a604548a54bd7757a3e16ee4b4e587d",
+    "native_file": "equipo-iv.png",
+    "native_sha256": "5eb56321280298efeae76f31cec47fc4b85b97c2116b227d35af6ff4e2711a20",
+    "native_dimensions": [
+      1408,
+      768
+    ],
+    "export_dimensions": [
+      2000,
+      1091
+    ],
+    "mode": "RGBA",
+    "transparent_fraction": 0.8274,
+    "bytes": 708761,
+    "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
+    "retouches": [],
+    "alpha_bbox": [
+      51,
+      51,
+      1948,
+      1037
+    ]
+  },
+  {
+    "id": "tensiometro",
+    "file": "atlas/atlas_tensiometro_aneroide.png",
+    "sha256": "cdebe5691f7a35ade6ab6be150a2482d23fcac0870f65f2bab564593365e6a73",
+    "native_file": "tensiometro.png",
+    "native_sha256": "7a44706dc781da1ebf1558e82ebf8e4c00167e79bbcacf514d0371fe97533d1b",
+    "native_dimensions": [
+      1408,
+      768
+    ],
+    "export_dimensions": [
+      2000,
+      1091
+    ],
+    "mode": "RGBA",
+    "transparent_fraction": 0.7206,
+    "bytes": 1299234,
+    "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
+    "retouches": [
+      "Máscara u2netp + matting para retirar la sombra opaca; píxeles de producto originales conservados."
+    ],
+    "alpha_bbox": [
+      102,
+      198,
+      1907,
+      909
+    ]
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "embedded_images": 30,
+  "valid_png_images": 30,
+  "screenshots_unchanged": true,
+  "native_png_previews_scaled_to_width": 1000,
+  "not_a_browser_layout_test": true
+}

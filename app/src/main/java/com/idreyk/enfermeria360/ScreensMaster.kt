@@ -164,11 +164,12 @@ fun NominalDetailScreen(id: String, vm: AppViewModel, nav: (String) -> Unit, bac
 fun LearningProgressScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit) {
     val master = vm.data.master.catalog ?: return MissingMaster(vm, back)
     var clear by remember { mutableStateOf(false) }
-    val progress = vm.data.learning.values.filter { it.version == master.version }
+    val progress = vm.data.learning.values.filter { it.version == master.progressVersion(it.route) }
     Page("Tu avance real", "Guardado local · no calificación clínica", back) {
         AppCard(Modifier.fillMaxWidth()) {
             Text("${master.topics.count { t -> progress.any { it.route == "tema/${t.id}" && it.completed } }} / ${master.topics.size} lecturas marcadas", style = MaterialTheme.typography.titleMedium)
             Text("${master.cases.count { c -> progress.any { it.route == "simulacion/${c.id}" && it.completed } }} / ${master.cases.size} casos terminados", style = MaterialTheme.typography.titleMedium)
+            Text("${master.devices.count { d -> progress.any { it.route == "atlas/${d.id}" && it.completed } }} / ${master.devices.count { it.image != null }} identificaciones terminadas", style = MaterialTheme.typography.titleMedium)
             Text("${vm.data.favorites.size} favoritos · ${vm.data.practices.size} resultados en el historial visible", style = MaterialTheme.typography.bodySmall)
         }
         Notice("El avance procede de tus acciones, no de un porcentaje de desarrollo inventado. Marcar una lectura no acredita comprensión. No se sincroniza con una cuenta.")
@@ -179,7 +180,7 @@ fun LearningProgressScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> 
         Secondary("Restablecer solo progreso", { clear = true }, !vm.busy && vm.data.learning.isNotEmpty())
     }
     if (clear) AlertDialog(onDismissRequest = { clear = false }, title = { Text("¿Restablecer el progreso?") },
-        text = { Text("Se borran las marcas de lectura y respuestas de los siete recorridos. Se conservan cuaderno, favoritos e historial. No se puede deshacer.") },
+        text = { Text("Se borran las marcas de lectura y respuestas de casos e identificaciones del atlas. Se conservan cuaderno, favoritos e historial. No se puede deshacer.") },
         confirmButton = { TextButton(onClick = { clear = false; vm.clearLearning() }) { Text("Restablecer") } },
         dismissButton = { TextButton(onClick = { clear = false }) { Text("Conservar") } })
 }

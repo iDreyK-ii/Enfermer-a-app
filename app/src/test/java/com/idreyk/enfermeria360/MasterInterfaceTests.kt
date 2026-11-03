@@ -83,17 +83,49 @@ class MasterInterfaceTests {
         ui.onNodeWithText("Transcripción ambigua", substring = true).assertExists()
         ui.onNodeWithText("No hay monografía validada", substring = true).assertExists()
     }
-    @Test fun syringeVectorSelectsPistonIndependentlyFromPlungerAndZooms() {
+    @Test fun syringePngSelectsPistonIndependentlyFromPlungerAndZooms() {
         modules(); click("Atlas interactivo"); click("Jeringa")
-        ui.onNodeWithTag("atlas-vector").assertExists()
+        ui.onNodeWithTag("atlas-photo").assertExists()
         ui.onNodeWithTag("atlas-viewport").performScrollTo()
-        ui.onNodeWithTag("atlas-vector").performTouchInput { click(Offset(width * 249f / 600f, height * 230f / 380f)) }
+        ui.onNodeWithTag("atlas-photo").performTouchInput { click(Offset(width * .676f, height * .55f)) }
         ui.onNodeWithText("Pistón o sello").assertExists()
         ui.onNodeWithText("Sella y se desplaza dentro del cilindro.").assertExists()
         click("2. Émbolo: vástago móvil")
         ui.onNodeWithText("Émbolo: vástago móvil").assertExists()
         click("Acercar")
-        ui.onNodeWithText("1.5×").assertExists()
+        ui.onNodeWithText("1.5×", substring = true).assertExists()
+    }
+    @Test fun atlasIdentificationScoresPersistsAndResumesWithoutMarkingClinicalCompetence() {
+        modules(); click("Atlas interactivo"); click("Jeringa"); click("Practicar identificación")
+        val d = vm.data.master.catalog!!.devices.single { it.id == "jeringa" }
+        d.quizTargets.forEachIndexed { i, target ->
+            ui.onNodeWithTag("atlas-answer-$target").performScrollTo().assertHasClickAction().performClick()
+            await { vm.data.learning["atlas/jeringa"]?.answers?.size == i + 1 }
+            assertNull("La confirmación no debe tapar el siguiente control", vm.message)
+            if (i < d.quizTargets.lastIndex) click("Siguiente parte")
+        }
+        ui.onNodeWithText("5 de 5 identificaciones correctas").assertExists()
+        assertTrue(vm.data.learning["atlas/jeringa"]!!.completed)
+        back(); click("Practicar identificación")
+        ui.onNodeWithText("5 de 5 identificaciones correctas").assertExists()
+        click("Reiniciar identificación")
+        ui.onNodeWithText("Conservar").performClick()
+        assertEquals(5, vm.data.learning["atlas/jeringa"]!!.answers.size)
+    }
+    @Test fun rejectedAtlasImageHasAnExplicitPendingStateAndNoQuizOrVectorFallback() {
+        modules(); click("Atlas interactivo"); click("Catéter venoso periférico")
+        ui.onNodeWithTag("atlas-pending").assertExists()
+        ui.onNodeWithTag("atlas-photo").assertDoesNotExist()
+        ui.onNodeWithTag("atlas-vector").assertDoesNotExist()
+        ui.onNodeWithText("Practicar identificación").assertDoesNotExist()
+    }
+    @Test fun atlasZoomCanResetAndLabelsCanBeHiddenWhileDescriptionsRemainAccessible() {
+        modules(); click("Atlas interactivo"); click("Estetoscopio")
+        click("Acercar"); click("Restablecer vista")
+        ui.onNodeWithText("1.0×", substring = true).assertExists()
+        ui.onNodeWithContentDescription("Mostrar etiqueta seleccionada").performScrollTo().performClick()
+        click("8. Campana / cara posterior")
+        ui.onNodeWithText("No visible: sin punto ni pregunta visual.").assertExists()
     }
     @Test fun hygienePausesResetsAndKeepsControlsWithReducedMotion() {
         modules(); click("Bioseguridad"); click("Higiene en movimiento")
@@ -163,7 +195,7 @@ class MasterInterfaceTests {
         await { vm.data.practices.any { it.type == "RASS · externo" } }
         assertTrue(vm.data.practices.first { it.type == "RASS · externo" }.summary.contains("Puntaje transcrito: 0"))
     }
-    @Test fun globalOfflineSearchFindsVectorPartsAndNativeRecorderRoutes() {
+    @Test fun globalOfflineSearchFindsDevicePartsAndNativeRecorderRoutes() {
         click("Busca un módulo, fármaco o recurso…")
         ui.onNode(hasSetTextAction()).performTextInput("pistón")
         ui.onNodeWithText("Jeringa").assertExists()

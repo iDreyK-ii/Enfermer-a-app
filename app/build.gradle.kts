@@ -23,8 +23,8 @@ android {
         applicationId = "com.idreyk.enfermeria360"
         minSdk = 26
         targetSdk = 35
-        versionCode = 7
-        versionName = "0.6.0-dev"
+        versionCode = 8
+        versionName = "0.7.0-dev"
         buildConfigField("String", "CLOUD_URL", "\"$cloudUrl\"")
         buildConfigField("String", "CLOUD_PUBLISHABLE_KEY", "\"$cloudKey\"")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -82,7 +82,7 @@ tasks.withType<Test>().configureEach {
     systemProperty("robolectric.dependency.repo.url", "https://repo.maven.apache.org/maven2")
     // Las bibliotecas de pruebas son caché regenerable, no archivos del aplicativo.
     systemProperty("maven.repo.local", rootProject.file(".cache/robolectric-maven").absolutePath)
-    systemProperty("idreyk.captureDir", rootProject.file(".cache/native-mvp").absolutePath)
+    systemProperty("idreyk.captureDir", rootProject.file(".cache/native-atlas-v22").absolutePath)
     // Native libraries are large. A tmpfs /tmp consumes scarce RAM; use regenerable disk cache.
     val testTmp = rootProject.file(".cache/test-tmp")
     doFirst { testTmp.mkdirs() }

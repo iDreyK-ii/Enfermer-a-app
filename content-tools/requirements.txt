@@ -1,2 +1,5 @@
 openpyxl==3.1.5
 jsonschema==4.26.0
+
+# Verificación reproducible del canal alfa del atlas PNG
+Pillow==12.3.0

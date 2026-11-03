@@ -74,4 +74,7 @@ La importación nominal **ya está hecha**. Lo pendiente son las monografías cl
 - Sin IA que diagnostique/prescriba, sin pacientes identificables, sin dosis/stock/resultados clínicos presentados como reales sin evidencia.
 - Sin porcentajes de finalización inventados, botones vacíos o módulos bloqueados presentados como calculadoras.
 - Ningún pago, despliegue nuevo o publicación en Play sin autorización. No enviar credenciales administrativas ni claves de firma.
-- Cada incremento: auditoría de impacto → código/pruebas → evidencia y límites → commit/push → importación exacta en Google → comprobación. No dos aplicaciones divergentes.
+- Cada incremento: auditoría de impacto → código/pruebas → revisión visual, evidencia y límites → aprobación expresa del propietario para publicar → commit/push → importación exacta en Google → comprobación. No subir por inferencia ni mantener dos aplicaciones divergentes.
+
+## Corrección de alcance v2.2
+Los 19 PNG aún pendientes de los 24 exigidos NO son módulos futuros. Siguen siendo pendientes actuales, con trazabilidad en `qa/atlas_v22/inventario_24_png.json`. Los 12 recursos de la sección 5 del documento v2.2 sí constituyen el bloque futuro separado.

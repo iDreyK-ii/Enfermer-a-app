@@ -10,11 +10,27 @@ data class KnowledgeTopic(val id: String, val title: String, val area: String, v
 data class NominalMedicine(val id: String, val name: String, val kind: String, val status: String,
     val primary: String, val relations: List<String>, val aliases: List<String>, val formulations: List<String>,
     val lines: List<Int>, val notes: List<String>, val existingId: String)
-data class AtlasShape(val kind: String, val points: List<Float>)
+/** Hotspots are normalized to the actual PNG, never inferred for invisible components. */
 data class AtlasPart(val id: String, val name: String, val function: String, val safety: String,
-    val x: Float, val y: Float, val shapes: List<AtlasShape>)
+    val x: Float?, val y: Float?, val visible: Boolean, val status: String, val description: String)
 data class AtlasDevice(val id: String, val name: String, val area: String, val modelNote: String,
-    val parts: List<AtlasPart>, val sources: List<Reference>)
+    val parts: List<AtlasPart>, val sources: List<Reference>, val image: String?, val imageWidth: Int,
+    val imageHeight: Int, val alt: String, val reviewStatus: String, val reviewDate: String,
+    val pendingReason: String, val checks: List<String>, val technicalName: String) {
+    val quizTargets: List<Int> get() = if (image == null) emptyList() else
+        parts.indices.filter { parts[it].visible && parts[it].id != "punta" }.take(5)
+    fun quizOptions(question: Int): List<Int> {
+        require(question in quizTargets.indices)
+        val target = quizTargets[question]
+        return (listOf(target) + parts.indices.filter { parts[it].visible && it != target }.take(3))
+            .sortedBy { (it + question) % parts.size }
+    }
+    fun score(answers: List<Int>): Int {
+        require(image != null && answers.size <= quizTargets.size)
+        answers.forEachIndexed { i, answer -> require(answer in quizOptions(i)) }
+        return answers.indices.count { answers[it] == quizTargets[it] }
+    }
+}
 data class CaseQuestion(val scene: String, val prompt: String, val options: List<String>, val correct: Int,
     val feedback: String, val rubric: String)
 data class SyntheticCase(val id: String, val title: String, val area: String, val intro: String,
@@ -45,8 +61,8 @@ data class MasterCatalog(val version: String, val date: String, val sourceHash: 
             "${it.title} ${it.area} ${it.level} ${it.tags.joinToString(" ")} ${it.markdown}", it.area, it.level) } +
         inventory.map { MasterSearchItem("nominal/${it.id}", it.name, "${it.kind} · ${it.status}", "Inventario",
             "${it.name} ${it.kind} ${it.primary} ${it.relations.joinToString(" ")} ${it.aliases.joinToString(" ")} ${it.formulations.joinToString(" ")}", "Farmacología") } +
-        devices.map { MasterSearchItem("dispositivo/${it.id}", it.name, "Atlas · esquema genérico", "Dispositivo",
-            "${it.name} ${it.modelNote} ${it.parts.joinToString(" ") { p -> p.name + " " + p.function + " " + p.safety }}", it.area) } +
+        devices.map { MasterSearchItem("dispositivo/${it.id}", it.name, if (it.image != null) "Atlas PNG · revisión pendiente" else "Atlas · recurso pendiente", "Dispositivo",
+            "${it.name} ${it.technicalName} ${it.modelNote} ${it.parts.joinToString(" ") { p -> p.name + " " + p.function + " " + p.safety }}", it.area) } +
         cases.map { MasterSearchItem("simulacion/${it.id}", it.title, "${it.area} · caso sintético", "Caso",
             "${it.title} ${it.area} ${it.intro} ${it.questions.joinToString(" ") { q -> q.scene + " " + q.prompt }}", it.area) } +
         checklists.map { MasterSearchItem("lista/${it.id}", it.title, "${it.items.size} ítems · ${if (it.official) "institucional" else "propia"}", "Lista",
@@ -55,8 +71,10 @@ data class MasterCatalog(val version: String, val date: String, val sourceHash: 
     fun search(query: String, area: String = "", level: String = "", kind: String = ""): List<MasterSearchItem> =
         searchItems.filter { (area.isEmpty() || it.area == area) && (level.isEmpty() || it.level == level) &&
             (kind.isEmpty() || it.kind == kind) && it.matches(query) }
+    // Existing reading/case content did not change. Its progress remains compatible.
+    fun progressVersion(route: String): String = if (route.startsWith("atlas/")) "atlas-v22.1" else version
     fun validate(progress: LearningProgress) {
-        require(progress.version == version && progress.modified >= 0)
+        require(progress.version == progressVersion(progress.route) && progress.modified >= 0)
         when {
             progress.route.startsWith("tema/") -> {
                 require(topics.any { "tema/${it.id}" == progress.route })
@@ -67,6 +85,12 @@ data class MasterCatalog(val version: String, val date: String, val sourceHash: 
                     ?: throw IllegalArgumentException("Caso de aprendizaje inexistente.")
                 case.score(progress.answers)
                 require(progress.completed == (progress.answers.size == case.questions.size))
+            }
+            progress.route.startsWith("atlas/") -> {
+                val d = devices.singleOrNull { "atlas/${it.id}" == progress.route }
+                    ?: throw IllegalArgumentException("Dispositivo de aprendizaje inexistente.")
+                d.score(progress.answers)
+                require(progress.completed == (progress.answers.size == d.quizTargets.size))
             }
             else -> throw IllegalArgumentException("Ruta de progreso no admitida.")
         }
@@ -105,11 +129,12 @@ data class MasterCatalog(val version: String, val date: String, val sourceHash: 
                 AtlasDevice(d.getString("id"), d.getString("name"), d.getString("area"), d.getString("model_note"),
                     objects(d.getJSONArray("parts")).map { p ->
                         AtlasPart(p.getString("id"), p.getString("name"), p.getString("function"), p.getString("safety"),
-                            p.getDouble("x").toFloat(), p.getDouble("y").toFloat(), objects(p.getJSONArray("shapes")).map { s ->
-                                val a = s.getJSONArray("points")
-                                AtlasShape(s.getString("kind"), (0 until a.length()).map { a.getDouble(it).toFloat() })
-                            })
-                    }, refs(d))
+                            if (p.isNull("hotspot_x")) null else p.getDouble("hotspot_x").toFloat(),
+                            if (p.isNull("hotspot_y")) null else p.getDouble("hotspot_y").toFloat(),
+                            p.getBoolean("visible"), p.getString("part_status"), p.getString("part_description"))
+                    }, refs(d), if (d.isNull("file")) null else d.getString("file"), d.getInt("image_width"),
+                    d.getInt("image_height"), d.getString("alt_text"), d.getString("review_status"),
+                    d.getString("review_date"), d.getString("pending_reason"), texts(d.getJSONArray("checks")), d.getString("technical_name"))
             }
             val cases = objects(j.getJSONArray("cases")).map { c ->
                 SyntheticCase(c.getString("id"), c.getString("title"), c.getString("area"), c.getString("intro"),
@@ -126,13 +151,20 @@ data class MasterCatalog(val version: String, val date: String, val sourceHash: 
             require(inventory.all { it.status == "IDENTIFICADO" && it.primary.isNotBlank() && it.lines.isNotEmpty() })
             devices.forEach { d ->
                 ids(d.parts.map { it.id })
-                require(d.parts.size in 1..30)
+                require(d.parts.size in 1..30 && d.alt.isNotBlank() && d.reviewStatus.isNotBlank() && d.technicalName.isNotBlank())
+                if (d.image != null) {
+                    require(Regex("atlas/atlas_[a-z0-9_]+\\.png").matches(d.image))
+                    require(d.imageWidth in 200..3072 && d.imageHeight in 200..3072)
+                    require(d.quizTargets.size in 2..5 && d.sources.size >= 2)
+                } else {
+                    require(d.pendingReason.isNotBlank() && d.imageWidth == 0 && d.imageHeight == 0)
+                    require(d.parts.none { it.visible })
+                }
                 d.parts.forEach { p ->
-                    require(p.x in 0f..600f && p.y in 0f..380f && p.function.isNotBlank() && p.safety.isNotBlank())
-                    p.shapes.forEach { s ->
-                        require(s.kind in listOf("rect", "oval", "line", "poly") && s.points.size % 2 == 0 && s.points.size >= 4)
-                        require(s.points.indices.all { i -> s.points[i].isFinite() && s.points[i] in 0f..(if (i % 2 == 0) 600f else 380f) })
-                    }
+                    require(p.name.isNotBlank() && p.function.isNotBlank() && p.safety.isNotBlank())
+                    require(p.status in listOf("universal", "opcional", "modelo"))
+                    if (p.visible) require(p.x != null && p.y != null && p.x in 0f..1f && p.y in 0f..1f)
+                    else require(p.x == null && p.y == null)
                 }
             }
             cases.forEach { c ->

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.NursingModuleTests" tests="21" skipped="0" failures="0" errors="0" timestamp="2026-11-03T14:06:57" hostname="e2b.local" time="0.414">
+  <properties/>
+  <testcase name="volumeRejectsIncompatibleAndUnknownUnits" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.026"/>
+  <testcase name="dilutionCannotConcentrateOrMixUnits" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.001"/>
+  <testcase name="capurroNoDefaultsAndNoMixingVariants" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.012"/>
+  <testcase name="localEditingResetsReviewWithoutErasingAttributionOrMutatingOriginal" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.014"/>
+  <testcase name="volumeDimensionalArithmetic" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.001"/>
+  <testcase name="apgarHundredIsExplicitInTwoPointDescriptor" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.0"/>
+  <testcase name="invalidNumbersAndUnderflowNeverYieldAnAdministrableZero" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.007"/>
+  <testcase name="notebookCapsKeepRestorableExportsAndValidateFields" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.274"/>
+  <testcase name="protocolKeepsTextLimitsAndReviewChecks" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.015"/>
+  <testcase name="notebookRoundTripAndLiteralText" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.003"/>
+  <testcase name="pulseChartUsesOnlySavedReadingsForTheSelectedFictitiousPerson" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.004"/>
+  <testcase name="externallyObtainedScoresOnlyCheckIntegerAndRange" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.006"/>
+  <testcase name="pulseChartDoesNotInventFallbackDataAndCapsAt20" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.001"/>
+  <testcase name="protocolUsesSchemaTwoAndOneDoesNotIgnoreIt" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.002"/>
+  <testcase name="structuredPlanHasAllFieldsAndNoAutomaticTaxonomies" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.002"/>
+  <testcase name="dilutionConservesAmountAndDistinguishesFinalVolume" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.001"/>
+  <testcase name="neonatalTotalsAll243CombinationsEach" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.005"/>
+  <testcase name="capurroBAll1600CombinationsUse204AndFiveComponents" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.018"/>
+  <testcase name="decimalInputIsExplicitAndFinite" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.001"/>
+  <testcase name="capurroAAll6400CombinationsUse200AndExcludeNipple" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.011"/>
+  <testcase name="notebookRejectsDuplicateIdsForeignTypesAndUnknownOwners" classname="com.idreyk.enfermeria360.NursingModuleTests" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

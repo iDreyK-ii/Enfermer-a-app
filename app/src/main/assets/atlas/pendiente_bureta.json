@@ -1,0 +1,147 @@
+{
+  "asset_id": "pendiente_bureta",
+  "id": "bureta",
+  "name": "Bureta",
+  "display_name_es": "Bureta",
+  "technical_name": "Equipo de infusión con bureta graduada",
+  "area": "Dispositivos",
+  "file": null,
+  "view": "PENDIENTE",
+  "image_available": false,
+  "image_width": 0,
+  "image_height": 0,
+  "image_sha256": "",
+  "alt_text": "Equipo de infusión con bureta graduada. Recurso visual pendiente. No se muestra un sustituto esquemático.",
+  "model_note": "Referencia SMD 129, no mezcla con Dosifix; dos pinzas y cámara de goteo inferior.",
+  "parts": [
+    {
+      "id": "entrada",
+      "name": "Línea de entrada",
+      "function": "Conduce hacia la cámara graduada.",
+      "safety": "Método de llenado y volumen permitido según fabricante. Recurso visual pendiente: no hay punto de identificación.",
+      "hotspot_x": null,
+      "hotspot_y": null,
+      "visible": false,
+      "part_status": "modelo",
+      "part_description": "Línea de entrada",
+      "source_urls": [
+        "https://www.smd-medical.com/catalogue/iv-therapy-vascular-access/12-infusion-set-burette-type-catalogue.pdf",
+        "https://jhrml-bd.com/product/components-of-iv-infusion-set"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "pinza",
+      "name": "Pinza de entrada",
+      "function": "Control mecánico de la línea en este esquema.",
+      "safety": "Posición ilustrativa; no demuestra un circuito abierto o cerrado. Recurso visual pendiente: no hay punto de identificación.",
+      "hotspot_x": null,
+      "hotspot_y": null,
+      "visible": false,
+      "part_status": "modelo",
+      "part_description": "Pinza de entrada",
+      "source_urls": [
+        "https://www.smd-medical.com/catalogue/iv-therapy-vascular-access/12-infusion-set-burette-type-catalogue.pdf",
+        "https://jhrml-bd.com/product/components-of-iv-infusion-set"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "bureta",
+      "name": "Cámara graduada o bureta",
+      "function": "Recipiente graduado del sistema.",
+      "safety": "No confundir con la cámara de goteo. Escala simbólica sin volumen medible. Recurso visual pendiente: no hay punto de identificación.",
+      "hotspot_x": null,
+      "hotspot_y": null,
+      "visible": false,
+      "part_status": "modelo",
+      "part_description": "Cámara graduada o bureta",
+      "source_urls": [
+        "https://www.smd-medical.com/catalogue/iv-therapy-vascular-access/12-infusion-set-burette-type-catalogue.pdf",
+        "https://jhrml-bd.com/product/components-of-iv-infusion-set"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "ventilacion",
+      "name": "Ventilación/filtro, según modelo",
+      "function": "Componente de determinados diseños.",
+      "safety": "No abrir, cerrar ni sustituir basándose en este esquema. Recurso visual pendiente: no hay punto de identificación.",
+      "hotspot_x": null,
+      "hotspot_y": null,
+      "visible": false,
+      "part_status": "modelo",
+      "part_description": "Ventilación/filtro, según modelo",
+      "source_urls": [
+        "https://www.smd-medical.com/catalogue/iv-therapy-vascular-access/12-infusion-set-burette-type-catalogue.pdf",
+        "https://jhrml-bd.com/product/components-of-iv-infusion-set"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "camara-goteo",
+      "name": "Cámara de goteo",
+      "function": "Zona de observación inferior en el modelo ilustrado.",
+      "safety": "No identifica un factor de gotas/mL. Recurso visual pendiente: no hay punto de identificación.",
+      "hotspot_x": null,
+      "hotspot_y": null,
+      "visible": false,
+      "part_status": "modelo",
+      "part_description": "Cámara de goteo",
+      "source_urls": [
+        "https://www.smd-medical.com/catalogue/iv-therapy-vascular-access/12-infusion-set-burette-type-catalogue.pdf",
+        "https://jhrml-bd.com/product/components-of-iv-infusion-set"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "salida",
+      "name": "Línea de salida y conexión",
+      "function": "Conduce desde el conjunto hacia el sistema previsto.",
+      "safety": "No sustituye comprobación de conexiones y control de la infusión. Recurso visual pendiente: no hay punto de identificación.",
+      "hotspot_x": null,
+      "hotspot_y": null,
+      "visible": false,
+      "part_status": "modelo",
+      "part_description": "Línea de salida y conexión",
+      "source_urls": [
+        "https://www.smd-medical.com/catalogue/iv-therapy-vascular-access/12-infusion-set-burette-type-catalogue.pdf",
+        "https://jhrml-bd.com/product/components-of-iv-infusion-set"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Burette IV set · serie SMD 129",
+      "url": "https://www.smd-medical.com/catalogue/iv-therapy-vascular-access/12-infusion-set-burette-type-catalogue.pdf",
+      "publisher": "SMD Medical",
+      "date": "2026-11-03",
+      "review_scope": "Texto consultado completo; síntesis anatómica, no autorización clínica."
+    },
+    {
+      "title": "Componentes del equipo IV",
+      "url": "https://jhrml-bd.com/product/components-of-iv-infusion-set",
+      "publisher": "JMI Hospital Requisite Manufacturing",
+      "date": "2026-11-03",
+      "review_scope": "Anatomía y variantes; no certifica la configuración TrueCare."
+    }
+  ],
+  "source_urls": [
+    "https://www.smd-medical.com/catalogue/iv-therapy-vascular-access/12-infusion-set-burette-type-catalogue.pdf",
+    "https://jhrml-bd.com/product/components-of-iv-infusion-set"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "RECHAZADO; REGENERACIÓN-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "Candidato rechazado: cámara/tramo desconectado y continuidad del circuito no coherente.",
+  "processing": null,
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones.",
+    "Comprobar integridad, conexión y condiciones del producto real.",
+    "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}
