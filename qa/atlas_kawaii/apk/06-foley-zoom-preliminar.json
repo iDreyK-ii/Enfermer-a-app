@@ -1,0 +1,12 @@
+{
+  "file": "06-foley-zoom-preliminar.png",
+  "label": "Foley · zoom 1.5× y movimiento detenido",
+  "sha256": "56a858f6117b259067269dc58c58a003597b88d3ee45c4b2068c1a8875fc63e4",
+  "width": 480,
+  "height": 800,
+  "render": "Captura real de APK preliminar 0.8.0-dev-debug en emulador Android API28, sin KVM",
+  "apk_sha256": "0f006029e60d0a7003fff67068fdc1e7e5efccfb3fef465f7ffe2e40f84d8ecc",
+  "physical_device": false,
+  "clinical_validation": false,
+  "note": "Antes de corregir el texto Ocho dispositivos en la tarjeta de módulo."
+}

@@ -1,0 +1,130 @@
+{
+  "before": {
+    "version": 2,
+    "tables": {
+      "android_metadata": {
+        "rows": 1,
+        "sha256": "b75020507f255a4045d7df8db986dd0206736f9357d605c63a69c44381f02787"
+      },
+      "content": {
+        "rows": 8,
+        "sha256": "c95b86a10ddc090b1013134944ccbfb8bb8a16395ec7950518b0ea2cd7cf9c41"
+      },
+      "favorites": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "media": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "meta": {
+        "rows": 3,
+        "sha256": "bafeb5fd732c72189b36a72c2a0b71e3b0572767b55f218a05e4e9164bae1861"
+      },
+      "notebooks": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "notes": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "packages": {
+        "rows": 1,
+        "sha256": "b0e94bd37b8c2ef0fa94bb5f0620d593c965bab52dfdf15cc2397a06aadfc325"
+      },
+      "practice": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    },
+    "progress": {
+      "learning:atlas/jeringa": {
+        "route": "atlas/jeringa",
+        "version": "atlas-v22.1",
+        "completed": false,
+        "answers": [
+          0
+        ],
+        "modified": 1793741213838
+      },
+      "learning:atlas/foley-tres-vias": {
+        "route": "atlas/foley-tres-vias",
+        "version": "atlas-v22.1",
+        "completed": false,
+        "answers": [
+          0
+        ],
+        "modified": 1793741717175
+      }
+    }
+  },
+  "after": {
+    "version": 2,
+    "tables": {
+      "android_metadata": {
+        "rows": 1,
+        "sha256": "b75020507f255a4045d7df8db986dd0206736f9357d605c63a69c44381f02787"
+      },
+      "content": {
+        "rows": 8,
+        "sha256": "c95b86a10ddc090b1013134944ccbfb8bb8a16395ec7950518b0ea2cd7cf9c41"
+      },
+      "favorites": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "media": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "meta": {
+        "rows": 3,
+        "sha256": "bafeb5fd732c72189b36a72c2a0b71e3b0572767b55f218a05e4e9164bae1861"
+      },
+      "notebooks": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "notes": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "packages": {
+        "rows": 1,
+        "sha256": "b0e94bd37b8c2ef0fa94bb5f0620d593c965bab52dfdf15cc2397a06aadfc325"
+      },
+      "practice": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    },
+    "progress": {
+      "learning:atlas/jeringa": {
+        "route": "atlas/jeringa",
+        "version": "atlas-v22.1",
+        "completed": false,
+        "answers": [
+          0
+        ],
+        "modified": 1793741213838
+      },
+      "learning:atlas/foley-tres-vias": {
+        "route": "atlas/foley-tres-vias",
+        "version": "atlas-v22.1",
+        "completed": false,
+        "answers": [
+          0
+        ],
+        "modified": 1793741717175
+      }
+    }
+  },
+  "data_equal": true,
+  "preferences_equal": true,
+  "upgrade": "0.8 preliminar → 0.8 corregido; adb install -r, sin desinstalar, mismo code9 y certificado.",
+  "apk_preliminar_sha256": "0f006029e60d0a7003fff67068fdc1e7e5efccfb3fef465f7ffe2e40f84d8ecc",
+  "apk_corregido_sha256": "0c2e77b6010e07315d0e765773d9ce75c2ad3bb9931ed65f793e26307df3688d",
+  "scope": "Datos sintéticos del emulador API28; no prueba física ni garantiza compatibilidad de firma externa."
+}

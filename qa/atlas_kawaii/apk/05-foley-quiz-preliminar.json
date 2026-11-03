@@ -1,0 +1,12 @@
+{
+  "file": "05-foley-quiz-preliminar.png",
+  "label": "Foley · primera respuesta y retroalimentación",
+  "sha256": "d30a71fb3e06fe80944ab8776eddbce9dae9bb79a983d89bc23dfc2e8fa73221",
+  "width": 480,
+  "height": 800,
+  "render": "Captura real de APK preliminar 0.8.0-dev-debug en emulador Android API28, sin KVM",
+  "apk_sha256": "0f006029e60d0a7003fff67068fdc1e7e5efccfb3fef465f7ffe2e40f84d8ecc",
+  "physical_device": false,
+  "clinical_validation": false,
+  "note": "Antes de corregir el texto Ocho dispositivos en la tarjeta de módulo."
+}

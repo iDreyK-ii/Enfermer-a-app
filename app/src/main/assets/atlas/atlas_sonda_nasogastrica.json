@@ -1,0 +1,162 @@
+{
+  "asset_id": "atlas_sonda_nasogastrica",
+  "id": "sonda-nasogastrica",
+  "name": "Sonda nasogástrica tipo Levin",
+  "display_name_es": "Sonda nasogástrica tipo Levin",
+  "technical_name": "Sonda gastroduodenal monolumen tipo Levin",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_sonda_nasogastrica.png",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1250,
+  "image_sha256": "67c90c5b224b983744fdb669e0714f503fe1388a0ae8b05d0ba9dc1ab19a9aa6",
+  "alt_text": "Sonda gastroduodenal monolumen tipo Levin: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Inspirada en Levin Vygon adulto: extremo cerrado, cuatro orificios laterales y conector sin tapa. No es una Salem de doble luz; confirmación de posición no se obtiene de esta imagen.",
+  "parts": [
+    {
+      "id": "conector",
+      "name": "Conector proximal",
+      "function": "Permite acoplar el sistema previsto.",
+      "safety": "La compatibilidad enteral debe verificarse; no conectar por vía intravenosa.",
+      "part_status": "modelo",
+      "part_description": "Conector proximal",
+      "hotspot_x": 0.146875,
+      "hotspot_y": 0.33,
+      "visible": true,
+      "source_urls": [
+        "https://www.vygon.it/catalogo/prodotto/sonda-gastro-duodenale-tipo-levin-in-pvc/",
+        "https://wtcs.pressbooks.pub/nursingadvancedskills/chapter/5-2-basic-concepts/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "tubo",
+      "name": "Tubo flexible",
+      "function": "Constituye el cuerpo de la sonda.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Tubo flexible",
+      "hotspot_x": 0.465,
+      "hotspot_y": 0.803,
+      "visible": true,
+      "source_urls": [
+        "https://www.vygon.it/catalogo/prodotto/sonda-gastro-duodenale-tipo-levin-in-pvc/",
+        "https://wtcs.pressbooks.pub/nursingadvancedskills/chapter/5-2-basic-concepts/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "marcas",
+      "name": "Marcas de profundidad",
+      "function": "Son referencias del producto real.",
+      "safety": "Las marcas ilustradas no son una medida ni confirman ubicación.",
+      "part_status": "modelo",
+      "part_description": "Marcas de profundidad",
+      "hotspot_x": 0.3,
+      "hotspot_y": 0.61,
+      "visible": true,
+      "source_urls": [
+        "https://www.vygon.it/catalogo/prodotto/sonda-gastro-duodenale-tipo-levin-in-pvc/",
+        "https://wtcs.pressbooks.pub/nursingadvancedskills/chapter/5-2-basic-concepts/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "linea",
+      "name": "Línea radiopaca",
+      "function": "Representa la línea del modelo de referencia.",
+      "safety": "No reemplaza la comprobación de ubicación por medios autorizados.",
+      "part_status": "modelo",
+      "part_description": "Línea radiopaca",
+      "hotspot_x": 0.714375,
+      "hotspot_y": 0.441,
+      "visible": true,
+      "source_urls": [
+        "https://www.vygon.it/catalogo/prodotto/sonda-gastro-duodenale-tipo-levin-in-pvc/",
+        "https://wtcs.pressbooks.pub/nursingadvancedskills/chapter/5-2-basic-concepts/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "ojos",
+      "name": "Orificios laterales",
+      "function": "Son aberturas cercanas al extremo cerrado.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Orificios laterales",
+      "hotspot_x": 0.783125,
+      "hotspot_y": 0.774,
+      "visible": true,
+      "source_urls": [
+        "https://www.vygon.it/catalogo/prodotto/sonda-gastro-duodenale-tipo-levin-in-pvc/",
+        "https://wtcs.pressbooks.pub/nursingadvancedskills/chapter/5-2-basic-concepts/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "punta",
+      "name": "Punta distal cerrada",
+      "function": "Es el extremo de esta variante.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Punta distal cerrada",
+      "hotspot_x": 0.825625,
+      "hotspot_y": 0.778,
+      "visible": true,
+      "source_urls": [
+        "https://www.vygon.it/catalogo/prodotto/sonda-gastro-duodenale-tipo-levin-in-pvc/",
+        "https://wtcs.pressbooks.pub/nursingadvancedskills/chapter/5-2-basic-concepts/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Sonda tipo Levin de PVC",
+      "url": "https://www.vygon.it/catalogo/prodotto/sonda-gastro-duodenale-tipo-levin-in-pvc/",
+      "publisher": "Vygon Italia",
+      "date": "2026-11-03",
+      "review_scope": "Ficha: extremo cerrado, cuatro o diez orificios y variantes de conector."
+    },
+    {
+      "title": "Tipos de sondas nasogástricas",
+      "url": "https://wtcs.pressbooks.pub/nursingadvancedskills/chapter/5-2-basic-concepts/",
+      "publisher": "Open RN · Nursing Advanced Skills",
+      "date": "2026-11-03",
+      "review_scope": "Sección sobre tipos y límites; no se copia técnica de inserción."
+    }
+  ],
+  "source_urls": [
+    "https://www.vygon.it/catalogo/prodotto/sonda-gastro-duodenale-tipo-levin-in-pvc/",
+    "https://wtcs.pressbooks.pub/nursingadvancedskills/chapter/5-2-basic-concepts/"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
+    "native_dimensions": [
+      2000,
+      1250
+    ],
+    "export_dimensions": [
+      2000,
+      1250
+    ],
+    "upscaled": false,
+    "source_svg_sha256": "94ba413452b9f8775877bc623ddf1aaf4a83fdef02c5a2c805a24d7a615d6ca5",
+    "sha256": "67c90c5b224b983744fdb669e0714f503fe1388a0ae8b05d0ba9dc1ab19a9aa6",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

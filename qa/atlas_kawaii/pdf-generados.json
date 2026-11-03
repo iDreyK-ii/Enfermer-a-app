@@ -1,0 +1,20 @@
+{
+  "idreyk-export-qa.pdf": {
+    "bytes": 23498,
+    "sha256": "f49644f5d827b27117bb53005202710454630099a879e1e2eb0ee094129c796b",
+    "pdf_header": "%PDF-1.4",
+    "page_tree_counts_found": [
+      4
+    ],
+    "validation": "Android PdfRenderer, prueba instrumentada aprobada en APK final; texto ficticio"
+  },
+  "idreyk-export-qa-selected.pdf": {
+    "bytes": 18463,
+    "sha256": "312ccc33553d016f39f097eda2d69d05c999cfbb4f55009c203a8fa99ee92f68",
+    "pdf_header": "%PDF-1.4",
+    "page_tree_counts_found": [
+      1
+    ],
+    "validation": "Android PdfRenderer, prueba instrumentada aprobada en APK final; texto ficticio"
+  }
+}

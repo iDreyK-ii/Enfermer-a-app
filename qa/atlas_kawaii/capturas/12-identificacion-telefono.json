@@ -1,0 +1,15 @@
+{
+  "file": "12-identificacion-telefono.png",
+  "sha256": "d4f7a54acbbb69f16aeb26111f07cd47f1e097799296b0ddd6ffeb53868acf32",
+  "width": 390,
+  "height": 844,
+  "sample_colors": 371,
+  "render": "Robolectric 4.14.1 \/ NATIVE graphics \/ production Compose \/ Android framework API 35",
+  "capture_method": "Android content View.draw(Canvas(Bitmap)); native Skia software rasterization",
+  "physical_device": false,
+  "apk_emulator": false,
+  "motion_reduced": true,
+  "theme": "oscuro",
+  "app_version": "0.8.0-dev-debug",
+  "clinical_validation": false
+}

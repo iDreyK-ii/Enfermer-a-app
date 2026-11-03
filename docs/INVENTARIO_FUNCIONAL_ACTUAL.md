@@ -1,14 +1,16 @@
-> Cierre local Atlas v2.2: 252 JVM, 118 Python, 5 SQLite y 17 PGLite; lint 0 errores/26 advertencias. Ocho capturas del APK en emulador API28, 17 renders Robolectric separados y 2/2 pruebas PDF instrumentadas aprobadas. No hardware físico, no nuevo CI/publicación. Detalle: `qa/atlas_v22/RESULTADOS.md`.
+> **Actualización local 0.8.0-dev:** los 24 dibujos y sus fichas están integrados, con revisión profesional pendiente. Ver `qa/atlas_kawaii/RESULTADOS.md`.
 
-> Revisión local no publicada. Matriz completa actual: [AUDITORIA_ATLAS_v22.md](AUDITORIA_ATLAS_v22.md). No usar el CI del último publicado b463c580 como verificación del borrador.
+> Histórico 0.7.0, no evidencia automática de 0.8: 252 JVM, 118 Python, 5 SQLite y 17 PGLite; lint 0 errores/26 advertencias. Ocho capturas del APK en emulador API28, 17 renders Robolectric separados y 2/2 pruebas PDF instrumentadas aprobadas. No hardware físico, no nuevo CI/publicación. Detalle: `qa/atlas_v22/RESULTADOS.md`.
 
-# Inventario funcional actual — Android 0.7.0 local / Base Maestra 2.1 + Atlas v2.2
+> Revisión local no publicada. Matriz completa actual: [AUDITORIA_ATLAS_KAWAII.md](AUDITORIA_ATLAS_KAWAII.md). No usar el CI del último publicado b463c580 como verificación del borrador.
+
+# Inventario funcional actual — Android 0.8.0-dev local / Base Maestra 2.1 + atlas kawaii
 
 Este inventario describe la app existente que debe conservarse al importar/compilar. No es una propuesta para generar otra. La matriz de estados, evidencia y bloqueos completos está en [MVP_BASE_MAESTRA_v21.md](MVP_BASE_MAESTRA_v21.md).
 
 ## Identidad
 
-Kotlin/Jetpack Compose, módulo `:app`, una Activity, Prototipo B, diseño inicio 2/ficha 1. Namespace `com.idreyk.enfermeria360`, paquete debug `com.idreyk.enfermeria360.dev`, code **8**, nombre `0.7.0-dev` (debug añade `-debug`), minSdk 26, compile/target 35. Especificación editorial **2.1**, no versión Android 2.1.
+Kotlin/Jetpack Compose, módulo `:app`, una Activity, Prototipo B, diseño inicio 2/ficha 1. Namespace `com.idreyk.enfermeria360`, paquete debug `com.idreyk.enfermeria360.dev`, code **9**, nombre `0.8.0-dev` (debug añade `-debug`), minSdk 26, compile/target 35. Especificación editorial **2.1**, no versión Android 2.1.
 
 ## Funciones conservadas y ampliadas
 
@@ -28,12 +30,12 @@ Kotlin/Jetpack Compose, módulo `:app`, una Activity, Prototipo B, diseño inici
 | Instrumentos existentes | GCS adulto con componentes/NV, EVA y NRS separadas, 4AT adulto, Apgar educativo, Capurro, Silverman y registros anteriores de alcance explícito. | Mantener población, pendientes, ausencia de autoinforme, variante y reglas de puntuación. No inventar caras o estímulos. |
 | Registros externos | Braden original, Morse, Norton original y RASS: total ficticio entero, confirmación adulta, fuente/versión/contexto y rango. | No cuestionarios administrados ni interpretación/riesgo; permisos/validación siguen bloqueados. |
 | Cálculos | BigDecimal: dosis-volumen, cantidad/kg, conversión dimensional, mL/h, goteo, duración, dilución aplicable, balance e IMC; historial de ejercicios. | Factor del equipo obligatorio; edad/base explícitas; unidades, límites, fórmula/redondeo; no selecciona tratamientos. |
-| Atlas | Cinco PNG RGBA/JSON, hotspots/lista, zoom/reinicio, panel adaptable y autoevaluación persistida; tres fichas sin imagen con aviso explícito. | Diecinueve de 24 PNG pendientes en total; revisión profesional y aceptación visual pendientes. No hay fallback robótico. |
+| Atlas | 24 PNG RGBA/JSON, puntos/lista, zoom/reinicio, movimiento suave adaptable, panel adaptable y autoevaluación persistida. | Los 24 son ilustraciones estilizadas; revisión profesional y aceptación visual/física pendientes. No hay fallback robótico. |
 | Bioseguridad/higiene | Cinco momentos, EPP/precauciones, cronómetro lavado/fricción con pausa/reinicio/pasos y modo reducido; manos esquemáticas retiradas y recurso visual pendiente. | Tiempos de procedimiento completo; reparto/dibujo didácticos; quirúrgico depende de producto/protocolo. |
 | Listas seguras | Diez ítems institucionales INSN-SB con ámbito y veinte controles propios separados; listas configurables anteriores. | No una norma universal de veinte correctos ni autorización de administración. |
 | PAE | Siete campos anteriores y 32 complementarios: datos/fuente, Gordon, ABCDE, razonamiento/NOC/NIC propios, SOAPIE/SBAR. | Sin diagnósticos automáticos ni catálogos/códigos licenciados. Solo fichas ficticias. |
 | Apuntes/cuaderno | Crear/editar/buscar/etiquetar/borrar, revisión/deshacer, respaldo lee v1/v2 y exporta v2; Markdown importable/exportable. | Guardado manual; 200 documentos/2 MB; medios no incluidos en respaldo; SAF real pendiente. |
-| Impresión/PDF | Adaptador del framework, generador educativo, rangos/cancelación/área imprimible. | Cinco guardas ejecutadas; dos pruebas instrumentadas solo compiladas. Salida PDF y servicio reales no verificados. |
+| Impresión/PDF | Adaptador del framework, generador educativo, rangos/cancelación/área imprimible. | Dos pruebas PDF instrumentadas ejecutadas en 0.8 final en emulador API28; servicio físico de impresión/SAF pendiente. |
 | Prácticas ficticias | Fichas de demostración, notas, signos, balance y Gordon; tendencias de FC de las últimas 20 lecturas. | No pacientes reales, sensores ni alertas clínicas; eje por orden de registro, no tiempo proporcional. |
 | Aprendizaje/casos | Flashcards/quiz/casos/ECG ilustrativo anteriores; siete casos nuevos progresivos, 21 preguntas/retroalimentación/rúbricas y puntuación desde respuestas. | Escenarios sintéticos, revisión docente pendiente; no competencia acreditada. |
 | Multimedia | Copia privada PDF/imagen/audio/video, búsqueda/renombrado/eliminación y visor externo con FileProvider. | No reproductor integrado; límites anteriores (20 MiB/archivo, 100 MiB/200 archivos). Sin respaldo automático en JSON. |
@@ -47,10 +49,10 @@ Conservar todas las carpetas versionadas, no solo `app/src/main`. Se añaden `Ed
 
 `research/base_maestra_v21/` conserva la entrada editorial y generadores; `app/src/main/assets/base_maestra_mvp.json` contiene la selección educativa/nominal empaquetada. No empaquetar el Markdown bruto de la Base como guía clínica. Los 44 instrumentos anteriores y sus fuentes permanecen separados.
 
-Los recuentos exactos de archivos de la entrega se obtienen del manifiesto del **commit publicado**. El resultado actual está en `qa/atlas_v22/RESULTADOS.md`; dos pruebas de instrumentación no se consideran ejecutadas por estar compiladas; no confundir número de archivos/clases con número de pruebas.
+Los recuentos exactos de archivos de la entrega se obtienen del manifiesto del **commit publicado**. El resultado actual está en `qa/atlas_kawaii/RESULTADOS.md`; una prueba instrumentada compilada no cuenta como ejecutada; no confundir número de archivos/clases con número de pruebas.
 
 ## Qué significa trasladar todo
 
-Importar todos los archivos del commit aprobado: código, recursos/licencias, contenido, investigación autorizada, pruebas, backend, plantillas y documentación. El ZIP de entrega incorpora un bundle recuperable del historial. No importar credenciales, firma privada, cachés, APK históricos o datos del teléfono. Una copia idéntica preserva el software, **no convierte pendientes en funciones validadas**.
+Importar todos los archivos del commit aprobado: código, recursos/licencias, contenido, investigación autorizada, pruebas, backend, plantillas y documentación. El ZIP duplicado fue retirado por limpieza; regenerarlo si corresponde y verificarlo. El repositorio local conserva el historial. No importar credenciales, firma privada, cachés, APK históricos o datos del teléfono. Una copia idéntica preserva el software, **no convierte pendientes en funciones validadas**.
 
 Los módulos realmente futuros están en [10_ROADMAP_Y_MODULOS_FUTUROS.md](10_ROADMAP_Y_MODULOS_FUTUROS.md). Ni la app ni el compilador deben crear pantallas falsas de módulos ausentes para aparentar finalización.

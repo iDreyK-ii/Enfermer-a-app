@@ -3,7 +3,7 @@
 ## Antes de editar
 
 1. Leer `README.md`, `CONTINUIDAD.json` e `INICIAR_EN_AI_STUDIO.md` antes de un traslado; luego el archivo del módulo afectado. No cargar todo el repositorio, todos los XML de QA o todos los recursos en una sola respuesta.
-2. Consultar `git status` y preservar cambios preexistentes. La revisión local actual es Android v0.7.0 / atlas v2.2, sobre Base Maestra 2.1; no empezar un proyecto web nuevo por una plantilla genérica.
+2. Consultar `git status` y preservar cambios preexistentes. La revisión local actual es Android v0.8.0-dev / atlas kawaii, sobre Base Maestra 2.1; no empezar un proyecto web nuevo por una plantilla genérica.
 3. Para datos, leer `database/schema.sql` y contrastarlo con `LocalDatabase` en `Repository.kt`. El Kotlin es la implementación ejecutada; el SQL es un espejo verificado.
 4. Para alcance clínico, consultar la matriz de `docs/MVP_BASE_MAESTRA_v21.md` y la investigación pertinente, conservando los límites históricos de `research/REVISION_DOCUMENTAL.md`.
 
@@ -44,7 +44,7 @@
 
 ## Continuidad
 
-Registrar el cambio, su alcance, resultados y pendientes. El historial técnico está en `DESARROLLO.md`; la fase de servidor está en `qa/SUPABASE_REAL_2026-11-02.md`; los resultados actuales están en `qa/atlas_v22/RESULTADOS.md` (0.6.0 conserva evidencia histórica). `qa/RESULTADOS.md` conserva la evidencia histórica de v0.3. Las pruebas de una sesión anterior no deben describirse como ejecutadas de nuevo sin haberlo hecho.
+Registrar el cambio, su alcance, resultados y pendientes. El historial técnico está en `DESARROLLO.md`; la fase de servidor está en `qa/SUPABASE_REAL_2026-11-02.md`; los resultados actuales están en `qa/atlas_kawaii/RESULTADOS.md` (0.7.0 y 0.6.0 conservan evidencia histórica). `qa/RESULTADOS.md` conserva la evidencia histórica de v0.3. Las pruebas de una sesión anterior no deben describirse como ejecutadas de nuevo sin haberlo hecho.
 
 
 ## Traslado a Google AI Studio y actualizaciones
@@ -76,10 +76,10 @@ Registrar el cambio, su alcance, resultados y pendientes. El historial técnico 
 - Generadores: `crear_contenido.py` y `compilar_mvp.py`; verificar `compilar_mvp.py --check` y las pruebas de regeneración/procedencia. Los 554 maestros/737 apariciones siguen IDENTIFICADO; altilice no resuelto.
 - Preservar aritmética decimal/unidades/factor obligatorio, progreso versionado, atlas accesible, higiene, dos listas con distinta autoría y casos sintéticos. Mantener los 32 campos nuevos y los antiguos del PAE; cuaderno lee 1/2 y exporta 2.
 - Braden/Morse/Norton/RASS: solo registros externos con ámbito/rango, no cuestionarios, interpretación ni permiso clínico inferido.
-- Histórico 0.6: 235 JVM/10 renders; PDF instrumentado aún no ejecutado entonces. En v2.2 se ejecutaron 2/2 pruebas PDF reales en emulador API28; salidas y ocho capturas instaladas están en qa/atlas_v22. El cierre corriente tiene 252 JVM/17 renders. No confundirlo con hardware físico ni con CI remoto nuevo.
+- Histórico 0.6: 235 JVM/10 renders; PDF instrumentado aún no ejecutado entonces. En v2.2 se ejecutaron 2/2 pruebas PDF reales en emulador API28; salidas y ocho capturas instaladas están en qa/atlas_v22. El cierre histórico 0.7 tuvo 252 JVM/17 renders; la evidencia corriente 0.8 está en qa/atlas_kawaii. No confundirlo con hardware físico ni con CI remoto nuevo.
 - No reconstruir pantallas desde el HTML del desglose: contiene imágenes del render nativo para revisión, no una implementación alternativa.
 
-## Atlas v2.2 / revisión local Android 0.7.0
+## Histórico: Atlas v2.2 / revisión local Android 0.7.0
 
 - Leer `docs/AUDITORIA_ATLAS_v22.md`, `research/atlas_v22/REVISION_TECNICA.md` y el inventario de 24 PNG. No reducir el alcance pedido a los cinco recursos integrados ni convertir los otros diecinueve en FUTURO.
 - PNG RGBA individual y JSON por recurso. No resucitar `AtlasShape`, dibujos de palitos o manos robóticas. Ausencia/fallo se muestra como recurso pendiente.
@@ -87,3 +87,11 @@ Registrar el cambio, su alcance, resultados y pendientes. El historial técnico 
 - Quiz `atlas-v22.1` guarda en `learning:` sin migración; lecturas/casos conservan `2.1-mvp.1`. El éxito de cada respuesta se confirma en la ficha, sin Snackbar que tape Siguiente. No silenciar los errores.
 - Capturas Robolectric no son APK instalado. Consultar el informe corriente para los intentos de emulador y evidencia instalada, si existe. No reciclar CI/capturas de 0.6.0 como pruebas del código actual.
 - No push ni despliegue sin la revisión y autorización explícitas del usuario. El último publicado sigue siendo b463c580; los cambios actuales son locales.
+
+
+## Atlas kawaii / revisión local Android 0.8.0-dev
+
+- Leer `docs/AUDITORIA_ATLAS_KAWAII.md`, `research/atlas_kawaii/README.md` y `qa/atlas_kawaii/RESULTADOS.md`. Veinticuatro dibujos originales 2D rasterizados directamente a PNG RGBA 2000 × 1250; no fotografías ni validación profesional.
+- Preservar los IDs, orden de opciones/objetivos y `atlas-v22.1` para las cinco fichas previamente jugables; las caritas son decorativas, nunca objetivos. Partes ocultas no deben recibir puntos ni preguntas.
+- La traslación es decorativa, conjunta con el marcador, opcional y se detiene con movimiento reducido, zoom, selección o quiz. No confundir una prueba de alfa con precisión clínica ni un render Robolectric con captura de APK.
+- La revisión sigue local y el último push es `b463c580`; mejoras o continuar no autorizan publicar. La clave debug original se conserva fuera de Git; antes de actualizar comparar la firma y nunca borrar datos.

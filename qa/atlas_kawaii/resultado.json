@@ -1,0 +1,50 @@
+{
+  "fecha": "2026-11-03",
+  "jvm": {
+    "tests": 255,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 255,
+    "suites": 21
+  },
+  "python": {
+    "guardas": 85,
+    "conversor": 15,
+    "backend": 21,
+    "total": 121
+  },
+  "sqlite": {
+    "passed": 5
+  },
+  "pglite": {
+    "passed": 17
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 26
+  },
+  "apk": {
+    "version": "0.8.0-dev-debug",
+    "version_code": 9,
+    "sha256": "0c2e77b6010e07315d0e765773d9ce75c2ad3bb9931ed65f793e26307df3688d",
+    "min_sdk": 26,
+    "target_sdk": 35,
+    "certificate_matches_expected": true,
+    "physical_installation_tested": false
+  },
+  "capturas_robolectric": 17,
+  "capturas_emulador": {
+    "preliminares": 6,
+    "final": 3
+  },
+  "validacion_clinica": false,
+  "publicado": false,
+  "movimiento_emulador": "imagen y marcador se desplazaron juntos en una comparación; pausa estable en dos intervalos. APK preliminar.",
+  "actualizacion_emulador": "0.7 → 0.8 preliminar → 0.8 final con install -r; datos sintéticos preservados",
+  "instrumentadas_pdf": {
+    "ejecutadas": 2,
+    "aprobadas": 2,
+    "plataforma": "emulador API28, APK final"
+  }
+}

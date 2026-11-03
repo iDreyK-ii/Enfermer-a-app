@@ -63,7 +63,7 @@ internal val ExtraModules =
         Module("Protocolos", "Documentos locales", "protocolos", R.drawable.ic_file, Purple),
         Module("Multimedia", "Archivos del dispositivo", "multimedia", R.drawable.ic_play, Blue),
         Module("Biblioteca temática", "Markdown y fuentes", "biblioteca", R.drawable.ic_book, Purple),
-        Module("Atlas interactivo", "Ocho dispositivos", "atlas", R.drawable.ic_stethoscope, Teal),
+        Module("Atlas interactivo", "24 dispositivos", "atlas", R.drawable.ic_stethoscope, Teal),
         Module("Bioseguridad", "Higiene y protección", "bioseguridad", R.drawable.ic_shield_check, Teal),
         Module("Casos progresivos", "Siete escenarios sintéticos", "casos", R.drawable.ic_clipboard, Pink),
         Module("Tu avance real", "Progreso local", "avance", R.drawable.ic_activity, Purple),

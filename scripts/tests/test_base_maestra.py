@@ -90,9 +90,10 @@ class BaseMaestraTest(unittest.TestCase):
                 self.assertNotIn('@', source['url'].split('/')[2])
                 self.assertTrue(source['date'] and source['publisher'])
 
-    def test_atlas_has_eight_distinct_devices_and_piston_is_not_plunger(self):
+    def test_atlas_has_24_distinct_devices_and_piston_is_not_plunger(self):
         devices = {d['id']:d for d in self.data['devices']}
-        self.assertEqual({'jeringa','aguja','estetoscopio','tensiometro','cateter-periferico','equipo-iv','bureta','llave-tres-vias'}, set(devices))
+        self.assertEqual(24, len(devices))
+        self.assertTrue({'jeringa','aguja','estetoscopio','tensiometro','cateter-periferico','equipo-iv','bureta','llave-tres-vias'} <= set(devices))
         self.assertTrue({'piston','embolo'} <= {p['id'] for p in devices['jeringa']['parts']})
         self.assertTrue({'cateter','aguja-introductora'} <= {p['id'] for p in devices['cateter-periferico']['parts']})
         for device in devices.values():

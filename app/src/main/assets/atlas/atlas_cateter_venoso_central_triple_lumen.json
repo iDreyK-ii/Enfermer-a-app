@@ -1,0 +1,194 @@
+{
+  "asset_id": "atlas_cateter_venoso_central_triple_lumen",
+  "id": "cvc-triple",
+  "name": "Catéter venoso central de tres lúmenes",
+  "display_name_es": "Catéter venoso central de tres lúmenes",
+  "technical_name": "Catéter venoso central de tres lúmenes",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_cateter_venoso_central_triple_lumen.png",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1250,
+  "image_sha256": "7677ae6d075344c33ed07c5e5ff56cc0e3d66e3a18f720e459c94ac909ea47d8",
+  "alt_text": "Catéter venoso central de tres lúmenes: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Inspirado en Certofix Protect Trio: tres ramales, fijación y extremo con dos orificios laterales más abertura distal. El color es decorativo, no identifica luz, calibre, compatibilidad ni posición.",
+  "parts": [
+    {
+      "id": "ramales",
+      "name": "Tres ramales proximales",
+      "function": "Cada ramal corresponde a un canal del conjunto real.",
+      "safety": "Los colores dibujados no asignan funciones ni compatibilidades.",
+      "part_status": "modelo",
+      "part_description": "Tres ramales proximales",
+      "hotspot_x": 0.36,
+      "hotspot_y": 0.427,
+      "visible": true,
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00003056/certofix-protect-trio",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12058077/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "conectores",
+      "name": "Conectores proximales",
+      "function": "Acoplan sistemas compatibles según fabricante.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Conectores proximales",
+      "hotspot_x": 0.188125,
+      "hotspot_y": 0.242,
+      "visible": true,
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00003056/certofix-protect-trio",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12058077/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "pinzas",
+      "name": "Pinzas de ramal",
+      "function": "Controlan cada línea en el modelo ilustrado.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Pinzas de ramal",
+      "hotspot_x": 0.3025,
+      "hotspot_y": 0.455,
+      "visible": true,
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00003056/certofix-protect-trio",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12058077/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "fijacion",
+      "name": "Alas de fijación",
+      "function": "Ayudan a asegurar el cuerpo según el diseño.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Alas de fijación",
+      "hotspot_x": 0.46625,
+      "hotspot_y": 0.567,
+      "visible": true,
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00003056/certofix-protect-trio",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12058077/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "cateter",
+      "name": "Cuerpo del catéter",
+      "function": "Contiene los tres lúmenes internos, no visibles.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Cuerpo del catéter",
+      "hotspot_x": 0.82,
+      "hotspot_y": 0.731,
+      "visible": true,
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00003056/certofix-protect-trio",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12058077/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "marcas",
+      "name": "Marcas del catéter",
+      "function": "Son referencias del producto real.",
+      "safety": "El dibujo no da una longitud ni confirma posición.",
+      "part_status": "modelo",
+      "part_description": "Marcas del catéter",
+      "hotspot_x": 0.708125,
+      "hotspot_y": 0.421,
+      "visible": true,
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00003056/certofix-protect-trio",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12058077/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "orificios",
+      "name": "Orificios laterales",
+      "function": "Son salidas de dos canales en este esquema.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Orificios laterales",
+      "hotspot_x": 0.5825,
+      "hotspot_y": 0.803,
+      "visible": true,
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00003056/certofix-protect-trio",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12058077/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "punta",
+      "name": "Extremo distal",
+      "function": "Corresponde al extremo del tercer canal en el esquema.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Extremo distal",
+      "hotspot_x": 0.541875,
+      "hotspot_y": 0.789,
+      "visible": true,
+      "source_urls": [
+        "https://catalogs.bbraun.com/en-01/p/PRID00003056/certofix-protect-trio",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12058077/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Certofix Protect Trio",
+      "url": "https://catalogs.bbraun.com/en-01/p/PRID00003056/certofix-protect-trio",
+      "publisher": "B. Braun",
+      "date": "2026-11-03",
+      "review_scope": "Producto triple lumen, alas y conectores; la representación no reproduce el kit completo."
+    },
+    {
+      "title": "Comunicación entre lúmenes vasculares · caso",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12058077/",
+      "publisher": "PubMed Central · caso publicado",
+      "date": "2026-11-03",
+      "review_scope": "Contexto independiente de lúmenes y seguridad; no valida esta imagen."
+    }
+  ],
+  "source_urls": [
+    "https://catalogs.bbraun.com/en-01/p/PRID00003056/certofix-protect-trio",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12058077/"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
+    "native_dimensions": [
+      2000,
+      1250
+    ],
+    "export_dimensions": [
+      2000,
+      1250
+    ],
+    "upscaled": false,
+    "source_svg_sha256": "1fdcfccca5683ab9180c66d825e81900472409331e3bddaecfdbd32332258a1a",
+    "sha256": "7677ae6d075344c33ed07c5e5ff56cc0e3d66e3a18f720e459c94ac909ea47d8",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

@@ -1,0 +1,12 @@
+{
+  "file": "01-inicio-080.png",
+  "label": "Inicio · APK preliminar, antes de corregir rótulo de módulo",
+  "sha256": "72ea8afec783ac2e33ef0f70e0fa594f263a314e4cab9840fed7cd3c46ee556c",
+  "width": 480,
+  "height": 800,
+  "render": "Captura real de APK preliminar 0.8.0-dev-debug en emulador Android API28, sin KVM",
+  "apk_sha256": "0f006029e60d0a7003fff67068fdc1e7e5efccfb3fef465f7ffe2e40f84d8ecc",
+  "physical_device": false,
+  "clinical_validation": false,
+  "note": "Antes de corregir el texto Ocho dispositivos en la tarjeta de módulo."
+}

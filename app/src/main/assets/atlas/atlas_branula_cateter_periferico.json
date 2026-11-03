@@ -1,0 +1,146 @@
+{
+  "asset_id": "atlas_branula_cateter_periferico",
+  "id": "cateter-periferico",
+  "name": "Catéter venoso periférico",
+  "display_name_es": "Catéter venoso periférico",
+  "technical_name": "Catéter IV periférico corto / bránula",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_branula_cateter_periferico.png",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1250,
+  "image_sha256": "5be2c162a8aabe7617b0ce8d4f7365736dc7ab9e6ce62dc4a2c4db2e96b482da",
+  "alt_text": "Catéter IV periférico corto / bránula: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Inspirado en Introcan Safety 3 alado, sin torre lateral de inyección. El dispositivo de protección interno no es visible; no se demuestra funcionamiento.",
+  "parts": [
+    {
+      "id": "cateter",
+      "name": "Catéter: cánula flexible",
+      "function": "Es la cánula flexible del dispositivo.",
+      "safety": "Es distinta de la aguja metálica; no se indica uso, calibre ni tiempo de permanencia.",
+      "hotspot_x": 0.7297254620800782,
+      "hotspot_y": 0.4352149484482552,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Catéter: cánula flexible",
+      "source_urls": [
+        "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf",
+        "https://torrancecompany.com/i-v-catheter-introcan-safety-3-b-braun-with-blood-control-select-size/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "aguja-introductora",
+      "name": "Aguja introductora metálica",
+      "function": "Acompaña al catéter en este diseño.",
+      "safety": "No es el catéter; no se representa su manipulación o reinserción.",
+      "hotspot_x": 0.8527829994891845,
+      "hotspot_y": 0.4206713324527627,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Aguja introductora metálica",
+      "source_urls": [
+        "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf",
+        "https://torrancecompany.com/i-v-catheter-introcan-safety-3-b-braun-with-blood-control-select-size/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "conexion",
+      "name": "Conector o cubo",
+      "function": "Conecta con el sistema previsto.",
+      "safety": "Verificar integridad y compatibilidad del modelo.",
+      "hotspot_x": 0.5132080418352172,
+      "hotspot_y": 0.5354034169968186,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Conector o cubo",
+      "source_urls": [
+        "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf",
+        "https://torrancecompany.com/i-v-catheter-introcan-safety-3-b-braun-with-blood-control-select-size/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "camara",
+      "name": "Cámara de visualización, según modelo",
+      "function": "Permite observar el retorno en determinados diseños.",
+      "safety": "No equivale a comprobar por sí sola la seguridad del acceso.",
+      "hotspot_x": 0.24258047825850768,
+      "hotspot_y": 0.522540762088632,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Cámara de visualización, según modelo",
+      "source_urls": [
+        "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf",
+        "https://torrancecompany.com/i-v-catheter-introcan-safety-3-b-braun-with-blood-control-select-size/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "alas",
+      "name": "Alas, según modelo",
+      "function": "Superficies laterales del cuerpo.",
+      "safety": "No todos los modelos las incluyen.",
+      "hotspot_x": 0.47362075706780665,
+      "hotspot_y": 0.6523567753280118,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Alas, según modelo",
+      "source_urls": [
+        "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf",
+        "https://torrancecompany.com/i-v-catheter-introcan-safety-3-b-braun-with-blood-control-select-size/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Introcan Safety 3 · instrucciones",
+      "url": "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf",
+      "publisher": "B. Braun",
+      "date": "2026-11-03",
+      "review_scope": "Extracto completo recuperado; segunda fuente y aprobación visual pendientes."
+    },
+    {
+      "title": "Introcan Safety 3 alado · distribuidor",
+      "url": "https://torrancecompany.com/i-v-catheter-introcan-safety-3-b-braun-with-blood-control-select-size/",
+      "publisher": "The Torrance Company",
+      "date": "2026-11-03",
+      "review_scope": "Ficha del modelo alado; no equivale a revisión profesional."
+    }
+  ],
+  "source_urls": [
+    "https://www.bbraun.co.uk/content/dam/b-braun/en_gb/website-6/documents/products/therapies/infusion-therapy/introcan-safety-3-/Introcan%20Safety%203%20IFU.pdf",
+    "https://torrancecompany.com/i-v-catheter-introcan-safety-3-b-braun-with-blood-control-select-size/"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
+    "native_dimensions": [
+      2000,
+      1250
+    ],
+    "export_dimensions": [
+      2000,
+      1250
+    ],
+    "upscaled": false,
+    "source_svg_sha256": "f0920380903f7056cb3f0fdcd82157ba1759400e7d264d6f2adcb9545524e710",
+    "sha256": "5be2c162a8aabe7617b0ce8d4f7365736dc7ab9e6ce62dc4a2c4db2e96b482da",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

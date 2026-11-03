@@ -3,6 +3,11 @@ package com.idreyk.enfermeria360
 import android.graphics.BitmapFactory
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.tween
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -18,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
@@ -34,20 +40,27 @@ import kotlin.math.hypot
 fun AtlasLibraryScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit) {
     val catalog = vm.data.master.catalog
     Page("Atlas de dispositivos", "PNG interactivo · reconocimiento educativo", back) {
-        Notice("Imágenes generadas con IA, no fotografías del fabricante. Revisión profesional pendiente. No es un tutorial de inserción ni acredita competencia clínica.", true)
+        Notice("Ilustraciones kawaii originales, no fotografías del fabricante. Revisión profesional pendiente. No son instrucciones de inserción ni acreditan competencia clínica.", true)
         catalog?.devices?.forEach { d ->
             ActionRow(d.name, if (d.image != null) "PNG · ${d.parts.count { it.visible }} puntos · autoevaluación" else "RECURSO VISUAL PENDIENTE",
                 R.drawable.ic_stethoscope, if (d.image != null) Teal else Gold) { nav("dispositivo/${d.id}") }
         }
         if (catalog == null) Notice(vm.data.master.error ?: "Atlas no disponible.", true)
-        Notice("Solicitud v2.2: 24 dispositivos. Cinco imágenes integradas; tres candidatas rechazadas y dieciséis dispositivos adicionales pendientes. No se sustituyen por esquemas robóticos.")
+        Notice("Solicitud v2.2: ${catalog?.devices?.size ?: 0} fichas cargadas de 24 dispositivos. Las caritas son decorativas; las imágenes no representan lecturas ni sustituyen instrucciones del producto.")
     }
+}
+
+/** Decorative preview only. Identification and enlarged views must remain stationary. */
+object AtlasMotionPolicy {
+    fun allow(preview: Boolean, reduced: Boolean, zoom: Float, question: Boolean): Boolean =
+        preview && !reduced && zoom == 1f && !question
 }
 
 /** Decodes a bounded local asset only, at half export size to limit memory on mobile. */
 @Composable
 private fun AtlasPhotoViewport(d: AtlasDevice, selected: Int, zoom: Float, labels: Boolean,
-    question: Boolean = false, onSelect: (Int) -> Unit = {}, onAvailability: (Boolean) -> Unit = {}) {
+    question: Boolean = false, animatePreview: Boolean = false,
+    onSelect: (Int) -> Unit = {}, onAvailability: (Boolean) -> Unit = {}) {
     val context = LocalContext.current
     val photo = remember(d.id, d.image) {
         runCatching {
@@ -71,7 +84,15 @@ private fun AtlasPhotoViewport(d: AtlasDevice, selected: Int, zoom: Float, label
     val screenHeight = LocalConfiguration.current.screenHeightDp.dp
     val chosen = d.parts[selected]
     val target = if (question) Teal else Purple
-    val color = if (LocalReduced.current) target else animateColorAsState(target, tween(180), label = "Marcador de atlas").value
+    val reduced = LocalReduced.current
+    val color = if (reduced) target else animateColorAsState(target, tween(180), label = "Marcador de atlas").value
+    val moving = AtlasMotionPolicy.allow(animatePreview, reduced, zoom, question)
+    val drift = if (moving) {
+        val cycle = rememberInfiniteTransition(label = "Movimiento suave de la ilustración")
+        cycle.animateFloat(-2f, 2f,
+            animationSpec = infiniteRepeatable(tween(2200, easing = FastOutSlowInEasing), RepeatMode.Reverse),
+            label = "Desplazamiento decorativo").value
+    } else 0f
     BoxWithConstraints(Modifier.fillMaxWidth().testTag("atlas-viewport")) {
         val fittedWidth = minOf(maxWidth, screenHeight * .40f * (d.imageWidth.toFloat() / d.imageHeight))
         val w = fittedWidth * zoom
@@ -79,7 +100,8 @@ private fun AtlasPhotoViewport(d: AtlasDevice, selected: Int, zoom: Float, label
         val scroll = rememberScrollState()
         LaunchedEffect(zoom) { if (zoom == 1f) scroll.scrollTo(0) }
         Box(Modifier.fillMaxWidth().horizontalScroll(scroll), contentAlignment = Alignment.Center) {
-            Box(Modifier.size(w, h).testTag("atlas-photo")
+            // The bitmap, hit region and native marker share one transform, so they never drift apart.
+            Box(Modifier.size(w, h).graphicsLayer { translationY = drift.dp.toPx() }.testTag("atlas-photo")
                 .semantics { contentDescription = d.alt + if (question) " Punto de identificación señalado; responde con las opciones." else " Alternativa accesible: lista de partes inferior." }
                 .pointerInput(d.id, zoom, question) {
                     if (!question) detectTapGestures { tap ->
@@ -141,41 +163,52 @@ fun AtlasDeviceScreen(id: String, vm: AppViewModel, back: () -> Unit) {
     var selected by rememberSaveable(id) { mutableIntStateOf(0) }
     var zoom by rememberSaveable(id) { mutableFloatStateOf(1f) }
     var labels by rememberSaveable(id) { mutableStateOf(true) }
+    var animatePreview by rememberSaveable(id) { mutableStateOf(true) }
+    val reduced = LocalReduced.current
     val selection = selected.coerceIn(d.parts.indices)
     val chosen = d.parts[selection]
     Page(d.name, "Atlas PNG · imagen educativa, no calibrada", back, { Favorite("dispositivo/$id", d.name, vm) }) {
         Text("Toca cerca de una parte o elige su nombre. Se muestra una etiqueta por vez para evitar solapamientos.", style = MaterialTheme.typography.bodySmall)
         if (d.image != null) {
-            AtlasZoom(zoom) { zoom = it }
+            AtlasZoom(zoom) { zoom = it; animatePreview = false }
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Switch(labels, { labels = it }, Modifier.semantics { contentDescription = "Mostrar etiqueta seleccionada" })
+                Switch(labels, { labels = it; animatePreview = false }, Modifier.semantics { contentDescription = "Mostrar etiqueta seleccionada" })
                 Text("Etiqueta seleccionada", style = MaterialTheme.typography.bodySmall)
             }
+            OutlinedButton(onClick = { animatePreview = !animatePreview }, enabled = !reduced && zoom == 1f,
+                modifier = Modifier.testTag("atlas-motion-toggle")) {
+                Text(if (animatePreview && !reduced && zoom == 1f) "Pausar movimiento" else "Animar vista")
+            }
+            Text(if (reduced) "Movimiento desactivado por accesibilidad o rendimiento."
+                else "Movimiento decorativo suave; se detiene al elegir una parte, ampliar o practicar.",
+                style = MaterialTheme.typography.bodySmall)
         }
         BoxWithConstraints(Modifier.fillMaxWidth()) {
             if (maxWidth >= 600.dp && d.image != null) {
                 Row(horizontalArrangement = Arrangement.spacedBy(16.dp), verticalAlignment = Alignment.Top) {
-                    Box(Modifier.weight(.62f)) { AtlasPhotoViewport(d, selection, zoom, labels, onSelect = { selected = it }, onAvailability = { imageReady = it }) }
+                    Box(Modifier.weight(.62f)) { AtlasPhotoViewport(d, selection, zoom, labels, animatePreview = animatePreview,
+                        onSelect = { selected = it; animatePreview = false }, onAvailability = { imageReady = it }) }
                     Box(Modifier.weight(.38f)) { AtlasPartDetail(chosen, selection) }
                 }
             } else {
                 Column(verticalArrangement = Arrangement.spacedBy(13.dp)) {
-                    AtlasPhotoViewport(d, selection, zoom, labels, onSelect = { selected = it }, onAvailability = { imageReady = it })
+                    AtlasPhotoViewport(d, selection, zoom, labels, animatePreview = animatePreview,
+                        onSelect = { selected = it; animatePreview = false }, onAvailability = { imageReady = it })
                     AtlasPartDetail(chosen, selection)
                 }
             }
         }
-        if (d.image != null) Primary("Practicar identificación", { quiz = true }, imageReady)
+        if (d.image != null) Primary("Practicar identificación", { animatePreview = false; quiz = true }, imageReady)
         Text("Selecciona una parte por su nombre", style = MaterialTheme.typography.titleSmall)
         d.parts.forEachIndexed { index, p ->
             ActionRow("${index + 1}. ${p.name}", if (!p.visible) "Sin punto visual · consultar descripción" else if (index == selection) "Seleccionada" else "Ver función y precaución",
-                R.drawable.ic_info, if (index == selection) Purple else Teal) { selected = index }
+                R.drawable.ic_info, if (index == selection) Purple else Teal) { selected = index; animatePreview = false }
         }
         Section("Modelo, variantes y precauciones")
         Notice(d.modelNote, true)
         d.checks.forEach { Text("• $it", style = MaterialTheme.typography.bodySmall) }
         Text("Estado: ${d.reviewStatus}\nRevisión documental/visual asistida: ${d.reviewDate}. Persona que aprueba precisión: pendiente. No es fotografía del fabricante.", style = MaterialTheme.typography.bodySmall)
-        if (d.image != null) Text("PNG RGBA de ${d.imageWidth} × ${d.imageHeight}; exportación ampliada desde un original menor. No se inventa detalle nativo de alta resolución.", style = MaterialTheme.typography.bodySmall)
+        if (d.image != null) Text("Ilustración 2D original rasterizada directamente en PNG RGBA de ${d.imageWidth} × ${d.imageHeight}; no es fotografía ni detalle clínico a escala.", style = MaterialTheme.typography.bodySmall)
         d.sources.forEach { SourceCard(it) }
     }
 }
@@ -194,7 +227,7 @@ private fun AtlasQuizScreen(d: AtlasDevice, vm: AppViewModel, back: () -> Unit) 
     val target = d.quizTargets[stage]
     val answered = stage < answers.size
     Page("Identificar · ${d.name}", "Autoevaluación local · no competencia clínica", back) {
-        Notice("Imagen generada y revisión profesional pendiente. Solo se preguntan partes visibles. La respuesta se guarda localmente.", true)
+        Notice("Ilustración educativa con revisión profesional pendiente. Solo se preguntan partes visibles; la imagen permanece quieta. La respuesta se guarda localmente.", true)
         Text("Parte ${stage + 1} de ${d.quizTargets.size} · ¿Cómo se llama la parte señalada?", style = MaterialTheme.typography.titleMedium)
         AtlasZoom(zoom) { zoom = it }
         AtlasPhotoViewport(d, target, zoom, true, question = true, onAvailability = { imageReady = it })

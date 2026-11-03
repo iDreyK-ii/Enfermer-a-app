@@ -1,0 +1,3 @@
+# Solo reproducción editorial de imágenes, NO dependencia del APK.
+CairoSVG==2.8.2
+Pillow>=10.4,<13

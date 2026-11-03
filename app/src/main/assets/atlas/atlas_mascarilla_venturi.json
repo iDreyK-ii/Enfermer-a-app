@@ -1,0 +1,178 @@
+{
+  "asset_id": "atlas_mascarilla_venturi",
+  "id": "mascarilla-venturi",
+  "name": "Mascarilla Venturi",
+  "display_name_es": "Mascarilla Venturi",
+  "technical_name": "Mascarilla con adaptador Venturi fijo",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_mascarilla_venturi.png",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1250,
+  "image_sha256": "a4a27d5997e125e9b2b8516afc68d7a6d882334412f24d4266fecfdb532cef96",
+  "alt_text": "Mascarilla con adaptador Venturi fijo: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Inspirada en EcoLite kit: una sola válvula fija ilustrada más tramo flexible. El kit real puede incluir varios adaptadores intercambiables; no se infiere concentración ni caudal por color.",
+  "parts": [
+    {
+      "id": "mascara",
+      "name": "Cuerpo de la mascarilla",
+      "function": "Cubre nariz y boca en el equipo real.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Cuerpo de la mascarilla",
+      "hotspot_x": 0.419375,
+      "hotspot_y": 0.568,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgical.com/products/oxygen-and-aerosol-therapy/intersurgical-ecolite-venturi-mask-kit",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "corrugado",
+      "name": "Tramo flexible",
+      "function": "Une la mascarilla con el adaptador.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Tramo flexible",
+      "hotspot_x": 0.50875,
+      "hotspot_y": 0.686,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgical.com/products/oxygen-and-aerosol-therapy/intersurgical-ecolite-venturi-mask-kit",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "adaptador",
+      "name": "Adaptador Venturi",
+      "function": "Mezcla gas y aire según el dispositivo específico.",
+      "safety": "Color del dibujo no indica concentración ni caudal.",
+      "part_status": "modelo",
+      "part_description": "Adaptador Venturi",
+      "hotspot_x": 0.525,
+      "hotspot_y": 0.8,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgical.com/products/oxygen-and-aerosol-therapy/intersurgical-ecolite-venturi-mask-kit",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "entrada-aire",
+      "name": "Entradas de aire del adaptador",
+      "function": "Forman parte del sistema de mezcla.",
+      "safety": "No inferir el funcionamiento desde el dibujo.",
+      "part_status": "modelo",
+      "part_description": "Entradas de aire del adaptador",
+      "hotspot_x": 0.498125,
+      "hotspot_y": 0.775,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgical.com/products/oxygen-and-aerosol-therapy/intersurgical-ecolite-venturi-mask-kit",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "tubo",
+      "name": "Tubo de oxígeno",
+      "function": "Conecta el conjunto a la fuente.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Tubo de oxígeno",
+      "hotspot_x": 0.70125,
+      "hotspot_y": 0.891,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgical.com/products/oxygen-and-aerosol-therapy/intersurgical-ecolite-venturi-mask-kit",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "cinta",
+      "name": "Cinta elástica",
+      "function": "Sujeta la mascarilla.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Cinta elástica",
+      "hotspot_x": 0.66375,
+      "hotspot_y": 0.238,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgical.com/products/oxygen-and-aerosol-therapy/intersurgical-ecolite-venturi-mask-kit",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "orificios",
+      "name": "Puertos laterales",
+      "function": "Son aberturas del cuerpo de la mascarilla.",
+      "safety": "No obstruirlos; revisar modelo e instrucciones.",
+      "part_status": "modelo",
+      "part_description": "Puertos laterales",
+      "hotspot_x": 0.3675,
+      "hotspot_y": 0.511,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgical.com/products/oxygen-and-aerosol-therapy/intersurgical-ecolite-venturi-mask-kit",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "EcoLite Venturi · kit de seis válvulas",
+      "url": "https://www.intersurgical.com/products/oxygen-and-aerosol-therapy/intersurgical-ecolite-venturi-mask-kit",
+      "publisher": "Intersurgical",
+      "date": "2026-11-03",
+      "review_scope": "Descripción de kit y tramo flexible; se ilustra un solo adaptador."
+    },
+    {
+      "title": "Open RN · equipos de oxigenación, secciones 11.3",
+      "url": "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/",
+      "publisher": "Nursing Skills 2e · Open RN",
+      "date": "2026-11-03",
+      "review_scope": "Secciones de cánula, mascarillas, Venturi y bolsa-válvula; no se copian flujos ni técnica."
+    }
+  ],
+  "source_urls": [
+    "https://www.intersurgical.com/products/oxygen-and-aerosol-therapy/intersurgical-ecolite-venturi-mask-kit",
+    "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
+    "native_dimensions": [
+      2000,
+      1250
+    ],
+    "export_dimensions": [
+      2000,
+      1250
+    ],
+    "upscaled": false,
+    "source_svg_sha256": "fadf1cf0074f5cea9e43c1cd987f3801a77226d0b6510fca648ad789a60a1546",
+    "sha256": "a4a27d5997e125e9b2b8516afc68d7a6d882334412f24d4266fecfdb532cef96",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

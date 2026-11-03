@@ -1,0 +1,12 @@
+{
+  "file": "03-foley-parte-preliminar.png",
+  "label": "Foley tres vías · puerto de irrigación seleccionado",
+  "sha256": "6d81d2077a7b017401854fd68dd51407fc414f06ff47d3f2e6f50f7202c6fcbf",
+  "width": 480,
+  "height": 800,
+  "render": "Captura real de APK preliminar 0.8.0-dev-debug en emulador Android API28, sin KVM",
+  "apk_sha256": "0f006029e60d0a7003fff67068fdc1e7e5efccfb3fef465f7ffe2e40f84d8ecc",
+  "physical_device": false,
+  "clinical_validation": false,
+  "note": "Antes de corregir el texto Ocho dispositivos en la tarjeta de módulo."
+}

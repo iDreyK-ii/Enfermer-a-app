@@ -1,0 +1,15 @@
+{
+  "file": "08-inicio-tablet-800.png",
+  "sha256": "6d314b1d16de8a916328e6dfbfe8a610ee2ba964f4543583d86e19983ae3e6ee",
+  "width": 800,
+  "height": 1280,
+  "sample_colors": 785,
+  "render": "Robolectric 4.14.1 \/ NATIVE graphics \/ production Compose \/ Android framework API 35",
+  "capture_method": "Android content View.draw(Canvas(Bitmap)); native Skia software rasterization",
+  "physical_device": false,
+  "apk_emulator": false,
+  "motion_reduced": true,
+  "theme": "claro",
+  "app_version": "0.8.0-dev-debug",
+  "clinical_validation": false
+}

@@ -1,0 +1,162 @@
+{
+  "asset_id": "atlas_bomba_volumetrica",
+  "id": "bomba-volumetrica",
+  "name": "Bomba de infusión volumétrica",
+  "display_name_es": "Bomba de infusión volumétrica",
+  "technical_name": "Bomba eléctrica de gran volumen para equipo compatible",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_bomba_volumetrica.png",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1250,
+  "image_sha256": "0b933a05e7a611382ea529b85fb182f8d73a31a5a537b52c92a3cbf29b2e4858",
+  "alt_text": "Bomba eléctrica de gran volumen para equipo compatible: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Inspiración general en Infusomat Space, con puerta frontal cerrada. Pantalla sin cifras y sin programación; no debe confundirse con bomba de jeringa.",
+  "parts": [
+    {
+      "id": "pantalla",
+      "name": "Pantalla",
+      "function": "Presenta información del dispositivo real.",
+      "safety": "No se muestra ningún valor ni una programación.",
+      "part_status": "modelo",
+      "part_description": "Pantalla",
+      "hotspot_x": 0.345,
+      "hotspot_y": 0.439,
+      "visible": true,
+      "source_urls": [
+        "https://www.bbraun.ca/content/dam/b-braun/en_us/website/products-and-therapies/infusion_pumps/pumps_docs/IS232%20Space%20Infusion%20System%20Brochure-210516.pdf",
+        "https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "teclado",
+      "name": "Controles",
+      "function": "Permiten manejar la interfaz del dispositivo real.",
+      "safety": "No se enseña una secuencia de programación.",
+      "part_status": "modelo",
+      "part_description": "Controles",
+      "hotspot_x": 0.6,
+      "hotspot_y": 0.415,
+      "visible": true,
+      "source_urls": [
+        "https://www.bbraun.ca/content/dam/b-braun/en_us/website/products-and-therapies/infusion_pumps/pumps_docs/IS232%20Space%20Infusion%20System%20Brochure-210516.pdf",
+        "https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "puerta",
+      "name": "Puerta del mecanismo",
+      "function": "Cubre la zona de alojamiento del equipo de infusión.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Puerta del mecanismo",
+      "hotspot_x": 0.3,
+      "hotspot_y": 0.602,
+      "visible": true,
+      "source_urls": [
+        "https://www.bbraun.ca/content/dam/b-braun/en_us/website/products-and-therapies/infusion_pumps/pumps_docs/IS232%20Space%20Infusion%20System%20Brochure-210516.pdf",
+        "https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "cierre",
+      "name": "Cierre de puerta",
+      "function": "Mantiene cerrada la puerta según el diseño.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Cierre de puerta",
+      "hotspot_x": 0.7575,
+      "hotspot_y": 0.6,
+      "visible": true,
+      "source_urls": [
+        "https://www.bbraun.ca/content/dam/b-braun/en_us/website/products-and-therapies/infusion_pumps/pumps_docs/IS232%20Space%20Infusion%20System%20Brochure-210516.pdf",
+        "https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "indicadores",
+      "name": "Indicadores",
+      "function": "Señalan estados o alertas en el equipo real.",
+      "safety": "Los colores pastel no representan un estado real.",
+      "part_status": "modelo",
+      "part_description": "Indicadores",
+      "hotspot_x": 0.54875,
+      "hotspot_y": 0.344,
+      "visible": true,
+      "source_urls": [
+        "https://www.bbraun.ca/content/dam/b-braun/en_us/website/products-and-therapies/infusion_pumps/pumps_docs/IS232%20Space%20Infusion%20System%20Brochure-210516.pdf",
+        "https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "linea",
+      "name": "Línea de infusión",
+      "function": "Representa el equipo compatible que atraviesa la bomba.",
+      "safety": "La compatibilidad y el montaje se verifican en el fabricante.",
+      "part_status": "modelo",
+      "part_description": "Línea de infusión",
+      "hotspot_x": 0.284375,
+      "hotspot_y": 0.757,
+      "visible": true,
+      "source_urls": [
+        "https://www.bbraun.ca/content/dam/b-braun/en_us/website/products-and-therapies/infusion_pumps/pumps_docs/IS232%20Space%20Infusion%20System%20Brochure-210516.pdf",
+        "https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Space · folleto Infusomat y Perfusor",
+      "url": "https://www.bbraun.ca/content/dam/b-braun/en_us/website/products-and-therapies/infusion_pumps/pumps_docs/IS232%20Space%20Infusion%20System%20Brochure-210516.pdf",
+      "publisher": "B. Braun",
+      "date": "2026-11-03",
+      "review_scope": "Folleto consultado; bomba de gran volumen frente a jeringa. Representación aproximada, sin valores."
+    },
+    {
+      "title": "FDA · tipos y seguridad de bombas de infusión",
+      "url": "https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative",
+      "publisher": "FDA",
+      "date": "2026-11-03",
+      "review_scope": "Sección de mecanismos y riesgos; no valida la geometría de un fabricante."
+    }
+  ],
+  "source_urls": [
+    "https://www.bbraun.ca/content/dam/b-braun/en_us/website/products-and-therapies/infusion_pumps/pumps_docs/IS232%20Space%20Infusion%20System%20Brochure-210516.pdf",
+    "https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
+    "native_dimensions": [
+      2000,
+      1250
+    ],
+    "export_dimensions": [
+      2000,
+      1250
+    ],
+    "upscaled": false,
+    "source_svg_sha256": "6ddd1a934e36e0c67e5201403c0eb431339e82b58b9e3664df33c6747c96fec7",
+    "sha256": "0b933a05e7a611382ea529b85fb182f8d73a31a5a537b52c92a3cbf29b2e4858",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

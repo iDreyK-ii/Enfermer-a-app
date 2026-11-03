@@ -1,6 +1,8 @@
-> Cierre local Atlas v2.2: 252 JVM, 118 Python, 5 SQLite y 17 PGLite; lint 0 errores/26 advertencias. Ocho capturas del APK en emulador API28, 17 renders Robolectric separados y 2/2 pruebas PDF instrumentadas aprobadas. No hardware físico, no nuevo CI/publicación. Detalle: `qa/atlas_v22/RESULTADOS.md`.
+> **Revisión corriente 0.8.0-dev:** resultados y límites en `qa/atlas_kawaii/RESULTADOS.md`; no publicar sin autorización expresa.
 
-# Compilar, probar e instalar iDreyK 360 v0.7.0 (local)
+> Histórico 0.7.0, no evidencia automática de 0.8: 252 JVM, 118 Python, 5 SQLite y 17 PGLite; lint 0 errores/26 advertencias. Ocho capturas del APK en emulador API28, 17 renders Robolectric separados y 2/2 pruebas PDF instrumentadas aprobadas. No hardware físico, no nuevo CI/publicación. Detalle: `qa/atlas_v22/RESULTADOS.md`.
+
+# Compilar, probar e instalar iDreyK 360 v0.8.0-dev (local)
 
 Ejecutar desde la raíz `idreyk-android/`. Es Android nativo: **no hay servidor web ni puerto que levantar**. Gradle compila la app; Python y Node solo se usan para herramientas y pruebas locales.
 
@@ -60,7 +62,7 @@ Gradle lee `IDREYK_SUPABASE_URL` e `IDREYK_SUPABASE_PUBLISHABLE_KEY` de entorno 
 
 Para otro proyecto nuevo autorizado, crear/configurar RLS y correo siguiendo `backend/README.md`; para el ya creado, seguir el estado y los pendientes de la guía actual. Después compilar con `:app:assembleDebug` y los valores públicos reales, **sin los argumentos que los vacían en el script de pruebas**. Nunca incorporar la clave secreta, `service_role`, contraseña PostgreSQL o clave privada de firma.
 
-El APK local 0.7.0 de esta revisión se compila con nube vacía. No se ha ejecutado la compilación conectada en esta fase. No existe una conexión simulada presentada como real. La integración real necesita su propio plan de pruebas y consentimiento; no reutilizar cuentas reales desde pruebas unitarias.
+El APK local 0.8.0 de esta revisión se compila con nube vacía. No se ha ejecutado la compilación conectada en esta fase. No existe una conexión simulada presentada como real. La integración real necesita su propio plan de pruebas y consentimiento; no reutilizar cuentas reales desde pruebas unitarias.
 
 ## Instalar sin perder datos
 
@@ -79,7 +81,7 @@ Para comparar un certificado conocido usar `IDREYK_EXPECTED_CERT_SHA256` con `sc
 
 ## Evidencia y alcance
 
-Ver `qa/atlas_v22/RESULTADOS.md` y `docs/AUDITORIA_ATLAS_v22.md`. Los informes de 0.6.0 son históricos. Pruebas JVM/Robolectric, no certificación física o clínica. SMTP/Auth/Storage reales, hardware Keystore, FPS y publicación de producción siguen pendientes. Las capturas Robolectric se distinguen de cualquier ejecución instalada. Consultar procedencia por archivo y limitaciones concretas en el informe actual.
+Ver `qa/atlas_kawaii/RESULTADOS.md` y `docs/AUDITORIA_ATLAS_KAWAII.md`. Los informes de 0.7.0 y 0.6.0 son históricos. Pruebas JVM/Robolectric, no certificación física o clínica. SMTP/Auth/Storage reales, hardware Keystore, FPS y publicación de producción siguen pendientes. Las capturas Robolectric se distinguen de cualquier ejecución instalada. Consultar procedencia por archivo y limitaciones concretas en el informe actual.
 
 
 ## Capturas y pruebas instrumentadas pendientes

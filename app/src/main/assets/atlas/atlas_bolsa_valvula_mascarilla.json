@@ -1,0 +1,194 @@
+{
+  "asset_id": "atlas_bolsa_valvula_mascarilla",
+  "id": "bvm",
+  "name": "Bolsa-válvula-mascarilla",
+  "display_name_es": "Bolsa-válvula-mascarilla",
+  "technical_name": "Resucitador manual autoinflable con mascarilla",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_bolsa_valvula_mascarilla.png",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1250,
+  "image_sha256": "bf48a90f783c6d1d45dbfd5fc302330dc6c0c82f921bed74c61ffcf940161a0e",
+  "alt_text": "Resucitador manual autoinflable con mascarilla: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Inspirado en Ambu SPUR II adulto con mascarilla, válvula, bolsa, reservorio y tubo. El puerto adicional y otros accesorios son variantes; no se enseña ventilación autónoma.",
+  "parts": [
+    {
+      "id": "mascara",
+      "name": "Mascarilla",
+      "function": "Se acopla a la válvula del conjunto.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Mascarilla",
+      "hotspot_x": 0.189375,
+      "hotspot_y": 0.635,
+      "visible": true,
+      "source_urls": [
+        "https://www.ambu.com/emergency-care-and-training/resuscitators/product/ambu-spur-ii",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "valvula-paciente",
+      "name": "Válvula de paciente",
+      "function": "Dirige los flujos en el equipo real.",
+      "safety": "Su operación requiere formación supervisada y verificación.",
+      "part_status": "modelo",
+      "part_description": "Válvula de paciente",
+      "hotspot_x": 0.259375,
+      "hotspot_y": 0.415,
+      "visible": true,
+      "source_urls": [
+        "https://www.ambu.com/emergency-care-and-training/resuscitators/product/ambu-spur-ii",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "bolsa",
+      "name": "Bolsa autoinflable",
+      "function": "Es el cuerpo compresible del resucitador.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Bolsa autoinflable",
+      "hotspot_x": 0.530625,
+      "hotspot_y": 0.447,
+      "visible": true,
+      "source_urls": [
+        "https://www.ambu.com/emergency-care-and-training/resuscitators/product/ambu-spur-ii",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "entrada",
+      "name": "Unión de entrada",
+      "function": "Conecta el conjunto posterior según el modelo.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Unión de entrada",
+      "hotspot_x": 0.60875,
+      "hotspot_y": 0.41,
+      "visible": true,
+      "source_urls": [
+        "https://www.ambu.com/emergency-care-and-training/resuscitators/product/ambu-spur-ii",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "reservorio",
+      "name": "Reservorio",
+      "function": "Componente posterior de la configuración representada.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Reservorio",
+      "hotspot_x": 0.768125,
+      "hotspot_y": 0.453,
+      "visible": true,
+      "source_urls": [
+        "https://www.ambu.com/emergency-care-and-training/resuscitators/product/ambu-spur-ii",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "tubo",
+      "name": "Tubo de oxígeno",
+      "function": "Conecta a la fuente prevista.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Tubo de oxígeno",
+      "hotspot_x": 0.75125,
+      "hotspot_y": 0.759,
+      "visible": true,
+      "source_urls": [
+        "https://www.ambu.com/emergency-care-and-training/resuscitators/product/ambu-spur-ii",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "limite-presion",
+      "name": "Válvula limitadora",
+      "function": "Componente del modelo de referencia.",
+      "safety": "No inferir presión ni posición de funcionamiento.",
+      "part_status": "modelo",
+      "part_description": "Válvula limitadora",
+      "hotspot_x": 0.240625,
+      "hotspot_y": 0.343,
+      "visible": true,
+      "source_urls": [
+        "https://www.ambu.com/emergency-care-and-training/resuscitators/product/ambu-spur-ii",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "asa",
+      "name": "Asa",
+      "function": "Ayuda al manejo en el modelo representado.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Asa",
+      "hotspot_x": 0.406875,
+      "hotspot_y": 0.289,
+      "visible": true,
+      "source_urls": [
+        "https://www.ambu.com/emergency-care-and-training/resuscitators/product/ambu-spur-ii",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "SPUR II · resucitador manual",
+      "url": "https://www.ambu.com/emergency-care-and-training/resuscitators/product/ambu-spur-ii",
+      "publisher": "Ambu",
+      "date": "2026-11-03",
+      "review_scope": "Ficha de producto: bolsa, válvula, asa y variantes."
+    },
+    {
+      "title": "Open RN · equipos de oxigenación, secciones 11.3",
+      "url": "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/",
+      "publisher": "Nursing Skills 2e · Open RN",
+      "date": "2026-11-03",
+      "review_scope": "Secciones de cánula, mascarillas, Venturi y bolsa-válvula; no se copian flujos ni técnica."
+    }
+  ],
+  "source_urls": [
+    "https://www.ambu.com/emergency-care-and-training/resuscitators/product/ambu-spur-ii",
+    "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
+    "native_dimensions": [
+      2000,
+      1250
+    ],
+    "export_dimensions": [
+      2000,
+      1250
+    ],
+    "upscaled": false,
+    "source_svg_sha256": "2e10542a84c47dedf83114c709ff7e11aa2d9ece0039cb078f322bf5cec7dc14",
+    "sha256": "bf48a90f783c6d1d45dbfd5fc302330dc6c0c82f921bed74c61ffcf940161a0e",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

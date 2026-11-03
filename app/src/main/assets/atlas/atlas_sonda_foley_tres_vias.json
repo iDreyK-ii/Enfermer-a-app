@@ -1,0 +1,178 @@
+{
+  "asset_id": "atlas_sonda_foley_tres_vias",
+  "id": "foley-tres-vias",
+  "name": "Sonda Foley de tres vías",
+  "display_name_es": "Sonda Foley de tres vías",
+  "technical_name": "Catéter urinario Foley de tres vías",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_sonda_foley_tres_vias.png",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1250,
+  "image_sha256": "92e89a161d81b97942cbda74fc0b1362ed8ff7da30270b09c1c1fe48fda22a27",
+  "alt_text": "Catéter urinario Foley de tres vías: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Variante de tres canales: drenaje, balón e irrigación. El dibujo no identifica material ni capacidad y no muestra los lúmenes internos.",
+  "parts": [
+    {
+      "id": "drenaje",
+      "name": "Conector de drenaje",
+      "function": "Conecta con el sistema de drenaje previsto.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Conector de drenaje",
+      "hotspot_x": 0.1725,
+      "hotspot_y": 0.665,
+      "visible": true,
+      "source_urls": [
+        "https://www.bd.com/en-anz/products-and-solutions/products/product-families/3-way-foley-catheters",
+        "https://nurses.uroweb.org/guidelines/indwelling-catheterisation-in-adults-urethral-and-suprapubic/chapter/equipment-and-products"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "valvula",
+      "name": "Válvula del balón",
+      "function": "Es el puerto del canal del balón.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Válvula del balón",
+      "hotspot_x": 0.21375,
+      "hotspot_y": 0.488,
+      "visible": true,
+      "source_urls": [
+        "https://www.bd.com/en-anz/products-and-solutions/products/product-families/3-way-foley-catheters",
+        "https://nurses.uroweb.org/guidelines/indwelling-catheterisation-in-adults-urethral-and-suprapubic/chapter/equipment-and-products"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "irrigacion",
+      "name": "Puerto adicional de irrigación",
+      "function": "Es el tercer canal de la variante ilustrada.",
+      "safety": "Requiere indicación y protocolo; no se enseña irrigación.",
+      "part_status": "modelo",
+      "part_description": "Puerto adicional de irrigación",
+      "hotspot_x": 0.196875,
+      "hotspot_y": 0.828,
+      "visible": true,
+      "source_urls": [
+        "https://www.bd.com/en-anz/products-and-solutions/products/product-families/3-way-foley-catheters",
+        "https://nurses.uroweb.org/guidelines/indwelling-catheterisation-in-adults-urethral-and-suprapubic/chapter/equipment-and-products"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "balon",
+      "name": "Balón de retención",
+      "function": "Es el balón del dispositivo real.",
+      "safety": "El tamaño dibujado no indica volumen ni presión.",
+      "part_status": "modelo",
+      "part_description": "Balón de retención",
+      "hotspot_x": 0.753125,
+      "hotspot_y": 0.326,
+      "visible": true,
+      "source_urls": [
+        "https://www.bd.com/en-anz/products-and-solutions/products/product-families/3-way-foley-catheters",
+        "https://nurses.uroweb.org/guidelines/indwelling-catheterisation-in-adults-urethral-and-suprapubic/chapter/equipment-and-products"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "cuerpo",
+      "name": "Cuerpo del catéter",
+      "function": "Contiene los canales internos, no visibles.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Cuerpo del catéter",
+      "hotspot_x": 0.5525,
+      "hotspot_y": 0.626,
+      "visible": true,
+      "source_urls": [
+        "https://www.bd.com/en-anz/products-and-solutions/products/product-families/3-way-foley-catheters",
+        "https://nurses.uroweb.org/guidelines/indwelling-catheterisation-in-adults-urethral-and-suprapubic/chapter/equipment-and-products"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "ojos",
+      "name": "Orificios laterales",
+      "function": "Son aberturas cerca del extremo distal.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Orificios laterales",
+      "hotspot_x": 0.83375,
+      "hotspot_y": 0.264,
+      "visible": true,
+      "source_urls": [
+        "https://www.bd.com/en-anz/products-and-solutions/products/product-families/3-way-foley-catheters",
+        "https://nurses.uroweb.org/guidelines/indwelling-catheterisation-in-adults-urethral-and-suprapubic/chapter/equipment-and-products"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "punta",
+      "name": "Punta distal",
+      "function": "Es el extremo de la configuración ilustrada.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Punta distal",
+      "hotspot_x": 0.870625,
+      "hotspot_y": 0.204,
+      "visible": true,
+      "source_urls": [
+        "https://www.bd.com/en-anz/products-and-solutions/products/product-families/3-way-foley-catheters",
+        "https://nurses.uroweb.org/guidelines/indwelling-catheterisation-in-adults-urethral-and-suprapubic/chapter/equipment-and-products"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Foley de tres vías",
+      "url": "https://www.bd.com/en-anz/products-and-solutions/products/product-families/3-way-foley-catheters",
+      "publisher": "BD",
+      "date": "2026-11-03",
+      "review_scope": "Familia de tres vías; fabricante indica consultar IFU del producto exacto."
+    },
+    {
+      "title": "Cateterización permanente · equipos y productos",
+      "url": "https://nurses.uroweb.org/guidelines/indwelling-catheterisation-in-adults-urethral-and-suprapubic/chapter/equipment-and-products",
+      "publisher": "EAUN · European Association of Urology Nurses",
+      "date": "2026-11-03",
+      "review_scope": "Secciones 5.1.1 y 5.1.4: dos canales frente a tres; no guía de inserción."
+    }
+  ],
+  "source_urls": [
+    "https://www.bd.com/en-anz/products-and-solutions/products/product-families/3-way-foley-catheters",
+    "https://nurses.uroweb.org/guidelines/indwelling-catheterisation-in-adults-urethral-and-suprapubic/chapter/equipment-and-products"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
+    "native_dimensions": [
+      2000,
+      1250
+    ],
+    "export_dimensions": [
+      2000,
+      1250
+    ],
+    "upscaled": false,
+    "source_svg_sha256": "67bf5a07602b9e10e94302787b872fa79ea3f493f9b49749084a0561156f32b9",
+    "sha256": "92e89a161d81b97942cbda74fc0b1362ed8ff7da30270b09c1c1fe48fda22a27",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

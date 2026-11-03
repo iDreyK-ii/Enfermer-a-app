@@ -1,0 +1,15 @@
+{
+  "file": "13-atlas-tablet-oscuro.png",
+  "sha256": "00fe6fc142cba0b1b4267eb58e6d19c175b1c9dfe4b50e2047f40814a7e6bc4b",
+  "width": 800,
+  "height": 1280,
+  "sample_colors": 748,
+  "render": "Robolectric 4.14.1 \/ NATIVE graphics \/ production Compose \/ Android framework API 35",
+  "capture_method": "Android content View.draw(Canvas(Bitmap)); native Skia software rasterization",
+  "physical_device": false,
+  "apk_emulator": false,
+  "motion_reduced": true,
+  "theme": "oscuro",
+  "app_version": "0.8.0-dev-debug",
+  "clinical_validation": false
+}

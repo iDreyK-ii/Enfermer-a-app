@@ -1,0 +1,15 @@
+{
+  "file": "03-atlas-jeringa-390.png",
+  "sha256": "4c9556062b7e4e503972261e40b7990a4f72c552afa2344fee8bf2ee82e63d2b",
+  "width": 390,
+  "height": 844,
+  "sample_colors": 420,
+  "render": "Robolectric 4.14.1 \/ NATIVE graphics \/ production Compose \/ Android framework API 35",
+  "capture_method": "Android content View.draw(Canvas(Bitmap)); native Skia software rasterization",
+  "physical_device": false,
+  "apk_emulator": false,
+  "motion_reduced": true,
+  "theme": "claro",
+  "app_version": "0.8.0-dev-debug",
+  "clinical_validation": false
+}

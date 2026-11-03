@@ -293,7 +293,8 @@ Las respuestas correctas se cuentan desde tus elecciones. No equivalen a un exam
 # Atlas v2.2: metadatos por imagen; no regenerar geometría robótica.
 atlas_dir = HERE.parents[1] / 'app/src/main/assets/atlas'
 devices = [json.loads(p.read_text()) for p in sorted(atlas_dir.glob('*.json'))]
-assert len(devices) == 8
+assert len(devices) == 24
+assert len({d['id'] for d in devices}) == 24
 
 def q(scene, prompt, options, correct, feedback, rubric):
     return dict(scene=scene, prompt=prompt, options=options, correct=correct, feedback=feedback, rubric=rubric)
@@ -362,7 +363,7 @@ checklists=[
 modules=[
  ('biblioteca','Biblioteca Markdown','HECHO','Lectura estructurada, filtros, búsqueda y progreso local; conjunto inicial, no toda una carrera.'),
  ('herramientas','Herramientas matemáticas','HECHO','Decimales y unidades para ejercicios. No validan dosis, tratamientos o rangos clínicos.'),
- ('atlas','Atlas PNG','PARCIAL','Cinco PNG RGBA con hotspots y autoevaluación; tres imágenes rechazadas pendientes de reemplazo y otros dieciséis dispositivos de la solicitud por desarrollar. Revisión profesional pendiente.'),
+ ('atlas','Atlas PNG','PARCIAL','Veinticuatro ilustraciones kawaii RGBA con fichas, puntos y autoevaluación. Son representaciones educativas simplificadas; revisión profesional y pruebas físicas completas pendientes.'),
  ('bioseguridad','Bioseguridad','PARCIAL','Cinco momentos, cronómetro y listas diferenciadas. Técnica supervisada y protocolo local siguen siendo necesarios.'),
  ('cuaderno','PAE / SOAPIE / SBAR','PARCIAL','Editor, persistencia y Markdown funcionales. Impresión/PDF implementados, pendientes de prueba en dispositivo. Sin taxonomías completas ni diagnósticos automáticos.'),
  ('casos','Casos progresivos','PARCIAL','Siete escenarios sintéticos funcionales; revisión docente y validación clínica pendientes.'),

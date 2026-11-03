@@ -1,0 +1,162 @@
+{
+  "asset_id": "atlas_monitor_multiparametro",
+  "id": "monitor",
+  "name": "Monitor multiparámetro de cabecera",
+  "display_name_es": "Monitor multiparámetro de cabecera",
+  "technical_name": "Monitor multiparámetro de paciente",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_monitor_multiparametro.png",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1250,
+  "image_sha256": "fc3b1876e509ae0d19dc07daeccc5c32dc8730391b99c687249e61d8fc6db48c",
+  "alt_text": "Monitor multiparámetro de paciente: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Inspiración general en la familia uMEC. Accesorios y configuraciones dependen del equipo; pantalla sin trazados ni valores, de modo que no representa datos de una persona.",
+  "parts": [
+    {
+      "id": "pantalla",
+      "name": "Pantalla",
+      "function": "Muestra señales y datos del equipo real.",
+      "safety": "La pantalla vacía no es un ECG ni un valor clínico.",
+      "part_status": "modelo",
+      "part_description": "Pantalla",
+      "hotspot_x": 0.4675,
+      "hotspot_y": 0.46,
+      "visible": true,
+      "source_urls": [
+        "https://www.mindray.com/en/products/patient-monitoring/continuous-patient-monitoring/umec",
+        "https://aci.health.nsw.gov.au/__data/assets/pdf_file/0020/722045/ACI-Cardiac-monitoring-adult-cardiac-patients-CPG.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "controles",
+      "name": "Botones de interfaz",
+      "function": "Permiten interactuar con el equipo.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Botones de interfaz",
+      "hotspot_x": 0.758125,
+      "hotspot_y": 0.431,
+      "visible": true,
+      "source_urls": [
+        "https://www.mindray.com/en/products/patient-monitoring/continuous-patient-monitoring/umec",
+        "https://aci.health.nsw.gov.au/__data/assets/pdf_file/0020/722045/ACI-Cardiac-monitoring-adult-cardiac-patients-CPG.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "selector",
+      "name": "Control de navegación",
+      "function": "Permite seleccionar funciones según el modelo.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Control de navegación",
+      "hotspot_x": 0.75875,
+      "hotspot_y": 0.579,
+      "visible": true,
+      "source_urls": [
+        "https://www.mindray.com/en/products/patient-monitoring/continuous-patient-monitoring/umec",
+        "https://aci.health.nsw.gov.au/__data/assets/pdf_file/0020/722045/ACI-Cardiac-monitoring-adult-cardiac-patients-CPG.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "alarma",
+      "name": "Indicador de alarma",
+      "function": "Forma parte de la señalización del monitor.",
+      "safety": "Un color dibujado no informa del estado de una alarma.",
+      "part_status": "modelo",
+      "part_description": "Indicador de alarma",
+      "hotspot_x": 0.72625,
+      "hotspot_y": 0.269,
+      "visible": true,
+      "source_urls": [
+        "https://www.mindray.com/en/products/patient-monitoring/continuous-patient-monitoring/umec",
+        "https://aci.health.nsw.gov.au/__data/assets/pdf_file/0020/722045/ACI-Cardiac-monitoring-adult-cardiac-patients-CPG.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "asa",
+      "name": "Asa",
+      "function": "Ayuda al transporte según configuración.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Asa",
+      "hotspot_x": 0.50375,
+      "hotspot_y": 0.166,
+      "visible": true,
+      "source_urls": [
+        "https://www.mindray.com/en/products/patient-monitoring/continuous-patient-monitoring/umec",
+        "https://aci.health.nsw.gov.au/__data/assets/pdf_file/0020/722045/ACI-Cardiac-monitoring-adult-cardiac-patients-CPG.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "conexion",
+      "name": "Zona de conexión de cables",
+      "function": "Representa una conexión externa.",
+      "safety": "Conectores y accesorios concretos dependen del fabricante.",
+      "part_status": "modelo",
+      "part_description": "Zona de conexión de cables",
+      "hotspot_x": 0.179375,
+      "hotspot_y": 0.524,
+      "visible": true,
+      "source_urls": [
+        "https://www.mindray.com/en/products/patient-monitoring/continuous-patient-monitoring/umec",
+        "https://aci.health.nsw.gov.au/__data/assets/pdf_file/0020/722045/ACI-Cardiac-monitoring-adult-cardiac-patients-CPG.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "uMEC · monitor de paciente",
+      "url": "https://www.mindray.com/en/products/patient-monitoring/continuous-patient-monitoring/umec",
+      "publisher": "Mindray",
+      "date": "2026-11-03",
+      "review_scope": "Pantalla, interfaz y configuraciones de la familia; no copia de producto."
+    },
+    {
+      "title": "Monitorización cardiaca adulta · guía",
+      "url": "https://aci.health.nsw.gov.au/__data/assets/pdf_file/0020/722045/ACI-Cardiac-monitoring-adult-cardiac-patients-CPG.pdf",
+      "publisher": "NSW Agency for Clinical Innovation",
+      "date": "2026-11-03",
+      "review_scope": "Referencia independiente de seguridad de alarmas y contexto; no valida el dibujo."
+    }
+  ],
+  "source_urls": [
+    "https://www.mindray.com/en/products/patient-monitoring/continuous-patient-monitoring/umec",
+    "https://aci.health.nsw.gov.au/__data/assets/pdf_file/0020/722045/ACI-Cardiac-monitoring-adult-cardiac-patients-CPG.pdf"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
+    "native_dimensions": [
+      2000,
+      1250
+    ],
+    "export_dimensions": [
+      2000,
+      1250
+    ],
+    "upscaled": false,
+    "source_svg_sha256": "8e677ce14ca137a593567f0ea2c88f342021261d84f221e3f94cead030b69c96",
+    "sha256": "fc3b1876e509ae0d19dc07daeccc5c32dc8730391b99c687249e61d8fc6db48c",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

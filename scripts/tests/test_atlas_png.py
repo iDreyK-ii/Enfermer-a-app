@@ -17,8 +17,8 @@ class AtlasPngTest(unittest.TestCase):
 
     def test_every_available_png_has_individual_metadata_and_matching_digest(self):
         available = [d for d in self.devices if d['file']]
-        self.assertEqual(5, len(available))
-        self.assertEqual(5, len({d['file'] for d in available}))
+        self.assertEqual(24, len(available))
+        self.assertEqual(24, len({d['file'] for d in available}))
         for d in available:
             path = ASSETS / d['file']
             self.assertEqual(d, json.loads(path.with_suffix('.json').read_text()))
@@ -64,7 +64,7 @@ class AtlasPngTest(unittest.TestCase):
                 if image: image.close()
 
     def test_no_vector_geometry_or_rejected_primary_images_are_shipped(self):
-        self.assertEqual(5,len(list((ASSETS/'atlas').glob('*.png'))))
+        self.assertEqual(24,len(list((ASSETS/'atlas').glob('*.png'))))
         for d in self.devices:
             self.assertTrue(all('shapes' not in p for p in d['parts']))
             if not d['file']:
@@ -75,21 +75,57 @@ class AtlasPngTest(unittest.TestCase):
         self.assertIn('Recurso visual pendiente',source)
 
     def test_requested_24_are_not_reclassified_as_future_or_claimed_complete(self):
-        rows=json.loads((ROOT/'qa/atlas_v22/inventario_24_png.json').read_text())
+        rows=json.loads((ROOT/'qa/atlas_kawaii/inventario_24_png.json').read_text())
         self.assertEqual(list(range(1,25)),[r['number'] for r in rows])
         self.assertEqual(24,len({r['requested_file'] for r in rows}))
-        self.assertEqual(5,sum(bool(r['file']) for r in rows))
+        self.assertEqual(24,sum(bool(r['file']) for r in rows))
         self.assertTrue(all(r['status'] in ('PARCIAL','PENDIENTE','BLOQUEADO') for r in rows))
         for r in rows:
             if r['file']:self.assertTrue((ROOT/r['file']).is_file())
 
-    def test_upscaling_is_disclosed_not_claimed_as_native_detail(self):
+    def test_provenance_describes_direct_vector_raster_not_a_photo_upscale(self):
         for d in self.devices:
-            if d['file']:
-                p=d['processing']
-                self.assertLess(max(p['native_dimensions']),2000)
-                self.assertIn('NO detalle nativo',p['processing'])
-                self.assertTrue(p['native_sha256'])
+            p=d['processing']
+            self.assertEqual([2000,1250], p['native_dimensions'])
+            self.assertEqual([2000,1250], p['export_dimensions'])
+            self.assertFalse(p['upscaled'])
+            self.assertIn('No es foto', p['method'])
+            self.assertEqual(64, len(p['source_svg_sha256']))
+            self.assertTrue((ROOT/p['reproducer']).is_file())
+
+    def test_existing_quiz_targets_and_options_retain_their_meaning(self):
+        old={d['id']:d for d in json.loads((ROOT/'research/atlas_kawaii/referencia_v22_1.json').read_text())}
+        new={d['id']:d for d in self.devices}
+        for id,d in old.items():
+            if not d['file']: continue
+            before=d['parts']; after=new[id]['parts']
+            self.assertEqual([p['id'] for p in before], [p['id'] for p in after], id)
+            self.assertEqual([p['visible'] for p in before], [p['visible'] for p in after], id)
+            self.assertEqual([p['id'] for p in before if p['visible'] and p['id']!='punta'][:5],
+                             [p['id'] for p in after if p['visible'] and p['id']!='punta'][:5], id)
+
+    def test_decorative_faces_are_not_identification_points(self):
+        drawings=json.loads((ROOT/'research/atlas_kawaii/registro_ilustraciones.json').read_text())
+        for entry in drawings:
+            r=entry['revision_dibujo']; angle=-math.radians(r['rotation'])
+            for key,(nx,ny) in r['points'].items():
+                dx=nx*1600-800;dy=ny*1000-500
+                x=800+dx*math.cos(angle)-dy*math.sin(angle)
+                y=500+dx*math.sin(angle)+dy*math.cos(angle)
+                for fx,fy,w,h in r['face_boxes_viewbox']:
+                    self.assertFalse(fx<=x<=fx+w and fy<=y<=fy+h, f"{entry['id']}/{key}")
+
+    def test_important_variants_and_hidden_parts_are_distinguished(self):
+        d={x['id']:x for x in self.devices}
+        ids=lambda id:{p['id'] for p in d[id]['parts']}
+        self.assertNotIn('irrigacion',ids('foley-dos-vias'))
+        self.assertIn('irrigacion',ids('foley-tres-vias'))
+        self.assertEqual({'puerto-1','puerto-2','puerto-3'}, {x for x in ids('llave-tres-vias') if x.startswith('puerto-')})
+        self.assertNotIn('puerto',ids('cateter-periferico'))
+        for id,part in [('estetoscopio','campana'),('tensiometro','vejiga'),('equipo-iv','filtro'),('aguja','lumen'),('traqueostomia','canula-interna')]:
+            self.assertFalse(next(p for p in d[id]['parts'] if p['id']==part)['visible'])
+        self.assertIn('sin aguja',d['tensiometro']['model_note'].lower().replace('carece de aguja','sin aguja'))
+        self.assertIn('no se infiere',d['mascarilla-venturi']['model_note'].lower())
 
     def test_previous_topics_inventory_cases_and_checklists_are_unchanged(self):
         baseline=json.loads((ROOT/'qa/atlas_v22/baseline_conservado.json').read_text())

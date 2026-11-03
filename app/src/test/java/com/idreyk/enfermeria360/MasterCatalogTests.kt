@@ -35,7 +35,8 @@ class MasterCatalogTests {
 
     @Test fun packagedInventoryHasExplicitCountsWithoutNewEditableMedicationDuplicates() {
         assertEquals(20, master.topics.size); assertEquals(554, master.inventory.size)
-        assertEquals(8, master.devices.size); assertEquals(7, master.cases.size)
+        assertEquals(24, master.devices.size); assertEquals(7, master.cases.size)
+        assertEquals("${master.devices.size} dispositivos", ExtraModules.single { it.route == "atlas" }.sub)
         assertEquals(21, master.cases.sumOf { it.questions.size })
         assertEquals(6, repo.entries().count { it.kind == "med" })
         assertEquals(8, repo.entries().size)

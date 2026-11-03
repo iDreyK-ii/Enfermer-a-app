@@ -6,27 +6,28 @@
   "technical_name": "Jeringa hipodérmica de tres piezas, conexión Luer Lock",
   "area": "Dispositivos",
   "file": "atlas/atlas_jeringa_luer_lock.png",
-  "view": "Vista de producto en tres cuartos; conjunto completo",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
   "image_available": true,
   "image_width": 2000,
-  "image_height": 1116,
-  "image_sha256": "c23644432920d0fa5f8438cc8c5317ef14d7ea38ee64643b95cbb61c1da8fc64",
-  "alt_text": "Jeringa hipodérmica de tres piezas, conexión Luer Lock. Imagen generada con IA y recortada, no fotografía de un fabricante. Etiquetas en interfaz; alternativa textual en la lista de partes.",
-  "model_note": "Omnifix de tres piezas como referencia anatómica. Ilustración genérica; no reproduce un tamaño comercial ni sirve para medir. No todos los modelos llevan sello separado.",
+  "image_height": 1250,
+  "image_sha256": "feeedace9564ebce78176df0fd10cdb5d490cf4e78f79909eae5c048aa2a6623",
+  "alt_text": "Jeringa hipodérmica de tres piezas, conexión Luer Lock: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Inspirada en jeringa de tres piezas con Luer Lock. El pistón es separado del vástago. Las graduaciones no representan volumen utilizable.",
   "parts": [
     {
       "id": "cilindro",
       "name": "Cilindro o cuerpo",
       "function": "Contiene el volumen y permite observarlo.",
       "safety": "Comprobar capacidad y escala en el producto real.",
-      "hotspot_x": 0.46,
-      "hotspot_y": 0.585,
+      "hotspot_x": 0.5871358487553099,
+      "hotspot_y": 0.5811899026106752,
       "visible": true,
       "part_status": "universal",
       "part_description": "Cilindro o cuerpo",
       "source_urls": [
         "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
-        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/"
       ],
       "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
     },
@@ -35,14 +36,15 @@
       "name": "Émbolo: vástago móvil",
       "function": "Transmite el movimiento al pistón.",
       "safety": "El vástago no es el sello de elastómero.",
-      "hotspot_x": 0.16,
-      "hotspot_y": 0.44,
+      "hotspot_x": 0.24690486272249593,
+      "hotspot_y": 0.5641381306664947,
       "visible": true,
       "part_status": "universal",
       "part_description": "Émbolo: vástago móvil",
       "source_urls": [
         "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
-        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/"
       ],
       "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
     },
@@ -51,14 +53,15 @@
       "name": "Pistón o sello",
       "function": "Sella y se desplaza dentro del cilindro.",
       "safety": "Separado del vástago en el modelo de tres piezas.",
-      "hotspot_x": 0.676,
-      "hotspot_y": 0.55,
+      "hotspot_x": 0.7107081079381126,
+      "hotspot_y": 0.48710198783532815,
       "visible": true,
       "part_status": "modelo",
       "part_description": "Pistón o sello",
       "source_urls": [
         "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
-        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/"
       ],
       "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
     },
@@ -67,14 +70,15 @@
       "name": "Cono Luer",
       "function": "Constituye el extremo de conexión.",
       "safety": "No deducir compatibilidad ni una vía de uso por esta imagen.",
-      "hotspot_x": 0.915,
-      "hotspot_y": 0.582,
+      "hotspot_x": 0.8827292319806159,
+      "hotspot_y": 0.40301063167505685,
       "visible": true,
       "part_status": "modelo",
       "part_description": "Cono Luer",
       "source_urls": [
         "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
-        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/"
       ],
       "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
     },
@@ -83,14 +87,15 @@
       "name": "Aletas de apoyo",
       "function": "Ofrecen apoyo para los dedos.",
       "safety": "No representan una técnica estéril.",
-      "hotspot_x": 0.224,
-      "hotspot_y": 0.356,
+      "hotspot_x": 0.32561134224723276,
+      "hotspot_y": 0.3811858346795221,
       "visible": true,
       "part_status": "universal",
       "part_description": "Aletas de apoyo",
       "source_urls": [
         "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
-        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/"
       ],
       "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
     },
@@ -99,14 +104,15 @@
       "name": "Graduaciones",
       "function": "Permiten leer el volumen en el dispositivo real.",
       "safety": "Marcas ilustrativas sin números ni valor metrológico.",
-      "hotspot_x": 0.53,
-      "hotspot_y": 0.419,
+      "hotspot_x": 0.498247813702321,
+      "hotspot_y": 0.3991975178949632,
       "visible": true,
       "part_status": "universal",
       "part_description": "Graduaciones",
       "source_urls": [
         "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
-        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/"
       ],
       "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
     },
@@ -115,14 +121,15 @@
       "name": "Apoyo para el pulgar",
       "function": "Es el extremo de apoyo del vástago.",
       "safety": "No confundir con las aletas del cilindro.",
-      "hotspot_x": 0.108,
-      "hotspot_y": 0.44,
+      "hotspot_x": 0.13940747140959828,
+      "hotspot_y": 0.6288408029757563,
       "visible": true,
       "part_status": "universal",
       "part_description": "Apoyo para el pulgar",
       "source_urls": [
         "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
-        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/"
       ],
       "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
     },
@@ -131,14 +138,15 @@
       "name": "Collar Luer Lock",
       "function": "Rodea el cono y participa en la fijación compatible.",
       "safety": "La rosca de fijación es interna; no todas las jeringas llevan collar.",
-      "hotspot_x": 0.835,
-      "hotspot_y": 0.56,
+      "hotspot_x": 0.8201973496667213,
+      "hotspot_y": 0.4553058996957865,
       "visible": true,
       "part_status": "modelo",
       "part_description": "Collar Luer Lock",
       "source_urls": [
         "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
-        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/"
       ],
       "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
     }
@@ -157,48 +165,46 @@
       "publisher": "B. Braun · alojado por Medline",
       "date": "2026-11-03",
       "review_scope": "Folleto completo; segunda referencia técnica del mismo fabricante, no revisión independiente."
+    },
+    {
+      "title": "Open RN · conceptos de jeringa y aguja",
+      "url": "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/",
+      "publisher": "Nursing Skills 2e · Open RN",
+      "date": "2026-11-03",
+      "review_scope": "Anatomía general; no equivale a una aprobación de la ilustración."
     }
   ],
   "source_urls": [
     "https://catalogs.bbraun.com/en-01/p/PRID00012432/omnifix-luer-lock-solo",
-    "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+    "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+    "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/"
   ],
   "review_date": "2026-11-03",
-  "review_status": "REVISIÓN-ASISTIDA; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
   "accuracy_approved_by": null,
   "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
   "clinical_approved": false,
   "pending_reason": "",
   "processing": {
-    "id": "jeringa",
-    "file": "atlas/atlas_jeringa_luer_lock.png",
-    "sha256": "c23644432920d0fa5f8438cc8c5317ef14d7ea38ee64643b95cbb61c1da8fc64",
-    "native_file": "jeringa-corregida.png",
-    "native_sha256": "0a5ae665f57901f0c51b35762e0a6dbae6ee7da5cf8dac50650d2591ea517344",
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
     "native_dimensions": [
-      1376,
-      768
+      2000,
+      1250
     ],
     "export_dimensions": [
       2000,
-      1116
+      1250
     ],
-    "mode": "RGBA",
-    "transparent_fraction": 0.7828,
-    "bytes": 754724,
-    "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
-    "retouches": [],
-    "alpha_bbox": [
-      122,
-      308,
-      1872,
-      798
-    ]
+    "upscaled": false,
+    "source_svg_sha256": "0ecefbb2b70bfb803f78515cd7e05fe890b2897f5af26f14857970964b0f21c9",
+    "sha256": "feeedace9564ebce78176df0fd10cdb5d490cf4e78f79909eae5c048aa2a6623",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
   },
   "checks": [
-    "Identificar el modelo y consultar sus instrucciones.",
-    "Comprobar integridad, conexión y condiciones del producto real.",
-    "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
   ],
   "revision": "atlas-v22.1"
 }

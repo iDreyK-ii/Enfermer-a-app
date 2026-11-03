@@ -1,0 +1,11 @@
+{
+  "file": "07-modulo-final.png",
+  "label": "Módulo corregido · 24 dispositivos",
+  "sha256": "dfed06cb53c61fbd0f094f7128a7a52a5c82b6448199bf49466bbb56a249429c",
+  "width": 480,
+  "height": 800,
+  "render": "Captura del APK final instalado en emulador API28, sin KVM",
+  "apk_sha256": "0c2e77b6010e07315d0e765773d9ce75c2ad3bb9931ed65f793e26307df3688d",
+  "physical_device": false,
+  "clinical_validation": false
+}

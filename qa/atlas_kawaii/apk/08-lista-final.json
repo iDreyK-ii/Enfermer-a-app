@@ -1,0 +1,11 @@
+{
+  "file": "08-lista-final.png",
+  "label": "Lista de dispositivos · APK final",
+  "sha256": "9450cc85c0b2e6c69f1c28b6edcb9ccf907924dfa019581a01e54d4d6fdc6814",
+  "width": 480,
+  "height": 800,
+  "render": "Captura del APK final instalado en emulador API28, sin KVM",
+  "apk_sha256": "0c2e77b6010e07315d0e765773d9ce75c2ad3bb9931ed65f793e26307df3688d",
+  "physical_device": false,
+  "clinical_validation": false
+}

@@ -1,0 +1,15 @@
+{
+  "file": "06-caso-390.png",
+  "sha256": "407a3847a9ec629485e4865ed4d8bb777a2e87adcd1c2c6193d63229f6a7376f",
+  "width": 390,
+  "height": 844,
+  "sample_colors": 418,
+  "render": "Robolectric 4.14.1 \/ NATIVE graphics \/ production Compose \/ Android framework API 35",
+  "capture_method": "Android content View.draw(Canvas(Bitmap)); native Skia software rasterization",
+  "physical_device": false,
+  "apk_emulator": false,
+  "motion_reduced": true,
+  "theme": "claro",
+  "app_version": "0.8.0-dev-debug",
+  "clinical_validation": false
+}

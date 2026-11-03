@@ -1,0 +1,178 @@
+{
+  "asset_id": "atlas_mascarilla_no_reinhalacion",
+  "id": "mascarilla-reservorio",
+  "name": "Mascarilla con reservorio de no reinhalación",
+  "display_name_es": "Mascarilla con reservorio de no reinhalación",
+  "technical_name": "Mascarilla de oxígeno con reservorio y válvulas",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_mascarilla_no_reinhalacion.png",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1250,
+  "image_sha256": "aa909e5a08007236cf707c23f1ae4acd58ca0f3596ae1475fd511064d328609b",
+  "alt_text": "Mascarilla de oxígeno con reservorio y válvulas: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Variante inspirada en mascarilla de alta concentración EcoLite y descripción general de no reinhalación. Dos válvulas laterales y unión al reservorio; los mecanismos internos y su funcionamiento no se comprueban en el dibujo.",
+  "parts": [
+    {
+      "id": "mascara",
+      "name": "Cuerpo de la mascarilla",
+      "function": "Cubre nariz y boca según el modelo.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Cuerpo de la mascarilla",
+      "hotspot_x": 0.419375,
+      "hotspot_y": 0.568,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgical.com/content/files/76621/-869674473",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "valvulas",
+      "name": "Válvulas laterales",
+      "function": "Forman parte de los puertos del modelo de alta concentración.",
+      "safety": "Su funcionamiento real debe comprobarse según instrucciones.",
+      "part_status": "modelo",
+      "part_description": "Válvulas laterales",
+      "hotspot_x": 0.6425,
+      "hotspot_y": 0.513,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgical.com/content/files/76621/-869674473",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "valvula-reservorio",
+      "name": "Unión de la bolsa",
+      "function": "Conecta el reservorio con la mascarilla.",
+      "safety": "La válvula interna no se ve ni se certifica por la imagen.",
+      "part_status": "modelo",
+      "part_description": "Unión de la bolsa",
+      "hotspot_x": 0.509375,
+      "hotspot_y": 0.658,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgical.com/content/files/76621/-869674473",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "reservorio",
+      "name": "Bolsa reservorio",
+      "function": "Actúa como reservorio en el conjunto previsto.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Bolsa reservorio",
+      "hotspot_x": 0.516875,
+      "hotspot_y": 0.822,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgical.com/content/files/76621/-869674473",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "tubo",
+      "name": "Tubo de oxígeno",
+      "function": "Conduce el gas desde la fuente.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Tubo de oxígeno",
+      "hotspot_x": 0.69,
+      "hotspot_y": 0.831,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgical.com/content/files/76621/-869674473",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "cinta",
+      "name": "Cinta elástica",
+      "function": "Sujeta la mascarilla.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Cinta elástica",
+      "hotspot_x": 0.66375,
+      "hotspot_y": 0.238,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgical.com/content/files/76621/-869674473",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "sello",
+      "name": "Borde de contacto",
+      "function": "Contribuye al ajuste según diseño.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Borde de contacto",
+      "hotspot_x": 0.585,
+      "hotspot_y": 0.646,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgical.com/content/files/76621/-869674473",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "EcoLite · mascarillas y puertos",
+      "url": "https://www.intersurgical.com/content/files/76621/-869674473",
+      "publisher": "Intersurgical",
+      "date": "2026-11-03",
+      "review_scope": "Ficha consultada; mascarilla de sello blando sin clip metálico; variantes y válvulas."
+    },
+    {
+      "title": "Open RN · equipos de oxigenación, secciones 11.3",
+      "url": "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/",
+      "publisher": "Nursing Skills 2e · Open RN",
+      "date": "2026-11-03",
+      "review_scope": "Secciones de cánula, mascarillas, Venturi y bolsa-válvula; no se copian flujos ni técnica."
+    }
+  ],
+  "source_urls": [
+    "https://www.intersurgical.com/content/files/76621/-869674473",
+    "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
+    "native_dimensions": [
+      2000,
+      1250
+    ],
+    "export_dimensions": [
+      2000,
+      1250
+    ],
+    "upscaled": false,
+    "source_svg_sha256": "cf70278e952b21b12732590d031f49dd139e542af60698758b053ee7a35e1e8c",
+    "sha256": "aa909e5a08007236cf707c23f1ae4acd58ca0f3596ae1475fd511064d328609b",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

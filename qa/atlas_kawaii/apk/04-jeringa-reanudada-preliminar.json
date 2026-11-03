@@ -1,0 +1,12 @@
+{
+  "file": "04-jeringa-reanudada-preliminar.png",
+  "label": "Jeringa · reanudación del progreso 0.7",
+  "sha256": "87b057dd4924451e013b2db71638ec4f110d44135a2f74e51621036562cc1e31",
+  "width": 480,
+  "height": 800,
+  "render": "Captura real de APK preliminar 0.8.0-dev-debug en emulador Android API28, sin KVM",
+  "apk_sha256": "0f006029e60d0a7003fff67068fdc1e7e5efccfb3fef465f7ffe2e40f84d8ecc",
+  "physical_device": false,
+  "clinical_validation": false,
+  "note": "Antes de corregir el texto Ocho dispositivos en la tarjeta de módulo."
+}

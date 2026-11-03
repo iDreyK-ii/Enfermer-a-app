@@ -1,0 +1,162 @@
+{
+  "asset_id": "atlas_canula_nasal",
+  "id": "canula-nasal",
+  "name": "Cánula nasal de oxígeno",
+  "display_name_es": "Cánula nasal de oxígeno",
+  "technical_name": "Cánula nasal convencional de dos puntas",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_canula_nasal.png",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1250,
+  "image_sha256": "8af8e864a04a22106bc18a1b26551755d31cc74efaee35de9c999f92159806a3",
+  "alt_text": "Cánula nasal convencional de dos puntas: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Inspirada en la cánula convencional de Intersurgical. Existen puntas curvas, rectas y otras variantes; el dibujo no determina talla ni ajuste.",
+  "parts": [
+    {
+      "id": "puntas",
+      "name": "Puntas nasales",
+      "function": "Dirigen el gas hacia las narinas según el diseño.",
+      "safety": "El tamaño y la forma dependen de la persona y el producto.",
+      "part_status": "modelo",
+      "part_description": "Puntas nasales",
+      "hotspot_x": 0.454375,
+      "hotspot_y": 0.22,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgicalinc.com/content/files/66868/-510358716",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "puente",
+      "name": "Puente o soporte nasal",
+      "function": "Une las dos puntas de la cánula.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Puente o soporte nasal",
+      "hotspot_x": 0.58625,
+      "hotspot_y": 0.315,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgicalinc.com/content/files/66868/-510358716",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "ramales",
+      "name": "Ramales laterales",
+      "function": "Forman el tramo que se posiciona alrededor de las orejas.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Ramales laterales",
+      "hotspot_x": 0.19375,
+      "hotspot_y": 0.478,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgicalinc.com/content/files/66868/-510358716",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "ajustador",
+      "name": "Deslizador de ajuste",
+      "function": "Ayuda a regular la posición de los ramales.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Deslizador de ajuste",
+      "hotspot_x": 0.496875,
+      "hotspot_y": 0.757,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgicalinc.com/content/files/66868/-510358716",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "tubo",
+      "name": "Tubo de oxígeno",
+      "function": "Conduce el gas desde la fuente prevista.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Tubo de oxígeno",
+      "hotspot_x": 0.69375,
+      "hotspot_y": 0.889,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgicalinc.com/content/files/66868/-510358716",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "conector",
+      "name": "Conector de oxígeno",
+      "function": "Une la línea con una fuente compatible.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Conector de oxígeno",
+      "hotspot_x": 0.83125,
+      "hotspot_y": 0.889,
+      "visible": true,
+      "source_urls": [
+        "https://www.intersurgicalinc.com/content/files/66868/-510358716",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cánulas nasales convencionales",
+      "url": "https://www.intersurgicalinc.com/content/files/66868/-510358716",
+      "publisher": "Intersurgical",
+      "date": "2026-11-03",
+      "review_scope": "Ficha completa: dos puntas, ramales, deslizador y variantes."
+    },
+    {
+      "title": "Open RN · equipos de oxigenación, secciones 11.3",
+      "url": "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/",
+      "publisher": "Nursing Skills 2e · Open RN",
+      "date": "2026-11-03",
+      "review_scope": "Secciones de cánula, mascarillas, Venturi y bolsa-válvula; no se copian flujos ni técnica."
+    }
+  ],
+  "source_urls": [
+    "https://www.intersurgicalinc.com/content/files/66868/-510358716",
+    "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
+    "native_dimensions": [
+      2000,
+      1250
+    ],
+    "export_dimensions": [
+      2000,
+      1250
+    ],
+    "upscaled": false,
+    "source_svg_sha256": "c40bf2e061e02a590a4cd76e3893e7da2f7e00c8e4883f47139478c64450c6bf",
+    "sha256": "8af8e864a04a22106bc18a1b26551755d31cc74efaee35de9c999f92159806a3",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

@@ -1,0 +1,94 @@
+{
+  "before": {
+    "version": 2,
+    "tables": {
+      "android_metadata": {
+        "rows": 1,
+        "sha256": "b75020507f255a4045d7df8db986dd0206736f9357d605c63a69c44381f02787"
+      },
+      "content": {
+        "rows": 8,
+        "sha256": "c95b86a10ddc090b1013134944ccbfb8bb8a16395ec7950518b0ea2cd7cf9c41"
+      },
+      "favorites": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "media": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "meta": {
+        "rows": 2,
+        "sha256": "b7bed55568b4b32157955808107fd40ec59348856cf83a751dca86a0a27d4b8a"
+      },
+      "notebooks": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "notes": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "packages": {
+        "rows": 1,
+        "sha256": "b0e94bd37b8c2ef0fa94bb5f0620d593c965bab52dfdf15cc2397a06aadfc325"
+      },
+      "practice": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    }
+  },
+  "after": {
+    "version": 2,
+    "tables": {
+      "android_metadata": {
+        "rows": 1,
+        "sha256": "b75020507f255a4045d7df8db986dd0206736f9357d605c63a69c44381f02787"
+      },
+      "content": {
+        "rows": 8,
+        "sha256": "c95b86a10ddc090b1013134944ccbfb8bb8a16395ec7950518b0ea2cd7cf9c41"
+      },
+      "favorites": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "media": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "meta": {
+        "rows": 2,
+        "sha256": "b7bed55568b4b32157955808107fd40ec59348856cf83a751dca86a0a27d4b8a"
+      },
+      "notebooks": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "notes": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "packages": {
+        "rows": 1,
+        "sha256": "b0e94bd37b8c2ef0fa94bb5f0620d593c965bab52dfdf15cc2397a06aadfc325"
+      },
+      "practice": {
+        "rows": 0,
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      }
+    }
+  },
+  "same_schema_and_data": true,
+  "old_quiz_progress_preserved": true,
+  "preferences_preserved": true,
+  "old_answer": [
+    0
+  ],
+  "version": "atlas-v22.1",
+  "scope": "Datos sintéticos de un emulador nuevo; instalación 0.7 → 0.8 con adb install -r, sin desinstalar. No garantiza datos ni firma de APKs externos. El APK 0.8 de esta comparación es el preliminar, previo a corregir el texto del módulo.",
+  "apk_070_sha256": "f19d11b037e08fc3d6034ca7f8802afc545f8db9773f105af2e947a1838a1f0d",
+  "apk_080_preliminar_sha256": "0f006029e60d0a7003fff67068fdc1e7e5efccfb3fef465f7ffe2e40f84d8ecc"
+}

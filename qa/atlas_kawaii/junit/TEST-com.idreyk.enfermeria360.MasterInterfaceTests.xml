@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.MasterInterfaceTests" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-11-03T21:59:26" hostname="e2b.local" time="18.818">
+  <properties/>
+  <testcase name="hygienePausesResetsAndKeepsControlsWithReducedMotion" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="8.58"/>
+  <testcase name="nominalInventoryShowsAmbiguityWithoutAClinicalDose" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="1.142"/>
+  <testcase name="atlasIdentificationScoresPersistsAndResumesWithoutMarkingClinicalCompetence" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="2.198"/>
+  <testcase name="atlasZoomCanResetAndLabelsCanBeHiddenWhileDescriptionsRemainAccessible" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.661"/>
+  <testcase name="globalOfflineSearchFindsDevicePartsAndNativeRecorderRoutes" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.751"/>
+  <testcase name="syringePngSelectsPistonIndependentlyFromPlungerAndZooms" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.512"/>
+  <testcase name="syntheticCaseUnlocksNextStageOnlyAfterPersistedAnswerAndResumes" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.578"/>
+  <testcase name="weightExerciseNeedsExplicitAgeAndPerDayOrPerDoseBasis" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.662"/>
+  <testcase name="paeSavesSubjectiveObjectiveSoapieAndSbarWithoutReplacingOldFields" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.866"/>
+  <testcase name="replacedCatheterUsesItsOwnPngAndAllowsIdentificationWithoutVectorFallback" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.725"/>
+  <testcase name="dripHasNoAssumedFactorAndEditingInvalidatesPriorResult" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.476"/>
+  <testcase name="officialAndOwnChecklistsHaveDistinctAuthorityAndCounts" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.237"/>
+  <testcase name="externalRassDistinguishesBlankFromZeroAndRequiresAdultAndSource" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.394"/>
+  <testcase name="markdownLibraryFiltersAndPersistsExplicitReadMark" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.5"/>
+  <testcase name="newFoleyThreeWayShowsIrrigationAndReducedMotionDoesNotRemoveFunction" classname="com.idreyk.enfermeria360.MasterInterfaceTests" time="0.535"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

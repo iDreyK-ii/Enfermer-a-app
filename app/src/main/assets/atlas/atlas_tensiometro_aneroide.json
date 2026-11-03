@@ -6,21 +6,21 @@
   "technical_name": "Esfigmomanómetro aneroide de bolsillo con manguito",
   "area": "Dispositivos",
   "file": "atlas/atlas_tensiometro_aneroide.png",
-  "view": "Vista de producto en tres cuartos; conjunto completo",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
   "image_available": true,
   "image_width": 2000,
-  "image_height": 1091,
-  "image_sha256": "cdebe5691f7a35ade6ab6be150a2482d23fcac0870f65f2bab564593365e6a73",
-  "alt_text": "Esfigmomanómetro aneroide de bolsillo con manguito. Imagen generada con IA y recortada, no fotografía de un fabricante. Etiquetas en interfaz; alternativa textual en la lista de partes.",
-  "model_note": "Referencia anatómica ADC Prosphyg 760 con dos tubos y vejiga interna. No es una representación calibrada ni una reproducción exacta. El manual de referencia excluye uso neonatal; no extrapolar tallas.",
+  "image_height": 1250,
+  "image_sha256": "220e65f8c03ac32f3045926db8064b64a5fe029ab4a974726f2acb780bde2c5c",
+  "alt_text": "Esfigmomanómetro aneroide de bolsillo con manguito: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Inspirado en ADC Prosphyg 760 con dos tubos y vejiga interna no visible. La esfera carece de aguja y cifras: no es una medición. El manual de referencia excluye uso neonatal.",
   "parts": [
     {
       "id": "manguito",
       "name": "Manguito",
       "function": "Es la envoltura del conjunto inflable.",
       "safety": "Seleccionar talla y revisar estado según fabricante.",
-      "hotspot_x": 0.312,
-      "hotspot_y": 0.369,
+      "hotspot_x": 0.220625,
+      "hotspot_y": 0.33,
       "visible": true,
       "part_status": "universal",
       "part_description": "Manguito",
@@ -35,8 +35,8 @@
       "name": "Manómetro",
       "function": "Muestra la presión del sistema en el equipo real.",
       "safety": "La esfera ilustrada no permite una lectura de presión.",
-      "hotspot_x": 0.639,
-      "hotspot_y": 0.467,
+      "hotspot_x": 0.6375,
+      "hotspot_y": 0.373,
       "visible": true,
       "part_status": "universal",
       "part_description": "Manómetro",
@@ -51,8 +51,8 @@
       "name": "Pera de inflado",
       "function": "Genera la presión de aire en el sistema.",
       "safety": "No es un dispositivo para vía intravenosa.",
-      "hotspot_x": 0.858,
-      "hotspot_y": 0.6,
+      "hotspot_x": 0.81,
+      "hotspot_y": 0.423,
       "visible": true,
       "part_status": "universal",
       "part_description": "Pera de inflado",
@@ -67,8 +67,8 @@
       "name": "Válvula de liberación",
       "function": "Permite liberar aire según diseño.",
       "safety": "No inferir una técnica de medición de esta imagen.",
-      "hotspot_x": 0.742,
-      "hotspot_y": 0.65,
+      "hotspot_x": 0.838125,
+      "hotspot_y": 0.578,
       "visible": true,
       "part_status": "universal",
       "part_description": "Válvula de liberación",
@@ -83,8 +83,8 @@
       "name": "Tubos de aire",
       "function": "Conectan los elementos del sistema neumático.",
       "safety": "No conectar con líneas intravasculares; revisar fugas.",
-      "hotspot_x": 0.629,
-      "hotspot_y": 0.754,
+      "hotspot_x": 0.624375,
+      "hotspot_y": 0.837,
       "visible": true,
       "part_status": "modelo",
       "part_description": "Tubos de aire",
@@ -99,8 +99,8 @@
       "name": "Sistema de cierre",
       "function": "Sujeta la envoltura.",
       "safety": "Diseño dependiente del manguito.",
-      "hotspot_x": 0.401,
-      "hotspot_y": 0.552,
+      "hotspot_x": 0.430625,
+      "hotspot_y": 0.521,
       "visible": true,
       "part_status": "modelo",
       "part_description": "Sistema de cierre",
@@ -148,43 +148,31 @@
     "https://www.adctoday.com/sites/default/files/literature/9360N-00%20rev%2021%20Spanish.pdf"
   ],
   "review_date": "2026-11-03",
-  "review_status": "REVISIÓN-ASISTIDA; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
   "accuracy_approved_by": null,
   "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
   "clinical_approved": false,
   "pending_reason": "",
   "processing": {
-    "id": "tensiometro",
-    "file": "atlas/atlas_tensiometro_aneroide.png",
-    "sha256": "cdebe5691f7a35ade6ab6be150a2482d23fcac0870f65f2bab564593365e6a73",
-    "native_file": "tensiometro.png",
-    "native_sha256": "7a44706dc781da1ebf1558e82ebf8e4c00167e79bbcacf514d0371fe97533d1b",
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
     "native_dimensions": [
-      1408,
-      768
+      2000,
+      1250
     ],
     "export_dimensions": [
       2000,
-      1091
+      1250
     ],
-    "mode": "RGBA",
-    "transparent_fraction": 0.7206,
-    "bytes": 1299234,
-    "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
-    "retouches": [
-      "Máscara u2netp + matting para retirar la sombra opaca; píxeles de producto originales conservados."
-    ],
-    "alpha_bbox": [
-      102,
-      198,
-      1907,
-      909
-    ]
+    "upscaled": false,
+    "source_svg_sha256": "f01bf25c80605e1c9928a012820cbee790e584b6226301a873ca946eb02d6929",
+    "sha256": "220e65f8c03ac32f3045926db8064b64a5fe029ab4a974726f2acb780bde2c5c",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
   },
   "checks": [
-    "Identificar el modelo y consultar sus instrucciones.",
-    "Comprobar integridad, conexión y condiciones del producto real.",
-    "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
   ],
   "revision": "atlas-v22.1"
 }

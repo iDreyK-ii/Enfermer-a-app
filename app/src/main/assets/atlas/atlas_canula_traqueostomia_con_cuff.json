@@ -1,0 +1,210 @@
+{
+  "asset_id": "atlas_canula_traqueostomia_con_cuff",
+  "id": "traqueostomia",
+  "name": "Cánula de traqueostomía con cuff",
+  "display_name_es": "Cánula de traqueostomía con cuff",
+  "technical_name": "Tubo de traqueostomía adulto con balón",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_canula_traqueostomia_con_cuff.png",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1250,
+  "image_sha256": "61b8deaf78caecfe308247b9a42243a3dff6e959617b69e40fab6f9812b886c8",
+  "alt_text": "Tubo de traqueostomía adulto con balón: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Inspiración en Shiley flexible con cuff y cánula interna, sin puerto subglótico adicional. La cánula interna queda dentro del conjunto y no se identifica como visible.",
+  "parts": [
+    {
+      "id": "canula",
+      "name": "Cánula exterior",
+      "function": "Forma el conducto principal del dispositivo.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Cánula exterior",
+      "hotspot_x": 0.5275,
+      "hotspot_y": 0.621,
+      "visible": true,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/products/respiratory/tracheostomy/tracheostomy-tubes/shiley-flexible-adult-tracheostomy-tube.html",
+        "https://www.globaltrach.org/tracheostomy-basics"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "placa",
+      "name": "Placa o brida cervical",
+      "function": "Apoya y fija el conjunto en el cuello según el diseño.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Placa o brida cervical",
+      "hotspot_x": 0.5775,
+      "hotspot_y": 0.424,
+      "visible": true,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/products/respiratory/tracheostomy/tracheostomy-tubes/shiley-flexible-adult-tracheostomy-tube.html",
+        "https://www.globaltrach.org/tracheostomy-basics"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "orificios",
+      "name": "Ranuras de fijación",
+      "function": "Permiten sujetar la placa según el modelo.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Ranuras de fijación",
+      "hotspot_x": 0.619375,
+      "hotspot_y": 0.396,
+      "visible": true,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/products/respiratory/tracheostomy/tracheostomy-tubes/shiley-flexible-adult-tracheostomy-tube.html",
+        "https://www.globaltrach.org/tracheostomy-basics"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "conector",
+      "name": "Conector proximal",
+      "function": "Acopla el circuito compatible.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Conector proximal",
+      "hotspot_x": 0.469375,
+      "hotspot_y": 0.326,
+      "visible": true,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/products/respiratory/tracheostomy/tracheostomy-tubes/shiley-flexible-adult-tracheostomy-tube.html",
+        "https://www.globaltrach.org/tracheostomy-basics"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "cuff",
+      "name": "Balón o cuff",
+      "function": "Rodea el extremo distal.",
+      "safety": "La ilustración no informa presión ni un sellado.",
+      "part_status": "modelo",
+      "part_description": "Balón o cuff",
+      "hotspot_x": 0.654375,
+      "hotspot_y": 0.661,
+      "visible": true,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/products/respiratory/tracheostomy/tracheostomy-tubes/shiley-flexible-adult-tracheostomy-tube.html",
+        "https://www.globaltrach.org/tracheostomy-basics"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "linea",
+      "name": "Línea de inflado",
+      "function": "Une el sistema del cuff con el balón piloto.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Línea de inflado",
+      "hotspot_x": 0.33,
+      "hotspot_y": 0.659,
+      "visible": true,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/products/respiratory/tracheostomy/tracheostomy-tubes/shiley-flexible-adult-tracheostomy-tube.html",
+        "https://www.globaltrach.org/tracheostomy-basics"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "piloto",
+      "name": "Balón piloto",
+      "function": "Forma parte del sistema de inflado.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Balón piloto",
+      "hotspot_x": 0.1775,
+      "hotspot_y": 0.665,
+      "visible": true,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/products/respiratory/tracheostomy/tracheostomy-tubes/shiley-flexible-adult-tracheostomy-tube.html",
+        "https://www.globaltrach.org/tracheostomy-basics"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "valvula",
+      "name": "Válvula de inflado",
+      "function": "Es la conexión de inflado del modelo.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Válvula de inflado",
+      "hotspot_x": 0.12625,
+      "hotspot_y": 0.627,
+      "visible": true,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/products/respiratory/tracheostomy/tracheostomy-tubes/shiley-flexible-adult-tracheostomy-tube.html",
+        "https://www.globaltrach.org/tracheostomy-basics"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "canula-interna",
+      "name": "Cánula interna",
+      "function": "Puede retirarse o cambiarse según el producto.",
+      "safety": "No visible como pieza independiente en esta vista.",
+      "part_status": "modelo",
+      "part_description": "Cánula interna",
+      "hotspot_x": null,
+      "hotspot_y": null,
+      "visible": false,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/products/respiratory/tracheostomy/tracheostomy-tubes/shiley-flexible-adult-tracheostomy-tube.html",
+        "https://www.globaltrach.org/tracheostomy-basics"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Shiley flexible adulto",
+      "url": "https://www.medtronic.com/en-us/healthcare-professionals/products/respiratory/tracheostomy/tracheostomy-tubes/shiley-flexible-adult-tracheostomy-tube.html",
+      "publisher": "Medtronic",
+      "date": "2026-11-03",
+      "review_scope": "Variantes con y sin cuff y cánula interna; sin asumir puerto de aspiración."
+    },
+    {
+      "title": "Tracheostomy Basics · términos",
+      "url": "https://www.globaltrach.org/tracheostomy-basics",
+      "publisher": "Global Tracheostomy Collaborative",
+      "date": "2026-11-03",
+      "review_scope": "Definiciones de placa, cánulas, línea, cuff y balón piloto."
+    }
+  ],
+  "source_urls": [
+    "https://www.medtronic.com/en-us/healthcare-professionals/products/respiratory/tracheostomy/tracheostomy-tubes/shiley-flexible-adult-tracheostomy-tube.html",
+    "https://www.globaltrach.org/tracheostomy-basics"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
+    "native_dimensions": [
+      2000,
+      1250
+    ],
+    "export_dimensions": [
+      2000,
+      1250
+    ],
+    "upscaled": false,
+    "source_svg_sha256": "d11b712648491f1adc373b40fd4be9e490ec57857ea50341dfb3e4a21815e4e2",
+    "sha256": "61b8deaf78caecfe308247b9a42243a3dff6e959617b69e40fab6f9812b886c8",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

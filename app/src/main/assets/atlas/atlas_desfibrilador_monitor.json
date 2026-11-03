@@ -1,0 +1,178 @@
+{
+  "asset_id": "atlas_desfibrilador_monitor",
+  "id": "desfibrilador",
+  "name": "Desfibrilador/monitor manual",
+  "display_name_es": "Desfibrilador/monitor manual",
+  "technical_name": "Desfibrilador monitor con palas externas",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_desfibrilador_monitor.png",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1250,
+  "image_sha256": "ff2e29fcca6d1a0f942b254417b481b9ec858f67533e59395f06cfe9b8cd56c6",
+  "alt_text": "Desfibrilador monitor con palas externas: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Inspirado en ZOLL R Series con pantalla, controles, asa y palas. No es réplica de interfaz, no tiene cifras, trazado ni energía seleccionada. Las palas/electrodos son opciones dependientes del modelo.",
+  "parts": [
+    {
+      "id": "pantalla",
+      "name": "Pantalla",
+      "function": "Muestra información del monitor real.",
+      "safety": "La pantalla no representa un ritmo ni una lectura.",
+      "part_status": "modelo",
+      "part_description": "Pantalla",
+      "hotspot_x": 0.436875,
+      "hotspot_y": 0.473,
+      "visible": true,
+      "source_urls": [
+        "https://www.zoll.com/-/media/Product-Materials/product-manuals/r-series/01/9650-0912-01-Rev-YA.ashx",
+        "https://www.mindray.com/content/dam/xpace/en_gb/resources/downloads/education/education-d3/BeneHeart_D3_Operators_Manual.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "selector",
+      "name": "Control de modo",
+      "function": "Selecciona funciones según el equipo real.",
+      "safety": "No se indica una posición de uso.",
+      "part_status": "modelo",
+      "part_description": "Control de modo",
+      "hotspot_x": 0.72625,
+      "hotspot_y": 0.392,
+      "visible": true,
+      "source_urls": [
+        "https://www.zoll.com/-/media/Product-Materials/product-manuals/r-series/01/9650-0912-01-Rev-YA.ashx",
+        "https://www.mindray.com/content/dam/xpace/en_gb/resources/downloads/education/education-d3/BeneHeart_D3_Operators_Manual.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "controles",
+      "name": "Controles del panel",
+      "function": "Permiten manejar funciones del equipo.",
+      "safety": "Colores y orden no enseñan la secuencia de descarga.",
+      "part_status": "modelo",
+      "part_description": "Controles del panel",
+      "hotspot_x": 0.745625,
+      "hotspot_y": 0.52,
+      "visible": true,
+      "source_urls": [
+        "https://www.zoll.com/-/media/Product-Materials/product-manuals/r-series/01/9650-0912-01-Rev-YA.ashx",
+        "https://www.mindray.com/content/dam/xpace/en_gb/resources/downloads/education/education-d3/BeneHeart_D3_Operators_Manual.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "palas",
+      "name": "Palas externas",
+      "function": "Son un accesorio de terapia de la configuración representada.",
+      "safety": "No reemplazan entrenamiento ni protocolo.",
+      "part_status": "modelo",
+      "part_description": "Palas externas",
+      "hotspot_x": 0.133125,
+      "hotspot_y": 0.339,
+      "visible": true,
+      "source_urls": [
+        "https://www.zoll.com/-/media/Product-Materials/product-manuals/r-series/01/9650-0912-01-Rev-YA.ashx",
+        "https://www.mindray.com/content/dam/xpace/en_gb/resources/downloads/education/education-d3/BeneHeart_D3_Operators_Manual.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "cable",
+      "name": "Cable de palas",
+      "function": "Conecta las palas con el dispositivo previsto.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Cable de palas",
+      "hotspot_x": 0.13,
+      "hotspot_y": 0.566,
+      "visible": true,
+      "source_urls": [
+        "https://www.zoll.com/-/media/Product-Materials/product-manuals/r-series/01/9650-0912-01-Rev-YA.ashx",
+        "https://www.mindray.com/content/dam/xpace/en_gb/resources/downloads/education/education-d3/BeneHeart_D3_Operators_Manual.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "asa",
+      "name": "Asa de transporte",
+      "function": "Ayuda al transporte del monitor.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Asa de transporte",
+      "hotspot_x": 0.521875,
+      "hotspot_y": 0.165,
+      "visible": true,
+      "source_urls": [
+        "https://www.zoll.com/-/media/Product-Materials/product-manuals/r-series/01/9650-0912-01-Rev-YA.ashx",
+        "https://www.mindray.com/content/dam/xpace/en_gb/resources/downloads/education/education-d3/BeneHeart_D3_Operators_Manual.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "registrador",
+      "name": "Registrador",
+      "function": "Es una posibilidad del equipo de referencia.",
+      "safety": "Las configuraciones disponibles varían.",
+      "part_status": "modelo",
+      "part_description": "Registrador",
+      "hotspot_x": 0.74375,
+      "hotspot_y": 0.666,
+      "visible": true,
+      "source_urls": [
+        "https://www.zoll.com/-/media/Product-Materials/product-manuals/r-series/01/9650-0912-01-Rev-YA.ashx",
+        "https://www.mindray.com/content/dam/xpace/en_gb/resources/downloads/education/education-d3/BeneHeart_D3_Operators_Manual.pdf"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "R Series ALS · guía del operador",
+      "url": "https://www.zoll.com/-/media/Product-Materials/product-manuals/r-series/01/9650-0912-01-Rev-YA.ashx",
+      "publisher": "ZOLL",
+      "date": "2026-11-03",
+      "review_scope": "Guía del producto: panel, accesorios y advertencias; no se copia el procedimiento."
+    },
+    {
+      "title": "BeneHeart D3 · manual de otro fabricante",
+      "url": "https://www.mindray.com/content/dam/xpace/en_gb/resources/downloads/education/education-d3/BeneHeart_D3_Operators_Manual.pdf",
+      "publisher": "Mindray",
+      "date": "2026-11-03",
+      "review_scope": "Referencia técnica general de palas y controles; no certifica el modelo dibujado."
+    }
+  ],
+  "source_urls": [
+    "https://www.zoll.com/-/media/Product-Materials/product-manuals/r-series/01/9650-0912-01-Rev-YA.ashx",
+    "https://www.mindray.com/content/dam/xpace/en_gb/resources/downloads/education/education-d3/BeneHeart_D3_Operators_Manual.pdf"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
+    "native_dimensions": [
+      2000,
+      1250
+    ],
+    "export_dimensions": [
+      2000,
+      1250
+    ],
+    "upscaled": false,
+    "source_svg_sha256": "8feb734885147d35bc2690d16bfd82c537589489027f16b58b0d0f0d2550e624",
+    "sha256": "ff2e29fcca6d1a0f942b254417b481b9ec858f67533e59395f06cfe9b8cd56c6",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

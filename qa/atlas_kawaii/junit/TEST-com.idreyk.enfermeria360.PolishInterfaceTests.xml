@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.PolishInterfaceTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-03T22:01:28" hostname="e2b.local" time="9.753">
+  <properties/>
+  <testcase name="catalogueReplacementCannotBeConfirmedBeforeExplicitAcknowledgement" classname="com.idreyk.enfermeria360.PolishInterfaceTests" time="8.138"/>
+  <testcase name="everyImportPageRemainsReachableWithoutRenderingHundredsOfCardsAtOnce" classname="com.idreyk.enfermeria360.PolishInterfaceTests" time="0.582"/>
+  <testcase name="pendingWritesDisableInputsEvenWhenTheFieldWasEnabledLocally" classname="com.idreyk.enfermeria360.PolishInterfaceTests" time="0.429"/>
+  <testcase name="enlargedWelcomeUsesContentHeightInsteadOfClippingTheGreeting" classname="com.idreyk.enfermeria360.PolishInterfaceTests" time="0.334"/>
+  <testcase name="moduleGridBecomesSingleColumnWithLargeTextAndStillNavigates" classname="com.idreyk.enfermeria360.PolishInterfaceTests" time="0.27"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -87,7 +87,8 @@ class MasterInterfaceTests {
         modules(); click("Atlas interactivo"); click("Jeringa")
         ui.onNodeWithTag("atlas-photo").assertExists()
         ui.onNodeWithTag("atlas-viewport").performScrollTo()
-        ui.onNodeWithTag("atlas-photo").performTouchInput { click(Offset(width * .676f, height * .55f)) }
+        val piston = vm.data.master.catalog!!.devices.single { it.id == "jeringa" }.parts.single { it.id == "piston" }
+        ui.onNodeWithTag("atlas-photo").performTouchInput { click(Offset(width * piston.x!!, height * piston.y!!)) }
         ui.onNodeWithText("Pistón o sello").assertExists()
         ui.onNodeWithText("Sella y se desplaza dentro del cilindro.").assertExists()
         click("2. Émbolo: vástago móvil")
@@ -112,12 +113,22 @@ class MasterInterfaceTests {
         ui.onNodeWithText("Conservar").performClick()
         assertEquals(5, vm.data.learning["atlas/jeringa"]!!.answers.size)
     }
-    @Test fun rejectedAtlasImageHasAnExplicitPendingStateAndNoQuizOrVectorFallback() {
-        modules(); click("Atlas interactivo"); click("Catéter venoso periférico")
-        ui.onNodeWithTag("atlas-pending").assertExists()
-        ui.onNodeWithTag("atlas-photo").assertDoesNotExist()
+    @Test fun replacedCatheterUsesItsOwnPngAndAllowsIdentificationWithoutVectorFallback() {
+        modules(); ui.onNodeWithText("24 dispositivos").assertExists()
+        click("Atlas interactivo"); click("Catéter venoso periférico")
+        ui.onNodeWithTag("atlas-pending").assertDoesNotExist()
+        ui.onNodeWithTag("atlas-photo").assertExists()
         ui.onNodeWithTag("atlas-vector").assertDoesNotExist()
-        ui.onNodeWithText("Practicar identificación").assertDoesNotExist()
+        click("Practicar identificación")
+        ui.onNodeWithText("¿Cómo se llama la parte señalada?", substring = true).assertExists()
+    }
+    @Test fun newFoleyThreeWayShowsIrrigationAndReducedMotionDoesNotRemoveFunction() {
+        modules(); click("Atlas interactivo"); click("Sonda Foley de tres vías")
+        ui.onNodeWithTag("atlas-motion-toggle").assertIsNotEnabled()
+        click("3. Puerto adicional de irrigación")
+        ui.onNodeWithText("Puerto adicional de irrigación").assertExists()
+        click("Practicar identificación")
+        ui.onNodeWithTag("atlas-photo").assertExists()
     }
     @Test fun atlasZoomCanResetAndLabelsCanBeHiddenWhileDescriptionsRemainAccessible() {
         modules(); click("Atlas interactivo"); click("Estetoscopio")

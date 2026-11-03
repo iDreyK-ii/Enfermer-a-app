@@ -1,0 +1,15 @@
+{
+  "file": "10-atlas-compacto-320-oscuro.png",
+  "sha256": "0def73ee0375419003e2fce82fa9b10cfff016321d49d3b4459adc0b9c27844a",
+  "width": 320,
+  "height": 640,
+  "sample_colors": 289,
+  "render": "Robolectric 4.14.1 \/ NATIVE graphics \/ production Compose \/ Android framework API 35",
+  "capture_method": "Android content View.draw(Canvas(Bitmap)); native Skia software rasterization",
+  "physical_device": false,
+  "apk_emulator": false,
+  "motion_reduced": true,
+  "theme": "oscuro",
+  "app_version": "0.8.0-dev-debug",
+  "clinical_validation": false
+}

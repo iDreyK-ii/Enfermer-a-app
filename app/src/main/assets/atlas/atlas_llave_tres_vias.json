@@ -1,0 +1,146 @@
+{
+  "asset_id": "atlas_llave_tres_vias",
+  "id": "llave-tres-vias",
+  "name": "Llave de tres vías",
+  "display_name_es": "Llave de tres vías",
+  "technical_name": "Llave de paso de tres vías",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_llave_tres_vias.png",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1250,
+  "image_sha256": "a99a7531682d5c40fb7082b691548bcaf9a73363c475b73834505f06270c5349",
+  "alt_text": "Llave de paso de tres vías: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Inspirada en D300: dos conexiones hembra y una conexión distal SPIN-LOCK. La figura del mando no permite inferir flujo, cierre ni orientación clínica.",
+  "parts": [
+    {
+      "id": "cuerpo",
+      "name": "Cuerpo central",
+      "function": "Aloja el mecanismo del dispositivo.",
+      "safety": "Integridad y compatibilidad se verifican en el producto.",
+      "hotspot_x": 0.5706983254467991,
+      "hotspot_y": 0.5423021483412761,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Cuerpo central",
+      "source_urls": [
+        "https://www.bbraunusa.com/en/products/b0/three-way-stopcockwithspin-lock.html",
+        "https://medicalmega.com/b-braun-456003-stopcock-discofix-3-way/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "selector",
+      "name": "Mando selector",
+      "function": "Permite modificar las conexiones según el diseño real.",
+      "safety": "No deducir dirección de flujo de este dibujo.",
+      "hotspot_x": 0.4198311079587761,
+      "hotspot_y": 0.30744676373236574,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Mando selector",
+      "source_urls": [
+        "https://www.bbraunusa.com/en/products/b0/three-way-stopcockwithspin-lock.html",
+        "https://medicalmega.com/b-braun-456003-stopcock-discofix-3-way/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "puerto-1",
+      "name": "Conexión lateral 1",
+      "function": "Uno de los tres accesos.",
+      "safety": "Conexión y tapón dependen del modelo; no es una indicación de uso.",
+      "hotspot_x": 0.2263111992914735,
+      "hotspot_y": 0.5202427107578229,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Conexión lateral 1",
+      "source_urls": [
+        "https://www.bbraunusa.com/en/products/b0/three-way-stopcockwithspin-lock.html",
+        "https://medicalmega.com/b-braun-456003-stopcock-discofix-3-way/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "puerto-2",
+      "name": "Conexión lateral 2",
+      "function": "Segundo acceso del conjunto.",
+      "safety": "No asumir compatibilidad por la apariencia.",
+      "hotspot_x": 0.774840904928241,
+      "hotspot_y": 0.443458501397136,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Conexión lateral 2",
+      "source_urls": [
+        "https://www.bbraunusa.com/en/products/b0/three-way-stopcockwithspin-lock.html",
+        "https://medicalmega.com/b-braun-456003-stopcock-discofix-3-way/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "puerto-3",
+      "name": "Conexión inferior 3",
+      "function": "Tercer acceso del conjunto.",
+      "safety": "No representa una vía del paciente ni una conexión permitida.",
+      "hotspot_x": 0.5205284514555341,
+      "hotspot_y": 0.8524786116389825,
+      "visible": true,
+      "part_status": "modelo",
+      "part_description": "Conexión inferior 3",
+      "source_urls": [
+        "https://www.bbraunusa.com/en/products/b0/three-way-stopcockwithspin-lock.html",
+        "https://medicalmega.com/b-braun-456003-stopcock-discofix-3-way/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "D300 · tres vías con SPIN-LOCK",
+      "url": "https://www.bbraunusa.com/en/products/b0/three-way-stopcockwithspin-lock.html",
+      "publisher": "B. Braun",
+      "date": "2026-11-03",
+      "review_scope": "Ficha completa: dos conexiones hembra y una SPIN-LOCK."
+    },
+    {
+      "title": "D300 456003 · ficha de distribuidor",
+      "url": "https://medicalmega.com/b-braun-456003-stopcock-discofix-3-way/",
+      "publisher": "Medical Mega",
+      "date": "2026-11-03",
+      "review_scope": "Confirma configuración, no certifica la ilustración."
+    }
+  ],
+  "source_urls": [
+    "https://www.bbraunusa.com/en/products/b0/three-way-stopcockwithspin-lock.html",
+    "https://medicalmega.com/b-braun-456003-stopcock-discofix-3-way/"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
+    "native_dimensions": [
+      2000,
+      1250
+    ],
+    "export_dimensions": [
+      2000,
+      1250
+    ],
+    "upscaled": false,
+    "source_svg_sha256": "49ed2e8d04bcfc83f4dfe946cadc0b0fa3f0bf6f13462868f2012fef598d490e",
+    "sha256": "a99a7531682d5c40fb7082b691548bcaf9a73363c475b73834505f06270c5349",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

@@ -1,0 +1,1 @@
+Sin FATAL EXCEPTION ni ANR de la app en las últimas 2500 líneas del log del emulador.

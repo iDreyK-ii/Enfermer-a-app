@@ -1,6 +1,8 @@
-> Cierre local Atlas v2.2: 252 JVM, 118 Python, 5 SQLite y 17 PGLite; lint 0 errores/26 advertencias. Ocho capturas del APK en emulador API28, 17 renders Robolectric separados y 2/2 pruebas PDF instrumentadas aprobadas. No hardware físico, no nuevo CI/publicación. Detalle: `qa/atlas_v22/RESULTADOS.md`.
+> **Actualización local 0.8.0-dev / atlas kawaii:** 24 PNG/fichas, movimiento adaptable y autoevaluación. Ver `docs/AUDITORIA_ATLAS_KAWAII.md` y `qa/atlas_kawaii/RESULTADOS.md` para la evidencia corriente. Sin aprobación profesional ni permiso para publicar; el último remoto es `b463c580`. No cargar el tag histórico como si incluyera estos cambios.
 
-> **BORRADOR LOCAL 0.7.0 / Atlas v2.2:** no cargar `base-maestra-v21-mvp` esperando estos PNG o el quiz nuevo: ese tag es 0.6.0. Esperar revisión/autorización y usar el SHA exacto aprobado; la publicación y la paridad Google de esta revisión están pendientes. Leer `docs/AUDITORIA_ATLAS_v22.md` y `qa/atlas_v22/RESULTADOS.md`.
+> Histórico 0.7.0, no evidencia automática de 0.8: 252 JVM, 118 Python, 5 SQLite y 17 PGLite; lint 0 errores/26 advertencias. Ocho capturas del APK en emulador API28, 17 renders Robolectric separados y 2/2 pruebas PDF instrumentadas aprobadas. No hardware físico, no nuevo CI/publicación. Detalle: `qa/atlas_v22/RESULTADOS.md`.
+
+> **ANTECEDENTE LOCAL 0.7.0 / Atlas v2.2:** no cargar `base-maestra-v21-mvp` esperando estos PNG o el quiz nuevo: ese tag es 0.6.0. Esperar revisión/autorización y usar el SHA exacto aprobado; la publicación y la paridad Google de esta revisión están pendientes. Leer `docs/AUDITORIA_ATLAS_v22.md` y `qa/atlas_v22/RESULTADOS.md`.
 
 # Continuar iDreyK 360 en Google AI Studio, sin rehacer la app
 
@@ -75,7 +77,7 @@ No subir versiones de Kotlin, Gradle, AGP o dependencias automáticamente para e
 ## 4. Verificar firma antes de instalar
 
 - Identidad debug: `com.idreyk.enfermeria360.dev`.
-- Borrador local actual: versionCode **8**, nombre **0.7.0-dev-debug**. Para entregas posteriores, contrastar con `CONTINUIDAD.json`, `app/build.gradle.kts` y el manifiesto del APK; no reutilizar esta versión como si fuera siempre la última.
+- Borrador local actual: versionCode **9**, nombre **0.8.0-dev-debug**. Para entregas posteriores, contrastar con `CONTINUIDAD.json`, `app/build.gradle.kts` y el manifiesto del APK; no reutilizar esta versión como si fuera siempre la última.
 - Certificado conservado: `d6874c68417eefb1b1b902bf82ba4ce7d8734e47877e12bd1733eb498f0e522b`.
 
 Con SDK adecuado, comprobar el APK externo con:

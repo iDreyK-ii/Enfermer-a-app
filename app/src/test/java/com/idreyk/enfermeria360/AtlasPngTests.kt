@@ -34,9 +34,9 @@ class AtlasPngTests {
         val d = (0 until list.length()).map { list.getJSONObject(it) }.single { it.getString("id") == "jeringa" }
         change(d); reject { MasterCatalog.decode(j.toString()) }
     }
-    @Test fun fiveDistinctDecodedPngsHaveRealAlphaAndHotspotsOnVisiblePixels() {
+    @Test fun twentyFourDistinctDecodedPngsHaveRealAlphaAndHotspotsOnVisiblePixels() {
         val available = master.devices.filter { it.image != null }
-        assertEquals(5, available.size); assertEquals(5, available.map { it.image }.distinct().size)
+        assertEquals(24, available.size); assertEquals(24, available.map { it.image }.distinct().size)
         available.forEach { d ->
             val b = context.assets.open(d.image!!).use { BitmapFactory.decodeStream(it) }!!
             try {
@@ -74,18 +74,34 @@ class AtlasPngTests {
         assertFalse(master.devices.single { it.id == "tensiometro" }.parts.single { it.id == "vejiga" }.visible)
         assertFalse(master.devices.single { it.id == "equipo-iv" }.parts.single { it.id == "filtro" }.visible)
     }
-    @Test fun rejectedCandidatesHaveNoImageNoFakeHotspotsAndNoQuiz() {
-        val rejected = master.devices.filter { it.image == null }
-        assertEquals(setOf("cateter-periferico", "bureta", "llave-tres-vias"), rejected.map { it.id }.toSet())
-        rejected.forEach { d ->
-            assertTrue(d.pendingReason.isNotBlank()); assertTrue(d.parts.none { it.visible })
-            assertTrue(d.parts.all { it.x == null && it.y == null }); assertTrue(d.quizTargets.isEmpty())
-            reject { d.score(emptyList()) }
-            reject { repo.saveLearning(LearningProgress("atlas/${d.id}", "atlas-v22.1", false)) }
+    @Test fun formerlyRejectedDevicesAreNowDifferentExplicitKawaiiAssets() {
+        val recovered = master.devices.filter { it.id in setOf("cateter-periferico", "bureta", "llave-tres-vias") }
+        assertEquals(3, recovered.size)
+        recovered.forEach { d ->
+            assertNotNull(d.image); assertTrue(d.parts.count { it.visible } >= 4)
+            assertTrue(d.quizTargets.isNotEmpty())
         }
         assertFalse(master.devices.single { it.id == "cateter-periferico" }.parts.any { it.id == "puerto" })
+        assertEquals(3, master.devices.single { it.id == "llave-tres-vias" }.parts.count { it.id.startsWith("puerto-") })
     }
-    @Test fun allFiveQuizzesScoreActualChoicesAndRejectInvalidOrExtraAnswers() {
+    @Test fun missingImageStillRequiresExplicitPendingState() {
+        altered { d ->
+            d.put("file", JSONObject.NULL); d.put("image_width", 0); d.put("image_height", 0)
+            d.put("pending_reason", "")
+        }
+        altered { d ->
+            d.put("file", JSONObject.NULL); d.put("image_width", 0); d.put("image_height", 0)
+            d.put("pending_reason", "Pendiente") // Existing visible points must not survive a missing image.
+        }
+    }
+    @Test fun decorativeMotionPolicyStopsForQuizZoomReducedAndPause() {
+        assertTrue(AtlasMotionPolicy.allow(true, false, 1f, false))
+        assertFalse(AtlasMotionPolicy.allow(false, false, 1f, false))
+        assertFalse(AtlasMotionPolicy.allow(true, true, 1f, false))
+        assertFalse(AtlasMotionPolicy.allow(true, false, 1.5f, false))
+        assertFalse(AtlasMotionPolicy.allow(true, false, 1f, true))
+    }
+    @Test fun allTwentyFourQuizzesScoreActualChoicesAndRejectInvalidOrExtraAnswers() {
         master.devices.filter { it.image != null }.forEach { d ->
             assertEquals(0, d.score(emptyList()))
             assertEquals(d.quizTargets.size, d.score(d.quizTargets))
@@ -119,7 +135,7 @@ class AtlasPngTests {
         }
         assertTrue(master.search("esfigmomanómetro").any { it.route == "dispositivo/tensiometro" })
     }
-    @Test fun metadataNeverInventsExpertApprovalAndPreservesOriginalSourceResolution() {
+    @Test fun metadataNeverInventsExpertApprovalAndDisclosesDirectRasterization() {
         val j = source().getJSONArray("devices")
         for (i in 0 until j.length()) {
             val d = j.getJSONObject(i)
@@ -127,7 +143,7 @@ class AtlasPngTests {
             assertTrue(d.getString("review_status").contains("PENDIENTE"))
             if (!d.isNull("file")) {
                 val processing = d.getJSONObject("processing")
-                assertTrue(processing.getJSONArray("native_dimensions").getInt(0) < 2000)
+                assertEquals(2000, processing.getJSONArray("native_dimensions").getInt(0)); assertFalse(processing.getBoolean("upscaled"))
                 assertEquals(2000, processing.getJSONArray("export_dimensions").getInt(0))
             }
         }

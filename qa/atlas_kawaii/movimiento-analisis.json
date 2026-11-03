@@ -1,0 +1,7 @@
+{
+  "scope": "Dos fotogramas en movimiento y dos en pausa del APK preliminar instalado en emulador API28. No mide rendimiento ni valida anatomía.",
+  "moving_changed_pixels": 11368,
+  "marker_patch_shift_px": -4,
+  "distal_patch_shift_px": -4,
+  "paused_changed_pixels": 0
+}

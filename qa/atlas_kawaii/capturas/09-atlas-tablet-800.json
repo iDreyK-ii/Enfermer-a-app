@@ -1,0 +1,15 @@
+{
+  "file": "09-atlas-tablet-800.png",
+  "sha256": "eca3901206fd1fac1512e6df52f810047ff681c73dc0f3cdb2f5f3865415337f",
+  "width": 800,
+  "height": 1280,
+  "sample_colors": 600,
+  "render": "Robolectric 4.14.1 \/ NATIVE graphics \/ production Compose \/ Android framework API 35",
+  "capture_method": "Android content View.draw(Canvas(Bitmap)); native Skia software rasterization",
+  "physical_device": false,
+  "apk_emulator": false,
+  "motion_reduced": true,
+  "theme": "claro",
+  "app_version": "0.8.0-dev-debug",
+  "clinical_validation": false
+}

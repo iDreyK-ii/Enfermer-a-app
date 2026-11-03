@@ -6,27 +6,28 @@
   "technical_name": "Aguja hipodérmica estándar con protector",
   "area": "Dispositivos",
   "file": "atlas/atlas_aguja_hipodermica.png",
-  "view": "Vista de producto en tres cuartos; conjunto completo",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
   "image_available": true,
   "image_width": 2000,
-  "image_height": 1116,
-  "image_sha256": "a74d036e8f3f9f385cd4be2e2159733df4563d1823931e6d8379d2a6d25b27b6",
-  "alt_text": "Aguja hipodérmica estándar con protector. Imagen generada con IA y recortada, no fotografía de un fabricante. Etiquetas en interfaz; alternativa textual en la lista de partes.",
-  "model_note": "Referencia Sterican estándar, no aguja de seguridad. No se declara calibre/longitud ni se infiere por el color del hub. La funda separada no recomienda reencapuchar.",
+  "image_height": 1250,
+  "image_sha256": "1bbb5cb73c11d6e924f46b05f0fc96bbac933cb0edff8c91259676fa6dee6917",
+  "alt_text": "Aguja hipodérmica estándar con protector: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Inspirada en aguja hipodérmica de bisel estándar, con protector separado solo para identificación. No inferir calibre por el color ni realizar reencapuchado.",
   "parts": [
     {
       "id": "pabellon",
       "name": "Pabellón o conector",
       "function": "Une la cánula a una conexión compatible.",
       "safety": "Color y conectores se verifican en el producto real.",
-      "hotspot_x": 0.249,
-      "hotspot_y": 0.251,
+      "hotspot_x": 0.1930801422514013,
+      "hotspot_y": 0.5886200561618227,
       "visible": true,
       "part_status": "universal",
       "part_description": "Pabellón o conector",
       "source_urls": [
         "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
-        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/"
       ],
       "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
     },
@@ -35,14 +36,15 @@
       "name": "Cánula metálica",
       "function": "Forma el cuerpo tubular de la aguja.",
       "safety": "No es el catéter flexible.",
-      "hotspot_x": 0.566,
-      "hotspot_y": 0.482,
+      "hotspot_x": 0.5702092388194852,
+      "hotspot_y": 0.4172358971048768,
       "visible": true,
       "part_status": "universal",
       "part_description": "Cánula metálica",
       "source_urls": [
         "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
-        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/"
       ],
       "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
     },
@@ -51,14 +53,15 @@
       "name": "Bisel",
       "function": "Es la terminación oblicua del extremo distal.",
       "safety": "Geometría ilustrativa; no enseña técnica de punción.",
-      "hotspot_x": 0.837,
-      "hotspot_y": 0.637,
+      "hotspot_x": 0.8212266857265565,
+      "hotspot_y": 0.345402632863757,
       "visible": true,
       "part_status": "universal",
       "part_description": "Bisel",
       "source_urls": [
         "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
-        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/"
       ],
       "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
     },
@@ -67,14 +70,15 @@
       "name": "Punta",
       "function": "Es el extremo distal punzante.",
       "safety": "Riesgo punzocortante; seguir manejo y descarte institucional.",
-      "hotspot_x": 0.882,
-      "hotspot_y": 0.669,
+      "hotspot_x": 0.8502639435823318,
+      "hotspot_y": 0.33822597626642353,
       "visible": true,
       "part_status": "universal",
       "part_description": "Punta",
       "source_urls": [
         "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
-        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/"
       ],
       "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
     },
@@ -83,14 +87,15 @@
       "name": "Protector separado",
       "function": "Protege el dispositivo antes del uso según diseño.",
       "safety": "No reencapuchar ni reutilizar por imitación de esta vista.",
-      "hotspot_x": 0.51,
-      "hotspot_y": 0.677,
+      "hotspot_x": 0.6532411721230971,
+      "hotspot_y": 0.6811763961056426,
       "visible": true,
       "part_status": "modelo",
       "part_description": "Protector separado",
       "source_urls": [
         "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
-        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/"
       ],
       "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
     },
@@ -106,7 +111,8 @@
       "part_description": "Lumen interno",
       "source_urls": [
         "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
-        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+        "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/"
       ],
       "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
     }
@@ -125,48 +131,46 @@
       "publisher": "B. Braun · alojado por Medline",
       "date": "2026-11-03",
       "review_scope": "Folleto completo; segunda referencia técnica del mismo fabricante, no revisión independiente."
+    },
+    {
+      "title": "Open RN · conceptos de jeringa y aguja",
+      "url": "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/",
+      "publisher": "Nursing Skills 2e · Open RN",
+      "date": "2026-11-03",
+      "review_scope": "Anatomía general; no equivale a una aprobación de la ilustración."
     }
   ],
   "source_urls": [
     "https://catalogs.bbraun.com/en-01/p/PRID00015595/sterican",
-    "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF"
+    "https://www.medline.com/media/catalog/Docs/MKT/OMNIFIX.PDF",
+    "https://wtcs.pressbooks.pub/nursingskills/chapter/18-2-basic-concepts/"
   ],
   "review_date": "2026-11-03",
-  "review_status": "REVISIÓN-ASISTIDA; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
   "accuracy_approved_by": null,
   "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
   "clinical_approved": false,
   "pending_reason": "",
   "processing": {
-    "id": "aguja",
-    "file": "atlas/atlas_aguja_hipodermica.png",
-    "sha256": "a74d036e8f3f9f385cd4be2e2159733df4563d1823931e6d8379d2a6d25b27b6",
-    "native_file": "aguja-final.png",
-    "native_sha256": "021f4ccca61abcc3217b49dd98c8850e1ea126694c1f79a03cb280b93896cf87",
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
     "native_dimensions": [
-      1376,
-      768
+      2000,
+      1250
     ],
     "export_dimensions": [
       2000,
-      1116
+      1250
     ],
-    "mode": "RGBA",
-    "transparent_fraction": 0.8491,
-    "bytes": 623274,
-    "processing": "Recorte con máscara y antialias; ampliación Lanczos a 2000 px, NO detalle nativo de 2000 px.",
-    "retouches": [],
-    "alpha_bbox": [
-      222,
-      120,
-      1788,
-      1016
-    ]
+    "upscaled": false,
+    "source_svg_sha256": "d2eb061d9112ab365bc4d2e6425b33f9be5a0ddcf4dde202b29e7a061f3a1572",
+    "sha256": "1bbb5cb73c11d6e924f46b05f0fc96bbac933cb0edff8c91259676fa6dee6917",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
   },
   "checks": [
-    "Identificar el modelo y consultar sus instrucciones.",
-    "Comprobar integridad, conexión y condiciones del producto real.",
-    "Esta imagen no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
   ],
   "revision": "atlas-v22.1"
 }

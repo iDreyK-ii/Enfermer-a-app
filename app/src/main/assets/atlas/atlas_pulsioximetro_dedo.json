@@ -1,0 +1,130 @@
+{
+  "asset_id": "atlas_pulsioximetro_dedo",
+  "id": "pulsioximetro",
+  "name": "Pulsioxímetro de dedo",
+  "display_name_es": "Pulsioxímetro de dedo",
+  "technical_name": "Pulsioxímetro portátil de pinza",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_pulsioximetro_dedo.png",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1250,
+  "image_sha256": "4d6445e30f9bb9bbdc879a9a65c6a7385179997ccf0082a1d7a795e0afc307ad",
+  "alt_text": "Pulsioxímetro portátil de pinza: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Inspirado en Nonin Onyx Vantage; pantalla deliberadamente vacía. La apertura y la ubicación de sensores varían; no se representan lecturas, valores ni identificación de pacientes.",
+  "parts": [
+    {
+      "id": "pantalla",
+      "name": "Pantalla",
+      "function": "Muestra información en el dispositivo real.",
+      "safety": "La pantalla de la ilustración está vacía: no representa una lectura.",
+      "part_status": "modelo",
+      "part_description": "Pantalla",
+      "hotspot_x": 0.47573430956120855,
+      "hotspot_y": 0.4176069708963581,
+      "visible": true,
+      "source_urls": [
+        "https://www.nonin.com/products/9590/",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "carcasa",
+      "name": "Carcasa",
+      "function": "Protege el conjunto electrónico.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Carcasa",
+      "hotspot_x": 0.3014577528206883,
+      "hotspot_y": 0.5102615192623758,
+      "visible": true,
+      "source_urls": [
+        "https://www.nonin.com/products/9590/",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "bisagra",
+      "name": "Bisagra de la pinza",
+      "function": "Permite abrir y cerrar el alojamiento.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Bisagra de la pinza",
+      "hotspot_x": 0.713913633900818,
+      "hotspot_y": 0.5324013967638435,
+      "visible": true,
+      "source_urls": [
+        "https://www.nonin.com/products/9590/",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "alojamiento",
+      "name": "Abertura para el dedo",
+      "function": "Es el espacio donde se posiciona el dedo según el modelo.",
+      "safety": "El rendimiento puede verse afectado por perfusión, movimiento y otros factores.",
+      "part_status": "modelo",
+      "part_description": "Abertura para el dedo",
+      "hotspot_x": 0.6169421184986903,
+      "hotspot_y": 0.6060227558491948,
+      "visible": true,
+      "source_urls": [
+        "https://www.nonin.com/products/9590/",
+        "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Onyx Vantage 9590",
+      "url": "https://www.nonin.com/products/9590/",
+      "publisher": "Nonin",
+      "date": "2026-11-03",
+      "review_scope": "Características de pantalla, pinza y limitaciones; no reproducción de valores."
+    },
+    {
+      "title": "Open RN · equipos de oxigenación, secciones 11.3",
+      "url": "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/",
+      "publisher": "Nursing Skills 2e · Open RN",
+      "date": "2026-11-03",
+      "review_scope": "Secciones de cánula, mascarillas, Venturi y bolsa-válvula; no se copian flujos ni técnica."
+    }
+  ],
+  "source_urls": [
+    "https://www.nonin.com/products/9590/",
+    "https://wtcs.pressbooks.pub/nursingskills/chapter/11-3-oxygenation-equipment/"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
+    "native_dimensions": [
+      2000,
+      1250
+    ],
+    "export_dimensions": [
+      2000,
+      1250
+    ],
+    "upscaled": false,
+    "source_svg_sha256": "3b7866556dbe99b10413afecae167a253a206a6898add8c602f6728f38f73d3b",
+    "sha256": "4d6445e30f9bb9bbdc879a9a65c6a7385179997ccf0082a1d7a795e0afc307ad",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

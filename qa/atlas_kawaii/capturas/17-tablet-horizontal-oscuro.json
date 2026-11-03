@@ -1,0 +1,15 @@
+{
+  "file": "17-tablet-horizontal-oscuro.png",
+  "sha256": "0ba731fbdb2b8ddfc8fcbe20217b94f9ee9e479e2c861a212676634f6b8e46bd",
+  "width": 1280,
+  "height": 800,
+  "sample_colors": 458,
+  "render": "Robolectric 4.14.1 \/ NATIVE graphics \/ production Compose \/ Android framework API 35",
+  "capture_method": "Android content View.draw(Canvas(Bitmap)); native Skia software rasterization",
+  "physical_device": false,
+  "apk_emulator": false,
+  "motion_reduced": true,
+  "theme": "oscuro",
+  "app_version": "0.8.0-dev-debug",
+  "clinical_validation": false
+}

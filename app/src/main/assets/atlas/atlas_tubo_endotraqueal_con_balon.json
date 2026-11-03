@@ -1,0 +1,210 @@
+{
+  "asset_id": "atlas_tubo_endotraqueal_con_balon",
+  "id": "tubo-endotraqueal",
+  "name": "Tubo endotraqueal con balón",
+  "display_name_es": "Tubo endotraqueal con balón",
+  "technical_name": "Tubo endotraqueal adulto con cuff",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_tubo_endotraqueal_con_balon.png",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1250,
+  "image_sha256": "2af00f37a0beea314f364d13ef5cfa28daca05989a41dad1b8b05f2cf7f93e26",
+  "alt_text": "Tubo endotraqueal adulto con cuff: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Inspirado en tubo adulto Shiley con balón, curva Magill y ojo de Murphy. La línea interna del balón no es visible. El modelo pediátrico citado por el fabricante difiere y carece de ojo de Murphy.",
+  "parts": [
+    {
+      "id": "tubo",
+      "name": "Cuerpo del tubo",
+      "function": "Forma la vía principal del dispositivo.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Cuerpo del tubo",
+      "hotspot_x": 0.479375,
+      "hotspot_y": 0.742,
+      "visible": true,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/specialties/acute-care-monitoring/product-portfolio/advanced-airway-management/endotracheal-tubes.html",
+        "https://litfl.com/endotracheal-tube-cuff-leak/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "conector",
+      "name": "Conector proximal",
+      "function": "Une el tubo al circuito compatible.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Conector proximal",
+      "hotspot_x": 0.22375,
+      "hotspot_y": 0.216,
+      "visible": true,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/specialties/acute-care-monitoring/product-portfolio/advanced-airway-management/endotracheal-tubes.html",
+        "https://litfl.com/endotracheal-tube-cuff-leak/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "balon",
+      "name": "Balón o cuff",
+      "function": "Rodea la zona distal del tubo.",
+      "safety": "El dibujo no informa presión ni demuestra un sellado.",
+      "part_status": "modelo",
+      "part_description": "Balón o cuff",
+      "hotspot_x": 0.716875,
+      "hotspot_y": 0.717,
+      "visible": true,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/specialties/acute-care-monitoring/product-portfolio/advanced-airway-management/endotracheal-tubes.html",
+        "https://litfl.com/endotracheal-tube-cuff-leak/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "linea",
+      "name": "Línea de inflado externa",
+      "function": "Conecta con el sistema del cuff.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Línea de inflado externa",
+      "hotspot_x": 0.470625,
+      "hotspot_y": 0.471,
+      "visible": true,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/specialties/acute-care-monitoring/product-portfolio/advanced-airway-management/endotracheal-tubes.html",
+        "https://litfl.com/endotracheal-tube-cuff-leak/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "piloto",
+      "name": "Balón piloto",
+      "function": "Forma parte del sistema de inflado.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Balón piloto",
+      "hotspot_x": 0.62125,
+      "hotspot_y": 0.469,
+      "visible": true,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/specialties/acute-care-monitoring/product-portfolio/advanced-airway-management/endotracheal-tubes.html",
+        "https://litfl.com/endotracheal-tube-cuff-leak/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "valvula",
+      "name": "Válvula de inflado",
+      "function": "Es el punto de conexión del sistema de inflado.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Válvula de inflado",
+      "hotspot_x": 0.73125,
+      "hotspot_y": 0.468,
+      "visible": true,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/specialties/acute-care-monitoring/product-portfolio/advanced-airway-management/endotracheal-tubes.html",
+        "https://litfl.com/endotracheal-tube-cuff-leak/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "murphy",
+      "name": "Ojo de Murphy",
+      "function": "Es la abertura lateral del modelo adulto representado.",
+      "safety": "No extrapolar a otros modelos o edades.",
+      "part_status": "modelo",
+      "part_description": "Ojo de Murphy",
+      "hotspot_x": 0.805625,
+      "hotspot_y": 0.608,
+      "visible": true,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/specialties/acute-care-monitoring/product-portfolio/advanced-airway-management/endotracheal-tubes.html",
+        "https://litfl.com/endotracheal-tube-cuff-leak/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "bisel",
+      "name": "Extremo distal",
+      "function": "Es la punta biselada del tubo.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Extremo distal",
+      "hotspot_x": 0.834375,
+      "hotspot_y": 0.564,
+      "visible": true,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/specialties/acute-care-monitoring/product-portfolio/advanced-airway-management/endotracheal-tubes.html",
+        "https://litfl.com/endotracheal-tube-cuff-leak/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "marcas",
+      "name": "Marcas de profundidad",
+      "function": "Orientan en el producto real.",
+      "safety": "Las marcas dibujadas no son una medida ni confirman posición.",
+      "part_status": "modelo",
+      "part_description": "Marcas de profundidad",
+      "hotspot_x": 0.286875,
+      "hotspot_y": 0.548,
+      "visible": true,
+      "source_urls": [
+        "https://www.medtronic.com/en-us/healthcare-professionals/specialties/acute-care-monitoring/product-portfolio/advanced-airway-management/endotracheal-tubes.html",
+        "https://litfl.com/endotracheal-tube-cuff-leak/"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Portafolio Shiley · tubos endotraqueales",
+      "url": "https://www.medtronic.com/en-us/healthcare-professionals/specialties/acute-care-monitoring/product-portfolio/advanced-airway-management/endotracheal-tubes.html",
+      "publisher": "Medtronic",
+      "date": "2026-11-03",
+      "review_scope": "Sección de modelo adulto con Murphy y pediátrico sin Murphy."
+    },
+    {
+      "title": "Fuga del cuff endotraqueal",
+      "url": "https://litfl.com/endotracheal-tube-cuff-leak/",
+      "publisher": "LITFL · Critical Care Compendium",
+      "date": "2026-11-03",
+      "review_scope": "Componentes del sistema cuff y limitaciones; no se copia el manejo clínico."
+    }
+  ],
+  "source_urls": [
+    "https://www.medtronic.com/en-us/healthcare-professionals/specialties/acute-care-monitoring/product-portfolio/advanced-airway-management/endotracheal-tubes.html",
+    "https://litfl.com/endotracheal-tube-cuff-leak/"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
+    "native_dimensions": [
+      2000,
+      1250
+    ],
+    "export_dimensions": [
+      2000,
+      1250
+    ],
+    "upscaled": false,
+    "source_svg_sha256": "ff8779ada0804e782eb604bd30f9bc60c536983ab1259c78d3915f645ff63ae7",
+    "sha256": "2af00f37a0beea314f364d13ef5cfa28daca05989a41dad1b8b05f2cf7f93e26",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}

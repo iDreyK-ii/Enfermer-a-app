@@ -1,0 +1,1138 @@
+[
+  {
+    "id": "estetoscopio",
+    "file": "atlas/atlas_estetoscopio_adulto.png",
+    "image_sha256": "b5a724e56a5726ef348c00e8884a42d77b6382036e5a22fab35ce61deb41d205",
+    "source_svg_sha256": "19c0b5a5255725c6452a7176f6a5088f64ebac1824624b03075f298b7563b862",
+    "revision_dibujo": {
+      "id": "estetoscopio",
+      "points": {
+        "olivas": [
+          0.34875,
+          0.157
+        ],
+        "arcos": [
+          0.603125,
+          0.286
+        ],
+        "resorte": [
+          0.4725,
+          0.45
+        ],
+        "tubo": [
+          0.51,
+          0.748
+        ],
+        "vastago": [
+          0.70625,
+          0.795
+        ],
+        "diafragma": [
+          0.706875,
+          0.611
+        ],
+        "cabezal": [
+          0.773125,
+          0.709
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          1076.72,
+          640.84,
+          106.56,
+          66.6
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "jeringa",
+    "file": "atlas/atlas_jeringa_luer_lock.png",
+    "image_sha256": "feeedace9564ebce78176df0fd10cdb5d490cf4e78f79909eae5c048aa2a6623",
+    "source_svg_sha256": "0ecefbb2b70bfb803f78515cd7e05fe890b2897f5af26f14857970964b0f21c9",
+    "revision_dibujo": {
+      "id": "jeringa",
+      "points": {
+        "cilindro": [
+          0.5871358487553099,
+          0.5811899026106752
+        ],
+        "embolo": [
+          0.24690486272249593,
+          0.5641381306664947
+        ],
+        "piston": [
+          0.7107081079381126,
+          0.48710198783532815
+        ],
+        "cono": [
+          0.8827292319806159,
+          0.40301063167505685
+        ],
+        "alas": [
+          0.32561134224723276,
+          0.3811858346795221
+        ],
+        "escala": [
+          0.498247813702321,
+          0.3991975178949632
+        ],
+        "boton": [
+          0.13940747140959828,
+          0.6288408029757563
+        ],
+        "collar": [
+          0.8201973496667213,
+          0.4553058996957865
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          777.8,
+          523.1,
+          122.39999999999999,
+          76.5
+        ]
+      ],
+      "rotation": -9
+    }
+  },
+  {
+    "id": "aguja",
+    "file": "atlas/atlas_aguja_hipodermica.png",
+    "image_sha256": "1bbb5cb73c11d6e924f46b05f0fc96bbac933cb0edff8c91259676fa6dee6917",
+    "source_svg_sha256": "d2eb061d9112ab365bc4d2e6425b33f9be5a0ddcf4dde202b29e7a061f3a1572",
+    "revision_dibujo": {
+      "id": "aguja",
+      "points": {
+        "pabellon": [
+          0.1930801422514013,
+          0.5886200561618227
+        ],
+        "canula": [
+          0.5702092388194852,
+          0.4172358971048768
+        ],
+        "bisel": [
+          0.8212266857265565,
+          0.345402632863757
+        ],
+        "punta": [
+          0.8502639435823318,
+          0.33822597626642353
+        ],
+        "protector": [
+          0.6532411721230971,
+          0.6811763961056426
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          331.0,
+          413.0,
+          72.0,
+          45.0
+        ]
+      ],
+      "rotation": -10
+    }
+  },
+  {
+    "id": "cateter-periferico",
+    "file": "atlas/atlas_branula_cateter_periferico.png",
+    "image_sha256": "5be2c162a8aabe7617b0ce8d4f7365736dc7ab9e6ce62dc4a2c4db2e96b482da",
+    "source_svg_sha256": "f0920380903f7056cb3f0fdcd82157ba1759400e7d264d6f2adcb9545524e710",
+    "revision_dibujo": {
+      "id": "cateter-periferico",
+      "points": {
+        "cateter": [
+          0.7297254620800782,
+          0.4352149484482552
+        ],
+        "aguja-introductora": [
+          0.8527829994891845,
+          0.4206713324527627
+        ],
+        "conexion": [
+          0.5132080418352172,
+          0.5354034169968186
+        ],
+        "camara": [
+          0.24258047825850768,
+          0.522540762088632
+        ],
+        "alas": [
+          0.47362075706780665,
+          0.6523567753280118
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          403.24,
+          480.28,
+          83.52,
+          52.199999999999996
+        ]
+      ],
+      "rotation": -8
+    }
+  },
+  {
+    "id": "equipo-iv",
+    "file": "atlas/atlas_equipo_venoclisis.png",
+    "image_sha256": "f267ff1dbab4943331702bc89d85400bfeb0a8fe949644e83ee1f6b0978c0994",
+    "source_svg_sha256": "75d2e6376e796ebea37d513b1e5d83e2ae0519599197ca327faeb5cc2687a9cf",
+    "revision_dibujo": {
+      "id": "equipo-iv",
+      "points": {
+        "punzon": [
+          0.26875,
+          0.156
+        ],
+        "venteo": [
+          0.324375,
+          0.238
+        ],
+        "camara": [
+          0.255625,
+          0.299
+        ],
+        "tubo": [
+          0.38625,
+          0.848
+        ],
+        "roller": [
+          0.26875,
+          0.557
+        ],
+        "sitio-y": [
+          0.76875,
+          0.597
+        ],
+        "luer": [
+          0.80625,
+          0.4
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          405.52,
+          373.44,
+          48.96,
+          30.6
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "bureta",
+    "file": "atlas/atlas_equipo_bureta_volutrol.png",
+    "image_sha256": "e9c02fa458d726526b2764854ce62aeb0b0cc8dd499357547821a9f480004f88",
+    "source_svg_sha256": "52da7698addf15c634f6d318c0defcb78a04dc57d9ba07c94c5e36251ccf07a9",
+    "revision_dibujo": {
+      "id": "bureta",
+      "points": {
+        "entrada": [
+          0.295,
+          0.317
+        ],
+        "pinza": [
+          0.295625,
+          0.273
+        ],
+        "bureta": [
+          0.408125,
+          0.457
+        ],
+        "ventilacion": [
+          0.420625,
+          0.261
+        ],
+        "camara-goteo": [
+          0.434375,
+          0.731
+        ],
+        "salida": [
+          0.734375,
+          0.45
+        ],
+        "puerto": [
+          0.46375,
+          0.264
+        ],
+        "pinza-salida": [
+          0.73375,
+          0.688
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          658.04,
+          595.38,
+          61.92,
+          38.7
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "llave-tres-vias",
+    "file": "atlas/atlas_llave_tres_vias.png",
+    "image_sha256": "a99a7531682d5c40fb7082b691548bcaf9a73363c475b73834505f06270c5349",
+    "source_svg_sha256": "49ed2e8d04bcfc83f4dfe946cadc0b0fa3f0bf6f13462868f2012fef598d490e",
+    "revision_dibujo": {
+      "id": "llave-tres-vias",
+      "points": {
+        "cuerpo": [
+          0.5706983254467991,
+          0.5423021483412761
+        ],
+        "selector": [
+          0.4198311079587761,
+          0.30744676373236574
+        ],
+        "puerto-1": [
+          0.2263111992914735,
+          0.5202427107578229
+        ],
+        "puerto-2": [
+          0.774840904928241,
+          0.443458501397136
+        ],
+        "puerto-3": [
+          0.5205284514555341,
+          0.8524786116389825
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          754.64,
+          463.58,
+          90.72,
+          56.7
+        ]
+      ],
+      "rotation": -5
+    }
+  },
+  {
+    "id": "tensiometro",
+    "file": "atlas/atlas_tensiometro_aneroide.png",
+    "image_sha256": "220e65f8c03ac32f3045926db8064b64a5fe029ab4a974726f2acb780bde2c5c",
+    "source_svg_sha256": "f01bf25c80605e1c9928a012820cbee790e584b6226301a873ca946eb02d6929",
+    "revision_dibujo": {
+      "id": "tensiometro",
+      "points": {
+        "manguito": [
+          0.220625,
+          0.33
+        ],
+        "manometro": [
+          0.6375,
+          0.373
+        ],
+        "pera": [
+          0.81,
+          0.423
+        ],
+        "valvula": [
+          0.838125,
+          0.578
+        ],
+        "tubos": [
+          0.624375,
+          0.837
+        ],
+        "cierre": [
+          0.430625,
+          0.521
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          360.32,
+          421.04,
+          135.35999999999999,
+          84.6
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "pulsioximetro",
+    "file": "atlas/atlas_pulsioximetro_dedo.png",
+    "image_sha256": "4d6445e30f9bb9bbdc879a9a65c6a7385179997ccf0082a1d7a795e0afc307ad",
+    "source_svg_sha256": "3b7866556dbe99b10413afecae167a253a206a6898add8c602f6728f38f73d3b",
+    "revision_dibujo": {
+      "id": "pulsioximetro",
+      "points": {
+        "pantalla": [
+          0.47573430956120855,
+          0.4176069708963581
+        ],
+        "carcasa": [
+          0.3014577528206883,
+          0.5102615192623758
+        ],
+        "bisagra": [
+          0.713913633900818,
+          0.5324013967638435
+        ],
+        "alojamiento": [
+          0.6169421184986903,
+          0.6060227558491948
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          717.68,
+          688.96,
+          80.64000000000001,
+          50.400000000000006
+        ]
+      ],
+      "rotation": -6
+    }
+  },
+  {
+    "id": "bomba-volumetrica",
+    "file": "atlas/atlas_bomba_volumetrica.png",
+    "image_sha256": "0b933a05e7a611382ea529b85fb182f8d73a31a5a537b52c92a3cbf29b2e4858",
+    "source_svg_sha256": "6ddd1a934e36e0c67e5201403c0eb431339e82b58b9e3664df33c6747c96fec7",
+    "revision_dibujo": {
+      "id": "bomba-volumetrica",
+      "points": {
+        "pantalla": [
+          0.345,
+          0.439
+        ],
+        "teclado": [
+          0.6,
+          0.415
+        ],
+        "puerta": [
+          0.3,
+          0.602
+        ],
+        "cierre": [
+          0.7575,
+          0.6
+        ],
+        "indicadores": [
+          0.54875,
+          0.344
+        ],
+        "linea": [
+          0.284375,
+          0.757
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          714.16,
+          587.02,
+          67.67999999999999,
+          42.3
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "bomba-jeringa",
+    "file": "atlas/atlas_bomba_jeringa.png",
+    "image_sha256": "4bb4daa32463eb36c25aa8aea368694ccd5f97f5d86c618eedc77cc685b110dc",
+    "source_svg_sha256": "e713b4b4f6588a268637fcf30f73cbde47559a8bad01a1732cef8a5389051ac4",
+    "revision_dibujo": {
+      "id": "bomba-jeringa",
+      "points": {
+        "pantalla": [
+          0.301875,
+          0.429
+        ],
+        "teclado": [
+          0.521875,
+          0.385
+        ],
+        "jeringa": [
+          0.435625,
+          0.622
+        ],
+        "sujecion": [
+          0.351875,
+          0.622
+        ],
+        "cabezal": [
+          0.721875,
+          0.622
+        ],
+        "brazo": [
+          0.78375,
+          0.611
+        ],
+        "extension": [
+          0.260625,
+          0.798
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          767.2,
+          499.4,
+          57.6,
+          36.0
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "monitor",
+    "file": "atlas/atlas_monitor_multiparametro.png",
+    "image_sha256": "fc3b1876e509ae0d19dc07daeccc5c32dc8730391b99c687249e61d8fc6db48c",
+    "source_svg_sha256": "8e677ce14ca137a593567f0ea2c88f342021261d84f221e3f94cead030b69c96",
+    "revision_dibujo": {
+      "id": "monitor",
+      "points": {
+        "pantalla": [
+          0.4675,
+          0.46
+        ],
+        "controles": [
+          0.758125,
+          0.431
+        ],
+        "selector": [
+          0.75875,
+          0.579
+        ],
+        "alarma": [
+          0.72625,
+          0.269
+        ],
+        "asa": [
+          0.50375,
+          0.166
+        ],
+        "conexion": [
+          0.179375,
+          0.524
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          708.24,
+          678.28,
+          83.52,
+          52.199999999999996
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "canula-nasal",
+    "file": "atlas/atlas_canula_nasal.png",
+    "image_sha256": "8af8e864a04a22106bc18a1b26551755d31cc74efaee35de9c999f92159806a3",
+    "source_svg_sha256": "c40bf2e061e02a590a4cd76e3893e7da2f7e00c8e4883f47139478c64450c6bf",
+    "revision_dibujo": {
+      "id": "canula-nasal",
+      "points": {
+        "puntas": [
+          0.454375,
+          0.22
+        ],
+        "puente": [
+          0.58625,
+          0.315
+        ],
+        "ramales": [
+          0.19375,
+          0.478
+        ],
+        "ajustador": [
+          0.496875,
+          0.757
+        ],
+        "tubo": [
+          0.69375,
+          0.889
+        ],
+        "conector": [
+          0.83125,
+          0.889
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          755.76,
+          300.72,
+          60.48,
+          37.8
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "mascarilla-simple",
+    "file": "atlas/atlas_mascarilla_simple_oxigeno.png",
+    "image_sha256": "3fb476ae044a13e74b6694ac0e480e3756639fcd0460589c02603f4bdd26597c",
+    "source_svg_sha256": "cd1dd331da3685804de42537eedbc9448327c88872e6ce29cfc636b6e6ef5d9e",
+    "revision_dibujo": {
+      "id": "mascarilla-simple",
+      "points": {
+        "mascara": [
+          0.419375,
+          0.568
+        ],
+        "sello": [
+          0.585,
+          0.646
+        ],
+        "cinta": [
+          0.66375,
+          0.238
+        ],
+        "puerto": [
+          0.50875,
+          0.592
+        ],
+        "orificios": [
+          0.649375,
+          0.51
+        ],
+        "tubo": [
+          0.675,
+          0.87
+        ],
+        "conector": [
+          0.825,
+          0.87
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          759.72,
+          356.84,
+          106.56,
+          66.6
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "mascarilla-reservorio",
+    "file": "atlas/atlas_mascarilla_no_reinhalacion.png",
+    "image_sha256": "aa909e5a08007236cf707c23f1ae4acd58ca0f3596ae1475fd511064d328609b",
+    "source_svg_sha256": "cf70278e952b21b12732590d031f49dd139e542af60698758b053ee7a35e1e8c",
+    "revision_dibujo": {
+      "id": "mascarilla-reservorio",
+      "points": {
+        "mascara": [
+          0.419375,
+          0.568
+        ],
+        "sello": [
+          0.585,
+          0.646
+        ],
+        "cinta": [
+          0.66375,
+          0.238
+        ],
+        "puerto": [
+          0.50875,
+          0.592
+        ],
+        "valvulas": [
+          0.6425,
+          0.513
+        ],
+        "valvula-reservorio": [
+          0.509375,
+          0.658
+        ],
+        "reservorio": [
+          0.516875,
+          0.822
+        ],
+        "tubo": [
+          0.69,
+          0.831
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          759.72,
+          356.84,
+          106.56,
+          66.6
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "mascarilla-venturi",
+    "file": "atlas/atlas_mascarilla_venturi.png",
+    "image_sha256": "a4a27d5997e125e9b2b8516afc68d7a6d882334412f24d4266fecfdb532cef96",
+    "source_svg_sha256": "fadf1cf0074f5cea9e43c1cd987f3801a77226d0b6510fca648ad789a60a1546",
+    "revision_dibujo": {
+      "id": "mascarilla-venturi",
+      "points": {
+        "mascara": [
+          0.419375,
+          0.568
+        ],
+        "sello": [
+          0.585,
+          0.646
+        ],
+        "cinta": [
+          0.66375,
+          0.238
+        ],
+        "puerto": [
+          0.50875,
+          0.592
+        ],
+        "orificios": [
+          0.3675,
+          0.511
+        ],
+        "corrugado": [
+          0.50875,
+          0.686
+        ],
+        "adaptador": [
+          0.525,
+          0.8
+        ],
+        "entrada-aire": [
+          0.498125,
+          0.775
+        ],
+        "tubo": [
+          0.70125,
+          0.891
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          759.72,
+          356.84,
+          106.56,
+          66.6
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "bvm",
+    "file": "atlas/atlas_bolsa_valvula_mascarilla.png",
+    "image_sha256": "bf48a90f783c6d1d45dbfd5fc302330dc6c0c82f921bed74c61ffcf940161a0e",
+    "source_svg_sha256": "2e10542a84c47dedf83114c709ff7e11aa2d9ece0039cb078f322bf5cec7dc14",
+    "revision_dibujo": {
+      "id": "bvm",
+      "points": {
+        "mascara": [
+          0.189375,
+          0.635
+        ],
+        "valvula-paciente": [
+          0.259375,
+          0.415
+        ],
+        "bolsa": [
+          0.530625,
+          0.447
+        ],
+        "entrada": [
+          0.60875,
+          0.41
+        ],
+        "reservorio": [
+          0.768125,
+          0.453
+        ],
+        "tubo": [
+          0.75125,
+          0.759
+        ],
+        "limite-presion": [
+          0.240625,
+          0.343
+        ],
+        "asa": [
+          0.406875,
+          0.289
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          654.52,
+          397.44,
+          120.96,
+          75.6
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "foley-dos-vias",
+    "file": "atlas/atlas_sonda_foley_dos_vias.png",
+    "image_sha256": "bcb2d142eaf88112cf3943b2d5961b930219324a7ea9af15173ba304d4fb745e",
+    "source_svg_sha256": "5d95b8fe2b10cbb701cd972efca974defa6bc845eff57f2036cdba9b95c07a5e",
+    "revision_dibujo": {
+      "id": "foley-dos-vias",
+      "points": {
+        "drenaje": [
+          0.1725,
+          0.665
+        ],
+        "balon": [
+          0.753125,
+          0.326
+        ],
+        "valvula": [
+          0.21375,
+          0.488
+        ],
+        "cuerpo": [
+          0.5525,
+          0.626
+        ],
+        "ojos": [
+          0.83375,
+          0.264
+        ],
+        "punta": [
+          0.870625,
+          0.204
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          308.32,
+          648.04,
+          63.36,
+          39.6
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "foley-tres-vias",
+    "file": "atlas/atlas_sonda_foley_tres_vias.png",
+    "image_sha256": "92e89a161d81b97942cbda74fc0b1362ed8ff7da30270b09c1c1fe48fda22a27",
+    "source_svg_sha256": "67bf5a07602b9e10e94302787b872fa79ea3f493f9b49749084a0561156f32b9",
+    "revision_dibujo": {
+      "id": "foley-tres-vias",
+      "points": {
+        "irrigacion": [
+          0.196875,
+          0.828
+        ],
+        "drenaje": [
+          0.1725,
+          0.665
+        ],
+        "balon": [
+          0.753125,
+          0.326
+        ],
+        "valvula": [
+          0.21375,
+          0.488
+        ],
+        "cuerpo": [
+          0.5525,
+          0.626
+        ],
+        "ojos": [
+          0.83375,
+          0.264
+        ],
+        "punta": [
+          0.870625,
+          0.204
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          308.32,
+          648.04,
+          63.36,
+          39.6
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "sonda-nasogastrica",
+    "file": "atlas/atlas_sonda_nasogastrica.png",
+    "image_sha256": "67c90c5b224b983744fdb669e0714f503fe1388a0ae8b05d0ba9dc1ab19a9aa6",
+    "source_svg_sha256": "94ba413452b9f8775877bc623ddf1aaf4a83fdef02c5a2c805a24d7a615d6ca5",
+    "revision_dibujo": {
+      "id": "sonda-nasogastrica",
+      "points": {
+        "conector": [
+          0.146875,
+          0.33
+        ],
+        "tubo": [
+          0.465,
+          0.803
+        ],
+        "marcas": [
+          0.3,
+          0.61
+        ],
+        "linea": [
+          0.714375,
+          0.441
+        ],
+        "ojos": [
+          0.783125,
+          0.774
+        ],
+        "punta": [
+          0.825625,
+          0.778
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          262.2,
+          292.4,
+          57.6,
+          36.0
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "tubo-endotraqueal",
+    "file": "atlas/atlas_tubo_endotraqueal_con_balon.png",
+    "image_sha256": "2af00f37a0beea314f364d13ef5cfa28daca05989a41dad1b8b05f2cf7f93e26",
+    "source_svg_sha256": "ff8779ada0804e782eb604bd30f9bc60c536983ab1259c78d3915f645ff63ae7",
+    "revision_dibujo": {
+      "id": "tubo-endotraqueal",
+      "points": {
+        "tubo": [
+          0.479375,
+          0.742
+        ],
+        "conector": [
+          0.22375,
+          0.216
+        ],
+        "balon": [
+          0.716875,
+          0.717
+        ],
+        "linea": [
+          0.470625,
+          0.471
+        ],
+        "piloto": [
+          0.62125,
+          0.469
+        ],
+        "valvula": [
+          0.73125,
+          0.468
+        ],
+        "murphy": [
+          0.805625,
+          0.608
+        ],
+        "bisel": [
+          0.834375,
+          0.564
+        ],
+        "marcas": [
+          0.286875,
+          0.548
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          1023.36,
+          455.42,
+          53.28,
+          33.3
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "traqueostomia",
+    "file": "atlas/atlas_canula_traqueostomia_con_cuff.png",
+    "image_sha256": "61b8deaf78caecfe308247b9a42243a3dff6e959617b69e40fab6f9812b886c8",
+    "source_svg_sha256": "d11b712648491f1adc373b40fd4be9e490ec57857ea50341dfb3e4a21815e4e2",
+    "revision_dibujo": {
+      "id": "traqueostomia",
+      "points": {
+        "canula": [
+          0.5275,
+          0.621
+        ],
+        "placa": [
+          0.5775,
+          0.424
+        ],
+        "orificios": [
+          0.619375,
+          0.396
+        ],
+        "conector": [
+          0.469375,
+          0.326
+        ],
+        "cuff": [
+          0.654375,
+          0.661
+        ],
+        "linea": [
+          0.33,
+          0.659
+        ],
+        "piloto": [
+          0.1775,
+          0.665
+        ],
+        "valvula": [
+          0.12625,
+          0.627
+        ],
+        "canula-interna": [
+          0.469375,
+          0.281
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          583.2,
+          385.4,
+          57.6,
+          36.0
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "cvc-triple",
+    "file": "atlas/atlas_cateter_venoso_central_triple_lumen.png",
+    "image_sha256": "7677ae6d075344c33ed07c5e5ff56cc0e3d66e3a18f720e459c94ac909ea47d8",
+    "source_svg_sha256": "1fdcfccca5683ab9180c66d825e81900472409331e3bddaecfdbd32332258a1a",
+    "revision_dibujo": {
+      "id": "cvc-triple",
+      "points": {
+        "ramales": [
+          0.36,
+          0.427
+        ],
+        "conectores": [
+          0.188125,
+          0.242
+        ],
+        "pinzas": [
+          0.3025,
+          0.455
+        ],
+        "fijacion": [
+          0.46625,
+          0.567
+        ],
+        "cateter": [
+          0.82,
+          0.731
+        ],
+        "marcas": [
+          0.708125,
+          0.421
+        ],
+        "orificios": [
+          0.5825,
+          0.803
+        ],
+        "punta": [
+          0.541875,
+          0.789
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          722.32,
+          444.04,
+          63.36,
+          39.6
+        ]
+      ],
+      "rotation": 0
+    }
+  },
+  {
+    "id": "desfibrilador",
+    "file": "atlas/atlas_desfibrilador_monitor.png",
+    "image_sha256": "ff2e29fcca6d1a0f942b254417b481b9ec858f67533e59395f06cfe9b8cd56c6",
+    "source_svg_sha256": "8feb734885147d35bc2690d16bfd82c537589489027f16b58b0d0f0d2550e624",
+    "revision_dibujo": {
+      "id": "desfibrilador",
+      "points": {
+        "pantalla": [
+          0.436875,
+          0.473
+        ],
+        "selector": [
+          0.72625,
+          0.392
+        ],
+        "controles": [
+          0.745625,
+          0.52
+        ],
+        "palas": [
+          0.133125,
+          0.339
+        ],
+        "cable": [
+          0.13,
+          0.566
+        ],
+        "asa": [
+          0.521875,
+          0.165
+        ],
+        "registrador": [
+          0.74375,
+          0.666
+        ]
+      },
+      "face_boxes_viewbox": [
+        [
+          682.16,
+          694.02,
+          67.67999999999999,
+          42.3
+        ]
+      ],
+      "rotation": 0
+    }
+  }
+]

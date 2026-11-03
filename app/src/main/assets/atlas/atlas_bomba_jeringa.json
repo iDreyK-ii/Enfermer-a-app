@@ -1,0 +1,178 @@
+{
+  "asset_id": "atlas_bomba_jeringa",
+  "id": "bomba-jeringa",
+  "name": "Bomba de jeringa",
+  "display_name_es": "Bomba de jeringa",
+  "technical_name": "Bomba de infusión con jeringa y cabezal motorizado",
+  "area": "Dispositivos",
+  "file": "atlas/atlas_bomba_jeringa.png",
+  "view": "Ilustración 2D educativa del conjunto, vista simplificada; no a escala",
+  "image_available": true,
+  "image_width": 2000,
+  "image_height": 1250,
+  "image_sha256": "4bb4daa32463eb36c25aa8aea368694ccd5f97f5d86c618eedc77cc685b110dc",
+  "alt_text": "Bomba de infusión con jeringa y cabezal motorizado: ilustración kawaii en colores pastel, con cara decorativa. No es fotografía ni una lectura clínica. Partes disponibles en la lista accesible.",
+  "model_note": "Inspiración general en Perfusor Space: jeringa, sujeción y cabezal. No replica la interfaz del fabricante; pantalla vacía, sin valores ni instrucciones de programación.",
+  "parts": [
+    {
+      "id": "pantalla",
+      "name": "Pantalla",
+      "function": "Presenta información del dispositivo real.",
+      "safety": "No hay velocidad, dosis ni alarma activa en el dibujo.",
+      "part_status": "modelo",
+      "part_description": "Pantalla",
+      "hotspot_x": 0.301875,
+      "hotspot_y": 0.429,
+      "visible": true,
+      "source_urls": [
+        "https://www.bbraunusa.com/content/dam/catalog/bbraun/bbraunProductCatalog/S/AEM2015/en-us/b473/perfusor-space-syringepump-nextgenerationsoftwareu.pdf",
+        "https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "teclado",
+      "name": "Controles",
+      "function": "Permiten navegar la interfaz del equipo.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Controles",
+      "hotspot_x": 0.521875,
+      "hotspot_y": 0.385,
+      "visible": true,
+      "source_urls": [
+        "https://www.bbraunusa.com/content/dam/catalog/bbraun/bbraunProductCatalog/S/AEM2015/en-us/b473/perfusor-space-syringepump-nextgenerationsoftwareu.pdf",
+        "https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "jeringa",
+      "name": "Jeringa",
+      "function": "Contiene el volumen en una bomba de este tipo.",
+      "safety": "Usar únicamente combinaciones que indique el fabricante.",
+      "part_status": "modelo",
+      "part_description": "Jeringa",
+      "hotspot_x": 0.435625,
+      "hotspot_y": 0.622,
+      "visible": true,
+      "source_urls": [
+        "https://www.bbraunusa.com/content/dam/catalog/bbraun/bbraunProductCatalog/S/AEM2015/en-us/b473/perfusor-space-syringepump-nextgenerationsoftwareu.pdf",
+        "https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "sujecion",
+      "name": "Sujeción de la jeringa",
+      "function": "Mantiene el cuerpo de la jeringa en su posición.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Sujeción de la jeringa",
+      "hotspot_x": 0.351875,
+      "hotspot_y": 0.622,
+      "visible": true,
+      "source_urls": [
+        "https://www.bbraunusa.com/content/dam/catalog/bbraun/bbraunProductCatalog/S/AEM2015/en-us/b473/perfusor-space-syringepump-nextgenerationsoftwareu.pdf",
+        "https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "cabezal",
+      "name": "Cabezal de avance",
+      "function": "Actúa sobre el émbolo según el diseño.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Cabezal de avance",
+      "hotspot_x": 0.721875,
+      "hotspot_y": 0.622,
+      "visible": true,
+      "source_urls": [
+        "https://www.bbraunusa.com/content/dam/catalog/bbraun/bbraunProductCatalog/S/AEM2015/en-us/b473/perfusor-space-syringepump-nextgenerationsoftwareu.pdf",
+        "https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "brazo",
+      "name": "Brazo de la bomba",
+      "function": "Forma parte del mecanismo de avance.",
+      "safety": "Verificar modelo y condiciones del dispositivo real.",
+      "part_status": "modelo",
+      "part_description": "Brazo de la bomba",
+      "hotspot_x": 0.78375,
+      "hotspot_y": 0.611,
+      "visible": true,
+      "source_urls": [
+        "https://www.bbraunusa.com/content/dam/catalog/bbraun/bbraunProductCatalog/S/AEM2015/en-us/b473/perfusor-space-syringepump-nextgenerationsoftwareu.pdf",
+        "https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    },
+    {
+      "id": "extension",
+      "name": "Línea de extensión",
+      "function": "Conduce desde la jeringa a la conexión prevista.",
+      "safety": "No se infieren compatibilidad ni esterilidad.",
+      "part_status": "modelo",
+      "part_description": "Línea de extensión",
+      "hotspot_x": 0.260625,
+      "hotspot_y": 0.798,
+      "visible": true,
+      "source_urls": [
+        "https://www.bbraunusa.com/content/dam/catalog/bbraun/bbraunProductCatalog/S/AEM2015/en-us/b473/perfusor-space-syringepump-nextgenerationsoftwareu.pdf",
+        "https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative"
+      ],
+      "review_status": "COTEJO-DOCUMENTAL-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Perfusor Space · instrucciones, vista general",
+      "url": "https://www.bbraunusa.com/content/dam/catalog/bbraun/bbraunProductCatalog/S/AEM2015/en-us/b473/perfusor-space-syringepump-nextgenerationsoftwareu.pdf",
+      "publisher": "B. Braun",
+      "date": "2026-11-03",
+      "review_scope": "Vista general del cabezal, sujeción e indicadores; no se copia la operación."
+    },
+    {
+      "title": "FDA · tipos y seguridad de bombas de infusión",
+      "url": "https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative",
+      "publisher": "FDA",
+      "date": "2026-11-03",
+      "review_scope": "Sección de mecanismos y riesgos; no valida la geometría de un fabricante."
+    }
+  ],
+  "source_urls": [
+    "https://www.bbraunusa.com/content/dam/catalog/bbraun/bbraunProductCatalog/S/AEM2015/en-us/b473/perfusor-space-syringepump-nextgenerationsoftwareu.pdf",
+    "https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative"
+  ],
+  "review_date": "2026-11-03",
+  "review_status": "COTEJO-ASISTIDO; APROBACIÓN-PROFESIONAL-PENDIENTE",
+  "accuracy_approved_by": null,
+  "technical_reviewer": "Asistente IA: cotejo documental y visual, no profesional acreditado",
+  "clinical_approved": false,
+  "pending_reason": "",
+  "processing": {
+    "method": "Ilustración 2D original creada por código; rasterización directa de geometría vectorial con CairoSVG 2.8.2. No es foto ni IA generativa de imagen.",
+    "native_dimensions": [
+      2000,
+      1250
+    ],
+    "export_dimensions": [
+      2000,
+      1250
+    ],
+    "upscaled": false,
+    "source_svg_sha256": "e713b4b4f6588a268637fcf30f73cbde47559a8bad01a1732cef8a5389051ac4",
+    "sha256": "4bb4daa32463eb36c25aa8aea368694ccd5f97f5d86c618eedc77cc685b110dc",
+    "reproducer": "research/atlas_kawaii/ilustrar.py",
+    "face": "Decorativa; no es parte clínica ni lectura."
+  },
+  "checks": [
+    "Identificar el modelo y consultar sus instrucciones de uso.",
+    "Comprobar integridad y condiciones del producto real con personal capacitado.",
+    "La ilustración no confirma esterilidad, calibración, compatibilidad ni competencia técnica."
+  ],
+  "revision": "atlas-v22.1"
+}
