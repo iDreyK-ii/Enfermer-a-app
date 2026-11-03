@@ -1,4 +1,4 @@
-# Compilar, probar e instalar iDreyK 360 v0.4.1
+# Compilar, probar e instalar iDreyK 360 v0.6.0
 
 Ejecutar desde la raíz `idreyk-android/`. Es Android nativo: **no hay servidor web ni puerto que levantar**. Gradle compila la app; Python y Node solo se usan para herramientas y pruebas locales.
 
@@ -31,7 +31,7 @@ Si partiste del ZIP sin `.git`, recupera primero `historial/desarrollo.bundle` e
 bash scripts/comprobar.sh --todo
 ```
 
-Ejecuta guardas y pruebas de archivos, SQLite y PostgreSQL local, compilación Kotlin, pruebas Android, lint, APK y verificación de firma/metadatos/permisos. `--rapido` omite Android. Logs en `.cache/qa-actual/`.
+Ejecuta guardas y pruebas de archivos, SQLite y PostgreSQL local, compilación Kotlin, ensamblado de pruebas instrumentadas (sin ejecutarlas), pruebas Android/JVM, lint, APK y verificación de firma/metadatos/permisos. `--rapido` omite Android. Logs en `.cache/qa-actual/`.
 
 **Para aislar las pruebas, `--todo` fuerza URL/clave publicable vacías.** No envía correos ni usa cuentas reales. El APK que deja ese comando es de configuración local. La documentación de CI explica la diferencia entre un APK de runner y uno firmado para actualizar: `docs/GITHUB_Y_CI.md`.
 
@@ -58,7 +58,7 @@ Gradle lee `IDREYK_SUPABASE_URL` e `IDREYK_SUPABASE_PUBLISHABLE_KEY` de entorno 
 
 Para otro proyecto nuevo autorizado, crear/configurar RLS y correo siguiendo `backend/README.md`; para el ya creado, seguir el estado y los pendientes de la guía actual. Después compilar con `:app:assembleDebug` y los valores públicos reales, **sin los argumentos que los vacían en el script de pruebas**. Nunca incorporar la clave secreta, `service_role`, contraseña PostgreSQL o clave privada de firma.
 
-El APK v0.4.1 entregado se compiló sin proyecto y no ha sido sustituido. No existe una conexión simulada presentada como real. La integración real necesita su propio plan de pruebas y consentimiento; no reutilizar cuentas reales desde pruebas unitarias.
+El APK local 0.6.0 de esta entrega se compila con nube vacía. No se ha ejecutado la compilación conectada en esta fase. No existe una conexión simulada presentada como real. La integración real necesita su propio plan de pruebas y consentimiento; no reutilizar cuentas reales desde pruebas unitarias.
 
 ## Instalar sin perder datos
 
@@ -71,10 +71,26 @@ Con un único dispositivo de prueba conectado, depuración USB autorizada y ADB:
   -n com.idreyk.enfermeria360.dev/com.idreyk.enfermeria360.MainActivity
 ```
 
-**Firma:** los APK entregados v0.2/v0.3/v0.4/v0.4.1 conservan el certificado. Una compilación de otra máquina/CI normalmente tiene otra clave debug y no puede actualizar la anterior. No desinstalar ni borrar datos para resolver un conflicto de firma. Exportar catálogo/cuaderno y conservar medios por separado antes de pruebas importantes.
+**Firma:** los APK locales entregados hasta v0.6.0 conservan el certificado. Una compilación de otra máquina/CI normalmente tiene otra clave debug y no puede actualizar la anterior. No desinstalar ni borrar datos para resolver un conflicto de firma. Exportar catálogo/cuaderno y conservar medios por separado antes de pruebas importantes.
 
 Para comparar un certificado conocido usar `IDREYK_EXPECTED_CERT_SHA256` con `scripts/verificar_apk.py`; el valor es la huella pública, no una clave. No se ha probado aún instalación física ni downgrade; no forzar vuelta a versiones anteriores.
 
 ## Evidencia y alcance
 
-Ver `qa/RESULTADOS_v0.4.1.md`. Pruebas JVM/Robolectric, no certificación física o clínica. SMTP/Auth/Storage reales, hardware Keystore, FPS y publicación de producción siguen pendientes. Las maquetas del dossier no son capturas del APK.
+Ver `qa/RESULTADOS_v0.6.0.md` y `docs/MVP_BASE_MAESTRA_v21.md`. Pruebas JVM/Robolectric, no certificación física o clínica. SMTP/Auth/Storage reales, hardware Keystore, FPS y publicación de producción siguen pendientes. Las diez imágenes actuales son renders del código nativo API 35, no capturas de un APK instalado.
+
+
+## Capturas y pruebas instrumentadas pendientes
+
+La QA crea PNG/JSON en `.cache/native-mvp/` con Robolectric NATIVE/API35, `View.draw`, sin dispositivo. El tmpdir de tests está en `.cache/test-tmp/` (disco), evitando bibliotecas grandes en un `/tmp` tmpfs; las suites usan forks secuenciales. No se necesita KVM para esta QA, pero tampoco se prueba un emulador APK.
+
+```sh
+# Compila y empaqueta las dos pruebas PDF: NO las ejecuta.
+./gradlew :app:assembleDebugAndroidTest
+# Solo con dispositivo/emulador de prueba autorizado, firmado/configurado de forma compatible:
+./gradlew :app:connectedDebugAndroidTest
+```
+
+`EducationalPdfDeviceTests` comprueba generación y selección de página mediante el framework real. No se ejecutó en el entorno de desarrollo de esta entrega; el escritor nativo PdfDocument no está implementado por Robolectric 4.14.1. Después debe comprobarse también el servicio de impresión/selector SAF, que no es lo mismo que invocar el generador.
+
+Ejercitar teléfono, tablet y un equipo de recursos limitados; rotación, texto grande, teclado, TalkBack, paso a segundo plano del cronómetro, importación cancelada, guardado y actualización sin pérdida de datos. No atribuir resultados aún no obtenidos.

@@ -592,45 +592,23 @@ fun VitalsScreen(id: String, vm: AppViewModel, back: () -> Unit) {
 
 @Composable
 fun BalanceScreen(id: String, vm: AppViewModel, back: () -> Unit) {
-    val p = demo(id)
-    val stored = vm.data.notes.firstOrNull { it.patientId == "balance:${p.id}" }?.text?.split('|')
-    var ins by rememberSaveable { mutableStateOf(stored?.getOrNull(0) ?: "1500") }
-    var outs by rememberSaveable { mutableStateOf(stored?.getOrNull(1) ?: "1200") }
-    val input = ins.replace(',', '.').toDoubleOrNull()
-    val output = outs.replace(',', '.').toDoubleOrNull()
-    val valid =
-        input != null &&
-            output != null &&
-            input.isFinite() &&
-            output.isFinite() &&
-            input in 0.0..100000.0 &&
-            output in 0.0..100000.0
-    Page("Balance hídrico", p.name + " · ejercicio ficticio", back) {
-        Notice(
-            "Diferencia aritmética de ejemplo. No interpreta el balance ni recomienda fluidos.",
-            true,
-        )
-        Input("Ingresos de ejemplo", ins, { ins = it }, true, "mL")
-        Input("Egresos de ejemplo", outs, { outs = it }, true, "mL")
-        AppCard(Modifier.fillMaxWidth()) {
-            Badge("BALANCE DEL EJEMPLO", Teal)
-            Text(
-                if (valid) "${if(input!!-output!!>=0)"+"else""}${decimal(input-output,0)} mL"
-                else "Revisa las cantidades",
-                style = MaterialTheme.typography.headlineMedium,
-                color = Teal,
-            )
-            Text(
-                "Ingresos − egresos",
-                style = MaterialTheme.typography.bodySmall,
-                color = LocalPalette.current.muted,
-            )
-        }
-        Primary(
-            "Guardar cantidades ficticias",
-            { vm.note("balance:${p.id}", "$ins|$outs") },
-            valid && !vm.busy,
-        )
+    val patient = demo(id)
+    val stored = vm.data.notes.firstOrNull { it.patientId == "balance:${patient.id}" }?.text?.split('|')
+    var ins by rememberSaveable(id) { mutableStateOf(stored?.getOrNull(0) ?: "1500") }
+    var outs by rememberSaveable(id) { mutableStateOf(stored?.getOrNull(1) ?: "1200") }
+    var period by rememberSaveable(id) { mutableStateOf(stored?.getOrNull(2).orEmpty()) }
+    val result = runCatching {
+        require(period.isNotBlank()) { "Indica el mismo intervalo para ingresos y egresos." }
+        EducationMath.balance(ins, outs)
+    }
+    Page("Balance hídrico", patient.name + " · ejercicio ficticio", back) {
+        Notice("Diferencia aritmética decimal. No interpreta el balance ni recomienda fluidos. Los registros anteriores se conservan, sin inventar su periodo.", true)
+        Input("Ingresos de ejemplo", ins, { ins = calculationInput(it) }, true, "mL")
+        Input("Egresos de ejemplo", outs, { outs = calculationInput(it) }, true, "mL")
+        Input("Intervalo común de ingresos y egresos", period, { period = it.replace('|', ' ').take(120) })
+        result.getOrNull()?.let { EducationResultCard(it.copy(explanation = "Intervalo ficticio: $period. ${it.explanation}")) }
+            ?: Notice(result.exceptionOrNull()?.message ?: "Revisa los datos del ejercicio.", true)
+        Primary("Guardar cantidades ficticias", { vm.note("balance:${patient.id}", "$ins|$outs|$period") }, result.isSuccess && !vm.busy)
     }
 }
 
@@ -646,6 +624,10 @@ fun ToolsScreen(nav: (String) -> Unit, back: () -> Unit) {
                 Purple,
             ),
             Module("Goteo", "Ejemplo aritmético", "calc/goteo", R.drawable.ic_iv, Teal),
+            Module("Cantidad por peso", "Por dosis o por día explícitos", "calc/kg", R.drawable.ic_calculator, Purple),
+            Module("mL/h", "Volumen y tiempo", "calc/bomba", R.drawable.ic_iv, Teal),
+            Module("Duración", "Volumen / velocidad", "calc/tiempo", R.drawable.ic_stopwatch, Purple),
+            Module("Balance", "Mismo intervalo", "calc/balance", R.drawable.ic_clipboard, Teal),
             Module(
                 "Dilución",
                 "Ejercicio con unidades",
@@ -692,143 +674,8 @@ fun ToolsScreen(nav: (String) -> Unit, back: () -> Unit) {
 
 @Composable
 fun CalculatorScreen(type: String, vm: AppViewModel, back: () -> Unit) {
-    if (type in listOf("dosis", "dilucion")) {
-        DoseExerciseScreen(type, vm, back)
-        return
-    }
-    if (type !in listOf("imc", "goteo", "conversor")) {
-        Page("Herramienta no disponible", back = back) {
-            EmptyState("Revisa la herramienta", "Vuelve al catálogo de cálculos de práctica.")
-        }
-        return
-    }
-    var first by rememberSaveable(type) { mutableStateOf(if (type == "imc") "70" else "500") }
-    var second by rememberSaveable(type) { mutableStateOf(if (type == "imc") "170" else "4") }
-    var factor by rememberSaveable { mutableIntStateOf(20) }
-    var conversion by rememberSaveable { mutableStateOf("mg-g") }
-    var result by rememberSaveable(type) { mutableStateOf("") }
-    var error by remember { mutableStateOf("") }
-    val name =
-        when (type) {
-            "imc" -> "Índice de masa corporal"
-            "goteo" -> "Goteo"
-            else -> "Conversor de unidades"
-        }
-    Page(name, "Herramienta de demostración", back) {
-        Notice(
-            "Solo práctica matemática. No es una recomendación clínica ni una pauta de administración.",
-            true,
-        )
-        Input(
-            when (type) {
-                "imc" -> "Peso de ejemplo"
-                "goteo" -> "Volumen de ejemplo"
-                else -> "Cantidad"
-            },
-            first,
-            {
-                first = it
-                result = ""
-                error = ""
-            },
-            true,
-            when (type) {
-                "imc" -> "kg"
-                "goteo" -> "mL"
-                else -> null
-            },
-        )
-        if (type != "conversor")
-            Input(
-                if (type == "imc") "Talla de ejemplo" else "Tiempo de ejemplo",
-                second,
-                {
-                    second = it
-                    result = ""
-                    error = ""
-                },
-                true,
-                if (type == "imc") "cm" else "h",
-            )
-        if (type == "goteo") {
-            Text(
-                "Factor del equipo de ejemplo (gotas/mL)",
-                style = MaterialTheme.typography.bodySmall,
-                color = LocalPalette.current.muted,
-            )
-            Row(horizontalArrangement = Arrangement.spacedBy(7.dp)) {
-                listOf(10, 15, 20, 60).forEach { n ->
-                    FilterChip(
-                        factor == n,
-                        {
-                            factor = n
-                            result = ""
-                        },
-                        label = { Text(n.toString()) },
-                    )
-                }
-            }
-        }
-        if (type == "conversor") {
-            listOf(listOf("mg-g", "g-mg"), listOf("mL-L", "L-mL")).forEach { row ->
-                Row(horizontalArrangement = Arrangement.spacedBy(9.dp)) {
-                    row.forEach { t ->
-                        FilterChip(
-                            conversion == t,
-                            {
-                                conversion = t
-                                result = ""
-                            },
-                            label = { Text(t.replace("-", " → ")) },
-                        )
-                    }
-                }
-            }
-        }
-        Text(
-            when (type) {
-                "imc" -> "IMC = peso (kg) / talla² (m)"
-                "goteo" -> "gotas/min = mL × factor / minutos"
-                else -> "Conversión aritmética de masa o volumen"
-            },
-            style = MaterialTheme.typography.bodySmall,
-            color = Purple,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth().padding(vertical = 7.dp),
-        )
-        if (error.isNotBlank()) Notice(error, true)
-        Primary(
-            "Calcular ejemplo",
-            {
-                try {
-                    result =
-                        when (type) {
-                            "imc" ->
-                                "${decimal(PracticeMath.bmi(number(first),number(second)))} kg/m²\nSin clasificación ni evaluación individual."
-                            "goteo" -> {
-                                val (v, d) =
-                                    PracticeMath.drip(number(first), number(second), factor)
-                                "$d gotas/min (redondeo)\n${DoseMath.display(v)} mL/h\nNo es una pauta de administración."
-                            }
-                            else ->
-                                "${DoseMath.display(PracticeMath.convert(number(first),conversion))} ${conversion.substringAfter('-')}\nConversión de unidades, no cálculo de dosis."
-                        }
-                    error = ""
-                } catch (e: Exception) {
-                    error = e.message ?: "Revisa los valores."
-                    result = ""
-                }
-            },
-            icon = R.drawable.ic_calculator,
-        )
-        if (result.isNotBlank()) {
-            AppCard(Modifier.fillMaxWidth()) {
-                Badge("RESULTADO DE PRÁCTICA", Teal)
-                Text(result, style = MaterialTheme.typography.titleLarge, color = Teal)
-            }
-            Secondary("Guardar práctica", { vm.practice(name, result) }, !vm.busy)
-        }
-    }
+    if (type in listOf("dosis", "dilucion")) DoseExerciseScreen(type, vm, back)
+    else DecimalCalculatorScreen(type, vm, back)
 }
 
 @Composable
@@ -1203,6 +1050,14 @@ val NoteTexts =
 @Composable
 fun CasesScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit) {
     Page("Casos de aprendizaje", "Catálogo local · ejemplos o contenido importado", back) {
+        Section("Siete recorridos sintéticos progresivos")
+        vm.data.master.catalog?.let { master ->
+            master.cases.forEach { case ->
+                val count = vm.data.learning["simulacion/${case.id}"]?.takeIf { it.version == master.version }?.answers?.size ?: 0
+                ActionRow(case.title, "${case.area} · $count/${case.questions.size} etapas respondidas", R.drawable.ic_stethoscope, Teal) { nav("simulacion/${case.id}") }
+            }
+        }
+        Section("Casos editables de tu biblioteca")
         Primary("Crear caso ficticio", { nav(newEntryRoute("case")) }, !vm.busy, R.drawable.ic_plus)
         vm.data.entries
             .filter { it.kind == "case" }
@@ -1211,7 +1066,7 @@ fun CasesScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit) {
             }
         Secondary("Añadir casos mediante un paquete", { nav("contenido") })
         Notice(
-            "No incluimos historias reales ni casos diagnósticos inventados para completar el catálogo.",
+            "Los recorridos nuevos son simulaciones sintéticas explícitas. No reconstruyen historias reales ni prescripciones de los archivos mencionados en la base. Los casos locales previos se conservan.",
             true,
         )
     }
@@ -1304,6 +1159,7 @@ fun HistoryScreen(vm: AppViewModel, back: () -> Unit) {
 @Composable
 fun GlobalSearchScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit) {
     var query by rememberSaveable { mutableStateOf("") }
+    var resultLimit by rememberSaveable { mutableIntStateOf(40) }
     val fixed =
         (Modules + ExtraModules) +
             listOf(
@@ -1379,6 +1235,14 @@ fun GlobalSearchScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit
                 ),
                 Module("Apuntes", "Cuaderno editable", "apuntes", R.drawable.ic_edit, Purple),
                 Module("IMC", "Índice de masa corporal", "calc/imc", R.drawable.ic_stopwatch, Teal),
+                Module("Goteo", "Factor de equipo obligatorio", "calc/goteo", R.drawable.ic_iv, Teal),
+                Module("Cantidad por peso", "Dosis/kg o cantidad por día del enunciado", "calc/kg", R.drawable.ic_calculator, Purple),
+                Module("Velocidad mL/h", "Volumen y tiempo de ejemplo", "calc/bomba", R.drawable.ic_iv, Teal),
+                Module("Duración de infusión", "Volumen / velocidad", "calc/tiempo", R.drawable.ic_stopwatch, Purple),
+                Module("Conversor dimensional", "Masa, volumen y tiempo", "calc/conversor", R.drawable.ic_arrows, Teal),
+                Module("Balance aritmético", "Ingresos y egresos del mismo intervalo", "calc/balance", R.drawable.ic_clipboard, Teal),
+                Module("Norton · registro externo", "Adulto · no administra el instrumento", "registro-escala/norton", R.drawable.ic_bed, Purple),
+                Module("RASS · registro externo", "Adulto · no administra el instrumento", "registro-escala/rass", R.drawable.ic_clipboard, Teal),
                 Module("Flashcards", "Cinco tarjetas PAE", "tarjetas", R.drawable.ic_cards, Pink),
                 Module("Biblioteca de tests clínicos", "Fichas por población y área", "biblioteca-escalas", R.drawable.ic_book, Teal),
                 Module("Escala numérica del dolor", "Autoinforme de práctica 0–10", "dolor-numerico", R.drawable.ic_heart_pulse, Pink),
@@ -1386,14 +1250,18 @@ fun GlobalSearchScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit
             )
     val clinicalLoad = rememberClinicalCatalog()
     val clinicalMatches = if (query.isBlank()) emptyList() else clinicalLoad.catalog?.filter(query).orEmpty()
+    val masterMatches = if (query.isBlank()) emptyList() else vm.data.master.catalog?.search(query).orEmpty()
+    val noteMatches = if (query.isBlank()) emptyList() else vm.data.notebooks.filter {
+        normalized(it.title + " " + it.fields.toString()).contains(normalized(query))
+    }
     val matching = fixed.filter { normalized(it.title + it.sub).contains(normalized(query)) }
     val entries =
         if (query.isBlank()) emptyList()
-        else vm.data.entries.filter { normalized(it.name + it.aliases).contains(normalized(query)) }
+        else vm.data.entries.filter { normalized(it.name + " " + it.aliases + " " + it.group + " " + it.body + " " + it.sections.values.joinToString(" ")).contains(normalized(query)) }
     Page("¿Qué necesitas hoy?", "Busca en tu universo 360°", back) {
-        SearchBox(query, { query = it }, "Módulos, fármacos, escalas o casos…")
+        SearchBox(query, { query = it.take(160); resultLimit = 40 }, "Tema, etiqueta, especialidad, escala o dispositivo…")
         Text(
-            if (query.isBlank()) "Empieza por aquí" else "${matching.size+entries.size+clinicalMatches.size} resultados",
+            if (query.isBlank()) "Empieza por aquí" else "${matching.size+entries.size+clinicalMatches.size+masterMatches.size+noteMatches.size} resultados",
             style = MaterialTheme.typography.bodySmall,
             color = LocalPalette.current.muted,
         )
@@ -1414,8 +1282,21 @@ fun GlobalSearchScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit
                 nav("instrumento/${instrument.id}")
             }
         }
+        if (masterMatches.isNotEmpty()) Section("Base 2.1 · búsqueda en texto y metadatos")
+        masterMatches.take(resultLimit).forEach { item ->
+            ActionRow(if (item.kind == "Inventario") "Inventario · ${item.title}" else item.title,
+                "${item.kind} · ${item.subtitle}", R.drawable.ic_book, Purple) { nav(item.route) }
+        }
+        if (masterMatches.size > resultLimit) Secondary("Mostrar 40 resultados más", { resultLimit += 40 })
+        if (noteMatches.isNotEmpty()) Section("Cuaderno personal · solo local")
+        noteMatches.forEach { note ->
+            ActionRow(note.title, if (note.kind == "plan") "Plan PAE editable" else "Apunte personal", R.drawable.ic_edit, Teal) {
+                nav(if (note.kind == "plan") "editar-plan/${note.owner}/${note.id}" else "editar-apunte/${note.id}")
+            }
+        }
+        vm.data.master.error?.let { Notice(it, true) }
         if (clinicalLoad.failed) Notice("La búsqueda de fichas clínicas no se pudo cargar. Los demás resultados siguen disponibles.")
-        if (matching.isEmpty() && entries.isEmpty() && clinicalMatches.isEmpty())
+        if (matching.isEmpty() && entries.isEmpty() && clinicalMatches.isEmpty() && masterMatches.isEmpty() && noteMatches.isEmpty())
             EmptyState(
                 "No hay coincidencias",
                 "Prueba con Glasgow, EVA, Capurro, paracetamol o PAE.",

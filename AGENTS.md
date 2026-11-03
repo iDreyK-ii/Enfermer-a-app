@@ -3,15 +3,15 @@
 ## Antes de editar
 
 1. Leer `README.md`, `CONTINUIDAD.json` e `INICIAR_EN_AI_STUDIO.md` antes de un traslado; luego el archivo del módulo afectado. No cargar todo el repositorio, todos los XML de QA o todos los recursos en una sola respuesta.
-2. Consultar `git status` y preservar cambios preexistentes. La aplicación funcional actual es Android v0.5.0; no empezar un proyecto web nuevo por una plantilla genérica.
+2. Consultar `git status` y preservar cambios preexistentes. La aplicación actual es Android v0.6.0 / Base Maestra 2.1; no empezar un proyecto web nuevo por una plantilla genérica.
 3. Para datos, leer `database/schema.sql` y contrastarlo con `LocalDatabase` en `Repository.kt`. El Kotlin es la implementación ejecutada; el SQL es un espejo verificado.
-4. Para alcance clínico, consultar solo la sección pertinente de `docs/ESTADO_FUNCIONAL_v0.3.md` y `research/REVISION_DOCUMENTAL.md`.
+4. Para alcance clínico, consultar la matriz de `docs/MVP_BASE_MAESTRA_v21.md` y la investigación pertinente, conservando los límites históricos de `research/REVISION_DOCUMENTAL.md`.
 
 ## Arquitectura y límites
 
 - Kotlin + Jetpack Compose. UI/navegación en `MainActivity.kt`, `Design.kt` y `Screens*.kt`.
 - Operaciones persistentes: `AppViewModel` -> `ContentRepository` -> SQLite/archivos privados. La lógica matemática y la validación permanecen separadas en sus modelos.
-- El usuario pidió expresamente cuentas y catálogo remoto en la fase v0.4. El proyecto Supabase real `idreyk-360-dev` ya existe en `us-east-1` y tiene migración/RLS verificados. El APK entregado v0.4.1 sigue sin proyecto incorporado. Leer `docs/SUPABASE_REAL_Y_GITHUB.md`: no repetir el SQL inicial; correo/sesión real y compilación conectada siguen pendientes. Mantener lectura local sin cuenta obligatoria. Nunca afirmar conexión real, correo enviado o despliegue sin verificarlos. No crear una app web que sustituya Android.
+- El usuario pidió expresamente cuentas y catálogo remoto en la fase v0.4. El proyecto Supabase real `idreyk-360-dev` ya existe en `us-east-1` y tiene migración/RLS verificados. El APK local 0.6.0 se entrega sin configuración de nube. Leer `docs/SUPABASE_REAL_Y_GITHUB.md`: no repetir el SQL inicial; correo/sesión real y compilación conectada siguen pendientes. Mantener lectura local sin cuenta obligatoria. Nunca afirmar conexión real, correo enviado o despliegue sin verificarlos. No crear una app web que sustituya Android.
 - No renombrar tablas, paquete Android, versión de datos o clave de firma sin plan de compatibilidad/migración.
 - No copiar `AUTO_INCREMENT`, usuarios de administrador o contraseñas de un ejemplo de servidor dentro de esta base SQLite.
 
@@ -44,7 +44,7 @@
 
 ## Continuidad
 
-Registrar el cambio, su alcance, resultados y pendientes. El historial técnico está en `DESARROLLO.md`; la fase de servidor está en `qa/SUPABASE_REAL_2026-11-02.md`; los últimos resultados del APK están en `qa/RESULTADOS_v0.4.1.md`. `qa/RESULTADOS.md` conserva la evidencia histórica de v0.3. Las pruebas de una sesión anterior no deben describirse como ejecutadas de nuevo sin haberlo hecho.
+Registrar el cambio, su alcance, resultados y pendientes. El historial técnico está en `DESARROLLO.md`; la fase de servidor está en `qa/SUPABASE_REAL_2026-11-02.md`; los resultados actuales están en `qa/RESULTADOS_v0.6.0.md`. `qa/RESULTADOS.md` conserva la evidencia histórica de v0.3. Las pruebas de una sesión anterior no deben describirse como ejecutadas de nuevo sin haberlo hecho.
 
 
 ## Traslado a Google AI Studio y actualizaciones
@@ -65,3 +65,14 @@ Registrar el cambio, su alcance, resultados y pendientes. El historial técnico 
 - Preservar la distinción entre cero, pendiente y no valorable de CADA instrumento. Glasgow NV no suma; AMT4/atención 4AT no valorables sí puntúan 2. No reutilizar indiscriminadamente una regla entre escalas.
 - Respetar licencia/atribución 4AT y señalar adaptación. No redibujar caras, estímulos ni tablas normalizadas para ajustarlos a la paleta. No reproducir Braden/Morse/FPS-R/Wong-Baker/MoCA sin resolver derechos de la versión/uso.
 - Solo datos ficticios, sin respuestas identificables ni subida automática de prácticas. No añadir recomendaciones farmacológicas por puntaje. El propietario dejó farmacología para el final y no solicitó PDFs en esta fase.
+
+
+## Base Maestra 2.1 / Android 0.6.0
+
+- Leer `docs/MVP_BASE_MAESTRA_v21.md` y `docs/10_ROADMAP_Y_MODULOS_FUTUROS.md`. No confundir especificación 2.1 con versionName Android.
+- Entrada íntegra leída: 13 secciones y anexos A/B, archivada en `research/base_maestra_v21/BASE_EDITORIAL_NO_CLINICA.md`; no empaquetarla como guía clínica ni transformar órdenes históricas en recomendaciones.
+- Generadores: `crear_contenido.py` y `compilar_mvp.py`; verificar `compilar_mvp.py --check` y las pruebas de regeneración/procedencia. Los 554 maestros/737 apariciones siguen IDENTIFICADO; altilice no resuelto.
+- Preservar aritmética decimal/unidades/factor obligatorio, progreso versionado, atlas accesible, higiene, dos listas con distinta autoría y casos sintéticos. Mantener los 32 campos nuevos y los antiguos del PAE; cuaderno lee 1/2 y exporta 2.
+- Braden/Morse/Norton/RASS: solo registros externos con ámbito/rango, no cuestionarios, interpretación ni permiso clínico inferido.
+- 235 pruebas JVM ejecutadas y 10 renders nativos API35 no equivalen a un APK instalado. Las dos pruebas PDF de `androidTest` compilan pero no se han ejecutado; no simular su éxito con un PDF externo.
+- No reconstruir pantallas desde el HTML del desglose: contiene imágenes del render nativo para revisión, no una implementación alternativa.

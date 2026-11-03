@@ -1,0 +1,4424 @@
+[
+  {
+    "line": 2546,
+    "nominal": "Halotano",
+    "master": "nom-halotano",
+    "path": "01. SISTEMA NERVIOSO → Anestésicos → Anestésicos generales inhalatorios"
+  },
+  {
+    "line": 2547,
+    "nominal": "Isoflurano",
+    "master": "nom-isoflurano",
+    "path": "01. SISTEMA NERVIOSO → Anestésicos → Anestésicos generales inhalatorios"
+  },
+  {
+    "line": 2548,
+    "nominal": "Óxido nitroso",
+    "master": "nom-oxido-nitroso",
+    "path": "01. SISTEMA NERVIOSO → Anestésicos → Anestésicos generales inhalatorios"
+  },
+  {
+    "line": 2549,
+    "nominal": "Sevoflurano",
+    "master": "nom-sevoflurano",
+    "path": "01. SISTEMA NERVIOSO → Anestésicos → Anestésicos generales inhalatorios"
+  },
+  {
+    "line": 2551,
+    "nominal": "Ketamina",
+    "master": "nom-ketamina",
+    "path": "01. SISTEMA NERVIOSO → Anestésicos → Anestésicos generales intravenosos"
+  },
+  {
+    "line": 2552,
+    "nominal": "Propofol",
+    "master": "nom-propofol",
+    "path": "01. SISTEMA NERVIOSO → Anestésicos → Anestésicos generales intravenosos"
+  },
+  {
+    "line": 2553,
+    "nominal": "Tiopental sódico",
+    "master": "nom-tiopental-sodico",
+    "path": "01. SISTEMA NERVIOSO → Anestésicos → Anestésicos generales intravenosos"
+  },
+  {
+    "line": 2555,
+    "nominal": "Bupivacaína",
+    "master": "nom-bupivacaina",
+    "path": "01. SISTEMA NERVIOSO → Anestésicos → Anestésicos locales tipo amida"
+  },
+  {
+    "line": 2556,
+    "nominal": "Lidocaína",
+    "master": "nom-lidocaina",
+    "path": "01. SISTEMA NERVIOSO → Anestésicos → Anestésicos locales tipo amida"
+  },
+  {
+    "line": 2557,
+    "nominal": "Lidocaína + epinefrina",
+    "master": "nom-lidocaina-epinefrina",
+    "path": "01. SISTEMA NERVIOSO → Anestésicos → Anestésicos locales tipo amida"
+  },
+  {
+    "line": 2560,
+    "nominal": "Metamizol sódico",
+    "master": "nom-metamizol-sodico",
+    "path": "01. SISTEMA NERVIOSO → Analgésicos no opioides"
+  },
+  {
+    "line": 2561,
+    "nominal": "Paracetamol",
+    "master": "nom-paracetamol",
+    "path": "01. SISTEMA NERVIOSO → Analgésicos no opioides"
+  },
+  {
+    "line": 2564,
+    "nominal": "Buprenorfina",
+    "master": "nom-buprenorfina",
+    "path": "01. SISTEMA NERVIOSO → Analgésicos opioides"
+  },
+  {
+    "line": 2565,
+    "nominal": "Codeína",
+    "master": "nom-codeina",
+    "path": "01. SISTEMA NERVIOSO → Analgésicos opioides"
+  },
+  {
+    "line": 2566,
+    "nominal": "Fentanilo",
+    "master": "nom-fentanilo",
+    "path": "01. SISTEMA NERVIOSO → Analgésicos opioides"
+  },
+  {
+    "line": 2567,
+    "nominal": "Metadona",
+    "master": "nom-metadona",
+    "path": "01. SISTEMA NERVIOSO → Analgésicos opioides"
+  },
+  {
+    "line": 2568,
+    "nominal": "Morfina",
+    "master": "nom-morfina",
+    "path": "01. SISTEMA NERVIOSO → Analgésicos opioides"
+  },
+  {
+    "line": 2569,
+    "nominal": "Oxicodona",
+    "master": "nom-oxicodona",
+    "path": "01. SISTEMA NERVIOSO → Analgésicos opioides"
+  },
+  {
+    "line": 2570,
+    "nominal": "Petidina",
+    "master": "nom-petidina",
+    "path": "01. SISTEMA NERVIOSO → Analgésicos opioides"
+  },
+  {
+    "line": 2571,
+    "nominal": "Tramadol",
+    "master": "nom-tramadol",
+    "path": "01. SISTEMA NERVIOSO → Analgésicos opioides"
+  },
+  {
+    "line": 2575,
+    "nominal": "Fenobarbital",
+    "master": "nom-fenobarbital",
+    "path": "01. SISTEMA NERVIOSO → Antiepilépticos → Barbitúricos y derivados"
+  },
+  {
+    "line": 2576,
+    "nominal": "Primidona",
+    "master": "nom-primidona",
+    "path": "01. SISTEMA NERVIOSO → Antiepilépticos → Barbitúricos y derivados"
+  },
+  {
+    "line": 2578,
+    "nominal": "Fenitoína",
+    "master": "nom-fenitoina",
+    "path": "01. SISTEMA NERVIOSO → Antiepilépticos → Hidantoínas"
+  },
+  {
+    "line": 2580,
+    "nominal": "Etosuximida",
+    "master": "nom-etosuximida",
+    "path": "01. SISTEMA NERVIOSO → Antiepilépticos → Succinimidas"
+  },
+  {
+    "line": 2582,
+    "nominal": "Clonazepam",
+    "master": "nom-clonazepam",
+    "path": "01. SISTEMA NERVIOSO → Antiepilépticos → Benzodiazepinas antiepilépticas"
+  },
+  {
+    "line": 2584,
+    "nominal": "Carbamazepina",
+    "master": "nom-carbamazepina",
+    "path": "01. SISTEMA NERVIOSO → Antiepilépticos → Carboxamidas"
+  },
+  {
+    "line": 2585,
+    "nominal": "Oxcarbazepina",
+    "master": "nom-oxcarbazepina",
+    "path": "01. SISTEMA NERVIOSO → Antiepilépticos → Carboxamidas"
+  },
+  {
+    "line": 2587,
+    "nominal": "Ácido valproico",
+    "master": "nom-acido-valproico",
+    "path": "01. SISTEMA NERVIOSO → Antiepilépticos → Derivados de ácidos grasos"
+  },
+  {
+    "line": 2588,
+    "nominal": "Valproato sódico",
+    "master": "nom-valproato-sodico",
+    "path": "01. SISTEMA NERVIOSO → Antiepilépticos → Derivados de ácidos grasos"
+  },
+  {
+    "line": 2590,
+    "nominal": "Gabapentina",
+    "master": "nom-gabapentina",
+    "path": "01. SISTEMA NERVIOSO → Antiepilépticos → Ligandos α2δ de canales de calcio"
+  },
+  {
+    "line": 2591,
+    "nominal": "Pregabalina",
+    "master": "nom-pregabalina",
+    "path": "01. SISTEMA NERVIOSO → Antiepilépticos → Ligandos α2δ de canales de calcio"
+  },
+  {
+    "line": 2593,
+    "nominal": "Lamotrigina",
+    "master": "nom-lamotrigina",
+    "path": "01. SISTEMA NERVIOSO → Antiepilépticos → Otros antiepilépticos"
+  },
+  {
+    "line": 2594,
+    "nominal": "Levetiracetam",
+    "master": "nom-levetiracetam",
+    "path": "01. SISTEMA NERVIOSO → Antiepilépticos → Otros antiepilépticos"
+  },
+  {
+    "line": 2595,
+    "nominal": "Topiramato",
+    "master": "nom-topiramato",
+    "path": "01. SISTEMA NERVIOSO → Antiepilépticos → Otros antiepilépticos"
+  },
+  {
+    "line": 2599,
+    "nominal": "Sumatriptán",
+    "master": "nom-sumatriptan",
+    "path": "01. SISTEMA NERVIOSO → Antimigrañosos → Tratamiento agudo específico"
+  },
+  {
+    "line": 2603,
+    "nominal": "Biperideno",
+    "master": "nom-biperideno",
+    "path": "01. SISTEMA NERVIOSO → Antiparkinsonianos → Anticolinérgicos"
+  },
+  {
+    "line": 2605,
+    "nominal": "Levodopa + carbidopa",
+    "master": "nom-levodopa-carbidopa",
+    "path": "01. SISTEMA NERVIOSO → Antiparkinsonianos → Dopa y derivados"
+  },
+  {
+    "line": 2607,
+    "nominal": "Pramipexol",
+    "master": "nom-pramipexol",
+    "path": "01. SISTEMA NERVIOSO → Antiparkinsonianos → Agonistas dopaminérgicos"
+  },
+  {
+    "line": 2609,
+    "nominal": "Selegilina",
+    "master": "nom-selegilina",
+    "path": "01. SISTEMA NERVIOSO → Antiparkinsonianos → Inhibidores de la monoaminooxidasa B"
+  },
+  {
+    "line": 2613,
+    "nominal": "Clorpromazina",
+    "master": "nom-clorpromazina",
+    "path": "01. SISTEMA NERVIOSO → Antipsicóticos → Primera generación"
+  },
+  {
+    "line": 2614,
+    "nominal": "Flufenazina",
+    "master": "nom-flufenazina",
+    "path": "01. SISTEMA NERVIOSO → Antipsicóticos → Primera generación"
+  },
+  {
+    "line": 2615,
+    "nominal": "Haloperidol",
+    "master": "nom-haloperidol",
+    "path": "01. SISTEMA NERVIOSO → Antipsicóticos → Primera generación"
+  },
+  {
+    "line": 2616,
+    "nominal": "Levomepromazina",
+    "master": "nom-levomepromazina",
+    "path": "01. SISTEMA NERVIOSO → Antipsicóticos → Primera generación"
+  },
+  {
+    "line": 2617,
+    "nominal": "Periciazina",
+    "master": "nom-periciazina",
+    "path": "01. SISTEMA NERVIOSO → Antipsicóticos → Primera generación"
+  },
+  {
+    "line": 2618,
+    "nominal": "Sulpirida",
+    "master": "nom-sulpirida",
+    "path": "01. SISTEMA NERVIOSO → Antipsicóticos → Primera generación"
+  },
+  {
+    "line": 2619,
+    "nominal": "Tioridazina",
+    "master": "nom-tioridazina",
+    "path": "01. SISTEMA NERVIOSO → Antipsicóticos → Primera generación"
+  },
+  {
+    "line": 2620,
+    "nominal": "Trifluoperazina",
+    "master": "nom-trifluoperazina",
+    "path": "01. SISTEMA NERVIOSO → Antipsicóticos → Primera generación"
+  },
+  {
+    "line": 2622,
+    "nominal": "Aripiprazol",
+    "master": "nom-aripiprazol",
+    "path": "01. SISTEMA NERVIOSO → Antipsicóticos → Segunda generación"
+  },
+  {
+    "line": 2623,
+    "nominal": "Clozapina",
+    "master": "nom-clozapina",
+    "path": "01. SISTEMA NERVIOSO → Antipsicóticos → Segunda generación"
+  },
+  {
+    "line": 2624,
+    "nominal": "Olanzapina",
+    "master": "nom-olanzapina",
+    "path": "01. SISTEMA NERVIOSO → Antipsicóticos → Segunda generación"
+  },
+  {
+    "line": 2625,
+    "nominal": "Quetiapina",
+    "master": "nom-quetiapina",
+    "path": "01. SISTEMA NERVIOSO → Antipsicóticos → Segunda generación"
+  },
+  {
+    "line": 2626,
+    "nominal": "Risperidona",
+    "master": "nom-risperidona",
+    "path": "01. SISTEMA NERVIOSO → Antipsicóticos → Segunda generación"
+  },
+  {
+    "line": 2630,
+    "nominal": "Amitriptilina",
+    "master": "nom-amitriptilina",
+    "path": "01. SISTEMA NERVIOSO → Antidepresivos → Tricíclicos"
+  },
+  {
+    "line": 2631,
+    "nominal": "Clomipramina",
+    "master": "nom-clomipramina",
+    "path": "01. SISTEMA NERVIOSO → Antidepresivos → Tricíclicos"
+  },
+  {
+    "line": 2633,
+    "nominal": "Escitalopram",
+    "master": "nom-escitalopram",
+    "path": "01. SISTEMA NERVIOSO → Antidepresivos → Inhibidores selectivos de la recaptación de serotonina"
+  },
+  {
+    "line": 2634,
+    "nominal": "Fluoxetina",
+    "master": "nom-fluoxetina",
+    "path": "01. SISTEMA NERVIOSO → Antidepresivos → Inhibidores selectivos de la recaptación de serotonina"
+  },
+  {
+    "line": 2635,
+    "nominal": "Paroxetina",
+    "master": "nom-paroxetina",
+    "path": "01. SISTEMA NERVIOSO → Antidepresivos → Inhibidores selectivos de la recaptación de serotonina"
+  },
+  {
+    "line": 2636,
+    "nominal": "Sertralina",
+    "master": "nom-sertralina",
+    "path": "01. SISTEMA NERVIOSO → Antidepresivos → Inhibidores selectivos de la recaptación de serotonina"
+  },
+  {
+    "line": 2638,
+    "nominal": "Venlafaxina",
+    "master": "nom-venlafaxina",
+    "path": "01. SISTEMA NERVIOSO → Antidepresivos → Inhibidores de la recaptación de serotonina y noradrenalina"
+  },
+  {
+    "line": 2640,
+    "nominal": "Mirtazapina",
+    "master": "nom-mirtazapina",
+    "path": "01. SISTEMA NERVIOSO → Antidepresivos → Otros antidepresivos"
+  },
+  {
+    "line": 2644,
+    "nominal": "Alprazolam",
+    "master": "nom-alprazolam",
+    "path": "01. SISTEMA NERVIOSO → Ansiolíticos → Benzodiazepinas"
+  },
+  {
+    "line": 2645,
+    "nominal": "Clobazam",
+    "master": "nom-clobazam",
+    "path": "01. SISTEMA NERVIOSO → Ansiolíticos → Benzodiazepinas"
+  },
+  {
+    "line": 2646,
+    "nominal": "Diazepam",
+    "master": "nom-diazepam",
+    "path": "01. SISTEMA NERVIOSO → Ansiolíticos → Benzodiazepinas"
+  },
+  {
+    "line": 2650,
+    "nominal": "Lorazepam",
+    "master": "nom-lorazepam",
+    "path": "01. SISTEMA NERVIOSO → Hipnóticos y sedantes → Benzodiazepinas"
+  },
+  {
+    "line": 2651,
+    "nominal": "Midazolam",
+    "master": "nom-midazolam",
+    "path": "01. SISTEMA NERVIOSO → Hipnóticos y sedantes → Benzodiazepinas"
+  },
+  {
+    "line": 2653,
+    "nominal": "Zolpidem",
+    "master": "nom-zolpidem",
+    "path": "01. SISTEMA NERVIOSO → Hipnóticos y sedantes → Fármacos relacionados con benzodiazepinas"
+  },
+  {
+    "line": 2657,
+    "nominal": "Carbonato de litio",
+    "master": "nom-carbonato-de-litio",
+    "path": "01. SISTEMA NERVIOSO → Estabilizadores del ánimo → Sales de litio"
+  },
+  {
+    "line": 2661,
+    "nominal": "Metilfenidato",
+    "master": "nom-metilfenidato",
+    "path": "01. SISTEMA NERVIOSO → Psicoestimulantes y medicamentos para TDAH → Psicoestimulantes centrales"
+  },
+  {
+    "line": 2665,
+    "nominal": "Donepezilo",
+    "master": "nom-donepezilo",
+    "path": "01. SISTEMA NERVIOSO → Medicamentos para trastornos neurocognitivos → Inhibidores centrales de la acetilcolinesterasa"
+  },
+  {
+    "line": 2666,
+    "nominal": "Galantamina",
+    "master": "nom-galantamina",
+    "path": "01. SISTEMA NERVIOSO → Medicamentos para trastornos neurocognitivos → Inhibidores centrales de la acetilcolinesterasa"
+  },
+  {
+    "line": 2667,
+    "nominal": "Rivastigmina",
+    "master": "nom-rivastigmina",
+    "path": "01. SISTEMA NERVIOSO → Medicamentos para trastornos neurocognitivos → Inhibidores centrales de la acetilcolinesterasa"
+  },
+  {
+    "line": 2669,
+    "nominal": "Memantina",
+    "master": "nom-memantina",
+    "path": "01. SISTEMA NERVIOSO → Medicamentos para trastornos neurocognitivos → Antagonistas NMDA"
+  },
+  {
+    "line": 2673,
+    "nominal": "Disulfiram",
+    "master": "nom-disulfiram",
+    "path": "01. SISTEMA NERVIOSO → Medicamentos para dependencia → Dependencia del alcohol"
+  },
+  {
+    "line": 2675,
+    "nominal": "Vareniclina",
+    "master": "nom-vareniclina",
+    "path": "01. SISTEMA NERVIOSO → Medicamentos para dependencia → Dependencia de nicotina"
+  },
+  {
+    "line": 2679,
+    "nominal": "Dimenhidrinato",
+    "master": "nom-dimenhidrinato",
+    "path": "01. SISTEMA NERVIOSO → Antivertiginosos → Antihistamínicos antivertiginosos"
+  },
+  {
+    "line": 2691,
+    "nominal": "Diltiazem",
+    "master": "nom-diltiazem",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antianginosos → Bloqueadores de canales de calcio"
+  },
+  {
+    "line": 2692,
+    "nominal": "Verapamilo",
+    "master": "nom-verapamilo",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antianginosos → Bloqueadores de canales de calcio"
+  },
+  {
+    "line": 2694,
+    "nominal": "Dinitrato de isosorbida",
+    "master": "nom-dinitrato-de-isosorbida",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antianginosos → Nitratos orgánicos"
+  },
+  {
+    "line": 2695,
+    "nominal": "Mononitrato de isosorbida",
+    "master": "nom-mononitrato-de-isosorbida",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antianginosos → Nitratos orgánicos"
+  },
+  {
+    "line": 2696,
+    "nominal": "Trinitrato de glicerilo",
+    "master": "nom-trinitrato-de-glicerilo",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antianginosos → Nitratos orgánicos"
+  },
+  {
+    "line": 2700,
+    "nominal": "Propafenona",
+    "master": "nom-propafenona",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antiarrítmicos → Clase I"
+  },
+  {
+    "line": 2702,
+    "nominal": "Amiodarona",
+    "master": "nom-amiodarona",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antiarrítmicos → Clase III"
+  },
+  {
+    "line": 2704,
+    "nominal": "Adenosina",
+    "master": "nom-adenosina",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antiarrítmicos → Otros antiarrítmicos"
+  },
+  {
+    "line": 2708,
+    "nominal": "Captopril",
+    "master": "nom-captopril",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antihipertensivos → Inhibidores de la enzima convertidora de angiotensina"
+  },
+  {
+    "line": 2709,
+    "nominal": "Enalapril",
+    "master": "nom-enalapril",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antihipertensivos → Inhibidores de la enzima convertidora de angiotensina"
+  },
+  {
+    "line": 2711,
+    "nominal": "Irbesartán",
+    "master": "nom-irbesartan",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antihipertensivos → Antagonistas de los receptores de angiotensina II"
+  },
+  {
+    "line": 2712,
+    "nominal": "Losartán",
+    "master": "nom-losartan",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antihipertensivos → Antagonistas de los receptores de angiotensina II"
+  },
+  {
+    "line": 2714,
+    "nominal": "Amlodipino",
+    "master": "nom-amlodipino",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antihipertensivos → Bloqueadores de canales de calcio"
+  },
+  {
+    "line": 2715,
+    "nominal": "Nifedipino",
+    "master": "nom-nifedipino",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antihipertensivos → Bloqueadores de canales de calcio"
+  },
+  {
+    "line": 2717,
+    "nominal": "Atenolol",
+    "master": "nom-atenolol",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antihipertensivos → Betabloqueadores"
+  },
+  {
+    "line": 2718,
+    "nominal": "Bisoprolol",
+    "master": "nom-bisoprolol",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antihipertensivos → Betabloqueadores"
+  },
+  {
+    "line": 2719,
+    "nominal": "Carvedilol",
+    "master": "nom-carvedilol",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antihipertensivos → Betabloqueadores"
+  },
+  {
+    "line": 2720,
+    "nominal": "Labetalol",
+    "master": "nom-labetalol",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antihipertensivos → Betabloqueadores"
+  },
+  {
+    "line": 2721,
+    "nominal": "Propranolol",
+    "master": "nom-propranolol",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antihipertensivos → Betabloqueadores"
+  },
+  {
+    "line": 2722,
+    "nominal": "Timolol",
+    "master": "nom-timolol",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antihipertensivos → Betabloqueadores"
+  },
+  {
+    "line": 2724,
+    "nominal": "Metildopa",
+    "master": "nom-metildopa",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antihipertensivos → Agonistas alfa-2 centrales"
+  },
+  {
+    "line": 2726,
+    "nominal": "Nitroprusiato sódico",
+    "master": "nom-nitroprusiato-sodico",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antihipertensivos → Vasodilatadores de uso hospitalario"
+  },
+  {
+    "line": 2729,
+    "nominal": "Digoxina",
+    "master": "nom-digoxina",
+    "path": "02. SISTEMA CARDIOVASCULAR → Glucósidos cardiotónicos"
+  },
+  {
+    "line": 2733,
+    "nominal": "Dobutamina",
+    "master": "nom-dobutamina",
+    "path": "02. SISTEMA CARDIOVASCULAR → Inotrópicos y vasopresores → Agonistas adrenérgicos"
+  },
+  {
+    "line": 2734,
+    "nominal": "Dopamina",
+    "master": "nom-dopamina",
+    "path": "02. SISTEMA CARDIOVASCULAR → Inotrópicos y vasopresores → Agonistas adrenérgicos"
+  },
+  {
+    "line": 2735,
+    "nominal": "Epinefrina",
+    "master": "nom-epinefrina",
+    "path": "02. SISTEMA CARDIOVASCULAR → Inotrópicos y vasopresores → Agonistas adrenérgicos"
+  },
+  {
+    "line": 2736,
+    "nominal": "Etilefrina",
+    "master": "nom-etilefrina",
+    "path": "02. SISTEMA CARDIOVASCULAR → Inotrópicos y vasopresores → Agonistas adrenérgicos"
+  },
+  {
+    "line": 2737,
+    "nominal": "Norepinefrina",
+    "master": "nom-norepinefrina",
+    "path": "02. SISTEMA CARDIOVASCULAR → Inotrópicos y vasopresores → Agonistas adrenérgicos"
+  },
+  {
+    "line": 2739,
+    "nominal": "Vasopresina",
+    "master": "nom-vasopresina",
+    "path": "02. SISTEMA CARDIOVASCULAR → Inotrópicos y vasopresores → Vasopresina y análogos"
+  },
+  {
+    "line": 2743,
+    "nominal": "Ácido acetilsalicílico",
+    "master": "nom-acido-acetilsalicilico",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antitrombóticos → Antiagregantes plaquetarios"
+  },
+  {
+    "line": 2744,
+    "nominal": "Clopidogrel",
+    "master": "nom-clopidogrel",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antitrombóticos → Antiagregantes plaquetarios"
+  },
+  {
+    "line": 2746,
+    "nominal": "Dalteparina",
+    "master": "nom-dalteparina",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antitrombóticos → Anticoagulantes parenterales"
+  },
+  {
+    "line": 2747,
+    "nominal": "Enoxaparina",
+    "master": "nom-enoxaparina",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antitrombóticos → Anticoagulantes parenterales"
+  },
+  {
+    "line": 2748,
+    "nominal": "Heparina sódica",
+    "master": "nom-heparina-sodica",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antitrombóticos → Anticoagulantes parenterales"
+  },
+  {
+    "line": 2750,
+    "nominal": "Dabigatrán etexilato",
+    "master": "nom-dabigatran-etexilato",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antitrombóticos → Anticoagulantes orales"
+  },
+  {
+    "line": 2751,
+    "nominal": "Warfarina",
+    "master": "nom-warfarina",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antitrombóticos → Anticoagulantes orales"
+  },
+  {
+    "line": 2753,
+    "nominal": "Alteplasa",
+    "master": "nom-alteplasa",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antitrombóticos → Fibrinolíticos"
+  },
+  {
+    "line": 2754,
+    "nominal": "Estreptoquinasa",
+    "master": "nom-estreptoquinasa",
+    "path": "02. SISTEMA CARDIOVASCULAR → Antitrombóticos → Fibrinolíticos"
+  },
+  {
+    "line": 2758,
+    "nominal": "Ácido tranexámico",
+    "master": "nom-acido-tranexamico",
+    "path": "02. SISTEMA CARDIOVASCULAR → Hemostáticos y reversores → Antifibrinolíticos"
+  },
+  {
+    "line": 2760,
+    "nominal": "Fitomenadiona",
+    "master": "nom-fitomenadiona",
+    "path": "02. SISTEMA CARDIOVASCULAR → Hemostáticos y reversores → Vitamina K"
+  },
+  {
+    "line": 2762,
+    "nominal": "Protamina",
+    "master": "nom-protamina",
+    "path": "02. SISTEMA CARDIOVASCULAR → Hemostáticos y reversores → Reversor de heparina"
+  },
+  {
+    "line": 2766,
+    "nominal": "Atorvastatina",
+    "master": "nom-atorvastatina",
+    "path": "02. SISTEMA CARDIOVASCULAR → Hipolipemiantes → Estatinas"
+  },
+  {
+    "line": 2767,
+    "nominal": "Simvastatina",
+    "master": "nom-simvastatina",
+    "path": "02. SISTEMA CARDIOVASCULAR → Hipolipemiantes → Estatinas"
+  },
+  {
+    "line": 2769,
+    "nominal": "Gemfibrozilo",
+    "master": "nom-gemfibrozilo",
+    "path": "02. SISTEMA CARDIOVASCULAR → Hipolipemiantes → Fibratos"
+  },
+  {
+    "line": 2773,
+    "nominal": "Nimodipino",
+    "master": "nom-nimodipino",
+    "path": "02. SISTEMA CARDIOVASCULAR → Otros cardiovasculares → Bloqueadores de canales de calcio con uso neurológico"
+  },
+  {
+    "line": 2775,
+    "nominal": "Alprostadil",
+    "master": "nom-alprostadil",
+    "path": "02. SISTEMA CARDIOVASCULAR → Otros cardiovasculares → Prostaglandinas vasodilatadoras"
+  },
+  {
+    "line": 2787,
+    "nominal": "Salbutamol",
+    "master": "nom-salbutamol",
+    "path": "03. SISTEMA RESPIRATORIO → Broncodilatadores → Agonistas beta-2 de acción corta"
+  },
+  {
+    "line": 2789,
+    "nominal": "Salmeterol",
+    "master": "nom-salmeterol",
+    "path": "03. SISTEMA RESPIRATORIO → Broncodilatadores → Agonistas beta-2 de acción prolongada"
+  },
+  {
+    "line": 2791,
+    "nominal": "Ipratropio",
+    "master": "nom-ipratropio",
+    "path": "03. SISTEMA RESPIRATORIO → Broncodilatadores → Antimuscarínicos de acción corta"
+  },
+  {
+    "line": 2793,
+    "nominal": "Aminofilina",
+    "master": "nom-aminofilina",
+    "path": "03. SISTEMA RESPIRATORIO → Broncodilatadores → Metilxantinas"
+  },
+  {
+    "line": 2794,
+    "nominal": "Teofilina",
+    "master": "nom-teofilina",
+    "path": "03. SISTEMA RESPIRATORIO → Broncodilatadores → Metilxantinas"
+  },
+  {
+    "line": 2797,
+    "nominal": "Beclometasona",
+    "master": "nom-beclometasona",
+    "path": "03. SISTEMA RESPIRATORIO → Corticoides inhalados"
+  },
+  {
+    "line": 2798,
+    "nominal": "Budesonida",
+    "master": "nom-budesonida",
+    "path": "03. SISTEMA RESPIRATORIO → Corticoides inhalados"
+  },
+  {
+    "line": 2799,
+    "nominal": "Fluticasona",
+    "master": "nom-fluticasona",
+    "path": "03. SISTEMA RESPIRATORIO → Corticoides inhalados"
+  },
+  {
+    "line": 2802,
+    "nominal": "Fluticasona + salmeterol",
+    "master": "nom-fluticasona-salmeterol",
+    "path": "03. SISTEMA RESPIRATORIO → Combinaciones inhaladas"
+  },
+  {
+    "line": 2805,
+    "nominal": "Dextrometorfano",
+    "master": "nom-dextrometorfano",
+    "path": "03. SISTEMA RESPIRATORIO → Antitusivos"
+  },
+  {
+    "line": 2808,
+    "nominal": "Acetilcisteína",
+    "master": "nom-acetilcisteina",
+    "path": "03. SISTEMA RESPIRATORIO → Mucolíticos"
+  },
+  {
+    "line": 2811,
+    "nominal": "Oximetazolina",
+    "master": "nom-oximetazolina",
+    "path": "03. SISTEMA RESPIRATORIO → Descongestionantes nasales"
+  },
+  {
+    "line": 2822,
+    "nominal": "Aluminio hidróxido + magnesio hidróxido",
+    "master": "nom-aluminio-hidroxido-magnesio-hidroxido",
+    "path": "04. SISTEMA DIGESTIVO → Antiácidos"
+  },
+  {
+    "line": 2825,
+    "nominal": "Bismuto subsalicilato",
+    "master": "nom-bismuto-subsalicilato",
+    "path": "04. SISTEMA DIGESTIVO → Protectores de mucosa"
+  },
+  {
+    "line": 2829,
+    "nominal": "Esomeprazol",
+    "master": "nom-esomeprazol",
+    "path": "04. SISTEMA DIGESTIVO → Antiulcerosos y antisecretores → Inhibidores de la bomba de protones"
+  },
+  {
+    "line": 2830,
+    "nominal": "Omeprazol",
+    "master": "nom-omeprazol",
+    "path": "04. SISTEMA DIGESTIVO → Antiulcerosos y antisecretores → Inhibidores de la bomba de protones"
+  },
+  {
+    "line": 2831,
+    "nominal": "Pantoprazol",
+    "master": "nom-pantoprazol",
+    "path": "04. SISTEMA DIGESTIVO → Antiulcerosos y antisecretores → Inhibidores de la bomba de protones"
+  },
+  {
+    "line": 2833,
+    "nominal": "Famotidina",
+    "master": "nom-famotidina",
+    "path": "04. SISTEMA DIGESTIVO → Antiulcerosos y antisecretores → Antagonistas H2"
+  },
+  {
+    "line": 2837,
+    "nominal": "Domperidona",
+    "master": "nom-domperidona",
+    "path": "04. SISTEMA DIGESTIVO → Antieméticos y procinéticos → Antagonistas dopaminérgicos"
+  },
+  {
+    "line": 2838,
+    "nominal": "Metoclopramida",
+    "master": "nom-metoclopramida",
+    "path": "04. SISTEMA DIGESTIVO → Antieméticos y procinéticos → Antagonistas dopaminérgicos"
+  },
+  {
+    "line": 2840,
+    "nominal": "Ondansetrón",
+    "master": "nom-ondansetron",
+    "path": "04. SISTEMA DIGESTIVO → Antieméticos y procinéticos → Antagonistas serotoninérgicos 5-HT3"
+  },
+  {
+    "line": 2844,
+    "nominal": "Mesalazina",
+    "master": "nom-mesalazina",
+    "path": "04. SISTEMA DIGESTIVO → Antiinflamatorios intestinales → Aminosalicilatos"
+  },
+  {
+    "line": 2847,
+    "nominal": "Escopolamina butilbromuro",
+    "master": "nom-escopolamina-butilbromuro",
+    "path": "04. SISTEMA DIGESTIVO → Antiespasmódicos"
+  },
+  {
+    "line": 2848,
+    "nominal": "Trimebutina",
+    "master": "nom-trimebutina",
+    "path": "04. SISTEMA DIGESTIVO → Antiespasmódicos"
+  },
+  {
+    "line": 2851,
+    "nominal": "Bisacodilo",
+    "master": "nom-bisacodilo",
+    "path": "04. SISTEMA DIGESTIVO → Laxantes"
+  },
+  {
+    "line": 2852,
+    "nominal": "Glicerol",
+    "master": "nom-glicerol",
+    "path": "04. SISTEMA DIGESTIVO → Laxantes"
+  },
+  {
+    "line": 2853,
+    "nominal": "Lactulosa",
+    "master": "nom-lactulosa",
+    "path": "04. SISTEMA DIGESTIVO → Laxantes"
+  },
+  {
+    "line": 2854,
+    "nominal": "Macrogol 3350 + potasio cloruro + sodio cloruro + sodio bicarbonato con o sin sodio sulfato",
+    "master": "nom-macrogol-electrolitos",
+    "path": "04. SISTEMA DIGESTIVO → Laxantes"
+  },
+  {
+    "line": 2857,
+    "nominal": "Loperamida",
+    "master": "nom-loperamida",
+    "path": "04. SISTEMA DIGESTIVO → Antidiarreicos"
+  },
+  {
+    "line": 2860,
+    "nominal": "Simeticona",
+    "master": "nom-simeticona",
+    "path": "04. SISTEMA DIGESTIVO → Antiflatulentos"
+  },
+  {
+    "line": 2863,
+    "nominal": "Monoetanolamina oleato",
+    "master": "nom-monoetanolamina-oleato",
+    "path": "04. SISTEMA DIGESTIVO → Esclerosantes"
+  },
+  {
+    "line": 2875,
+    "nominal": "Furosemida",
+    "master": "nom-furosemida",
+    "path": "05. SISTEMA URINARIO/RENAL → Diuréticos → Diuréticos de asa"
+  },
+  {
+    "line": 2877,
+    "nominal": "Clortalidona",
+    "master": "nom-clortalidona",
+    "path": "05. SISTEMA URINARIO/RENAL → Diuréticos → Tiazidas y relacionados"
+  },
+  {
+    "line": 2878,
+    "nominal": "Hidroclorotiazida",
+    "master": "nom-hidroclorotiazida",
+    "path": "05. SISTEMA URINARIO/RENAL → Diuréticos → Tiazidas y relacionados"
+  },
+  {
+    "line": 2880,
+    "nominal": "Espironolactona",
+    "master": "nom-espironolactona",
+    "path": "05. SISTEMA URINARIO/RENAL → Diuréticos → Ahorradores de potasio"
+  },
+  {
+    "line": 2882,
+    "nominal": "Acetazolamida",
+    "master": "nom-acetazolamida",
+    "path": "05. SISTEMA URINARIO/RENAL → Diuréticos → Inhibidores de la anhidrasa carbónica"
+  },
+  {
+    "line": 2883,
+    "nominal": "Dorzolamida",
+    "master": "nom-dorzolamida",
+    "path": "05. SISTEMA URINARIO/RENAL → Diuréticos → Inhibidores de la anhidrasa carbónica"
+  },
+  {
+    "line": 2885,
+    "nominal": "Manitol",
+    "master": "nom-manitol",
+    "path": "05. SISTEMA URINARIO/RENAL → Diuréticos → Osmóticos"
+  },
+  {
+    "line": 2889,
+    "nominal": "Oxibutinina",
+    "master": "nom-oxibutinina",
+    "path": "05. SISTEMA URINARIO/RENAL → Trastornos vesicales → Antimuscarínicos urinarios"
+  },
+  {
+    "line": 2893,
+    "nominal": "Tamsulosina",
+    "master": "nom-tamsulosina",
+    "path": "05. SISTEMA URINARIO/RENAL → Hiperplasia benigna de próstata → Antagonistas alfa-1"
+  },
+  {
+    "line": 2895,
+    "nominal": "Finasterida",
+    "master": "nom-finasterida",
+    "path": "05. SISTEMA URINARIO/RENAL → Hiperplasia benigna de próstata → Inhibidores de la 5-alfa reductasa"
+  },
+  {
+    "line": 2898,
+    "nominal": "Potasio citrato",
+    "master": "nom-potasio-citrato",
+    "path": "05. SISTEMA URINARIO/RENAL → Litiasis urinaria y alcalinización"
+  },
+  {
+    "line": 2902,
+    "nominal": "Solución concentrada para hemodiálisis ácida",
+    "master": "nom-solucion-concentrada-para-hemodialisis-acida",
+    "path": "05. SISTEMA URINARIO/RENAL → Diálisis → Soluciones para hemodiálisis"
+  },
+  {
+    "line": 2903,
+    "nominal": "Solución concentrada para hemodiálisis con bicarbonato",
+    "master": "nom-solucion-concentrada-para-hemodialisis-con-bicarbonato",
+    "path": "05. SISTEMA URINARIO/RENAL → Diálisis → Soluciones para hemodiálisis"
+  },
+  {
+    "line": 2905,
+    "nominal": "Solución para diálisis peritoneal automatizada",
+    "master": "nom-solucion-para-dialisis-peritoneal-automatizada",
+    "path": "05. SISTEMA URINARIO/RENAL → Diálisis → Soluciones para diálisis peritoneal"
+  },
+  {
+    "line": 2906,
+    "nominal": "Solución para diálisis peritoneal con sistema de desconexión con doble bolsa",
+    "master": "nom-solucion-para-dialisis-peritoneal-con-sistema-de-desconexion-con-doble-bolsa",
+    "path": "05. SISTEMA URINARIO/RENAL → Diálisis → Soluciones para diálisis peritoneal"
+  },
+  {
+    "line": 2909,
+    "nominal": "Sevelámero",
+    "master": "nom-sevelamero",
+    "path": "05. SISTEMA URINARIO/RENAL → Manejo de hiperfosfatemia en enfermedad renal crónica"
+  },
+  {
+    "line": 2912,
+    "nominal": "Epoetina alfa",
+    "master": "nom-epoetina-alfa",
+    "path": "05. SISTEMA URINARIO/RENAL → Anemia asociada a enfermedad renal crónica"
+  },
+  {
+    "line": 2913,
+    "nominal": "Hierro sacarato",
+    "master": "nom-hierro-sacarato",
+    "path": "05. SISTEMA URINARIO/RENAL → Anemia asociada a enfermedad renal crónica"
+  },
+  {
+    "line": 2916,
+    "nominal": "Desmopresina",
+    "master": "nom-desmopresina",
+    "path": "05. SISTEMA URINARIO/RENAL → Trastornos de la hormona antidiurética"
+  },
+  {
+    "line": 2927,
+    "nominal": "Betametasona",
+    "master": "nom-betametasona",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Corticoides sistémicos"
+  },
+  {
+    "line": 2928,
+    "nominal": "Dexametasona",
+    "master": "nom-dexametasona",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Corticoides sistémicos"
+  },
+  {
+    "line": 2929,
+    "nominal": "Fludrocortisona",
+    "master": "nom-fludrocortisona",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Corticoides sistémicos"
+  },
+  {
+    "line": 2930,
+    "nominal": "Hidrocortisona",
+    "master": "nom-hidrocortisona",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Corticoides sistémicos"
+  },
+  {
+    "line": 2931,
+    "nominal": "Metilprednisolona",
+    "master": "nom-metilprednisolona",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Corticoides sistémicos"
+  },
+  {
+    "line": 2932,
+    "nominal": "Prednisolona",
+    "master": "nom-prednisolona",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Corticoides sistémicos"
+  },
+  {
+    "line": 2933,
+    "nominal": "Prednisona",
+    "master": "nom-prednisona",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Corticoides sistémicos"
+  },
+  {
+    "line": 2934,
+    "nominal": "Triamcinolona",
+    "master": "nom-triamcinolona",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Corticoides sistémicos"
+  },
+  {
+    "line": 2938,
+    "nominal": "Insulina humana regular",
+    "master": "nom-insulina-humana",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Antidiabéticos → Insulinas de acción rápida o corta"
+  },
+  {
+    "line": 2940,
+    "nominal": "Insulina humana isófana NPH",
+    "master": "nom-insulina-humana",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Antidiabéticos → Insulinas de acción intermedia"
+  },
+  {
+    "line": 2942,
+    "nominal": "Insulina glargina",
+    "master": "nom-insulina-glargina",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Antidiabéticos → Insulinas de acción prolongada"
+  },
+  {
+    "line": 2944,
+    "nominal": "Metformina",
+    "master": "nom-metformina",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Antidiabéticos → Biguanidas"
+  },
+  {
+    "line": 2946,
+    "nominal": "Glibenclamida",
+    "master": "nom-glibenclamida",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Antidiabéticos → Sulfonilureas"
+  },
+  {
+    "line": 2947,
+    "nominal": "Gliclazida",
+    "master": "nom-gliclazida",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Antidiabéticos → Sulfonilureas"
+  },
+  {
+    "line": 2949,
+    "nominal": "Dapagliflozina",
+    "master": "nom-dapagliflozina",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Antidiabéticos → Inhibidores de SGLT2"
+  },
+  {
+    "line": 2950,
+    "nominal": "Empagliflozina",
+    "master": "nom-empagliflozina",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Antidiabéticos → Inhibidores de SGLT2"
+  },
+  {
+    "line": 2953,
+    "nominal": "Levotiroxina",
+    "master": "nom-levotiroxina",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Hormonas tiroideas"
+  },
+  {
+    "line": 2956,
+    "nominal": "Tiamazol",
+    "master": "nom-tiamazol",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Antitiroideos"
+  },
+  {
+    "line": 2959,
+    "nominal": "Bromocriptina",
+    "master": "nom-bromocriptina",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Inhibidores de prolactina"
+  },
+  {
+    "line": 2960,
+    "nominal": "Cabergolina",
+    "master": "nom-cabergolina",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Inhibidores de prolactina"
+  },
+  {
+    "line": 2964,
+    "nominal": "Calcitriol",
+    "master": "nom-calcitriol",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Metabolismo del calcio y hueso → Vitamina D y análogos"
+  },
+  {
+    "line": 2965,
+    "nominal": "Ergocalciferol",
+    "master": "nom-ergocalciferol",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Metabolismo del calcio y hueso → Vitamina D y análogos"
+  },
+  {
+    "line": 2967,
+    "nominal": "Calcio carbonato",
+    "master": "nom-calcio-carbonato",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Metabolismo del calcio y hueso → Sales de calcio"
+  },
+  {
+    "line": 2970,
+    "nominal": "Ácido ascórbico",
+    "master": "nom-acido-ascorbico",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Vitaminas hidrosolubles"
+  },
+  {
+    "line": 2971,
+    "nominal": "Ácido fólico",
+    "master": "nom-acido-folico",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Vitaminas hidrosolubles"
+  },
+  {
+    "line": 2972,
+    "nominal": "Hidroxocobalamina",
+    "master": "nom-hidroxocobalamina",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Vitaminas hidrosolubles"
+  },
+  {
+    "line": 2973,
+    "nominal": "Nicotinamida",
+    "master": "nom-nicotinamida",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Vitaminas hidrosolubles"
+  },
+  {
+    "line": 2974,
+    "nominal": "Piridoxina",
+    "master": "nom-piridoxina",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Vitaminas hidrosolubles"
+  },
+  {
+    "line": 2975,
+    "nominal": "Tiamina",
+    "master": "nom-tiamina",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Vitaminas hidrosolubles"
+  },
+  {
+    "line": 2978,
+    "nominal": "Zinc sulfato",
+    "master": "nom-zinc-sulfato",
+    "path": "06. SISTEMA ENDOCRINO Y METABÓLICO → Minerales y suplementación"
+  },
+  {
+    "line": 2989,
+    "nominal": "Diclofenaco",
+    "master": "nom-diclofenaco",
+    "path": "07. SISTEMA ESQUELÉTICO → Antiinflamatorios no esteroideos"
+  },
+  {
+    "line": 2990,
+    "nominal": "Ibuprofeno",
+    "master": "nom-ibuprofeno",
+    "path": "07. SISTEMA ESQUELÉTICO → Antiinflamatorios no esteroideos"
+  },
+  {
+    "line": 2991,
+    "nominal": "Indometacina",
+    "master": "nom-indometacina",
+    "path": "07. SISTEMA ESQUELÉTICO → Antiinflamatorios no esteroideos"
+  },
+  {
+    "line": 2992,
+    "nominal": "Naproxeno",
+    "master": "nom-naproxeno",
+    "path": "07. SISTEMA ESQUELÉTICO → Antiinflamatorios no esteroideos"
+  },
+  {
+    "line": 2996,
+    "nominal": "Alopurinol",
+    "master": "nom-alopurinol",
+    "path": "07. SISTEMA ESQUELÉTICO → Antigotosos → Inhibidores de la xantina oxidasa"
+  },
+  {
+    "line": 2998,
+    "nominal": "Colchicina",
+    "master": "nom-colchicina",
+    "path": "07. SISTEMA ESQUELÉTICO → Antigotosos → Antiinflamatorios antigotosos"
+  },
+  {
+    "line": 3001,
+    "nominal": "Aurotiomalato sódico",
+    "master": "nom-aurotiomalato-sodico",
+    "path": "07. SISTEMA ESQUELÉTICO → Antirreumáticos modificadores de la enfermedad convencionales"
+  },
+  {
+    "line": 3002,
+    "nominal": "Cloroquina",
+    "master": "nom-cloroquina",
+    "path": "07. SISTEMA ESQUELÉTICO → Antirreumáticos modificadores de la enfermedad convencionales"
+  },
+  {
+    "line": 3003,
+    "nominal": "Hidroxicloroquina",
+    "master": "nom-hidroxicloroquina",
+    "path": "07. SISTEMA ESQUELÉTICO → Antirreumáticos modificadores de la enfermedad convencionales"
+  },
+  {
+    "line": 3004,
+    "nominal": "Leflunomida",
+    "master": "nom-leflunomida",
+    "path": "07. SISTEMA ESQUELÉTICO → Antirreumáticos modificadores de la enfermedad convencionales"
+  },
+  {
+    "line": 3005,
+    "nominal": "Metotrexato",
+    "master": "nom-metotrexato",
+    "path": "07. SISTEMA ESQUELÉTICO → Antirreumáticos modificadores de la enfermedad convencionales"
+  },
+  {
+    "line": 3006,
+    "nominal": "Penicilamina",
+    "master": "nom-penicilamina",
+    "path": "07. SISTEMA ESQUELÉTICO → Antirreumáticos modificadores de la enfermedad convencionales"
+  },
+  {
+    "line": 3007,
+    "nominal": "Sulfasalazina",
+    "master": "nom-sulfasalazina",
+    "path": "07. SISTEMA ESQUELÉTICO → Antirreumáticos modificadores de la enfermedad convencionales"
+  },
+  {
+    "line": 3010,
+    "nominal": "Adalimumab",
+    "master": "nom-adalimumab",
+    "path": "07. SISTEMA ESQUELÉTICO → Antirreumáticos biológicos"
+  },
+  {
+    "line": 3011,
+    "nominal": "Etanercept",
+    "master": "nom-etanercept",
+    "path": "07. SISTEMA ESQUELÉTICO → Antirreumáticos biológicos"
+  },
+  {
+    "line": 3012,
+    "nominal": "Infliximab",
+    "master": "nom-infliximab",
+    "path": "07. SISTEMA ESQUELÉTICO → Antirreumáticos biológicos"
+  },
+  {
+    "line": 3015,
+    "nominal": "Ácido alendrónico",
+    "master": "nom-acido-alendronico",
+    "path": "07. SISTEMA ESQUELÉTICO → Osteoporosis y enfermedad ósea metabólica"
+  },
+  {
+    "line": 3016,
+    "nominal": "Ácido zoledrónico",
+    "master": "nom-acido-zoledronico",
+    "path": "07. SISTEMA ESQUELÉTICO → Osteoporosis y enfermedad ósea metabólica"
+  },
+  {
+    "line": 3017,
+    "nominal": "Pamidronato",
+    "master": "nom-pamidronato",
+    "path": "07. SISTEMA ESQUELÉTICO → Osteoporosis y enfermedad ósea metabólica"
+  },
+  {
+    "line": 3028,
+    "nominal": "Baclofeno",
+    "master": "nom-baclofeno",
+    "path": "08. SISTEMA MUSCULAR → Relajantes musculares de acción central"
+  },
+  {
+    "line": 3029,
+    "nominal": "Orfenadrina",
+    "master": "nom-orfenadrina",
+    "path": "08. SISTEMA MUSCULAR → Relajantes musculares de acción central"
+  },
+  {
+    "line": 3032,
+    "nominal": "Atracurio",
+    "master": "nom-atracurio",
+    "path": "08. SISTEMA MUSCULAR → Bloqueadores neuromusculares no despolarizantes"
+  },
+  {
+    "line": 3033,
+    "nominal": "Rocuronio",
+    "master": "nom-rocuronio",
+    "path": "08. SISTEMA MUSCULAR → Bloqueadores neuromusculares no despolarizantes"
+  },
+  {
+    "line": 3034,
+    "nominal": "Vecuronio",
+    "master": "nom-vecuronio",
+    "path": "08. SISTEMA MUSCULAR → Bloqueadores neuromusculares no despolarizantes"
+  },
+  {
+    "line": 3037,
+    "nominal": "Suxametonio",
+    "master": "nom-suxametonio",
+    "path": "08. SISTEMA MUSCULAR → Bloqueadores neuromusculares despolarizantes"
+  },
+  {
+    "line": 3040,
+    "nominal": "Neostigmina",
+    "master": "nom-neostigmina",
+    "path": "08. SISTEMA MUSCULAR → Inhibidores de la acetilcolinesterasa"
+  },
+  {
+    "line": 3041,
+    "nominal": "Piridostigmina",
+    "master": "nom-piridostigmina",
+    "path": "08. SISTEMA MUSCULAR → Inhibidores de la acetilcolinesterasa"
+  },
+  {
+    "line": 3044,
+    "nominal": "Dantroleno",
+    "master": "nom-dantroleno",
+    "path": "08. SISTEMA MUSCULAR → Hipertermia maligna"
+  },
+  {
+    "line": 3055,
+    "nominal": "Azatioprina",
+    "master": "nom-azatioprina",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Inmunosupresores convencionales"
+  },
+  {
+    "line": 3056,
+    "nominal": "Ciclosporina",
+    "master": "nom-ciclosporina",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Inmunosupresores convencionales"
+  },
+  {
+    "line": 3057,
+    "nominal": "Micofenolato mofetilo",
+    "master": "nom-micofenolato-mofetilo",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Inmunosupresores convencionales"
+  },
+  {
+    "line": 3058,
+    "nominal": "Tacrolimus",
+    "master": "nom-tacrolimus",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Inmunosupresores convencionales"
+  },
+  {
+    "line": 3061,
+    "nominal": "Inmunoglobulina anti-D",
+    "master": "nom-inmunoglobulina-anti-d",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Inmunoglobulinas"
+  },
+  {
+    "line": 3062,
+    "nominal": "Inmunoglobulina contra hepatitis B",
+    "master": "nom-inmunoglobulina-contra-hepatitis-b",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Inmunoglobulinas"
+  },
+  {
+    "line": 3063,
+    "nominal": "Inmunoglobulina contra la rabia",
+    "master": "nom-inmunoglobulina-contra-la-rabia",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Inmunoglobulinas"
+  },
+  {
+    "line": 3064,
+    "nominal": "Inmunoglobulina contra el tétanos",
+    "master": "nom-inmunoglobulina-contra-el-tetanos",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Inmunoglobulinas"
+  },
+  {
+    "line": 3065,
+    "nominal": "Inmunoglobulina humana normal",
+    "master": "nom-inmunoglobulina-humana-normal",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Inmunoglobulinas"
+  },
+  {
+    "line": 3068,
+    "nominal": "Antitoxina diftérica",
+    "master": "nom-antitoxina-difterica",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Sueros y antitoxinas"
+  },
+  {
+    "line": 3069,
+    "nominal": "Antitoxina tetánica",
+    "master": "nom-antitoxina-tetanica",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Sueros y antitoxinas"
+  },
+  {
+    "line": 3070,
+    "nominal": "Suero antibotrópico",
+    "master": "nom-suero-antibotropico",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Sueros y antitoxinas"
+  },
+  {
+    "line": 3071,
+    "nominal": "Suero anticrotálico",
+    "master": "nom-suero-anticrotalico",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Sueros y antitoxinas"
+  },
+  {
+    "line": 3072,
+    "nominal": "Suero antilachésico",
+    "master": "nom-suero-antilachesico",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Sueros y antitoxinas"
+  },
+  {
+    "line": 3073,
+    "nominal": "Suero antiloxoscélico",
+    "master": "nom-suero-antiloxoscelico",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Sueros y antitoxinas"
+  },
+  {
+    "line": 3074,
+    "nominal": "Suero antirrábico",
+    "master": "nom-suero-antirrabico",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Sueros y antitoxinas"
+  },
+  {
+    "line": 3077,
+    "nominal": "Vacuna BCG",
+    "master": "nom-vacuna-bcg",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas bacterianas"
+  },
+  {
+    "line": 3078,
+    "nominal": "Vacuna contra difteria",
+    "master": "nom-vacuna-contra-difteria",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas bacterianas"
+  },
+  {
+    "line": 3079,
+    "nominal": "Vacuna contra Haemophilus influenzae tipo B",
+    "master": "nom-vacuna-contra-haemophilus-influenzae-tipo-b",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas bacterianas"
+  },
+  {
+    "line": 3080,
+    "nominal": "Vacuna contra meningococo",
+    "master": "nom-vacuna-contra-meningococo",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas bacterianas"
+  },
+  {
+    "line": 3081,
+    "nominal": "Vacuna contra neumococo",
+    "master": "nom-vacuna-contra-neumococo",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas bacterianas"
+  },
+  {
+    "line": 3082,
+    "nominal": "Vacuna contra tétanos",
+    "master": "nom-vacuna-contra-tetanos",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas bacterianas"
+  },
+  {
+    "line": 3083,
+    "nominal": "Vacuna contra tos ferina",
+    "master": "nom-vacuna-contra-tos-ferina",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas bacterianas"
+  },
+  {
+    "line": 3086,
+    "nominal": "Vacuna contra fiebre amarilla",
+    "master": "nom-vacuna-contra-fiebre-amarilla",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas virales"
+  },
+  {
+    "line": 3087,
+    "nominal": "Vacuna contra hepatitis A",
+    "master": "nom-vacuna-contra-hepatitis-a",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas virales"
+  },
+  {
+    "line": 3088,
+    "nominal": "Vacuna contra hepatitis B",
+    "master": "nom-vacuna-contra-hepatitis-b",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas virales"
+  },
+  {
+    "line": 3089,
+    "nominal": "Vacuna contra influenza",
+    "master": "nom-vacuna-contra-influenza",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas virales"
+  },
+  {
+    "line": 3090,
+    "nominal": "Vacuna contra parotiditis",
+    "master": "nom-vacuna-contra-parotiditis",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas virales"
+  },
+  {
+    "line": 3091,
+    "nominal": "Vacuna contra poliomielitis",
+    "master": "nom-vacuna-contra-poliomielitis",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas virales"
+  },
+  {
+    "line": 3092,
+    "nominal": "Vacuna contra rabia",
+    "master": "nom-vacuna-contra-rabia",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas virales"
+  },
+  {
+    "line": 3093,
+    "nominal": "Vacuna contra rotavirus",
+    "master": "nom-vacuna-contra-rotavirus",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas virales"
+  },
+  {
+    "line": 3094,
+    "nominal": "Vacuna contra rubéola",
+    "master": "nom-vacuna-contra-rubeola",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas virales"
+  },
+  {
+    "line": 3095,
+    "nominal": "Vacuna contra sarampión",
+    "master": "nom-vacuna-contra-sarampion",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas virales"
+  },
+  {
+    "line": 3096,
+    "nominal": "Vacuna contra varicela",
+    "master": "nom-vacuna-contra-varicela",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas virales"
+  },
+  {
+    "line": 3097,
+    "nominal": "Vacuna contra virus del papiloma humano",
+    "master": "nom-vacuna-contra-virus-del-papiloma-humano",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Vacunas virales"
+  },
+  {
+    "line": 3100,
+    "nominal": "Derivado proteico purificado de tuberculina",
+    "master": "nom-derivado-proteico-purificado-de-tuberculina",
+    "path": "09. SISTEMA LINFÁTICO/INMUNITARIO → Agentes inmunodiagnósticos"
+  },
+  {
+    "line": 3111,
+    "nominal": "Clotrimazol",
+    "master": "nom-clotrimazol",
+    "path": "10. SISTEMA TEGUMENTARIO → Antifúngicos tópicos"
+  },
+  {
+    "line": 3112,
+    "nominal": "Ketoconazol",
+    "master": "nom-ketoconazol",
+    "path": "10. SISTEMA TEGUMENTARIO → Antifúngicos tópicos"
+  },
+  {
+    "line": 3113,
+    "nominal": "Terbinafina",
+    "master": "nom-terbinafina",
+    "path": "10. SISTEMA TEGUMENTARIO → Antifúngicos tópicos"
+  },
+  {
+    "line": 3116,
+    "nominal": "Ácido fusídico",
+    "master": "nom-acido-fusidico",
+    "path": "10. SISTEMA TEGUMENTARIO → Antibacterianos tópicos"
+  },
+  {
+    "line": 3117,
+    "nominal": "Mupirocina",
+    "master": "nom-mupirocina",
+    "path": "10. SISTEMA TEGUMENTARIO → Antibacterianos tópicos"
+  },
+  {
+    "line": 3118,
+    "nominal": "Nitrofural",
+    "master": "nom-nitrofural",
+    "path": "10. SISTEMA TEGUMENTARIO → Antibacterianos tópicos"
+  },
+  {
+    "line": 3119,
+    "nominal": "Sulfadiazina de plata",
+    "master": "nom-sulfadiazina-de-plata",
+    "path": "10. SISTEMA TEGUMENTARIO → Antibacterianos tópicos"
+  },
+  {
+    "line": 3122,
+    "nominal": "Acitretina",
+    "master": "nom-acitretina",
+    "path": "10. SISTEMA TEGUMENTARIO → Antipsoriásicos y reguladores de proliferación"
+  },
+  {
+    "line": 3123,
+    "nominal": "Calcipotriol",
+    "master": "nom-calcipotriol",
+    "path": "10. SISTEMA TEGUMENTARIO → Antipsoriásicos y reguladores de proliferación"
+  },
+  {
+    "line": 3126,
+    "nominal": "Benzoilo peróxido",
+    "master": "nom-benzoilo-peroxido",
+    "path": "10. SISTEMA TEGUMENTARIO → Antiacné"
+  },
+  {
+    "line": 3127,
+    "nominal": "Isotretinoína",
+    "master": "nom-isotretinoina",
+    "path": "10. SISTEMA TEGUMENTARIO → Antiacné"
+  },
+  {
+    "line": 3128,
+    "nominal": "Tretinoína",
+    "master": "nom-tretinoina",
+    "path": "10. SISTEMA TEGUMENTARIO → Antiacné"
+  },
+  {
+    "line": 3131,
+    "nominal": "Bencilo benzoato",
+    "master": "nom-bencilo-benzoato",
+    "path": "10. SISTEMA TEGUMENTARIO → Escabicidas y pediculicidas"
+  },
+  {
+    "line": 3132,
+    "nominal": "Permetrina",
+    "master": "nom-permetrina",
+    "path": "10. SISTEMA TEGUMENTARIO → Escabicidas y pediculicidas"
+  },
+  {
+    "line": 3135,
+    "nominal": "Nitrato de plata",
+    "master": "nom-nitrato-de-plata",
+    "path": "10. SISTEMA TEGUMENTARIO → Protectores y astringentes"
+  },
+  {
+    "line": 3136,
+    "nominal": "Óxido de zinc",
+    "master": "nom-oxido-de-zinc",
+    "path": "10. SISTEMA TEGUMENTARIO → Protectores y astringentes"
+  },
+  {
+    "line": 3139,
+    "nominal": "Alcohol etílico",
+    "master": "nom-alcohol-etilico",
+    "path": "10. SISTEMA TEGUMENTARIO → Antisépticos cutáneos"
+  },
+  {
+    "line": 3140,
+    "nominal": "Clorhexidina",
+    "master": "nom-clorhexidina",
+    "path": "10. SISTEMA TEGUMENTARIO → Antisépticos cutáneos"
+  },
+  {
+    "line": 3141,
+    "nominal": "Peróxido de hidrógeno",
+    "master": "nom-peroxido-de-hidrogeno",
+    "path": "10. SISTEMA TEGUMENTARIO → Antisépticos cutáneos"
+  },
+  {
+    "line": 3142,
+    "nominal": "Yodo-povidona",
+    "master": "nom-yodo-povidona",
+    "path": "10. SISTEMA TEGUMENTARIO → Antisépticos cutáneos"
+  },
+  {
+    "line": 3153,
+    "nominal": "Estradiol cipionato + medroxiprogesterona",
+    "master": "nom-estradiol-cipionato-medroxiprogesterona",
+    "path": "11. SISTEMA REPRODUCTOR → Anticonceptivos hormonales combinados"
+  },
+  {
+    "line": 3154,
+    "nominal": "Etinilestradiol + levonorgestrel",
+    "master": "nom-etinilestradiol-levonorgestrel",
+    "path": "11. SISTEMA REPRODUCTOR → Anticonceptivos hormonales combinados"
+  },
+  {
+    "line": 3157,
+    "nominal": "Etonogestrel",
+    "master": "nom-etonogestrel",
+    "path": "11. SISTEMA REPRODUCTOR → Progestágenos"
+  },
+  {
+    "line": 3158,
+    "nominal": "Levonorgestrel",
+    "master": "nom-levonorgestrel",
+    "path": "11. SISTEMA REPRODUCTOR → Progestágenos"
+  },
+  {
+    "line": 3159,
+    "nominal": "Medroxiprogesterona",
+    "master": "nom-medroxiprogesterona",
+    "path": "11. SISTEMA REPRODUCTOR → Progestágenos"
+  },
+  {
+    "line": 3160,
+    "nominal": "Noretisterona",
+    "master": "nom-noretisterona",
+    "path": "11. SISTEMA REPRODUCTOR → Progestágenos"
+  },
+  {
+    "line": 3161,
+    "nominal": "Progesterona",
+    "master": "nom-progesterona",
+    "path": "11. SISTEMA REPRODUCTOR → Progestágenos"
+  },
+  {
+    "line": 3164,
+    "nominal": "Estradiol",
+    "master": "nom-estradiol",
+    "path": "11. SISTEMA REPRODUCTOR → Estrógenos y terapia hormonal"
+  },
+  {
+    "line": 3165,
+    "nominal": "Estriol",
+    "master": "nom-estriol",
+    "path": "11. SISTEMA REPRODUCTOR → Estrógenos y terapia hormonal"
+  },
+  {
+    "line": 3166,
+    "nominal": "Estrógenos conjugados",
+    "master": "nom-estrogenos-conjugados",
+    "path": "11. SISTEMA REPRODUCTOR → Estrógenos y terapia hormonal"
+  },
+  {
+    "line": 3167,
+    "nominal": "Estrógenos conjugados + medroxiprogesterona",
+    "master": "nom-estrogenos-conjugados-medroxiprogesterona",
+    "path": "11. SISTEMA REPRODUCTOR → Estrógenos y terapia hormonal"
+  },
+  {
+    "line": 3170,
+    "nominal": "Danazol",
+    "master": "nom-danazol",
+    "path": "11. SISTEMA REPRODUCTOR → Andrógenos y derivados"
+  },
+  {
+    "line": 3171,
+    "nominal": "Testosterona",
+    "master": "nom-testosterona",
+    "path": "11. SISTEMA REPRODUCTOR → Andrógenos y derivados"
+  },
+  {
+    "line": 3174,
+    "nominal": "Clomifeno",
+    "master": "nom-clomifeno",
+    "path": "11. SISTEMA REPRODUCTOR → Inductores de la ovulación"
+  },
+  {
+    "line": 3177,
+    "nominal": "Gonadotrofina coriónica",
+    "master": "nom-gonadotrofina-corionica",
+    "path": "11. SISTEMA REPRODUCTOR → Gonadotropinas"
+  },
+  {
+    "line": 3178,
+    "nominal": "Menotropina",
+    "master": "nom-menotropina",
+    "path": "11. SISTEMA REPRODUCTOR → Gonadotropinas"
+  },
+  {
+    "line": 3181,
+    "nominal": "Leuprorelina",
+    "master": "nom-leuprorelina",
+    "path": "11. SISTEMA REPRODUCTOR → Agonistas del eje gonadotrópico"
+  },
+  {
+    "line": 3184,
+    "nominal": "Ergometrina",
+    "master": "nom-ergometrina",
+    "path": "11. SISTEMA REPRODUCTOR → Oxitócicos"
+  },
+  {
+    "line": 3185,
+    "nominal": "Misoprostol",
+    "master": "nom-misoprostol",
+    "path": "11. SISTEMA REPRODUCTOR → Oxitócicos"
+  },
+  {
+    "line": 3186,
+    "nominal": "Oxitocina",
+    "master": "nom-oxitocina",
+    "path": "11. SISTEMA REPRODUCTOR → Oxitócicos"
+  },
+  {
+    "line": 3189,
+    "nominal": "Isoxsuprina",
+    "master": "nom-isoxsuprina",
+    "path": "11. SISTEMA REPRODUCTOR → Tocolíticos"
+  },
+  {
+    "line": 3210,
+    "nominal": "Latanoprost",
+    "master": "nom-latanoprost",
+    "path": "ÁREA MAESTRA ESPECIALIZADA: OFTALMOLOGÍA → Antiglaucomatosos → Análogos de prostaglandinas"
+  },
+  {
+    "line": 3212,
+    "nominal": "Tropicamida",
+    "master": "nom-tropicamida",
+    "path": "ÁREA MAESTRA ESPECIALIZADA: OFTALMOLOGÍA → Midriáticos/ciclopléjicos"
+  },
+  {
+    "line": 3214,
+    "nominal": "Ketotifeno",
+    "master": "nom-ketotifeno",
+    "path": "ÁREA MAESTRA ESPECIALIZADA: OFTALMOLOGÍA → Antialérgicos oftálmicos"
+  },
+  {
+    "line": 3216,
+    "nominal": "Hipromelosa",
+    "master": "nom-hipromelosa",
+    "path": "ÁREA MAESTRA ESPECIALIZADA: OFTALMOLOGÍA → Sustitutos lagrimales"
+  },
+  {
+    "line": 3223,
+    "nominal": "Ciprofloxacino",
+    "master": "nom-ciprofloxacino",
+    "path": "OFTALMOLOGÍA → Antibacterianos oftálmicos"
+  },
+  {
+    "line": 3223,
+    "nominal": "Tetraciclina",
+    "master": "nom-tetraciclina",
+    "path": "OFTALMOLOGÍA → Antibacterianos oftálmicos"
+  },
+  {
+    "line": 3224,
+    "nominal": "Aciclovir",
+    "master": "nom-aciclovir",
+    "path": "OFTALMOLOGÍA → Antivirales oftálmicos"
+  },
+  {
+    "line": 3225,
+    "nominal": "Natamicina",
+    "master": "nom-natamicina",
+    "path": "OFTALMOLOGÍA → Antifúngicos oftálmicos"
+  },
+  {
+    "line": 3226,
+    "nominal": "Diclofenaco",
+    "master": "nom-diclofenaco",
+    "path": "OFTALMOLOGÍA → Antiinflamatorios oftálmicos"
+  },
+  {
+    "line": 3226,
+    "nominal": "Prednisolona",
+    "master": "nom-prednisolona",
+    "path": "OFTALMOLOGÍA → Antiinflamatorios oftálmicos"
+  },
+  {
+    "line": 3227,
+    "nominal": "Proximetacaína",
+    "master": "nom-proximetacaina",
+    "path": "OFTALMOLOGÍA → Anestésicos locales oftálmicos"
+  },
+  {
+    "line": 3228,
+    "nominal": "Acetazolamida",
+    "master": "nom-acetazolamida",
+    "path": "OFTALMOLOGÍA → Antiglaucomatosos"
+  },
+  {
+    "line": 3228,
+    "nominal": "Carbacol",
+    "master": "nom-carbacol",
+    "path": "OFTALMOLOGÍA → Antiglaucomatosos"
+  },
+  {
+    "line": 3228,
+    "nominal": "Dorzolamida",
+    "master": "nom-dorzolamida",
+    "path": "OFTALMOLOGÍA → Antiglaucomatosos"
+  },
+  {
+    "line": 3228,
+    "nominal": "Latanoprost",
+    "master": "nom-latanoprost",
+    "path": "OFTALMOLOGÍA → Antiglaucomatosos"
+  },
+  {
+    "line": 3228,
+    "nominal": "Pilocarpina",
+    "master": "nom-pilocarpina",
+    "path": "OFTALMOLOGÍA → Antiglaucomatosos"
+  },
+  {
+    "line": 3228,
+    "nominal": "Timolol",
+    "master": "nom-timolol",
+    "path": "OFTALMOLOGÍA → Antiglaucomatosos"
+  },
+  {
+    "line": 3229,
+    "nominal": "Atropina",
+    "master": "nom-atropina",
+    "path": "OFTALMOLOGÍA → Midriáticos/ciclopléjicos"
+  },
+  {
+    "line": 3229,
+    "nominal": "Tropicamida",
+    "master": "nom-tropicamida",
+    "path": "OFTALMOLOGÍA → Midriáticos/ciclopléjicos"
+  },
+  {
+    "line": 3230,
+    "nominal": "Ketotifeno",
+    "master": "nom-ketotifeno",
+    "path": "OFTALMOLOGÍA → Antialérgicos"
+  },
+  {
+    "line": 3231,
+    "nominal": "Bevacizumab",
+    "master": "nom-bevacizumab",
+    "path": "OFTALMOLOGÍA → Antiangiogénicos"
+  },
+  {
+    "line": 3232,
+    "nominal": "Hipromelosa",
+    "master": "nom-hipromelosa",
+    "path": "OFTALMOLOGÍA → Sustitutos lagrimales"
+  },
+  {
+    "line": 3235,
+    "nominal": "Ciprofloxacino",
+    "master": "nom-ciprofloxacino",
+    "path": "OTORRINOLARINGOLOGÍA → Antibacteriano ótico"
+  },
+  {
+    "line": 3236,
+    "nominal": "Budesonida",
+    "master": "nom-budesonida",
+    "path": "OTORRINOLARINGOLOGÍA → Corticoide nasal"
+  },
+  {
+    "line": 3237,
+    "nominal": "Dimenhidrinato",
+    "master": "nom-dimenhidrinato",
+    "path": "OTORRINOLARINGOLOGÍA → Antivertiginoso"
+  },
+  {
+    "line": 3245,
+    "nominal": "Amoxicilina",
+    "master": "nom-amoxicilina",
+    "path": "ANTIBACTERIANOS → Penicilinas"
+  },
+  {
+    "line": 3246,
+    "nominal": "Ampicilina",
+    "master": "nom-ampicilina",
+    "path": "ANTIBACTERIANOS → Penicilinas"
+  },
+  {
+    "line": 3247,
+    "nominal": "Bencilpenicilina benzatina",
+    "master": "nom-bencilpenicilina-benzatina",
+    "path": "ANTIBACTERIANOS → Penicilinas"
+  },
+  {
+    "line": 3248,
+    "nominal": "Bencilpenicilina procaínica",
+    "master": "nom-bencilpenicilina-procainica",
+    "path": "ANTIBACTERIANOS → Penicilinas"
+  },
+  {
+    "line": 3249,
+    "nominal": "Bencilpenicilina sódica",
+    "master": "nom-bencilpenicilina-sodica",
+    "path": "ANTIBACTERIANOS → Penicilinas"
+  },
+  {
+    "line": 3250,
+    "nominal": "Dicloxacilina",
+    "master": "nom-dicloxacilina",
+    "path": "ANTIBACTERIANOS → Penicilinas"
+  },
+  {
+    "line": 3251,
+    "nominal": "Fenoximetilpenicilina",
+    "master": "nom-fenoximetilpenicilina",
+    "path": "ANTIBACTERIANOS → Penicilinas"
+  },
+  {
+    "line": 3252,
+    "nominal": "Oxacilina",
+    "master": "nom-oxacilina",
+    "path": "ANTIBACTERIANOS → Penicilinas"
+  },
+  {
+    "line": 3254,
+    "nominal": "Amoxicilina + ácido clavulánico",
+    "master": "nom-amoxicilina-acido-clavulanico",
+    "path": "ANTIBACTERIANOS → Penicilinas con inhibidor de betalactamasa"
+  },
+  {
+    "line": 3255,
+    "nominal": "Ampicilina + sulbactam",
+    "master": "nom-ampicilina-sulbactam",
+    "path": "ANTIBACTERIANOS → Penicilinas con inhibidor de betalactamasa"
+  },
+  {
+    "line": 3256,
+    "nominal": "Piperacilina + tazobactam",
+    "master": "nom-piperacilina-tazobactam",
+    "path": "ANTIBACTERIANOS → Penicilinas con inhibidor de betalactamasa"
+  },
+  {
+    "line": 3257,
+    "nominal": "Cefalexina",
+    "master": "nom-cefalexina",
+    "path": "ANTIBACTERIANOS → Cefalosporinas de primera generación"
+  },
+  {
+    "line": 3257,
+    "nominal": "Cefazolina",
+    "master": "nom-cefazolina",
+    "path": "ANTIBACTERIANOS → Cefalosporinas de primera generación"
+  },
+  {
+    "line": 3258,
+    "nominal": "Cefuroxima",
+    "master": "nom-cefuroxima",
+    "path": "ANTIBACTERIANOS → Cefalosporinas de segunda generación"
+  },
+  {
+    "line": 3259,
+    "nominal": "Cefotaxima",
+    "master": "nom-cefotaxima",
+    "path": "ANTIBACTERIANOS → Cefalosporinas de tercera generación"
+  },
+  {
+    "line": 3259,
+    "nominal": "Ceftazidima",
+    "master": "nom-ceftazidima",
+    "path": "ANTIBACTERIANOS → Cefalosporinas de tercera generación"
+  },
+  {
+    "line": 3259,
+    "nominal": "Ceftriaxona",
+    "master": "nom-ceftriaxona",
+    "path": "ANTIBACTERIANOS → Cefalosporinas de tercera generación"
+  },
+  {
+    "line": 3260,
+    "nominal": "Imipenem + cilastatina",
+    "master": "nom-imipenem-cilastatina",
+    "path": "ANTIBACTERIANOS → Carbapenémicos"
+  },
+  {
+    "line": 3260,
+    "nominal": "Meropenem",
+    "master": "nom-meropenem",
+    "path": "ANTIBACTERIANOS → Carbapenémicos"
+  },
+  {
+    "line": 3261,
+    "nominal": "Azitromicina",
+    "master": "nom-azitromicina",
+    "path": "ANTIBACTERIANOS → Macrólidos"
+  },
+  {
+    "line": 3261,
+    "nominal": "Claritromicina",
+    "master": "nom-claritromicina",
+    "path": "ANTIBACTERIANOS → Macrólidos"
+  },
+  {
+    "line": 3261,
+    "nominal": "Eritromicina",
+    "master": "nom-eritromicina",
+    "path": "ANTIBACTERIANOS → Macrólidos"
+  },
+  {
+    "line": 3262,
+    "nominal": "Clindamicina",
+    "master": "nom-clindamicina",
+    "path": "ANTIBACTERIANOS → Lincosamidas"
+  },
+  {
+    "line": 3263,
+    "nominal": "Amikacina",
+    "master": "nom-amikacina",
+    "path": "ANTIBACTERIANOS → Aminoglucósidos"
+  },
+  {
+    "line": 3263,
+    "nominal": "Estreptomicina",
+    "master": "nom-estreptomicina",
+    "path": "ANTIBACTERIANOS → Aminoglucósidos"
+  },
+  {
+    "line": 3263,
+    "nominal": "Gentamicina",
+    "master": "nom-gentamicina",
+    "path": "ANTIBACTERIANOS → Aminoglucósidos"
+  },
+  {
+    "line": 3263,
+    "nominal": "Kanamicina",
+    "master": "nom-kanamicina",
+    "path": "ANTIBACTERIANOS → Aminoglucósidos"
+  },
+  {
+    "line": 3264,
+    "nominal": "Sulfametoxazol + trimetoprima",
+    "master": "nom-sulfametoxazol-trimetoprima",
+    "path": "ANTIBACTERIANOS → Sulfonamidas con diaminopirimidinas"
+  },
+  {
+    "line": 3265,
+    "nominal": "Ciprofloxacino",
+    "master": "nom-ciprofloxacino",
+    "path": "ANTIBACTERIANOS → Fluoroquinolonas"
+  },
+  {
+    "line": 3265,
+    "nominal": "Levofloxacino",
+    "master": "nom-levofloxacino",
+    "path": "ANTIBACTERIANOS → Fluoroquinolonas"
+  },
+  {
+    "line": 3265,
+    "nominal": "Moxifloxacino",
+    "master": "nom-moxifloxacino",
+    "path": "ANTIBACTERIANOS → Fluoroquinolonas"
+  },
+  {
+    "line": 3266,
+    "nominal": "Doxiciclina",
+    "master": "nom-doxiciclina",
+    "path": "ANTIBACTERIANOS → Tetraciclinas"
+  },
+  {
+    "line": 3266,
+    "nominal": "Tetraciclina",
+    "master": "nom-tetraciclina",
+    "path": "ANTIBACTERIANOS → Tetraciclinas"
+  },
+  {
+    "line": 3267,
+    "nominal": "Cloranfenicol",
+    "master": "nom-cloranfenicol",
+    "path": "ANTIBACTERIANOS → Anfenicoles"
+  },
+  {
+    "line": 3268,
+    "nominal": "Vancomicina",
+    "master": "nom-vancomicina",
+    "path": "ANTIBACTERIANOS → Glicopéptidos"
+  },
+  {
+    "line": 3269,
+    "nominal": "Colistina",
+    "master": "nom-colistina",
+    "path": "ANTIBACTERIANOS → Polimixinas"
+  },
+  {
+    "line": 3270,
+    "nominal": "Metronidazol",
+    "master": "nom-metronidazol",
+    "path": "ANTIBACTERIANOS → Nitroimidazoles"
+  },
+  {
+    "line": 3271,
+    "nominal": "Furazolidona",
+    "master": "nom-furazolidona",
+    "path": "ANTIBACTERIANOS → Nitrofuranos"
+  },
+  {
+    "line": 3271,
+    "nominal": "Nitrofurantoína",
+    "master": "nom-nitrofurantoina",
+    "path": "ANTIBACTERIANOS → Nitrofuranos"
+  },
+  {
+    "line": 3272,
+    "nominal": "Fosfomicina",
+    "master": "nom-fosfomicina",
+    "path": "ANTIBACTERIANOS → Fosfonatos antibacterianos"
+  },
+  {
+    "line": 3273,
+    "nominal": "Rifaximina",
+    "master": "nom-rifaximina",
+    "path": "ANTIBACTERIANOS → Antibacterianos intestinales"
+  },
+  {
+    "line": 3282,
+    "nominal": "Ácido p-aminosalicílico",
+    "master": "nom-acido-p-aminosalicilico",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3283,
+    "nominal": "Bedaquilina",
+    "master": "nom-bedaquilina",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3284,
+    "nominal": "Capreomicina",
+    "master": "nom-capreomicina",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3285,
+    "nominal": "Cicloserina",
+    "master": "nom-cicloserina",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3286,
+    "nominal": "Clofazimina",
+    "master": "nom-clofazimina",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3287,
+    "nominal": "Delamanid",
+    "master": "nom-delamanid",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3288,
+    "nominal": "Etambutol",
+    "master": "nom-etambutol",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3289,
+    "nominal": "Etambutol + isoniazida + pirazinamida + rifampicina",
+    "master": "nom-etambutol-isoniazida-pirazinamida-rifampicina",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3290,
+    "nominal": "Etionamida",
+    "master": "nom-etionamida",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3291,
+    "nominal": "Isoniazida",
+    "master": "nom-isoniazida",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3292,
+    "nominal": "Isoniazida + rifampicina",
+    "master": "nom-isoniazida-rifampicina",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3293,
+    "nominal": "Levofloxacino",
+    "master": "nom-levofloxacino",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3294,
+    "nominal": "Linezolid",
+    "master": "nom-linezolid",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3295,
+    "nominal": "Moxifloxacino",
+    "master": "nom-moxifloxacino",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3296,
+    "nominal": "Pirazinamida",
+    "master": "nom-pirazinamida",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3297,
+    "nominal": "Pretomanid",
+    "master": "nom-pretomanid",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3298,
+    "nominal": "Rifabutina",
+    "master": "nom-rifabutina",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3299,
+    "nominal": "Rifampicina",
+    "master": "nom-rifampicina",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3300,
+    "nominal": "Rifapentina",
+    "master": "nom-rifapentina",
+    "path": "ANTITUBERCULOSOS"
+  },
+  {
+    "line": 3303,
+    "nominal": "Clofazimina",
+    "master": "nom-clofazimina",
+    "path": "ANTILEPROSOS"
+  },
+  {
+    "line": 3304,
+    "nominal": "Dapsona",
+    "master": "nom-dapsona",
+    "path": "ANTILEPROSOS"
+  },
+  {
+    "line": 3305,
+    "nominal": "Rifampicina",
+    "master": "nom-rifampicina",
+    "path": "ANTILEPROSOS"
+  },
+  {
+    "line": 3312,
+    "nominal": "Amfotericina B",
+    "master": "nom-amfotericina-b",
+    "path": "ANTIFÚNGICOS SISTÉMICOS"
+  },
+  {
+    "line": 3313,
+    "nominal": "Fluconazol",
+    "master": "nom-fluconazol",
+    "path": "ANTIFÚNGICOS SISTÉMICOS"
+  },
+  {
+    "line": 3314,
+    "nominal": "Flucitosina",
+    "master": "nom-flucitosina",
+    "path": "ANTIFÚNGICOS SISTÉMICOS"
+  },
+  {
+    "line": 3315,
+    "nominal": "Griseofulvina",
+    "master": "nom-griseofulvina",
+    "path": "ANTIFÚNGICOS SISTÉMICOS"
+  },
+  {
+    "line": 3316,
+    "nominal": "Itraconazol",
+    "master": "nom-itraconazol",
+    "path": "ANTIFÚNGICOS SISTÉMICOS"
+  },
+  {
+    "line": 3317,
+    "nominal": "Voriconazol",
+    "master": "nom-voriconazol",
+    "path": "ANTIFÚNGICOS SISTÉMICOS"
+  },
+  {
+    "line": 3320,
+    "nominal": "Clotrimazol",
+    "master": "nom-clotrimazol",
+    "path": "ANTIFÚNGICOS LOCALES"
+  },
+  {
+    "line": 3321,
+    "nominal": "Natamicina",
+    "master": "nom-natamicina",
+    "path": "ANTIFÚNGICOS LOCALES"
+  },
+  {
+    "line": 3322,
+    "nominal": "Nistatina",
+    "master": "nom-nistatina",
+    "path": "ANTIFÚNGICOS LOCALES"
+  },
+  {
+    "line": 3323,
+    "nominal": "Terbinafina",
+    "master": "nom-terbinafina",
+    "path": "ANTIFÚNGICOS LOCALES"
+  },
+  {
+    "line": 3330,
+    "nominal": "Aciclovir",
+    "master": "nom-aciclovir",
+    "path": "ANTIVIRALES → Antiherpéticos"
+  },
+  {
+    "line": 3331,
+    "nominal": "Abacavir",
+    "master": "nom-abacavir",
+    "path": "ANTIVIRALES → Antirretrovirales nucleosídicos/nucleotídicos"
+  },
+  {
+    "line": 3331,
+    "nominal": "Emtricitabina",
+    "master": "nom-emtricitabina",
+    "path": "ANTIVIRALES → Antirretrovirales nucleosídicos/nucleotídicos"
+  },
+  {
+    "line": 3331,
+    "nominal": "Lamivudina",
+    "master": "nom-lamivudina",
+    "path": "ANTIVIRALES → Antirretrovirales nucleosídicos/nucleotídicos"
+  },
+  {
+    "line": 3331,
+    "nominal": "Tenofovir disoproxilo",
+    "master": "nom-tenofovir-disoproxilo",
+    "path": "ANTIVIRALES → Antirretrovirales nucleosídicos/nucleotídicos"
+  },
+  {
+    "line": 3331,
+    "nominal": "Zidovudina",
+    "master": "nom-zidovudina",
+    "path": "ANTIVIRALES → Antirretrovirales nucleosídicos/nucleotídicos"
+  },
+  {
+    "line": 3332,
+    "nominal": "Efavirenz",
+    "master": "nom-efavirenz",
+    "path": "ANTIVIRALES → Antirretrovirales no nucleósidos"
+  },
+  {
+    "line": 3332,
+    "nominal": "Etravirina",
+    "master": "nom-etravirina",
+    "path": "ANTIVIRALES → Antirretrovirales no nucleósidos"
+  },
+  {
+    "line": 3332,
+    "nominal": "Nevirapina",
+    "master": "nom-nevirapina",
+    "path": "ANTIVIRALES → Antirretrovirales no nucleósidos"
+  },
+  {
+    "line": 3333,
+    "nominal": "Atazanavir",
+    "master": "nom-atazanavir",
+    "path": "ANTIVIRALES → Inhibidores de proteasa"
+  },
+  {
+    "line": 3333,
+    "nominal": "Darunavir",
+    "master": "nom-darunavir",
+    "path": "ANTIVIRALES → Inhibidores de proteasa"
+  },
+  {
+    "line": 3333,
+    "nominal": "Lopinavir",
+    "master": "nom-lopinavir",
+    "path": "ANTIVIRALES → Inhibidores de proteasa"
+  },
+  {
+    "line": 3333,
+    "nominal": "Ritonavir",
+    "master": "nom-ritonavir",
+    "path": "ANTIVIRALES → Inhibidores de proteasa"
+  },
+  {
+    "line": 3334,
+    "nominal": "Dolutegravir",
+    "master": "nom-dolutegravir",
+    "path": "ANTIVIRALES → Inhibidores de integrasa"
+  },
+  {
+    "line": 3334,
+    "nominal": "Raltegravir",
+    "master": "nom-raltegravir",
+    "path": "ANTIVIRALES → Inhibidores de integrasa"
+  },
+  {
+    "line": 3335,
+    "nominal": "Atazanavir + ritonavir",
+    "master": "nom-atazanavir-ritonavir",
+    "path": "ANTIVIRALES → Combinaciones antirretrovirales"
+  },
+  {
+    "line": 3335,
+    "nominal": "Efavirenz + emtricitabina + tenofovir disoproxilo",
+    "master": "nom-efavirenz-emtricitabina-tenofovir-disoproxilo",
+    "path": "ANTIVIRALES → Combinaciones antirretrovirales"
+  },
+  {
+    "line": 3335,
+    "nominal": "Efavirenz + lamivudina + tenofovir disoproxilo",
+    "master": "nom-efavirenz-lamivudina-tenofovir-disoproxilo",
+    "path": "ANTIVIRALES → Combinaciones antirretrovirales"
+  },
+  {
+    "line": 3335,
+    "nominal": "Emtricitabina + tenofovir disoproxilo",
+    "master": "nom-emtricitabina-tenofovir-disoproxilo",
+    "path": "ANTIVIRALES → Combinaciones antirretrovirales"
+  },
+  {
+    "line": 3335,
+    "nominal": "Lamivudina + abacavir",
+    "master": "nom-lamivudina-abacavir",
+    "path": "ANTIVIRALES → Combinaciones antirretrovirales"
+  },
+  {
+    "line": 3335,
+    "nominal": "Lamivudina + tenofovir disoproxilo + dolutegravir",
+    "master": "nom-lamivudina-tenofovir-disoproxilo-dolutegravir",
+    "path": "ANTIVIRALES → Combinaciones antirretrovirales"
+  },
+  {
+    "line": 3335,
+    "nominal": "Lamivudina + zidovudina",
+    "master": "nom-lamivudina-zidovudina",
+    "path": "ANTIVIRALES → Combinaciones antirretrovirales"
+  },
+  {
+    "line": 3335,
+    "nominal": "Lamivudina + zidovudina + nevirapina",
+    "master": "nom-lamivudina-zidovudina-nevirapina",
+    "path": "ANTIVIRALES → Combinaciones antirretrovirales"
+  },
+  {
+    "line": 3335,
+    "nominal": "Lopinavir + ritonavir",
+    "master": "nom-lopinavir-ritonavir",
+    "path": "ANTIVIRALES → Combinaciones antirretrovirales"
+  },
+  {
+    "line": 3336,
+    "nominal": "Entecavir",
+    "master": "nom-entecavir",
+    "path": "ANTIVIRALES → Hepatitis B"
+  },
+  {
+    "line": 3336,
+    "nominal": "Tenofovir disoproxilo",
+    "master": "nom-tenofovir-disoproxilo",
+    "path": "ANTIVIRALES → Hepatitis B"
+  },
+  {
+    "line": 3337,
+    "nominal": "Ribavirina",
+    "master": "nom-ribavirina",
+    "path": "ANTIVIRALES → Hepatitis C"
+  },
+  {
+    "line": 3337,
+    "nominal": "Sofosbuvir + velpatasvir",
+    "master": "nom-sofosbuvir-velpatasvir",
+    "path": "ANTIVIRALES → Hepatitis C"
+  },
+  {
+    "line": 3338,
+    "nominal": "Ganciclovir",
+    "master": "nom-ganciclovir",
+    "path": "ANTIVIRALES → Citomegalovirus"
+  },
+  {
+    "line": 3338,
+    "nominal": "Valganciclovir",
+    "master": "nom-valganciclovir",
+    "path": "ANTIVIRALES → Citomegalovirus"
+  },
+  {
+    "line": 3339,
+    "nominal": "Interferón alfa-2b",
+    "master": "nom-interferon-alfa-2b",
+    "path": "ANTIVIRALES → Interferones"
+  },
+  {
+    "line": 3339,
+    "nominal": "Peginterferón alfa-2a",
+    "master": "nom-peginterferon-alfa-2a",
+    "path": "ANTIVIRALES → Interferones"
+  },
+  {
+    "line": 3346,
+    "nominal": "Albendazol",
+    "master": "nom-albendazol",
+    "path": "ANTIHELMÍNTICOS"
+  },
+  {
+    "line": 3347,
+    "nominal": "Ivermectina",
+    "master": "nom-ivermectina",
+    "path": "ANTIHELMÍNTICOS"
+  },
+  {
+    "line": 3348,
+    "nominal": "Mebendazol",
+    "master": "nom-mebendazol",
+    "path": "ANTIHELMÍNTICOS"
+  },
+  {
+    "line": 3349,
+    "nominal": "Prazicuantel",
+    "master": "nom-prazicuantel",
+    "path": "ANTIHELMÍNTICOS"
+  },
+  {
+    "line": 3350,
+    "nominal": "Triclabendazol",
+    "master": "nom-triclabendazol",
+    "path": "ANTIHELMÍNTICOS"
+  },
+  {
+    "line": 3353,
+    "nominal": "Diloxanida furoato",
+    "master": "nom-diloxanida-furoato",
+    "path": "AMEBICIDAS, GIARDICIDAS Y TRICOMONICIDAS"
+  },
+  {
+    "line": 3354,
+    "nominal": "Metronidazol",
+    "master": "nom-metronidazol",
+    "path": "AMEBICIDAS, GIARDICIDAS Y TRICOMONICIDAS"
+  },
+  {
+    "line": 3357,
+    "nominal": "Amfotericina B",
+    "master": "nom-amfotericina-b",
+    "path": "ANTILEISHMANIÁSICOS"
+  },
+  {
+    "line": 3358,
+    "nominal": "Antimoniato de meglumina",
+    "master": "nom-antimoniato-de-meglumina",
+    "path": "ANTILEISHMANIÁSICOS"
+  },
+  {
+    "line": 3359,
+    "nominal": "Estibogluconato sódico",
+    "master": "nom-estibogluconato-sodico",
+    "path": "ANTILEISHMANIÁSICOS"
+  },
+  {
+    "line": 3360,
+    "nominal": "Miltefosina",
+    "master": "nom-miltefosina",
+    "path": "ANTILEISHMANIÁSICOS"
+  },
+  {
+    "line": 3361,
+    "nominal": "Pentamidina",
+    "master": "nom-pentamidina",
+    "path": "ANTILEISHMANIÁSICOS"
+  },
+  {
+    "line": 3364,
+    "nominal": "Arteméter",
+    "master": "nom-artemeter",
+    "path": "ANTIMALÁRICOS"
+  },
+  {
+    "line": 3365,
+    "nominal": "Artesunato",
+    "master": "nom-artesunato",
+    "path": "ANTIMALÁRICOS"
+  },
+  {
+    "line": 3366,
+    "nominal": "Artesunato + mefloquina",
+    "master": "nom-artesunato-mefloquina",
+    "path": "ANTIMALÁRICOS"
+  },
+  {
+    "line": 3367,
+    "nominal": "Cloroquina",
+    "master": "nom-cloroquina",
+    "path": "ANTIMALÁRICOS"
+  },
+  {
+    "line": 3368,
+    "nominal": "Doxiciclina",
+    "master": "nom-doxiciclina",
+    "path": "ANTIMALÁRICOS"
+  },
+  {
+    "line": 3369,
+    "nominal": "Mefloquina",
+    "master": "nom-mefloquina",
+    "path": "ANTIMALÁRICOS"
+  },
+  {
+    "line": 3370,
+    "nominal": "Primaquina",
+    "master": "nom-primaquina",
+    "path": "ANTIMALÁRICOS"
+  },
+  {
+    "line": 3371,
+    "nominal": "Quinina",
+    "master": "nom-quinina",
+    "path": "ANTIMALÁRICOS"
+  },
+  {
+    "line": 3372,
+    "nominal": "Sulfadoxina + pirimetamina",
+    "master": "nom-sulfadoxina-pirimetamina",
+    "path": "ANTIMALÁRICOS"
+  },
+  {
+    "line": 3375,
+    "nominal": "Pirimetamina",
+    "master": "nom-pirimetamina",
+    "path": "ANTITOXOPLÁSMICOS Y ANTINEUMOCÍSTICOS"
+  },
+  {
+    "line": 3376,
+    "nominal": "Sulfametoxazol + trimetoprima",
+    "master": "nom-sulfametoxazol-trimetoprima",
+    "path": "ANTITOXOPLÁSMICOS Y ANTINEUMOCÍSTICOS"
+  },
+  {
+    "line": 3379,
+    "nominal": "Benznidazol",
+    "master": "nom-benznidazol",
+    "path": "ANTITRIPANOSOMIÁSICOS"
+  },
+  {
+    "line": 3380,
+    "nominal": "Nifurtimox",
+    "master": "nom-nifurtimox",
+    "path": "ANTITRIPANOSOMIÁSICOS"
+  },
+  {
+    "line": 3387,
+    "nominal": "Busulfano",
+    "master": "nom-busulfano",
+    "path": "ANTINEOPLÁSICOS → Agentes alquilantes"
+  },
+  {
+    "line": 3387,
+    "nominal": "Ciclofosfamida",
+    "master": "nom-ciclofosfamida",
+    "path": "ANTINEOPLÁSICOS → Agentes alquilantes"
+  },
+  {
+    "line": 3387,
+    "nominal": "Clorambucilo",
+    "master": "nom-clorambucilo",
+    "path": "ANTINEOPLÁSICOS → Agentes alquilantes"
+  },
+  {
+    "line": 3387,
+    "nominal": "Ifosfamida",
+    "master": "nom-ifosfamida",
+    "path": "ANTINEOPLÁSICOS → Agentes alquilantes"
+  },
+  {
+    "line": 3387,
+    "nominal": "Melfalán",
+    "master": "nom-melfalan",
+    "path": "ANTINEOPLÁSICOS → Agentes alquilantes"
+  },
+  {
+    "line": 3388,
+    "nominal": "Carboplatino",
+    "master": "nom-carboplatino",
+    "path": "ANTINEOPLÁSICOS → Compuestos de platino"
+  },
+  {
+    "line": 3388,
+    "nominal": "Cisplatino",
+    "master": "nom-cisplatino",
+    "path": "ANTINEOPLÁSICOS → Compuestos de platino"
+  },
+  {
+    "line": 3388,
+    "nominal": "Oxaliplatino",
+    "master": "nom-oxaliplatino",
+    "path": "ANTINEOPLÁSICOS → Compuestos de platino"
+  },
+  {
+    "line": 3389,
+    "nominal": "Capecitabina",
+    "master": "nom-capecitabina",
+    "path": "ANTINEOPLÁSICOS → Antimetabolitos"
+  },
+  {
+    "line": 3389,
+    "nominal": "Citarabina",
+    "master": "nom-citarabina",
+    "path": "ANTINEOPLÁSICOS → Antimetabolitos"
+  },
+  {
+    "line": 3389,
+    "nominal": "Fludarabina",
+    "master": "nom-fludarabina",
+    "path": "ANTINEOPLÁSICOS → Antimetabolitos"
+  },
+  {
+    "line": 3389,
+    "nominal": "Fluorouracilo",
+    "master": "nom-fluorouracilo",
+    "path": "ANTINEOPLÁSICOS → Antimetabolitos"
+  },
+  {
+    "line": 3389,
+    "nominal": "Gemcitabina",
+    "master": "nom-gemcitabina",
+    "path": "ANTINEOPLÁSICOS → Antimetabolitos"
+  },
+  {
+    "line": 3389,
+    "nominal": "Mercaptopurina",
+    "master": "nom-mercaptopurina",
+    "path": "ANTINEOPLÁSICOS → Antimetabolitos"
+  },
+  {
+    "line": 3389,
+    "nominal": "Metotrexato",
+    "master": "nom-metotrexato",
+    "path": "ANTINEOPLÁSICOS → Antimetabolitos"
+  },
+  {
+    "line": 3389,
+    "nominal": "Pemetrexed",
+    "master": "nom-pemetrexed",
+    "path": "ANTINEOPLÁSICOS → Antimetabolitos"
+  },
+  {
+    "line": 3389,
+    "nominal": "Tioguanina",
+    "master": "nom-tioguanina",
+    "path": "ANTINEOPLÁSICOS → Antimetabolitos"
+  },
+  {
+    "line": 3390,
+    "nominal": "Bleomicina",
+    "master": "nom-bleomicina",
+    "path": "ANTINEOPLÁSICOS → Antibióticos antineoplásicos"
+  },
+  {
+    "line": 3390,
+    "nominal": "Dactinomicina",
+    "master": "nom-dactinomicina",
+    "path": "ANTINEOPLÁSICOS → Antibióticos antineoplásicos"
+  },
+  {
+    "line": 3390,
+    "nominal": "Daunorubicina",
+    "master": "nom-daunorubicina",
+    "path": "ANTINEOPLÁSICOS → Antibióticos antineoplásicos"
+  },
+  {
+    "line": 3390,
+    "nominal": "Doxorubicina",
+    "master": "nom-doxorubicina",
+    "path": "ANTINEOPLÁSICOS → Antibióticos antineoplásicos"
+  },
+  {
+    "line": 3390,
+    "nominal": "Epirubicina",
+    "master": "nom-epirubicina",
+    "path": "ANTINEOPLÁSICOS → Antibióticos antineoplásicos"
+  },
+  {
+    "line": 3390,
+    "nominal": "Mitomicina",
+    "master": "nom-mitomicina",
+    "path": "ANTINEOPLÁSICOS → Antibióticos antineoplásicos"
+  },
+  {
+    "line": 3390,
+    "nominal": "Mitoxantrona",
+    "master": "nom-mitoxantrona",
+    "path": "ANTINEOPLÁSICOS → Antibióticos antineoplásicos"
+  },
+  {
+    "line": 3391,
+    "nominal": "Etopósido",
+    "master": "nom-etoposido",
+    "path": "ANTINEOPLÁSICOS → Inhibidores de topoisomerasa"
+  },
+  {
+    "line": 3391,
+    "nominal": "Irinotecán",
+    "master": "nom-irinotecan",
+    "path": "ANTINEOPLÁSICOS → Inhibidores de topoisomerasa"
+  },
+  {
+    "line": 3392,
+    "nominal": "Vinblastina",
+    "master": "nom-vinblastina",
+    "path": "ANTINEOPLÁSICOS → Alcaloides de la vinca"
+  },
+  {
+    "line": 3392,
+    "nominal": "Vincristina",
+    "master": "nom-vincristina",
+    "path": "ANTINEOPLÁSICOS → Alcaloides de la vinca"
+  },
+  {
+    "line": 3392,
+    "nominal": "Vinorelbina",
+    "master": "nom-vinorelbina",
+    "path": "ANTINEOPLÁSICOS → Alcaloides de la vinca"
+  },
+  {
+    "line": 3393,
+    "nominal": "Docetaxel",
+    "master": "nom-docetaxel",
+    "path": "ANTINEOPLÁSICOS → Taxanos"
+  },
+  {
+    "line": 3393,
+    "nominal": "Paclitaxel",
+    "master": "nom-paclitaxel",
+    "path": "ANTINEOPLÁSICOS → Taxanos"
+  },
+  {
+    "line": 3394,
+    "nominal": "Asparaginasa",
+    "master": "nom-asparaginasa",
+    "path": "ANTINEOPLÁSICOS → Otros citotóxicos"
+  },
+  {
+    "line": 3394,
+    "nominal": "Dacarbazina",
+    "master": "nom-dacarbazina",
+    "path": "ANTINEOPLÁSICOS → Otros citotóxicos"
+  },
+  {
+    "line": 3394,
+    "nominal": "Hidroxicarbamida",
+    "master": "nom-hidroxicarbamida",
+    "path": "ANTINEOPLÁSICOS → Otros citotóxicos"
+  },
+  {
+    "line": 3394,
+    "nominal": "Procarbazina",
+    "master": "nom-procarbazina",
+    "path": "ANTINEOPLÁSICOS → Otros citotóxicos"
+  },
+  {
+    "line": 3394,
+    "nominal": "Temozolomida",
+    "master": "nom-temozolomida",
+    "path": "ANTINEOPLÁSICOS → Otros citotóxicos"
+  },
+  {
+    "line": 3395,
+    "nominal": "Bortezomib",
+    "master": "nom-bortezomib",
+    "path": "ANTINEOPLÁSICOS → Inhibidores de proteasoma"
+  },
+  {
+    "line": 3396,
+    "nominal": "Azacitidina",
+    "master": "nom-azacitidina",
+    "path": "ANTINEOPLÁSICOS → Agentes hipometilantes"
+  },
+  {
+    "line": 3397,
+    "nominal": "Dasatinib",
+    "master": "nom-dasatinib",
+    "path": "ANTINEOPLÁSICOS → Inhibidores de tirosina cinasa"
+  },
+  {
+    "line": 3397,
+    "nominal": "Erlotinib",
+    "master": "nom-erlotinib",
+    "path": "ANTINEOPLÁSICOS → Inhibidores de tirosina cinasa"
+  },
+  {
+    "line": 3397,
+    "nominal": "Imatinib",
+    "master": "nom-imatinib",
+    "path": "ANTINEOPLÁSICOS → Inhibidores de tirosina cinasa"
+  },
+  {
+    "line": 3397,
+    "nominal": "Sunitinib",
+    "master": "nom-sunitinib",
+    "path": "ANTINEOPLÁSICOS → Inhibidores de tirosina cinasa"
+  },
+  {
+    "line": 3398,
+    "nominal": "Cetuximab",
+    "master": "nom-cetuximab",
+    "path": "ANTINEOPLÁSICOS → Anticuerpos monoclonales"
+  },
+  {
+    "line": 3398,
+    "nominal": "Rituximab",
+    "master": "nom-rituximab",
+    "path": "ANTINEOPLÁSICOS → Anticuerpos monoclonales"
+  },
+  {
+    "line": 3398,
+    "nominal": "Trastuzumab",
+    "master": "nom-trastuzumab",
+    "path": "ANTINEOPLÁSICOS → Anticuerpos monoclonales"
+  },
+  {
+    "line": 3399,
+    "nominal": "Talidomida",
+    "master": "nom-talidomida",
+    "path": "ANTINEOPLÁSICOS → Inmunomoduladores"
+  },
+  {
+    "line": 3400,
+    "nominal": "Tretinoína",
+    "master": "nom-tretinoina",
+    "path": "ANTINEOPLÁSICOS → Retinoides antineoplásicos"
+  },
+  {
+    "line": 3401,
+    "nominal": "Anastrozol",
+    "master": "nom-anastrozol",
+    "path": "ANTINEOPLÁSICOS → Hormonoterapia"
+  },
+  {
+    "line": 3401,
+    "nominal": "Bicalutamida",
+    "master": "nom-bicalutamida",
+    "path": "ANTINEOPLÁSICOS → Hormonoterapia"
+  },
+  {
+    "line": 3401,
+    "nominal": "Ciproterona",
+    "master": "nom-ciproterona",
+    "path": "ANTINEOPLÁSICOS → Hormonoterapia"
+  },
+  {
+    "line": 3401,
+    "nominal": "Dietilestilbestrol",
+    "master": "nom-dietilestilbestrol",
+    "path": "ANTINEOPLÁSICOS → Hormonoterapia"
+  },
+  {
+    "line": 3401,
+    "nominal": "Flutamida",
+    "master": "nom-flutamida",
+    "path": "ANTINEOPLÁSICOS → Hormonoterapia"
+  },
+  {
+    "line": 3401,
+    "nominal": "Leuprorelina",
+    "master": "nom-leuprorelina",
+    "path": "ANTINEOPLÁSICOS → Hormonoterapia"
+  },
+  {
+    "line": 3401,
+    "nominal": "Tamoxifeno",
+    "master": "nom-tamoxifeno",
+    "path": "ANTINEOPLÁSICOS → Hormonoterapia"
+  },
+  {
+    "line": 3401,
+    "nominal": "Triptorelina",
+    "master": "nom-triptorelina",
+    "path": "ANTINEOPLÁSICOS → Hormonoterapia"
+  },
+  {
+    "line": 3402,
+    "nominal": "Dexrazoxano",
+    "master": "nom-dexrazoxano",
+    "path": "ANTINEOPLÁSICOS → Medicamentos adyuvantes"
+  },
+  {
+    "line": 3402,
+    "nominal": "Filgrastim",
+    "master": "nom-filgrastim",
+    "path": "ANTINEOPLÁSICOS → Medicamentos adyuvantes"
+  },
+  {
+    "line": 3402,
+    "nominal": "Folinato cálcico",
+    "master": "nom-folinato-calcico",
+    "path": "ANTINEOPLÁSICOS → Medicamentos adyuvantes"
+  },
+  {
+    "line": 3402,
+    "nominal": "Mesna",
+    "master": "nom-mesna",
+    "path": "ANTINEOPLÁSICOS → Medicamentos adyuvantes"
+  },
+  {
+    "line": 3409,
+    "nominal": "Carbón activado",
+    "master": "nom-carbon-activado",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Adsorbentes e inespecíficos"
+  },
+  {
+    "line": 3409,
+    "nominal": "Ipecacuana",
+    "master": "nom-ipecacuana",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Adsorbentes e inespecíficos"
+  },
+  {
+    "line": 3410,
+    "nominal": "Acetilcisteína",
+    "master": "nom-acetilcisteina",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Intoxicación por paracetamol"
+  },
+  {
+    "line": 3411,
+    "nominal": "Amilo nitrito",
+    "master": "nom-amilo-nitrito",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Intoxicación por cianuro"
+  },
+  {
+    "line": 3411,
+    "nominal": "Hidroxocobalamina",
+    "master": "nom-hidroxocobalamina",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Intoxicación por cianuro"
+  },
+  {
+    "line": 3411,
+    "nominal": "Sodio nitrito",
+    "master": "nom-sodio-nitrito",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Intoxicación por cianuro"
+  },
+  {
+    "line": 3411,
+    "nominal": "Sodio tiosulfato",
+    "master": "nom-sodio-tiosulfato",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Intoxicación por cianuro"
+  },
+  {
+    "line": 3412,
+    "nominal": "Atropina",
+    "master": "nom-atropina",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Intoxicación por organofosforados"
+  },
+  {
+    "line": 3412,
+    "nominal": "Pralidoxima",
+    "master": "nom-pralidoxima",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Intoxicación por organofosforados"
+  },
+  {
+    "line": 3413,
+    "nominal": "Naloxona",
+    "master": "nom-naloxona",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Intoxicación por opioides"
+  },
+  {
+    "line": 3414,
+    "nominal": "Flumazenilo",
+    "master": "nom-flumazenilo",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Intoxicación por benzodiazepinas"
+  },
+  {
+    "line": 3415,
+    "nominal": "Azul de metileno",
+    "master": "nom-azul-de-metileno",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Metahemoglobinemia"
+  },
+  {
+    "line": 3416,
+    "nominal": "Azul de Prusia",
+    "master": "nom-azul-de-prusia",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Intoxicación por metales"
+  },
+  {
+    "line": 3416,
+    "nominal": "Calcioedetato sódico",
+    "master": "nom-calcioedetato-sodico",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Intoxicación por metales"
+  },
+  {
+    "line": 3416,
+    "nominal": "Deferoxamina",
+    "master": "nom-deferoxamina",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Intoxicación por metales"
+  },
+  {
+    "line": 3416,
+    "nominal": "Dimercaprol",
+    "master": "nom-dimercaprol",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Intoxicación por metales"
+  },
+  {
+    "line": 3416,
+    "nominal": "Penicilamina",
+    "master": "nom-penicilamina",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Intoxicación por metales"
+  },
+  {
+    "line": 3416,
+    "nominal": "Succímero",
+    "master": "nom-succimero",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Intoxicación por metales"
+  },
+  {
+    "line": 3417,
+    "nominal": "Calcio gluconato",
+    "master": "nom-gluconato-de-calcio",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Toxicidad por fluoruro o ácido fluorhídrico"
+  },
+  {
+    "line": 3418,
+    "nominal": "Dantroleno",
+    "master": "nom-dantroleno",
+    "path": "ANTÍDOTOS Y SUSTANCIAS PARA INTOXICACIONES → Hipertermia maligna"
+  },
+  {
+    "line": 3425,
+    "nominal": "Ácido fólico",
+    "master": "nom-acido-folico",
+    "path": "ANTIANÉMICOS"
+  },
+  {
+    "line": 3426,
+    "nominal": "Epoetina alfa",
+    "master": "nom-epoetina-alfa",
+    "path": "ANTIANÉMICOS"
+  },
+  {
+    "line": 3427,
+    "nominal": "Hidroxocobalamina",
+    "master": "nom-hidroxocobalamina",
+    "path": "ANTIANÉMICOS"
+  },
+  {
+    "line": 3428,
+    "nominal": "Hierro sacarato",
+    "master": "nom-hierro-sacarato",
+    "path": "ANTIANÉMICOS"
+  },
+  {
+    "line": 3429,
+    "nominal": "Hierro sulfato",
+    "master": "nom-hierro-sulfato",
+    "path": "ANTIANÉMICOS"
+  },
+  {
+    "line": 3430,
+    "nominal": "Hierro sulfato + ácido fólico",
+    "master": "nom-hierro-sulfato-acido-folico",
+    "path": "ANTIANÉMICOS"
+  },
+  {
+    "line": 3433,
+    "nominal": "Deferasirox",
+    "master": "nom-deferasirox",
+    "path": "QUELANTES DE HIERRO"
+  },
+  {
+    "line": 3434,
+    "nominal": "Deferoxamina",
+    "master": "nom-deferoxamina",
+    "path": "QUELANTES DE HIERRO"
+  },
+  {
+    "line": 3437,
+    "nominal": "Concentrado de factor VIII",
+    "master": "nom-concentrado-de-factor-viii",
+    "path": "FACTORES DE COAGULACIÓN"
+  },
+  {
+    "line": 3438,
+    "nominal": "Concentrado de complejo de factores II, VII, IX y X",
+    "master": "nom-concentrado-de-complejo-de-factores-ii-vii-ix-y-x",
+    "path": "FACTORES DE COAGULACIÓN"
+  },
+  {
+    "line": 3441,
+    "nominal": "Gelatina",
+    "master": "nom-gelatina",
+    "path": "SUCEDÁNEOS DEL PLASMA"
+  },
+  {
+    "line": 3450,
+    "nominal": "Glucosa en agua",
+    "master": "nom-glucosa",
+    "path": "SOLUCIONES Y ELECTROLITOS → Cristaloides"
+  },
+  {
+    "line": 3450,
+    "nominal": "Glucosa + sodio cloruro",
+    "master": "nom-glucosa-sodio-cloruro",
+    "path": "SOLUCIONES Y ELECTROLITOS → Cristaloides"
+  },
+  {
+    "line": 3450,
+    "nominal": "Solución polielectrolítica",
+    "master": "nom-solucion-polielectrolitica",
+    "path": "SOLUCIONES Y ELECTROLITOS → Cristaloides"
+  },
+  {
+    "line": 3450,
+    "nominal": "Solución Ringer lactato",
+    "master": "nom-solucion-ringer-lactato",
+    "path": "SOLUCIONES Y ELECTROLITOS → Cristaloides"
+  },
+  {
+    "line": 3450,
+    "nominal": "Sodio cloruro",
+    "master": "nom-cloruro-de-sodio",
+    "path": "SOLUCIONES Y ELECTROLITOS → Cristaloides"
+  },
+  {
+    "line": 3451,
+    "nominal": "Calcio gluconato",
+    "master": "nom-gluconato-de-calcio",
+    "path": "SOLUCIONES Y ELECTROLITOS → Correctores electrolíticos"
+  },
+  {
+    "line": 3451,
+    "nominal": "Magnesio sulfato",
+    "master": "nom-sulfato-de-magnesio",
+    "path": "SOLUCIONES Y ELECTROLITOS → Correctores electrolíticos"
+  },
+  {
+    "line": 3451,
+    "nominal": "Potasio cloruro",
+    "master": "nom-cloruro-de-potasio",
+    "path": "SOLUCIONES Y ELECTROLITOS → Correctores electrolíticos"
+  },
+  {
+    "line": 3452,
+    "nominal": "Sodio bicarbonato",
+    "master": "nom-bicarbonato-de-sodio",
+    "path": "SOLUCIONES Y ELECTROLITOS → Corrector del equilibrio ácido-base"
+  },
+  {
+    "line": 3453,
+    "nominal": "Sales de rehidratación oral",
+    "master": "nom-sales-de-rehidratacion-oral",
+    "path": "SOLUCIONES Y ELECTROLITOS → Rehidratación oral"
+  },
+  {
+    "line": 3454,
+    "nominal": "Agua para inyección",
+    "master": "nom-agua-para-inyeccion",
+    "path": "SOLUCIONES Y ELECTROLITOS → Diluyente"
+  },
+  {
+    "line": 3457,
+    "nominal": "Ciclopentolato",
+    "master": "nom-ciclopentolato",
+    "path": "AGENTES DIAGNÓSTICOS → Oftálmicos"
+  },
+  {
+    "line": 3457,
+    "nominal": "Fenilefrina",
+    "master": "nom-fenilefrina",
+    "path": "AGENTES DIAGNÓSTICOS → Oftálmicos"
+  },
+  {
+    "line": 3457,
+    "nominal": "Fluoresceína",
+    "master": "nom-fluoresceina",
+    "path": "AGENTES DIAGNÓSTICOS → Oftálmicos"
+  },
+  {
+    "line": 3458,
+    "nominal": "Bario sulfato",
+    "master": "nom-bario-sulfato",
+    "path": "AGENTES DIAGNÓSTICOS → Contrastes radiológicos"
+  },
+  {
+    "line": 3458,
+    "nominal": "Gadopentetato de meglumina",
+    "master": "nom-gadopentetato-de-meglumina",
+    "path": "AGENTES DIAGNÓSTICOS → Contrastes radiológicos"
+  },
+  {
+    "line": 3458,
+    "nominal": "Iohexol",
+    "master": "nom-iohexol",
+    "path": "AGENTES DIAGNÓSTICOS → Contrastes radiológicos"
+  },
+  {
+    "line": 3458,
+    "nominal": "Iopamidol",
+    "master": "nom-iopamidol",
+    "path": "AGENTES DIAGNÓSTICOS → Contrastes radiológicos"
+  },
+  {
+    "line": 3458,
+    "nominal": "Iotalamato de meglumina",
+    "master": "nom-iotalamato-de-meglumina",
+    "path": "AGENTES DIAGNÓSTICOS → Contrastes radiológicos"
+  },
+  {
+    "line": 3459,
+    "nominal": "Bisacodilo",
+    "master": "nom-bisacodilo",
+    "path": "AGENTES DIAGNÓSTICOS → Preparación gastrointestinal"
+  },
+  {
+    "line": 3459,
+    "nominal": "Macrogol 3350 + electrolitos",
+    "master": "nom-macrogol-electrolitos",
+    "path": "AGENTES DIAGNÓSTICOS → Preparación gastrointestinal"
+  },
+  {
+    "line": 3459,
+    "nominal": "Simeticona",
+    "master": "nom-simeticona",
+    "path": "AGENTES DIAGNÓSTICOS → Preparación gastrointestinal"
+  },
+  {
+    "line": 3459,
+    "nominal": "Sodio fosfato monobásico + sodio fosfato dibásico",
+    "master": "nom-sodio-fosfato-monobasico-sodio-fosfato-dibasico",
+    "path": "AGENTES DIAGNÓSTICOS → Preparación gastrointestinal"
+  },
+  {
+    "line": 3462,
+    "nominal": "Glutaral",
+    "master": "nom-glutaral",
+    "path": "DESINFECTANTES"
+  },
+  {
+    "line": 3463,
+    "nominal": "Hipoclorito sódico",
+    "master": "nom-hipoclorito-sodico",
+    "path": "DESINFECTANTES"
+  },
+  {
+    "line": 3466,
+    "nominal": "Óxido nitroso",
+    "master": "nom-oxido-nitroso",
+    "path": "GASES MEDICINALES"
+  },
+  {
+    "line": 3467,
+    "nominal": "Oxígeno medicinal",
+    "master": "nom-oxigeno-medicinal",
+    "path": "GASES MEDICINALES"
+  },
+  {
+    "line": 3474,
+    "nominal": "Alprostadil",
+    "master": "nom-alprostadil",
+    "path": "MEDICAMENTOS Y PRODUCTOS DE INTERÉS NEONATAL"
+  },
+  {
+    "line": 3475,
+    "nominal": "Cafeína citrato",
+    "master": "nom-cafeina-citrato",
+    "path": "MEDICAMENTOS Y PRODUCTOS DE INTERÉS NEONATAL"
+  },
+  {
+    "line": 3476,
+    "nominal": "Ibuprofeno",
+    "master": "nom-ibuprofeno",
+    "path": "MEDICAMENTOS Y PRODUCTOS DE INTERÉS NEONATAL"
+  },
+  {
+    "line": 3477,
+    "nominal": "Indometacina",
+    "master": "nom-indometacina",
+    "path": "MEDICAMENTOS Y PRODUCTOS DE INTERÉS NEONATAL"
+  },
+  {
+    "line": 3478,
+    "nominal": "Surfactante pulmonar",
+    "master": "nom-surfactante-pulmonar",
+    "path": "MEDICAMENTOS Y PRODUCTOS DE INTERÉS NEONATAL"
+  },
+  {
+    "line": 991,
+    "nominal": "Metformina",
+    "master": "nom-metformina",
+    "path": "Sección 06 → A. Caso académico de diabetes mellitus tipo 2 / infección urinaria / hipertensión"
+  },
+  {
+    "line": 992,
+    "nominal": "Glibenclamida",
+    "master": "nom-glibenclamida",
+    "path": "Sección 06 → A. Caso académico de diabetes mellitus tipo 2 / infección urinaria / hipertensión"
+  },
+  {
+    "line": 993,
+    "nominal": "Insulina humana NPH",
+    "master": "nom-insulina-humana",
+    "path": "Sección 06 → A. Caso académico de diabetes mellitus tipo 2 / infección urinaria / hipertensión"
+  },
+  {
+    "line": 994,
+    "nominal": "Insulina humana regular",
+    "master": "nom-insulina-humana",
+    "path": "Sección 06 → A. Caso académico de diabetes mellitus tipo 2 / infección urinaria / hipertensión"
+  },
+  {
+    "line": 995,
+    "nominal": "Captopril",
+    "master": "nom-captopril",
+    "path": "Sección 06 → A. Caso académico de diabetes mellitus tipo 2 / infección urinaria / hipertensión"
+  },
+  {
+    "line": 996,
+    "nominal": "Ceftriaxona",
+    "master": "nom-ceftriaxona",
+    "path": "Sección 06 → A. Caso académico de diabetes mellitus tipo 2 / infección urinaria / hipertensión"
+  },
+  {
+    "line": 997,
+    "nominal": "Dimenhidrinato",
+    "master": "nom-dimenhidrinato",
+    "path": "Sección 06 → A. Caso académico de diabetes mellitus tipo 2 / infección urinaria / hipertensión"
+  },
+  {
+    "line": 998,
+    "nominal": "Paracetamol",
+    "master": "nom-paracetamol",
+    "path": "Sección 06 → A. Caso académico de diabetes mellitus tipo 2 / infección urinaria / hipertensión"
+  },
+  {
+    "line": 999,
+    "nominal": "Metamizol sódico",
+    "master": "nom-metamizol-sodico",
+    "path": "Sección 06 → A. Caso académico de diabetes mellitus tipo 2 / infección urinaria / hipertensión"
+  },
+  {
+    "line": 1000,
+    "nominal": "Cloruro de potasio",
+    "master": "nom-cloruro-de-potasio",
+    "path": "Sección 06 → A. Caso académico de diabetes mellitus tipo 2 / infección urinaria / hipertensión"
+  },
+  {
+    "line": 1001,
+    "nominal": "Dextrosa hipertónica",
+    "master": "nom-glucosa",
+    "path": "Sección 06 → A. Caso académico de diabetes mellitus tipo 2 / infección urinaria / hipertensión"
+  },
+  {
+    "line": 1002,
+    "nominal": "Cloruro de sodio 0,9 %",
+    "master": "nom-cloruro-de-sodio",
+    "path": "Sección 06 → A. Caso académico de diabetes mellitus tipo 2 / infección urinaria / hipertensión"
+  },
+  {
+    "line": 1006,
+    "nominal": "Cloruro de potasio",
+    "master": "nom-cloruro-de-potasio",
+    "path": "Sección 06 → B. Caso académico de politrauma / TEC grave / postoperatorio neuroquirúrgico / UCI"
+  },
+  {
+    "line": 1007,
+    "nominal": "Agua estéril para preparación",
+    "master": "nom-agua-esteril-para-preparacion",
+    "path": "Sección 06 → B. Caso académico de politrauma / TEC grave / postoperatorio neuroquirúrgico / UCI"
+  },
+  {
+    "line": 1008,
+    "nominal": "Ceftriaxona",
+    "master": "nom-ceftriaxona",
+    "path": "Sección 06 → B. Caso académico de politrauma / TEC grave / postoperatorio neuroquirúrgico / UCI"
+  },
+  {
+    "line": 1009,
+    "nominal": "Omeprazol",
+    "master": "nom-omeprazol",
+    "path": "Sección 06 → B. Caso académico de politrauma / TEC grave / postoperatorio neuroquirúrgico / UCI"
+  },
+  {
+    "line": 1010,
+    "nominal": "Metoclopramida",
+    "master": "nom-metoclopramida",
+    "path": "Sección 06 → B. Caso académico de politrauma / TEC grave / postoperatorio neuroquirúrgico / UCI"
+  },
+  {
+    "line": 1011,
+    "nominal": "Fenitoína",
+    "master": "nom-fenitoina",
+    "path": "Sección 06 → B. Caso académico de politrauma / TEC grave / postoperatorio neuroquirúrgico / UCI"
+  },
+  {
+    "line": 1012,
+    "nominal": "Manitol",
+    "master": "nom-manitol",
+    "path": "Sección 06 → B. Caso académico de politrauma / TEC grave / postoperatorio neuroquirúrgico / UCI"
+  },
+  {
+    "line": 1013,
+    "nominal": "Fentanilo",
+    "master": "nom-fentanilo",
+    "path": "Sección 06 → B. Caso académico de politrauma / TEC grave / postoperatorio neuroquirúrgico / UCI"
+  },
+  {
+    "line": 1014,
+    "nominal": "Midazolam",
+    "master": "nom-midazolam",
+    "path": "Sección 06 → B. Caso académico de politrauma / TEC grave / postoperatorio neuroquirúrgico / UCI"
+  },
+  {
+    "line": 1015,
+    "nominal": "Noradrenalina",
+    "master": "nom-norepinefrina",
+    "path": "Sección 06 → B. Caso académico de politrauma / TEC grave / postoperatorio neuroquirúrgico / UCI"
+  },
+  {
+    "line": 1016,
+    "nominal": "Cloruro de sodio 0,9 %",
+    "master": "nom-cloruro-de-sodio",
+    "path": "Sección 06 → B. Caso académico de politrauma / TEC grave / postoperatorio neuroquirúrgico / UCI"
+  },
+  {
+    "line": 1022,
+    "nominal": "Omeprazol",
+    "master": "nom-omeprazol",
+    "path": "Sección 06 → C. Trabajo de hemorragia digestiva alta y anemia secundaria"
+  },
+  {
+    "line": 1023,
+    "nominal": "Ácido tranexámico",
+    "master": "nom-acido-tranexamico",
+    "path": "Sección 06 → C. Trabajo de hemorragia digestiva alta y anemia secundaria"
+  },
+  {
+    "line": 1024,
+    "nominal": "Fitomenadiona",
+    "master": "nom-fitomenadiona",
+    "path": "Sección 06 → C. Trabajo de hemorragia digestiva alta y anemia secundaria"
+  },
+  {
+    "line": 1025,
+    "nominal": "Metoclopramida",
+    "master": "nom-metoclopramida",
+    "path": "Sección 06 → C. Trabajo de hemorragia digestiva alta y anemia secundaria"
+  },
+  {
+    "line": 1026,
+    "nominal": "Poligelina 3,5 % / Haemaccel",
+    "master": "nom-poligelina",
+    "path": "Sección 06 → C. Trabajo de hemorragia digestiva alta y anemia secundaria"
+  },
+  {
+    "line": 1027,
+    "nominal": "Cloruro de sodio 0,9 %",
+    "master": "nom-cloruro-de-sodio",
+    "path": "Sección 06 → C. Trabajo de hemorragia digestiva alta y anemia secundaria"
+  },
+  {
+    "line": 1028,
+    "nominal": "Concentrado de hematíes",
+    "master": "nom-concentrado-de-hematies",
+    "path": "Sección 06 → C. Trabajo de hemorragia digestiva alta y anemia secundaria"
+  },
+  {
+    "line": 1034,
+    "nominal": "Metamizol",
+    "master": "nom-metamizol-sodico",
+    "path": "Sección 06 → D. Pancreatitis aguda"
+  },
+  {
+    "line": 1035,
+    "nominal": "Tramadol",
+    "master": "nom-tramadol",
+    "path": "Sección 06 → D. Pancreatitis aguda"
+  },
+  {
+    "line": 1036,
+    "nominal": "Morfina",
+    "master": "nom-morfina",
+    "path": "Sección 06 → D. Pancreatitis aguda"
+  },
+  {
+    "line": 1037,
+    "nominal": "Antiemético no especificado",
+    "master": "nom-antiemetico-no-especificado",
+    "path": "Sección 06 → D. Pancreatitis aguda"
+  },
+  {
+    "line": 1038,
+    "nominal": "Cristaloides IV por identificar",
+    "master": "nom-cristaloides-iv-por-identificar",
+    "path": "Sección 06 → D. Pancreatitis aguda"
+  },
+  {
+    "line": 1039,
+    "nominal": "Antibióticos sin especificar",
+    "master": "nom-antibioticos-sin-especificar",
+    "path": "Sección 06 → D. Pancreatitis aguda"
+  },
+  {
+    "line": 1043,
+    "nominal": "Vancomicina",
+    "master": "nom-vancomicina",
+    "path": "Sección 06 → E. Prototipos y fichas visuales de cuidados críticos"
+  },
+  {
+    "line": 1044,
+    "nominal": "Metronidazol",
+    "master": "nom-metronidazol",
+    "path": "Sección 06 → E. Prototipos y fichas visuales de cuidados críticos"
+  },
+  {
+    "line": 1045,
+    "nominal": "Metoclopramida",
+    "master": "nom-metoclopramida",
+    "path": "Sección 06 → E. Prototipos y fichas visuales de cuidados críticos"
+  },
+  {
+    "line": 1046,
+    "nominal": "Omeprazol",
+    "master": "nom-omeprazol",
+    "path": "Sección 06 → E. Prototipos y fichas visuales de cuidados críticos"
+  },
+  {
+    "line": 1047,
+    "nominal": "Midazolam",
+    "master": "nom-midazolam",
+    "path": "Sección 06 → E. Prototipos y fichas visuales de cuidados críticos"
+  },
+  {
+    "line": 1048,
+    "nominal": "Fentanilo",
+    "master": "nom-fentanilo",
+    "path": "Sección 06 → E. Prototipos y fichas visuales de cuidados críticos"
+  },
+  {
+    "line": 1049,
+    "nominal": "Imipenem",
+    "master": "nom-imipenem",
+    "path": "Sección 06 → E. Prototipos y fichas visuales de cuidados críticos"
+  },
+  {
+    "line": 1050,
+    "nominal": "Noradrenalina",
+    "master": "nom-norepinefrina",
+    "path": "Sección 06 → E. Prototipos y fichas visuales de cuidados críticos"
+  },
+  {
+    "line": 1051,
+    "nominal": "Levotiroxina",
+    "master": "nom-levotiroxina",
+    "path": "Sección 06 → E. Prototipos y fichas visuales de cuidados críticos"
+  },
+  {
+    "line": 1052,
+    "nominal": "Enoxaparina",
+    "master": "nom-enoxaparina",
+    "path": "Sección 06 → E. Prototipos y fichas visuales de cuidados críticos"
+  },
+  {
+    "line": 1053,
+    "nominal": "Furosemida",
+    "master": "nom-furosemida",
+    "path": "Sección 06 → E. Prototipos y fichas visuales de cuidados críticos"
+  },
+  {
+    "line": 1054,
+    "nominal": "Dextrosa al 5 %",
+    "master": "nom-glucosa",
+    "path": "Sección 06 → E. Prototipos y fichas visuales de cuidados críticos"
+  },
+  {
+    "line": 1055,
+    "nominal": "Cloruro de sodio 0,9 %",
+    "master": "nom-cloruro-de-sodio",
+    "path": "Sección 06 → E. Prototipos y fichas visuales de cuidados críticos"
+  },
+  {
+    "line": 1056,
+    "nominal": "Soluciones/electrolitos combinados por identificar",
+    "master": "nom-soluciones-electrolitos-combinados-por-identificar",
+    "path": "Sección 06 → E. Prototipos y fichas visuales de cuidados críticos"
+  },
+  {
+    "line": 1057,
+    "nominal": "Fórmula nutricional enteral tipo Ensure",
+    "master": "nom-formula-nutricional-enteral-tipo-ensure",
+    "path": "Sección 06 → E. Prototipos y fichas visuales de cuidados críticos"
+  },
+  {
+    "line": 1062,
+    "nominal": "Diazepam",
+    "master": "nom-diazepam",
+    "path": "Sección 06 → F. Temas o fichas solicitadas en el caso de TEC para desarrollar"
+  },
+  {
+    "line": 1063,
+    "nominal": "Bicarbonato de sodio",
+    "master": "nom-bicarbonato-de-sodio",
+    "path": "Sección 06 → F. Temas o fichas solicitadas en el caso de TEC para desarrollar"
+  },
+  {
+    "line": 1064,
+    "nominal": "Ketoprofeno",
+    "master": "nom-ketoprofeno",
+    "path": "Sección 06 → F. Temas o fichas solicitadas en el caso de TEC para desarrollar"
+  },
+  {
+    "line": 1065,
+    "nominal": "Atorvastatina",
+    "master": "nom-atorvastatina",
+    "path": "Sección 06 → F. Temas o fichas solicitadas en el caso de TEC para desarrollar"
+  },
+  {
+    "line": 1066,
+    "nominal": "Ácido acetilsalicílico",
+    "master": "nom-acido-acetilsalicilico",
+    "path": "Sección 06 → F. Temas o fichas solicitadas en el caso de TEC para desarrollar"
+  },
+  {
+    "line": 1067,
+    "nominal": "Enoxaparina",
+    "master": "nom-enoxaparina",
+    "path": "Sección 06 → F. Temas o fichas solicitadas en el caso de TEC para desarrollar"
+  },
+  {
+    "line": 1068,
+    "nominal": "Apixabán",
+    "master": "nom-apixaban",
+    "path": "Sección 06 → F. Temas o fichas solicitadas en el caso de TEC para desarrollar"
+  },
+  {
+    "line": 1069,
+    "nominal": "Alteplasa",
+    "master": "nom-alteplasa",
+    "path": "Sección 06 → F. Temas o fichas solicitadas en el caso de TEC para desarrollar"
+  },
+  {
+    "line": 1070,
+    "nominal": "altilice",
+    "master": "nom-altilice",
+    "path": "Sección 06 → F. Temas o fichas solicitadas en el caso de TEC para desarrollar"
+  },
+  {
+    "line": 1076,
+    "nominal": "Insulina lispro",
+    "master": "nom-insulina-lispro",
+    "path": "Sección 06 → Insulinas"
+  },
+  {
+    "line": 1076,
+    "nominal": "Insulina aspart",
+    "master": "nom-insulina-aspart",
+    "path": "Sección 06 → Insulinas"
+  },
+  {
+    "line": 1076,
+    "nominal": "Insulina glulisina",
+    "master": "nom-insulina-glulisina",
+    "path": "Sección 06 → Insulinas"
+  },
+  {
+    "line": 1077,
+    "nominal": "Insulina humana regular",
+    "master": "nom-insulina-humana",
+    "path": "Sección 06 → Insulinas"
+  },
+  {
+    "line": 1078,
+    "nominal": "Insulina humana NPH",
+    "master": "nom-insulina-humana",
+    "path": "Sección 06 → Insulinas"
+  },
+  {
+    "line": 1079,
+    "nominal": "Insulina glargina",
+    "master": "nom-insulina-glargina",
+    "path": "Sección 06 → Insulinas"
+  },
+  {
+    "line": 1079,
+    "nominal": "Insulina detemir",
+    "master": "nom-insulina-detemir",
+    "path": "Sección 06 → Insulinas"
+  },
+  {
+    "line": 1080,
+    "nominal": "Insulina degludec",
+    "master": "nom-insulina-degludec",
+    "path": "Sección 06 → Insulinas"
+  },
+  {
+    "line": 1081,
+    "nominal": "Premezclas de insulina por identificar",
+    "master": "nom-premezclas-de-insulina-por-identificar",
+    "path": "Sección 06 → Insulinas"
+  },
+  {
+    "line": 1102,
+    "nominal": "Epinefrina",
+    "master": "nom-epinefrina",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1102,
+    "nominal": "Atropina",
+    "master": "nom-atropina",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1102,
+    "nominal": "Amiodarona",
+    "master": "nom-amiodarona",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1102,
+    "nominal": "Adenosina",
+    "master": "nom-adenosina",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1102,
+    "nominal": "Lidocaína",
+    "master": "nom-lidocaina",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1103,
+    "nominal": "Dobutamina",
+    "master": "nom-dobutamina",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1103,
+    "nominal": "Dopamina",
+    "master": "nom-dopamina",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1103,
+    "nominal": "Norepinefrina",
+    "master": "nom-norepinefrina",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1103,
+    "nominal": "Vasopresina",
+    "master": "nom-vasopresina",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1104,
+    "nominal": "Sulfato de magnesio",
+    "master": "nom-sulfato-de-magnesio",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1104,
+    "nominal": "Gluconato de calcio",
+    "master": "nom-gluconato-de-calcio",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1104,
+    "nominal": "Cloruro de calcio",
+    "master": "nom-cloruro-de-calcio",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1104,
+    "nominal": "Bicarbonato de sodio",
+    "master": "nom-bicarbonato-de-sodio",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1105,
+    "nominal": "Enoxaparina",
+    "master": "nom-enoxaparina",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1105,
+    "nominal": "Heparina sódica",
+    "master": "nom-heparina-sodica",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1105,
+    "nominal": "Warfarina",
+    "master": "nom-warfarina",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1105,
+    "nominal": "Apixabán",
+    "master": "nom-apixaban",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1106,
+    "nominal": "Hidrocortisona",
+    "master": "nom-hidrocortisona",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1106,
+    "nominal": "Dexametasona",
+    "master": "nom-dexametasona",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1106,
+    "nominal": "Salbutamol",
+    "master": "nom-salbutamol",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1106,
+    "nominal": "Ipratropio",
+    "master": "nom-ipratropio",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1106,
+    "nominal": "Budesonida",
+    "master": "nom-budesonida",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1107,
+    "nominal": "Naloxona",
+    "master": "nom-naloxona",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1107,
+    "nominal": "Flumazenil",
+    "master": "nom-flumazenilo",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1108,
+    "nominal": "Glucosa",
+    "master": "nom-glucosa",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1108,
+    "nominal": "Glucagón",
+    "master": "nom-glucagon",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1091,
+    "nominal": "Omeprazol",
+    "master": "nom-omeprazol",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1091,
+    "nominal": "Metoclopramida",
+    "master": "nom-metoclopramida",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1091,
+    "nominal": "Ondansetrón",
+    "master": "nom-ondansetron",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1094,
+    "nominal": "Captopril",
+    "master": "nom-captopril",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1094,
+    "nominal": "Enalapril",
+    "master": "nom-enalapril",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1094,
+    "nominal": "Losartán",
+    "master": "nom-losartan",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1094,
+    "nominal": "Amlodipino",
+    "master": "nom-amlodipino",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 1094,
+    "nominal": "Furosemida",
+    "master": "nom-furosemida",
+    "path": "Sección 06 → Prioridades editoriales"
+  },
+  {
+    "line": 3538,
+    "nominal": "Ranibizumab",
+    "master": "nom-ranibizumab",
+    "path": "Anexo B → Mención institucional editorial, sin cotejo independiente"
+  },
+  {
+    "line": 3543,
+    "nominal": "Dactinomicina",
+    "master": "nom-dactinomicina",
+    "path": "Anexo B → Mención institucional editorial, sin cotejo independiente"
+  },
+  {
+    "line": 3543,
+    "nominal": "Fludarabina",
+    "master": "nom-fludarabina",
+    "path": "Anexo B → Mención institucional editorial, sin cotejo independiente"
+  },
+  {
+    "line": 3602,
+    "nominal": "Fluticasona + salmeterol",
+    "master": "nom-fluticasona-salmeterol",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3603,
+    "nominal": "Lidocaína + epinefrina",
+    "master": "nom-lidocaina-epinefrina",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3604,
+    "nominal": "Amoxicilina + ácido clavulánico",
+    "master": "nom-amoxicilina-acido-clavulanico",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3605,
+    "nominal": "Ampicilina + sulbactam",
+    "master": "nom-ampicilina-sulbactam",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3606,
+    "nominal": "Piperacilina + tazobactam",
+    "master": "nom-piperacilina-tazobactam",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3607,
+    "nominal": "Sulfametoxazol + trimetoprima",
+    "master": "nom-sulfametoxazol-trimetoprima",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3608,
+    "nominal": "Imipenem + cilastatina",
+    "master": "nom-imipenem-cilastatina",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3609,
+    "nominal": "Etambutol + isoniazida + pirazinamida + rifampicina",
+    "master": "nom-etambutol-isoniazida-pirazinamida-rifampicina",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3610,
+    "nominal": "Isoniazida + rifampicina",
+    "master": "nom-isoniazida-rifampicina",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3611,
+    "nominal": "Sofosbuvir + velpatasvir",
+    "master": "nom-sofosbuvir-velpatasvir",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3612,
+    "nominal": "Lopinavir + ritonavir",
+    "master": "nom-lopinavir-ritonavir",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3613,
+    "nominal": "Lamivudina + abacavir",
+    "master": "nom-lamivudina-abacavir",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3614,
+    "nominal": "Lamivudina + zidovudina",
+    "master": "nom-lamivudina-zidovudina",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3615,
+    "nominal": "Lamivudina + zidovudina + nevirapina",
+    "master": "nom-lamivudina-zidovudina-nevirapina",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3616,
+    "nominal": "Lamivudina + tenofovir disoproxilo + dolutegravir",
+    "master": "nom-lamivudina-tenofovir-disoproxilo-dolutegravir",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3617,
+    "nominal": "Atazanavir + ritonavir",
+    "master": "nom-atazanavir-ritonavir",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3618,
+    "nominal": "Efavirenz + emtricitabina + tenofovir disoproxilo",
+    "master": "nom-efavirenz-emtricitabina-tenofovir-disoproxilo",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3619,
+    "nominal": "Efavirenz + lamivudina + tenofovir disoproxilo",
+    "master": "nom-efavirenz-lamivudina-tenofovir-disoproxilo",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3620,
+    "nominal": "Estradiol cipionato + medroxiprogesterona",
+    "master": "nom-estradiol-cipionato-medroxiprogesterona",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3621,
+    "nominal": "Etinilestradiol + levonorgestrel",
+    "master": "nom-etinilestradiol-levonorgestrel",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3622,
+    "nominal": "Estrógenos conjugados + medroxiprogesterona",
+    "master": "nom-estrogenos-conjugados-medroxiprogesterona",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3623,
+    "nominal": "Hierro sulfato + ácido fólico",
+    "master": "nom-hierro-sulfato-acido-folico",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3624,
+    "nominal": "Macrogol + electrolitos",
+    "master": "nom-macrogol-electrolitos",
+    "path": "Anexo B → Combinaciones"
+  },
+  {
+    "line": 3628,
+    "nominal": "Bupivacaína",
+    "master": "nom-bupivacaina",
+    "path": "Anexo B → Formulación, no nueva DCI"
+  },
+  {
+    "line": 3629,
+    "nominal": "Lidocaína",
+    "master": "nom-lidocaina",
+    "path": "Anexo B → Formulación, no nueva DCI"
+  },
+  {
+    "line": 3572,
+    "nominal": "Ácido acetilsalicílico",
+    "master": "nom-acido-acetilsalicilico",
+    "path": "Índice editorial → Analgesia/antipiresis; inflamación musculoesquelética"
+  },
+  {
+    "line": 3573,
+    "nominal": "Amitriptilina",
+    "master": "nom-amitriptilina",
+    "path": "Índice editorial → Profilaxis de migraña; dolor neuropático; cuidados paliativos"
+  },
+  {
+    "line": 3574,
+    "nominal": "Propranolol",
+    "master": "nom-propranolol",
+    "path": "Índice editorial → Profilaxis de migraña"
+  },
+  {
+    "line": 3575,
+    "nominal": "Carbamazepina",
+    "master": "nom-carbamazepina",
+    "path": "Índice editorial → Estabilización del ánimo"
+  },
+  {
+    "line": 3576,
+    "nominal": "Valproato sódico",
+    "master": "nom-valproato-sodico",
+    "path": "Índice editorial → Estabilización del ánimo; migraña"
+  },
+  {
+    "line": 3577,
+    "nominal": "Diazepam",
+    "master": "nom-diazepam",
+    "path": "Índice editorial → Convulsión aguda; sedación; espasmo muscular"
+  },
+  {
+    "line": 3578,
+    "nominal": "Midazolam",
+    "master": "nom-midazolam",
+    "path": "Índice editorial → Sedación; medicación preoperatoria; convulsión aguda"
+  },
+  {
+    "line": 3579,
+    "nominal": "Metadona",
+    "master": "nom-metadona",
+    "path": "Índice editorial → Tratamiento de dependencia de opioides"
+  },
+  {
+    "line": 3580,
+    "nominal": "Nifedipino",
+    "master": "nom-nifedipino",
+    "path": "Índice editorial → Tocolisis"
+  },
+  {
+    "line": 3581,
+    "nominal": "Bromocriptina",
+    "master": "nom-bromocriptina",
+    "path": "Índice editorial → Efectos dopaminérgicos"
+  },
+  {
+    "line": 3582,
+    "nominal": "Bevacizumab",
+    "master": "nom-bevacizumab",
+    "path": "Índice editorial → Oftalmología; antiangiogénesis"
+  },
+  {
+    "line": 3583,
+    "nominal": "Azatioprina",
+    "master": "nom-azatioprina",
+    "path": "Índice editorial → Enfermedades reumatológicas; trasplante"
+  },
+  {
+    "line": 3584,
+    "nominal": "Metotrexato",
+    "master": "nom-metotrexato",
+    "path": "Índice editorial → Oncología"
+  },
+  {
+    "line": 3585,
+    "nominal": "Dexametasona",
+    "master": "nom-dexametasona",
+    "path": "Índice editorial → Alergia/anafilaxia; oncología; cuidados paliativos"
+  },
+  {
+    "line": 3586,
+    "nominal": "Epinefrina",
+    "master": "nom-epinefrina",
+    "path": "Índice editorial → Anafilaxia; reanimación"
+  },
+  {
+    "line": 3587,
+    "nominal": "Acetilcisteína",
+    "master": "nom-acetilcisteina",
+    "path": "Índice editorial → Antídoto para paracetamol"
+  },
+  {
+    "line": 3588,
+    "nominal": "Atropina",
+    "master": "nom-atropina",
+    "path": "Índice editorial → Bradicardia; organofosforados; oftalmología; usos digestivos"
+  },
+  {
+    "line": 3589,
+    "nominal": "Furosemida",
+    "master": "nom-furosemida",
+    "path": "Índice editorial → Insuficiencia cardiaca; edema"
+  },
+  {
+    "line": 3590,
+    "nominal": "Budesonida",
+    "master": "nom-budesonida",
+    "path": "Índice editorial → Vía nasal y usos gastrointestinales según formulación"
+  },
+  {
+    "line": 3591,
+    "nominal": "Ciprofloxacino",
+    "master": "nom-ciprofloxacino",
+    "path": "Índice editorial → Oftalmología; otología"
+  },
+  {
+    "line": 3592,
+    "nominal": "Rituximab",
+    "master": "nom-rituximab",
+    "path": "Índice editorial → Inmunología y enfermedades hematológicas"
+  },
+  {
+    "line": 3593,
+    "nominal": "Leuprorelina",
+    "master": "nom-leuprorelina",
+    "path": "Índice editorial → Oncología hormonal"
+  },
+  {
+    "line": 3594,
+    "nominal": "Tretinoína",
+    "master": "nom-tretinoina",
+    "path": "Índice editorial → Oncohematología en formulaciones específicas"
+  }
+]

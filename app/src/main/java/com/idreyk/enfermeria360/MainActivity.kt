@@ -252,6 +252,18 @@ fun NursingApp(vm: AppViewModel) {
                             "nube" -> CloudScreen(vm, nav, back)
                             "historial" -> HistoryScreen(vm, back)
                             "buscar" -> GlobalSearchScreen(vm, nav, back)
+                            "biblioteca" -> KnowledgeLibraryScreen(vm, nav, back)
+                            "tema" -> KnowledgeTopicScreen(id, vm, back)
+                            "inventario" -> NominalInventoryScreen(vm, nav, back)
+                            "nominal" -> NominalDetailScreen(id, vm, nav, back)
+                            "atlas" -> AtlasLibraryScreen(vm, nav, back)
+                            "dispositivo" -> AtlasDeviceScreen(id, vm, back)
+                            "bioseguridad" -> BiosecurityScreen(vm, nav, back)
+                            "higiene" -> HygieneScreen(vm, back)
+                            "lista" -> EducationalChecklistScreen(id, vm, back)
+                            "simulacion" -> SyntheticCaseScreen(id, vm, back)
+                            "avance" -> LearningProgressScreen(vm, nav, back)
+                            "estado-modulos" -> ModuleStatusScreen(vm, nav, back)
                             else ->
                                 Page("Volvamos al inicio", back = back) {
                                     EmptyState(
@@ -338,6 +350,8 @@ fun AppBottomBar(route: String, nav: (String) -> Unit) {
             "contenido" -> "perfil"
             "favoritos" -> "favoritos"
             "farmacologia",
+            "inventario",
+            "nominal",
             "med" -> "farmacologia"
             "paciente",
             "pacientes",

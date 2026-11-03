@@ -68,6 +68,8 @@ jobs:
             .cache/qa-actual/*.json
             app/build/test-results/testDebugUnitTest/*.xml
             app/build/reports/lint-results-debug.xml
+            .cache/native-mvp/*.png
+            .cache/native-mvp/*.json
       - name: APK de CI con firma temporal, NO actualización del APK entregado
         if: success()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2

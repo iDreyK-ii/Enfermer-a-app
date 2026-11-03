@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.ClinicalCatalogTests" tests="23" skipped="0" failures="0" errors="0" timestamp="2026-11-03T10:50:45" hostname="e2b.local" time="0.377">
+  <properties/>
+  <testcase name="invalidFourAtWeightsAndComponentCountsAreRejected" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.036"/>
+  <testcase name="duplicateInstrumentIsRejected" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.087"/>
+  <testcase name="allThirtySixFourAtCombinationsUseTheOriginalWeights" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.001"/>
+  <testcase name="falseClinicalValidationIsRejected" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.024"/>
+  <testcase name="sourceWithEmbeddedCredentialsIsRejected" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.02"/>
+  <testcase name="numericPainRejectsAllOtherOutOfRangeValues" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.004"/>
+  <testcase name="unselectedFourAtItemDoesNotGetImputedAsNormal" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.001"/>
+  <testcase name="eachActionHasAnExplicitNativeRouteAndCapurroVariantsRemainDistinct" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.018"/>
+  <testcase name="insecureSourceIsRejected" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.013"/>
+  <testcase name="screeningBandsDoNotClaimDiagnosisOrRuleOutDelirium" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.001"/>
+  <testcase name="duplicateSourceIsRejected" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.023"/>
+  <testcase name="searchIgnoresAccentsAndCase" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.049"/>
+  <testcase name="neonatalFilterDoesNotIncludeAdultOrGeneralPediatricTools" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.008"/>
+  <testcase name="missingSourceIsRejected" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.009"/>
+  <testcase name="oversizedInputIsRejectedBeforeParsing" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.003"/>
+  <testcase name="undocumentedNativeRouteIsRejected" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.011"/>
+  <testcase name="futureFormatIsNotSilentlyAccepted" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.009"/>
+  <testcase name="documentaryCardCannotPretendToBeInteractive" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.01"/>
+  <testcase name="unrecognisedPopulationIsRejected" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.015"/>
+  <testcase name="untestableFourAtCognitiveItemsAreTwoPointsNotZeroOrGlasgowNV" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.002"/>
+  <testcase name="packagedCatalogHasExplicitScopeSourcesAndNoClinicalApproval" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.01"/>
+  <testcase name="filtersCombineInsteadOfReplacingEachOther" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.01"/>
+  <testcase name="numericPainDistinguishesZeroPendingAndAbsentSelfReport" classname="com.idreyk.enfermeria360.ClinicalCatalogTests" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

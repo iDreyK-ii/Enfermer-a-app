@@ -3,7 +3,7 @@
   "proyecto": "Enfermería iDreyK 360",
   "repositorio_canonico": "https://github.com/iDreyK-ii/Enfermer-a-app",
   "rama": "desarrollo",
-  "hito": "escalas-clinicas-v1",
+  "hito": "base-maestra-v21-mvp",
   "politica": "Continuar el aplicativo existente; no regenerarlo desde una descripción ni sustituirlo por una web.",
   "android": {
     "tecnologia": "Kotlin / Jetpack Compose",
@@ -14,8 +14,8 @@
     "namespace": "com.idreyk.enfermeria360",
     "application_id": "com.idreyk.enfermeria360",
     "debug_application_id": "com.idreyk.enfermeria360.dev",
-    "version_code": 6,
-    "version_name": "0.5.0-dev",
+    "version_code": 7,
+    "version_name": "0.6.0-dev",
     "min_sdk": 26,
     "target_sdk": 35,
     "compile_sdk": 35,
@@ -42,9 +42,14 @@
       3
     ],
     "catalogo_exporta": 3,
-    "respaldo_cuaderno": 1,
+    "respaldo_cuaderno": 2,
     "sincronizacion_personal_automatica": false,
-    "datos_telefonos_incluidos_en_git": false
+    "datos_telefonos_incluidos_en_git": false,
+    "cuaderno_lee": [
+      1,
+      2
+    ],
+    "progreso_educativo": "SQLite meta, prefijo learning:, sin nueva tabla ni sincronización"
   },
   "diseno": {
     "base": "Prototipo B; selección inicio 2 / ficha 1",
@@ -89,6 +94,33 @@
     "revision_clinica": "pendiente",
     "inventario_exhaustivo": false,
     "descargas_pdf_solicitadas": false,
-    "farmacologia": "se conserva sin completar; último bloque por petición del propietario"
+    "farmacologia": "Inventario nominal importado en IDENTIFICADO; monografías y validación profesional posteriores"
+  },
+  "base_maestra": {
+    "version_especificacion": "2.1",
+    "asset": "app/src/main/assets/base_maestra_mvp.json",
+    "version_contenido": "2.1-mvp.1",
+    "temas_iniciales": 20,
+    "atlas_genericos": 8,
+    "casos_sinteticos": 7,
+    "estado": "núcleo educativo; ver matriz final y bloqueos",
+    "estado_mvp": "Entrega educativa funcional con matriz de parciales/bloqueos; no validación clínica",
+    "informe": "docs/MVP_BASE_MAESTRA_v21.md",
+    "roadmap": "docs/10_ROADMAP_Y_MODULOS_FUTUROS.md"
+  },
+  "verificacion_actual": {
+    "qa": "qa/RESULTADOS_v0.6.0.md",
+    "android_jvm": 235,
+    "suites": 18,
+    "python": 111,
+    "sqlite": 5,
+    "pglite": 17,
+    "instrumentadas_pdf_compiladas": 2,
+    "instrumentadas_pdf_ejecutadas": 0,
+    "capturas_render": 10,
+    "metodo_render": "Robolectric NATIVE API35 / Android content View.draw(Canvas(Bitmap))",
+    "capturas_dispositivo_fisico": false,
+    "salida_pdf_real_verificada": false,
+    "perfil_nube_apk": "vacío; no autenticación real probada"
   }
 }

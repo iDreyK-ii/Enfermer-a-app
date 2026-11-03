@@ -71,10 +71,11 @@ object NotebookCodec {
             json.optJSONObject("campos")
                 ?: throw IllegalArgumentException("Faltan los campos del documento.")
         val allowed =
-            if (kind == "plan") PLAN_FIELDS.keys + "estado" else setOf("contenido", "etiquetas")
+            if (kind == "plan") PLAN_FIELDS.keys + EXTRA_PLAN_FIELDS.keys + "estado" else setOf("contenido", "etiquetas")
         for (key in fields.keys()) require(key in allowed) { "Campo desconocido: $key." }
         if (kind == "plan") {
             PLAN_FIELDS.keys.forEach { text(fields, it, 4000) }
+            EXTRA_PLAN_FIELDS.keys.filter { fields.has(it) }.forEach { text(fields, it, 4000) }
             require(text(fields, "estado", 30) in statuses) { "Estado del plan no reconocido." }
         } else {
             text(fields, "contenido", 16000)
@@ -102,7 +103,7 @@ object NotebookCodec {
         val root =
             JSONObject()
                 .put("tipo_respaldo", "cuaderno_practica")
-                .put("version_esquema", 1)
+                .put("version_esquema", 2)
                 .put("registros", JSONArray(records.map { record(it.json()).json() }))
         val raw = root.toString()
         require(raw.toByteArray(Charsets.UTF_8).size <= MAX_BYTES) {
@@ -122,7 +123,7 @@ object NotebookCodec {
             }
         require(
             root.optString("tipo_respaldo") == "cuaderno_practica" &&
-                root.opt("version_esquema") == 1
+                root.opt("version_esquema") in listOf(1, 2)
         ) {
             "Elige un respaldo de cuaderno de práctica, no un catálogo."
         }

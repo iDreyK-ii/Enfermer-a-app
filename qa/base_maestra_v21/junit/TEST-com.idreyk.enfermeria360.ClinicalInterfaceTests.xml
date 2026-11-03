@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.ClinicalInterfaceTests" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-11-03T10:50:47" hostname="e2b.local" time="19.48">
+  <properties/>
+  <testcase name="restrictedFacesCardDoesNotExposeAnInventedCalculator" classname="com.idreyk.enfermeria360.ClinicalInterfaceTests" time="15.921"/>
+  <testcase name="numericPainStartsUnsetCanSaveZeroAndDoesNotSaveMissingSelfReport" classname="com.idreyk.enfermeria360.ClinicalInterfaceTests" time="0.703"/>
+  <testcase name="numericPainChangingContextInvalidatesTheOldAnswer" classname="com.idreyk.enfermeria360.ClinicalInterfaceTests" time="0.522"/>
+  <testcase name="neonatalFilterAndCapurroDeepLinkKeepTheCorrectVariant" classname="com.idreyk.enfermeria360.ClinicalInterfaceTests" time="0.638"/>
+  <testcase name="fourAtUntestableItemsScoreTwoAndResetInvalidatesTotal" classname="com.idreyk.enfermeria360.ClinicalInterfaceTests" time="0.771"/>
+  <testcase name="fourAtPopulationAcknowledgementCanBeWithdrawnWithoutKeepingScores" classname="com.idreyk.enfermeria360.ClinicalInterfaceTests" time="0.408"/>
+  <testcase name="fourAtResetBeforeSavingClearsEveryComponentWithoutCreatingARecord" classname="com.idreyk.enfermeria360.ClinicalInterfaceTests" time="0.516"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

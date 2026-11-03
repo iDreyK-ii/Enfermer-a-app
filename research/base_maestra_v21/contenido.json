@@ -1,0 +1,2282 @@
+{
+  "topics": [
+    {
+      "id": "fundamentos",
+      "title": "Fundamentos y aprendizaje por competencias",
+      "area": "Fundamentos",
+      "level": "Inicial",
+      "tags": [
+        "enfermería",
+        "seguridad",
+        "ética",
+        "competencias"
+      ],
+      "markdown": "# Aprender a cuidar con criterio\nLa biblioteca se organiza por temas y competencias, no por ciclos universitarios.\n\n## Competencias transversales\n- Observar y diferenciar datos de interpretaciones.\n- Comunicar incertidumbre y pedir supervisión.\n- Documentar fuentes, límites y decisiones del ejercicio.\n- Respetar autonomía, privacidad y diversidad.\n\n| Actividad | Evidencia de aprendizaje |\n|---|---|\n| Leer una ficha | Identificar fuente y estado de revisión |\n| Resolver un cálculo | Explicar unidades y sustitución |\n| Revisar un caso sintético | Justificar prioridades sin prescribir |\n\n> Marcar una lectura no acredita competencia clínica. No introduzcas personas ni historias reales.",
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "escalas-contexto",
+      "title": "Escalas: población, versión y datos incompletos",
+      "area": "Valoración",
+      "level": "Inicial",
+      "tags": [
+        "Glasgow",
+        "Apgar",
+        "NRS",
+        "EVA",
+        "Braden",
+        "Norton",
+        "RASS"
+      ],
+      "markdown": "# Un puntaje necesita contexto\n## Antes de utilizar un instrumento\n1. Identifica versión, población, condiciones y permisos.\n2. Distingue autoinforme, observación y transcripción de una ficha externa.\n3. Completa los componentes aplicables; no conviertas automáticamente un dato ausente en cero.\n\n| Instrumento | Límite que debes reconocer |\n|---|---|\n| Glasgow adulto | Un componente no valorable no equivale a 1; no generar total completo |\n| NRS | Cero es una respuesta explícita; incapacidad de autoinforme es otra situación |\n| Apgar | Ejercicio neonatal; no decide reanimación ni pronóstico individual |\n| Braden / Norton / RASS | El registro externo no administra ni valida el instrumento |\n\nLa biblioteca conserva los instrumentos ya disponibles; una ficha documental no es una calculadora.",
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        },
+        {
+          "title": "Glasgow Coma Scale · preguntas frecuentes",
+          "url": "https://www.glasgowcomascale.org/faq/",
+          "publisher": "Glasgow Coma Scale · secciones 1–3 consultadas en la fase de escalas",
+          "date": "2026-11-02"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "cinco-momentos",
+      "title": "Los cinco momentos para la higiene de manos",
+      "area": "Bioseguridad",
+      "level": "Inicial",
+      "tags": [
+        "OMS",
+        "manos",
+        "asepsia",
+        "procedimiento"
+      ],
+      "markdown": "# Cuándo realizar higiene de manos\n1. Antes de tocar a la persona.\n2. Antes de una tarea limpia o aséptica.\n3. Después de riesgo de contacto con fluidos corporales.\n4. Después de tocar a la persona.\n5. Después de tocar su entorno inmediato.\n\n## Momento y método son decisiones distintas\nLos momentos indican cuándo actuar. Elegir agua y jabón o fricción depende de la situación, suciedad visible, producto y protocolo aplicable.\n\nLos guantes no sustituyen la higiene. Revisa las indicaciones del establecimiento y la tolerancia de la piel.\n\n> Resumen educativo propio del material OMS/HUG, complementado por CDC; no es una certificación de técnica.",
+      "sources": [
+        {
+          "title": "OMS/HUG · Hand Hygiene: When and How",
+          "url": "https://cdn.who.int/media/docs/default-source/integrated-health-services-(ihs)/infection-prevention-and-control/hand-hygiene-when-and-how-leaflet.pdf?sfvrsn=a92dc108_2",
+          "publisher": "Folleto completo consultado; adaptación educativa propia, sin aval OMS",
+          "date": "2026-11-03"
+        },
+        {
+          "title": "CDC · Clinical Safety: Hand Hygiene for Healthcare Workers",
+          "url": "https://www.cdc.gov/clean-hands/hcp/clinical-safety/",
+          "publisher": "Secciones de recomendaciones generales y preparación quirúrgica consultadas",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "lavado-manos",
+      "title": "Lavado con agua y jabón: recorrido educativo",
+      "area": "Bioseguridad",
+      "level": "Inicial",
+      "tags": [
+        "lavado",
+        "40–60 segundos",
+        "agua",
+        "jabón",
+        "temporizador"
+      ],
+      "markdown": "# Lavado de manos\nEl folleto OMS/HUG indica **40–60 segundos para el procedimiento completo**, no solo para una zona de fricción.\n\n## Secuencia de reconocimiento\n- Humedecer y aplicar jabón suficiente para las superficies.\n- Cubrir palmas, dorsos, espacios interdigitales, dorsos de dedos, pulgares y puntas de los dedos.\n- Enjuagar y secar con material de un solo uso; evitar recontaminación al cerrar un grifo manual.\n\nEl temporizador reparte el tiempo de forma didáctica. No son tiempos oficiales por paso y terminarlo no demuestra que la técnica haya sido eficaz.\n\n> Sigue formación supervisada y protocolo institucional; el dibujo no evalúa cobertura ni limpieza.",
+      "sources": [
+        {
+          "title": "OMS/HUG · Hand Hygiene: When and How",
+          "url": "https://cdn.who.int/media/docs/default-source/integrated-health-services-(ihs)/infection-prevention-and-control/hand-hygiene-when-and-how-leaflet.pdf?sfvrsn=a92dc108_2",
+          "publisher": "Folleto completo consultado; adaptación educativa propia, sin aval OMS",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "friccion-manos",
+      "title": "Fricción con preparado de base alcohólica",
+      "area": "Bioseguridad",
+      "level": "Inicial",
+      "tags": [
+        "fricción",
+        "20–30 segundos",
+        "alcohol",
+        "higiene"
+      ],
+      "markdown": "# Fricción de manos\nEl folleto OMS/HUG describe **20–30 segundos para el procedimiento completo**.\n\nUsa el producto conforme a su etiqueta. Cubre las superficies de las manos y deja secar; no interpretes un temporizador como prueba de antisepsia.\n\n## Elección del método\nEl preparado alcohólico no reemplaza el lavado cuando las manos están visiblemente sucias. Las precauciones por microorganismo o brote se consultan en el protocolo vigente; no se deducen solo de esta animación.",
+      "sources": [
+        {
+          "title": "OMS/HUG · Hand Hygiene: When and How",
+          "url": "https://cdn.who.int/media/docs/default-source/integrated-health-services-(ihs)/infection-prevention-and-control/hand-hygiene-when-and-how-leaflet.pdf?sfvrsn=a92dc108_2",
+          "publisher": "Folleto completo consultado; adaptación educativa propia, sin aval OMS",
+          "date": "2026-11-03"
+        },
+        {
+          "title": "CDC · Clinical Safety: Hand Hygiene for Healthcare Workers",
+          "url": "https://www.cdc.gov/clean-hands/hcp/clinical-safety/",
+          "publisher": "Secciones de recomendaciones generales y preparación quirúrgica consultadas",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "preparacion-quirurgica",
+      "title": "Preparación quirúrgica de manos: límites del simulador",
+      "area": "Bioseguridad",
+      "level": "Intermedio",
+      "tags": [
+        "quirúrgica",
+        "fabricante",
+        "antisepsia",
+        "protocolo"
+      ],
+      "markdown": "# No existe un tiempo universal en esta app\nLa preparación quirúrgica depende del producto, su actividad, las instrucciones del fabricante y el protocolo institucional.\n\n## Lo que debe comprobarse con supervisión\n- Producto y método autorizados.\n- Preparación de manos, uñas y antebrazos según protocolo.\n- Tiempo indicado, secado y colocación de guantes estériles.\n- Integridad de la piel, alergias y prevención de recontaminación.\n\nNo se reutiliza el cronómetro de lavado común como técnica quirúrgica. La app no ofrece un tutorial autónomo de preparación para una intervención.",
+      "sources": [
+        {
+          "title": "CDC · Clinical Safety: Hand Hygiene for Healthcare Workers",
+          "url": "https://www.cdc.gov/clean-hands/hcp/clinical-safety/",
+          "publisher": "Secciones de recomendaciones generales y preparación quirúrgica consultadas",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "epp",
+      "title": "Precauciones estándar y equipo de protección",
+      "area": "Bioseguridad",
+      "level": "Inicial",
+      "tags": [
+        "EPP",
+        "guantes",
+        "precauciones estándar",
+        "punzocortantes"
+      ],
+      "markdown": "# Protección según el riesgo de exposición\nLas precauciones estándar se consideran en toda atención. El equipo se selecciona según la tarea y el riesgo, no como un uniforme idéntico para todos los procedimientos.\n\n## Recorrido educativo\n- Identifica posibles contactos con sangre, fluidos, mucosas, piel no íntegra o material contaminado.\n- Consulta la selección de guantes, protección de ropa, ojos, cara y vía respiratoria aplicable.\n- Aprende colocación y retiro con formación y protocolo; cambiar guantes no sustituye higiene de manos.\n- Distingue residuos comunes, biocontaminados y punzocortantes conforme a la norma local.\n\n> No hay una secuencia universal de EPP que la app certifique. Ante exposición accidental, activa el circuito institucional; no improvises tratamiento.",
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        },
+        {
+          "title": "CDC · Clinical Safety: Hand Hygiene for Healthcare Workers",
+          "url": "https://www.cdc.gov/clean-hands/hcp/clinical-safety/",
+          "publisher": "Secciones de recomendaciones generales y preparación quirúrgica consultadas",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "medicacion-segura",
+      "title": "Diez correctos institucionales y controles educativos",
+      "area": "Bioseguridad",
+      "level": "Intermedio",
+      "tags": [
+        "INSN-SB",
+        "correctos",
+        "20 controles",
+        "medicación"
+      ],
+      "markdown": "# Dos listas diferentes\n## Lista institucional\nLa guía **GP-028/INSN-SB/UE-V.01, abril de 2021**, enumera diez correctos en su página 6. Su ámbito descrito es la administración endovenosa a población neonatal y pediátrica en el INSN San Borja.\n\nLa aplicación conserva diez ítems: alergias y comprobación de otros medicamentos pertenecen al mismo noveno ítem de la fuente. No se presenta como una lista universal MINSA de veinte correctos.\n\n## Lista educativa iDreyK\nLos veinte controles propios ayudan a practicar revisión y comunicación. No son una norma oficial, ni acreditan que una prescripción o una administración sean seguras.\n\n> Completar casillas nunca autoriza una administración. No se importan las pautas farmacológicas de la guía por haber cotejado su lista.",
+      "sources": [
+        {
+          "title": "INSN-SB · GP-028/INSN-SB/UE-V.01 · abril 2021",
+          "url": "https://cdn.www.gob.pe/uploads/document/file/7682305/6505016-rd-n-000087-2021-dg-insnsb-028-gp-administracion-de-medicamentos-edv-vb.pdf",
+          "publisher": "Cotejo de los diez correctos: p. 6; ámbito: p. 3. No revisión de todas las pautas.",
+          "date": "2026-11-03"
+        },
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "jeringa-cateter",
+      "title": "Jeringa, aguja y catéter: diferencias esenciales",
+      "area": "Dispositivos",
+      "level": "Inicial",
+      "tags": [
+        "atlas",
+        "jeringa",
+        "émbolo",
+        "pistón",
+        "aguja",
+        "catéter"
+      ],
+      "markdown": "# Reconocer no equivale a ejecutar una técnica\n| Elemento | Distinción |\n|---|---|\n| Émbolo | Vástago móvil de la jeringa |\n| Pistón | Sello que se desplaza dentro del cilindro |\n| Aguja | Cánula metálica con punta y bisel |\n| Catéter periférico | Cánula flexible, distinta de su aguja introductora |\n\nEl atlas muestra esquemas genéricos: los puertos, alas y mecanismos de seguridad dependen del modelo. No identifica calibres por color ni autoriza elegir un dispositivo.\n\nConsulta el producto y sus instrucciones con supervisión. No se incluye una secuencia invasiva autónoma.",
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "infusion-equipo",
+      "title": "Equipo IV, bureta y llave de tres vías",
+      "area": "Dispositivos",
+      "level": "Intermedio",
+      "tags": [
+        "venoclisis",
+        "goteo",
+        "bureta",
+        "Volutrol",
+        "llave de tres vías"
+      ],
+      "markdown": "# El equipo modifica el contexto del cálculo\n- El factor de goteo se lee en el equipo o en el enunciado; no se supone 20 ni 60 gotas/mL.\n- Bureta y cámara de goteo no son la misma pieza.\n- Puertos de acceso, filtros, ventilación y válvulas varían según fabricante.\n- En una llave de tres vías no deduzcas el recorrido de fluidos a partir del dibujo genérico de la app.\n\n## Relación dimensional\n```formula\ngotas/min = volumen (mL) × factor (gotas/mL) / tiempo (min)\n```\n\nEl cálculo no demuestra compatibilidad, estabilidad, permeabilidad de una línea ni seguridad de la velocidad.",
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "carro-paro",
+      "title": "Coche de paro: organización y revisión supervisada",
+      "area": "Cuidados críticos",
+      "level": "Intermedio",
+      "tags": [
+        "coche de paro",
+        "cartuchera",
+        "emergencias",
+        "inventario"
+      ],
+      "markdown": "# Reconocimiento del área clínica\nEl contenido, distribución, reposición y control del coche de paro dependen de la institución, población atendida y protocolo vigente.\n\n## Actividad sin pacientes\n1. Identificar señalización, responsables y registro de revisión.\n2. Diferenciar categorías de equipos, materiales y medicamentos.\n3. Revisar integridad, caducidades y disponibilidad con la lista institucional.\n4. Comunicar ausencias; no inventar stock ni sustituir productos.\n\n> Esta ficha no es una lista de medicamentos para reanimación ni una autorización para usar un desfibrilador. Simulación avanzada y protocolos específicos están pendientes.",
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "unidades",
+      "title": "Aritmética dimensional y redondeo",
+      "area": "Herramientas",
+      "level": "Inicial",
+      "tags": [
+        "dosis",
+        "mg",
+        "g",
+        "mcg",
+        "mL",
+        "UI",
+        "mEq",
+        "conversiones"
+      ],
+      "markdown": "# Antes de sustituir números\n## Conversiones de la misma dimensión\n| Relación | Equivalencia matemática |\n|---|---|\n| Masa | 1 g = 1000 mg; 1 mg = 1000 mcg |\n| Volumen | 1 L = 1000 mL |\n| Tiempo | 1 h = 60 min |\n\nUI, mEq y masa no se convierten entre sí sin información específica; la calculadora bloquea esa mezcla.\n\n```formula\nmL = cantidad del ejercicio / cantidad disponible × volumen disponible\n```\n\nSe muestran fórmula, sustitución, unidades y resultado. La operación utiliza decimales; el redondeo final es de presentación, no una pauta de dosificación.\n\n> Todos los resultados son EJERCICIO EDUCATIVO, con cantidades ficticias. Los límites técnicos de entrada no son límites clínicos seguros.",
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "dilucion-concepto",
+      "title": "Dilución ideal no es reconstitución",
+      "area": "Herramientas",
+      "level": "Intermedio",
+      "tags": [
+        "C1V1",
+        "C2V2",
+        "dilución",
+        "reconstitución",
+        "volumen final"
+      ],
+      "markdown": "# Alcance de C1V1 = C2V2\n```formula\nV1 = C2 × V2 / C1\nVolumen adicional ideal = V2 − V1\n```\n\nRequiere la misma sustancia, unidades compatibles y un modelo de mezcla apropiado con volumen aditivo. **V2 es el volumen final**, no el volumen añadido.\n\nNo se calcula reconstitución de polvo suponiendo que el volumen final es igual al diluyente añadido. Tampoco se deducen compatibilidad, estabilidad, osmolaridad ni concentración administrable de esta fórmula.\n\n## Datos insuficientes\nSi falta concentración, unidad, volumen final o información del producto, no hay un resultado clínico justificable. La app no rellena esos vacíos con una dosis inventada.",
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "pae",
+      "title": "PAE: datos, razonamiento y evaluación",
+      "area": "PAE",
+      "level": "Inicial",
+      "tags": [
+        "PAE",
+        "ADPIE",
+        "NANDA-I",
+        "NOC",
+        "NIC",
+        "diagnóstico"
+      ],
+      "markdown": "# Cinco etapas conectadas\n1. Valorar los datos y su procedencia.\n2. Formular problemas o hipótesis de enfermería con justificación.\n3. Planificar resultados observables e intervenciones del ejercicio.\n4. Documentar lo realizado en la simulación.\n5. Comparar con lo esperado y revisar el plan.\n\n| Dato | Ejemplo sintético |\n|---|---|\n| Subjetivo | La persona ficticia expresa cansancio |\n| Objetivo | Se registra una observación simulada con método y momento |\n| Fuente | Persona, observación, instrumento o documento ficticio |\n\nLos campos de diagnóstico, NOC y NIC son texto propio del estudiante. No se incluyen taxonomías completas, códigos licenciados ni diagnósticos automáticos.",
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "gordon-abcde",
+      "title": "Gordon y ABCDE: marcos con finalidades diferentes",
+      "area": "PAE",
+      "level": "Intermedio",
+      "tags": [
+        "Gordon",
+        "ABCDE",
+        "valoración",
+        "patrones funcionales"
+      ],
+      "markdown": "# Elegir un marco y comunicar sus límites\n## Gordon: organización de valoración\nPercepción y manejo de salud; nutrición y metabolismo; eliminación; actividad y ejercicio; sueño y descanso; cognición y percepción; autopercepción; roles y relaciones; sexualidad y reproducción; adaptación al estrés; valores y creencias.\n\n## ABCDE: reconocimiento prioritario\n| Letra | Área de observación del ejercicio |\n|---|---|\n| A | Vía aérea |\n| B | Respiración |\n| C | Circulación |\n| D | Estado neurológico |\n| E | Exposición y entorno, preservando intimidad y temperatura |\n\nEl formulario no dirige reanimación ni sustituye una evaluación urgente. Frente a deterioro en un escenario, se practica pedir ayuda y comunicar al equipo según protocolo, no completar casillas antes de actuar.",
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "soapie",
+      "title": "SOAPIE: registro educativo trazable",
+      "area": "PAE",
+      "level": "Intermedio",
+      "tags": [
+        "SOAPIE",
+        "registro",
+        "subjetivo",
+        "objetivo",
+        "evaluación"
+      ],
+      "markdown": "# Una nota distingue lo observado de lo interpretado\n| Campo | Qué documenta en el ejercicio |\n|---|---|\n| S | Datos subjetivos |\n| O | Datos objetivos |\n| A | Análisis y razonamiento del estudiante |\n| P | Plan del ejercicio |\n| I | Intervenciones realmente simuladas |\n| E | Evaluación y respuesta observada en la simulación |\n\nNo registres acciones que no se hayan realizado. Identifica fuentes y momento; la exportación lleva la marca EJERCICIO EDUCATIVO y no es una historia clínica.",
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "sbar",
+      "title": "SBAR: comunicación breve y organizada",
+      "area": "PAE",
+      "level": "Inicial",
+      "tags": [
+        "SBAR",
+        "comunicación",
+        "situación",
+        "antecedentes"
+      ],
+      "markdown": "# Preparar una comunicación de práctica\n- **S · Situación:** qué sucede y por qué comunicas.\n- **B · Antecedentes:** información relevante, con fuente.\n- **A · Valoración:** observaciones y preocupación, diferenciadas de conclusiones no confirmadas.\n- **R · Solicitud/recomendación:** qué necesitas del equipo y qué debe aclararse.\n\nNo inventes una orden ni conviertas la solicitud en prescripción. En una comunicación real se aplica identificación y verificación institucional; en esta app se usan solo personajes sintéticos.",
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "signos-balance",
+      "title": "Signos y balance: interpretar límites del registro",
+      "area": "Valoración",
+      "level": "Inicial",
+      "tags": [
+        "signos vitales",
+        "tendencias",
+        "balance",
+        "ingresos",
+        "egresos"
+      ],
+      "markdown": "# Un registro aislado no reemplaza la valoración\nLas tendencias de las fichas de práctica son ficticias y no reciben datos de sensores.\n\n```formula\nBalance del intervalo = ingresos registrados − egresos registrados\n```\n\nSe necesita el mismo intervalo y unidades consistentes. Cero puede ser un dato; vacío significa pendiente. El resultado no incluye pérdidas no registradas y no indica diuréticos, líquidos ni otras terapias.\n\nDocumenta método, momento y contexto. No atribuyas una interpretación clínica automática a colores o curvas del prototipo.",
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "farmacologia-validacion",
+      "title": "Inventario nominal y validación de medicamentos",
+      "area": "Farmacología",
+      "level": "Intermedio",
+      "tags": [
+        "DCI",
+        "DIGEMID",
+        "PNUME",
+        "inventario",
+        "altilice",
+        "validación"
+      ],
+      "markdown": "# Un nombre identificado no es una ficha validada\nEl inventario separa DCI nominales, combinaciones, formulaciones, biológicos, soluciones de soporte, nutrición y hemocomponentes. La clasificación editorial necesita revisión.\n\n## Estados de trabajo\n1. IDENTIFICADO.\n2. PENDIENTE-FICHA.\n3. FUENTE-ENCONTRADA.\n4. VALIDADO-DIGEMID o VALIDADO-GPC, según evidencia y alcance.\n5. REVISIÓN-FARMACÉUTICA.\n6. PUBLICABLE, solo tras las comprobaciones correspondientes.\n\nEn esta entrega los nombres importados permanecen IDENTIFICADO. No se acredita stock, registro peruano ni revisión profesional. “altilice” sigue sin identificar; no se convierte en otro fármaco.\n\n> Las concentraciones nominales citadas como formulación no son datos de producto comprobados. No se publican dosis, diluciones ni compatibilidades a partir de los anexos.",
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    },
+    {
+      "id": "casos-razonamiento",
+      "title": "Resolver casos sintéticos sin automatizar decisiones",
+      "area": "Aprendizaje",
+      "level": "Intermedio",
+      "tags": [
+        "casos",
+        "sepsis",
+        "TCE",
+        "HDA",
+        "ECG",
+        "rúbrica"
+      ],
+      "markdown": "# Recorrido progresivo\nLee los datos disponibles, responde una pregunta y revisa la justificación antes de avanzar. Los siete escenarios nuevos son sintéticos; no reconstruyen historias ni órdenes de los archivos mencionados en la base.\n\n## Rúbrica educativa\n- Identifica datos faltantes y límites del instrumento.\n- Prioriza reconocimiento de deterioro y comunicación supervisada.\n- Distingue datos, hipótesis y órdenes.\n- Explica unidades y evita inferir dosis o tratamientos.\n\nLas respuestas correctas se cuentan desde tus elecciones. No equivalen a un examen de habilitación ni a aprobación clínica del contenido.",
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "EDUCATIVO · REVISIÓN CLÍNICA PENDIENTE",
+      "author": "Contenido educativo propio · iDreyK 360"
+    }
+  ],
+  "devices": [
+    {
+      "id": "jeringa",
+      "name": "Jeringa",
+      "area": "Dispositivos",
+      "model_note": "Esquema de jeringa de tres piezas. Graduaciones simbólicas: no sirven para medir.",
+      "parts": [
+        {
+          "id": "cilindro",
+          "name": "Cilindro o cuerpo",
+          "function": "Contiene el volumen y permite observarlo.",
+          "safety": "La escala y capacidad se comprueban en el producto.",
+          "x": 365,
+          "y": 150,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                200,
+                150,
+                450,
+                245
+              ]
+            }
+          ]
+        },
+        {
+          "id": "embolo",
+          "name": "Émbolo: vástago móvil",
+          "function": "Transmite el movimiento al pistón.",
+          "safety": "No es sinónimo del sello o pistón de este modelo.",
+          "x": 130,
+          "y": 197,
+          "shapes": [
+            {
+              "kind": "line",
+              "points": [
+                80,
+                197,
+                244,
+                197
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                80,
+                160,
+                80,
+                235
+              ]
+            }
+          ]
+        },
+        {
+          "id": "piston",
+          "name": "Pistón o sello",
+          "function": "Sella y se desplaza dentro del cilindro.",
+          "safety": "Distinguir el sello del vástago; diseño dependiente del modelo.",
+          "x": 249,
+          "y": 230,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                240,
+                155,
+                258,
+                240
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cono",
+          "name": "Cono de conexión",
+          "function": "Permite la conexión compatible prevista por el fabricante.",
+          "safety": "No inferir compatibilidad de conectores por este dibujo.",
+          "x": 486,
+          "y": 194,
+          "shapes": [
+            {
+              "kind": "poly",
+              "points": [
+                450,
+                172,
+                495,
+                186,
+                495,
+                210,
+                450,
+                227
+              ]
+            }
+          ]
+        },
+        {
+          "id": "alas",
+          "name": "Aletas de apoyo",
+          "function": "Proporcionan apoyo para los dedos.",
+          "safety": "No representan una técnica de manipulación estéril.",
+          "x": 199,
+          "y": 260,
+          "shapes": [
+            {
+              "kind": "line",
+              "points": [
+                200,
+                125,
+                200,
+                270
+              ]
+            }
+          ]
+        },
+        {
+          "id": "escala",
+          "name": "Graduaciones",
+          "function": "Indican la escala propia del dispositivo.",
+          "safety": "Aquí son solo símbolos, sin capacidad o exactitud metrológica.",
+          "x": 325,
+          "y": 245,
+          "shapes": [
+            {
+              "kind": "line",
+              "points": [
+                285,
+                225,
+                285,
+                243
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                310,
+                225,
+                310,
+                243
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                335,
+                225,
+                335,
+                243
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                360,
+                225,
+                360,
+                243
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                385,
+                225,
+                385,
+                243
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                410,
+                225,
+                410,
+                243
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ]
+    },
+    {
+      "id": "aguja",
+      "name": "Aguja",
+      "area": "Dispositivos",
+      "model_note": "Componentes de una aguja genérica. No se representa calibre, longitud ni técnica de punción.",
+      "parts": [
+        {
+          "id": "pabellon",
+          "name": "Pabellón o conector",
+          "function": "Conecta la cánula al sistema compatible.",
+          "safety": "Verificar el tipo de conexión real.",
+          "x": 140,
+          "y": 195,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                80,
+                165,
+                200,
+                225
+              ]
+            }
+          ]
+        },
+        {
+          "id": "canula",
+          "name": "Cánula metálica",
+          "function": "Constituye el cuerpo de la aguja.",
+          "safety": "No confundir con el catéter flexible.",
+          "x": 360,
+          "y": 194,
+          "shapes": [
+            {
+              "kind": "line",
+              "points": [
+                200,
+                192,
+                510,
+                192
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                200,
+                200,
+                510,
+                200
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bisel",
+          "name": "Bisel",
+          "function": "Terminación oblicua de la cánula.",
+          "safety": "Geometría ilustrativa; no muestra orientación para punción.",
+          "x": 510,
+          "y": 192,
+          "shapes": [
+            {
+              "kind": "line",
+              "points": [
+                510,
+                200,
+                535,
+                182
+              ]
+            }
+          ]
+        },
+        {
+          "id": "punta",
+          "name": "Punta",
+          "function": "Extremo distal de la aguja.",
+          "safety": "Punzocortante: evitar exposición y seguir gestión institucional de residuos.",
+          "x": 538,
+          "y": 180,
+          "shapes": [
+            {
+              "kind": "line",
+              "points": [
+                510,
+                192,
+                535,
+                182
+              ]
+            }
+          ]
+        },
+        {
+          "id": "protector",
+          "name": "Protector, separado en el esquema",
+          "function": "Protege antes del uso según diseño.",
+          "safety": "El dibujo no recomienda reencapuchar ni reutilizar.",
+          "x": 310,
+          "y": 300,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                190,
+                280,
+                430,
+                320
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ]
+    },
+    {
+      "id": "estetoscopio",
+      "name": "Estetoscopio",
+      "area": "Dispositivos",
+      "model_note": "Modelo acústico ilustrativo de doble cara; otras cabezas y tubos son diferentes.",
+      "parts": [
+        {
+          "id": "olivas",
+          "name": "Olivas",
+          "function": "Contactan con los oídos del usuario.",
+          "safety": "Ajuste e higiene según fabricante.",
+          "x": 130,
+          "y": 65,
+          "shapes": [
+            {
+              "kind": "oval",
+              "points": [
+                110,
+                50,
+                150,
+                80
+              ]
+            },
+            {
+              "kind": "oval",
+              "points": [
+                440,
+                50,
+                480,
+                80
+              ]
+            }
+          ]
+        },
+        {
+          "id": "binaurales",
+          "name": "Tubos binaurales",
+          "function": "Conducen el sonido hacia las olivas.",
+          "safety": "No asumir orientación a partir de esta vista plana.",
+          "x": 196,
+          "y": 148,
+          "shapes": [
+            {
+              "kind": "poly",
+              "points": [
+                130,
+                80,
+                180,
+                135,
+                210,
+                205
+              ]
+            },
+            {
+              "kind": "poly",
+              "points": [
+                460,
+                80,
+                410,
+                135,
+                380,
+                205
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tubo",
+          "name": "Tubo flexible",
+          "function": "Transmite el sonido desde la pieza torácica.",
+          "safety": "Revisar integridad y limpieza del material.",
+          "x": 295,
+          "y": 255,
+          "shapes": [
+            {
+              "kind": "poly",
+              "points": [
+                210,
+                205,
+                230,
+                245,
+                290,
+                265,
+                350,
+                245,
+                380,
+                205
+              ]
+            },
+            {
+              "kind": "poly",
+              "points": [
+                290,
+                265,
+                290,
+                310,
+                440,
+                310,
+                485,
+                270
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cabeza",
+          "name": "Pieza torácica",
+          "function": "Aloja las superficies de auscultación.",
+          "safety": "La elección de cara depende del modelo y la formación.",
+          "x": 487,
+          "y": 225,
+          "shapes": [
+            {
+              "kind": "oval",
+              "points": [
+                440,
+                180,
+                540,
+                280
+              ]
+            }
+          ]
+        },
+        {
+          "id": "diafragma",
+          "name": "Diafragma",
+          "function": "Superficie de captación en este modelo.",
+          "safety": "No demuestra interpretación de ruidos.",
+          "x": 488,
+          "y": 205,
+          "shapes": [
+            {
+              "kind": "oval",
+              "points": [
+                450,
+                190,
+                530,
+                270
+              ]
+            }
+          ]
+        },
+        {
+          "id": "campana",
+          "name": "Campana, según modelo",
+          "function": "Segunda superficie de la cabeza de doble cara, mostrada aparte.",
+          "safety": "No todos los modelos tienen campana independiente.",
+          "x": 135,
+          "y": 290,
+          "shapes": [
+            {
+              "kind": "oval",
+              "points": [
+                100,
+                255,
+                170,
+                325
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ]
+    },
+    {
+      "id": "tensiometro",
+      "name": "Tensiómetro aneroide",
+      "area": "Dispositivos",
+      "model_note": "Esquema manual. Tamaño de manguito, verificación y técnica requieren formación; no es un monitor digital.",
+      "parts": [
+        {
+          "id": "manguito",
+          "name": "Manguito",
+          "function": "Envuelve la zona de medición.",
+          "safety": "Elegir el tamaño por especificaciones, no por este dibujo.",
+          "x": 176,
+          "y": 76,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                60,
+                70,
+                295,
+                195
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vejiga",
+          "name": "Vejiga inflable interior",
+          "function": "Recibe aire dentro del manguito.",
+          "safety": "Capa didáctica visible; disposición real según modelo.",
+          "x": 177,
+          "y": 140,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                95,
+                105,
+                260,
+                165
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tubos",
+          "name": "Tubos",
+          "function": "Conectan manguito, pera y manómetro.",
+          "safety": "Buscar integridad según protocolo; no interpretar presión en el esquema.",
+          "x": 370,
+          "y": 210,
+          "shapes": [
+            {
+              "kind": "poly",
+              "points": [
+                295,
+                155,
+                360,
+                155,
+                360,
+                285,
+                445,
+                285
+              ]
+            },
+            {
+              "kind": "poly",
+              "points": [
+                295,
+                112,
+                395,
+                112,
+                395,
+                70,
+                460,
+                70
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pera",
+          "name": "Pera de insuflación",
+          "function": "Permite introducir aire en el circuito.",
+          "safety": "No se indican presión o velocidad de inflado.",
+          "x": 485,
+          "y": 288,
+          "shapes": [
+            {
+              "kind": "oval",
+              "points": [
+                445,
+                250,
+                535,
+                325
+              ]
+            }
+          ]
+        },
+        {
+          "id": "valvula",
+          "name": "Válvula de control",
+          "function": "Controla la salida de aire en el modelo manual.",
+          "safety": "Mecanismo y mantenimiento dependen del fabricante.",
+          "x": 430,
+          "y": 285,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                410,
+                272,
+                445,
+                298
+              ]
+            }
+          ]
+        },
+        {
+          "id": "manometro",
+          "name": "Manómetro",
+          "function": "Muestra presión en el dispositivo real.",
+          "safety": "Dial simbólico, sin calibración ni lectura.",
+          "x": 503,
+          "y": 70,
+          "shapes": [
+            {
+              "kind": "oval",
+              "points": [
+                460,
+                25,
+                550,
+                115
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                505,
+                70,
+                525,
+                48
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ]
+    },
+    {
+      "id": "cateter-periferico",
+      "name": "Catéter venoso periférico",
+      "area": "Dispositivos",
+      "model_note": "Modelo genérico con aguja introductora. Alas, puerto y protección varían; no representa inserción.",
+      "parts": [
+        {
+          "id": "cateter",
+          "name": "Catéter: cánula flexible",
+          "function": "Es la cánula flexible del dispositivo.",
+          "safety": "Es distinta de la aguja metálica; no se indica uso, calibre ni tiempo de permanencia.",
+          "x": 407,
+          "y": 181,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                295,
+                179,
+                495,
+                201
+              ]
+            }
+          ]
+        },
+        {
+          "id": "aguja-introductora",
+          "name": "Aguja introductora metálica",
+          "function": "Acompaña al catéter en este diseño.",
+          "safety": "No es el catéter; no se representa su manipulación o reinserción.",
+          "x": 525,
+          "y": 192,
+          "shapes": [
+            {
+              "kind": "line",
+              "points": [
+                220,
+                190,
+                525,
+                190
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                520,
+                190,
+                533,
+                182
+              ]
+            }
+          ]
+        },
+        {
+          "id": "conexion",
+          "name": "Conector o cubo",
+          "function": "Conecta con el sistema previsto.",
+          "safety": "Verificar integridad y compatibilidad del modelo.",
+          "x": 271,
+          "y": 191,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                215,
+                165,
+                295,
+                215
+              ]
+            }
+          ]
+        },
+        {
+          "id": "camara",
+          "name": "Cámara de visualización, según modelo",
+          "function": "Permite observar el retorno en determinados diseños.",
+          "safety": "No equivale a comprobar por sí sola la seguridad del acceso.",
+          "x": 156,
+          "y": 192,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                105,
+                170,
+                215,
+                210
+              ]
+            }
+          ]
+        },
+        {
+          "id": "alas",
+          "name": "Alas, según modelo",
+          "function": "Superficies laterales del cuerpo.",
+          "safety": "No todos los modelos las incluyen.",
+          "x": 255,
+          "y": 251,
+          "shapes": [
+            {
+              "kind": "poly",
+              "points": [
+                220,
+                215,
+                215,
+                270,
+                290,
+                270,
+                285,
+                215
+              ]
+            }
+          ]
+        },
+        {
+          "id": "puerto",
+          "name": "Puerto adicional, según modelo",
+          "function": "Acceso adicional presente en ciertos diseños.",
+          "safety": "No asumir su presencia, esterilidad o forma de uso.",
+          "x": 256,
+          "y": 133,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                240,
+                115,
+                275,
+                165
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ]
+    },
+    {
+      "id": "equipo-iv",
+      "name": "Equipo de venoclisis",
+      "area": "Dispositivos",
+      "model_note": "Equipo genérico por gravedad. Factor de goteo, filtros y puertos deben comprobarse en su etiqueta.",
+      "parts": [
+        {
+          "id": "punzon",
+          "name": "Punzón de conexión",
+          "function": "Conecta al recipiente compatible previsto.",
+          "safety": "No representa una aguja para punción del paciente.",
+          "x": 110,
+          "y": 50,
+          "shapes": [
+            {
+              "kind": "poly",
+              "points": [
+                98,
+                80,
+                105,
+                25,
+                115,
+                25,
+                122,
+                80
+              ]
+            }
+          ]
+        },
+        {
+          "id": "camara",
+          "name": "Cámara de goteo",
+          "function": "Permite observar el goteo en este diseño.",
+          "safety": "No se deduce el factor de goteo por el tamaño dibujado.",
+          "x": 110,
+          "y": 135,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                80,
+                80,
+                140,
+                180
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tubo",
+          "name": "Tubo de conducción",
+          "function": "Conduce el fluido por el sistema.",
+          "safety": "No se representa purgado, compatibilidad ni conexión clínica.",
+          "x": 174,
+          "y": 270,
+          "shapes": [
+            {
+              "kind": "poly",
+              "points": [
+                110,
+                180,
+                110,
+                270,
+                260,
+                270,
+                330,
+                215,
+                465,
+                240,
+                495,
+                300
+              ]
+            }
+          ]
+        },
+        {
+          "id": "regulador",
+          "name": "Regulador de rodillo",
+          "function": "Elemento mecánico de control del equipo.",
+          "safety": "Su posición dibujada no indica una velocidad real.",
+          "x": 253,
+          "y": 270,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                232,
+                245,
+                275,
+                292
+              ]
+            },
+            {
+              "kind": "oval",
+              "points": [
+                240,
+                251,
+                267,
+                278
+              ]
+            }
+          ]
+        },
+        {
+          "id": "puerto",
+          "name": "Puerto de acceso, según modelo",
+          "function": "Acceso adicional del sistema.",
+          "safety": "El diseño y método de acceso dependen del fabricante.",
+          "x": 347,
+          "y": 211,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                330,
+                192,
+                365,
+                230
+              ]
+            }
+          ]
+        },
+        {
+          "id": "conector",
+          "name": "Conector distal",
+          "function": "Conexión final prevista en el equipo.",
+          "safety": "Verificar compatibilidad; no se muestra una conexión al paciente.",
+          "x": 495,
+          "y": 322,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                480,
+                300,
+                512,
+                343
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ]
+    },
+    {
+      "id": "bureta",
+      "name": "Bureta / equipo tipo Volutrol",
+      "area": "Dispositivos",
+      "model_note": "Bureta volumétrica genérica; Volutrol se conserva como término de estudio. No se representa un producto certificado.",
+      "parts": [
+        {
+          "id": "entrada",
+          "name": "Línea de entrada",
+          "function": "Conduce hacia la cámara graduada.",
+          "safety": "Método de llenado y volumen permitido según fabricante.",
+          "x": 240,
+          "y": 30,
+          "shapes": [
+            {
+              "kind": "line",
+              "points": [
+                240,
+                15,
+                240,
+                70
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pinza",
+          "name": "Pinza de entrada",
+          "function": "Control mecánico de la línea en este esquema.",
+          "safety": "Posición ilustrativa; no demuestra un circuito abierto o cerrado.",
+          "x": 240,
+          "y": 51,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                225,
+                35,
+                255,
+                62
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bureta",
+          "name": "Cámara graduada o bureta",
+          "function": "Recipiente graduado del sistema.",
+          "safety": "No confundir con la cámara de goteo. Escala simbólica sin volumen medible.",
+          "x": 180,
+          "y": 165,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                180,
+                70,
+                300,
+                255
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                270,
+                100,
+                295,
+                100
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                270,
+                125,
+                295,
+                125
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                270,
+                150,
+                295,
+                150
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                270,
+                175,
+                295,
+                175
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                270,
+                200,
+                295,
+                200
+              ]
+            },
+            {
+              "kind": "line",
+              "points": [
+                270,
+                225,
+                295,
+                225
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ventilacion",
+          "name": "Ventilación/filtro, según modelo",
+          "function": "Componente de determinados diseños.",
+          "safety": "No abrir, cerrar ni sustituir basándose en este esquema.",
+          "x": 324,
+          "y": 108,
+          "shapes": [
+            {
+              "kind": "poly",
+              "points": [
+                300,
+                98,
+                345,
+                98,
+                345,
+                115,
+                300,
+                115
+              ]
+            }
+          ]
+        },
+        {
+          "id": "camara-goteo",
+          "name": "Cámara de goteo",
+          "function": "Zona de observación inferior en el modelo ilustrado.",
+          "safety": "No identifica un factor de gotas/mL.",
+          "x": 240,
+          "y": 281,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                218,
+                255,
+                262,
+                305
+              ]
+            }
+          ]
+        },
+        {
+          "id": "salida",
+          "name": "Línea de salida y conexión",
+          "function": "Conduce desde el conjunto hacia el sistema previsto.",
+          "safety": "No sustituye comprobación de conexiones y control de la infusión.",
+          "x": 415,
+          "y": 330,
+          "shapes": [
+            {
+              "kind": "poly",
+              "points": [
+                240,
+                305,
+                240,
+                330,
+                460,
+                330
+              ]
+            },
+            {
+              "kind": "rect",
+              "points": [
+                460,
+                317,
+                500,
+                344
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ]
+    },
+    {
+      "id": "llave-tres-vias",
+      "name": "Llave de tres vías",
+      "area": "Dispositivos",
+      "model_note": "Vista esquemática: la posición dibujada NO indica qué trayectos están abiertos. Consultar marcas e instrucciones del producto.",
+      "parts": [
+        {
+          "id": "cuerpo",
+          "name": "Cuerpo central",
+          "function": "Aloja el mecanismo del dispositivo.",
+          "safety": "Integridad y compatibilidad se verifican en el producto.",
+          "x": 300,
+          "y": 185,
+          "shapes": [
+            {
+              "kind": "oval",
+              "points": [
+                245,
+                130,
+                355,
+                240
+              ]
+            }
+          ]
+        },
+        {
+          "id": "selector",
+          "name": "Mando selector",
+          "function": "Permite modificar las conexiones según el diseño real.",
+          "safety": "No deducir dirección de flujo de este dibujo.",
+          "x": 274,
+          "y": 125,
+          "shapes": [
+            {
+              "kind": "poly",
+              "points": [
+                300,
+                185,
+                255,
+                110,
+                275,
+                100,
+                320,
+                175
+              ]
+            }
+          ]
+        },
+        {
+          "id": "puerto-1",
+          "name": "Conexión lateral 1",
+          "function": "Uno de los tres accesos.",
+          "safety": "Conexión y tapón dependen del modelo; no es una indicación de uso.",
+          "x": 145,
+          "y": 185,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                95,
+                168,
+                245,
+                202
+              ]
+            }
+          ]
+        },
+        {
+          "id": "puerto-2",
+          "name": "Conexión lateral 2",
+          "function": "Segundo acceso del conjunto.",
+          "safety": "No asumir compatibilidad por la apariencia.",
+          "x": 455,
+          "y": 185,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                355,
+                168,
+                505,
+                202
+              ]
+            }
+          ]
+        },
+        {
+          "id": "puerto-3",
+          "name": "Conexión inferior 3",
+          "function": "Tercer acceso del conjunto.",
+          "safety": "No representa una vía del paciente ni una conexión permitida.",
+          "x": 300,
+          "y": 304,
+          "shapes": [
+            {
+              "kind": "rect",
+              "points": [
+                282,
+                240,
+                318,
+                330
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "diabetes-itu-hta",
+      "title": "Diabetes, ITU e hipertensión",
+      "area": "Medicina interna",
+      "intro": "Persona ficticia A, adulta. El enunciado reúne antecedentes de diabetes e hipertensión y una consulta por síntomas urinarios. No se confirma un diagnóstico ni se prescribe.",
+      "questions": [
+        {
+          "scene": "Expresa ardor al orinar. En una hoja simulada figura temperatura 38,1 °C, sin hora de registro.",
+          "prompt": "¿Qué conviene documentar primero con claridad?",
+          "options": [
+            "Separar relato, medición y fuente; aclarar el momento",
+            "Escribir que la infección ya está confirmada",
+            "Añadir una glucemia no medida"
+          ],
+          "correct": 0,
+          "feedback": "El síntoma referido, la medición y la fuente son datos diferentes. Falta tiempo y contexto; no deben inventarse resultados.",
+          "rubric": "Distingue dato subjetivo, objetivo y pendiente."
+        },
+        {
+          "scene": "Otra hoja contiene una orden de insulina sin tipo ni concentración legibles.",
+          "prompt": "¿Puede la app completar esa información?",
+          "options": [
+            "Sí, usar la presentación más frecuente",
+            "No; señalar la ambigüedad y solicitar aclaración supervisada",
+            "Sí, convertir UI en mL sin concentración"
+          ],
+          "correct": 1,
+          "feedback": "Un nombre incompleto no permite deducir tipo, concentración ni pauta. Este caso no incluye una orden calculable.",
+          "rubric": "Reconoce información insuficiente y no fabrica una dosis."
+        },
+        {
+          "scene": "Se prepara una entrega de turno ficticia.",
+          "prompt": "¿Qué comunicación es más trazable?",
+          "options": [
+            "Me parece que todo está bien",
+            "Copiar la orden incompleta como verificada",
+            "Usar SBAR, describir datos y pendientes, y solicitar aclaración"
+          ],
+          "correct": 2,
+          "feedback": "Una comunicación estructurada diferencia antecedentes, observaciones y solicitud. No convierte una hipótesis en diagnóstico.",
+          "rubric": "Comunica incertidumbre de forma explícita."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "SINTÉTICO · REVISIÓN DOCENTE PENDIENTE"
+    },
+    {
+      "id": "tce-uci",
+      "title": "TCE y observación en UCI",
+      "area": "Cuidados críticos",
+      "intro": "Escenario ficticio de una persona adulta con traumatismo craneoencefálico, intubación y sedación documentadas en el enunciado. No se indica ajustar tratamiento.",
+      "questions": [
+        {
+          "scene": "La respuesta verbal no puede explorarse por intubación.",
+          "prompt": "¿Cómo se representa en Glasgow?",
+          "options": [
+            "Asignar V=1 para obtener total",
+            "Señalar no valorable y no generar un total completo",
+            "Asignar V=5 porque no puede hablar"
+          ],
+          "correct": 1,
+          "feedback": "No valorable no equivale a ausencia de respuesta. Se conservan los componentes disponibles y el motivo; la sedación también limita la valoración.",
+          "rubric": "Reconoce un componente no valorable."
+        },
+        {
+          "scene": "Se compara con un registro anterior realizado en otras condiciones de sedación.",
+          "prompt": "¿Qué evita una falsa comparación?",
+          "options": [
+            "Sumar los dos totales",
+            "Ignorar los tratamientos que interfieren",
+            "Documentar condiciones, momento y componentes comparables"
+          ],
+          "correct": 2,
+          "feedback": "Los números sin condiciones de observación pueden ser engañosos. El ejercicio no infiere evolución neurológica solo por una suma.",
+          "rubric": "Explicita factores de confusión."
+        },
+        {
+          "scene": "El enunciado agrega un deterioro observado respecto del estado previo.",
+          "prompt": "¿Cuál es la prioridad educativa?",
+          "options": [
+            "Comunicar de inmediato y activar la evaluación supervisada prevista",
+            "Completar todas las casillas antes de pedir ayuda",
+            "Modificar por cuenta propia la infusión"
+          ],
+          "correct": 0,
+          "feedback": "Ante deterioro se practica reconocimiento y comunicación oportuna según el protocolo del centro. La app no dirige reanimación ni titula medicamentos.",
+          "rubric": "Prioriza ayuda y valoración sin prescripción autónoma."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "SINTÉTICO · REVISIÓN DOCENTE PENDIENTE"
+    },
+    {
+      "id": "hda",
+      "title": "Hemorragia digestiva alta",
+      "area": "Emergencias",
+      "intro": "Caso sintético adulto con relato de vómito con sangre, palidez y mareo. Los datos sirven para aprender reconocimiento de riesgo y registro, no para decidir una terapia.",
+      "questions": [
+        {
+          "scene": "El nuevo registro simulado muestra PA 92/58 mmHg y frecuencia 116/min.",
+          "prompt": "¿Qué razonamiento es prudente?",
+          "options": [
+            "Tratarlo como un dato sin importancia",
+            "Reconocer posible deterioro y solicitar valoración inmediata del equipo",
+            "Elegir un expansor y una dosis desde el inventario"
+          ],
+          "correct": 1,
+          "feedback": "La combinación de síntomas y observaciones exige reconocer riesgo y comunicar. El ejercicio no confirma una causa ni selecciona fluidos o fármacos.",
+          "rubric": "Prioriza reconocimiento de inestabilidad."
+        },
+        {
+          "scene": "En el inventario aparece concentrado de hematíes.",
+          "prompt": "¿Cómo se clasifica?",
+          "options": [
+            "Como hemocomponente, no como una DCI farmacológica",
+            "Como cualquier antibiótico",
+            "Como suplemento alimentario"
+          ],
+          "correct": 0,
+          "feedback": "El inventario distingue hemocomponentes, medicamentos y nutrición. Esta clasificación no autoriza una transfusión ni establece sus requisitos.",
+          "rubric": "Diferencia categorías de productos."
+        },
+        {
+          "scene": "El estudiante redacta la evaluación del PAE.",
+          "prompt": "¿Qué debe registrar?",
+          "options": [
+            "Una mejoría no observada para cerrar el plan",
+            "Una orden histórica como recomendación universal",
+            "Datos observados, acciones simuladas y respuesta realmente disponible"
+          ],
+          "correct": 2,
+          "feedback": "El registro debe seguir lo que ofrece el caso. Si falta una respuesta o un dato, permanece pendiente.",
+          "rubric": "No inventa evolución ni resultados."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "SINTÉTICO · REVISIÓN DOCENTE PENDIENTE"
+    },
+    {
+      "id": "pancreatitis",
+      "title": "Pancreatitis: dolor y balance",
+      "area": "Medicina interna",
+      "intro": "Escenario sintético adulto con pancreatitis mencionada en el enunciado. Se practica dolor, balance y formulación de un objetivo del PAE, sin pautas de tratamiento.",
+      "questions": [
+        {
+          "scene": "La persona puede autoinformar y elige 7 en una escala numérica 0–10.",
+          "prompt": "¿Qué se registra?",
+          "options": [
+            "EVA de 7 mm como si se hubiera medido",
+            "NRS 7/10, contexto y momento",
+            "Un dolor observado, sin considerar su respuesta"
+          ],
+          "correct": 1,
+          "feedback": "NRS es autoinforme numérico. No se sustituye por una medida analógica en milímetros ni por otra escala.",
+          "rubric": "Identifica el instrumento realmente utilizado."
+        },
+        {
+          "scene": "En el mismo intervalo ficticio se registran 1200 mL de ingresos y 900 mL de egresos.",
+          "prompt": "¿Qué significa la resta?",
+          "options": [
+            "300 mL de balance registrado; no implica por sí solo tratamiento",
+            "300 mL que deben eliminarse con un medicamento",
+            "Un diagnóstico automático de sobrecarga"
+          ],
+          "correct": 0,
+          "feedback": "1200 − 900 = 300 mL. El resultado solo reúne los registros del intervalo; no incluye pérdidas no consignadas ni prescribe conductas.",
+          "rubric": "Separa cálculo e interpretación clínica."
+        },
+        {
+          "scene": "Se escribe un resultado esperado del ejercicio.",
+          "prompt": "¿Qué redacción permite evaluar?",
+          "options": [
+            "Estará bien",
+            "Se curará por completo en una hora",
+            "Describir un indicador, un momento y cómo se comparará con el dato inicial"
+          ],
+          "correct": 2,
+          "feedback": "Un resultado del plan necesita criterios observables y plazo del ejercicio. No se promete curación ni se copia una taxonomía licenciada.",
+          "rubric": "Propone evaluación observable con texto propio."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "SINTÉTICO · REVISIÓN DOCENTE PENDIENTE"
+    },
+    {
+      "id": "neumonia-asma",
+      "title": "Neumonía / asma: observación respiratoria",
+      "area": "Respiratorio",
+      "intro": "Escenario ficticio adulto con antecedente de asma y síntomas respiratorios. La actividad no distingue diagnósticos por sí sola ni prescribe oxígeno o broncodilatadores.",
+      "questions": [
+        {
+          "scene": "Se observa mayor esfuerzo respiratorio y el monitor simulado muestra una lectura baja de saturación.",
+          "prompt": "¿Qué evita depender solo del dispositivo?",
+          "options": [
+            "Ignorar a la persona y repetir el número",
+            "Considerar clínica y calidad de señal, y pedir valoración oportuna",
+            "Elegir una dosis a partir del color del monitor"
+          ],
+          "correct": 1,
+          "feedback": "Una señal puede ser inexacta, pero un deterioro observado requiere atención y comunicación; verificar no debe servir para demorar ayuda.",
+          "rubric": "Integra observación y límites de medición."
+        },
+        {
+          "scene": "El estudiante revisa la letra B de ABCDE.",
+          "prompt": "¿Qué área está organizando?",
+          "options": [
+            "Respiración",
+            "Balance del día",
+            "Búsqueda de fármacos por marca"
+          ],
+          "correct": 0,
+          "feedback": "B organiza la observación de la respiración. El formulario es un marco de aprendizaje y no una guía autónoma de intervención.",
+          "rubric": "Reconoce la finalidad del marco."
+        },
+        {
+          "scene": "En SBAR falta un antecedente de alergias en el caso.",
+          "prompt": "¿Qué es correcto?",
+          "options": [
+            "Escribir sin alergias para completar",
+            "Copiar datos de otro caso",
+            "Señalar no disponible y solicitar verificación"
+          ],
+          "correct": 2,
+          "feedback": "Dato ausente no significa ausencia de alergia. La documentación debe conservar esa incertidumbre.",
+          "rubric": "No transforma un vacío en una negación."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "SINTÉTICO · REVISIÓN DOCENTE PENDIENTE"
+    },
+    {
+      "id": "sepsis-shock",
+      "title": "Sepsis / shock: reconocimiento y comunicación",
+      "area": "Emergencias",
+      "intro": "Simulación adulta con infección sospechada, cambio del estado mental y deterioro circulatorio en el relato. No diagnostica sepsis ni implementa un protocolo terapéutico.",
+      "questions": [
+        {
+          "scene": "El estado de la persona ficticia empeora entre dos observaciones.",
+          "prompt": "¿Qué se practica primero?",
+          "options": [
+            "Esperar a completar la biblioteca",
+            "Reconocer el deterioro y activar ayuda según el escenario supervisado",
+            "Obtener un puntaje para autorizar el tratamiento"
+          ],
+          "correct": 1,
+          "feedback": "La observación de deterioro necesita comunicación y evaluación oportuna. Un puntaje no es requisito para pedir ayuda.",
+          "rubric": "Prioriza reconocimiento y escalamiento."
+        },
+        {
+          "scene": "Una infusión de la hoja de práctica omite concentración y unidad de velocidad.",
+          "prompt": "¿Se puede calcular con seguridad?",
+          "options": [
+            "Sí, suponiendo la concentración habitual",
+            "Sí, con el peso solamente",
+            "No; faltan datos y se solicita una orden completa y legible"
+          ],
+          "correct": 2,
+          "feedback": "El sistema bloquea entradas incompletas o dimensionalmente incompatibles. No reconstruye prescripciones históricas.",
+          "rubric": "Identifica límites matemáticos y documentales."
+        },
+        {
+          "scene": "Se solicita un SBAR sintético.",
+          "prompt": "¿Qué es más útil?",
+          "options": [
+            "Presentar situación, antecedentes relevantes, observaciones y solicitud concreta",
+            "Listar marcas de medicamentos sin contexto",
+            "Afirmar un diagnóstico definitivo que el caso no confirma"
+          ],
+          "correct": 0,
+          "feedback": "La comunicación precisa describe lo observado y lo que debe evaluarse. No inventa resultados ni sustituye juicio profesional.",
+          "rubric": "Comunica sin sobrediagnosticar."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "SINTÉTICO · REVISIÓN DOCENTE PENDIENTE"
+    },
+    {
+      "id": "ecg",
+      "title": "ECG: señal, artefacto y límites",
+      "area": "Cardiovascular",
+      "intro": "Caso sintético sobre un trazado ilustrativo. La app no recibe electrocardiogramas reales, no identifica arritmias ni propone tratamientos.",
+      "questions": [
+        {
+          "scene": "La línea animada del módulo cambia al moverse un sensor ficticio del relato.",
+          "prompt": "¿Qué debe reconocerse?",
+          "options": [
+            "La animación demuestra una arritmia",
+            "Artefacto y señal son posibilidades que requieren verificación contextual",
+            "La línea indica qué fármaco administrar"
+          ],
+          "correct": 1,
+          "feedback": "Una animación es una representación didáctica. Artefactos, conexiones y contexto requieren revisión; no se emite un diagnóstico desde el dibujo.",
+          "rubric": "Distingue señal ilustrativa y dato clínico."
+        },
+        {
+          "scene": "No hay velocidad, calibración ni derivación documentadas.",
+          "prompt": "¿Qué queda limitado?",
+          "options": [
+            "La interpretación y las mediciones del trazado",
+            "Solo el color de la imagen",
+            "Nada: cualquier dibujo sirve como ECG clínico"
+          ],
+          "correct": 0,
+          "feedback": "Sin condiciones del registro no se justifican mediciones ni interpretación clínica. La animación no está calibrada como un ECG.",
+          "rubric": "Identifica metadatos esenciales ausentes."
+        },
+        {
+          "scene": "El relato incorpora pérdida súbita de respuesta.",
+          "prompt": "¿Qué evita una demora peligrosa?",
+          "options": [
+            "Medir todos los intervalos del dibujo antes de avisar",
+            "Buscar una escala avanzada",
+            "Pedir ayuda y activar el procedimiento institucional con personal capacitado"
+          ],
+          "correct": 2,
+          "feedback": "El estado de la persona tiene prioridad sobre analizar una ilustración. El módulo no enseña una reanimación autónoma.",
+          "rubric": "Prioriza reconocimiento y ayuda, no diagnóstico automático."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ],
+      "status": "SINTÉTICO · REVISIÓN DOCENTE PENDIENTE"
+    }
+  ],
+  "checklists": [
+    {
+      "id": "insnsb-10",
+      "title": "Diez correctos · INSN San Borja",
+      "scope": "Guía institucional GP-028/INSN-SB/UE-V.01, abril 2021, p. 6. Ámbito neonatal/pediátrico e intravenoso descrito en p. 3. Cita de diez ítems, no lista universal MINSA.",
+      "official": true,
+      "items": [
+        "Paciente correcto.",
+        "Medicamento correcto.",
+        "Dosis correcta.",
+        "Vía de administración correcta.",
+        "Horario correcto.",
+        "Verificar fecha de caducidad.",
+        "Registrar todos los medicamentos administrados.",
+        "Informar e instruir al paciente sobre medicamentos que está recibiendo.",
+        "Investigar si el paciente padece de alergias a algún medicamento. Comprobar que el paciente no este ingiriendo ningún otro medicamento que no esté prescrito.",
+        "Antes de preparar y administrar un medicamento realiza el lavado de manos."
+      ],
+      "sources": [
+        {
+          "title": "INSN-SB · GP-028/INSN-SB/UE-V.01 · abril 2021",
+          "url": "https://cdn.www.gob.pe/uploads/document/file/7682305/6505016-rd-n-000087-2021-dg-insnsb-028-gp-administracion-de-medicamentos-edv-vb.pdf",
+          "publisher": "Cotejo de los diez correctos: p. 6; ámbito: p. 3. No revisión de todas las pautas.",
+          "date": "2026-11-03"
+        }
+      ]
+    },
+    {
+      "id": "idreyk-20",
+      "title": "Veinte controles educativos · iDreyK",
+      "scope": "Lista propia para práctica. No es una norma oficial MINSA/OMS ni un protocolo institucional. Marcar casillas no autoriza administrar.",
+      "official": false,
+      "items": [
+        "Identificación ficticia y concordancia del enunciado",
+        "Orden legible, completa y vigente en el ejercicio",
+        "Diferenciar dato ausente, negación e incertidumbre",
+        "Alergias y antecedentes que deben verificarse",
+        "Nombre del principio activo y producto exacto por confirmar",
+        "Presentación, concentración y unidad documentadas",
+        "Cantidad indicada: no inventar ni inferir una dosis",
+        "Vía escrita y coherente, sin asumir compatibilidad",
+        "Horario, intervalo y duración explícitos",
+        "Cálculo dimensional y comprobación independiente del ejercicio",
+        "Peso, edad y población cuando sean pertinentes",
+        "Integridad, conservación y caducidad por verificar",
+        "Reconstitución: fuente del producto y volumen final conocidos",
+        "Diluyente y compatibilidad: no asumir por ausencia de datos",
+        "Velocidad, equipo y factor de goteo cuando correspondan",
+        "Riesgos, interacciones y duplicidades por revisar con el equipo",
+        "Higiene de manos, entorno y precauciones aplicables",
+        "Información, comprensión y participación de la persona ficticia",
+        "Registro de lo realmente simulado y respuesta observada",
+        "Comunicación de discrepancias y consulta de fuentes/protocolo"
+      ],
+      "sources": [
+        {
+          "title": "Base Maestra 2.1 · referencia editorial aportada",
+          "url": "https://github.com/iDreyK-ii/Enfermer-a-app/blob/desarrollo/research/base_maestra_v21/README.md",
+          "publisher": "Material editorial; revisión clínica pendiente",
+          "date": "2026-11-03"
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "route": "biblioteca",
+      "name": "Biblioteca Markdown",
+      "status": "HECHO",
+      "note": "Lectura estructurada, filtros, búsqueda y progreso local; conjunto inicial, no toda una carrera."
+    },
+    {
+      "route": "herramientas",
+      "name": "Herramientas matemáticas",
+      "status": "HECHO",
+      "note": "Decimales y unidades para ejercicios. No validan dosis, tratamientos o rangos clínicos."
+    },
+    {
+      "route": "atlas",
+      "name": "Atlas vectorial",
+      "status": "PARCIAL",
+      "note": "Ocho dispositivos genéricos interactivos; cotejo de modelos de fabricante y revisión experta pendientes."
+    },
+    {
+      "route": "bioseguridad",
+      "name": "Bioseguridad",
+      "status": "PARCIAL",
+      "note": "Cinco momentos, cronómetro y listas diferenciadas. Técnica supervisada y protocolo local siguen siendo necesarios."
+    },
+    {
+      "route": "cuaderno",
+      "name": "PAE / SOAPIE / SBAR",
+      "status": "PARCIAL",
+      "note": "Editor, persistencia y Markdown funcionales. Impresión/PDF implementados, pendientes de prueba en dispositivo. Sin taxonomías completas ni diagnósticos automáticos."
+    },
+    {
+      "route": "casos",
+      "name": "Casos progresivos",
+      "status": "PARCIAL",
+      "note": "Siete escenarios sintéticos funcionales; revisión docente y validación clínica pendientes."
+    },
+    {
+      "route": "biblioteca-escalas",
+      "name": "Escalas y tests",
+      "status": "PARCIAL",
+      "note": "Se conservan los instrumentos ya funcionales y 44 fichas documentales; no son 44 calculadoras."
+    },
+    {
+      "route": "instrumento/braden",
+      "name": "Braden completo",
+      "status": "BLOQUEADO-POR-VALIDACIÓN",
+      "note": "Permiso de uso digital/reproducción no aportado. Solo registro externo; no administra el cuestionario."
+    },
+    {
+      "route": "registro-escala/norton",
+      "name": "Norton completo",
+      "status": "BLOQUEADO-POR-VALIDACIÓN",
+      "note": "Versión y derechos digitales pendientes de cotejo. Registro externo no equivale a aplicación."
+    },
+    {
+      "route": "instrumento/rass",
+      "name": "RASS administrado",
+      "status": "BLOQUEADO-POR-VALIDACIÓN",
+      "note": "Versión, traducción y derechos de uso digital pendientes. No se inventa un formulario."
+    },
+    {
+      "route": "inventario",
+      "name": "Inventario nominal",
+      "status": "HECHO",
+      "note": "Nombres y relaciones editoriales importados en IDENTIFICADO; no son monografías validadas."
+    },
+    {
+      "route": "",
+      "name": "Monografías DIGEMID producto a producto",
+      "status": "BLOQUEADO-POR-VALIDACIÓN",
+      "note": "Fuentes exactas, permisos, revisión clínica/farmacéutica y publicación: fase posterior."
+    },
+    {
+      "route": "nube",
+      "name": "Cuentas y contenido remoto",
+      "status": "PARCIAL",
+      "note": "Infraestructura anterior conservada; OTP real aplazado. APK de pruebas sin nube configurada."
+    },
+    {
+      "route": "",
+      "name": "Especialidades y simulación avanzada",
+      "status": "FALTA",
+      "note": "Backlog priorizado, sin botones de una función inexistente."
+    }
+  ]
+}

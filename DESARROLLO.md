@@ -186,3 +186,12 @@ Suite rápida repetida: 95 Python, 5 SQLite y 17 PGLite superados. Suite nativa 
 ### v0.5.0 · carga de catálogo y evidencia de CI
 
 Tras corregir los tests, la ejecución `41542944011` pasó Android y llegó a lint. Se reorganiza la carga asíncrona del catálogo en un estado observable explícito, sin supresiones de lint, sin modificar interfaz o criterios clínicos y conservando cancelación/IO. El pipeline ahora resume también XML/lint/APK verificados para que el estado técnico sea auditable mediante las anotaciones públicas, con cinco tests del resumidor. La etiqueta de entrega sigue condicionada al éxito del SHA final.
+
+
+## 2026-11-03 — Base Maestra 2.1 / Android 0.6.0-dev
+
+Continuación del commit cb05f1f; rama de respaldo publicada antes de refactorizar. Lectura íntegra y auditoría en `docs/AUDITORIA_BASE_MAESTRA_v21.md`. Se amplían biblioteca/búsqueda/progreso, aritmética decimal, atlas, bioseguridad, cuaderno y casos; se importa inventario nominal sin validarlo clínicamente. SQLite v2 y componentes visuales/performance anteriores conservados.
+
+Resultado técnico de esta entrega: 235 Android/JVM (18 suites), 111 Python, 5 SQLite, 17 PGLite; lint sin errores/26 advertencias; APK local code7 y firma conservada. Diez renders API35 del código Compose, no de APK instalado. Dos pruebas de generación PDF instrumentadas compiladas, sin ejecución; el writer nativo no existe en Robolectric 4.14.1. No se atribuye éxito de PDF, servicio de impresión, pruebas físicas, OTP o importación Google. Matriz/alcance: `docs/MVP_BASE_MAESTRA_v21.md`; evidencia: `qa/RESULTADOS_v0.6.0.md`.
+
+No se reaplican migraciones ni se modifica el servicio Supabase. Las monografías farmacológicas y la validación profesional siguen posteriores al núcleo. El estado por módulo evita presentar registros externos o módulos futuros como instrumentos completos.

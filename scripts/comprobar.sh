@@ -38,6 +38,7 @@ if [[ "$mode" == --todo ]]; then
   memory='-Dorg.gradle.jvmargs=-Xmx640m -XX:MaxMetaspaceSize=384m -XX:+UseSerialGC -Dfile.encoding=UTF-8'
   test_memory='-Dorg.gradle.jvmargs=-Xmx384m -XX:MaxMetaspaceSize=256m -XX:+UseSerialGC -Dfile.encoding=UTF-8'
   run_check compilacion "$gradle" "${common[@]}" :app:compileDebugUnitTestKotlin "$memory"
+  run_check compilacion-instrumentadas "$gradle" "${common[@]}" :app:assembleDebugAndroidTest "$memory"
   run_check android "$gradle" "${common[@]}" :app:testDebugUnitTest "$test_memory"
   run_check ensamblado-lint "$gradle" "${common[@]}" :app:assembleDebug :app:lintDebug "$memory"
   run_check apk "$python" scripts/verificar_apk.py

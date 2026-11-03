@@ -1,4 +1,4 @@
-# Enfermería iDreyK 360 — Android nativo v0.5.0
+# Enfermería iDreyK 360 — Android nativo v0.6.0
 
 > **Continuidad con Google AI Studio:** empezar por [INICIAR_EN_AI_STUDIO.md](INICIAR_EN_AI_STUDIO.md), [identidad técnica](CONTINUIDAD.json) e [inventario funcional actual](docs/INVENTARIO_FUNCIONAL_ACTUAL.md). Se traslada esta app nativa completa, no una recreación. Cada actualización parte de un commit exacto de `desarrollo`; la copia importada se verifica antes de compilar. El propietario informa que Google construyó la revisión anterior sin cambios; su paridad de fuentes/renderizado no se verificó independientemente.
 
@@ -6,9 +6,22 @@ Evolución del mismo aplicativo del **Prototipo B**, en Kotlin/Jetpack Compose. 
 
 **Estado actual de infraestructura (2 de noviembre de 2026):** se creó `idreyk-360-dev` en Supabase, región Virginia autorizada, y se aplicó su migración. Pasaron **7 controles HTTPS y 12 comprobaciones SQL reales**. Correo OTP y sesión real siguen pendientes; el propietario autorizó aplazar esa configuración y continuar en modo local, sin cuenta obligatoria. Ver [docs/SUPABASE_REAL_Y_GITHUB.md](docs/SUPABASE_REAL_Y_GITHUB.md).
 
-**El APK entregado v0.4.1 no cambió:** todavía tiene nube vacía. Se dejaron parámetros públicos y un comando para la próxima compilación conectada; no se ejecutó esa compilación en esta fase. El repositorio de trabajo autorizado es [iDreyK-ii/Enfermer-a-app](https://github.com/iDreyK-ii/Enfermer-a-app), rama `desarrollo`, público por decisión del propietario. Ver [destino y comprobación de sincronización](docs/GITHUB_DESTINO.md). Solo contenido de práctica, sin validación para pacientes reales.
+**Entrega actual: Android 0.6.0-dev, code 7; Base Maestra 2.1.** APK local sin nube, con firma conservada y evidencia técnica. Las cuentas/plantillas OTP reales siguen aplazadas. El repositorio autorizado es [iDreyK-ii/Enfermer-a-app](https://github.com/iDreyK-ii/Enfermer-a-app), rama `desarrollo`, público por decisión del propietario. Solo práctica educativa, sin aprobación para pacientes reales.
 
-## Actualización v0.5.0 — tests y escalas clínicas
+## MVP Base Maestra 2.1 — Android v0.6.0
+
+Se leyeron los 13 apartados y anexos completos, se publicó una rama de respaldo y se ejecutó QA antes de modificar. Sobre la misma app: 20 temas Markdown, búsqueda/filtros/progreso, calculadoras decimales con factor de goteo obligatorio, ocho atlas vectoriales, higiene y listas diferenciadas, PAE/Gordon/ABCDE/SOAPIE/SBAR, siete casos sintéticos/21 preguntas y **554 entradas nominales trazadas en 737 apariciones**. Las entradas siguen en IDENTIFICADO: no son monografías ni stock verificados. Se conservan escalas anteriores y solo se habilitan registros externos donde faltan permisos/validación.
+
+**235 pruebas Android/JVM, 111 Python, 5 SQLite y 17 PGLite; lint 0 errores/26 advertencias.** Diez renders nativos en teléfono/tablet/compacto, no capturas de APK instalado. Dos pruebas instrumentadas PDF compiladas, **no ejecutadas**; salida PDF/servicio real pendientes.
+
+- [Funciones y matriz HECHO/PARCIAL/FALTA/BLOQUEADO](docs/MVP_BASE_MAESTRA_v21.md)
+- [QA y límites](qa/RESULTADOS_v0.6.0.md) · [Desglose visual autocontenido](qa/base_maestra_v21/desglose_visual.html)
+- [Roadmap y módulos futuros](docs/10_ROADMAP_Y_MODULOS_FUTUROS.md)
+- [Compilar/probar](docs/COMPILAR_Y_PROBAR.md) · [Preservar en Google](docs/PROMPT_IA_STUDIO.md)
+
+La especificación 2.1 **no** cambia la app a una versión Android 2.1. No se promete MVP clínico completo, validación profesional o paridad física de píxeles.
+
+## Histórico: v0.5.0 — tests y escalas clínicas
 
 **Primer bloque, no catálogo universal ni certificación clínica:** 44 fichas documentales/40 fuentes, filtros por adultos/pediatría/neonatos y área, búsqueda global, estado de permisos y profundidad de lectura. Once fichas enlazan práctica, simulación o registro; no son 44 calculadoras. Nuevas pantallas: escala numérica de dolor separada de EVA y 4AT adulto como adaptación educativa con atribución CC BY 4.0. Se conservan las herramientas previas, Prototipo B, SQLite v2 y nube opcional. Farmacología queda al final y no se completó aquí.
 

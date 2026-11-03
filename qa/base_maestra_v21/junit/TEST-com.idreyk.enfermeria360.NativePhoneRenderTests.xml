@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.NativePhoneRenderTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-03T10:52:12" hostname="e2b.local" time="13.92">
+  <properties/>
+  <testcase name="syringeIsActualInteractiveVectorNotAnIllustrationOfAnUnbuiltScreen" classname="com.idreyk.enfermeria360.NativePhoneRenderTests" time="9.954"/>
+  <testcase name="homePreservesNativePrototypeAndCapturesNewNavigation" classname="com.idreyk.enfermeria360.NativePhoneRenderTests" time="0.887"/>
+  <testcase name="decimalResultComesFromEnteredNumbers" classname="com.idreyk.enfermeria360.NativePhoneRenderTests" time="1.234"/>
+  <testcase name="caseAndPaeAreNativeEditableRoutes" classname="com.idreyk.enfermeria360.NativePhoneRenderTests" time="1.354"/>
+  <testcase name="pausedHygieneShowsRealNativeState" classname="com.idreyk.enfermeria360.NativePhoneRenderTests" time="0.484"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+]]></system-err>
+</testsuite>

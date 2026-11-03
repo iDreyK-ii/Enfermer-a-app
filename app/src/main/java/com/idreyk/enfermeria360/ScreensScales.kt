@@ -1,6 +1,8 @@
 package com.idreyk.enfermeria360
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.selection.toggleable
+import androidx.compose.ui.semantics.Role
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -96,6 +98,8 @@ fun ScaleLibraryScreen(nav: (String) -> Unit, back: () -> Unit) {
             nav("escala/silverman")
         }
         Section("Puntuaciones de instrumentos externos")
+        ActionRow("Norton · registro externo", "Adulto · transcripción, no aplicación", R.drawable.ic_bed, Purple) { nav("registro-escala/norton") }
+        ActionRow("RASS · registro externo", "Adulto · transcripción, no formulario", R.drawable.ic_clipboard, Teal) { nav("registro-escala/rass") }
         ActionRow(
             "Braden",
             "Registrar puntaje externo · no reproduce el cuestionario",
@@ -323,76 +327,37 @@ fun PediatricGlasgowRecord(vm: AppViewModel, back: () -> Unit) {
 
 @Composable
 fun ExternalScaleScreen(id: String, vm: AppViewModel, back: () -> Unit) {
-    val name = if (id == "braden") "Braden" else "Morse"
+    val names = mapOf("braden" to "Braden", "morse" to "Morse", "norton" to "Norton", "rass" to "RASS")
+    val name = names[id]
+    if (name == null) { Page("Registro no disponible", back = back) { Notice("Elige un instrumento conocido.", true) }; return }
     var value by rememberSaveable(id) { mutableStateOf("") }
     var origin by rememberSaveable(id) { mutableStateOf("") }
+    var adult by rememberSaveable(id) { mutableStateOf(false) }
     var error by remember { mutableStateOf("") }
-    Page(
-        "$name · registro externo",
-        "Registro de un puntaje, no aplicación del instrumento",
-        back,
-    ) {
-        Notice(
-            "No se incluye el cuestionario ni sus criterios: los permisos para redistribuir el instrumento no están aportados. Puedes registrar un resultado ficticio obtenido con una ficha externa autorizada. No se interpreta el riesgo.",
-            true,
-        )
-        Text(
-            "Solo se comprueba el formato y el rango, no la coherencia de la valoración externa.",
-            style = MaterialTheme.typography.bodySmall,
-            color = LocalPalette.current.muted,
-        )
-        Input(
-            "Puntaje de la ficha externa",
-            value,
-            {
-                value = it
-                error = ""
-            },
-            numeric = true,
-        )
-        Text(
-            if (id == "braden") "Versión de referencia: total entero entre 6 y 23."
-            else "Versión de referencia: total entero entre 0 y 125.",
-            style = MaterialTheme.typography.bodySmall,
-        )
-        Input(
-            "Fuente, versión y contexto de práctica",
-            origin,
-            { origin = it.take(500) },
-            multi = true,
-        )
+    val range = when (id) { "braden" -> "6–23"; "norton" -> "5–20"; "rass" -> "−5 a +4"; else -> "0–125" }
+    Page("$name · registro externo", "Adulto · no administra ni interpreta el instrumento", back) {
+        Notice("No se incluye el cuestionario ni sus criterios. No hay permiso aportado para reproducir o adaptar el formulario completo de esta versión en la app. Solo transcribe un puntaje ficticio de una ficha externa autorizada.", true)
+        Text("Comprobar el rango no demuestra que la valoración sea correcta. Una puntuación no genera tratamientos ni un diagnóstico.", style = MaterialTheme.typography.bodySmall)
+        Row(Modifier.fillMaxWidth().toggleable(adult, role = Role.Checkbox) { adult = it; error = "" }, verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+            Checkbox(adult, onCheckedChange = null)
+            Text("Confirmo un ejemplo adulto, no pediátrico ni neonatal", Modifier.weight(1f), style = MaterialTheme.typography.bodySmall)
+        }
+        Input("Puntaje de la ficha externa", value, { value = calculationInput(it); error = "" }, numeric = id != "rass")
+        Text("Versión de referencia: ${if (id == "braden") "Braden original, no Braden II; " else if (id == "norton") "Norton original, no modificada; " else if (id == "rass") "Richmond Agitation-Sedation Scale adulta; " else ""}total entero $range. Vacío no es cero.", style = MaterialTheme.typography.bodySmall)
+        Input("Fuente, versión y contexto de práctica", origin, { origin = it.take(500) }, multi = true)
         if (error.isNotBlank()) Notice(error, true)
-        Primary(
-            "Guardar puntaje externo",
-            {
-                try {
-                    val score = NursingScales.externalScore(id, value)
-                    vm.practice(
-                        "$name · externo",
-                        "$origin. Puntaje transcrito: $score. No calculado ni interpretado por la app.",
-                    )
-                    error = ""
-                } catch (e: IllegalArgumentException) {
-                    error = e.message.orEmpty()
-                }
-            },
-            value.isNotBlank() && origin.isNotBlank() && !vm.busy,
-        )
-        SourceCard(
-            if (id == "braden")
-                Reference(
-                    "Condiciones de uso del instrumento Braden",
-                    "https://loinc.org/38228-3",
-                    "Referencia de derechos, no autorización para esta app",
-                    "2026-11-01",
-                )
-            else
-                Reference(
-                    "Morse Fall Scale · información de permisos",
-                    "https://falltips.org/faqs/",
-                    "Fall TIPS · uso sin coste no equivale a permiso de redistribución",
-                    "2026-11-01",
-                )
-        )
+        Primary("Guardar puntaje externo", {
+            try {
+                val score = NursingScales.externalScore(id, value)
+                vm.practice("$name · externo", "EJERCICIO EDUCATIVO. Adulto. $origin. Puntaje transcrito: $score. No calculado ni interpretado por la app.")
+                error = ""
+            } catch (e: IllegalArgumentException) { error = e.message.orEmpty() }
+        }, adult && value.isNotBlank() && origin.isNotBlank() && !vm.busy)
+        SourceCard(when (id) {
+            "braden" -> Reference("Braden/Braden II: titular y licencias", "https://www.bradenscale.com/", "Health Sense Ai / HD Nursing · no autorización obtenida", "2026-11-02")
+            "norton" -> Reference("Norton · resumen de medición, rango y límites", "https://scireproject.com/wp-content/uploads/2025/01/Clinician-Summary_Norton-Scale-v.8.1.pdf", "SCIRE Professional · resumen consultado; no permiso de formulario", "2026-11-03")
+            "rass" -> Reference("RASS · tarjeta de referencia de CIBS Center", "https://cdn.prod.website-files.com/5b0849daec50243a0a1e5e0c/64494326d62bbde72c3bafc4_CAM-ICU-Pocket-Cards.pdf", "ICU Delirium / Vanderbilt · tarjeta consultada; no autorización digital inferida", "2026-11-03")
+            else -> Reference("Morse Fall Scale · información de permisos", "https://falltips.org/faqs/", "Fall TIPS · gratuito no equivale a permiso de reproducción", "2026-11-02")
+        })
     }
 }

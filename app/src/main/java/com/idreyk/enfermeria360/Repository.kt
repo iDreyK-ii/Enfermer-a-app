@@ -60,6 +60,46 @@ private class LocalDatabase(context: Context) :
 }
 
 class ContentRepository(private val context: Context) {
+    private val masterLoad: MasterLoad by lazy {
+        try { MasterLoad(MasterCatalog.load(context)) }
+        catch (e: Exception) { MasterLoad(error = "No se pudo cargar la base educativa: ${e.message}") }
+    }
+    fun masterCatalog(): MasterLoad = masterLoad
+
+    fun learningRecords(): Map<String, LearningProgress> =
+        helper.readableDatabase.rawQuery("SELECT key,value FROM meta WHERE key LIKE ?", arrayOf("learning:%")).use { c ->
+            buildMap {
+                while (c.moveToNext()) {
+                    val progress = LearningProgress.decode(c.getString(1))
+                    require(c.getString(0) == "learning:${progress.route}") { "Progreso local inconsistente." }
+                    put(progress.route, progress)
+                }
+            }
+        }
+
+    fun saveLearning(progress: LearningProgress) {
+        val master = masterLoad.catalog ?: throw IllegalStateException(masterLoad.error)
+        master.validate(progress)
+        val old = learningRecords()[progress.route]
+        val db = helper.writableDatabase
+        db.beginTransaction()
+        try {
+            check(db.insertWithOnConflict("meta", null, ContentValues().apply {
+                put("key", "learning:${progress.route}")
+                put("value", progress.encode())
+            }, SQLiteDatabase.CONFLICT_REPLACE) != -1L)
+            if (progress.completed && (old?.completed != true || old.version != progress.version)) {
+                val case = master.cases.firstOrNull { "simulacion/${it.id}" == progress.route }
+                if (case != null) savePractice("Caso sintético · ${case.title}",
+                    "EJERCICIO EDUCATIVO. ${case.score(progress.answers)} de ${case.questions.size} respuestas correctas en el recorrido. No acredita competencia clínica. Versión ${progress.version}.")
+                else savePractice("Lectura educativa", "${master.topics.single { "tema/${it.id}" == progress.route }.title}. Marcada como leída por el usuario; no acredita comprensión ni competencia. Versión ${progress.version}.")
+            }
+            db.setTransactionSuccessful()
+        } finally { db.endTransaction() }
+    }
+
+    fun clearLearning() { helper.writableDatabase.delete("meta", "key LIKE ?", arrayOf("learning:%")) }
+
     private val helper = LocalDatabase(context)
 
     fun initialize() {
@@ -311,6 +351,15 @@ class ContentRepository(private val context: Context) {
         } finally {
             db.endTransaction()
         }
+    }
+
+    fun exportEducationalMarkdown(uri: Uri, record: NotebookRecord) = NotebookEducation.write(context, uri, record)
+
+    fun importStudyMarkdown(uri: Uri) {
+        val (title, body) = NotebookEducation.readMarkdown(context, uri)
+        saveNotebook(NotebookRecord("local-" + java.util.UUID.randomUUID().toString(), "note", "", title,
+            JSONObject().put("contenido", body).put("etiquetas", "Markdown importado localmente; origen: $title; revisión clínica no acreditada".take(300)),
+            System.currentTimeMillis()))
     }
 
     fun saveNotebook(record: NotebookRecord) =
@@ -711,6 +760,8 @@ data class LocalState(
     val notebooks: List<NotebookRecord> = emptyList(),
     val media: List<MediaRecord> = emptyList(),
     val hasNotebookUndo: Boolean = false,
+    val master: MasterLoad = MasterLoad(),
+    val learning: Map<String, LearningProgress> = emptyMap(),
 )
 
 @OptIn(kotlinx.coroutines.ExperimentalCoroutinesApi::class)
@@ -902,6 +953,8 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
                     repository.notebooks(),
                     repository.media(),
                     repository.hasNotebookUndo(),
+                    repository.masterCatalog(),
+                    repository.learningRecords(),
                 )
             }
         data = state
@@ -926,6 +979,12 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun favorite(key: String) = work("Favoritos actualizados") { repository.toggleFavorite(key) }
+
+    fun saveLearning(progress: LearningProgress, onSaved: () -> Unit = {}) =
+        work("Progreso guardado solo en el dispositivo", onSaved) { repository.saveLearning(progress) }
+
+    fun clearLearning() = work("Progreso eliminado; el historial y los documentos se conservan") { repository.clearLearning() }
+
 
     fun note(patientId: String, text: String) =
         work("Nota de práctica guardada en el dispositivo") { repository.saveNote(patientId, text) }
@@ -1020,6 +1079,12 @@ class AppViewModel(application: Application) : AndroidViewModel(application) {
         work("Ficha eliminada; puedes deshacer desde Biblioteca local", onDeleted) {
             repository.deleteEntry(key)
         }
+
+    fun exportEducationalMarkdown(uri: Uri, record: NotebookRecord) =
+        work("Documento educativo exportado en Markdown") { repository.exportEducationalMarkdown(uri, record) }
+
+    fun importStudyMarkdown(uri: Uri) =
+        work("Apunte Markdown importado como texto personal sin revisión clínica") { repository.importStudyMarkdown(uri) }
 
     fun saveNotebook(record: NotebookRecord, onSaved: () -> Unit) =
         work("Documento de práctica guardado", onSaved) { repository.saveNotebook(record) }

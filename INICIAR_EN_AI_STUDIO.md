@@ -1,6 +1,6 @@
 # Continuar iDreyK 360 en Google AI Studio, sin rehacer la app
 
-> **Actualización v0.5.0:** leer `docs/ESCALAS_CLINICAS_v0.5.0.md` y cargar el SHA exacto de la entrega de escalas. `traslado-ia-studio-v1` es el checkpoint anterior, no esta actualización. El propietario informa que compiló la base anterior en Google; la copia no se inspeccionó aquí.
+> **Actualización v0.6.0 / Base Maestra 2.1:** leer `docs/MVP_BASE_MAESTRA_v21.md` y cargar el SHA exacto de esta entrega o la etiqueta `base-maestra-v21-mvp`. `escalas-clinicas-v1` y `traslado-ia-studio-v1` son checkpoints anteriores, no esta actualización. La importación/compilación de esta revisión en Google no se ha comprobado aquí.
 
 ## Regla principal
 

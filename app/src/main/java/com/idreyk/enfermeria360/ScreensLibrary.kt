@@ -62,6 +62,12 @@ internal val ExtraModules =
         Module("Cuaderno PAE", "Planes y apuntes", "cuaderno", R.drawable.ic_edit, Teal),
         Module("Protocolos", "Documentos locales", "protocolos", R.drawable.ic_file, Purple),
         Module("Multimedia", "Archivos del dispositivo", "multimedia", R.drawable.ic_play, Blue),
+        Module("Biblioteca temática", "Markdown y fuentes", "biblioteca", R.drawable.ic_book, Purple),
+        Module("Atlas interactivo", "Ocho dispositivos", "atlas", R.drawable.ic_stethoscope, Teal),
+        Module("Bioseguridad", "Higiene y protección", "bioseguridad", R.drawable.ic_shield_check, Teal),
+        Module("Casos progresivos", "Siete escenarios sintéticos", "casos", R.drawable.ic_clipboard, Pink),
+        Module("Tu avance real", "Progreso local", "avance", R.drawable.ic_activity, Purple),
+        Module("Estado de módulos", "Funciones y pendientes", "estado-modulos", R.drawable.ic_grid, Teal),
     )
 
 @Composable
@@ -176,6 +182,10 @@ fun HomeScreen(vm: AppViewModel, nav: (String) -> Unit, info: (String, String) -
                 Module("Multimedia", "Archivos locales", "multimedia", R.drawable.ic_play, Pink),
             )
         ModuleGrid(shortcuts, nav, "home-module-grid")
+        ActionRow("Biblioteca temática", "Lecturas, filtros y fuentes · sin conexión", R.drawable.ic_book, Purple) { nav("biblioteca") }
+        val masterVersion = vm.data.master.catalog?.version
+        val completed = vm.data.learning.values.count { it.version == masterVersion && it.completed }
+        ActionRow("Tu avance real", "$completed lecturas o recorridos marcados · ${vm.data.favorites.size} favoritos", R.drawable.ic_activity, Teal) { nav("avance") }
         ActionRow(
             "Actualizar biblioteca",
             "Consulta local · novedades opcionales",
@@ -267,6 +277,7 @@ fun PharmacyScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit) {
             verticalArrangement = Arrangement.spacedBy(11.dp),
             contentPadding = PaddingValues(bottom = 25.dp),
         ) {
+            item { ActionRow("Inventario nominal · Base 2.1", "Nombres identificados, no monografías validadas", R.drawable.ic_book, Purple) { nav("inventario") } }
             if (drugs.isEmpty())
                 item {
                     EmptyState(
@@ -658,6 +669,7 @@ fun EvaScreen(vm: AppViewModel, back: () -> Unit) {
 @Composable
 fun SafetyScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit) {
     Page("Medicación segura", "Verificaciones con fuente y versión", back) {
+        ActionRow("Bioseguridad y listas cotejadas", "Cinco momentos · INSN-SB 10 · controles propios 20", R.drawable.ic_shield_check, Teal) { nav("bioseguridad") }
         AppCard(Modifier.fillMaxWidth()) {
             ColorIcon(R.drawable.ic_shield_check, Teal, 48)
             Text("La seguridad no es solo un número.", style = MaterialTheme.typography.titleLarge)
@@ -919,11 +931,19 @@ fun ContentScreen(
 fun FavoritesScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit) {
     Page("Tus favoritos", "Tu biblioteca, a un toque", back) {
         val entries = vm.data.entries.filter { it.key in vm.data.favorites }
-        if (entries.isEmpty())
+        val educational = vm.data.master.catalog?.searchItems.orEmpty().filter { it.route in vm.data.favorites }
+        if (entries.isEmpty() && educational.isEmpty())
             EmptyState(
                 "Un espacio para tus aliados",
-                "Toca la estrella de una ficha farmacológica o de un caso para guardarlo aquí.",
+                "Toca la estrella de una ficha, tema, dispositivo o caso para guardarlo aquí.",
             )
+        educational.forEach { item ->
+            AppCard(Modifier.fillMaxWidth(), onClick = { nav(item.route) }) {
+                Text(item.title, style = MaterialTheme.typography.titleSmall)
+                Text(item.subtitle, style = MaterialTheme.typography.bodySmall)
+                Favorite(item.route, item.title, vm)
+            }
+        }
         entries.forEach { e ->
             AppCard(Modifier.fillMaxWidth(), onClick = { nav(e.key) }) {
                 Row(verticalAlignment = Alignment.CenterVertically) {

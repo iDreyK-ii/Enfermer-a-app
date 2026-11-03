@@ -1,0 +1,25 @@
+{
+  "android": {
+    "tests": 163,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 163,
+    "suites": 11
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 24
+  },
+  "apk": {
+    "version": "0.5.0-dev-debug",
+    "version_code": 6,
+    "sha256": "bed2224c6f9b5f6053e4bbf600dff65c818b30ba0d3a011ad576b205cefd3515",
+    "min_sdk": 26,
+    "target_sdk": 35,
+    "certificate_matches_expected": true,
+    "physical_installation_tested": false
+  },
+  "clinical_validation": false,
+  "google_import_verified": false
+}

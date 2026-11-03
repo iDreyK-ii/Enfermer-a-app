@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.MasterCatalogTests" tests="22" skipped="0" failures="0" errors="0" timestamp="2026-11-03T10:51:18" hostname="e2b.local" time="5.986">
+  <properties/>
+  <testcase name="importedNamesAreNeverPromotedByPresenceOfAnEditorialReference" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="4.382"/>
+  <testcase name="allSevenCasesScoreActualChoicesAndRejectInvalidOrExtraAnswers" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.083"/>
+  <testcase name="unclearTranscriptionIsNotSilentlyChangedIntoAnotherMedicine" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.088"/>
+  <testcase name="unknownNotebookFieldsAreRejectedInsteadOfSilentlyDiscarded" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.09"/>
+  <testcase name="nonDrugProductsAreNotCountedAsGenericDci" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.081"/>
+  <testcase name="incompleteOrInvalidProgressCannotFalselyCompleteACaseOrWriteHistory" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.093"/>
+  <testcase name="readingsAndCaseAnswersSurviveRepositoryCloseWithoutChangingClinicalData" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.092"/>
+  <testcase name="everyTopicExposesAuthorshipVersionSourcesAndUnreviewedClinicalState" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.059"/>
+  <testcase name="exactlyTenInstitutionalItemsStaySeparateFromTwentyOwnControls" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.06"/>
+  <testcase name="nominalSynonymsAndFormulationsHaveOneMasterAndTraceableRelations" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.082"/>
+  <testcase name="vectorPartsAreSeparateEntitiesWithAccessibleTextAndBoundedCoordinates" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.06"/>
+  <testcase name="importingMarkdownCreatesAnUnreviewedNoteWithOriginalTextAndUndo" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.095"/>
+  <testcase name="externalNortonAndRassOnlyValidateTheDocumentedNumericRanges" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.099"/>
+  <testcase name="packagedInventoryHasExplicitCountsWithoutNewEditableMedicationDuplicates" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.058"/>
+  <testcase name="timerStagesHaveBoundariesAndNoUniversalSurgicalDuration" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.048"/>
+  <testcase name="markdownParsesStructureWithoutExecutingHtmlOrFetchingImages" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.073"/>
+  <testcase name="structuredPaeSoapieAndSbarPersistThroughSqliteAndEducationalExport" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.067"/>
+  <testcase name="oldNotebookFormatStillLoadsWhileNewFieldsRoundTripInVersionTwo" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.044"/>
+  <testcase name="offlineSearchCoversContentTagsAreaDevicePartsAndAmbiguity" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.105"/>
+  <testcase name="completingCaseAddsOneRealHistoryRecordAndResetDoesNotEraseHistory" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.084"/>
+  <testcase name="markdownImportRejectsBinaryOversizedOrMalformedUtf8" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.077"/>
+  <testcase name="learningProgressRoundTripDoesNotCoerceFractionalAnswers" classname="com.idreyk.enfermeria360.MasterCatalogTests" time="0.062"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

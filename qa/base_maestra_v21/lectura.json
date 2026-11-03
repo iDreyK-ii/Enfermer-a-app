@@ -1,0 +1,1512 @@
+{
+  "source": "Enfermeria_iDreyK360_BASE_MAESTRA_v2_1.md",
+  "bytes": 215307,
+  "sha256": "f0b9107128659d9b225d44424b3d7ea4bdd366ab29ba2b81627d7c380a5908ee",
+  "physical_lines": 4079,
+  "read_ranges": [
+    [
+      1,
+      260
+    ],
+    [
+      261,
+      520
+    ],
+    [
+      521,
+      780
+    ],
+    [
+      781,
+      1040
+    ],
+    [
+      1041,
+      1300
+    ],
+    [
+      1301,
+      1560
+    ],
+    [
+      1561,
+      1820
+    ],
+    [
+      1821,
+      2080
+    ],
+    [
+      2081,
+      2340
+    ],
+    [
+      2341,
+      2600
+    ],
+    [
+      2601,
+      2860
+    ],
+    [
+      2861,
+      3120
+    ],
+    [
+      3121,
+      3380
+    ],
+    [
+      3381,
+      3640
+    ],
+    [
+      3641,
+      3900
+    ],
+    [
+      3901,
+      4080
+    ]
+  ],
+  "read_completely": true,
+  "execution_instruction_read_completely": true,
+  "sections": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13"
+  ],
+  "annexes": [
+    "A",
+    "B"
+  ],
+  "images_used_as": "visual references only, not a dosing source",
+  "headings": [
+    {
+      "line": 1,
+      "title": "# ENFERMERÍA iDreyK 360 — BASE MAESTRA DE CONOCIMIENTO Y DESARROLLO"
+    },
+    {
+      "line": 10,
+      "title": "## INSTRUCCIONES DE USO DE ESTE ARCHIVO"
+    },
+    {
+      "line": 21,
+      "title": "## ÍNDICE GENERAL"
+    },
+    {
+      "line": 41,
+      "title": "## REGLAS GLOBALES DEL PROYECTO"
+    },
+    {
+      "line": 43,
+      "title": "### Propósito"
+    },
+    {
+      "line": 47,
+      "title": "### Jerarquía de fuentes"
+    },
+    {
+      "line": 56,
+      "title": "### Etiquetas de procedencia obligatorias"
+    },
+    {
+      "line": 68,
+      "title": "### Reglas clínicas no negociables"
+    },
+    {
+      "line": 81,
+      "title": "### Identidad visual"
+    },
+    {
+      "line": 85,
+      "title": "### Auditoría inicial antes de programar"
+    },
+    {
+      "line": 91,
+      "title": "# CONTENIDO CONSOLIDADO"
+    },
+    {
+      "line": 95,
+      "title": "# SECCIÓN 01 — CONTENIDOS Y COMPETENCIAS DE ENFERMERÍA"
+    },
+    {
+      "line": 97,
+      "title": "## Mapa independiente de contenidos y competencias de Enfermería"
+    },
+    {
+      "line": 101,
+      "title": "### 1. Competencias transversales"
+    },
+    {
+      "line": 112,
+      "title": "### 2. Fundamentos biomédicos"
+    },
+    {
+      "line": 114,
+      "title": "#### Anatomía y fisiología"
+    },
+    {
+      "line": 126,
+      "title": "#### Ciencias básicas y aplicadas"
+    },
+    {
+      "line": 133,
+      "title": "### 3. Fundamentos y valoración de Enfermería"
+    },
+    {
+      "line": 145,
+      "title": "### 4. Procedimientos básicos y clínicos"
+    },
+    {
+      "line": 162,
+      "title": "### 5. Seguridad, calidad y control de infecciones"
+    },
+    {
+      "line": 173,
+      "title": "### 6. Áreas clínicas que debe cubrir la biblioteca"
+    },
+    {
+      "line": 186,
+      "title": "### 7. Temas clínicos que ya se han trabajado y deben figurar en la biblioteca"
+    },
+    {
+      "line": 200,
+      "title": "### 8. Estructura mínima de un tema de estudio"
+    },
+    {
+      "line": 217,
+      "title": "### 9. Progresión de aprendizaje no vinculada a una universidad"
+    },
+    {
+      "line": 227,
+      "title": "# SECCIÓN 02 — ESCALAS, TESTS Y VALORACIONES"
+    },
+    {
+      "line": 229,
+      "title": "## Biblioteca de escalas, tests y herramientas de valoración"
+    },
+    {
+      "line": 231,
+      "title": "### 1. Reglas de la biblioteca"
+    },
+    {
+      "line": 239,
+      "title": "### 2. Dolor"
+    },
+    {
+      "line": 251,
+      "title": "### 3. Conciencia y neurología"
+    },
+    {
+      "line": 253,
+      "title": "#### Glasgow (GCS)"
+    },
+    {
+      "line": 260,
+      "title": "#### Otras herramientas neurológicas"
+    },
+    {
+      "line": 267,
+      "title": "### 4. Lesiones por presión y piel"
+    },
+    {
+      "line": 276,
+      "title": "### 5. Riesgo de caídas, marcha y equilibrio"
+    },
+    {
+      "line": 284,
+      "title": "### 6. Funcionalidad y dependencia"
+    },
+    {
+      "line": 291,
+      "title": "### 7. Cognición, delirium, afecto y salud mental"
+    },
+    {
+      "line": 307,
+      "title": "### 8. Sedación, agitación y paciente crítico"
+    },
+    {
+      "line": 318,
+      "title": "### 9. Nutrición e hidratación"
+    },
+    {
+      "line": 327,
+      "title": "### 10. Obstetricia, parto y puerperio"
+    },
+    {
+      "line": 334,
+      "title": "### 11. Recién nacido y neonatología"
+    },
+    {
+      "line": 336,
+      "title": "#### APGAR"
+    },
+    {
+      "line": 343,
+      "title": "#### Capurro"
+    },
+    {
+      "line": 349,
+      "title": "#### New Ballard / Ballard"
+    },
+    {
+      "line": 353,
+      "title": "#### Silverman–Andersen"
+    },
+    {
+      "line": 357,
+      "title": "#### Otros"
+    },
+    {
+      "line": 364,
+      "title": "### 12. Obstetricia, anestesia y perioperatorio"
+    },
+    {
+      "line": 371,
+      "title": "### 13. Scores clínicos complementarios (no confundir con escalas enfermeras)"
+    },
+    {
+      "line": 383,
+      "title": "### 14. Pantalla de aplicación de escalas"
+    },
+    {
+      "line": 395,
+      "title": "### 15. Prioridad de implementación"
+    },
+    {
+      "line": 401,
+      "title": "### Fuentes normativas de referencia"
+    },
+    {
+      "line": 409,
+      "title": "# SECCIÓN 03 — BIOSEGURIDAD, HIGIENE DE MANOS Y MEDICACIÓN SEGURA"
+    },
+    {
+      "line": 411,
+      "title": "## Bioseguridad, higiene de manos y medicación segura"
+    },
+    {
+      "line": 413,
+      "title": "### 1. Principio básico"
+    },
+    {
+      "line": 417,
+      "title": "### 2. Cinco momentos para la higiene de manos"
+    },
+    {
+      "line": 427,
+      "title": "### 3. Tipos de higiene de manos: distinguirlos"
+    },
+    {
+      "line": 438,
+      "title": "### 4. Técnica de lavado clínico con agua y jabón"
+    },
+    {
+      "line": 456,
+      "title": "### 5. Técnica de fricción alcohólica (gel/solución)"
+    },
+    {
+      "line": 469,
+      "title": "### 6. Preparación quirúrgica de manos"
+    },
+    {
+      "line": 481,
+      "title": "### 7. Precauciones estándar y EPP"
+    },
+    {
+      "line": 491,
+      "title": "#### Precauciones basadas en transmisión"
+    },
+    {
+      "line": 500,
+      "title": "### 8. Administración segura de medicamentos"
+    },
+    {
+      "line": 502,
+      "title": "#### 8.1. Diez correctos documentados en una guía institucional"
+    },
+    {
+      "line": 521,
+      "title": "#### 8.2. Checklist educativo extendido de 20 controles (propio de la app)"
+    },
+    {
+      "line": 546,
+      "title": "#### 8.3. Reglas de medicamentos de alto riesgo"
+    },
+    {
+      "line": 559,
+      "title": "### 9. Seguridad de documentación"
+    },
+    {
+      "line": 567,
+      "title": "### Fuentes base"
+    },
+    {
+      "line": 577,
+      "title": "# SECCIÓN 04 — INSTRUMENTAL, DISPOSITIVOS Y EQUIPOS"
+    },
+    {
+      "line": 579,
+      "title": "## Atlas de instrumental, dispositivos y equipos de Enfermería"
+    },
+    {
+      "line": 581,
+      "title": "### 1. Cómo debe presentarse cada equipo"
+    },
+    {
+      "line": 585,
+      "title": "### 2. Jeringas"
+    },
+    {
+      "line": 587,
+      "title": "#### Tipos frecuentes por capacidad/uso"
+    },
+    {
+      "line": 599,
+      "title": "#### Partes de una jeringa estándar"
+    },
+    {
+      "line": 612,
+      "title": "#### Conexiones"
+    },
+    {
+      "line": 619,
+      "title": "### 3. Agujas"
+    },
+    {
+      "line": 628,
+      "title": "### 4. Estetoscopio"
+    },
+    {
+      "line": 630,
+      "title": "#### Componentes principales"
+    },
+    {
+      "line": 642,
+      "title": "#### Uso educativo"
+    },
+    {
+      "line": 648,
+      "title": "### 5. Tensiómetro / esfigmomanómetro"
+    },
+    {
+      "line": 654,
+      "title": "### 6. Bránula / catéter venoso periférico corto"
+    },
+    {
+      "line": 656,
+      "title": "#### Partes habituales"
+    },
+    {
+      "line": 668,
+      "title": "#### Calibres y colores orientativos"
+    },
+    {
+      "line": 682,
+      "title": "#### Complicaciones a enseñar"
+    },
+    {
+      "line": 686,
+      "title": "### 7. Catéteres vasculares"
+    },
+    {
+      "line": 699,
+      "title": "### 8. Equipo de venoclisis / administración IV"
+    },
+    {
+      "line": 711,
+      "title": "### 9. Volutrol / bureta graduada"
+    },
+    {
+      "line": 717,
+      "title": "### 10. Llave de tres vías y conectores"
+    },
+    {
+      "line": 721,
+      "title": "### 11. Bombas y equipos de infusión"
+    },
+    {
+      "line": 731,
+      "title": "### 12. Sondas y tubos"
+    },
+    {
+      "line": 745,
+      "title": "### 13. Oxígeno y monitorización"
+    },
+    {
+      "line": 760,
+      "title": "### 14. Material de curación y protección"
+    },
+    {
+      "line": 764,
+      "title": "### 15. Diagramas visuales obligatorios"
+    },
+    {
+      "line": 781,
+      "title": "### Fuentes"
+    },
+    {
+      "line": 789,
+      "title": "# SECCIÓN 05 — COCHE DE PARO, CARTUCHERA Y ÁREA CLÍNICA"
+    },
+    {
+      "line": 791,
+      "title": "## Coche de paro, equipo clínico y cartuchera del estudiante"
+    },
+    {
+      "line": 793,
+      "title": "### 1. Qué es y para qué sirve"
+    },
+    {
+      "line": 799,
+      "title": "### 2. Equipamiento que se debe reconocer"
+    },
+    {
+      "line": 814,
+      "title": "### 3. Medicamentos: familias y ejemplos que podrían formar parte del stock"
+    },
+    {
+      "line": 818,
+      "title": "#### Fármacos usados en algoritmos de soporte vital adulto (según ritmo/indicación)"
+    },
+    {
+      "line": 826,
+      "title": "#### Medicamentos situacionales/de apoyo, no rutinarios en todo paro"
+    },
+    {
+      "line": 836,
+      "title": "#### Poblaciones específicas"
+    },
+    {
+      "line": 840,
+      "title": "### 4. Ejemplo institucional del INMP: cómo se debe usar"
+    },
+    {
+      "line": 846,
+      "title": "### 4.1. Inventario de nombres que aparece en la directiva institucional del INMP (2022)"
+    },
+    {
+      "line": 900,
+      "title": "### 5. Revisión y control del coche de paro"
+    },
+    {
+      "line": 921,
+      "title": "### 6. Cartuchera del estudiante"
+    },
+    {
+      "line": 925,
+      "title": "#### Registro y estudio"
+    },
+    {
+      "line": 934,
+      "title": "#### Instrumental opcional"
+    },
+    {
+      "line": 942,
+      "title": "#### Prohibido transportar en la cartuchera"
+    },
+    {
+      "line": 950,
+      "title": "### 7. Otros equipos por área clínica"
+    },
+    {
+      "line": 962,
+      "title": "### Fuentes"
+    },
+    {
+      "line": 972,
+      "title": "# SECCIÓN 06 — INVENTARIO FARMACOLÓGICO Y PRIORIDADES"
+    },
+    {
+      "line": 974,
+      "title": "## Inventario farmacológico identificado y prioridades de desarrollo"
+    },
+    {
+      "line": 978,
+      "title": "### 1. Principios para el catálogo"
+    },
+    {
+      "line": 987,
+      "title": "### 2. Medicamentos recuperados por caso o material anterior"
+    },
+    {
+      "line": 989,
+      "title": "#### A. Caso académico de diabetes mellitus tipo 2 / infección urinaria / hipertensión"
+    },
+    {
+      "line": 1004,
+      "title": "#### B. Caso académico de politrauma / TEC grave / postoperatorio neuroquirúrgico / UCI"
+    },
+    {
+      "line": 1020,
+      "title": "#### C. Trabajo de hemorragia digestiva alta y anemia secundaria"
+    },
+    {
+      "line": 1032,
+      "title": "#### D. Pancreatitis aguda"
+    },
+    {
+      "line": 1041,
+      "title": "#### E. Prototipos y fichas visuales de cuidados críticos"
+    },
+    {
+      "line": 1059,
+      "title": "#### F. Temas o fichas solicitadas en el caso de TEC para desarrollar"
+    },
+    {
+      "line": 1072,
+      "title": "### 3. Insulinas: catálogo inicial a completar"
+    },
+    {
+      "line": 1085,
+      "title": "### 4. Prioridad para las primeras fichas (propuesta)"
+    },
+    {
+      "line": 1087,
+      "title": "#### Prioridad 1 — relacionados con casos y seguridad frecuente"
+    },
+    {
+      "line": 1100,
+      "title": "#### Prioridad 2 — emergencias, UCI y hospitalización"
+    },
+    {
+      "line": 1110,
+      "title": "#### Prioridad 3 — ampliar el vademécum por áreas"
+    },
+    {
+      "line": 1119,
+      "title": "### 5. Estructura obligatoria de ficha farmacológica"
+    },
+    {
+      "line": 1144,
+      "title": "### 6. Alerta clínica sobre metamizol (ejemplo de cómo razonar)"
+    },
+    {
+      "line": 1150,
+      "title": "### 7. Controles especiales"
+    },
+    {
+      "line": 1160,
+      "title": "### 8. Tareas futuras para el módulo de farmacología"
+    },
+    {
+      "line": 1169,
+      "title": "### Archivos previos que sustentan el inventario"
+    },
+    {
+      "line": 1180,
+      "title": "### Fuentes prioritarias"
+    },
+    {
+      "line": 1189,
+      "title": "# SECCIÓN 07 — PAE, CASOS CLÍNICOS Y RAZONAMIENTO"
+    },
+    {
+      "line": 1191,
+      "title": "## PAE, valoración, taxonomías y casos clínicos del proyecto"
+    },
+    {
+      "line": 1193,
+      "title": "### 1. Modelo de razonamiento"
+    },
+    {
+      "line": 1197,
+      "title": "#### PAE"
+    },
+    {
+      "line": 1205,
+      "title": "#### Patrones funcionales de Gordon"
+    },
+    {
+      "line": 1221,
+      "title": "### 2. NANDA–NOC–NIC"
+    },
+    {
+      "line": 1229,
+      "title": "#### Reglas de formulación"
+    },
+    {
+      "line": 1237,
+      "title": "### 3. Formatos clínicos"
+    },
+    {
+      "line": 1239,
+      "title": "#### SOAPIE"
+    },
+    {
+      "line": 1250,
+      "title": "#### SBAR"
+    },
+    {
+      "line": 1257,
+      "title": "### 4. Casos académicos recuperados"
+    },
+    {
+      "line": 1261,
+      "title": "#### A. Diabetes mellitus tipo 2, ITU e hipertensión"
+    },
+    {
+      "line": 1267,
+      "title": "#### B. Politrauma / TEC grave / neurocirugía / UCI"
+    },
+    {
+      "line": 1275,
+      "title": "#### C. Hemorragia digestiva alta y anemia secundaria"
+    },
+    {
+      "line": 1283,
+      "title": "#### D. Pancreatitis aguda"
+    },
+    {
+      "line": 1291,
+      "title": "#### E. Neumonía en adulto"
+    },
+    {
+      "line": 1295,
+      "title": "#### F. Temas adicionales ya trabajados"
+    },
+    {
+      "line": 1305,
+      "title": "### 5. Casos nuevos que conviene preparar"
+    },
+    {
+      "line": 1320,
+      "title": "### 6. Motor de casos simulados"
+    },
+    {
+      "line": 1335,
+      "title": "### 7. Privacidad y ética"
+    },
+    {
+      "line": 1344,
+      "title": "# SECCIÓN 08 — BRIEF TÉCNICO PARA ARENA IA"
+    },
+    {
+      "line": 1346,
+      "title": "## Brief técnico de desarrollo para Arena IA — Enfermería iDreyK 360"
+    },
+    {
+      "line": 1348,
+      "title": "### 1. Encargo principal"
+    },
+    {
+      "line": 1354,
+      "title": "### 2. Exclusión explícita"
+    },
+    {
+      "line": 1358,
+      "title": "### 3. Antes de programar: auditoría del repositorio"
+    },
+    {
+      "line": 1367,
+      "title": "### 4. Navegación principal propuesta"
+    },
+    {
+      "line": 1369,
+      "title": "#### Inicio"
+    },
+    {
+      "line": 1376,
+      "title": "#### Módulos principales"
+    },
+    {
+      "line": 1390,
+      "title": "### 5. Funciones que se deben implementar ahora (MVP)"
+    },
+    {
+      "line": 1392,
+      "title": "#### A. Biblioteca de conocimiento"
+    },
+    {
+      "line": 1400,
+      "title": "#### B. Biblioteca de escalas"
+    },
+    {
+      "line": 1409,
+      "title": "#### C. Atlas visual de equipos"
+    },
+    {
+      "line": 1424,
+      "title": "#### D. Higiene y seguridad"
+    },
+    {
+      "line": 1433,
+      "title": "#### E. Calculadoras educativas"
+    },
+    {
+      "line": 1445,
+      "title": "#### F. PAE y casos"
+    },
+    {
+      "line": 1455,
+      "title": "### 6. Diseño: referencia Prototipo B"
+    },
+    {
+      "line": 1465,
+      "title": "### 7. Imágenes y animaciones: guía precisa"
+    },
+    {
+      "line": 1467,
+      "title": "#### Crear ahora"
+    },
+    {
+      "line": 1478,
+      "title": "#### Crear más adelante"
+    },
+    {
+      "line": 1485,
+      "title": "#### Estándar visual"
+    },
+    {
+      "line": 1494,
+      "title": "### 8. Funciones que NO se deben inventar"
+    },
+    {
+      "line": 1504,
+      "title": "### 9. Entregables técnicos"
+    },
+    {
+      "line": 1517,
+      "title": "### 10. Criterio final"
+    },
+    {
+      "line": 1523,
+      "title": "# SECCIÓN 09 — REFERENCIAS Y CONTROL DE VIGENCIA"
+    },
+    {
+      "line": 1525,
+      "title": "## Referencias prioritarias y control de vigencia"
+    },
+    {
+      "line": 1529,
+      "title": "### 1. Higiene de manos y control de infecciones"
+    },
+    {
+      "line": 1538,
+      "title": "### 2. Seguridad de medicamentos"
+    },
+    {
+      "line": 1546,
+      "title": "### 3. Adulto mayor y VACAM"
+    },
+    {
+      "line": 1552,
+      "title": "### 4. Coche de paro y soporte vital"
+    },
+    {
+      "line": 1560,
+      "title": "### 5. Inmunizaciones"
+    },
+    {
+      "line": 1565,
+      "title": "### 6. Dispositivos y equipos"
+    },
+    {
+      "line": 1570,
+      "title": "### 7. Criterios de actualización"
+    },
+    {
+      "line": 1579,
+      "title": "### 8. Registro de fuente por contenido"
+    },
+    {
+      "line": 1587,
+      "title": "# SECCIÓN 10 — ROADMAP Y MÓDULOS FUTUROS"
+    },
+    {
+      "line": 1589,
+      "title": "## Roadmap: qué implementar ahora y qué dejar preparado para el futuro"
+    },
+    {
+      "line": 1591,
+      "title": "### 1. Decisión de alcance"
+    },
+    {
+      "line": 1595,
+      "title": "### 2. Construir ahora: MVP obligatorio"
+    },
+    {
+      "line": 1597,
+      "title": "#### Módulo 1 — Inicio, navegación y búsqueda"
+    },
+    {
+      "line": 1605,
+      "title": "#### Módulo 2 — Biblioteca de contenidos"
+    },
+    {
+      "line": 1612,
+      "title": "#### Módulo 3 — Herramientas clínicas educativas"
+    },
+    {
+      "line": 1624,
+      "title": "#### Módulo 4 — Biblioteca de escalas MVP"
+    },
+    {
+      "line": 1634,
+      "title": "#### Módulo 5 — Atlas visual MVP"
+    },
+    {
+      "line": 1645,
+      "title": "#### Módulo 6 — Bioseguridad"
+    },
+    {
+      "line": 1655,
+      "title": "#### Módulo 7 — PAE básico y formatos"
+    },
+    {
+      "line": 1665,
+      "title": "#### Módulo 8 — Casos simulados iniciales"
+    },
+    {
+      "line": 1677,
+      "title": "### 3. Preparar ahora, implementar después"
+    },
+    {
+      "line": 1689,
+      "title": "### 4. Futuras versiones: backlog priorizado"
+    },
+    {
+      "line": 1691,
+      "title": "#### Versión 1.1 — Escalas y valoración avanzada"
+    },
+    {
+      "line": 1700,
+      "title": "#### Versión 1.2 — Farmacología fase 2"
+    },
+    {
+      "line": 1709,
+      "title": "#### Versión 1.3 — Procedimientos y dispositivos avanzados"
+    },
+    {
+      "line": 1717,
+      "title": "#### Versión 1.4 — Especialidades"
+    },
+    {
+      "line": 1728,
+      "title": "#### Versión 1.5 — Simulación clínica"
+    },
+    {
+      "line": 1736,
+      "title": "#### Versión 2.0 — Biblioteca personal y docencia"
+    },
+    {
+      "line": 1744,
+      "title": "### 5. Fuera de alcance por ahora"
+    },
+    {
+      "line": 1754,
+      "title": "### 6. Cómo mostrar módulos futuros"
+    },
+    {
+      "line": 1761,
+      "title": "### 7. Prioridad sugerida"
+    },
+    {
+      "line": 1771,
+      "title": "# SECCIÓN 11 — MODELO DE DATOS Y PRUEBAS DE CALIDAD"
+    },
+    {
+      "line": 1773,
+      "title": "## Modelo de datos, validación y pruebas de calidad"
+    },
+    {
+      "line": 1775,
+      "title": "### 1. Arquitectura de contenidos recomendada"
+    },
+    {
+      "line": 1779,
+      "title": "#### Entidades"
+    },
+    {
+      "line": 1792,
+      "title": "### 2. Contrato de fuentes"
+    },
+    {
+      "line": 1798,
+      "title": "### 3. Reglas para cálculos"
+    },
+    {
+      "line": 1811,
+      "title": "### 4. Pruebas mínimas"
+    },
+    {
+      "line": 1813,
+      "title": "#### Calculadora dosis-volumen"
+    },
+    {
+      "line": 1822,
+      "title": "#### Goteo y bomba"
+    },
+    {
+      "line": 1830,
+      "title": "#### Escalas"
+    },
+    {
+      "line": 1839,
+      "title": "#### PAE y formularios"
+    },
+    {
+      "line": 1847,
+      "title": "### 5. Privacidad, seguridad y offline"
+    },
+    {
+      "line": 1857,
+      "title": "### 6. Accesibilidad y rendimiento"
+    },
+    {
+      "line": 1867,
+      "title": "### 7. QA de contenido clínico"
+    },
+    {
+      "line": 1883,
+      "title": "# SECCIÓN 12 — TEMAS COMPLEMENTARIOS Y ESPECIALIDADES"
+    },
+    {
+      "line": 1885,
+      "title": "## Temas complementarios y especialidades para ampliar la biblioteca"
+    },
+    {
+      "line": 1889,
+      "title": "### 1. Valoración y examen físico avanzado"
+    },
+    {
+      "line": 1899,
+      "title": "### 2. Farmacología y terapéutica por grupos"
+    },
+    {
+      "line": 1914,
+      "title": "### 3. Procedimientos y cuidados especiales"
+    },
+    {
+      "line": 1926,
+      "title": "### 4. Emergencias y paciente crítico"
+    },
+    {
+      "line": 1940,
+      "title": "### 5. Materno-perinatal y neonatal"
+    },
+    {
+      "line": 1950,
+      "title": "### 6. Pediatría y adolescente"
+    },
+    {
+      "line": 1959,
+      "title": "### 7. Adulto mayor"
+    },
+    {
+      "line": 1967,
+      "title": "### 8. Salud mental"
+    },
+    {
+      "line": 1975,
+      "title": "### 9. Comunidad, salud pública y gestión"
+    },
+    {
+      "line": 1984,
+      "title": "### 10. Investigación y desarrollo profesional"
+    },
+    {
+      "line": 1994,
+      "title": "# SECCIÓN 13 — PLAN DE IMPLEMENTACIÓN Y CRITERIOS DE ACEPTACIÓN"
+    },
+    {
+      "line": 1996,
+      "title": "## Plan de implementación y criterios de aceptación para Arena IA"
+    },
+    {
+      "line": 1998,
+      "title": "### 1. Orden de ejecución"
+    },
+    {
+      "line": 2000,
+      "title": "#### Sprint 0 — diagnóstico técnico"
+    },
+    {
+      "line": 2007,
+      "title": "#### Sprint 1 — estructura y contenidos"
+    },
+    {
+      "line": 2014,
+      "title": "#### Sprint 2 — atlas visual y bioseguridad"
+    },
+    {
+      "line": 2020,
+      "title": "#### Sprint 3 — herramientas y escalas"
+    },
+    {
+      "line": 2026,
+      "title": "#### Sprint 4 — PAE y simulación"
+    },
+    {
+      "line": 2032,
+      "title": "#### Sprint 5 — rendimiento y entrega"
+    },
+    {
+      "line": 2038,
+      "title": "### 2. Criterios de aceptación funcionales"
+    },
+    {
+      "line": 2061,
+      "title": "### 3. Criterios visuales"
+    },
+    {
+      "line": 2070,
+      "title": "### 4. Informe de finalización obligatorio"
+    },
+    {
+      "line": 2087,
+      "title": "# ANEXO A — GUÍA DE GOTEO, DILUCIÓN Y CASOS"
+    },
+    {
+      "line": 2092,
+      "title": "## 🩺✨ Guía completa de cálculo de goteo, dilución y administración de medicamentos en enfermería"
+    },
+    {
+      "line": 2107,
+      "title": "### 🎯 1. Cómo pensar cualquier cálculo sin perderse"
+    },
+    {
+      "line": 2125,
+      "title": "### 🧾 2. Tabla maestra de fórmulas"
+    },
+    {
+      "line": 2139,
+      "title": "### 💧 3. Goteo IV explicado fácil"
+    },
+    {
+      "line": 2141,
+      "title": "#### 3.1 Cálculo con bomba"
+    },
+    {
+      "line": 2148,
+      "title": "#### 3.2 Cálculo por gravedad"
+    },
+    {
+      "line": 2155,
+      "title": "#### 3.3 Factores de gotas"
+    },
+    {
+      "line": 2166,
+      "title": "### 💉 4. Reconstitución y dilución"
+    },
+    {
+      "line": 2168,
+      "title": "#### 4.1 Qué significa reconstituir"
+    },
+    {
+      "line": 2178,
+      "title": "#### 4.2 Fórmula universal de volumen a administrar"
+    },
+    {
+      "line": 2186,
+      "title": "### 🧪 5. Caso detallado: ceftriaxona cuando el médico pide más de 1 g"
+    },
+    {
+      "line": 2188,
+      "title": "#### 5.1 Situación clínica"
+    },
+    {
+      "line": 2193,
+      "title": "#### 5.2 Lo primero que debes ver"
+    },
+    {
+      "line": 2203,
+      "title": "#### 5.3 ¿Qué haces entonces?"
+    },
+    {
+      "line": 2213,
+      "title": "#### 5.4 Ejemplo docente con reconstitución IV"
+    },
+    {
+      "line": 2228,
+      "title": "#### 5.5 Pero cuidado: un vial no alcanza"
+    },
+    {
+      "line": 2237,
+      "title": "#### 5.6 Ejemplo con dos viales"
+    },
+    {
+      "line": 2250,
+      "title": "#### 5.7 Ejemplo IM: cambia todo"
+    },
+    {
+      "line": 2266,
+      "title": "### 🍬 6. Insulina: diferente porque se calcula en unidades"
+    },
+    {
+      "line": 2270,
+      "title": "#### 6.1 Fórmula básica"
+    },
+    {
+      "line": 2276,
+      "title": "#### 6.2 Tabla rápida de equivalencias U-100"
+    },
+    {
+      "line": 2288,
+      "title": "#### 6.3 Caso examen clásico"
+    },
+    {
+      "line": 2299,
+      "title": "#### 6.4 Antes de administrar insulina"
+    },
+    {
+      "line": 2311,
+      "title": "#### 6.5 Caso con escala simple"
+    },
+    {
+      "line": 2321,
+      "title": "#### 6.6 Insulina en infusión IV"
+    },
+    {
+      "line": 2335,
+      "title": "### 🚨 7. UCI: cálculos más complejos pero con lógica"
+    },
+    {
+      "line": 2339,
+      "title": "#### 7.1 Fórmula general para pasar a mL/h"
+    },
+    {
+      "line": 2345,
+      "title": "#### 7.2 Caso básico tipo UCI"
+    },
+    {
+      "line": 2368,
+      "title": "#### 7.3 Secuencia segura en UCI"
+    },
+    {
+      "line": 2381,
+      "title": "### ⚠️ 8. Errores frecuentes que hacen fallar un examen o una administración"
+    },
+    {
+      "line": 2394,
+      "title": "### 🧷 9. Hoja de recuerdo rápido"
+    },
+    {
+      "line": 2407,
+      "title": "### 👩‍🏫 10. Guía para quien no sabe nada"
+    },
+    {
+      "line": 2419,
+      "title": "#### Frase para memorizar"
+    },
+    {
+      "line": 2425,
+      "title": "### 🧠 11. Guía para quien ya sabe pero quiere recordar rápido"
+    },
+    {
+      "line": 2438,
+      "title": "### ✅ 12. Cierre práctico"
+    },
+    {
+      "line": 2446,
+      "title": "# ANEXO B — ÁRBOL FARMACOLÓGICO / VADEMÉCUM — FASE 1"
+    },
+    {
+      "line": 2451,
+      "title": "## Vademécum de Enfermería — Fase 1"
+    },
+    {
+      "line": 2456,
+      "title": "### 1. Propósito de esta revisión"
+    },
+    {
+      "line": 2468,
+      "title": "### 2. Regla maestra de clasificación"
+    },
+    {
+      "line": 2479,
+      "title": "#### 2.1. Ubicación maestra"
+    },
+    {
+      "line": 2486,
+      "title": "#### 2.2. Combinaciones y formulaciones"
+    },
+    {
+      "line": 2497,
+      "title": "#### 2.3. Qué no es una nueva rama del árbol"
+    },
+    {
+      "line": 2504,
+      "title": "#### 2.4. Regla clínica para múltiples funciones y prevención de duplicidad terapéutica"
+    },
+    {
+      "line": 2537,
+      "title": "## 3. ÁRBOL MAESTRO — 11 SISTEMAS"
+    },
+    {
+      "line": 2539,
+      "title": "### 01. Sistema nervioso"
+    },
+    {
+      "line": 2684,
+      "title": "### 02. Sistema cardiovascular"
+    },
+    {
+      "line": 2780,
+      "title": "### 03. Sistema respiratorio"
+    },
+    {
+      "line": 2816,
+      "title": "### 04. Sistema digestivo"
+    },
+    {
+      "line": 2868,
+      "title": "### 05. Sistema urinario y renal"
+    },
+    {
+      "line": 2921,
+      "title": "### 06. Sistema endocrino y metabólico"
+    },
+    {
+      "line": 2983,
+      "title": "### 07. Sistema esquelético"
+    },
+    {
+      "line": 3022,
+      "title": "### 08. Sistema muscular"
+    },
+    {
+      "line": 3049,
+      "title": "### 09. Sistema linfático e inmunitario"
+    },
+    {
+      "line": 3105,
+      "title": "### 10. Sistema tegumentario"
+    },
+    {
+      "line": 3147,
+      "title": "### 11. Sistema reproductor"
+    },
+    {
+      "line": 3196,
+      "title": "## 4. Índices especializados y transversales"
+    },
+    {
+      "line": 3202,
+      "title": "### 4.1. Área maestra especializada — Oftalmología"
+    },
+    {
+      "line": 3219,
+      "title": "### 4.2. Índice clínico — Órganos de los sentidos: Oftalmología y otorrinolaringología"
+    },
+    {
+      "line": 3240,
+      "title": "### 4.2. Índice transversal — Antibacterianos"
+    },
+    {
+      "line": 3278,
+      "title": "### 4.3. Antituberculosos y antileprosos"
+    },
+    {
+      "line": 3308,
+      "title": "### 4.4. Antifúngicos"
+    },
+    {
+      "line": 3326,
+      "title": "### 4.5. Antivirales"
+    },
+    {
+      "line": 3342,
+      "title": "### 4.6. Antiparasitarios"
+    },
+    {
+      "line": 3383,
+      "title": "### 4.7. Antineoplásicos"
+    },
+    {
+      "line": 3405,
+      "title": "### 4.8. Antídotos y toxicología"
+    },
+    {
+      "line": 3421,
+      "title": "### 4.9. Sangre y productos plasmáticos"
+    },
+    {
+      "line": 3444,
+      "title": "### 4.10. Soluciones, electrolitos, gases y terapias de soporte"
+    },
+    {
+      "line": 3470,
+      "title": "### 4.11. Índice neonatal"
+    },
+    {
+      "line": 3483,
+      "title": "## 5. Evidencia peruana hospitalaria e institucional"
+    },
+    {
+      "line": 3487,
+      "title": "### 5.1. Principales fuentes institucionales consideradas"
+    },
+    {
+      "line": 3500,
+      "title": "### 5.2. Regla de integración de la evidencia hospitalaria"
+    },
+    {
+      "line": 3523,
+      "title": "### 5.3. Ejemplos de cómo se incorporan al árbol sin crear duplicados"
+    },
+    {
+      "line": 3549,
+      "title": "### 5.4. Etiquetas de procedencia para la futura base de datos"
+    },
+    {
+      "line": 3566,
+      "title": "## 6. Relaciones cruzadas críticas"
+    },
+    {
+      "line": 3598,
+      "title": "## 7. Registro de combinaciones y formulaciones"
+    },
+    {
+      "line": 3600,
+      "title": "### 7.1. Combinaciones de principios activos que sí generan una entrada independiente"
+    },
+    {
+      "line": 3626,
+      "title": "### 7.2. Formulaciones que no deben contarse como una DCI nueva"
+    },
+    {
+      "line": 3634,
+      "title": "## 8. Auditoría de calidad aplicada"
+    },
+    {
+      "line": 3657,
+      "title": "### 8.1. Criterio de cierre de Fase 1"
+    },
+    {
+      "line": 3678,
+      "title": "## 9. Exclusiones y límites"
+    },
+    {
+      "line": 3689,
+      "title": "## 10. Resultado de la revisión"
+    },
+    {
+      "line": 3707,
+      "title": "#### Estado de esta versión"
+    },
+    {
+      "line": 3715,
+      "title": "## 11. Actualización nacional y regional — Perú y Puno"
+    },
+    {
+      "line": 3717,
+      "title": "### 11.1. Qué significa “todos los medicamentos”"
+    },
+    {
+      "line": 3723,
+      "title": "#### Estados de evidencia"
+    },
+    {
+      "line": 3737,
+      "title": "### 11.2. Capa nacional — Perú"
+    },
+    {
+      "line": 3743,
+      "title": "### 11.3. Capa territorial — región Puno"
+    },
+    {
+      "line": 3749,
+      "title": "#### Establecimientos trazadores"
+    },
+    {
+      "line": 3767,
+      "title": "#### Matriz mínima por DCI e IPRESS"
+    },
+    {
+      "line": 3782,
+      "title": "## 12. Seguridad por alergias — aviso transversal"
+    },
+    {
+      "line": 3784,
+      "title": "### 12.1. Corrección de mitos"
+    },
+    {
+      "line": 3790,
+      "title": "#### Recuadro obligatorio para cada sistema"
+    },
+    {
+      "line": 3794,
+      "title": "#### Matriz de antecedentes"
+    },
+    {
+      "line": 3807,
+      "title": "#### Alertas específicas por sistema"
+    },
+    {
+      "line": 3826,
+      "title": "## 13. Formas farmacéuticas orales"
+    },
+    {
+      "line": 3845,
+      "title": "## 14. Electrolitos y soluciones"
+    },
+    {
+      "line": 3875,
+      "title": "## 15. Dispositivos para terapia intravenosa"
+    },
+    {
+      "line": 3879,
+      "title": "### 15.1. Catéter periférico — “bránula”"
+    },
+    {
+      "line": 3895,
+      "title": "### 15.2. Equipo de venoclisis"
+    },
+    {
+      "line": 3912,
+      "title": "### 15.3. Equipo con bureta o volutrol"
+    },
+    {
+      "line": 3916,
+      "title": "### 15.4. Llave de tres vías"
+    },
+    {
+      "line": 3920,
+      "title": "### 15.5. Material complementario"
+    },
+    {
+      "line": 3935,
+      "title": "## 16. Auditoría final y calificación"
+    },
+    {
+      "line": 3937,
+      "title": "### 16.1. Rúbrica"
+    },
+    {
+      "line": 3950,
+      "title": "### 16.2. Alcance del 20/20"
+    },
+    {
+      "line": 3956,
+      "title": "### 16.3. Validación previa a uso asistencial"
+    },
+    {
+      "line": 3966,
+      "title": "### References"
+    },
+    {
+      "line": 4077,
+      "title": "# CIERRE — REGLA DE IMPLEMENTACIÓN"
+    }
+  ],
+  "external_references_all_verified": false,
+  "findings": [
+    "Anexo A: citas web no resolubles y ejemplos de dosis/preparación no publicables sin verificación del producto exacto.",
+    "Anexo B: numeración 4.2 y referencias repetidas; citas cite sin correspondencia inequívoca.",
+    "Anexo B: el texto declara a la vez no usar nota global y una nota 20/20; no se adopta como aprobación clínica.",
+    "Árbol farmacológico: no todas las relaciones garantizan hoja maestra (p. ej. atropina); se conservará procedencia y pendiente, sin normalizar ambiguos como altilice.",
+    "Se preservarán 4AT, Capurro, Silverman y otras funciones existentes aunque la base las sitúe en futuro."
+  ]
+}

@@ -1,47 +1,52 @@
-# Inventario funcional que debe conservarse al trasladar
+# Inventario funcional actual — Android 0.6.0 / Base Maestra 2.1
 
-Cliente actual: **Android v0.5.0-dev**, evolución de v0.4.1, no una app nueva. Este inventario reúne la base v0.3 y las ampliaciones v0.4/v0.4.1. Las limitaciones históricas de v0.3 sobre ausencia de INTERNET/cuentas no describen el código actual. El contrato verificable de identidad está en `../CONTINUIDAD.json`.
+Este inventario describe la app existente que debe conservarse al importar/compilar. No es una propuesta para generar otra. La matriz de estados, evidencia y bloqueos completos está en [MVP_BASE_MAESTRA_v21.md](MVP_BASE_MAESTRA_v21.md).
 
-## Funciones implementadas y límites
+## Identidad
 
-| Área que no se puede omitir | Qué se conserva | Límite real |
+Kotlin/Jetpack Compose, módulo `:app`, una Activity, Prototipo B, diseño inicio 2/ficha 1. Namespace `com.idreyk.enfermeria360`, paquete debug `com.idreyk.enfermeria360.dev`, code **7**, nombre `0.6.0-dev` (debug añade `-debug`), minSdk 26, compile/target 35. Especificación editorial **2.1**, no versión Android 2.1.
+
+## Funciones conservadas y ampliadas
+
+| Área | Lo disponible | Límites que se deben preservar |
 |---|---|---|
-| Inicio, navegación y búsqueda | Prototipo B; selección inicio 2/ficha 1; módulos, búsqueda global, favoritos, perfil e historial. | Comparar el código y recursos, no reconstruir pantallas desde una captura. |
-| Diseño y accesibilidad | Paleta, tipografías y licencias; tema oscuro, texto ampliado, adaptación de tarjetas, animaciones y modos Automático/Ligero/Completo. | Reducir movimiento por accesibilidad/memoria/batería; falta medir en teléfonos reales. |
-| Farmacología | Buscar, crear, editar y eliminar fichas parciales; 30 secciones opcionales, estructura de 17 conceptos del PDF, sinónimos, fuentes y procedencia. | Seis fichas iniciales en borrador. Vacío no significa seguro; no inventar dosis ni completar clínica con IA. |
-| Revisión editorial | Estados de borrador/revisión y procedencia; editar vuelve a borrador y retira la declaración previa de revisión. | Una declaración importada no es certificación profesional. |
-| Catálogo y protocolos | Medicamentos, casos, listas de medicación segura y protocolos editables/importables. | No es una biblioteca clínica completa ni un extractor automático de PDF/Word. |
-| Importación protegida | Lee JSON 1/2/3 y exporta 3; límites; vista previa, diferencias por campo, aceptación de reemplazos, huella revisada dentro de transacción y deshacer. | Reemplaza registros, no fusiona campos. 2 MB/500 registros agregados/300 por tipo. Las omisiones no borran registros. |
-| Medicación segura | Listas de 1–100 ítems, orden, marcas, reinicio, fuentes y guardado del recorrido. | No impone un número universal de correctos ni constituye un protocolo asistencial completo. |
-| Biblioteca de tests clínicos | 44 fichas offline/40 fuentes; filtros combinados por población/área, búsqueda y procedencia; acceso a 11 funciones de práctica/registro/simulación. | Inventario inicial; 33 fichas no administran un instrumento. Permisos/versión y revisión clínica pendientes según ficha. |
-| Escala numérica y 4AT | NRS 0–10 sin respuesta predeterminada; 4AT con cuatro dominios, no valorable puntuable, estados pendientes, atribución y guardado de práctica. | Adaptaciones de práctica sin validación clínica digital; NRS no es EVA y 4AT no diagnostica. |
-| Glasgow adulto/pediátrico | Registro de componentes, estados no valorable/pendiente y suma cuando procede. | Pediátrico requiere ficha externa identificada; sin diagnóstico ni adaptación automática de descriptores adultos. |
-| EVA, Capurro A/B, Apgar, Silverman-Andersen | Simulación/registro, fórmulas o sumas y guardado según el instrumento. | Conservar límites, variantes y referencias; no añadir decisiones de gravedad, pronóstico o tratamiento. |
-| Braden y Morse | Registro de un total externo con fuente/contexto y comprobación de rango. | No reproduce ni administra cuestionarios completos; no interpreta riesgo. |
-| Cálculos | Dosis a volumen, dilución, IMC, goteo y conversores; unidades, límites, validación dimensional y registro de práctica. | Aritmética educativa; no selecciona dosis ni demuestra compatibilidad/estabilidad/reconstitución. |
-| PAE / ADPIE | Planes editables, valoración, problema libre, resultados, planificación, ejecución, evaluación y referencias. | No genera diagnósticos ni reproduce NANDA-I/NIC/NOC. |
-| Prácticas ficticias | Fichas ficticias, notas, signos, balance y once espacios de Gordon. | No convertirlos en historias clínicas reales ni cargar datos de pacientes. |
-| Tendencias | FC a partir de las últimas 20 lecturas ficticias guardadas. | Orden de registro, no intervalos temporales proporcionales; no alertas clínicas. |
-| Apuntes y cuaderno | Crear, editar, buscar, etiquetar, borrar; respaldo propio de planes/apuntes, vista previa y deshacer. | Guardado manual; no se garantiza recuperación de formularios sin guardar después de terminar el proceso. |
-| Multimedia | Copiar PDF/imagen/audio/video al almacenamiento privado; buscar, renombrar, quitar copias y abrir con visor externo mediante FileProvider. | No reproductor integrado; 20 MiB por archivo, 100 MiB y 200 archivos. Los medios no van en los JSON de respaldo. |
-| Aprendizaje | Flashcards, quiz, casos, progreso/historial y ECG ilustrativo. | Sin sensores ni certificación profesional. |
-| Persistencia | SQLite `idreyk_local.db` v2, ocho tablas y migración aditiva 1→2; preferencias y archivos privados. | No borrar/recrear tablas ni desinstalar para actualizar. Los datos personales no se sincronizan por crear una cuenta. |
-| Cliente remoto opcional | Código Supabase: solicitud/verificación OTP, sesión protegida con Android Keystore, renovación/cierre y consulta manual de publicaciones con comprobación e importación confirmada. | **Preparado, no validado de extremo a extremo.** Plantillas/envío/sesión aplazados; APK entregado todavía sin nube incorporada. |
-| Herramientas editoriales | Plantillas XLSX/JSON, conversor, esquemas, publicación controlada, SQL y pruebas SQLite/PGlite. | Conservar también estas carpetas; no desplegar SQL desde el compilador del cliente. |
+| Bienvenida/inicio | Bienvenida, perfil local, hero/imagen elegidos, búsqueda, módulos, tarjetas, favoritos/actividad; accesos nuevos a biblioteca/avance. | No rediseñar ni sustituir por HTML. No actividad/porcentajes inventados. |
+| Navegación/tema | Barra nativa, retorno, estados de edición, claro/oscuro. | Probar teclado/recortes/rotación reales; las capturas no lo demuestran. |
+| Rendimiento | Política automática/manual, animación seleccionable, respuesta táctil, movimiento reducido prioritario. | No eliminar controles al reducir movimiento; FPS/hardware pendientes. |
+| Farmacología anterior | Seis borradores iniciales y ficha con Lo esencial, ficha técnica de 17 conceptos, otros datos/fuentes; 30 campos/estructura editorial preservados. | No convertir datos parciales del PDF en monografías certificadas. |
+| Inventario nominal nuevo | 554 maestros editoriales, 737 apariciones trazadas, alias/relaciones/clase, consulta y búsqueda. | Todo IDENTIFICADO; no DCI/stock/registros confirmados. `altilice` no resuelto. |
+| Edición de contenido | Editores nativos de medicamentos, casos/listas/protocolos; fuentes, borradores y persistencia. | No publicar como revisado solo por guardarlo o importarlo. |
+| Importación/revisión | JSON de catálogo v1/v2/v3, comparación de sustituciones, avisos de campos que se vaciarían, aceptación explícita, prevención de vistas obsoletas, deshacer. | Límites/tipos/IDs/sanitización; no descartar campos desconocidos silenciosamente. |
+| Biblioteca Markdown | 20 temas, metadatos/procedencia/fecha/versión, títulos/listas/tablas/fórmulas y enlaces como referencias, filtros área/nivel. | No contenido clínico exhaustivo; revisión profesional pendiente; parser acotado, sin ejecutar HTML/cargar imágenes remotas. |
+| Búsqueda offline | Funciones anteriores más texto de temas, etiquetas/áreas, partes de dispositivos, casos, herramientas/registradores e inventario. | Se busca lo empaquetado/local, no se inventa un resultado remoto. |
+| Favoritos/historial/avance | Rutas anteriores y nuevas; lectura marcada explícitamente, respuestas persistidas, progreso versionado e historial real. | Abrir no equivale a dominar; versiones incompatibles no se acreditan automáticamente. |
+| Biblioteca de escalas | 44 fichas/40 fuentes, filtros por población/área, versiones, fuentes, derechos y límites. | No 44 calculadoras, no catálogo universal ni certificación clínica. |
+| Instrumentos existentes | GCS adulto con componentes/NV, EVA y NRS separadas, 4AT adulto, Apgar educativo, Capurro, Silverman y registros anteriores de alcance explícito. | Mantener población, pendientes, ausencia de autoinforme, variante y reglas de puntuación. No inventar caras o estímulos. |
+| Registros externos | Braden original, Morse, Norton original y RASS: total ficticio entero, confirmación adulta, fuente/versión/contexto y rango. | No cuestionarios administrados ni interpretación/riesgo; permisos/validación siguen bloqueados. |
+| Cálculos | BigDecimal: dosis-volumen, cantidad/kg, conversión dimensional, mL/h, goteo, duración, dilución aplicable, balance e IMC; historial de ejercicios. | Factor del equipo obligatorio; edad/base explícitas; unidades, límites, fórmula/redondeo; no selecciona tratamientos. |
+| Atlas | Ocho esquemas vectoriales, toque/lista de partes, función/precaución, zoom/capa/números. | Genéricos, sin calibración ni tutorial invasivo; fabricante/experto pendiente. |
+| Bioseguridad/higiene | Cinco momentos, EPP/precauciones, cronómetro lavado/fricción con pausa/reinicio/pasos y modo estático. | Tiempos de procedimiento completo; reparto/dibujo didácticos; quirúrgico depende de producto/protocolo. |
+| Listas seguras | Diez ítems institucionales INSN-SB con ámbito y veinte controles propios separados; listas configurables anteriores. | No una norma universal de veinte correctos ni autorización de administración. |
+| PAE | Siete campos anteriores y 32 complementarios: datos/fuente, Gordon, ABCDE, razonamiento/NOC/NIC propios, SOAPIE/SBAR. | Sin diagnósticos automáticos ni catálogos/códigos licenciados. Solo fichas ficticias. |
+| Apuntes/cuaderno | Crear/editar/buscar/etiquetar/borrar, revisión/deshacer, respaldo lee v1/v2 y exporta v2; Markdown importable/exportable. | Guardado manual; 200 documentos/2 MB; medios no incluidos en respaldo; SAF real pendiente. |
+| Impresión/PDF | Adaptador del framework, generador educativo, rangos/cancelación/área imprimible. | Cinco guardas ejecutadas; dos pruebas instrumentadas solo compiladas. Salida PDF y servicio reales no verificados. |
+| Prácticas ficticias | Fichas de demostración, notas, signos, balance y Gordon; tendencias de FC de las últimas 20 lecturas. | No pacientes reales, sensores ni alertas clínicas; eje por orden de registro, no tiempo proporcional. |
+| Aprendizaje/casos | Flashcards/quiz/casos/ECG ilustrativo anteriores; siete casos nuevos progresivos, 21 preguntas/retroalimentación/rúbricas y puntuación desde respuestas. | Escenarios sintéticos, revisión docente pendiente; no competencia acreditada. |
+| Multimedia | Copia privada PDF/imagen/audio/video, búsqueda/renombrado/eliminación y visor externo con FileProvider. | No reproductor integrado; límites anteriores (20 MiB/archivo, 100 MiB/200 archivos). Sin respaldo automático en JSON. |
+| Persistencia | SQLite v2/ocho tablas, migración aditiva anterior; cuaderno/notas/prácticas/favoritos/medios; progreso en meta `learning:`. | No recrear ni borrar DB; no sincronización personal automática. |
+| Cuentas/contenido remoto | Cliente Supabase anterior: OTP, sesión/renovación/cierre, Keystore y consulta/importación confirmada de publicaciones. | Preparado, no E2E verificado; plantillas/sesión aplazadas, APK local sin nube. Cuentas en Auth, no SQLite. |
+| Editorial/servidor | Plantillas, conversor XLSX/JSON, esquemas, publicación controlada, RLS/SQL y pruebas SQLite/PGLite conservados. | No reaplicar migración ni recrear proyecto, no secretos administrativos en cliente. |
 
-## Recursos y organización
+## Recursos y estructura
 
-En este punto se conservan **85 archivos de recursos empaquetados**: 81 en `app/src/main/res/` y 4 en `app/src/main/assets/`. Incluyen vectores, imagen, seis archivos de fuentes, valores/reglas XML, licencias y el contenido inicial. No son 85 fotografías. Hay 27 archivos Kotlin de producción y 11 archivos de pruebas Android; los recuentos son una foto de esta base, no una prohibición de ampliar el código con cambios aprobados.
+Conservar todas las carpetas versionadas, no solo `app/src/main`. Se añaden `EducationMath`, `MasterCatalog`, `NotebookEducation`, `ScreensMaster`, `ScreensAtlasHygiene` y `ScreensNotebookEducation`, además de rutas/integraciones en archivos existentes. El atlas usa geometría y etiquetas editables del asset; no son imágenes incrustadas con rótulos clínicos inferidos.
 
-Los archivos `Screens*.kt` separan las áreas; `Repository.kt` contiene repositorio, SQLite y ViewModel; `Models.kt`, `Pharmacology.kt`, `ScaleModels.kt`, `DoseMath.kt`, `NotebookModels.kt`, `MediaFiles.kt`, `PracticeTrends.kt`, `Performance.kt`, `ImportReview.kt`, `JsonSafety.kt` y `SessionVault.kt` conservan lógica y validaciones. No sustituirlos por pantallas estáticas.
+`research/base_maestra_v21/` conserva la entrada editorial y generadores; `app/src/main/assets/base_maestra_mvp.json` contiene la selección educativa/nominal empaquetada. No empaquetar el Markdown bruto de la Base como guía clínica. Los 44 instrumentos anteriores y sus fuentes permanecen separados.
 
-## Qué significa «todo tal como está»
+Los recuentos exactos de archivos de la entrega se obtienen del manifiesto del **commit publicado**. Hay 18 suites JVM ejecutadas y dos pruebas de instrumentación compiladas; no confundir número de archivos/clases con número de pruebas.
 
-Se trasladan **todos los archivos versionados del commit aprobado**: cliente, recursos, pruebas, documentación, plantillas, fuentes/referencias autorizadas y backend. GitHub conserva el historial; el ZIP de entrega añade un bundle recuperable. El importador no necesita copiar `.git` ni sus credenciales.
+## Qué significa trasladar todo
 
-No se incorporan contraseñas, claves administrativas, firma privada, dependencias/cachés, APK anteriores ni bases/datos del teléfono al repositorio. El ZIP de código tampoco respalda automáticamente apuntes, favoritos o medios personales.
+Importar todos los archivos del commit aprobado: código, recursos/licencias, contenido, investigación autorizada, pruebas, backend, plantillas y documentación. El ZIP de entrega incorpora un bundle recuperable del historial. No importar credenciales, firma privada, cachés, APK históricos o datos del teléfono. Una copia idéntica preserva el software, **no convierte pendientes en funciones validadas**.
 
-Una copia idéntica conserva el software existente, **no convierte pendientes en funciones terminadas**: correo real, sesión/renovación autenticada, APK conectado con firma compatible, prueba física/actualización, accesibilidad/rendimiento en equipos reales, permisos editoriales y validación clínica siguen separados. No se autoriza distribuir esta base como producto clínicamente certificado.
-
-
-Ampliación de escalas: `ClinicalCatalog.kt`, `ScreensClinicalCatalog.kt`, `research/escalas/` y `docs/ESCALAS_CLINICAS_v0.5.0.md`. No modificar instrumentos para adaptarlos a la estética; conservar versiones, límites, autoría y derechos.
+Los módulos realmente futuros están en [10_ROADMAP_Y_MODULOS_FUTUROS.md](10_ROADMAP_Y_MODULOS_FUTUROS.md). Ni la app ni el compilador deben crear pantallas falsas de módulos ausentes para aparentar finalización.

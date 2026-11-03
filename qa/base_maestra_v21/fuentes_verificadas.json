@@ -1,0 +1,737 @@
+{
+  "scope": "Files relevant to this local execution; final committed-copy parity is verified separately.",
+  "files": {
+    "app/build.gradle.kts": {
+      "sha256": "e49edef6608282beebffe9dc9d817abd16e4c861f29b5ecd76a0fdf85973e74c",
+      "bytes": 3931
+    },
+    "app/src/androidTest/java/com/idreyk/enfermeria360/EducationalPdfDeviceTests.kt": {
+      "sha256": "52a8a952ea49813c609c0c79f992fe0fde829725bba7edea468000f6cf3a2c94",
+      "bytes": 2769
+    },
+    "app/src/main/AndroidManifest.xml": {
+      "sha256": "6cd468daa9e8cf5bcab571270f7f1adca554eace240a32373eb4e59da7539aab",
+      "bytes": 1289
+    },
+    "app/src/main/assets/NunitoSans-OFL.txt": {
+      "sha256": "efbb0c9e864cef973982d9a17567e6be5c3d1759695574586f3f18c7ecca064b",
+      "bytes": 4393
+    },
+    "app/src/main/assets/Outfit-OFL.txt": {
+      "sha256": "c676351bf8576b9aba743cd5eaa8c0e7ee0d51f805d720447b4df4ddb6a2e416",
+      "bytes": 4389
+    },
+    "app/src/main/assets/base_maestra_mvp.json": {
+      "sha256": "64049c9f5570003d56101fa3c81cc935e407c4cc47f75659715627d932ed7348",
+      "bytes": 313396
+    },
+    "app/src/main/assets/contenido_inicial.json": {
+      "sha256": "7156e3d4412dfb30febdde9b97f9b88cb7de2134b570d5fcdd9e87a7080d9e92",
+      "bytes": 7943
+    },
+    "app/src/main/assets/escalas_clinicas_v1.json": {
+      "sha256": "5586806d255c5fee9ec8b726e34862dedc47461cf4cfaf16693d43fa7faf9de4",
+      "bytes": 65497
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/ClinicalCatalog.kt": {
+      "sha256": "558c6c8464fedebb4e0c107def0d27c2c3d23d8f040a29b6b750095ae1dd155a",
+      "bytes": 9122
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/Cloud.kt": {
+      "sha256": "0fc019b80e22f51a69cffb1e165f72542c054b5156e7c9c1ec5dcb8e94eb640f",
+      "bytes": 10729
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/Design.kt": {
+      "sha256": "3b6cdf12167157ecdc1e05d4122cfd5e63690ee1d68532273122315fca3c6fd0",
+      "bytes": 21026
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/DoseMath.kt": {
+      "sha256": "1daa80774fa350ba1f46c229b81ccdf3e442344f3621d7aceef9646b074b0c7b",
+      "bytes": 3368
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/EducationMath.kt": {
+      "sha256": "873dad31ef532440ab1983245e7607237266287babae65b0488b667c3a0a379f",
+      "bytes": 10372
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/ImportReview.kt": {
+      "sha256": "528e7dd7fd08535c098fb10c98eb28651b34a30cdbbd43b7d4aa2d170428934f",
+      "bytes": 4479
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/JsonSafety.kt": {
+      "sha256": "65ff19a5076565ac88825aeeb65775e2e77a8ecc59b211f3554815243d3c33f8",
+      "bytes": 1303
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/MainActivity.kt": {
+      "sha256": "7903ffd6e11936d3528cee7b518378c8e265c3a37a4be0072bb89df822acbbb3",
+      "bytes": 21293
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/MasterCatalog.kt": {
+      "sha256": "3dfcc9828cb0a8e9dfc7f6ca31803eccb6c06b18a33903991227f461e5d5f91e",
+      "bytes": 14577
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/MediaFiles.kt": {
+      "sha256": "8e50a5b167b6c1e11c6a3bc884d6209cd725421c4bc7c0f7a5f2d716647c50b3",
+      "bytes": 4170
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/Models.kt": {
+      "sha256": "cbdd6d981175a9f3ec7fcf5e05710dacb1f44e0924d10cdc3e6c22208d1d6624",
+      "bytes": 19111
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/NotebookEducation.kt": {
+      "sha256": "938b7cf2da57309239a2a61c7c304355a0c7d0cb89629c56de9a957c63e5b3c2",
+      "bytes": 11486
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/NotebookModels.kt": {
+      "sha256": "63d17fc19a4806b3826c5ebc33963a51f8182548aae7fd4df8a2d5eed824626f",
+      "bytes": 7592
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/Performance.kt": {
+      "sha256": "632e3f629d4c4d04d058cac3d69544d845543438e8bc23922c0dca81d5518644",
+      "bytes": 5938
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/Pharmacology.kt": {
+      "sha256": "9db2814f9fa1563c343d10f83f89c8d7d7d28e0b830b27f9d765f55ad199359a",
+      "bytes": 2822
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/PracticeTrends.kt": {
+      "sha256": "9abeed4de33753980f7e607add92e88c400c4d791f007ba25bbb3202a5595875",
+      "bytes": 903
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/Repository.kt": {
+      "sha256": "796cf1f712fd14d4776cdfb1c4dc6acd688e9a3115f0f99e4d1092ddbedd7ae8",
+      "bytes": 44279
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/ScaleModels.kt": {
+      "sha256": "e9e1657faa2616df6288a63c978b55500ac629a4120eb1d9ad7bf0691a0281fc",
+      "bytes": 7257
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/ScreensAtlasHygiene.kt": {
+      "sha256": "b3015ffb680c692296e0c8ced71a3326e667a292b704b91785d77a39b8a19687",
+      "bytes": 16656
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/ScreensAuthoring.kt": {
+      "sha256": "07fd454517ae5af121ea9ffd0e63a0fc275ac9a01dd718ae5dcda0c348d264de",
+      "bytes": 17037
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/ScreensClinicalCatalog.kt": {
+      "sha256": "d7dfca310450ee6dd18ee597de7e69398ba198f4c09eda5c0daac402c01f19a8",
+      "bytes": 19069
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/ScreensCloud.kt": {
+      "sha256": "0d8e396a41c3ec261958e9835c18d069075483e8b875685a40500996914fa21f",
+      "bytes": 5950
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/ScreensDose.kt": {
+      "sha256": "d4bffc85caab44bb159a34dba4a22e8f411065f87092ad14e3f24771a16d9541",
+      "bytes": 9636
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/ScreensImport.kt": {
+      "sha256": "5c2becca330b0876ee7c1b7c67a76a543c5bf2368a08446b41e0f50ff38eb8ba",
+      "bytes": 6733
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/ScreensLibrary.kt": {
+      "sha256": "181801c7573ea2ea851513146d4f89356f643046de4b2f1a38bea5b938d149d4",
+      "bytes": 49323
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/ScreensMaster.kt": {
+      "sha256": "e86c9f769f9a40b039b86314860309cd1d61bbb9c273f3af0e3650e51efd9ec6",
+      "bytes": 19859
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/ScreensMedia.kt": {
+      "sha256": "4c2f57c9cdd40c3ae0df7e70f87376b1a48292d927d4c6e246bef91ac0527f96",
+      "bytes": 5917
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/ScreensNotebook.kt": {
+      "sha256": "fd604a9d03eb5a567512ec0d72796f9c435ef20782b83dad175b59edce39a6af",
+      "bytes": 16553
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/ScreensNotebookEducation.kt": {
+      "sha256": "f44e23e16fb14899676221717a941f476c51412efa129102f3915bd692c3b3bb",
+      "bytes": 2692
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/ScreensPractice.kt": {
+      "sha256": "26996121f669393b26699c00723ec4643f5447496884a54236a08e9f002eb3e4",
+      "bytes": 54368
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/ScreensScales.kt": {
+      "sha256": "de99c528f38e2298938a158d62b9a26e6465a3480d8355cf01f4f8b650008bd1",
+      "bytes": 18361
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/SessionVault.kt": {
+      "sha256": "5c6727deda94ecfd3951af0136b919f0ded73eb7f99e052d2d42c75cad86b59c",
+      "bytes": 3477
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/UiPolish.kt": {
+      "sha256": "76f2e3a4dddd433c4c5269a55afd461fa0ef01b4110fb4ae21c94d0bbd7f011f",
+      "bytes": 6012
+    },
+    "app/src/main/res/drawable/ic_accessibility.xml": {
+      "sha256": "2f25fb6511b2e1a468bd0b77346b4a809e138e2a1298bbd6015caedc46feaf9a",
+      "bytes": 609
+    },
+    "app/src/main/res/drawable/ic_activity.xml": {
+      "sha256": "07c3bf0b416e19dd56a910b367b26ef8f7d8b851dd1a380e13365b3781141cf8",
+      "bytes": 372
+    },
+    "app/src/main/res/drawable/ic_android.xml": {
+      "sha256": "efa445bda025de43ca225ad5d8a51251bd8ecfadc24d07a97756d847b65f8fae",
+      "bytes": 617
+    },
+    "app/src/main/res/drawable/ic_arrow_left.xml": {
+      "sha256": "6e845b02ceef1e421447c0d30e00481ef38ba83e80eac91cd1512cf822177efc",
+      "bytes": 370
+    },
+    "app/src/main/res/drawable/ic_arrow_right.xml": {
+      "sha256": "d863c44942e580b16473d7a21114d8e8c1d6cfdd898dbc4a2151113c53575591",
+      "bytes": 371
+    },
+    "app/src/main/res/drawable/ic_arrows.xml": {
+      "sha256": "417420dec6f0c72113926e648e5ee9761531a98b65f4f0ce8ac105c6c114c4c0",
+      "bytes": 390
+    },
+    "app/src/main/res/drawable/ic_battery.xml": {
+      "sha256": "bedad88294d8a8b312e751dc45f89fafd69eb598a11e102370d91beef7327abc",
+      "bytes": 910
+    },
+    "app/src/main/res/drawable/ic_bed.xml": {
+      "sha256": "309aeb16531e1ef8d31ec9195c13ee2042ebd68d77f43a9b35cfff0e6dc242a9",
+      "bytes": 407
+    },
+    "app/src/main/res/drawable/ic_bell.xml": {
+      "sha256": "6fd328d18dfc5ad11e01c6444803ff9a894a641c2e5b9e208fdd978d9751e2df",
+      "bytes": 405
+    },
+    "app/src/main/res/drawable/ic_book.xml": {
+      "sha256": "4ce9e7ee2f8e37d00b97671d9423e8ad45a13f59b924bcd97179ff12af001985",
+      "bytes": 691
+    },
+    "app/src/main/res/drawable/ic_brand.xml": {
+      "sha256": "5b9771bf28fe621ad6c60aef397961cfc6dda5d0e361c72c951d27c1487cae1e",
+      "bytes": 778
+    },
+    "app/src/main/res/drawable/ic_calculator.xml": {
+      "sha256": "68691c4bfe842382b8d95833041b6949fad3435b70f85d0882d723943f85d75a",
+      "bytes": 953
+    },
+    "app/src/main/res/drawable/ic_cards.xml": {
+      "sha256": "e4c63748a5fd2284e859673bbc04b6bf60159cda99662bf507adf9946013a9eb",
+      "bytes": 672
+    },
+    "app/src/main/res/drawable/ic_chart.xml": {
+      "sha256": "5ad959115b1ce3a75fc929cef5b50980eceea5a74cd4c40cd79ead0a82bb51a7",
+      "bytes": 377
+    },
+    "app/src/main/res/drawable/ic_check.xml": {
+      "sha256": "97a7f2413710094c13288d8b501c0d0c1a868b96bea53ae94105ce87477ea289",
+      "bytes": 364
+    },
+    "app/src/main/res/drawable/ic_check_circle.xml": {
+      "sha256": "7715283da58fe8a4319fc2db3e94e26f47421823d706e0148c92552aabc38ab0",
+      "bytes": 591
+    },
+    "app/src/main/res/drawable/ic_chevron_down.xml": {
+      "sha256": "6c18349c6a19288a2692ab378ff1625d27e9bc55e7f5b7e60125f610723d9f17",
+      "bytes": 362
+    },
+    "app/src/main/res/drawable/ic_chevron_left.xml": {
+      "sha256": "394d0d60a6c5eb50973f882d5702fa89bb4690b47c152f0c6d0506db2ac9a389",
+      "bytes": 363
+    },
+    "app/src/main/res/drawable/ic_chevron_right.xml": {
+      "sha256": "812cfb6ebcc6e344108bd73acc5d18e4d8426eba6e267aa4b47683af4f472895",
+      "bytes": 362
+    },
+    "app/src/main/res/drawable/ic_clipboard.xml": {
+      "sha256": "a333a54127541f446e4b06981a0ce71dded3341081c2f286d70ce5ee8a2a9732",
+      "bytes": 919
+    },
+    "app/src/main/res/drawable/ic_clipboard_check.xml": {
+      "sha256": "154a36da75a5f8bc5f66f3d26e594805e8b98000677a885015f685699203a67f",
+      "bytes": 911
+    },
+    "app/src/main/res/drawable/ic_clock.xml": {
+      "sha256": "ccac7f7b1d84f0a3deaafb8bd166f85d3f765f5fbd8977bef7d92767a2a7adbf",
+      "bytes": 589
+    },
+    "app/src/main/res/drawable/ic_close.xml": {
+      "sha256": "7a9b5b41b008197a369b05b100d728c8b3379327290e9f18b398fda69f8062c2",
+      "bytes": 370
+    },
+    "app/src/main/res/drawable/ic_cloud_off.xml": {
+      "sha256": "00330a0ab5719db2613085c4ee7053f206fbc007b63eb0622261b40b9726b59b",
+      "bytes": 417
+    },
+    "app/src/main/res/drawable/ic_download.xml": {
+      "sha256": "8e1ebbe8aa02d22beeea5d0aa7f74bca7bdf1a0c66b2195bc5c0421ff150380b",
+      "bytes": 384
+    },
+    "app/src/main/res/drawable/ic_droplet.xml": {
+      "sha256": "f83f0a26482ef873d8a349d8097549c23795d750025477f52d02d391c6167160",
+      "bytes": 592
+    },
+    "app/src/main/res/drawable/ic_edit.xml": {
+      "sha256": "db03f4a4262517590b207971002e72647d2f0ce5538f40526d01c5492683e7c8",
+      "bytes": 411
+    },
+    "app/src/main/res/drawable/ic_file.xml": {
+      "sha256": "049b8018c9a8e88fb5ede4493a392105e6d4bdcf5bbd2ddc961c065caa8fc94f",
+      "bytes": 613
+    },
+    "app/src/main/res/drawable/ic_flask.xml": {
+      "sha256": "1e5140c1d7f6a4ce8666d1c98b47a2c0e390ca998aea015522e24252c69e7aec",
+      "bytes": 609
+    },
+    "app/src/main/res/drawable/ic_folder.xml": {
+      "sha256": "d9e821f080e33f47ff375fe7f468f758e5b7c210c917d7e37e85ea5e34665bfa",
+      "bytes": 608
+    },
+    "app/src/main/res/drawable/ic_graduation.xml": {
+      "sha256": "7156797a9bc6c1c90c710cc593726e707367ee96b78f823207b55666b4610f95",
+      "bytes": 405
+    },
+    "app/src/main/res/drawable/ic_grid.xml": {
+      "sha256": "b6fd44c061cf94670da9d4c6efeeccb0793d9a1cce4379a8b6a4722ac3a264a6",
+      "bytes": 1290
+    },
+    "app/src/main/res/drawable/ic_hand.xml": {
+      "sha256": "6233df2ac702f72318fa149091d0a5ba5470c70fea0a8a584dd8777b54fbc82f",
+      "bytes": 461
+    },
+    "app/src/main/res/drawable/ic_heart.xml": {
+      "sha256": "3b8c582342fe676c37ccf461f84c7dc3d1df20e4e019719dadb45cb9807e8c47",
+      "bytes": 452
+    },
+    "app/src/main/res/drawable/ic_heart_pulse.xml": {
+      "sha256": "fc05fcd8a02318d26c733586e362d17419127155dccfd563b1e4c78632c83ef9",
+      "bytes": 653
+    },
+    "app/src/main/res/drawable/ic_history.xml": {
+      "sha256": "fd7616c83b3492797ff6678bad05ab2bf35e41b4147810279e1f8698010301b7",
+      "bytes": 387
+    },
+    "app/src/main/res/drawable/ic_home.xml": {
+      "sha256": "0a8d349310c0aa92832078ea11893c73df2e1441b92835a1caf3d86f81b10cbf",
+      "bytes": 407
+    },
+    "app/src/main/res/drawable/ic_info.xml": {
+      "sha256": "598e7d74a1210cb095d30b7973f49e4762a6869a8fc457436f6fbbed4e693115",
+      "bytes": 595
+    },
+    "app/src/main/res/drawable/ic_iv.xml": {
+      "sha256": "a6810b86e9f4a545947c69b7187995c21577513dde205d21efb3fca2401646aa",
+      "bytes": 838
+    },
+    "app/src/main/res/drawable/ic_launcher_legacy.xml": {
+      "sha256": "d8c0016989ee6969986bfe8f647305be98ee182e136de6e7b457fc6e3c439961",
+      "bytes": 676
+    },
+    "app/src/main/res/drawable/ic_layers.xml": {
+      "sha256": "905cdca2e3168c2536e2cd03cc2725aa4f4b8971d132f33c99441478b15b8683",
+      "bytes": 405
+    },
+    "app/src/main/res/drawable/ic_lock.xml": {
+      "sha256": "98a6eaaa32650a97d6071f00801a470fa6ab905e4d61e5e56f0c4d341ef2204d",
+      "bytes": 662
+    },
+    "app/src/main/res/drawable/ic_log_out.xml": {
+      "sha256": "456929da5fea7c2e5569b5405c9fb3ee3d6bad4a99261d7ba680e948c06855d5",
+      "bytes": 382
+    },
+    "app/src/main/res/drawable/ic_message.xml": {
+      "sha256": "fb92284b496a20b2ae470a598e82e4aa591bab9ea6fe561f1f0d2887fa462974",
+      "bytes": 600
+    },
+    "app/src/main/res/drawable/ic_minus.xml": {
+      "sha256": "1ea147f249c5d84eb48d78dade35cbaded5a9e4067baddcc5ce687e62afd68a9",
+      "bytes": 358
+    },
+    "app/src/main/res/drawable/ic_moon.xml": {
+      "sha256": "cf9555a38f61899c6d62e26cb13067683f9f66a6b038a64abd57e378d86ea3de",
+      "bytes": 396
+    },
+    "app/src/main/res/drawable/ic_paperclip.xml": {
+      "sha256": "5e916ad66c53a9ca3721fbcd9ad5b980c4d9a9c69c587d25eeab271c018b73dc",
+      "bytes": 417
+    },
+    "app/src/main/res/drawable/ic_pause.xml": {
+      "sha256": "d0085e3331ad5e8c6679291e4ffc94650a66f0acd65c74309c617b8258aa344a",
+      "bytes": 363
+    },
+    "app/src/main/res/drawable/ic_pill.xml": {
+      "sha256": "71719deb96d1f039a31cdd01d2d3edc93e8becdfcfa36620bd782bd9ac939e05",
+      "bytes": 593
+    },
+    "app/src/main/res/drawable/ic_play.xml": {
+      "sha256": "f6c9d1c2d930e83bc28d34962d2bc6fd1f39b4f7d89dbc8bd43f5d03780f1d09",
+      "bytes": 367
+    },
+    "app/src/main/res/drawable/ic_plus.xml": {
+      "sha256": "cf2c2cae8a3ed3e350dc1e6782c619c760e5a16c4587957e70b6722e83149f97",
+      "bytes": 366
+    },
+    "app/src/main/res/drawable/ic_rotate.xml": {
+      "sha256": "b2d0a98e17caf9c44ef26a33a6781ff3cf552d238a3c0c415e09a3a537b8a89a",
+      "bytes": 593
+    },
+    "app/src/main/res/drawable/ic_search.xml": {
+      "sha256": "db0682e60b70679900806a0625e4586560ad30c3bd97fcdb44ac0851977f1fd1",
+      "bytes": 588
+    },
+    "app/src/main/res/drawable/ic_settings.xml": {
+      "sha256": "1e673094bb3a81bc3470032f61eec431cfe6a0dc23f297b4df77ba777ca4dca3",
+      "bytes": 676
+    },
+    "app/src/main/res/drawable/ic_shield_check.xml": {
+      "sha256": "5d1255305f01d792e4a7851be99ded6f109d062231d4cd8ca5ea47399794c5bf",
+      "bytes": 581
+    },
+    "app/src/main/res/drawable/ic_signal.xml": {
+      "sha256": "4772d1b189041114f98348f1c5ec4f159c56eb3c2659cd0035df10359f17bcc4",
+      "bytes": 376
+    },
+    "app/src/main/res/drawable/ic_sparkles.xml": {
+      "sha256": "1241d931cbc6b0871b854ff1217f1dae2e1eef4205d9e929631414447dda29fe",
+      "bytes": 440
+    },
+    "app/src/main/res/drawable/ic_star.xml": {
+      "sha256": "cbc51215bbca6831b8e054cc32afc1c2166bd42d18bf5aaa78c4896bf5b5c076",
+      "bytes": 427
+    },
+    "app/src/main/res/drawable/ic_stethoscope.xml": {
+      "sha256": "1727211b5c7ccb16c1eeb526a78af6ace96bfc72d377aa4ee095c7eef26e9bd1",
+      "bytes": 630
+    },
+    "app/src/main/res/drawable/ic_stopwatch.xml": {
+      "sha256": "ae56412aaa90e1e2b635fe72d755474f344adc4a94dbabfac4b30065873802c4",
+      "bytes": 606
+    },
+    "app/src/main/res/drawable/ic_sun.xml": {
+      "sha256": "f36cc8f0cd71e0abe7359f15f13c17ea370d89b01f15f94ca1880fc09a39c528",
+      "bytes": 670
+    },
+    "app/src/main/res/drawable/ic_target.xml": {
+      "sha256": "4033ce053ef6fcbf748008b25f574656745718e90dfa3d1eb2576bad80154a9f",
+      "bytes": 857
+    },
+    "app/src/main/res/drawable/ic_thermometer.xml": {
+      "sha256": "d486d2ff26a039e2b3a7894d6fc6c3899ec63733a162fe46546ff5952dd6821f",
+      "bytes": 798
+    },
+    "app/src/main/res/drawable/ic_trophy.xml": {
+      "sha256": "d2374ab5e8b49f2fcc0d29394b6c952115ad4e9e5096c4c89b444069acfaad78",
+      "bytes": 452
+    },
+    "app/src/main/res/drawable/ic_user.xml": {
+      "sha256": "c091bf6bebc95aa2b005b0a2008b19d89ba967164cdde0db48b5dd5c1a6b6e12",
+      "bytes": 616
+    },
+    "app/src/main/res/drawable/ic_users.xml": {
+      "sha256": "b1dc026b05c93a00828e0db4dc0ac4760b2e2359792eee8e21ab549c5956e677",
+      "bytes": 843
+    },
+    "app/src/main/res/drawable/ic_wifi.xml": {
+      "sha256": "11adcdff240bdc5cc82235c6cfafa9267eb8cdf9c9c3afcce5af047210bceb16",
+      "bytes": 643
+    },
+    "app/src/main/res/drawable/ic_wifi_off.xml": {
+      "sha256": "44c72fe225f596a9011ad97cf8ff10df0f89a5dfce65f8298dc5133e6ea84c40",
+      "bytes": 692
+    },
+    "app/src/main/res/drawable/ic_wind.xml": {
+      "sha256": "745f35bd8813565a5fe038672d0b5e1fc0cdc96b30a5553642ac1652a876c7f7",
+      "bytes": 414
+    },
+    "app/src/main/res/drawable-nodpi/nurse.webp": {
+      "sha256": "9b111ed495215454cc7ac48d4b8cbd11ef39f19977df48b5633b65db567c2e9a",
+      "bytes": 51946
+    },
+    "app/src/main/res/font/nunito_sans_400.ttf": {
+      "sha256": "4980c2ededda04ef9b130254909d47abd3f2d208888e9d816ad7a4178861d9d7",
+      "bytes": 33148
+    },
+    "app/src/main/res/font/nunito_sans_600.ttf": {
+      "sha256": "9df41d54b47b07d8d2bcb1b4f193f9fd59f8dde08d464ee787e6a545c8313cd5",
+      "bytes": 33212
+    },
+    "app/src/main/res/font/nunito_sans_800.ttf": {
+      "sha256": "2a473d451b32e92682822e335b386e25247087d08a0e1e985782771bb6eeebbc",
+      "bytes": 33172
+    },
+    "app/src/main/res/font/outfit_400.ttf": {
+      "sha256": "14a9339d9f62d3b19eab84a370a3e91fb4a275335ccf4be3d0c3a2c40b45a017",
+      "bytes": 33128
+    },
+    "app/src/main/res/font/outfit_600.ttf": {
+      "sha256": "ce6d0a0ac475c55b0e776331a421d318b328859daa9b0ee610f52fc08b6e5d84",
+      "bytes": 33240
+    },
+    "app/src/main/res/font/outfit_800.ttf": {
+      "sha256": "9d4428537f98335a8ad52f4486293515082d210652c73b89ebe6173700f99b4f",
+      "bytes": 33152
+    },
+    "app/src/main/res/values/colors.xml": {
+      "sha256": "5fd12c4e6071fdd55c54f45079b425e4dc97578311df15fb158968a96bd5b8c4",
+      "bytes": 66
+    },
+    "app/src/main/res/values/strings.xml": {
+      "sha256": "af2ed2401bc8a084a5689f7c1e3df93dec047308557d5540d05153164f0af65b",
+      "bytes": 67
+    },
+    "app/src/main/res/values/themes.xml": {
+      "sha256": "e34df66c925adc42b48e0208d4f19129a648c4dab471260d167cb8c301c3a670",
+      "bytes": 468
+    },
+    "app/src/main/res/xml/data_extraction_rules.xml": {
+      "sha256": "7a4e6defdcb7e21a8cdb4bb4cbdbbef15bcd4c6bae923372fbfa07f0642ac29a",
+      "bytes": 1091
+    },
+    "app/src/main/res/xml/file_paths.xml": {
+      "sha256": "1c9bfd5a8ca782b654649c372aed0ca5612ed10f7179f7692d89ef5b33bb0dda",
+      "bytes": 177
+    },
+    "app/src/test/java/android/print/RecordingPrintCallbacks.java": {
+      "sha256": "4a725859a236b2a52387ba9fb9937964db8d1e5b9aa5a23ca850ec9c0ba2e65b",
+      "bytes": 1139
+    },
+    "app/src/test/java/com/idreyk/enfermeria360/ClinicalCatalogTests.kt": {
+      "sha256": "0cd156962e41868f32a0bb2df489be6ba5df9d4868614da1d8e509c5c8a8e5dd",
+      "bytes": 7334
+    },
+    "app/src/test/java/com/idreyk/enfermeria360/ClinicalInterfaceTests.kt": {
+      "sha256": "e569a5f0658e82f5a3c3def78f2c74ca55b31a29c6082c27519c718b3753d178",
+      "bytes": 7611
+    },
+    "app/src/test/java/com/idreyk/enfermeria360/CoreTests.kt": {
+      "sha256": "8eb5d293be29c5b6f86053fb11114873b555ec390757e1304f01a79e256d692e",
+      "bytes": 12283
+    },
+    "app/src/test/java/com/idreyk/enfermeria360/EducationMathTests.kt": {
+      "sha256": "75ad7ea407c1f779188e090320845167fd74ef9c244a26b7cc7fd7dfe042cad7",
+      "bytes": 7718
+    },
+    "app/src/test/java/com/idreyk/enfermeria360/EvolutionTests.kt": {
+      "sha256": "14279cc41e9808a453af9982ae4fbedb631485d00e05862cb4917c8ed08858f3",
+      "bytes": 13223
+    },
+    "app/src/test/java/com/idreyk/enfermeria360/InterfaceTests.kt": {
+      "sha256": "791ec3475d8ff162d84bb088dc84da8ef8d5f11e14c11384c7a10571c1a6a97a",
+      "bytes": 2438
+    },
+    "app/src/test/java/com/idreyk/enfermeria360/MasterCatalogTests.kt": {
+      "sha256": "47216fce6a9a1e6fda01dc036f50ab615ce905dfe7631222c7bec92ec8f70178",
+      "bytes": 14229
+    },
+    "app/src/test/java/com/idreyk/enfermeria360/MasterInterfaceTests.kt": {
+      "sha256": "15e097712ec87e05565051dfe8e1474d65bd007b4cf0500bd56e1682afe1c135",
+      "bytes": 10035
+    },
+    "app/src/test/java/com/idreyk/enfermeria360/ModuleInterfaceTests.kt": {
+      "sha256": "3cd73e0dddabc7cbd7c0b1440765fb102ac4362c8098d976366a216b5d5af07b",
+      "bytes": 9793
+    },
+    "app/src/test/java/com/idreyk/enfermeria360/ModuleRepositoryTests.kt": {
+      "sha256": "991d0b56d76de45569718d787b159677d247b25a00cd740a9bd4f1d4caa49648",
+      "bytes": 12721
+    },
+    "app/src/test/java/com/idreyk/enfermeria360/NativeRenderTests.kt": {
+      "sha256": "49bee89828b76089d97800581f8ca5a5012d67deeaed3ab139cf9a8713b75073",
+      "bytes": 7459
+    },
+    "app/src/test/java/com/idreyk/enfermeria360/NotebookPrintTests.kt": {
+      "sha256": "c8726f54264acd05909bc06708362e7ec8abe2665dcee24f39b2eb414ee52e6d",
+      "bytes": 4589
+    },
+    "app/src/test/java/com/idreyk/enfermeria360/NursingModuleTests.kt": {
+      "sha256": "baf71ad02f541fa1afe4ec0bfedaf099db5043528f02449669fd59310c1c889a",
+      "bytes": 14865
+    },
+    "app/src/test/java/com/idreyk/enfermeria360/PolishInterfaceTests.kt": {
+      "sha256": "e493cb96c6ba02441a40851f2a6acae29f36b8ea1fd7b128a6e6e6f087072931",
+      "bytes": 5145
+    },
+    "app/src/test/java/com/idreyk/enfermeria360/PolishTests.kt": {
+      "sha256": "42196a56217b6abad90d0766a733fb078cfa0fe4da7d697238c89a32e8dbe0f7",
+      "bytes": 7620
+    },
+    "app/src/test/java/com/idreyk/enfermeria360/RepositoryTests.kt": {
+      "sha256": "593bb4fd1406eb6ae30eae0765b74bf88d64a7b96950b7182557a739f554a42a",
+      "bytes": 10650
+    },
+    "app/src/test/resources/contenido_inicial.json": {
+      "sha256": "7156e3d4412dfb30febdde9b97f9b88cb7de2134b570d5fcdd9e87a7080d9e92",
+      "bytes": 7943
+    },
+    "backend/tests/rls.mjs": {
+      "sha256": "e6ac3529b0ea33c62f5edc3c133d99c1fc16cdcdccc1c9b3593a3bf62f9389d2",
+      "bytes": 6628
+    },
+    "backend/tests/test_cloud_probe.py": {
+      "sha256": "6a2939dc32965abecc6b9a4902658734b7881d771096693edbf95399efc60d65",
+      "bytes": 5709
+    },
+    "backend/tests/test_publication.py": {
+      "sha256": "538a04207c76e17de7a1bc4a72da628707b6a1109299053e6abd72f3a780e78e",
+      "bytes": 3389
+    },
+    "build.gradle.kts": {
+      "sha256": "61cd8e15a65a3ded440013250aa5c2bbc875158d0cf2db2e8fc5185ec3c69105",
+      "bytes": 217
+    },
+    "content-tools/GUIA_CONTENIDOS.md": {
+      "sha256": "65b7a70503ed0b2da3eea39b695f9cb1aaa2d85a22fadd2eb9b2df17fb79607d",
+      "bytes": 6643
+    },
+    "content-tools/GUIA_FARMACOLOGIA_v3.md": {
+      "sha256": "9eb2fcae17da18fa034ac91b24e870d2e73b1e6d538c8a848b8407b1f521611a",
+      "bytes": 4793
+    },
+    "content-tools/Plantilla_contenidos_iDreyK_360.xlsx": {
+      "sha256": "6698bb329c467f120eeb80623c595e8315e20b24ead4ff4ac96612164e760289",
+      "bytes": 20044
+    },
+    "content-tools/Plantilla_farmacos_v3.xlsx": {
+      "sha256": "ccf43131e40d75dfce6260d1cd0cf98a744c4dcceb64c40d9242021a3ad5badc",
+      "bytes": 12941
+    },
+    "content-tools/convertir_plantilla.py": {
+      "sha256": "7686662c9de87e998a886b514f3b841e09c61f3d03b422d2be1ea5bfafd74a17",
+      "bytes": 9266
+    },
+    "content-tools/crear_plantilla_v3.py": {
+      "sha256": "302d07ef9572cbe4f7cb25f61efe28cd3be5463fe7d52bd89820e5cfcb577f12",
+      "bytes": 5501
+    },
+    "content-tools/create_schema.py": {
+      "sha256": "7cdf2fd7acafe45b51e3cb118b4bee146286dc12cae24e0e04d94c8fe2584ec2",
+      "bytes": 5625
+    },
+    "content-tools/create_templates.py": {
+      "sha256": "bd624723ace8fed3e3cf35271d3e0907ee91742d8adf6eae1488f663a9724417",
+      "bytes": 9385
+    },
+    "content-tools/ejemplo_desde_excel.json": {
+      "sha256": "be8bc8f4f45141ded69c8d91699fa2c975e58676800dd84df4ecd4e1bb24a174",
+      "bytes": 1177
+    },
+    "content-tools/ejemplo_importacion.json": {
+      "sha256": "7b7dd2ecc4c2d6b3125bc6cfc3d4e12ce9141e1e4264c2f5193ed998a7d4fa36",
+      "bytes": 1367
+    },
+    "content-tools/ejemplo_protocolo_v2.json": {
+      "sha256": "6e4588b3191919bd3bbe855c10a9244d16a15ad34a5464602a6c97422efa992e",
+      "bytes": 855
+    },
+    "content-tools/esquema_contenido_v1.schema.json": {
+      "sha256": "2e1d743148b641c694b52ed60ef7b3f0e65bb2dd042ff4a9fbf2e4fa779bbb14",
+      "bytes": 14802
+    },
+    "content-tools/esquema_contenido_v2.schema.json": {
+      "sha256": "43f31e4249c2d1dcefa98a1dbbb88ddaa4fa12796e79e23a92b797e555eb2e66",
+      "bytes": 21271
+    },
+    "content-tools/esquema_contenido_v3.schema.json": {
+      "sha256": "facac22048cbf23cd482d7fac6480109591e8e3aeda7639a311dba6915a72459",
+      "bytes": 22930
+    },
+    "content-tools/plantilla_farmaco_v3.json": {
+      "sha256": "663e372a2a53ae710dc69626e1581ef115546fcc46d1b28a27bd55687052771a",
+      "bytes": 1520
+    },
+    "content-tools/plantilla_paracetamol.json": {
+      "sha256": "f35c4fea57bc28fa3cf72bdd369b70f1f5a2edd47a59418bf8104ee47a1f02be",
+      "bytes": 1165
+    },
+    "content-tools/requirements.txt": {
+      "sha256": "3a67a0021cab435e53f97b06028292bb709f50bc9b19327f632f145e40b99154",
+      "bytes": 35
+    },
+    "content-tools/test_converter.py": {
+      "sha256": "61de898670d61d451122db045adff39ab0265ef15a24f7a916271f498809ccb6",
+      "bytes": 5322
+    },
+    "gradle/wrapper/gradle-wrapper.jar": {
+      "sha256": "498495120a03b9a6ab5d155f5de3c8f0d986a449153702fb80fc80e134484f17",
+      "bytes": 43504
+    },
+    "gradle/wrapper/gradle-wrapper.properties": {
+      "sha256": "d9adcece8bf8243f073d2a6e69f05e1be3fb8bb5463eddf830b0f3f13f915a83",
+      "bytes": 339
+    },
+    "gradle.properties": {
+      "sha256": "a2feb07f7299f62f3cf490449799750c8710cfc12b058e7624d2c8925926a6a0",
+      "bytes": 255
+    },
+    "gradlew": {
+      "sha256": "a3648413b47ef77af21d5ebc36c687c7d103aaef3e17f33de7d4f080a6f300a3",
+      "bytes": 8762
+    },
+    "gradlew.bat": {
+      "sha256": "57931b17dd228e5c24dac90e815d0bf82477e831a4618dfab4136f5446b42a9f",
+      "bytes": 2966
+    },
+    "research/base_maestra_v21/BASE_EDITORIAL_NO_CLINICA.md": {
+      "sha256": "f0b9107128659d9b225d44424b3d7ea4bdd366ab29ba2b81627d7c380a5908ee",
+      "bytes": 215307
+    },
+    "research/base_maestra_v21/INSTRUCCION.md": {
+      "sha256": "d3f961befe4e9af891735ed492e452b66aee3e7ee1e0b00392d3834cde317a89",
+      "bytes": 2925
+    },
+    "research/base_maestra_v21/README.md": {
+      "sha256": "f9a009d906d689478bc53a768d304320c9d2ddbba466f0edbfbd48ade1a80443",
+      "bytes": 3327
+    },
+    "research/base_maestra_v21/compilar_mvp.py": {
+      "sha256": "3a1974e2beabcc341ff01301da51ced648b16915cb271f7559393f77732ec13b",
+      "bytes": 15198
+    },
+    "research/base_maestra_v21/contenido.json": {
+      "sha256": "2f2ef46f9e263fc2e0ab892227310e189a8920dce26d419aef54206a14046b5f",
+      "bytes": 87855
+    },
+    "research/base_maestra_v21/crear_contenido.py": {
+      "sha256": "3dfaf5f9148f02048249a78a99b4c32eea1164d46950c0b9d913d363272e96e9",
+      "bytes": 44749
+    },
+    "research/base_maestra_v21/trazabilidad_inventario.json": {
+      "sha256": "250e845556fdc05ad53387314290f70cad5bb8a8493a4da20bb0a28c5bc7de33",
+      "bytes": 122582
+    },
+    "scripts/comprobar.sh": {
+      "sha256": "894c6f84b1b34e5ae070188f0fef6812b216093def6a51ebf0c3ed4f26f53827",
+      "bytes": 2478
+    },
+    "scripts/tests/test_base_maestra.py": {
+      "sha256": "e7467c66c2ac353944e80e1773e18f1a6e69f9ae5583e0af930089afe252d3a1",
+      "bytes": 7870
+    },
+    "scripts/tests/test_catalogo_clinico.py": {
+      "sha256": "b72ca5192890face4206bd07c317238d29f80adc93354f3f6966da97d9c9cdcb",
+      "bytes": 4883
+    },
+    "scripts/tests/test_continuidad.py": {
+      "sha256": "d1ba4a5eca54a10a236a26f5b29a5649d5a59c154828ae066dbcc464bb2f3192",
+      "bytes": 4650
+    },
+    "scripts/tests/test_diagnostico_ci.py": {
+      "sha256": "775e314f483cd79e8c3ee4bd4c680f58b9b0468936ed254b766f4885fbeb05ff",
+      "bytes": 2943
+    },
+    "scripts/tests/test_guardas.py": {
+      "sha256": "9a1deb013da83e68d3050c68a49806ec5007232936d3053a93d512d07efbc5b6",
+      "bytes": 1764
+    },
+    "scripts/tests/test_resumen_ci.py": {
+      "sha256": "3bfaccb554b4152276b20f6a0d5036e8c46b4919649d2f836169cb971b1545d7",
+      "bytes": 3494
+    },
+    "scripts/tests/test_traslado.py": {
+      "sha256": "a5899dad4f3fffb41fd48d667a956987c263520779bcddb04b8e93e52b1df63a",
+      "bytes": 10603
+    },
+    "settings.gradle.kts": {
+      "sha256": "9a36dc8133f799deb4d944d73069c588c4d28bb28d4fdfb5973af69f43074c40",
+      "bytes": 271
+    }
+  }
+}

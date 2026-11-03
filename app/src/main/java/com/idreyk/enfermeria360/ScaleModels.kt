@@ -180,6 +180,8 @@ object NursingScales {
             when (kind) {
                 "braden" -> 6..23
                 "morse" -> 0..125
+                "norton" -> 5..20
+                "rass" -> -5..4
                 else -> throw IllegalArgumentException("Registro de escala no reconocido.")
             }
         require(value in range) {

@@ -99,6 +99,7 @@ fun PlanEditorScreen(owner: String, id: String, vm: AppViewModel, back: () -> Un
     var discard by remember { mutableStateOf(false) }
     var delete by remember { mutableStateOf(false) }
     val fields = JSONObject(raw)
+    var extraSection by rememberSaveable(id) { mutableIntStateOf(0) }
     val dirty = title != (original?.title ?: "") || raw != initial
     val leave: () -> Unit = { if (dirty) discard = true else back() }
     BackHandler(dirty && !vm.busy) { discard = true }
@@ -131,6 +132,17 @@ fun PlanEditorScreen(owner: String, id: String, vm: AppViewModel, back: () -> Un
                 multi = true,
             )
         }
+
+        Section("Valoración y comunicación estructuradas")
+        Notice("Datos solo ficticios. ABCDE no dirige una reanimación. NANDA-I/NOC/NIC: texto propio, sin taxonomías licenciadas ni sugerencias automáticas.", true)
+        val sections = EXTRA_PLAN_SECTIONS.keys.toList()
+        ChoiceField("Sección complementaria", sections.mapIndexed { i, name -> name to i }, extraSection, showPoints = false) { extraSection = it }
+        EXTRA_PLAN_SECTIONS.getValue(sections[extraSection]).forEach { (key, label) ->
+            Input(label, fields.optString(key), {
+                raw = JSONObject(raw).put(key, it.take(4000)).toString()
+                error = ""
+            }, multi = true)
+        }
         if (error.isNotBlank()) Notice(error, true)
         Primary(
             "Guardar plan PAE",
@@ -160,6 +172,9 @@ fun PlanEditorScreen(owner: String, id: String, vm: AppViewModel, back: () -> Un
             style = MaterialTheme.typography.bodySmall,
             color = LocalPalette.current.muted,
         )
+        NotebookExportActions(vm, title.isNotBlank()) {
+            NotebookRecord(id, "plan", owner, title, JSONObject(raw), System.currentTimeMillis())
+        }
         if (original != null) Secondary("Eliminar este plan", { delete = true }, !vm.busy)
     }
     if (discard) DiscardDialog(back, { discard = false })
@@ -202,6 +217,7 @@ fun StudyNotesScreen(vm: AppViewModel, nav: (String) -> Unit, back: () -> Unit) 
             !vm.busy,
             R.drawable.ic_plus,
         )
+        MarkdownImportAction(vm)
         SearchBox(search, { search = it }, "Buscar título, texto o etiqueta…")
         notes.forEach { record ->
             AppCard(Modifier.fillMaxWidth(), onClick = { nav("editar-apunte/${record.id}") }) {
@@ -249,6 +265,7 @@ fun StudyNoteEditor(id: String, vm: AppViewModel, back: () -> Unit) {
         rememberSaveable(id, original?.modified) {
             mutableStateOf(original?.fields?.optString("etiquetas").orEmpty())
         }
+    var previewMarkdown by rememberSaveable(id) { mutableStateOf(false) }
     var discard by remember { mutableStateOf(false) }
     var delete by remember { mutableStateOf(false) }
     val dirty =
@@ -283,6 +300,14 @@ fun StudyNoteEditor(id: String, vm: AppViewModel, back: () -> Unit) {
             },
             title.isNotBlank() && !vm.busy,
         )
+        Secondary(if (previewMarkdown) "Ocultar lectura Markdown" else "Vista de lectura Markdown", { previewMarkdown = !previewMarkdown })
+        if (previewMarkdown) {
+            Badge("APUNTE PERSONAL · SIN REVISIÓN CLÍNICA", Gold)
+            StudyMarkdownView(body)
+        }
+        NotebookExportActions(vm, title.isNotBlank()) {
+            NotebookRecord(id, "note", "", title, JSONObject().put("contenido", body).put("etiquetas", tags), System.currentTimeMillis())
+        }
         if (original != null) Secondary("Eliminar apunte", { delete = true }, !vm.busy)
     }
     if (discard) DiscardDialog(back, { discard = false })
@@ -341,7 +366,7 @@ fun NotebookHub(
             vm.data.hasNotebookUndo && !vm.busy,
         )
         Text(
-            "Límites: 200 documentos y 2 MB de texto. La importación combina los documentos y reemplaza solo IDs coincidentes tras tu confirmación.",
+            "Esquema 2: lee respaldos 1 y 2, conserva campos nuevos. Límites: 200 documentos y 2 MB de texto. La importación combina los documentos y reemplaza solo IDs coincidentes tras tu confirmación.",
             style = MaterialTheme.typography.bodySmall,
             color = LocalPalette.current.muted,
         )

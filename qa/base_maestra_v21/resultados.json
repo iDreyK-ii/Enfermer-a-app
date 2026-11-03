@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-03",
+  "collected_utc": "2026-11-03T10:54:52.306250+00:00",
+  "command": "IDREYK_EXPECTED_CERT_SHA256=<public expected fingerprint> QA_LOG_DIR=.cache/base-v21/qa-final bash scripts/comprobar.sh --todo",
+  "source_fingerprints": "fuentes_verificadas.json",
+  "baseline_commit": "cb05f1f0b27d6f1d50ae651df89bd0fab2c95867",
+  "execution": "Local working tree; see final delivery manifest for its exact committed revision.",
+  "python": {
+    "tests": 111,
+    "groups": [
+      75,
+      15,
+      21
+    ],
+    "failures": 0
+  },
+  "sqlite": {
+    "checks": 5,
+    "failures": 0
+  },
+  "pglite": {
+    "checks": 17,
+    "failures": 0,
+    "real_service": false
+  },
+  "android": {
+    "tests": 235,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 235,
+    "suites": 18
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 26
+  },
+  "apk": {
+    "apk": "app-debug.apk",
+    "bytes": 9735653,
+    "version": "0.6.0-dev-debug",
+    "version_code": 7,
+    "min_sdk": 26,
+    "target_sdk": 35,
+    "sha256": "8e879d6b38cab021bce6016e7bf841b73f1802ce574ed1e5a58e0b65c76afa3a",
+    "certificate_sha256": "d6874c68417eefb1b1b902bf82ba4ce7d8734e47877e12bd1733eb498f0e522b",
+    "certificate_matches_expected": true,
+    "permissions": [
+      "android.permission.INTERNET",
+      "com.idreyk.enfermeria360.dev.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "physical_installation_tested": false
+  },
+  "master_inventory": {
+    "inventory": 554,
+    "occurrences": 737,
+    "topics": 20,
+    "devices": 8,
+    "cases": 7,
+    "bytes": 313396
+  },
+  "instrumentation": {
+    "tests_compiled": 2,
+    "executed": 0,
+    "pdf_output_verified": false,
+    "apk_file": "Pruebas_PDF_iDreyK_360_v0.6.0.apk",
+    "apk_sha256": "38b5c8b0541df13b121c8f172d9f4e3dbec01e7fd797468c134afcae808fba92"
+  },
+  "captures": {
+    "count": 10,
+    "framework_api": 35,
+    "method": "Robolectric 4.14.1 NATIVE / production Android content View.draw(Canvas(Bitmap))",
+    "physical_device": false,
+    "apk_emulator": false,
+    "motion_reduced": true
+  },
+  "limits": {
+    "clinical_validation": false,
+    "google_import_verified": false,
+    "physical_installation_tested": false,
+    "real_auth_session_tested": false,
+    "pdf_output_verified": false,
+    "print_service_tested": false
+  }
+}

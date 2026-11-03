@@ -1,0 +1,62 @@
+{
+  "base": "cb05f1f0b27d6f1d50ae651df89bd0fab2c95867",
+  "entrega": "base-maestra-v21-mvp",
+  "archivos_anteriores_conservados": 299,
+  "eliminados": [],
+  "archivos_criticos_sin_cambios": {
+    "app/src/main/java/com/idreyk/enfermeria360/Design.kt": {
+      "sha256": "3b6cdf12167157ecdc1e05d4122cfd5e63690ee1d68532273122315fca3c6fd0",
+      "identico": true
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/Performance.kt": {
+      "sha256": "632e3f629d4c4d04d058cac3d69544d845543438e8bc23922c0dca81d5518644",
+      "identico": true
+    },
+    "app/src/main/java/com/idreyk/enfermeria360/ClinicalCatalog.kt": {
+      "sha256": "558c6c8464fedebb4e0c107def0d27c2c3d23d8f040a29b6b750095ae1dd155a",
+      "identico": true
+    },
+    "app/src/main/assets/escalas_clinicas_v1.json": {
+      "sha256": "5586806d255c5fee9ec8b726e34862dedc47461cf4cfaf16693d43fa7faf9de4",
+      "identico": true
+    },
+    "research/escalas/catalogo_fuente.json": {
+      "sha256": "5586806d255c5fee9ec8b726e34862dedc47461cf4cfaf16693d43fa7faf9de4",
+      "identico": true
+    }
+  },
+  "carpetas_preservadas": {
+    "app/src/main/res/": {
+      "archivos": 81,
+      "modificados": [],
+      "identicos": true
+    },
+    "design/": {
+      "archivos": 11,
+      "modificados": [],
+      "identicos": true
+    },
+    "content-tools/": {
+      "archivos": 18,
+      "modificados": [],
+      "identicos": true
+    },
+    "database/": {
+      "archivos": 2,
+      "modificados": [],
+      "identicos": true
+    },
+    "backend/": {
+      "archivos": 12,
+      "modificados": [],
+      "identicos": true
+    },
+    "supabase/": {
+      "archivos": 2,
+      "modificados": [],
+      "identicos": true
+    }
+  },
+  "nota": "Inicio y otras pantallas ampliados; conservar archivos no implica igualdad de todos sus bytes. No se afirma paridad visual física.",
+  "paridad_visual_fisica": false
+}
