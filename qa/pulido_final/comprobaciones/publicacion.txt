@@ -1,0 +1,28 @@
+test_configuration_repr_omits_key (test_cloud_probe.CloudProbeTests.test_configuration_repr_omits_key) ... ok
+test_denial_must_be_permission_error_not_missing_table (test_cloud_probe.CloudProbeTests.test_denial_must_be_permission_error_not_missing_table) ... ok
+test_exact_public_configuration (test_cloud_probe.CloudProbeTests.test_exact_public_configuration) ... ok
+test_happy_probe_pipeline_does_not_claim_login (test_cloud_probe.CloudProbeTests.test_happy_probe_pipeline_does_not_claim_login) ... ok
+test_migration_matches_the_previously_tested_schema (test_cloud_probe.CloudProbeTests.test_migration_matches_the_previously_tested_schema) ... ok
+test_only_publishable_key_is_accepted (test_cloud_probe.CloudProbeTests.test_only_publishable_key_is_accepted) ... ok
+test_redirect_is_not_followed (test_cloud_probe.CloudProbeTests.test_redirect_is_not_followed) ... ok
+test_ref_origin_and_https_are_bound (test_cloud_probe.CloudProbeTests.test_ref_origin_and_https_are_bound) ... ok
+test_response_is_bounded_and_request_is_get (test_cloud_probe.CloudProbeTests.test_response_is_bounded_and_request_is_get) ... ok
+test_schema_error_is_explicit (test_cloud_probe.CloudProbeTests.test_schema_error_is_explicit) ... ok
+test_transport_failure_does_not_disclose_exception_text (test_cloud_probe.CloudProbeTests.test_transport_failure_does_not_disclose_exception_text) ... ok
+test_without_explicit_flag_there_is_no_network (test_cloud_probe.CloudProbeTests.test_without_explicit_flag_there_is_no_network) ... ok
+test_draft_cannot_be_published (test_publication.PublicationTests.test_draft_cannot_be_published) ... ok
+test_hash_is_of_original_utf8_not_reserialized_json (test_publication.PublicationTests.test_hash_is_of_original_utf8_not_reserialized_json) ... ok
+test_ids_are_unique_within_each_collection (test_publication.PublicationTests.test_ids_are_unique_within_each_collection) ... ok
+test_network_is_not_part_of_validation (test_publication.PublicationTests.test_network_is_not_part_of_validation) ... ok
+test_partial_fields_remain_legal_without_claiming_clinical_readiness (test_publication.PublicationTests.test_partial_fields_remain_legal_without_claiming_clinical_readiness) ... ok
+test_private_backup_or_wrong_channel_cannot_be_published (test_publication.PublicationTests.test_private_backup_or_wrong_channel_cannot_be_published) ... ok
+test_references_cannot_include_credentials (test_publication.PublicationTests.test_references_cannot_include_credentials) ... ok
+test_unknown_fields_and_wrong_types_are_rejected (test_publication.PublicationTests.test_unknown_fields_and_wrong_types_are_rejected) ... ok
+test_workbook_v3_converts_without_dropping_any_new_field (test_publication.PublicationTests.test_workbook_v3_converts_without_dropping_any_new_field) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.485s
+
+OK
+Conversión estructural completada: 1 registros → /tmp/tmp1u3uocnx/catalogo.json
+No se han verificado exactitud clínica, vigencia ni permisos. Revisa el archivo antes de importarlo.

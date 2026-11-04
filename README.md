@@ -1,10 +1,12 @@
-# Enfermería iDreyK 360 — Android nativo v0.9.0-dev (borrador local)
+# Enfermería iDreyK 360 — Android nativo v0.9.1-dev (borrador local)
+
+> **Pulido 0.9.1:** selección del filtro tocando toda la fila, limpieza de filtros incluso cuando quedan resultados, textos singular/plural y retirada de 19 recursos Android sin referencias (recuperables del historial). Sin cambios de base local ni de reglas clínicas. Alcance y pruebas de esta revisión: `qa/pulido_final/RESULTADOS.md`. El APK 0.9.0 conservado no contiene este pulido.
 
 > **Escalas kawaii / 0.9:** siete ilustraciones decorativas generadas por IA y reutilizadas por área, pausa y movimiento reducido, doce claves educativas con fuentes, filtro por tipo de acceso y enlaces seguros externos. Catálogo: 45 fichas, 43 fuentes y 13 accesos a práctica/simulación/registro; Norton y RASS solo transcriben ejemplos adultos. La revisión bibliográfica es parcial y no hay aprobación clínica. Ver `research/escalas_kawaii/REVISION_2026-11-03.md` y `qa/escalas_kawaii/RESULTADOS.md`. Sin publicación autorizada.
 
 > **Antecedente 0.8 del atlas kawaii:** 24 PNG RGBA originales de 2000 × 1250, 24 fichas/JSON y autoevaluaciones con progreso local; movimiento suave con reducción y pausa. Son ilustraciones estilizadas, no fotografías ni material aprobado profesionalmente. No hay autorización para publicar. Ver [auditoría histórica 0.8](docs/AUDITORIA_ATLAS_KAWAII.md), [QA histórica 0.8](qa/atlas_kawaii/RESULTADOS.md) y `research/atlas_kawaii/README.md`. La última revisión pública sigue siendo `b463c580` / 0.6.0; su CI no prueba esta versión.
 
-**QA actual 0.9 local:** 268/268 pruebas Android/JVM, 129 Python, 5 SQLite y 17 PGLite; lint 0 errores/26 advertencias. En emulador API28 se ensayó actualización 0.8 → 0.9 con datos sintéticos, filtro, pausa y 2/2 pruebas PDF. No equivale a teléfono físico, validación clínica ni publicación. [Detalles](qa/escalas_kawaii/RESULTADOS.md).
+**QA histórica 0.9 local (no atribuible automáticamente a 0.9.1):** 268/268 pruebas Android/JVM, 129 Python, 5 SQLite y 17 PGLite; lint 0 errores/26 advertencias. En emulador API28 se ensayó actualización 0.8 → 0.9 con datos sintéticos, filtro, pausa y 2/2 pruebas PDF. No equivale a teléfono físico, validación clínica ni publicación. [Detalles](qa/escalas_kawaii/RESULTADOS.md).
 
 **QA histórica 0.8 local (no transferible automáticamente a 0.9):** 255/255 Android/JVM, 121 Python, 5 SQLite y 17 PGLite; lint 0 errores/26 advertencias. En emulador API28: actualización sin desinstalar, conservación de datos sintéticos y 2/2 PDF instrumentados. Las capturas preliminares y finales se identifican por separado. No se probaron teléfono físico, sesión OTP ni importación Google.
 
@@ -131,7 +133,7 @@ Desde v0.4 el APK declara INTERNET; sin configuración no realiza solicitudes. L
 
 ## 6. Comprobaciones y límites
 
-Ver [qa/RESULTADOS_v0.4.1.md](qa/RESULTADOS_v0.4.1.md): pruebas Android/JVM y Compose simulado, conversor/publicación, PostgreSQL/RLS y espejo SQLite. Los resultados de v0.3/v0.4/v0.4.1 permanecen como evidencia histórica separada; para la revisión local Android 0.9.0 consultar qa/escalas_kawaii/RESULTADOS.md. qa/atlas_kawaii, qa/atlas_v22 y qa/RESULTADOS_v0.6.0.md son históricos.
+Ver [qa/RESULTADOS_v0.4.1.md](qa/RESULTADOS_v0.4.1.md): pruebas Android/JVM y Compose simulado, conversor/publicación, PostgreSQL/RLS y espejo SQLite. Los resultados de v0.3/v0.4/v0.4.1 permanecen como evidencia histórica separada; para la revisión local Android 0.9.1 consultar qa/pulido_final/RESULTADOS.md. qa/escalas_kawaii, qa/atlas_kawaii, qa/atlas_v22 y qa/RESULTADOS_v0.6.0.md son históricos.
 
 El servidor real tiene la primera validación de esquema y API documentada en [qa/SUPABASE_REAL_2026-11-02.md](qa/SUPABASE_REAL_2026-11-02.md). No se verificaron correo/sesión reales, instalación física, hardware Keystore, rendimiento medido en gamas distintas ni validación clínica. El diseño exportado es una **maqueta**, no una captura del APK. Las pruebas de reglas y aritmética no certifican atención clínica.
 

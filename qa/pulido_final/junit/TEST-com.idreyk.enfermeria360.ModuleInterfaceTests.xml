@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.ModuleInterfaceTests" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-11-04T00:58:07" hostname="e2b.local" time="11.079">
+  <properties/>
+  <testcase name="capurroZeroSelectionsAreCompleteAndCanBeSaved" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="6.599"/>
+  <testcase name="apgarChangingMinuteClearsPriorComponents" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="0.626"/>
+  <testcase name="nativeStudyNoteAndProtocolEditorsAreReachableAndSave" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="1.149"/>
+  <testcase name="performanceChoicePersistsWithoutOverridingReducedMotion" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="0.214"/>
+  <testcase name="nativePaeEditorStoresStructuredFieldsInsteadOfFourCheckboxes" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="0.497"/>
+  <testcase name="cloudScreenNeverPretendsToBeConnectedWithoutConfiguration" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="0.222"/>
+  <testcase name="nativeMedicationEditorActuallySavesLocalContent" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="0.703"/>
+  <testcase name="doseRouteCalculatesAndInvalidatesStaleResultWhenEdited" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="0.358"/>
+  <testcase name="multimediaRouteHasRealImportEntryPointAndExplicitExternalViewer" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="0.182"/>
+  <testcase name="patientRoutesKeepTheModulesTabSelected" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="0.278"/>
+  <testcase name="backingOutOfAMedicationDraftKeepsTextUntilDiscardIsExplicit" classname="com.idreyk.enfermeria360.ModuleInterfaceTests" time="0.249"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

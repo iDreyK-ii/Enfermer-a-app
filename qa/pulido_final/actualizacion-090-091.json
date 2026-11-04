@@ -1,0 +1,190 @@
+{
+  "ambito": "Comparación de las copias proporcionadas; procedencia y momento se documentan aparte. Usar solo datos sintéticos.",
+  "antes": {
+    "integridad": "ok",
+    "version": 2,
+    "tablas": {
+      "content": {
+        "filas": 8,
+        "columnas": [
+          "kind",
+          "id",
+          "name",
+          "payload"
+        ],
+        "sha256_filas": "b7b693bf4f30a0ae4cdce68968525da4430852a07c0ef9de1a590a9279c70165"
+      },
+      "packages": {
+        "filas": 1,
+        "columnas": [
+          "id",
+          "version",
+          "title",
+          "imported"
+        ],
+        "sha256_filas": "567cb3135b803f1268aeaaa7b4224f0ab70040d2c4654d6b5cb6de3c3a50905d"
+      },
+      "favorites": {
+        "filas": 1,
+        "columnas": [
+          "key"
+        ],
+        "sha256_filas": "c6d8a743615552fe155978500560090d54c9801291d674f8a3a38e47a917c110"
+      },
+      "notes": {
+        "filas": 1,
+        "columnas": [
+          "id",
+          "patient_id",
+          "text",
+          "created"
+        ],
+        "sha256_filas": "1bbf694cc59ff2214cab90f72b209a880092f59a5c7ec13547820e2cf96a6a66"
+      },
+      "practice": {
+        "filas": 1,
+        "columnas": [
+          "id",
+          "type",
+          "summary",
+          "created"
+        ],
+        "sha256_filas": "3000763717ab62d30ed4af120c2c82892cba94ee36e0b20d129f7062af4bcc7b"
+      },
+      "meta": {
+        "filas": 3,
+        "columnas": [
+          "key",
+          "value"
+        ],
+        "sha256_filas": "b765161adf6f0cf832b9636ebd9c2dea0f198cf6574135cb4d6acef646fc8471"
+      },
+      "notebooks": {
+        "filas": 1,
+        "columnas": [
+          "id",
+          "kind",
+          "owner",
+          "title",
+          "payload",
+          "modified"
+        ],
+        "sha256_filas": "fe111bf3fc85fe4f2c63cdeaa9899ec0d6602a0fae0736dc5daf6efd9b02c591"
+      },
+      "media": {
+        "filas": 1,
+        "columnas": [
+          "id",
+          "title",
+          "mime",
+          "filename",
+          "bytes",
+          "created"
+        ],
+        "sha256_filas": "3f843c5820880b639e1ec4f69a9e7689d29698175a427f89892431caead4cdaa"
+      }
+    }
+  },
+  "despues": {
+    "integridad": "ok",
+    "version": 2,
+    "tablas": {
+      "content": {
+        "filas": 8,
+        "columnas": [
+          "kind",
+          "id",
+          "name",
+          "payload"
+        ],
+        "sha256_filas": "b7b693bf4f30a0ae4cdce68968525da4430852a07c0ef9de1a590a9279c70165"
+      },
+      "packages": {
+        "filas": 1,
+        "columnas": [
+          "id",
+          "version",
+          "title",
+          "imported"
+        ],
+        "sha256_filas": "567cb3135b803f1268aeaaa7b4224f0ab70040d2c4654d6b5cb6de3c3a50905d"
+      },
+      "favorites": {
+        "filas": 1,
+        "columnas": [
+          "key"
+        ],
+        "sha256_filas": "c6d8a743615552fe155978500560090d54c9801291d674f8a3a38e47a917c110"
+      },
+      "notes": {
+        "filas": 1,
+        "columnas": [
+          "id",
+          "patient_id",
+          "text",
+          "created"
+        ],
+        "sha256_filas": "1bbf694cc59ff2214cab90f72b209a880092f59a5c7ec13547820e2cf96a6a66"
+      },
+      "practice": {
+        "filas": 1,
+        "columnas": [
+          "id",
+          "type",
+          "summary",
+          "created"
+        ],
+        "sha256_filas": "3000763717ab62d30ed4af120c2c82892cba94ee36e0b20d129f7062af4bcc7b"
+      },
+      "meta": {
+        "filas": 3,
+        "columnas": [
+          "key",
+          "value"
+        ],
+        "sha256_filas": "b765161adf6f0cf832b9636ebd9c2dea0f198cf6574135cb4d6acef646fc8471"
+      },
+      "notebooks": {
+        "filas": 1,
+        "columnas": [
+          "id",
+          "kind",
+          "owner",
+          "title",
+          "payload",
+          "modified"
+        ],
+        "sha256_filas": "fe111bf3fc85fe4f2c63cdeaa9899ec0d6602a0fae0736dc5daf6efd9b02c591"
+      },
+      "media": {
+        "filas": 1,
+        "columnas": [
+          "id",
+          "title",
+          "mime",
+          "filename",
+          "bytes",
+          "created"
+        ],
+        "sha256_filas": "3f843c5820880b639e1ec4f69a9e7689d29698175a427f89892431caead4cdaa"
+      }
+    }
+  },
+  "sha256_archivos": {
+    "preferencias": [
+      "d607ced518b3176826b11224a5488ee7300c390253357935916202ac3d921872",
+      "d607ced518b3176826b11224a5488ee7300c390253357935916202ac3d921872"
+    ],
+    "archivo_multimedia": [
+      "f035daab7a4bbacd5f4931b01718404454484a6eddc30b8b7633c328727cc233",
+      "f035daab7a4bbacd5f4931b01718404454484a6eddc30b8b7633c328727cc233"
+    ]
+  },
+  "comprobaciones": {
+    "sqlite_integridad_ambas": true,
+    "sqlite_version_conservada": true,
+    "ocho_tablas_y_filas_conservadas": true,
+    "preferencias_sinteticas_iguales": true,
+    "archivo_multimedia_sintetico_igual": true
+  }
+}

@@ -1,0 +1,367 @@
+{
+  "cantidad": 60,
+  "identicos": 60,
+  "apk_sha256": "6875858d0b4ef83ea75899f63773b3ed7c6dcfceabdf290686a3741de39d04e5",
+  "archivos": [
+    {
+      "archivo": "NunitoSans-OFL.txt",
+      "sha256": "efbb0c9e864cef973982d9a17567e6be5c3d1759695574586f3f18c7ecca064b",
+      "bytes": 4393,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "Outfit-OFL.txt",
+      "sha256": "c676351bf8576b9aba743cd5eaa8c0e7ee0d51f805d720447b4df4ddb6a2e416",
+      "bytes": 4389,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_aguja_hipodermica.json",
+      "sha256": "97fa4502da1e95ee9f5a3cca8cc4c57923bd88f621e958e83cd3710103aa26a4",
+      "bytes": 7617,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_aguja_hipodermica.png",
+      "sha256": "1bbb5cb73c11d6e924f46b05f0fc96bbac933cb0edff8c91259676fa6dee6917",
+      "bytes": 84574,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_bolsa_valvula_mascarilla.json",
+      "sha256": "b2923d4194b89b98f8db21124aa35308016447a4e20df06eb18c1458ee1ada6a",
+      "bytes": 8337,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_bolsa_valvula_mascarilla.png",
+      "sha256": "bf48a90f783c6d1d45dbfd5fc302330dc6c0c82f921bed74c61ffcf940161a0e",
+      "bytes": 116647,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_bomba_jeringa.json",
+      "sha256": "b44433e3e2f5908a36d96db8ff0687033047b9650849f1ba5325eb26357e79af",
+      "bytes": 8460,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_bomba_jeringa.png",
+      "sha256": "4bb4daa32463eb36c25aa8aea368694ccd5f97f5d86c618eedc77cc685b110dc",
+      "bytes": 88655,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_bomba_volumetrica.json",
+      "sha256": "71d15d7647e9f70d121a18d9b165c23061c6e21ea944d7d1d61edc320ece48f3",
+      "bytes": 7841,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_bomba_volumetrica.png",
+      "sha256": "0b933a05e7a611382ea529b85fb182f8d73a31a5a537b52c92a3cbf29b2e4858",
+      "bytes": 77871,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_branula_cateter_periferico.json",
+      "sha256": "7f507404e3201fbe9feee54460f60fda197ca31dbf7aaf963ae2df4cd7f5dd62",
+      "bytes": 7255,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_branula_cateter_periferico.png",
+      "sha256": "5be2c162a8aabe7617b0ce8d4f7365736dc7ab9e6ce62dc4a2c4db2e96b482da",
+      "bytes": 96293,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_canula_nasal.json",
+      "sha256": "066da338b10cf32ea0786fdbeba6378cfd0ba7691263c2a5c1e89768e1ce2ca5",
+      "bytes": 6876,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_canula_nasal.png",
+      "sha256": "8af8e864a04a22106bc18a1b26551755d31cc74efaee35de9c999f92159806a3",
+      "bytes": 126969,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_canula_traqueostomia_con_cuff.json",
+      "sha256": "5e888cdab2a78a706eb8830b6a060c4e937ce92ffd59984b17716fc8b3276771",
+      "bytes": 9460,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_canula_traqueostomia_con_cuff.png",
+      "sha256": "61b8deaf78caecfe308247b9a42243a3dff6e959617b69e40fab6f9812b886c8",
+      "bytes": 122320,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_cateter_venoso_central_triple_lumen.json",
+      "sha256": "c0e82d4f9c2443ea9c9e2d2c07bf050df3f2ded4d540411ca247b4c061492952",
+      "bytes": 8118,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_cateter_venoso_central_triple_lumen.png",
+      "sha256": "7677ae6d075344c33ed07c5e5ff56cc0e3d66e3a18f720e459c94ac909ea47d8",
+      "bytes": 133335,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_desfibrilador_monitor.json",
+      "sha256": "f5d9b0a63ebd80e1e7070e75ecaef43af59031f276984eb1e9d6d6e1e6d40cb6",
+      "bytes": 8219,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_desfibrilador_monitor.png",
+      "sha256": "ff2e29fcca6d1a0f942b254417b481b9ec858f67533e59395f06cfe9b8cd56c6",
+      "bytes": 126319,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_equipo_bureta_volutrol.json",
+      "sha256": "67b8f6ecfa9ca7d7dfd44f38f557be2ca0fe0c9b85f8f03f1a613a48b0e4be0d",
+      "bytes": 8481,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_equipo_bureta_volutrol.png",
+      "sha256": "e9c02fa458d726526b2764854ce62aeb0b0cc8dd499357547821a9f480004f88",
+      "bytes": 72146,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_equipo_venoclisis.json",
+      "sha256": "9c2caed979e88bd74ebe7b898196da905c17d6d6fa845d16716db25455c27f30",
+      "bytes": 10049,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_equipo_venoclisis.png",
+      "sha256": "f267ff1dbab4943331702bc89d85400bfeb0a8fe949644e83ee1f6b0978c0994",
+      "bytes": 118097,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_estetoscopio_adulto.json",
+      "sha256": "fc18bd3c81c09cded9c3535c79584a61053a06ca28530304da828cf0388da7c5",
+      "bytes": 8609,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_estetoscopio_adulto.png",
+      "sha256": "b5a724e56a5726ef348c00e8884a42d77b6382036e5a22fab35ce61deb41d205",
+      "bytes": 155132,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_jeringa_luer_lock.json",
+      "sha256": "ea8650c77349a7a0aa6c54ebcae30f1dbf90f16eaddfb1370d245e826e82f211",
+      "bytes": 9251,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_jeringa_luer_lock.png",
+      "sha256": "feeedace9564ebce78176df0fd10cdb5d490cf4e78f79909eae5c048aa2a6623",
+      "bytes": 146744,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_llave_tres_vias.json",
+      "sha256": "34ec6aaf7ad0c708bcfc78cf466cfc14458e947e953ec09d6395cc957954eaa0",
+      "bytes": 6202,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_llave_tres_vias.png",
+      "sha256": "a99a7531682d5c40fb7082b691548bcaf9a73363c475b73834505f06270c5349",
+      "bytes": 133852,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_mascarilla_no_reinhalacion.json",
+      "sha256": "3db421c5f90906a4b755cc9e72f87402d6ce746f613d1abd068e29f960282599",
+      "bytes": 7680,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_mascarilla_no_reinhalacion.png",
+      "sha256": "aa909e5a08007236cf707c23f1ae4acd58ca0f3596ae1475fd511064d328609b",
+      "bytes": 171325,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_mascarilla_simple_oxigeno.json",
+      "sha256": "2746310b7e049ba2dbb1e7fdd4daefe3c603ab7fa3954a5dfc29bf335ec405d0",
+      "bytes": 7538,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_mascarilla_simple_oxigeno.png",
+      "sha256": "3fb476ae044a13e74b6694ac0e480e3756639fcd0460589c02603f4bdd26597c",
+      "bytes": 145645,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_mascarilla_venturi.json",
+      "sha256": "e96125886c914165a2c0f51d12fb6834e0a7f2b3545e4e713132b4d9b97ef980",
+      "bytes": 7895,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_mascarilla_venturi.png",
+      "sha256": "a4a27d5997e125e9b2b8516afc68d7a6d882334412f24d4266fecfdb532cef96",
+      "bytes": 146984,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_monitor_multiparametro.json",
+      "sha256": "56e37e589c60d4deacaec54bfc2e85786396ded59b0e5de61576c97508c2674c",
+      "bytes": 7412,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_monitor_multiparametro.png",
+      "sha256": "fc3b1876e509ae0d19dc07daeccc5c32dc8730391b99c687249e61d8fc6db48c",
+      "bytes": 77289,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_pulsioximetro_dedo.json",
+      "sha256": "4569bfaa893ec27cb7dbf57f6faf5fca155d7392a63f691a42e32d3d1bd4b876",
+      "bytes": 5551,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_pulsioximetro_dedo.png",
+      "sha256": "4d6445e30f9bb9bbdc879a9a65c6a7385179997ccf0082a1d7a795e0afc307ad",
+      "bytes": 108757,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_sonda_foley_dos_vias.json",
+      "sha256": "db22be22f4c17736dda23ae3b436422287a99b86ccb23034a79d7b0d40b1b598",
+      "bytes": 7623,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_sonda_foley_dos_vias.png",
+      "sha256": "bcb2d142eaf88112cf3943b2d5961b930219324a7ea9af15173ba304d4fb745e",
+      "bytes": 102664,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_sonda_foley_tres_vias.json",
+      "sha256": "bef1eab943a14573a0bc1a981d442d4df9e778efbe3b67bf709149731920fbc3",
+      "bytes": 8274,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_sonda_foley_tres_vias.png",
+      "sha256": "92e89a161d81b97942cbda74fc0b1362ed8ff7da30270b09c1c1fe48fda22a27",
+      "bytes": 124514,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_sonda_nasogastrica.json",
+      "sha256": "9910d56f9412b3711aba181b923b17cb83837566b98243e5fee3dbb7dc0c2508",
+      "bytes": 7030,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_sonda_nasogastrica.png",
+      "sha256": "67c90c5b224b983744fdb669e0714f503fe1388a0ae8b05d0ba9dc1ab19a9aa6",
+      "bytes": 145056,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_tensiometro_aneroide.json",
+      "sha256": "998f7872459fce0fcf72184d8f47a44d2f8b1658e7eeb1351330a6bc837c63a1",
+      "bytes": 7362,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_tensiometro_aneroide.png",
+      "sha256": "220e65f8c03ac32f3045926db8064b64a5fe029ab4a974726f2acb780bde2c5c",
+      "bytes": 194262,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_tubo_endotraqueal_con_balon.json",
+      "sha256": "a5770d320218e1324a390789a179540f4730fa21d0f53816bd7588088e5b1590",
+      "bytes": 9488,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "atlas/atlas_tubo_endotraqueal_con_balon.png",
+      "sha256": "2af00f37a0beea314f364d13ef5cfa28daca05989a41dad1b8b05f2cf7f93e26",
+      "bytes": 136524,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "base_maestra_mvp.json",
+      "sha256": "4c735e102dda8d303ebc6ff9e79caffff2cf3f7fe347e309d4a8ea681c6defe2",
+      "bytes": 489024,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "contenido_inicial.json",
+      "sha256": "7156e3d4412dfb30febdde9b97f9b88cb7de2134b570d5fcdd9e87a7080d9e92",
+      "bytes": 7943,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "escalas_art/escala_dolor.png",
+      "sha256": "98f3f1b69bc433ae1b51e56ef3e239bbdfb843edea299d208354cf58234cf297",
+      "bytes": 21580,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "escalas_art/escala_funcion.png",
+      "sha256": "39217d873ab99ba860a508fd360de7f94a5b30b39f9b8295831a2e4bd51af1f6",
+      "bytes": 57166,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "escalas_art/escala_general.png",
+      "sha256": "f035daab7a4bbacd5f4931b01718404454484a6eddc30b8b7633c328727cc233",
+      "bytes": 33430,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "escalas_art/escala_neonatal.png",
+      "sha256": "f7b9039ec3f4f3ee5a59790d09b02c2d5f4682007ef3b3947be48e0935eaf3c2",
+      "bytes": 47991,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "escalas_art/escala_neuro.png",
+      "sha256": "98e23dcee1c64b561f357446d85e7067d87fac617766c378fcc66a9611c08dd8",
+      "bytes": 30644,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "escalas_art/escala_nutricion.png",
+      "sha256": "8e5405fddf9d8ae2459843146212049041c0d9564d56b348128bf88359c19774",
+      "bytes": 35580,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "escalas_art/escala_seguridad.png",
+      "sha256": "4c9a26019b395d95f5e5dbb500bcd8e8e5d56f5e52e874394d13c10c7a2473db",
+      "bytes": 41761,
+      "identico_al_apk": true
+    },
+    {
+      "archivo": "escalas_clinicas_v1.json",
+      "sha256": "4c795e1462131759d4efcac71c8c9f52c24fe170cf1375fd83d5ff288d3bde24",
+      "bytes": 69063,
+      "identico_al_apk": true
+    }
+  ]
+}

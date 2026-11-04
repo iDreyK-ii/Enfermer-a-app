@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.AtlasPngTests" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-11-04T00:57:05" hostname="e2b.local" time="9.263">
+  <properties/>
+  <testcase name="outOfBoundsAndIncompleteHotspotsAreRejected" classname="com.idreyk.enfermeria360.AtlasPngTests" time="7.818"/>
+  <testcase name="missingImageStillRequiresExplicitPendingState" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.147"/>
+  <testcase name="allTwentyFourQuizzesScoreActualChoicesAndRejectInvalidOrExtraAnswers" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.09"/>
+  <testcase name="technicalNamesAndAliasesAreActuallySearchableOffline" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.127"/>
+  <testcase name="formerlyRejectedDevicesAreNowDifferentExplicitKawaiiAssets" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.072"/>
+  <testcase name="unknownOrTraversalImagePathsAndOversizedImagesAreRejected" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.149"/>
+  <testcase name="routeVersionCompletionAndUnknownDeviceAreGuarded" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.066"/>
+  <testcase name="twentyFourDistinctDecodedPngsHaveRealAlphaAndHotspotsOnVisiblePixels" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.618"/>
+  <testcase name="metadataNeverInventsExpertApprovalAndDisclosesDirectRasterization" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.049"/>
+  <testcase name="hiddenBellBladderAndFilterAreNeverQuizTargetsOrOptions" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.033"/>
+  <testcase name="decorativeMotionPolicyStopsForQuizZoomReducedAndPause" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.024"/>
+  <testcase name="completedQuizPersistsAndCreatesOneHistoryEntryWithoutDestroyingOldProgress" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.07"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

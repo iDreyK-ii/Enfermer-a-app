@@ -1,4 +1,4 @@
-> **Revisión local actual 0.9.0-dev / code 10:** escalas kawaii, no publicada. Revisar `research/escalas_kawaii/REVISION_2026-11-03.md` y `qa/escalas_kawaii/RESULTADOS.md`; no confundir este estado con el SHA remoto anterior.
+> **Revisión local actual 0.9.1-dev / code 11:** pulido final de escalas. Revisar `qa/pulido_final/RESULTADOS.md` y `research/escalas_kawaii/REVISION_2026-11-03.md`; no confundir este estado con un SHA remoto anterior.
 
 > **Antecedente local: Base Maestra 2.1 + atlas kawaii / Android 0.8.0-dev (code 9).** No publicada. Usar solo el SHA exacto que el propietario revise y autorice. `base-maestra-v21-mvp` es el checkpoint anterior 0.6.0, no incluye los nuevos PNG. Matriz: `docs/AUDITORIA_ATLAS_KAWAII.md`. No atribuir permisos, revisión profesional o pruebas instaladas inexistentes.
 
@@ -13,7 +13,7 @@ Vas a CONTINUAR un proyecto Android existente, no a crear una aplicación nueva 
 
 Fuente canónica: https://github.com/iDreyK-ii/Enfermer-a-app
 Rama: desarrollo.
-Checkpoint anterior: tag base-maestra-v21-mvp, code 7. Borrador local actual: code 10, 0.9.0-dev; esperar el SHA expresamente aprobado y publicado.
+Checkpoint anterior: tag base-maestra-v21-mvp, code 7. Borrador local actual: code 11, 0.9.1-dev; esperar el SHA expresamente aprobado y publicado.
 Los tags escalas-clinicas-v1 y traslado-ia-studio-v1 son históricos: no cargarlos como esta actualización.
 Si el propietario facilita un SHA de actualización, ese SHA tiene prioridad sobre el tag. Confirma qué commit cargaste; no confundas la rama con la revisión concreta ni inventes un hash.
 

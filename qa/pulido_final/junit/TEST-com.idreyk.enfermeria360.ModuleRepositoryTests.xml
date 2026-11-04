@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.ModuleRepositoryTests" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-11-04T00:58:19" hostname="e2b.local" time="4.207">
+  <properties/>
+  <testcase name="rejectedNotebookMergePreservesExistingRecordsAndUndo" classname="com.idreyk.enfermeria360.ModuleRepositoryTests" time="3.466"/>
+  <testcase name="notebookImportMergeAndUndoAreTransactional" classname="com.idreyk.enfermeria360.ModuleRepositoryTests" time="0.068"/>
+  <testcase name="sqliteOneToTwoMigrationPreservesAllOldTablesAndUndo" classname="com.idreyk.enfermeria360.ModuleRepositoryTests" time="0.096"/>
+  <testcase name="mediaRejectsTraversalEmptyOrOversizeWithoutLeavingPartialFiles" classname="com.idreyk.enfermeria360.ModuleRepositoryTests" time="0.096"/>
+  <testcase name="pharmacologyV3FieldsPersistExportAndUndoWithoutDroppingLegacyFields" classname="com.idreyk.enfermeria360.ModuleRepositoryTests" time="0.066"/>
+  <testcase name="resetExplicitlyClearsNewDocumentsAndMediaToo" classname="com.idreyk.enfermeria360.ModuleRepositoryTests" time="0.054"/>
+  <testcase name="notesAndStructuredPlansPersistWithoutReplacingV02Notes" classname="com.idreyk.enfermeria360.ModuleRepositoryTests" time="0.035"/>
+  <testcase name="localMedicationEditPersistsTwentyFieldsAndProvenance" classname="com.idreyk.enfermeria360.ModuleRepositoryTests" time="0.055"/>
+  <testcase name="deletionCanBeUndoneAndEvenEmptyCatalogIsExportable" classname="com.idreyk.enfermeria360.ModuleRepositoryTests" time="0.076"/>
+  <testcase name="localProtocolAndConfigurableListSurviveCatalogRoundTrip" classname="com.idreyk.enfermeria360.ModuleRepositoryTests" time="0.074"/>
+  <testcase name="invalidEditDoesNotEraseDataOrPreviousUndo" classname="com.idreyk.enfermeria360.ModuleRepositoryTests" time="0.058"/>
+  <testcase name="mediaCopyIsPrivateAndOpeningGrantsOnlyItsFile" classname="com.idreyk.enfermeria360.ModuleRepositoryTests" time="0.063"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,4 +1,6 @@
-> **Actualización local 0.9.0-dev:** 45 fichas/43 fuentes/13 accesos; siete PNG de acompañamiento, doce claves educativas, filtro por tipo y fuentes externas a demanda. Revisión parcial, sin aprobación clínica. Ver `research/escalas_kawaii/REVISION_2026-11-03.md` y `qa/escalas_kawaii/RESULTADOS.md`.
+> **Pulido local 0.9.1-dev:** selección del filtro en toda la fila y limpieza de filtros con resultados; ver `qa/pulido_final/RESULTADOS.md`.
+
+> **Antecedente local 0.9.0-dev:** 45 fichas/43 fuentes/13 accesos; siete PNG de acompañamiento, doce claves educativas, filtro por tipo y fuentes externas a demanda. Revisión parcial, sin aprobación clínica. Ver `research/escalas_kawaii/REVISION_2026-11-03.md` y `qa/escalas_kawaii/RESULTADOS.md`.
 
 > **Antecedente local 0.8.0-dev:** los 24 dibujos y sus fichas están integrados, con revisión profesional pendiente. Ver `qa/atlas_kawaii/RESULTADOS.md`.
 
@@ -6,13 +8,13 @@
 
 > Revisión local no publicada. Matriz histórica del atlas 0.8: [AUDITORIA_ATLAS_KAWAII.md](AUDITORIA_ATLAS_KAWAII.md). No usar el CI del último publicado b463c580 como verificación del borrador.
 
-# Inventario funcional actual — Android 0.9.0-dev local / Base Maestra 2.1 + atlas y escalas kawaii
+# Inventario funcional actual — Android 0.9.1-dev local / Base Maestra 2.1 + atlas y escalas kawaii
 
 Este inventario describe la app existente que debe conservarse al importar/compilar. No es una propuesta para generar otra. La matriz de estados, evidencia y bloqueos completos está en [MVP_BASE_MAESTRA_v21.md](MVP_BASE_MAESTRA_v21.md).
 
 ## Identidad
 
-Kotlin/Jetpack Compose, módulo `:app`, una Activity, Prototipo B, diseño inicio 2/ficha 1. Namespace `com.idreyk.enfermeria360`, paquete debug `com.idreyk.enfermeria360.dev`, code **10**, nombre `0.9.0-dev` (debug añade `-debug`), minSdk 26, compile/target 35. Especificación editorial **2.1**, no versión Android 2.1.
+Kotlin/Jetpack Compose, módulo `:app`, una Activity, Prototipo B, diseño inicio 2/ficha 1. Namespace `com.idreyk.enfermeria360`, paquete debug `com.idreyk.enfermeria360.dev`, code **11**, nombre `0.9.1-dev` (debug añade `-debug`), minSdk 26, compile/target 35. Especificación editorial **2.1**, no versión Android 2.1.
 
 ## Funciones conservadas y ampliadas
 

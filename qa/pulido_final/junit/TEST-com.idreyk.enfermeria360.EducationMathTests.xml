@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.EducationMathTests" tests="27" skipped="0" failures="0" errors="0" timestamp="2026-11-04T00:57:39" hostname="e2b.local" time="0.085">
+  <properties/>
+  <testcase name="tinyPositiveVolumeIsNotDisplayedAsZero" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.029"/>
+  <testcase name="internationalUnitsAreNotMass" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.001"/>
+  <testcase name="microgramsToMilligramsAreExplicit" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.001"/>
+  <testcase name="dilutionUsesFinalVolumeAndExplicitNormalizedConcentrations" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.003"/>
+  <testcase name="perDayIsNotSilentlySplitIntoDoses" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.001"/>
+  <testcase name="nanInfinityExponentsNegativesGroupingAndMixedSeparatorsAreRejected" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.001"/>
+  <testcase name="dosePerKgMultipliesOnlyProvidedFictitiousQuantity" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.0"/>
+  <testcase name="sameConcentrationNeedsNoAdditionalVolume" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.002"/>
+  <testcase name="decimalMultiplicationDoesNotIntroduceBinaryError" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.001"/>
+  <testcase name="equivalentsAreIsolatedFromMassAndActivity" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.003"/>
+  <testcase name="dripHalfUpRoundingIsPresentationOnly" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.005"/>
+  <testcase name="dilutionDoesNotConcentrateOrMixDimensions" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.002"/>
+  <testcase name="zeroTimeAndRateAreBlocked" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.002"/>
+  <testcase name="infusionRateAndDurationAreInverseForExactExample" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.003"/>
+  <testcase name="idealPercentageDilutionHasTypeAndAssumptionWarnings" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.0"/>
+  <testcase name="finalDivisionPrecisionAndRoundingAreDisclosed" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.0"/>
+  <testcase name="doseVolumeCancelsCompatibleMassUnits" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.0"/>
+  <testcase name="explicitTechnicalPrecisionAndMagnitudeLimitsAreEnforced" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.002"/>
+  <testcase name="decimalCommaAndLeadingDecimalAreSupported" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.001"/>
+  <testcase name="dripRequiresUserEnteredEquipmentFactor" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.002"/>
+  <testcase name="adultBmiIsArithmeticWithoutDiagnosis" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.003"/>
+  <testcase name="perKgRequiresContextAndRejectsInvalidWeightAndAge" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.002"/>
+  <testcase name="balanceAcceptsExplicitZeroButNotMissingQuantities" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.002"/>
+  <testcase name="convertersRespectMassVolumeTimeAndIdentity" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.003"/>
+  <testcase name="missingAndZeroDenominatorsNeverProduceResults" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.002"/>
+  <testcase name="convertersRejectDifferentDimensionsOrOutputAboveTechnicalLimit" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.003"/>
+  <testcase name="everyResultIncludesEducationalWarningFormulaSubstitutionAndUnit" classname="com.idreyk.enfermeria360.EducationMathTests" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

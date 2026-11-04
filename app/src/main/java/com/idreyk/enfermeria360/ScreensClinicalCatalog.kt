@@ -1,6 +1,7 @@
 package com.idreyk.enfermeria360
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.selection.toggleable
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -9,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
@@ -97,15 +99,23 @@ fun ClinicalCatalogScreen(nav: (String) -> Unit, back: () -> Unit) {
             ChoiceField("Tipo de acceso", listOf("Todos los tipos" to 0) +
                 ClinicalAvailability.entries.mapIndexed { index, value -> value.label to index + 1 },
                 availabilityIndex, showPoints = false) { availabilityIndex = it }
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Checkbox(withPractice, { withPractice = it }, Modifier.semantics { contentDescription = "Solo con acceso: práctica, simulación o registro" })
-                Text("Solo con acceso: práctica, simulación o registro", style = MaterialTheme.typography.bodyMedium)
+            Row(
+                modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)
+                    .toggleable(value = withPractice, role = Role.Checkbox, onValueChange = { withPractice = it })
+                    .testTag("filtro-con-acceso"),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Checkbox(checked = withPractice, onCheckedChange = null)
+                Text("Solo con acceso: práctica, simulación o registro", Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
             }
             val type = ClinicalAvailability.entries.getOrNull(availabilityIndex - 1)
             val matches = catalog.filter(query, population, area, withPractice, type)
-            Badge("${matches.size} FICHAS EN ESTA VISTA", Purple)
+            val label = if (matches.size == 1) "FICHA" else "FICHAS"
+            Badge("${matches.size} $label EN ESTA VISTA", Purple)
             if (matches.isEmpty()) {
                 EmptyState("Sin coincidencias", "Cambia la búsqueda o los filtros. Una escala puede corresponder a otra población o estar pendiente.")
+            }
+            if (query.isNotEmpty() || population.isNotEmpty() || area.isNotEmpty() || withPractice || availabilityIndex != 0) {
                 Secondary("Limpiar filtros", { query = ""; population = ""; area = ""; withPractice = false; availabilityIndex = 0 })
             }
             matches.forEach { instrument ->

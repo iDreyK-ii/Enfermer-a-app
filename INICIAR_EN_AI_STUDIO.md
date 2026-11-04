@@ -1,4 +1,4 @@
-> **Revisión local 0.9.0-dev / code 10:** escalas kawaii y revisión documental parcial. Consultar `CONTINUIDAD.json`, `research/escalas_kawaii/REVISION_2026-11-03.md` y `qa/escalas_kawaii/RESULTADOS.md`. No publicada; el remoto sigue en `b463c580`.
+> **Revisión local 0.9.1-dev / code 11:** pulido final del catálogo. Consultar `CONTINUIDAD.json` y `qa/pulido_final/RESULTADOS.md`. Al corte de preparación, el remoto seguía en `b463c580`; verificarlo antes de publicar. La versión 0.9.0 es un antecedente en `qa/escalas_kawaii/RESULTADOS.md`.
 
 > **Antecedente local 0.8.0-dev / atlas kawaii:** 24 PNG/fichas, movimiento adaptable y autoevaluación. Ver `docs/AUDITORIA_ATLAS_KAWAII.md` y `qa/atlas_kawaii/RESULTADOS.md` para la evidencia histórica de 0.8. Sin aprobación profesional ni permiso para publicar; el último remoto es `b463c580`. No cargar el tag histórico como si incluyera estos cambios.
 
@@ -30,9 +30,9 @@ Antes de empezar, leer `AGENTS.md`, `CONTINUIDAD.json` y `docs/INVENTARIO_FUNCIO
 
 La guía oficial actual describe Android nativo Kotlin/Compose, Gradle, una actividad y un módulo. Esta app tiene una actividad y el módulo `:app`, sin layouts de Views ni código C/C++ propio. Esto es compatible con el tipo de proyecto descrito, **no prueba que el importador de AI Studio haya cargado todo**. [1](https://ai.google.dev/gemini-api/docs/aistudio-android)
 
-La guía general documenta importación GitHub y sincronización, pero la guía específica Android todavía indica exportación mediante ZIP y no exportación GitHub. No prometer sincronización Android bidireccional automática: verificar la función concreta en la cuenta. Nuestro flujo de una sola fuente de verdad no depende de que AI Studio haga push. [1](https://ai.google.dev/gemini-api/docs/aistudio-android) [2](https://ai.google.dev/gemini-api/docs/aistudio-build-mode)
+La guía general documenta importación GitHub y sincronización, pero la guía específica Android indica exportación mediante ZIP y que la exportación a GitHub aún no está disponible para proyectos Android. No prometer sincronización Android bidireccional automática ni asumir que la importación del repositorio completo funcionará en esta cuenta: verificarla sin modificar el original. El runtime de Android descrito por Google no ejecuta el backend del repositorio; el proyecto Supabase existente permanece separado. La integración Firebase es opcional y no autoriza sustituir Supabase. [1](https://ai.google.dev/gemini-api/docs/aistudio-android) [2](https://ai.google.dev/gemini-api/docs/aistudio-build-mode)
 
-Documentación consultada el 2 de noviembre de 2026: guía Android actualizada el 20 de octubre; guía general, el 26 de octubre. No se operó ni autenticó una cuenta AI Studio desde este entorno.
+Documentación oficial consultada el 3 de noviembre de 2026. No se operó ni autenticó una cuenta AI Studio desde este entorno.
 
 ## 2. Comprobar que la carga es fiel
 
@@ -41,9 +41,10 @@ La apariencia por sí sola no demuestra una copia completa. Antes de que el agen
 Desde **la copia Git confiable**, no desde un script modificado por el importador:
 
 ```sh
-# Usar el SHA exacto de la entrega, o el tag inmutable de este primer punto.
+# Primero confirma que HEAD coincide con el SHA exacto comunicado para la entrega.
+git rev-parse HEAD
 python3 scripts/verificar_traslado.py verificar \
-  --ref base-maestra-v21-mvp \
+  --ref HEAD \
   --zip /ruta/exportacion-de-ai-studio.zip \
   --salida .cache/traslado/resultado.json
 ```
@@ -79,7 +80,7 @@ No subir versiones de Kotlin, Gradle, AGP o dependencias automáticamente para e
 ## 4. Verificar firma antes de instalar
 
 - Identidad debug: `com.idreyk.enfermeria360.dev`.
-- Borrador local actual: versionCode **10**, nombre **0.9.0-dev-debug**. Para entregas posteriores, contrastar con `CONTINUIDAD.json`, `app/build.gradle.kts` y el manifiesto del APK; no reutilizar esta versión como si fuera siempre la última.
+- Borrador local actual: versionCode **11**, nombre **0.9.1-dev-debug**. Para entregas posteriores, contrastar con `CONTINUIDAD.json`, `app/build.gradle.kts` y el manifiesto del APK; no reutilizar esta versión como si fuera siempre la última.
 - Certificado conservado: `d6874c68417eefb1b1b902bf82ba4ce7d8734e47877e12bd1733eb498f0e522b`.
 
 Con SDK adecuado, comprobar el APK externo con:
@@ -96,7 +97,7 @@ No publicar en Play, crear servicios de pago ni activar facturación sin autoriz
 ## 5. Cada actualización posterior
 
 1. Revisar cambios y pruebas aquí; mantener versiones y migraciones compatibles. Para cambios del APK, incrementar versionCode de forma controlada.
-2. Mostrar el resultado, diferencias y límites; obtener aprobación expresa del propietario para publicar esa revisión. Solo entonces, commit y push no forzado a `desarrollo`; comprobar SHA remoto y CI de ese mismo commit. «Continuar» o pedir mejoras no sustituye esta aprobación.
+2. Mostrar el resultado, diferencias y límites; obtener aprobación expresa del propietario para publicar esa revisión. Solo entonces, push no forzado del commit local revisado a `desarrollo`; comprobar SHA remoto y CI de ese mismo commit. «Continuar» o pedir mejoras no sustituye esta aprobación.
 3. Comunicar al propietario el **SHA exacto**, alcance del cambio, perfil de nube y estado de firma/pruebas.
 4. Pedir a AI Studio cargar esa revisión sin conservar cambios divergentes no revisados.
 5. Verificar de nuevo fuentes y compilación. Si se usó una importación nueva por limitaciones de la herramienta, es otra copia del mismo proyecto, no permiso para regenerarlo.

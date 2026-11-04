@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.NativePhoneRenderTests" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-11-04T00:58:43" hostname="e2b.local" time="12.08">
+  <properties/>
+  <testcase name="darkPhoneAlsoDisplaysTheTransparentPngAndNativeIdentification" classname="com.idreyk.enfermeria360.NativePhoneRenderTests" time="7.984"/>
+  <testcase name="homePreservesNativePrototypeAndCapturesNewNavigation" classname="com.idreyk.enfermeria360.NativePhoneRenderTests" time="0.747"/>
+  <testcase name="clinicalCardsUseProductionArtAndSourceLinkedExplanations" classname="com.idreyk.enfermeria360.NativePhoneRenderTests" time="1.092"/>
+  <testcase name="decimalResultComesFromEnteredNumbers" classname="com.idreyk.enfermeria360.NativePhoneRenderTests" time="0.518"/>
+  <testcase name="syringeUsesActualPngAndNormalizedMetadata" classname="com.idreyk.enfermeria360.NativePhoneRenderTests" time="0.616"/>
+  <testcase name="caseAndPaeAreNativeEditableRoutes" classname="com.idreyk.enfermeria360.NativePhoneRenderTests" time="0.813"/>
+  <testcase name="pausedHygieneShowsRealNativeState" classname="com.idreyk.enfermeria360.NativePhoneRenderTests" time="0.31"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+]]></system-err>
+</testsuite>

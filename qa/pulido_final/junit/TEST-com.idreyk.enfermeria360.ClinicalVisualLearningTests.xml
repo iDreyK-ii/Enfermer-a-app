@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.ClinicalVisualLearningTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-04T00:57:38" hostname="e2b.local" time="0.081">
+  <properties/>
+  <testcase name="everyReadingKeyHasAnExistingSourceCitedOnItsOwnCard" classname="com.idreyk.enfermeria360.ClinicalVisualLearningTests" time="0.069"/>
+  <testcase name="onlyExplicitWellFormedHttpsLinksWithoutCredentialsCanOpen" classname="com.idreyk.enfermeria360.ClinicalVisualLearningTests" time="0.001"/>
+  <testcase name="artworkNeverOverridesReducedMotionOrTheUsersPause" classname="com.idreyk.enfermeria360.ClinicalVisualLearningTests" time="0.0"/>
+  <testcase name="everyCatalogueAreaHasSymbolicArtAndAClearBoundary" classname="com.idreyk.enfermeria360.ClinicalVisualLearningTests" time="0.009"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

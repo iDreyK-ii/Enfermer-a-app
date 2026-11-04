@@ -1,8 +1,12 @@
 package com.idreyk.enfermeria360
 
 import android.os.Looper
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.SemanticsProperties
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModelProvider
 import java.time.Duration
 import org.junit.Assert.*
@@ -77,6 +81,43 @@ class ClinicalInterfaceTests {
         ui.onNodeWithText("Sin coincidencias").assertExists()
         click("Limpiar filtros")
         ui.onNodeWithTag("ficha-apgar").assertExists()
+    }
+
+    @Test fun accessFilterCanBeToggledByTappingItsLabelAndClearedWithoutEmptyResults() {
+        library()
+        val filter = ui.onNodeWithTag("filtro-con-acceso").performScrollTo()
+        filter.assertHeightIsAtLeast(48.dp)
+            .assert(SemanticsMatcher.expectValue(SemanticsProperties.Role, Role.Checkbox))
+            .assertTextContains("Solo con acceso: práctica, simulación o registro")
+            .assertIsOff()
+        // Tap on the text side of the row, not just the checkbox itself.
+        filter.performTouchInput { click(Offset(width * .75f, height / 2f)) }
+        filter.assertIsOn()
+        ui.onNodeWithText("13 FICHAS EN ESTA VISTA").assertExists()
+        ui.onNodeWithTag("ficha-norton").assertExists()
+        click("Limpiar filtros")
+        filter.assertIsOff()
+        ui.onNodeWithText("45 FICHAS EN ESTA VISTA").assertExists()
+        ui.onNodeWithText("Limpiar filtros").assertDoesNotExist()
+    }
+
+    @Test fun combinedFiltersCanBeResetTogetherWhileAResultRemains() {
+        library()
+        ui.onAllNodes(hasSetTextAction()).onFirst().performTextReplacement("Norton")
+        ui.onNodeWithTag("poblacion-adultos").performScrollTo().performClick()
+        click("Área de valoración")
+        ui.onNode(hasText("Piel y caídas") and hasAnyAncestor(isPopup())).performClick()
+        click("Tipo de acceso")
+        ui.onNode(hasText("Solo registro") and hasAnyAncestor(isPopup())).performClick()
+        ui.onNodeWithTag("filtro-con-acceso").performScrollTo().performClick()
+        ui.onNodeWithTag("ficha-norton").assertExists()
+        ui.onNodeWithText("1 FICHA EN ESTA VISTA").assertExists()
+        click("Limpiar filtros")
+        ui.onNodeWithTag("filtro-con-acceso").assertIsOff()
+        ui.onNodeWithTag("poblacion-todas").assertIsSelected()
+        ui.onNodeWithText("Todas las áreas").assertExists()
+        ui.onNodeWithText("Todos los tipos").assertExists()
+        ui.onNodeWithText("45 FICHAS EN ESTA VISTA").assertExists()
     }
 
     @Test fun nortonCardLinksOnlyToTheExistingAdultExternalRecorder() {
