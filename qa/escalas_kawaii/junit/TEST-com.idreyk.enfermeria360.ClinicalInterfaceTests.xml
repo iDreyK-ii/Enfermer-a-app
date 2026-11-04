@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.ClinicalInterfaceTests" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-11-03T23:33:15" hostname="e2b.local" time="11.795">
+  <properties/>
+  <testcase name="restrictedFacesCardDoesNotExposeAnInventedCalculator" classname="com.idreyk.enfermeria360.ClinicalInterfaceTests" time="7.432"/>
+  <testcase name="nortonCardLinksOnlyToTheExistingAdultExternalRecorder" classname="com.idreyk.enfermeria360.ClinicalInterfaceTests" time="0.867"/>
+  <testcase name="numericPainStartsUnsetCanSaveZeroAndDoesNotSaveMissingSelfReport" classname="com.idreyk.enfermeria360.ClinicalInterfaceTests" time="0.484"/>
+  <testcase name="numericPainChangingContextInvalidatesTheOldAnswer" classname="com.idreyk.enfermeria360.ClinicalInterfaceTests" time="0.407"/>
+  <testcase name="accessTypeFilterAndResetWorkThroughTheNativeUi" classname="com.idreyk.enfermeria360.ClinicalInterfaceTests" time="0.557"/>
+  <testcase name="neonatalFilterAndCapurroDeepLinkKeepTheCorrectVariant" classname="com.idreyk.enfermeria360.ClinicalInterfaceTests" time="0.538"/>
+  <testcase name="fourAtUntestableItemsScoreTwoAndResetInvalidatesTotal" classname="com.idreyk.enfermeria360.ClinicalInterfaceTests" time="0.415"/>
+  <testcase name="rassCardMakesItsAdultOnlyRecorderExplicit" classname="com.idreyk.enfermeria360.ClinicalInterfaceTests" time="0.373"/>
+  <testcase name="fourAtPopulationAcknowledgementCanBeWithdrawnWithoutKeepingScores" classname="com.idreyk.enfermeria360.ClinicalInterfaceTests" time="0.409"/>
+  <testcase name="fourAtResetBeforeSavingClearsEveryComponentWithoutCreatingARecord" classname="com.idreyk.enfermeria360.ClinicalInterfaceTests" time="0.312"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

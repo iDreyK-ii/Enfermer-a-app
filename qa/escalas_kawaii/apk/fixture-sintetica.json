@@ -1,0 +1,17 @@
+{
+  "synthetic": true,
+  "database_schema": 2,
+  "rows": {
+    "content": 8,
+    "favorites": 1,
+    "media": 1,
+    "meta": 3,
+    "notebooks": 1,
+    "notes": 1,
+    "packages": 1,
+    "practice": 1
+  },
+  "media_filename": "87b05fcc-405c-47b1-81e9-00528a7b42ff.png",
+  "media_sha256": "f035daab7a4bbacd5f4931b01718404454484a6eddc30b8b7633c328727cc233",
+  "source_fixture_sha256": "ea7df7946c730eae64c87e286cde1eb5c97da88e511e92231b8815b54c069619"
+}

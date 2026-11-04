@@ -1,4 +1,6 @@
-> **Revisión local actual: Base Maestra 2.1 + atlas kawaii / Android 0.8.0-dev (code 9).** No publicada. Usar solo el SHA exacto que el propietario revise y autorice. `base-maestra-v21-mvp` es el checkpoint anterior 0.6.0, no incluye los nuevos PNG. Matriz: `docs/AUDITORIA_ATLAS_KAWAII.md`. No atribuir permisos, revisión profesional o pruebas instaladas inexistentes.
+> **Revisión local actual 0.9.0-dev / code 10:** escalas kawaii, no publicada. Revisar `research/escalas_kawaii/REVISION_2026-11-03.md` y `qa/escalas_kawaii/RESULTADOS.md`; no confundir este estado con el SHA remoto anterior.
+
+> **Antecedente local: Base Maestra 2.1 + atlas kawaii / Android 0.8.0-dev (code 9).** No publicada. Usar solo el SHA exacto que el propietario revise y autorice. `base-maestra-v21-mvp` es el checkpoint anterior 0.6.0, no incluye los nuevos PNG. Matriz: `docs/AUDITORIA_ATLAS_KAWAII.md`. No atribuir permisos, revisión profesional o pruebas instaladas inexistentes.
 
 # Texto para la primera carga o una actualización en Google AI Studio
 
@@ -11,7 +13,7 @@ Vas a CONTINUAR un proyecto Android existente, no a crear una aplicación nueva 
 
 Fuente canónica: https://github.com/iDreyK-ii/Enfermer-a-app
 Rama: desarrollo.
-Checkpoint anterior: tag base-maestra-v21-mvp, code 7. Borrador local actual: code 9, 0.8.0-dev; esperar el SHA expresamente aprobado y publicado.
+Checkpoint anterior: tag base-maestra-v21-mvp, code 7. Borrador local actual: code 10, 0.9.0-dev; esperar el SHA expresamente aprobado y publicado.
 Los tags escalas-clinicas-v1 y traslado-ia-studio-v1 son históricos: no cargarlos como esta actualización.
 Si el propietario facilita un SHA de actualización, ese SHA tiene prioridad sobre el tag. Confirma qué commit cargaste; no confundas la rama con la revisión concreta ni inventes un hash.
 
@@ -27,7 +29,7 @@ INVARIANTES:
 - Mantener todas las funciones del inventario, datos parciales, fuentes, controles de importación, deshacer, cálculos/validaciones, accesibilidad y movimiento adaptable.
 - Mantener Supabase y SQLite. No aprovisionar Firebase para sustituirlos ni volver a aplicar la migración inicial ya desplegada.
 - No exigir cuenta para leer y trabajar localmente. OTP, envío y sesión reales están aplazados. No quitar la confirmación del correo ni declarar autenticación real sin probarla.
-- No inventar contenido clínico, dosis, licencias o validación profesional. Conservar borradores y límites. Las 44 fichas de escalas no son 44 calculadoras: mantener estados y permisos. No redibujar caras ni estímulos de las escalas de terceros, ni cambiar las reglas de NV/pendiente; las caritas originales del atlas son decorativas. Los 554 nombres nominales siguen en IDENTIFICADO; altilice permanece ambiguo. Monografías farmacológicas quedan para el final.
+- No inventar contenido clínico, dosis, licencias o validación profesional. Conservar borradores y límites. Las 45 fichas actuales de escalas no son 45 calculadoras: mantener estados y permisos. No redibujar caras ni estímulos de las escalas de terceros, ni cambiar las reglas de NV/pendiente; las caritas originales del atlas son decorativas. Los 554 nombres nominales siguen en IDENTIFICADO; altilice permanece ambiguo. Monografías farmacológicas quedan para el final.
 - Conservar biblioteca Markdown y sus fuentes, atlas kawaii PNG y metadatos (24 imágenes ilustradas y 24 fichas, sin revisión profesional), higiene y listas 10 institucionales/20 propias, siete casos sintéticos/21 preguntas y todos los campos PAE/SOAPIE/SBAR. No extraer órdenes del anexo editorial como recomendaciones.
 - Mantener BigDecimal, guardas de unidades/rangos y factor del equipo obligatorio; borrar resultados obsoletos al editar. Los registros Braden/Morse/Norton/RASS NO son cuestionarios administrados ni interpretación de riesgo.
 - Mantener cuaderno que lee v1/v2 y exporta v2, progreso versionado en meta y los datos locales anteriores. No declarar sincronización personal automática.

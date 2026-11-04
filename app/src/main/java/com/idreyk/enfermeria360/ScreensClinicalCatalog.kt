@@ -62,13 +62,14 @@ fun ClinicalCatalogScreen(nav: (String) -> Unit, back: () -> Unit) {
     var population by rememberSaveable { mutableStateOf("") }
     var area by rememberSaveable { mutableStateOf("") }
     var withPractice by rememberSaveable { mutableStateOf(false) }
+    var availabilityIndex by rememberSaveable { mutableIntStateOf(0) }
     Page("Tests y escalas clínicas", "Biblioteca por población · sin conexión", back) {
         if (catalog == null) {
             ClinicalLoadNotice(load)
         } else {
             AppCard(Modifier.fillMaxWidth()) {
                 ColorIcon(R.drawable.ic_clipboard_check, Teal, 48)
-                Badge("INVESTIGACIÓN · ${catalog.reviewed}", Teal)
+                Badge("CATÁLOGO INICIAL · ${catalog.reviewed}", Teal)
                 Text("Valorar empieza por elegir bien.", style = MaterialTheme.typography.titleLarge)
                 Text(
                     "${catalog.instruments.size} fichas documentales · ${catalog.instruments.count { it.hasPractice }} con práctica, simulación o registro. No todas son calculadoras.",
@@ -77,6 +78,7 @@ fun ClinicalCatalogScreen(nav: (String) -> Unit, back: () -> Unit) {
                 Text("La misma escala, su población y su versión. Nunca un resultado fuera de contexto.", color = LocalPalette.current.muted, style = MaterialTheme.typography.bodySmall)
             }
             Notice("Primer bloque, no inventario universal. La validación clínica de esta app sigue pendiente. No usar puntajes para decidir diagnósticos o tratamientos ni demorar una emergencia.", true)
+            Expandable("¿Qué significa cada tipo de acceso?", "Práctica interactiva: ejercicio educativo con controles. Simulación: representación sin equivalencia clínica comprobada. Solo registro: captura de un dato, como autoinforme o transcripción externa según la ficha; la transcripción no administra el instrumento. Ficha documental: información y fuentes, sin formulario. Permiso pendiente: no se reproduce el material protegido. Ninguno autoriza decisiones asistenciales.")
             SearchBox(query, { query = it.take(160) }, "Buscar Glasgow, dolor, 4AT, Barthel…")
             FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 (mapOf("" to "Todas") + ClinicalCatalog.POPULATIONS).forEach { (key, label) ->
@@ -92,15 +94,19 @@ fun ClinicalCatalogScreen(nav: (String) -> Unit, back: () -> Unit) {
             ChoiceField("Área de valoración", listOf("Todas las áreas" to 0) + areas.mapIndexed { i, label -> label to i + 1 }, areas.indexOf(area) + 1, showPoints = false) {
                 area = if (it == 0) "" else areas[it - 1]
             }
+            ChoiceField("Tipo de acceso", listOf("Todos los tipos" to 0) +
+                ClinicalAvailability.entries.mapIndexed { index, value -> value.label to index + 1 },
+                availabilityIndex, showPoints = false) { availabilityIndex = it }
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Checkbox(withPractice, { withPractice = it }, Modifier.semantics { contentDescription = "Solo con práctica o registro" })
-                Text("Solo con práctica o registro", style = MaterialTheme.typography.bodyMedium)
+                Checkbox(withPractice, { withPractice = it }, Modifier.semantics { contentDescription = "Solo con acceso: práctica, simulación o registro" })
+                Text("Solo con acceso: práctica, simulación o registro", style = MaterialTheme.typography.bodyMedium)
             }
-            val matches = catalog.filter(query, population, area, withPractice)
+            val type = ClinicalAvailability.entries.getOrNull(availabilityIndex - 1)
+            val matches = catalog.filter(query, population, area, withPractice, type)
             Badge("${matches.size} FICHAS EN ESTA VISTA", Purple)
             if (matches.isEmpty()) {
                 EmptyState("Sin coincidencias", "Cambia la búsqueda o los filtros. Una escala puede corresponder a otra población o estar pendiente.")
-                Secondary("Limpiar filtros", { query = ""; population = ""; area = ""; withPractice = false })
+                Secondary("Limpiar filtros", { query = ""; population = ""; area = ""; withPractice = false; availabilityIndex = 0 })
             }
             matches.forEach { instrument ->
                 AppCard(Modifier.fillMaxWidth().testTag("ficha-${instrument.id}"), onClick = { nav("instrumento/${instrument.id}") }) {
@@ -130,12 +136,28 @@ fun ClinicalInstrumentScreen(id: String, nav: (String) -> Unit, back: () -> Unit
             instrument == null -> EmptyState("Ficha no encontrada", "Vuelve a la biblioteca para seleccionar un instrumento de esta edición.")
             else -> {
                 AppCard(Modifier.fillMaxWidth()) {
+                    val art = ClinicalVisualLearning.area(instrument.area)
+                    ClinicalAreaIllustration(art)
                     Badge(instrument.area.uppercase(), clinicalColor(instrument.area))
+                    Text(art.areaTip, style = MaterialTheme.typography.bodySmall, color = LocalPalette.current.muted)
                     Text(instrument.purpose, style = MaterialTheme.typography.titleMedium)
                     Badge(instrument.availability.label, Purple)
                     Text("Revisión documental: ${instrument.reviewed} · revisión clínica: pendiente", style = MaterialTheme.typography.bodySmall, color = LocalPalette.current.muted)
                 }
                 Notice("Edición de práctica y consulta. Una ficha documentada o un cálculo probado no equivalen a un instrumento digital clínicamente validado.", true)
+                ClinicalVisualLearning.keys[instrument.id]?.let { key ->
+                    val reference = catalog.sources[key.sourceId]
+                    if (reference != null && key.sourceId in instrument.sourceIds) {
+                        Section("Para entender mejor")
+                        AppCard(Modifier.fillMaxWidth().testTag("clave-${instrument.id}")) {
+                            Badge("CLAVE EDUCATIVA · NO ES UN TEST", Teal)
+                            Text(key.title, style = MaterialTheme.typography.titleMedium)
+                            Text(key.text, style = MaterialTheme.typography.bodyMedium)
+                            Text("Fuente: ${reference.reference.title}. Consulta ${reference.reference.accessed}; enlace en Fuentes.",
+                                style = MaterialTheme.typography.bodySmall, color = LocalPalette.current.muted)
+                        }
+                    }
+                }
                 Section("Población y versión")
                 AppCard(Modifier.fillMaxWidth()) {
                     Text(instrument.populationDetail, style = MaterialTheme.typography.bodyMedium)
@@ -147,7 +169,8 @@ fun ClinicalInstrumentScreen(id: String, nav: (String) -> Unit, back: () -> Unit
                 Notice(instrument.limitations, true)
                 if (instrument.hasPractice) {
                     val label = when (instrument.availability) {
-                        ClinicalAvailability.RECORD -> "Abrir registro de práctica"
+                        ClinicalAvailability.RECORD -> if (instrument.id == "rass" || instrument.id == "norton")
+                            "Abrir registro de práctica · adulto" else "Abrir registro de práctica"
                         ClinicalAvailability.SIMULATION -> "Abrir simulación"
                         else -> "Abrir práctica interactiva"
                     }
@@ -171,8 +194,8 @@ fun ClinicalInstrumentScreen(id: String, nav: (String) -> Unit, back: () -> Unit
 val PainMeasurementReference = Reference(
     "NRS y VAS · Evaluations and measurements",
     "https://www.iasp-pain.org/wp-content/uploads/2021/11/IASP-MPC_toolkit_chapt4.pdf",
-    "International Association for the Study of Pain · referencia conceptual, extracto consultado",
-    "2026-11-02",
+    "International Association for the Study of Pain · capítulo 4, sección de intensidad consultada",
+    "2026-11-03",
 )
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -221,7 +244,7 @@ fun NumericPainPracticeScreen(vm: AppViewModel, back: () -> Unit) {
         Secondary("Reiniciar autoinforme", { selected = NursingScales.UNSET })
         Expandable("Pediatría y comunicación", "No basta la edad: confirmar comprensión de los extremos y del orden numérico. Las referencias pediátricas ofrecen edades orientativas distintas. Si la persona no puede responder no debe inventarse un valor ni observar su cara como sustituto del autoinforme.")
         SourceCard(PainMeasurementReference)
-        SourceCard(Reference("Dolor pediátrico: elegir un instrumento apropiado al desarrollo", "https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/", "Royal Children’s Hospital Melbourne · extracto consultado", "2026-11-02"))
+        SourceCard(Reference("Dolor pediátrico: elegir un instrumento apropiado al desarrollo", "https://www.rch.org.au/clinicalguide/guideline_index/Acute_pain_management/", "Royal Children’s Hospital Melbourne · valoración y selección de instrumentos", "2026-11-03"))
     }
 }
 
@@ -276,7 +299,7 @@ fun FourAtPracticeScreen(vm: AppViewModel, back: () -> Unit) {
         Secondary("Reiniciar 4AT", { scores = IntArray(4) { NursingScales.UNSET } })
         Expandable("Atribución y cambios", "Adaptado de 4AT ©2011–2014 Alasdair MacLullich, Tracy Ryan y Helen Cash, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Español: Sander, Corretge y Dorrian, 2016. Interfaz, instrucciones auxiliares y presentación modificadas; se conservan dominios y puntos. La evidencia del original no valida automáticamente esta adaptación. Sin garantía de exactitud o adecuación clínica; sin aval de los autores. Fuente oficial: https://www.the4at.com/.")
         SourceCard(Reference("4AT español · versión 1.0 (2016), instrumento 1.2", "https://www.the4at.com/wp-content/uploads/2026/07/4AT-Spanish.doc", "Sander, Corretge, Dorrian / MacLullich, Ryan y Cash", "2026-11-02"))
-        SourceCard(Reference("4AT: guía de administración, puntuación y límites", "https://www.the4at.com/userguide", "Equipo 4AT", "2026-11-02"))
-        SourceCard(Reference("4AT: CC BY 4.0, atribución y adaptaciones", "https://www.the4at.com/attribution", "Equipo 4AT · no respalda esta app", "2026-11-02"))
+        SourceCard(Reference("4AT: guía de administración, puntuación y límites", "https://www.the4at.com/userguide", "Equipo 4AT · consulta parcial", "2026-11-03"))
+        SourceCard(Reference("4AT: CC BY 4.0, atribución y adaptaciones", "https://www.the4at.com/attribution", "Equipo 4AT · no respalda esta app", "2026-11-03"))
     }
 }

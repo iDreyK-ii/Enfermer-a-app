@@ -27,6 +27,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.TextStyle
@@ -585,6 +586,8 @@ fun ProgressLine(progress: Float) {
 
 @Composable
 fun SourceCard(reference: Reference) {
+    val uriHandler = LocalUriHandler.current
+    var openFailed by remember(reference.url) { mutableStateOf(false) }
     AppCard(Modifier.fillMaxWidth()) {
         Badge("FUENTE DOCUMENTAL", Teal)
         Text(reference.title, style = MaterialTheme.typography.titleSmall)
@@ -607,5 +610,21 @@ fun SourceCard(reference: Reference) {
                 style = MaterialTheme.typography.labelSmall,
                 color = LocalPalette.current.muted,
             )
+        if (ExternalReferencePolicy.canOpen(reference.url)) {
+            TextButton(onClick = {
+                openFailed = try {
+                    uriHandler.openUri(reference.url)
+                    false
+                } catch (_: Exception) {
+                    true
+                }
+            }, modifier = Modifier.heightIn(min = 48.dp)) {
+                Text("Abrir fuente externa")
+            }
+            Text("Se abre en otra aplicación; puede requerir Internet.", style = MaterialTheme.typography.labelSmall,
+                color = LocalPalette.current.muted)
+            if (openFailed) Text("No se pudo abrir. Puedes copiar la dirección mostrada.",
+                style = MaterialTheme.typography.bodySmall, color = LocalPalette.current.muted)
+        }
     }
 }

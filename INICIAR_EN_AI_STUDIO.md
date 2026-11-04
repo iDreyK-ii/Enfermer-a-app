@@ -1,4 +1,6 @@
-> **Actualización local 0.8.0-dev / atlas kawaii:** 24 PNG/fichas, movimiento adaptable y autoevaluación. Ver `docs/AUDITORIA_ATLAS_KAWAII.md` y `qa/atlas_kawaii/RESULTADOS.md` para la evidencia corriente. Sin aprobación profesional ni permiso para publicar; el último remoto es `b463c580`. No cargar el tag histórico como si incluyera estos cambios.
+> **Revisión local 0.9.0-dev / code 10:** escalas kawaii y revisión documental parcial. Consultar `CONTINUIDAD.json`, `research/escalas_kawaii/REVISION_2026-11-03.md` y `qa/escalas_kawaii/RESULTADOS.md`. No publicada; el remoto sigue en `b463c580`.
+
+> **Antecedente local 0.8.0-dev / atlas kawaii:** 24 PNG/fichas, movimiento adaptable y autoevaluación. Ver `docs/AUDITORIA_ATLAS_KAWAII.md` y `qa/atlas_kawaii/RESULTADOS.md` para la evidencia histórica de 0.8. Sin aprobación profesional ni permiso para publicar; el último remoto es `b463c580`. No cargar el tag histórico como si incluyera estos cambios.
 
 > Histórico 0.7.0, no evidencia automática de 0.8: 252 JVM, 118 Python, 5 SQLite y 17 PGLite; lint 0 errores/26 advertencias. Ocho capturas del APK en emulador API28, 17 renders Robolectric separados y 2/2 pruebas PDF instrumentadas aprobadas. No hardware físico, no nuevo CI/publicación. Detalle: `qa/atlas_v22/RESULTADOS.md`.
 
@@ -77,7 +79,7 @@ No subir versiones de Kotlin, Gradle, AGP o dependencias automáticamente para e
 ## 4. Verificar firma antes de instalar
 
 - Identidad debug: `com.idreyk.enfermeria360.dev`.
-- Borrador local actual: versionCode **9**, nombre **0.8.0-dev-debug**. Para entregas posteriores, contrastar con `CONTINUIDAD.json`, `app/build.gradle.kts` y el manifiesto del APK; no reutilizar esta versión como si fuera siempre la última.
+- Borrador local actual: versionCode **10**, nombre **0.9.0-dev-debug**. Para entregas posteriores, contrastar con `CONTINUIDAD.json`, `app/build.gradle.kts` y el manifiesto del APK; no reutilizar esta versión como si fuera siempre la última.
 - Certificado conservado: `d6874c68417eefb1b1b902bf82ba4ce7d8734e47877e12bd1733eb498f0e522b`.
 
 Con SDK adecuado, comprobar el APK externo con:

@@ -5261,7 +5261,7 @@
       "route": "biblioteca-escalas",
       "name": "Escalas y tests",
       "status": "PARCIAL",
-      "note": "Se conservan los instrumentos ya funcionales y 44 fichas documentales; no son 44 calculadoras."
+      "note": "Catálogo documental sin conexión; sus accesos combinan práctica, simulación o registro externo. No todas las fichas son calculadoras."
     },
     {
       "route": "instrumento/braden",

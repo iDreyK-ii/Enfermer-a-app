@@ -1,0 +1,16 @@
+{
+  "apk": "app-debug.apk",
+  "bytes": 13075981,
+  "version": "0.9.0-dev-debug",
+  "version_code": 10,
+  "min_sdk": 26,
+  "target_sdk": 35,
+  "sha256": "54aa3bb57f4161ebbb709f6fd59d94dc539098d3a24100fa5447536afe7f99a4",
+  "certificate_sha256": "d6874c68417eefb1b1b902bf82ba4ce7d8734e47877e12bd1733eb498f0e522b",
+  "certificate_matches_expected": true,
+  "permissions": [
+    "android.permission.INTERNET",
+    "com.idreyk.enfermeria360.dev.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+  ],
+  "physical_installation_tested": false
+}

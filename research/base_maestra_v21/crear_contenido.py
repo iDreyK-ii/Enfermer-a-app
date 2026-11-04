@@ -367,7 +367,7 @@ modules=[
  ('bioseguridad','Bioseguridad','PARCIAL','Cinco momentos, cronómetro y listas diferenciadas. Técnica supervisada y protocolo local siguen siendo necesarios.'),
  ('cuaderno','PAE / SOAPIE / SBAR','PARCIAL','Editor, persistencia y Markdown funcionales. Impresión/PDF implementados, pendientes de prueba en dispositivo. Sin taxonomías completas ni diagnósticos automáticos.'),
  ('casos','Casos progresivos','PARCIAL','Siete escenarios sintéticos funcionales; revisión docente y validación clínica pendientes.'),
- ('biblioteca-escalas','Escalas y tests','PARCIAL','Se conservan los instrumentos ya funcionales y 44 fichas documentales; no son 44 calculadoras.'),
+ ('biblioteca-escalas','Escalas y tests','PARCIAL','Catálogo documental sin conexión; sus accesos combinan práctica, simulación o registro externo. No todas las fichas son calculadoras.'),
  ('instrumento/braden','Braden completo','BLOQUEADO-POR-VALIDACIÓN','Permiso de uso digital/reproducción no aportado. Solo registro externo; no administra el cuestionario.'),
  ('registro-escala/norton','Norton completo','BLOQUEADO-POR-VALIDACIÓN','Versión y derechos digitales pendientes de cotejo. Registro externo no equivale a aplicación.'),
  ('instrumento/rass','RASS administrado','BLOQUEADO-POR-VALIDACIÓN','Versión, traducción y derechos de uso digital pendientes. No se inventa un formulario.'),

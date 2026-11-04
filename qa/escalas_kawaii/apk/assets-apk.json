@@ -1,0 +1,9 @@
+{
+  "apk_sha256": "54aa3bb57f4161ebbb709f6fd59d94dc539098d3a24100fa5447536afe7f99a4",
+  "source_assets": 60,
+  "matched": 60,
+  "missing": [],
+  "different": [],
+  "additional_packaged_assets": [],
+  "scope": "comparación de bytes app/src/main/assets contra el APK final, no otros recursos compilados"
+}

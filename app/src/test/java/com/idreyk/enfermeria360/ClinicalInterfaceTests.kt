@@ -67,6 +67,43 @@ class ClinicalInterfaceTests {
         ui.onNodeWithText("Esta ficha NO administra", substring = true).assertExists()
     }
 
+    @Test fun accessTypeFilterAndResetWorkThroughTheNativeUi() {
+        library()
+        click("Tipo de acceso")
+        ui.onNode(hasText("Solo registro") and hasAnyAncestor(isPopup())).performClick()
+        ui.onNodeWithTag("ficha-norton").assertExists()
+        ui.onNodeWithTag("ficha-apgar").assertDoesNotExist()
+        ui.onAllNodes(hasSetTextAction()).onFirst().performTextReplacement("ningún resultado QA")
+        ui.onNodeWithText("Sin coincidencias").assertExists()
+        click("Limpiar filtros")
+        ui.onNodeWithTag("ficha-apgar").assertExists()
+    }
+
+    @Test fun nortonCardLinksOnlyToTheExistingAdultExternalRecorder() {
+        library()
+        ui.onAllNodes(hasSetTextAction()).onFirst().performTextReplacement("Norton")
+        ui.onNodeWithTag("ficha-norton").performScrollTo().performClick()
+        await { ui.onAllNodesWithTag("clave-norton").fetchSemanticsNodes().isNotEmpty() }
+        ui.onNodeWithTag("escala-arte").assertExists()
+        ui.onNodeWithText("Abrir registro de práctica · adulto").performScrollTo().performClick()
+        ui.onNodeWithText("Norton · registro externo").assertExists()
+        ui.onNodeWithText("Confirmo un ejemplo adulto, no pediátrico ni neonatal").assertExists()
+        ui.onNodeWithText("Guardar puntaje externo").assertIsNotEnabled()
+        ui.onNodeWithTag("escala-arte").assertDoesNotExist()
+    }
+
+    @Test fun rassCardMakesItsAdultOnlyRecorderExplicit() {
+        library()
+        ui.onAllNodes(hasSetTextAction()).onFirst().performTextReplacement("RASS")
+        ui.onNodeWithTag("ficha-rass").performScrollTo().performClick()
+        await { ui.onAllNodesWithTag("clave-rass").fetchSemanticsNodes().isNotEmpty() }
+        ui.onNodeWithText("Abrir registro de práctica · adulto").performScrollTo().performClick()
+        ui.onNodeWithText("RASS · registro externo").assertExists()
+        ui.onNodeWithText("Adulto · no administra ni interpreta el instrumento").assertExists()
+        ui.onNodeWithText("Guardar puntaje externo").assertIsNotEnabled()
+        ui.onNodeWithTag("escala-arte").assertDoesNotExist()
+    }
+
     @Test fun numericPainStartsUnsetCanSaveZeroAndDoesNotSaveMissingSelfReport() {
         scales()
         click("Escala numérica del dolor")

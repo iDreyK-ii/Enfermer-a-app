@@ -16,9 +16,9 @@ class ClinicalCatalogTests {
 
     @Test fun packagedCatalogHasExplicitScopeSourcesAndNoClinicalApproval() {
         val data = catalog()
-        assertEquals(44, data.instruments.size)
-        assertEquals(40, data.sources.size)
-        assertEquals(11, data.instruments.count { it.hasPractice })
+        assertEquals(45, data.instruments.size)
+        assertEquals(43, data.sources.size)
+        assertEquals(13, data.instruments.count { it.hasPractice })
         assertTrue(data.scope.contains("no exhaustivo"))
         assertTrue(data.instruments.all { it.sourceIds.isNotEmpty() && it.rights.isNotBlank() })
     }
@@ -45,7 +45,18 @@ class ClinicalCatalogTests {
         val data = catalog()
         assertEquals(listOf("nips", "pipp-r"), data.filter(population = "neonatos", area = "Dolor").map { it.id })
         assertTrue(data.filter(population = "neonatos", area = "Dolor", withPracticeOnly = true).isEmpty())
-        assertEquals(11, data.filter(withPracticeOnly = true).size)
+        assertEquals(13, data.filter(withPracticeOnly = true).size)
+    }
+
+    @Test fun accessTypeFiltersCombineWithPopulationAndNeverMakeDocumentaryCardsInteractive() {
+        val data = catalog()
+        val records = data.filter(availability = ClinicalAvailability.RECORD)
+        assertEquals(setOf("glasgow-pediatrico", "numerica", "capurro-a", "braden", "morse", "norton", "rass"), records.map { it.id }.toSet())
+        assertEquals(listOf("norton"), data.filter(query = "norton", population = "adultos", availability = ClinicalAvailability.RECORD).map { it.id })
+        assertTrue(data.filter(population = "neonatos", availability = ClinicalAvailability.PERMISSION).none { it.hasPractice })
+        assertTrue(data.filter(availability = ClinicalAvailability.DOCUMENT, withPracticeOnly = true).isEmpty())
+        assertEquals("registro-escala/norton", data.instruments.single { it.id == "norton" }.route)
+        assertEquals("registro-escala/rass", data.instruments.single { it.id == "rass" }.route)
     }
 
     @Test fun eachActionHasAnExplicitNativeRouteAndCapurroVariantsRemainDistinct() {

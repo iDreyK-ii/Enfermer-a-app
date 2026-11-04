@@ -30,10 +30,10 @@ class CatalogoClinicoTest(unittest.TestCase):
         self.assertEqual(before, ASSET.read_bytes())
 
     def test_unique_inventory_and_sources(self):
-        self.assertEqual(44, len(self.items))
-        self.assertEqual(44, len({x['id'] for x in self.items}))
-        self.assertEqual(40, len(self.sources))
-        self.assertEqual(40, len({x['id'] for x in self.sources}))
+        self.assertEqual(45, len(self.items))
+        self.assertEqual(45, len({x['id'] for x in self.items}))
+        self.assertEqual(43, len(self.sources))
+        self.assertEqual(43, len({x['id'] for x in self.sources}))
 
     def test_every_fact_sheet_names_version_limits_rights_and_review_depth(self):
         source_ids = {x['id'] for x in self.sources}
@@ -55,14 +55,14 @@ class CatalogoClinicoTest(unittest.TestCase):
 
     def test_no_documentary_or_permission_card_is_a_fake_calculator(self):
         interactive = [x for x in self.items if x['ruta']]
-        self.assertEqual(11, len(interactive))
+        self.assertEqual(13, len(interactive))
         for entry in self.items:
             self.assertEqual(bool(entry['ruta']), entry['estado'] in ('calculo', 'registro', 'simulacion'))
 
     def test_population_separation_is_explicit(self):
         self.assertEqual({'adultos', 'pediatria', 'neonatos'}, {p for x in self.items for p in x['poblaciones']})
         by_id = {x['id']: x for x in self.items}
-        for name in ('4at', 'news2', 'morse', 'braden'):
+        for name in ('4at', 'news2', 'morse', 'braden', 'norton'):
             self.assertEqual(['adultos'], by_id[name]['poblaciones'])
         self.assertEqual(['neonatos'], by_id['apgar']['poblaciones'])
         self.assertEqual('capurro/A', by_id['capurro-a']['ruta'])

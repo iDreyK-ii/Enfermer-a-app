@@ -1,0 +1,133 @@
+{
+  "origin": "Ilustraciones simbólicas generadas por IA como recursos individuales, revisadas visualmente; no son instrumentos, instrucciones ni imágenes oficiales.",
+  "processing": "Fondo casi blanco contiguo eliminado; recorte, encaje en 960x600 y cuantización; originales temporales no incluidos en la entrega.",
+  "clinical_approval": false,
+  "assets": [
+    {
+      "id": "general",
+      "description": "Portapapeles, lupa y libro de consulta",
+      "source_file": "hero-general-clean.png",
+      "source_sha256": "95572915aef0c7e500cd79d0b18ab1110e641b60a1df931f5f7d9dfc28ef05e8",
+      "source_size": [
+        1376,
+        768
+      ],
+      "asset": "escalas_art/escala_general.png",
+      "asset_sha256": "f035daab7a4bbacd5f4931b01718404454484a6eddc30b8b7633c328727cc233",
+      "asset_size": [
+        960,
+        600
+      ],
+      "transparent_background": true,
+      "is_standardized_test_stimulus": false
+    },
+    {
+      "id": "neuro",
+      "description": "Nube cerebral simbólica y pensamiento",
+      "source_file": "neuro.png",
+      "source_sha256": "b06278b1dcdc297f2e06f8a5c4eae8578f91507d72b050b5ef0eec45422921e2",
+      "source_size": [
+        1376,
+        768
+      ],
+      "asset": "escalas_art/escala_neuro.png",
+      "asset_sha256": "98e23dcee1c64b561f357446d85e7067d87fac617766c378fcc66a9611c08dd8",
+      "asset_size": [
+        960,
+        600
+      ],
+      "transparent_background": true,
+      "is_standardized_test_stimulus": false
+    },
+    {
+      "id": "dolor",
+      "description": "Burbuja de comunicación y corazón",
+      "source_file": "dolor.png",
+      "source_sha256": "1b7a199329ca40991e4efda7af1d15944170553dd1777226b2c6428d8e2ea64d",
+      "source_size": [
+        1376,
+        768
+      ],
+      "asset": "escalas_art/escala_dolor.png",
+      "asset_sha256": "98f3f1b69bc433ae1b51e56ef3e239bbdfb843edea299d208354cf58234cf297",
+      "asset_size": [
+        960,
+        600
+      ],
+      "transparent_background": true,
+      "is_standardized_test_stimulus": false
+    },
+    {
+      "id": "seguridad",
+      "description": "Escudo simbólico y apósito decorativo",
+      "source_file": "seguridad.png",
+      "source_sha256": "c189f9bc59f454975cea5fe3d1c6c8369f73f9b3f00d09c5a75aff48b83308d9",
+      "source_size": [
+        1376,
+        768
+      ],
+      "asset": "escalas_art/escala_seguridad.png",
+      "asset_sha256": "4c9a26019b395d95f5e5dbb500bcd8e8e5d56f5e52e874394d13c10c7a2473db",
+      "asset_size": [
+        960,
+        600
+      ],
+      "transparent_background": true,
+      "is_standardized_test_stimulus": false
+    },
+    {
+      "id": "neonatal",
+      "description": "Gorrito y manta, sin bebé ni anatomía",
+      "source_file": "neonatal.png",
+      "source_sha256": "c6aab5c936cd754425d4cdd6b97357d65cd23d3812044993d1be82c8402ff0af",
+      "source_size": [
+        1376,
+        768
+      ],
+      "asset": "escalas_art/escala_neonatal.png",
+      "asset_sha256": "f7b9039ec3f4f3ee5a59790d09b02c2d5f4682007ef3b3947be48e0935eaf3c2",
+      "asset_size": [
+        960,
+        600
+      ],
+      "transparent_background": true,
+      "is_standardized_test_stimulus": false
+    },
+    {
+      "id": "nutricion",
+      "description": "Cuenco, cuchara y manzana",
+      "source_file": "nutricion.png",
+      "source_sha256": "87e030ceea87efcecd938240c380ac637ac868c1a631e66c64c84ba1677ad1b8",
+      "source_size": [
+        1376,
+        768
+      ],
+      "asset": "escalas_art/escala_nutricion.png",
+      "asset_sha256": "8e5405fddf9d8ae2459843146212049041c0d9564d56b348128bf88359c19774",
+      "asset_size": [
+        960,
+        600
+      ],
+      "transparent_background": true,
+      "is_standardized_test_stimulus": false
+    },
+    {
+      "id": "funcion",
+      "description": "Calzado y estrella, actividad cotidiana",
+      "source_file": "funcion.png",
+      "source_sha256": "afc7e9f244ea1b5d3d03016d4fccbb7201d644acf56ee44251bbc1ff97ecb3c4",
+      "source_size": [
+        1376,
+        768
+      ],
+      "asset": "escalas_art/escala_funcion.png",
+      "asset_sha256": "39217d873ab99ba860a508fd360de7f94a5b30b39f9b8295831a2e4bd51af1f6",
+      "asset_size": [
+        960,
+        600
+      ],
+      "transparent_background": true,
+      "is_standardized_test_stimulus": false
+    }
+  ]
+}

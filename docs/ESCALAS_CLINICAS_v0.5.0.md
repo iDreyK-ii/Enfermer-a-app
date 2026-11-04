@@ -1,3 +1,5 @@
+> **Documento histórico v0.5.0:** el catálogo actual 0.9 tiene 45 fichas, 43 fuentes y 13 accesos; véase `research/escalas_kawaii/REVISION_2026-11-03.md`. Las cifras y límites específicos de 0.5 se conservan abajo como antecedente.
+
 # Tests y escalas clínicas — primer bloque v0.5.0
 
 **Decisión del propietario, 2 de noviembre de 2026:** instrumentos clínicos, no cuestionarios de examen; adultos, pediatría y neonatos; sin PDFs descargables por ahora. Farmacología al final. Google construyó la copia anterior según informa el propietario, sin cambios adicionales; no se recibieron fuentes/capturas del resultado para comprobarlo independientemente.

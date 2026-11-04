@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.NativePhoneLandscapeRenderTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-03T23:34:34" hostname="e2b.local" time="8.894">
+  <properties/>
+  <testcase name="landscapePhoneCanScrollAndSelectInBothThemes" classname="com.idreyk.enfermeria360.NativePhoneLandscapeRenderTests" time="8.894"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Invalid ID 0x00000000.
+]]></system-err>
+</testsuite>

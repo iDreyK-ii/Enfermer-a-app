@@ -90,6 +90,20 @@ class NativePhoneRenderTests : NativeRenderHarness() {
         ui.onNodeWithTag("atlas-viewport").performScrollTo()
         capture("12-identificacion-telefono", 390)
     }
+    @Test fun clinicalCardsUseProductionArtAndSourceLinkedExplanations() {
+        click("Escalas")
+        ui.onNodeWithTag("escala-arte").performScrollTo()
+        capture("18-escalas-portada-390", 390)
+        click("Explorar tests y escalas")
+        ui.waitUntil(30_000) { shadowOf(Looper.getMainLooper()).idle(); ui.onAllNodesWithTag("ficha-glasgow").fetchSemanticsNodes().isNotEmpty() }
+        ui.onAllNodes(hasSetTextAction()).onFirst().performTextReplacement("FPS-R")
+        ui.onNodeWithTag("ficha-fps-r").performScrollTo().performClick()
+        ui.waitUntil(30_000) { shadowOf(Looper.getMainLooper()).idle(); ui.onAllNodesWithTag("clave-fps-r").fetchSemanticsNodes().isNotEmpty() }
+        ui.onNodeWithTag("escala-arte").performScrollTo()
+        capture("19-fps-r-ficha-390", 390)
+        ui.onNodeWithTag("clave-fps-r").performScrollTo()
+        capture("20-fps-r-clave-390", 390)
+    }
     @Test fun decimalResultComesFromEnteredNumbers() {
         click("Cálculos"); click("Goteo")
         input("Volumen de ejemplo", "500"); input("Tiempo de ejemplo", "4"); input("Factor leído en el equipo ficticio", "20")
@@ -143,6 +157,13 @@ class NativeTabletRenderTests : NativeRenderHarness() {
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 @LooperMode(LooperMode.Mode.PAUSED)
 class NativeCompactRenderTests : NativeRenderHarness() {
+    @Test fun narrowDarkPhoneShowsScaleArtAndPauseState() {
+        ui.runOnIdle { vm.updateDark(true) }
+        click("Escalas")
+        ui.onNodeWithTag("escala-arte").performScrollTo()
+        ui.onNodeWithTag("escala-movimiento").assertIsNotEnabled()
+        capture("21-escalas-compacto-oscuro", 320)
+    }
     @Test fun narrowPhoneSupportsDarkThemeAndAtlasControlsWithoutLosingNavigation() {
         ui.runOnIdle { vm.updateDark(true) }
         modules(); click("Atlas interactivo"); click("Jeringa")

@@ -39,7 +39,7 @@ fun ScaleLibraryScreen(nav: (String) -> Unit, back: () -> Unit) {
             true,
         )
         AppCard(Modifier.fillMaxWidth()) {
-            ColorIcon(R.drawable.ic_book, Teal, 48)
+            ClinicalAreaIllustration(ClinicalVisualLearning.general)
             Badge("BIBLIOTECA CLÍNICA · PRIMER BLOQUE", Teal)
             Text("El instrumento correcto, con contexto.", style = MaterialTheme.typography.titleLarge)
             Text("Explora por población y área. Cada ficha distingue práctica, registro, simulación o documentación pendiente.", style = MaterialTheme.typography.bodyMedium)

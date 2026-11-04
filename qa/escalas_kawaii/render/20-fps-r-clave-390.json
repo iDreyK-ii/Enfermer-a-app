@@ -1,0 +1,15 @@
+{
+  "file": "20-fps-r-clave-390.png",
+  "sha256": "eed7739b263c01809c9df568d25db88cf4034484f3aed6b431ea11a3965c7099",
+  "width": 390,
+  "height": 844,
+  "sample_colors": 412,
+  "render": "Robolectric 4.14.1 \/ NATIVE graphics \/ production Compose \/ Android framework API 35",
+  "capture_method": "Android content View.draw(Canvas(Bitmap)); native Skia software rasterization",
+  "physical_device": false,
+  "apk_emulator": false,
+  "motion_reduced": true,
+  "theme": "claro",
+  "app_version": "0.9.0-dev-debug",
+  "clinical_validation": false
+}

@@ -132,8 +132,18 @@ class AtlasPngTest(unittest.TestCase):
         for key,digest in baseline['content_sections'].items():
             current=json.dumps(self.master[key],ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()
             self.assertEqual(digest,hashlib.sha256(current).hexdigest(),key)
+        # 0.9 intentionally improves source links and the scale catalogue/cover; these
+        # three files no longer claim byte identity with b463. Their changes have their
+        # own focused tests. All other historical byte guards remain active.
+        scales_09_changes = {
+            'app/src/main/java/com/idreyk/enfermeria360/Design.kt',
+            'app/src/main/java/com/idreyk/enfermeria360/ClinicalCatalog.kt',
+            'app/src/main/java/com/idreyk/enfermeria360/ScreensScales.kt',
+        }
+        self.assertTrue(scales_09_changes <= baseline['unchanged_files'].keys())
         for path,digest in baseline['unchanged_files'].items():
-            self.assertEqual(digest,hashlib.sha256((ROOT/path).read_bytes()).hexdigest(),path)
+            if path not in scales_09_changes:
+                self.assertEqual(digest,hashlib.sha256((ROOT/path).read_bytes()).hexdigest(),path)
 
 
 if __name__ == '__main__':

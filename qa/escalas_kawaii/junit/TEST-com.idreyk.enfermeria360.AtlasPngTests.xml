@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.AtlasPngTests" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-11-03T23:33:06" hostname="e2b.local" time="7.273">
+  <properties/>
+  <testcase name="outOfBoundsAndIncompleteHotspotsAreRejected" classname="com.idreyk.enfermeria360.AtlasPngTests" time="5.782"/>
+  <testcase name="missingImageStillRequiresExplicitPendingState" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.125"/>
+  <testcase name="allTwentyFourQuizzesScoreActualChoicesAndRejectInvalidOrExtraAnswers" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.066"/>
+  <testcase name="technicalNamesAndAliasesAreActuallySearchableOffline" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.098"/>
+  <testcase name="formerlyRejectedDevicesAreNowDifferentExplicitKawaiiAssets" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.07"/>
+  <testcase name="unknownOrTraversalImagePathsAndOversizedImagesAreRejected" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.133"/>
+  <testcase name="routeVersionCompletionAndUnknownDeviceAreGuarded" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.085"/>
+  <testcase name="twentyFourDistinctDecodedPngsHaveRealAlphaAndHotspotsOnVisiblePixels" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.672"/>
+  <testcase name="metadataNeverInventsExpertApprovalAndDisclosesDirectRasterization" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.052"/>
+  <testcase name="hiddenBellBladderAndFilterAreNeverQuizTargetsOrOptions" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.039"/>
+  <testcase name="decorativeMotionPolicyStopsForQuizZoomReducedAndPause" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.036"/>
+  <testcase name="completedQuizPersistsAndCreatesOneHistoryEntryWithoutDestroyingOldProgress" classname="com.idreyk.enfermeria360.AtlasPngTests" time="0.114"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

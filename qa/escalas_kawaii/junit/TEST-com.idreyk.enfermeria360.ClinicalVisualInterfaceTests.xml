@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.ClinicalVisualInterfaceTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-03T23:33:27" hostname="e2b.local" time="6.963">
+  <properties/>
+  <testcase name="unsafeSourceNeverPresentsAnOpenButton" classname="com.idreyk.enfermeria360.ClinicalVisualInterfaceTests" time="5.856"/>
+  <testcase name="illustrationCanBePausedAndReducedMotionAlwaysTakesPriority" classname="com.idreyk.enfermeria360.ClinicalVisualInterfaceTests" time="0.668"/>
+  <testcase name="sourceOnlyOpensWhenUserExplicitlyClicksAndFailureIsReadable" classname="com.idreyk.enfermeria360.ClinicalVisualInterfaceTests" time="0.438"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

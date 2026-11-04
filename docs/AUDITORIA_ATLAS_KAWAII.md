@@ -1,4 +1,6 @@
-# Auditoría actual: Atlas kawaii y aplicación nativa 0.8.0 (local)
+> **Auditoría histórica del atlas 0.8.** El estado de la app actual 0.9 se amplía en `research/escalas_kawaii/REVISION_2026-11-03.md` y `qa/escalas_kawaii/RESULTADOS.md`. Las cifras siguientes corresponden a 0.8.
+
+# Auditoría histórica: Atlas kawaii y aplicación nativa 0.8.0 (local)
 
 **Estado:** revisión parcial educativa, no clínica y aún sin publicar. La elección de estilo del propietario reemplaza el fotorrealismo por kawaii, no elimina los controles de anatomía, transparencia, fuentes ni el requisito de revisión profesional. La última publicación continúa siendo `b463c580` (0.6.0); ninguna mejora o solicitud de continuación autoriza un nuevo push.
 

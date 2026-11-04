@@ -1,0 +1,15 @@
+{
+  "file": "21-escalas-compacto-oscuro.png",
+  "sha256": "8214b67ce2022cc115035fafa8adbec06f4b8125824973001fc9ab3d7fff982b",
+  "width": 320,
+  "height": 640,
+  "sample_colors": 341,
+  "render": "Robolectric 4.14.1 \/ NATIVE graphics \/ production Compose \/ Android framework API 35",
+  "capture_method": "Android content View.draw(Canvas(Bitmap)); native Skia software rasterization",
+  "physical_device": false,
+  "apk_emulator": false,
+  "motion_reduced": true,
+  "theme": "oscuro",
+  "app_version": "0.9.0-dev-debug",
+  "clinical_validation": false
+}

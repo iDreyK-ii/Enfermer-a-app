@@ -1,8 +1,10 @@
-> **Revisión corriente 0.8.0-dev:** resultados y límites en `qa/atlas_kawaii/RESULTADOS.md`; no publicar sin autorización expresa.
+> **Revisión corriente 0.9.0-dev:** evidencia y límites en `qa/escalas_kawaii/RESULTADOS.md`; no publicar sin autorización expresa.
+
+> **Antecedente 0.8.0-dev:** resultados y límites en `qa/atlas_kawaii/RESULTADOS.md`; no publicar sin autorización expresa.
 
 > Histórico 0.7.0, no evidencia automática de 0.8: 252 JVM, 118 Python, 5 SQLite y 17 PGLite; lint 0 errores/26 advertencias. Ocho capturas del APK en emulador API28, 17 renders Robolectric separados y 2/2 pruebas PDF instrumentadas aprobadas. No hardware físico, no nuevo CI/publicación. Detalle: `qa/atlas_v22/RESULTADOS.md`.
 
-# Compilar, probar e instalar iDreyK 360 v0.8.0-dev (local)
+# Compilar, probar e instalar iDreyK 360 v0.9.0-dev (local)
 
 Ejecutar desde la raíz `idreyk-android/`. Es Android nativo: **no hay servidor web ni puerto que levantar**. Gradle compila la app; Python y Node solo se usan para herramientas y pruebas locales.
 
@@ -62,7 +64,7 @@ Gradle lee `IDREYK_SUPABASE_URL` e `IDREYK_SUPABASE_PUBLISHABLE_KEY` de entorno 
 
 Para otro proyecto nuevo autorizado, crear/configurar RLS y correo siguiendo `backend/README.md`; para el ya creado, seguir el estado y los pendientes de la guía actual. Después compilar con `:app:assembleDebug` y los valores públicos reales, **sin los argumentos que los vacían en el script de pruebas**. Nunca incorporar la clave secreta, `service_role`, contraseña PostgreSQL o clave privada de firma.
 
-El APK local 0.8.0 de esta revisión se compila con nube vacía. No se ha ejecutado la compilación conectada en esta fase. No existe una conexión simulada presentada como real. La integración real necesita su propio plan de pruebas y consentimiento; no reutilizar cuentas reales desde pruebas unitarias.
+El APK local 0.9.0 de esta revisión se compila con nube vacía. No se ha ejecutado la compilación conectada en esta fase. No existe una conexión simulada presentada como real. La integración real necesita su propio plan de pruebas y consentimiento; no reutilizar cuentas reales desde pruebas unitarias.
 
 ## Instalar sin perder datos
 
@@ -81,12 +83,12 @@ Para comparar un certificado conocido usar `IDREYK_EXPECTED_CERT_SHA256` con `sc
 
 ## Evidencia y alcance
 
-Ver `qa/atlas_kawaii/RESULTADOS.md` y `docs/AUDITORIA_ATLAS_KAWAII.md`. Los informes de 0.7.0 y 0.6.0 son históricos. Pruebas JVM/Robolectric, no certificación física o clínica. SMTP/Auth/Storage reales, hardware Keystore, FPS y publicación de producción siguen pendientes. Las capturas Robolectric se distinguen de cualquier ejecución instalada. Consultar procedencia por archivo y limitaciones concretas en el informe actual.
+Ver `qa/escalas_kawaii/RESULTADOS.md` y `research/escalas_kawaii/REVISION_2026-11-03.md`. Los informes de 0.8.0, 0.7.0 y 0.6.0 son históricos. Pruebas JVM/Robolectric, no certificación física o clínica. SMTP/Auth/Storage reales, hardware Keystore, FPS y publicación de producción siguen pendientes. Las capturas Robolectric se distinguen de cualquier ejecución instalada. Consultar procedencia por archivo y limitaciones concretas en el informe actual.
 
 
-## Capturas y pruebas instrumentadas pendientes
+## Capturas y pruebas instrumentadas: reproducción y límites
 
-La QA crea PNG/JSON en `.cache/native-mvp/` con Robolectric NATIVE/API35, `View.draw`, sin dispositivo. El tmpdir de tests está en `.cache/test-tmp/` (disco), evitando bibliotecas grandes en un `/tmp` tmpfs; las suites usan forks secuenciales. No se necesita KVM para esta QA, pero tampoco se prueba un emulador APK.
+La QA crea PNG/JSON en `.cache/native-mvp/` con Robolectric NATIVE/API35, `View.draw`, sin dispositivo. El tmpdir de tests está en `.cache/test-tmp/` (disco), evitando bibliotecas grandes en un `/tmp` tmpfs; las suites usan forks secuenciales. No se necesita KVM para esta QA; por separado, la versión 0.9 se probó en un emulador API28 sin KVM, no en teléfono físico.
 
 ```sh
 # Compila y empaqueta las dos pruebas PDF: NO las ejecuta.
@@ -95,6 +97,6 @@ La QA crea PNG/JSON en `.cache/native-mvp/` con Robolectric NATIVE/API35, `View.
 ./gradlew :app:connectedDebugAndroidTest
 ```
 
-`EducationalPdfDeviceTests` comprueba generación y selección de página mediante el framework real. No se ejecutó en el entorno de desarrollo de esta entrega; el escritor nativo PdfDocument no está implementado por Robolectric 4.14.1. Después debe comprobarse también el servicio de impresión/selector SAF, que no es lo mismo que invocar el generador.
+`EducationalPdfDeviceTests` comprueba generación y selección de página mediante el framework real. En esta entrega 0.9 se ejecutaron 2/2 en emulador API28 sobre el APK final; el escritor nativo PdfDocument no está implementado por Robolectric 4.14.1. Después debe comprobarse también el servicio de impresión/selector SAF, que no es lo mismo que invocar el generador.
 
 Ejercitar teléfono, tablet y un equipo de recursos limitados; rotación, texto grande, teclado, TalkBack, paso a segundo plano del cronómetro, importación cancelada, guardado y actualización sin pérdida de datos. No atribuir resultados aún no obtenidos.

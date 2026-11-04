@@ -1,6 +1,6 @@
 # 4AT: procedencia, licencia y cambios de esta adaptación
 
-Consulta: **2 de noviembre de 2026**. Alcance: `ClinicalPractice.fourAt` y `FourAtPracticeScreen`, no todas las fuentes del proyecto.
+Consulta inicial: **2 de noviembre de 2026**; guía y página de atribución cotejadas de nuevo el **3 de noviembre de 2026**. Alcance: `ClinicalPractice.fourAt` y `FourAtPracticeScreen`, no todas las fuentes del proyecto.
 
 Adaptado de **4AT © 2011–2014 Alasdair MacLullich, Tracy Ryan y Helen Cash**. Licencia **Creative Commons Attribution 4.0 International (CC BY 4.0)**: https://creativecommons.org/licenses/by/4.0/ . Instrumento oficial y actual: https://www.the4at.com/ . Condiciones leídas: https://www.the4at.com/attribution . La licencia no concede derechos sobre logotipos/marcas ni sobre material de terceros separado.
 

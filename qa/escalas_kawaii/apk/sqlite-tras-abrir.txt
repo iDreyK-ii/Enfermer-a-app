@@ -1,0 +1,4 @@
+total 116
+-rw-rw---- 1 u0_a67 u0_a67 86016 2026-11-03 23:49 idreyk_local.db
+-rw-rw-rw- 1 u0_a67 u0_a67 32768 2026-11-03 23:52 idreyk_local.db-shm
+-rw-rw---- 1 u0_a67 u0_a67     0 2026-11-03 23:49 idreyk_local.db-wal

@@ -46,11 +46,13 @@ data class ClinicalCatalog(
         population: String = "",
         area: String = "",
         withPracticeOnly: Boolean = false,
+        availability: ClinicalAvailability? = null,
     ): List<ClinicalInstrument> {
         val needle = normalized(query.trim())
         return instruments.filter {
             (population.isEmpty() || population in it.populations) &&
                 (area.isEmpty() || area == it.area) &&
+                (availability == null || availability == it.availability) &&
                 (!withPracticeOnly || it.hasPractice) &&
                 normalized("${it.name} ${it.area} ${it.purpose} ${it.version}").contains(needle)
         }
@@ -72,6 +74,8 @@ data class ClinicalCatalog(
             "4at" to "test-4at",
             "braden" to "registro-escala/braden",
             "morse" to "registro-escala/morse",
+            "norton" to "registro-escala/norton",
+            "rass" to "registro-escala/rass",
             "apgar" to "escala/apgar",
             "silverman" to "escala/silverman",
             "capurro-a" to "capurro/A",

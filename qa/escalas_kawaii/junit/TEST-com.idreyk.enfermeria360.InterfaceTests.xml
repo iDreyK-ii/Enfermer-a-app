@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.idreyk.enfermeria360.InterfaceTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-11-03T23:33:38" hostname="e2b.local" time="7.058">
+  <properties/>
+  <testcase name="homeOpensNativePharmacologyAndPreparedFields" classname="com.idreyk.enfermeria360.InterfaceTests" time="6.583"/>
+  <testcase name="nativeProfileWritesLocalThemePreference" classname="com.idreyk.enfermeria360.InterfaceTests" time="0.475"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

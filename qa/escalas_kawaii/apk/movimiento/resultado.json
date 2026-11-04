@@ -1,0 +1,17 @@
+{
+  "ambito": "APK final 0.9, emulador API28: dos fotogramas al moverse y dos tras pulsar pausa; no mide FPS ni teléfono físico",
+  "region_xyxy": [
+    170,
+    190,
+    310,
+    325
+  ],
+  "pixeles_distintos_movimiento": 4203,
+  "pixeles_distintos_pausa": 0,
+  "sha256": {
+    "mov-a.png": "c7d4a4980ccd07a6e7cb035d7281f7ce1b1f4fb6bf12be5a4dd94940075a1b63",
+    "mov-b.png": "c20654f647421c4cc0b16bc63e85fc34891e0627949dfb03f7b54ba73fb9524e",
+    "pausa-a.png": "3c2e6e55e17899d00942096b28597786f0b9194cd887fd87275616bb9128f124",
+    "pausa-b.png": "3c2e6e55e17899d00942096b28597786f0b9194cd887fd87275616bb9128f124"
+  }
+}

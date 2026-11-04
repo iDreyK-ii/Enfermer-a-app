@@ -1,0 +1,15 @@
+{
+  "file": "19-fps-r-ficha-390.png",
+  "sha256": "0abec701f2e27d8a65c111912adea6f4c1e44af6adf593266d4195f36f9efe97",
+  "width": 390,
+  "height": 844,
+  "sample_colors": 377,
+  "render": "Robolectric 4.14.1 \/ NATIVE graphics \/ production Compose \/ Android framework API 35",
+  "capture_method": "Android content View.draw(Canvas(Bitmap)); native Skia software rasterization",
+  "physical_device": false,
+  "apk_emulator": false,
+  "motion_reduced": true,
+  "theme": "claro",
+  "app_version": "0.9.0-dev-debug",
+  "clinical_validation": false
+}
