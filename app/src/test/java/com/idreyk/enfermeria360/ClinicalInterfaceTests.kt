@@ -115,7 +115,7 @@ class ClinicalInterfaceTests {
         click("Limpiar filtros")
         ui.onNodeWithTag("filtro-con-acceso").assertIsOff()
         ui.onNodeWithTag("poblacion-todas").assertIsSelected()
-        ui.onNodeWithText("Todas las áreas").assertExists()
+        ui.onNodeWithText("Todas las clasificaciones").assertExists()
         ui.onNodeWithText("Todos los tipos").assertExists()
         ui.onNodeWithText("191 FICHAS EN ESTA VISTA").assertExists()
     }
