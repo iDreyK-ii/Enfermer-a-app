@@ -180,6 +180,7 @@ fun ClinicalCatalogScreen(nav: (String) -> Unit, back: () -> Unit) {
     }
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun ClinicalInstrumentScreen(id: String, nav: (String) -> Unit, back: () -> Unit) {
     val load = rememberClinicalCatalog()
