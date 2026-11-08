@@ -29,6 +29,17 @@ REQUIRED_IDS = {
     "tiss-76", "tiss-28", "nas", "nems", "sofa", "qsofa",
     "apgar", "capurro-a", "capurro-b", "glasgow", "eva", "rass", "norton",
 }
+SERVICE_POLICIES = {
+    "tiss-76": {"UCI adulto"},
+    "tiss-28": {"UCI adulto"},
+    "nas": {"UCI adulto"},
+    "nems": {"UCI adulto"},
+}
+NEWBORN_ONLY = {
+    "nips", "pipp-r", "capurro-a", "capurro-b", "ballard", "downes",
+    "crib-ii", "snap-ii", "snappe-ii", "ntiss", "comfortneo",
+    "n-pass", "finnegan", "eat-sleep-console",
+}
 
 def fail(message: str) -> None:
     raise SystemExit("ERROR: " + message)
@@ -94,6 +105,16 @@ def main() -> None:
             fail(f"state/route mismatch for {instrument_id}")
         if route and ALLOWED_ROUTES.get(instrument_id) != route:
             fail(f"unapproved route for {instrument_id}")
+        if instrument_id in SERVICE_POLICIES and set(services) != SERVICE_POLICIES[instrument_id]:
+            fail(f"invalid service mapping for workload tool {instrument_id}")
+        if instrument_id == "news2" and any(x in services for x in ("Pediatría", "UCI pediátrica", "Obstetricia y sala de partos", "UCI adulto")):
+            fail("NEWS2 must not be mapped to pediatric, obstetric or ICU services")
+        if instrument_id == "pews" and any(x in services for x in ("UCI adulto", "Obstetricia y sala de partos")):
+            fail("PEWS must not be mapped to adult ICU or obstetrics")
+        if instrument_id == "rass" and populations != ["adultos"]:
+            fail("RASS entry must identify its adult version")
+        if instrument_id in NEWBORN_ONLY and set(services) != {"Neonatología y UCIN"}:
+            fail(f"invalid neonatal service mapping for {instrument_id}")
 
     actionable_count = sum(bool(item.get("ruta")) for item in instruments)
     service_count = len({service for item in instruments for service in item["servicios"]})
