@@ -90,14 +90,14 @@
   "contenido_clinico": {
     "biblioteca": "app/src/main/assets/escalas_clinicas_v1.json",
     "fuente_editorial": "research/escalas/catalogo_fuente.json",
-    "fichas_documentales": 45,
+    "fichas_documentales": 191,
     "revision_clinica": "pendiente",
     "inventario_exhaustivo": false,
     "descargas_pdf_solicitadas": false,
     "farmacologia": "Inventario nominal importado en IDENTIFICADO; monografías y validación profesional posteriores",
-    "fuentes_documentales": 43,
+    "fuentes_documentales": 86,
     "accesos_practica_simulacion_registro": 13,
-    "revision_parcial": "2026-11-03; ver research/escalas_kawaii/REVISION_2026-11-03.md"
+    "revision_parcial": "2026-11-08; ver research/escalas/REVISION_2026-11-08.md"
   },
   "base_maestra": {
     "version_especificacion": "2.1",

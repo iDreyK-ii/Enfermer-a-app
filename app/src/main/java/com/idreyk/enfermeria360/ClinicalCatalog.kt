@@ -5,6 +5,19 @@ import java.time.LocalDate
 import org.json.JSONArray
 import org.json.JSONObject
 
+internal fun clinicalInstrumentTypeGroup(type: String): String = when {
+    type.contains("carga", true) || type.contains("actividad de enfermería", true) || type.contains("intervención terapéutica", true) || type.contains("actividad terapéutica", true) -> "Carga asistencial"
+    type.contains("triaje", true) -> "Triaje"
+    type.contains("alerta", true) || type.contains("monitoriz", true) -> "Monitorización y alerta"
+    type.contains("cribado", true) -> "Cribado"
+    type.contains("pronóstico", true) || type.contains("pronostico", true) -> "Pronóstico"
+    type.contains("clasificación", true) || type.contains("clasificacion", true) -> "Clasificación"
+    type.contains("funcional", true) -> "Funcionalidad"
+    type.contains("valoración", true) || type.contains("valoracion", true) || type.contains("autoinforme", true) -> "Valoración"
+    type.contains("índice", true) || type.contains("indice", true) || type.contains("indicador", true) -> "Indicadores e índices"
+    else -> "Herramienta clínica"
+}
+
 enum class ClinicalAvailability(val key: String, val label: String) {
     PRACTICE("calculo", "Práctica interactiva"),
     RECORD("registro", "Solo registro"),
@@ -19,6 +32,10 @@ data class ClinicalInstrument(
     val id: String,
     val name: String,
     val area: String,
+    val services: List<String>,
+    val instrumentType: String,
+    val nursingRole: String,
+    val localContext: String,
     val populations: List<String>,
     val purpose: String,
     val populationDetail: String,
@@ -47,14 +64,18 @@ data class ClinicalCatalog(
         area: String = "",
         withPracticeOnly: Boolean = false,
         availability: ClinicalAvailability? = null,
+        service: String = "",
+        instrumentType: String = "",
     ): List<ClinicalInstrument> {
         val needle = normalized(query.trim())
         return instruments.filter {
             (population.isEmpty() || population in it.populations) &&
                 (area.isEmpty() || area == it.area) &&
+                (service.isEmpty() || service in it.services) &&
+                (instrumentType.isEmpty() || clinicalInstrumentTypeGroup(it.instrumentType) == instrumentType) &&
                 (availability == null || availability == it.availability) &&
                 (!withPracticeOnly || it.hasPractice) &&
-                normalized("${it.name} ${it.area} ${it.purpose} ${it.version}").contains(needle)
+                normalized("${it.name} ${it.area} ${it.instrumentType} ${it.services.joinToString(" ")} ${it.purpose} ${it.version}").contains(needle)
         }
     }
 
@@ -103,7 +124,7 @@ data class ClinicalCatalog(
             field(obj, fieldName, 10).also { LocalDate.parse(it) }
 
         fun parse(text: String): ClinicalCatalog {
-            require(text.toByteArray(Charsets.UTF_8).size <= 250_000) { "Catálogo demasiado grande." }
+            require(text.toByteArray(Charsets.UTF_8).size <= 500_000) { "Catálogo demasiado grande." }
             JsonSafety.requireBoundedDepth(text)
             val root = JSONObject(text)
             require(root.getInt("formato") == 1) { "Formato de biblioteca desconocido." }
@@ -128,13 +149,17 @@ data class ClinicalCatalog(
             require(sourceList.map { it.id }.distinct().size == sourceList.size) { "Fuentes duplicadas." }
             val sources = sourceList.associateBy { it.id }
             val array = root.getJSONArray("instrumentos")
-            require(array.length() in 1..120)
+            require(array.length() in 1..220)
             val instruments = (0 until array.length()).map {
                 val obj = array.getJSONObject(it)
                 val id = field(obj, "id", 60)
                 require(id.matches(Regex("[a-z0-9-]+")))
                 val populations = strings(obj.getJSONArray("poblaciones"), 3)
                 require(populations.all { it in POPULATIONS })
+                val services = strings(obj.getJSONArray("servicios"), 30)
+                val instrumentType = field(obj, "tipo_instrumento", 120)
+                val nursingRole = field(obj, "rol_enfermeria", 1800)
+                val localContext = field(obj, "contexto_peru", 1800)
                 val refs = strings(obj.getJSONArray("fuentes"), 10)
                 require(refs.all { it in sources }) { "Falta una fuente del instrumento." }
                 require(obj.getString("revision_clinica") == "pendiente") {
@@ -150,7 +175,8 @@ data class ClinicalCatalog(
                 require(actionable == route.isNotEmpty()) { "Estado y función no coinciden." }
                 require(route.isEmpty() || PRACTICE_ROUTES[id] == route) { "Ruta no autorizada para esta ficha." }
                 ClinicalInstrument(
-                    id, field(obj, "nombre", 160), field(obj, "area", 100), populations,
+                    id, field(obj, "nombre", 160), field(obj, "area", 100), services, instrumentType,
+                    nursingRole, localContext, populations,
                     field(obj, "objetivo"), field(obj, "poblacion_detalle"), field(obj, "version"),
                     field(obj, "metodo"), field(obj, "limites"), field(obj, "derechos"), refs,
                     availability, route, field(obj, "siguiente"), date(obj, "revision_documental"),

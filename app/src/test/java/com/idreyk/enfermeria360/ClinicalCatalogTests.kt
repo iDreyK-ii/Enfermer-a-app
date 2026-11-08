@@ -16,16 +16,16 @@ class ClinicalCatalogTests {
 
     @Test fun packagedCatalogHasExplicitScopeSourcesAndNoClinicalApproval() {
         val data = catalog()
-        assertEquals(45, data.instruments.size)
-        assertEquals(43, data.sources.size)
+        assertEquals(191, data.instruments.size)
+        assertEquals(86, data.sources.size)
         assertEquals(13, data.instruments.count { it.hasPractice })
-        assertTrue(data.scope.contains("no exhaustivo"))
+        assertTrue(data.scope.contains("biblioteca educativa/documental"))
         assertTrue(data.instruments.all { it.sourceIds.isNotEmpty() && it.rights.isNotBlank() })
     }
 
     @Test fun neonatalFilterDoesNotIncludeAdultOrGeneralPediatricTools() {
         val entries = catalog().filter(population = "neonatos")
-        assertEquals(7, entries.size)
+        assertEquals(17, entries.size)
         assertTrue(entries.any { it.id == "apgar" })
         assertFalse(entries.any { it.id in listOf("glasgow", "4at", "news2", "pews", "numerica") })
     }
@@ -64,6 +64,24 @@ class ClinicalCatalogTests {
         assertEquals(ClinicalCatalog.PRACTICE_ROUTES, data.instruments.filter { it.hasPractice }.associate { it.id to it.route })
         assertEquals("capurro/A", data.instruments.single { it.id == "capurro-a" }.route)
         assertEquals("capurro/B", data.instruments.single { it.id == "capurro-b" }.route)
+    }
+
+    @Test fun expandedServicesAreIndexedWithoutDuplicatingInstrumentIds() {
+        val data = catalog()
+        assertTrue(data.instruments.map { it.id }.distinct().size == 191)
+        assertTrue(data.instruments.single { it.id == "tiss-28" }.services.contains("UCI adulto"))
+        assertFalse(data.instruments.single { it.id == "tiss-28" }.services.contains("Emergencia"))
+        assertTrue(data.instruments.single { it.id == "sofa" }.instrumentType.contains("clasificacion"))
+        assertEquals(1, data.filter(service = "UCI adulto", query = "TISS-28").size)
+        assertEquals(0, data.filter(service = "Neonatología", query = "TISS-28").size)
+        assertEquals(0, data.filter(service = "Emergencia", query = "TISS-28").size)
+        assertEquals(0, data.filter(service = "Pediatría", query = "NEWS2").size)
+        assertEquals(0, data.filter(service = "Obstetricia y sala de partos", query = "NEWS2").size)
+        assertEquals(0, data.filter(service = "UCI adulto", query = "PEWS").size)
+        assertEquals(listOf("adultos"), data.instruments.single { it.id == "rass" }.populations)
+        assertTrue(data.instruments.all { it.services.isNotEmpty() && it.nursingRole.isNotBlank() })
+        assertTrue(data.filter(instrumentType = "Clasificación").any { it.id == "sofa" })
+        assertTrue(data.filter(instrumentType = "Carga asistencial").any { it.id == "tiss-28" })
     }
 
     @Test fun futureFormatIsNotSilentlyAccepted() = rejected { it.put("formato", 2) }
@@ -107,7 +125,7 @@ class ClinicalCatalogTests {
     }
 
     @Test fun oversizedInputIsRejectedBeforeParsing() {
-        assertThrows(IllegalArgumentException::class.java) { ClinicalCatalog.parse(" ".repeat(250001)) }
+        assertThrows(IllegalArgumentException::class.java) { ClinicalCatalog.parse(" ".repeat(500001)) }
     }
 
     @Test fun numericPainDistinguishesZeroPendingAndAbsentSelfReport() {

@@ -86,7 +86,20 @@ object ClinicalVisualLearning {
             "NHS England publica tablas pediátricas diferenciadas por edad y por contexto de atención. Son referencias británicas, no un protocolo peruano; esta app no las reproduce ni las calcula.", "pews"),
     )
 
-    fun area(name: String): ClinicalAreaArt = areas[name] ?: general
+    fun area(name: String): ClinicalAreaArt {
+        areas[name]?.let { return it }
+        val key = when {
+            listOf("neurolog", "neurocir", "ictus", "hemorragia intracerebral", "ataque isqu").any { name.contains(it, true) } -> "Neurología"
+            listOf("dolor", "analges", "paliat").any { name.contains(it, true) } -> "Dolor"
+            listOf("neonat", "obstetric", "puerper", "abstinencia neonatal", "recién nacido").any { name.contains(it, true) } -> "Neonatología"
+            listOf("piel", "caída", "herida", "quemad", "ostom", "presión").any { name.contains(it, true) } -> "Piel y caídas"
+            listOf("nutri", "malnutri", "deshidrat").any { name.contains(it, true) } -> "Nutrición"
+            listOf("funcion", "rehab", "frail", "fragilidad", "movilidad", "discapacidad").any { name.contains(it, true) } -> "Funcionalidad"
+            listOf("salud mental", "psiquiatr", "sedación", "delirium", "ansiedad", "depres").any { name.contains(it, true) } -> "Cognición y salud mental"
+            else -> null
+        }
+        return key?.let { areas[it] } ?: general
+    }
 }
 
 object ClinicalIllustrationMotion {
