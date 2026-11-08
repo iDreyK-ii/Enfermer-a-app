@@ -1,0 +1,25 @@
+name: Clinical scale catalog integrity
+on:
+  push:
+    branches: ["integracion/escalas360-191"]
+    paths:
+      - "app/src/main/assets/escalas_clinicas_v1.json"
+      - "tools/validate_scale_catalog.py"
+      - ".github/workflows/catalog-integrity.yml"
+  pull_request:
+    branches: ["desarrollo"]
+    paths:
+      - "app/src/main/assets/escalas_clinicas_v1.json"
+      - "tools/validate_scale_catalog.py"
+      - ".github/workflows/catalog-integrity.yml"
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate records, sources, service metadata and allowed routes
+        run: python tools/validate_scale_catalog.py app/src/main/assets/escalas_clinicas_v1.json
