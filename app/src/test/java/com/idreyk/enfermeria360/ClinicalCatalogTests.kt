@@ -19,7 +19,7 @@ class ClinicalCatalogTests {
         assertEquals(191, data.instruments.size)
         assertEquals(86, data.sources.size)
         assertEquals(13, data.instruments.count { it.hasPractice })
-        assertTrue(data.scope.contains("no es un inventario nacional"))
+        assertTrue(data.scope.contains("biblioteca educativa/documental"))
         assertTrue(data.instruments.all { it.sourceIds.isNotEmpty() && it.rights.isNotBlank() })
     }
 
