@@ -97,7 +97,7 @@ class ClinicalInterfaceTests {
         ui.onNodeWithTag("ficha-norton").assertExists()
         click("Limpiar filtros")
         filter.assertIsOff()
-        ui.onNodeWithText("45 FICHAS EN ESTA VISTA").assertExists()
+        ui.onNodeWithText("191 FICHAS EN ESTA VISTA").assertExists()
         ui.onNodeWithText("Limpiar filtros").assertDoesNotExist()
     }
 
@@ -105,8 +105,8 @@ class ClinicalInterfaceTests {
         library()
         ui.onAllNodes(hasSetTextAction()).onFirst().performTextReplacement("Norton")
         ui.onNodeWithTag("poblacion-adultos").performScrollTo().performClick()
-        click("Área de valoración")
-        ui.onNode(hasText("Piel y caídas") and hasAnyAncestor(isPopup())).performClick()
+        click("Servicio hospitalario")
+        ui.onNode(hasText("Medicina y hospitalización") and hasAnyAncestor(isPopup())).performClick()
         click("Tipo de acceso")
         ui.onNode(hasText("Solo registro") and hasAnyAncestor(isPopup())).performClick()
         ui.onNodeWithTag("filtro-con-acceso").performScrollTo().performClick()
@@ -117,7 +117,7 @@ class ClinicalInterfaceTests {
         ui.onNodeWithTag("poblacion-todas").assertIsSelected()
         ui.onNodeWithText("Todas las áreas").assertExists()
         ui.onNodeWithText("Todos los tipos").assertExists()
-        ui.onNodeWithText("45 FICHAS EN ESTA VISTA").assertExists()
+        ui.onNodeWithText("191 FICHAS EN ESTA VISTA").assertExists()
     }
 
     @Test fun nortonCardLinksOnlyToTheExistingAdultExternalRecorder() {
