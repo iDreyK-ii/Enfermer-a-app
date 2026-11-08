@@ -2,7 +2,7 @@
   "formato": 1,
   "fecha_revision": "2026-11-08",
   "titulo": "Tests y escalas clínicas · catálogo ampliado por servicios",
-  "alcance": "Catálogo hospitalario ampliado con 191 fichas únicas: 45 fichas originales y 146 incorporaciones. La clasificación es transversal por servicios. Biblioteca educativa/documental, no inventario nacional exhaustivo ni declaración de adopción universal. Diferencia instrumentos de Enfermería, triaje, pronóstico, gravedad, carga asistencial, funcionalidad, clasificación de imagen y resultados quirúrgicos. La validación clínica de la app sigue pendiente.",
+  "alcance": "Catálogo hospitalario ampliado, no exhaustivo, con 191 fichas únicas: 45 fichas originales y 146 incorporaciones, clasificadas transversalmente por servicio. Es una biblioteca educativa/documental, no un inventario nacional ni una declaración de adopción universal. Diferencia instrumentos de Enfermería, triaje, pronóstico, gravedad, carga asistencial, funcionalidad, clasificación de imagen y resultados quirúrgicos. La validación clínica de la app sigue pendiente.",
   "fuentes": [
     {
       "id": "gcs",
@@ -806,7 +806,6 @@
         "Emergencia",
         "UCI adulto",
         "Medicina y hospitalización",
-        "Cirugía y hospitalización quirúrgica",
         "Neurología y neurocirugía"
       ],
       "tipo_instrumento": "Práctica educativa",
@@ -836,9 +835,8 @@
       "revision_documental": "2026-11-03",
       "servicios": [
         "Emergencia",
-        "UCI adulto",
-        "Medicina y hospitalización",
-        "Cirugía y hospitalización quirúrgica",
+        "Pediatría",
+        "UCI pediátrica",
         "Neurología y neurocirugía"
       ],
       "tipo_instrumento": "Herramienta clínica",
@@ -869,8 +867,6 @@
       "servicios": [
         "Emergencia",
         "UCI adulto",
-        "Medicina y hospitalización",
-        "Cirugía y hospitalización quirúrgica",
         "Neurología y neurocirugía"
       ],
       "tipo_instrumento": "Herramienta clínica",
@@ -902,7 +898,6 @@
         "Emergencia",
         "UCI adulto",
         "Medicina y hospitalización",
-        "Cirugía y hospitalización quirúrgica",
         "Neurología y neurocirugía"
       ],
       "tipo_instrumento": "Herramienta clínica",
@@ -940,7 +935,6 @@
         "URPA y recuperación",
         "Pediatría",
         "UCI pediátrica",
-        "Neonatología y UCIN",
         "Oncología y cuidados paliativos"
       ],
       "tipo_instrumento": "Herramienta clínica",
@@ -979,7 +973,6 @@
         "URPA y recuperación",
         "Pediatría",
         "UCI pediátrica",
-        "Neonatología y UCIN",
         "Oncología y cuidados paliativos"
       ],
       "tipo_instrumento": "Herramienta clínica",
@@ -1009,14 +1002,9 @@
       "revision_documental": "2026-11-03",
       "servicios": [
         "Emergencia",
-        "Medicina y hospitalización",
-        "Cirugía y hospitalización quirúrgica",
-        "UCI adulto",
-        "URPA y recuperación",
         "Pediatría",
         "UCI pediátrica",
-        "Neonatología y UCIN",
-        "Oncología y cuidados paliativos"
+        "URPA y recuperación"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1046,14 +1034,9 @@
       "revision_documental": "2026-11-02",
       "servicios": [
         "Emergencia",
-        "Medicina y hospitalización",
-        "Cirugía y hospitalización quirúrgica",
-        "UCI adulto",
-        "URPA y recuperación",
         "Pediatría",
         "UCI pediátrica",
-        "Neonatología y UCIN",
-        "Oncología y cuidados paliativos"
+        "URPA y recuperación"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1082,14 +1065,9 @@
       "revision_documental": "2026-11-02",
       "servicios": [
         "Emergencia",
-        "Medicina y hospitalización",
-        "Cirugía y hospitalización quirúrgica",
-        "UCI adulto",
-        "URPA y recuperación",
         "Pediatría",
         "UCI pediátrica",
-        "Neonatología y UCIN",
-        "Oncología y cuidados paliativos"
+        "URPA y recuperación"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1119,14 +1097,9 @@
       "revision_documental": "2026-11-02",
       "servicios": [
         "Emergencia",
-        "Medicina y hospitalización",
-        "Cirugía y hospitalización quirúrgica",
-        "UCI adulto",
-        "URPA y recuperación",
         "Pediatría",
         "UCI pediátrica",
-        "Neonatología y UCIN",
-        "Oncología y cuidados paliativos"
+        "URPA y recuperación"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1154,15 +1127,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "Emergencia",
-        "Medicina y hospitalización",
-        "Cirugía y hospitalización quirúrgica",
-        "UCI adulto",
-        "URPA y recuperación",
-        "Pediatría",
-        "UCI pediátrica",
-        "Neonatología y UCIN",
-        "Oncología y cuidados paliativos"
+        "Neonatología y UCIN"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1190,15 +1155,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "Emergencia",
-        "Medicina y hospitalización",
-        "Cirugía y hospitalización quirúrgica",
-        "UCI adulto",
-        "URPA y recuperación",
-        "Pediatría",
-        "UCI pediátrica",
-        "Neonatología y UCIN",
-        "Oncología y cuidados paliativos"
+        "Neonatología y UCIN"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1226,14 +1183,8 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "Emergencia",
+        "Geriatría",
         "Medicina y hospitalización",
-        "Cirugía y hospitalización quirúrgica",
-        "UCI adulto",
-        "URPA y recuperación",
-        "Pediatría",
-        "UCI pediátrica",
-        "Neonatología y UCIN",
         "Oncología y cuidados paliativos"
       ],
       "tipo_instrumento": "Herramienta clínica",
@@ -1263,15 +1214,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "Emergencia",
-        "Medicina y hospitalización",
-        "Cirugía y hospitalización quirúrgica",
-        "UCI adulto",
-        "URPA y recuperación",
-        "Pediatría",
-        "UCI pediátrica",
-        "Neonatología y UCIN",
-        "Oncología y cuidados paliativos"
+        "UCI adulto"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1300,15 +1243,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "Emergencia",
-        "Medicina y hospitalización",
-        "Cirugía y hospitalización quirúrgica",
-        "UCI adulto",
-        "URPA y recuperación",
-        "Pediatría",
-        "UCI pediátrica",
-        "Neonatología y UCIN",
-        "Oncología y cuidados paliativos"
+        "UCI adulto"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1338,11 +1273,11 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-03",
       "servicios": [
-        "UCI adulto",
-        "UCI pediátrica",
-        "Medicina y hospitalización",
         "Emergencia",
-        "URPA y recuperación"
+        "Medicina y hospitalización",
+        "UCI adulto",
+        "Geriatría",
+        "Cirugía y hospitalización quirúrgica"
       ],
       "tipo_instrumento": "Práctica educativa",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1353,8 +1288,7 @@
       "nombre": "RASS",
       "area": "Delirium y sedación",
       "poblaciones": [
-        "adultos",
-        "pediatria"
+        "adultos"
       ],
       "objetivo": "Describir agitación y nivel de sedación.",
       "poblacion_detalle": "Adultos y determinados contextos pediátricos intensivos según versión y protocolo. El registro de esta app es solo para un ejemplo adulto.",
@@ -1375,9 +1309,6 @@
       "revision_documental": "2026-11-03",
       "servicios": [
         "UCI adulto",
-        "UCI pediátrica",
-        "Medicina y hospitalización",
-        "Emergencia",
         "URPA y recuperación"
       ],
       "tipo_instrumento": "Herramienta clínica",
@@ -1406,11 +1337,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "UCI adulto",
-        "UCI pediátrica",
-        "Medicina y hospitalización",
-        "Emergencia",
-        "URPA y recuperación"
+        "UCI adulto"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1438,11 +1365,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "UCI adulto",
-        "UCI pediátrica",
-        "Medicina y hospitalización",
-        "Emergencia",
-        "URPA y recuperación"
+        "UCI adulto"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1470,11 +1393,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "UCI adulto",
-        "UCI pediátrica",
-        "Medicina y hospitalización",
-        "Emergencia",
-        "URPA y recuperación"
+        "UCI pediátrica"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1503,11 +1422,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "UCI adulto",
-        "UCI pediátrica",
-        "Medicina y hospitalización",
-        "Emergencia",
-        "URPA y recuperación"
+        "UCI pediátrica"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1536,11 +1451,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "UCI adulto",
-        "UCI pediátrica",
-        "Medicina y hospitalización",
-        "Emergencia",
-        "URPA y recuperación"
+        "UCI pediátrica"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1569,11 +1480,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "UCI adulto",
-        "UCI pediátrica",
-        "Medicina y hospitalización",
-        "Emergencia",
-        "URPA y recuperación"
+        "UCI pediátrica"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1602,11 +1509,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "UCI adulto",
-        "UCI pediátrica",
-        "Medicina y hospitalización",
-        "Emergencia",
-        "URPA y recuperación"
+        "UCI pediátrica"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1638,8 +1541,6 @@
         "Medicina y hospitalización",
         "Cirugía y hospitalización quirúrgica",
         "UCI adulto",
-        "Pediatría",
-        "UCI pediátrica",
         "Geriatría",
         "Rehabilitación"
       ],
@@ -1672,10 +1573,7 @@
         "Medicina y hospitalización",
         "Cirugía y hospitalización quirúrgica",
         "UCI adulto",
-        "Pediatría",
-        "UCI pediátrica",
-        "Geriatría",
-        "Rehabilitación"
+        "Geriatría"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1703,13 +1601,8 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "Medicina y hospitalización",
-        "Cirugía y hospitalización quirúrgica",
-        "UCI adulto",
         "Pediatría",
-        "UCI pediátrica",
-        "Geriatría",
-        "Rehabilitación"
+        "UCI pediátrica"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1741,10 +1634,7 @@
         "Medicina y hospitalización",
         "Cirugía y hospitalización quirúrgica",
         "UCI adulto",
-        "Pediatría",
-        "UCI pediátrica",
-        "Geriatría",
-        "Rehabilitación"
+        "Geriatría"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1773,10 +1663,8 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-03",
       "servicios": [
-        "Neonatología y UCIN",
         "Obstetricia y sala de partos",
-        "Puerperio",
-        "UCI pediátrica"
+        "Neonatología y UCIN"
       ],
       "tipo_instrumento": "Práctica educativa",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1805,10 +1693,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "Neonatología y UCIN",
-        "Obstetricia y sala de partos",
-        "Puerperio",
-        "UCI pediátrica"
+        "Neonatología y UCIN"
       ],
       "tipo_instrumento": "Práctica educativa",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1837,10 +1722,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "Neonatología y UCIN",
-        "Obstetricia y sala de partos",
-        "Puerperio",
-        "UCI pediátrica"
+        "Neonatología y UCIN"
       ],
       "tipo_instrumento": "Práctica educativa",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1868,10 +1750,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "Neonatología y UCIN",
-        "Obstetricia y sala de partos",
-        "Puerperio",
-        "UCI pediátrica"
+        "Neonatología y UCIN"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1899,10 +1778,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "Neonatología y UCIN",
-        "Obstetricia y sala de partos",
-        "Puerperio",
-        "UCI pediátrica"
+        "Neonatología y UCIN"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1933,10 +1809,7 @@
       "servicios": [
         "Emergencia",
         "Medicina y hospitalización",
-        "UCI adulto",
-        "Pediatría",
-        "UCI pediátrica",
-        "Obstetricia y sala de partos"
+        "Cirugía y hospitalización quirúrgica"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -1965,11 +1838,8 @@
       "revision_documental": "2026-11-03",
       "servicios": [
         "Emergencia",
-        "Medicina y hospitalización",
-        "UCI adulto",
         "Pediatría",
-        "UCI pediátrica",
-        "Obstetricia y sala de partos"
+        "UCI pediátrica"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -2002,8 +1872,7 @@
         "Cirugía y hospitalización quirúrgica",
         "Geriatría",
         "Nefrología y hemodiálisis",
-        "Oncología y cuidados paliativos",
-        "Pediatría"
+        "Oncología y cuidados paliativos"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -2032,12 +1901,8 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-02",
       "servicios": [
-        "Medicina y hospitalización",
-        "Cirugía y hospitalización quirúrgica",
         "Geriatría",
-        "Nefrología y hemodiálisis",
-        "Oncología y cuidados paliativos",
-        "Pediatría"
+        "Medicina y hospitalización"
       ],
       "tipo_instrumento": "Herramienta clínica",
       "rol_enfermeria": "Aplicar o registrar solo la versión indicada por el protocolo institucional; documentar población, hora, contexto y limitaciones.",
@@ -2319,9 +2184,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-08",
       "servicios": [
-        "UCI adulto",
-        "Medicina y hospitalización",
-        "Emergencia"
+        "UCI adulto"
       ],
       "tipo_instrumento": "Intervención terapéutica",
       "resumen_componentes": "Versión abreviada de 28 ítems agrupados en áreas de intervención. No mide directamente minutos reales de Enfermería.",
@@ -2351,8 +2214,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-08",
       "servicios": [
-        "UCI adulto",
-        "Medicina y hospitalización"
+        "UCI adulto"
       ],
       "tipo_instrumento": "Intervención terapéutica",
       "resumen_componentes": "Sistema de 76 ítems; antecedente del TISS-28.",
@@ -2383,8 +2245,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-08",
       "servicios": [
-        "UCI adulto",
-        "UCI pediátrica"
+        "UCI adulto"
       ],
       "tipo_instrumento": "Actividad de Enfermería",
       "resumen_componentes": "23 ítems/subítems que incluyen cuidados directos e indirectos, apoyo a paciente/familia y tareas organizativas.",
@@ -2445,9 +2306,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-08",
       "servicios": [
-        "UCI adulto",
-        "Medicina y hospitalización",
-        "Cirugía y hospitalización quirúrgica"
+        "UCI adulto"
       ],
       "tipo_instrumento": "Score pronóstico",
       "resumen_componentes": "Modelo multivariable con variables fisiológicas agudas, edad y salud crónica.",
@@ -2722,8 +2581,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-08",
       "servicios": [
-        "Emergencia",
-        "Pediatría"
+        "Emergencia"
       ],
       "tipo_instrumento": "Sistema de triaje",
       "resumen_componentes": "Combina discriminadores clínicos, TEWS e investigaciones adicionales.",
@@ -2753,10 +2611,9 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-08",
       "servicios": [
-        "Medicina y hospitalización",
-        "Cirugía y hospitalización quirúrgica",
         "Emergencia",
-        "UCI adulto"
+        "Medicina y hospitalización",
+        "Cirugía y hospitalización quirúrgica"
       ],
       "tipo_instrumento": "Alerta de deterioro",
       "resumen_componentes": "Sistema de alerta temprana con parámetros fisiológicos; existen adaptaciones.",
@@ -3740,7 +3597,8 @@
         "Nefrología y hemodiálisis",
         "UCI adulto",
         "UCI pediátrica",
-        "Medicina y hospitalización"
+        "Medicina y hospitalización",
+        "Pediatría"
       ],
       "tipo_instrumento": "clasificacion_clinica",
       "resumen_componentes": "Estadificación KDIGO AKI; parámetros y ventanas según guía.",
@@ -4113,8 +3971,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-08",
       "servicios": [
-        "Neonatología y UCIN",
-        "UCI pediátrica"
+        "Neonatología y UCIN"
       ],
       "tipo_instrumento": "valoracion_clinica",
       "resumen_componentes": "Índice neonatal de signos respiratorios.",
@@ -4264,8 +4121,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-08",
       "servicios": [
-        "UCI pediátrica",
-        "Pediatría"
+        "UCI pediátrica"
       ],
       "tipo_instrumento": "pronostico",
       "resumen_componentes": "Modelo de mortalidad para UCIP.",
@@ -4295,8 +4151,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-08",
       "servicios": [
-        "UCI pediátrica",
-        "Pediatría"
+        "UCI pediátrica"
       ],
       "tipo_instrumento": "pronostico",
       "resumen_componentes": "Paediatric Index of Mortality, versión 3.",
@@ -4326,8 +4181,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-08",
       "servicios": [
-        "UCI pediátrica",
-        "Pediatría"
+        "UCI pediátrica"
       ],
       "tipo_instrumento": "clasificacion_clinica",
       "resumen_componentes": "Adaptación pediátrica de SOFA; criterios por edad y versión.",
@@ -4419,7 +4273,8 @@
       "revision_documental": "2026-11-08",
       "servicios": [
         "Geriatría",
-        "Rehabilitación"
+        "Rehabilitación",
+        "Medicina y hospitalización"
       ],
       "tipo_instrumento": "cribado",
       "resumen_componentes": "Fatiga, resistencia, deambulación, enfermedades y pérdida de peso.",
@@ -4702,7 +4557,8 @@
       "servicios": [
         "Salud mental y psiquiatría",
         "Emergencia",
-        "Oncología y cuidados paliativos"
+        "Oncología y cuidados paliativos",
+        "Pediatría"
       ],
       "tipo_instrumento": "cribado_seguridad",
       "resumen_componentes": "Formas diferentes para cribado, evaluación y seguimiento.",
@@ -5748,8 +5604,7 @@
       "servicios": [
         "Infecciones y sepsis",
         "Emergencia",
-        "Medicina y hospitalización",
-        "UCI adulto"
+        "Medicina y hospitalización"
       ],
       "tipo_instrumento": "cribado_alerta",
       "resumen_componentes": "Tres variables: frecuencia respiratoria, presión arterial sistólica y estado mental.",
@@ -5785,7 +5640,8 @@
         "Emergencia",
         "UCI adulto",
         "Medicina y hospitalización",
-        "UCI pediátrica"
+        "UCI pediátrica",
+        "Pediatría"
       ],
       "tipo_instrumento": "criterios_clinicos",
       "resumen_componentes": "Temperatura, FC, FR/PaCO₂ y leucocitos; los umbrales son dependientes de edad/versión.",
@@ -5818,8 +5674,7 @@
       "servicios": [
         "Emergencia",
         "Cirugía y hospitalización quirúrgica",
-        "UCI adulto",
-        "Obstetricia y sala de partos"
+        "UCI adulto"
       ],
       "tipo_instrumento": "monitorizacion",
       "resumen_componentes": "Relación FC/PA sistólica.",
@@ -6402,8 +6257,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-08",
       "servicios": [
-        "Neonatología y UCIN",
-        "UCI pediátrica"
+        "Neonatología y UCIN"
       ],
       "tipo_instrumento": "valoracion_enfermeria",
       "resumen_componentes": "Dominios conductuales/fisiológicos; dimensiones de dolor y sedación separadas.",
@@ -6434,8 +6288,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-08",
       "servicios": [
-        "Neonatología y UCIN",
-        "UCI pediátrica"
+        "Neonatología y UCIN"
       ],
       "tipo_instrumento": "valoracion_clinica",
       "resumen_componentes": "Sistema por múltiples dominios; hay variantes/adaptaciones.",
@@ -6466,8 +6319,7 @@
       "revision_clinica": "pendiente",
       "revision_documental": "2026-11-08",
       "servicios": [
-        "Neonatología y UCIN",
-        "UCI pediátrica"
+        "Neonatología y UCIN"
       ],
       "tipo_instrumento": "herramienta_funcional",
       "resumen_componentes": "Capacidad de comer, dormir y consolarse como dominios funcionales.",
@@ -6754,8 +6606,7 @@
       "revision_documental": "2026-11-08",
       "servicios": [
         "Centro quirúrgico",
-        "Cirugía y hospitalización quirúrgica",
-        "URPA y recuperación"
+        "Cirugía y hospitalización quirúrgica"
       ],
       "tipo_instrumento": "pronostico",
       "resumen_componentes": "Modelo con ASA-PS, urgencia, especialidad, severidad quirúrgica, cáncer y edad.",
