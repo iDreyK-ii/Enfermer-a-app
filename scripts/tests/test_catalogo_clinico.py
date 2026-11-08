@@ -30,10 +30,10 @@ class CatalogoClinicoTest(unittest.TestCase):
         self.assertEqual(before, ASSET.read_bytes())
 
     def test_unique_inventory_and_sources(self):
-        self.assertEqual(45, len(self.items))
-        self.assertEqual(45, len({x['id'] for x in self.items}))
-        self.assertEqual(43, len(self.sources))
-        self.assertEqual(43, len({x['id'] for x in self.sources}))
+        self.assertEqual(191, len(self.items))
+        self.assertEqual(191, len({x['id'] for x in self.items}))
+        self.assertEqual(86, len(self.sources))
+        self.assertEqual(86, len({x['id'] for x in self.sources}))
 
     def test_every_fact_sheet_names_version_limits_rights_and_review_depth(self):
         source_ids = {x['id'] for x in self.sources}
@@ -67,6 +67,13 @@ class CatalogoClinicoTest(unittest.TestCase):
         self.assertEqual(['neonatos'], by_id['apgar']['poblaciones'])
         self.assertEqual('capurro/A', by_id['capurro-a']['ruta'])
         self.assertEqual('capurro/B', by_id['capurro-b']['ruta'])
+        self.assertEqual(['adultos'], by_id['rass']['poblaciones'])
+        for instrument_id in ('tiss-76', 'tiss-28', 'nas', 'nems'):
+            self.assertEqual(['UCI adulto'], by_id[instrument_id]['servicios'])
+        self.assertNotIn('Pediatría', by_id['news2']['servicios'])
+        self.assertNotIn('Obstetricia y sala de partos', by_id['news2']['servicios'])
+        self.assertNotIn('UCI adulto', by_id['pews']['servicios'])
+        self.assertIn('UCI pediátrica', by_id['pews']['servicios'])
 
     def test_claims_are_not_marked_as_exhaustive_or_clinically_validated(self):
         self.assertIn('no exhaustivo', self.data['alcance'])
