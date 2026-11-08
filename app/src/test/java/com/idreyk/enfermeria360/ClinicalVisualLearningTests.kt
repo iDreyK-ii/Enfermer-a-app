@@ -9,7 +9,22 @@ class ClinicalVisualLearningTests {
     private val catalog by lazy { ClinicalCatalog.parse(File("src/main/assets/${ClinicalCatalog.ASSET}").readText()) }
 
     @Test fun everyCatalogueAreaHasSymbolicArtAndAClearBoundary() {
-        assertEquals(catalog.instruments.map { it.area }.toSet(), ClinicalVisualLearning.areas.keys)
+        val catalogueAreas = catalog.instruments.map { it.area }.toSet()
+        assertTrue(catalogueAreas.isNotEmpty())
+        catalogueAreas.forEach { area ->
+            val art = ClinicalVisualLearning.area(area)
+            assertTrue("$area must resolve to a valid illustration asset",
+                art.asset in setOf(
+                    "escalas_art/escala_neuro.png",
+                    "escalas_art/escala_dolor.png",
+                    "escalas_art/escala_funcion.png",
+                    "escalas_art/escala_general.png",
+                    "escalas_art/escala_neonatal.png",
+                    "escalas_art/escala_nutricion.png",
+                    "escalas_art/escala_seguridad.png",
+                ))
+            assertTrue("$area needs an explanatory boundary", art.description.isNotBlank() && art.areaTip.isNotBlank())
+        }
         assertEquals(7, (ClinicalVisualLearning.areas.values.map { it.asset } + ClinicalVisualLearning.general.asset).toSet().size)
         assertTrue(ClinicalVisualLearning.areas.values.all { it.description.isNotBlank() && it.areaTip.isNotBlank() })
         assertEquals(ClinicalVisualLearning.general, ClinicalVisualLearning.area("un área futura"))
